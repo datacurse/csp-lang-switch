@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Force -Recurse -File | Select-Object FullName, @{Name='SizeBytes';Expression={$_.Length}} | Sort-Object FullName | Format-Table -AutoSize)",
+      "PowerShell(Test-Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\CSP5_format_spec.md\", \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\csp_resource_inspect.py\", \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\extract_csp_strings.py\", \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\english_742DEA58.tsv\", \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\output.txt\" | ForEach-Object { if \\($_\\) { \"yes\" } else { \"no\" } })",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Force | Where-Object { -not $_.PSIsContainer } | Where-Object { $_.Name -match '^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}' } | Select-Object Name, @{Name='SizeBytes';Expression={$_.Length}})",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Force -File | Where-Object { $_.Name -match '^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}' } | Select-Object Name, @{Name='SizeBytes';Expression={$_.Length}})",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Directory -Force | Select-Object Name | ForEach-Object { $_.Name })",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Force -File | Select-Object Name, @{Name='SizeBytes';Expression={$_.Length}} | Where-Object { $_.Name -ne \".git\" })",
+      "Bash(python3)",
+      "Bash(python -c ' *)",
+      "Bash(python -X utf8 -c ' *)"
+    ]
+  }
+}
