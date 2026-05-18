@@ -1,6 +1,15 @@
 # Clip Studio Paint 5 — Resource File Format & Russian Translation Patch
 ## Technical specification and implementation brief
 
+> **⚠️ STATUS (2026-05-19): IMPLEMENTED & VERIFIED.** This is the original
+> *pre-implementation* brief. The work it describes is done: the parser
+> round-trips 485/485 files and a patched file has been load-tested in CSP.
+> **§6 ("PARTIALLY UNDERSTOOD") and §12's "open questions" are RESOLVED**, and
+> a few guesses here turned out wrong (offsets are file-absolute, not
+> block-1-relative; there is no "secondary structure"). Where this brief
+> speculates, **[`VERIFIED_METHOD.md`](VERIFIED_METHOD.md) is authoritative** —
+> read that first. This file is kept as the historical record of the analysis.
+
 **Purpose of this document.** This is a complete handoff brief for implementing a
 Russian translation patch for Clip Studio Paint 5 (CSP 5, current build Ver. 5.0.4).
 It records everything reverse-engineered so far about the resource file format and

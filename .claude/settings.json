@@ -9,7 +9,27 @@
       "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\loki\\\\code\\\\csp-translation\" -Force -File | Select-Object Name, @{Name='SizeBytes';Expression={$_.Length}} | Where-Object { $_.Name -ne \".git\" })",
       "Bash(python3)",
       "Bash(python -c ' *)",
-      "Bash(python -X utf8 -c ' *)"
+      "Bash(python -X utf8 -c ' *)",
+      "Bash(python roundtrip.py)",
+      "Bash(python roundtrip.py resource_original)",
+      "Bash(python repack.py stats 742DEA58-ED6B-4402-BC11-20DFC6D08040_english)",
+      "Bash(python repack.py export 742DEA58-ED6B-4402-BC11-20DFC6D08040_english english_742DEA58_strings.json --kind text)",
+      "Bash(python repack.py export \"742DEA58-ED6B-4402-BC11-20DFC6D08040_english\" english_742DEA58_strings.csv --kind text)",
+      "Bash(python repack.py apply \"742DEA58-ED6B-4402-BC11-20DFC6D08040_english\" english_742DEA58_strings.csv _patched_test)",
+      "Bash(python -c \"print\\('patched == original:', open\\('742DEA58-ED6B-4402-BC11-20DFC6D08040_english','rb'\\).read\\(\\) == open\\('_patched_test','rb'\\).read\\(\\)\\)\")",
+      "Bash(python roundtrip.py resource_original \"742DEA58-ED6B-4402-BC11-20DFC6D08040_english\")",
+      "Bash(python repack.py stats \"742DEA58-ED6B-4402-BC11-20DFC6D08040_english\")",
+      "Read(//c/Users/loki/.claude/projects/c--Users-loki-code-csp-translation/memory/**)",
+      "PowerShell(git ls-files | ForEach-Object { \\($_ -split '/'\\)[0] } | Sort-Object -Unique; \"--- has .gitignore? ---\"; Test-Path .gitignore)",
+      "PowerShell(New-Item -ItemType Directory -Force patched)",
+      "PowerShell(Move-Item \"742DEA58-ED6B-4402-BC11-20DFC6D08040\" \"patched\\\\742DEA58-ED6B-4402-BC11-20DFC6D08040\")",
+      "PowerShell(git rm -r --cached -q resource_original \"742DEA58-ED6B-4402-BC11-20DFC6D08040_english\")",
+      "PowerShell(\"moved patched binary -> patched\\\\\")",
+      "PowerShell(\"untracked resource binaries \\(still on disk\\):\")",
+      "PowerShell(\"=== git status ===\"; git status --short; \"=== staged removals \\(count\\) ===\"; \\(git diff --cached --name-only --diff-filter=D | Measure-Object\\).Count)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\loki\\.claude\\projects\\c--Users-loki-code-csp-translation\\memory"
     ]
   }
 }
