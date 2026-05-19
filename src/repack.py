@@ -36,7 +36,7 @@ Translation workflow
 --------------------
   1.  python src/repack.py export english/742DEA58-... strings.csv --kind text
   2.  Edit the "target" column of each row in strings.csv (leave "source").
-  3.  python src/repack.py apply english/742DEA58-... strings.csv patched/742DEA58-...
+  3.  python src/repack.py apply english/742DEA58-... strings.csv russian/742DEA58-...
   4.  Put the patched file in CSP's resource/english/ folder and test.
 
 No external dependencies (standard library only).

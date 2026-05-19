@@ -1,6 +1,6 @@
 # CSP5 Resource File Inventory — the 39 shared GUID files
 
-> Generated 2026-05-19 from `resource_original/english/` via `csp5.parse` +
+> Generated 2026-05-19 from `resource/english/` via `csp5.parse` +
 > `extract_csp_strings.classify`. Companion to [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md).
 
 Each GUID-named file is a **separate UI resource bundle** for one part of Clip
@@ -86,7 +86,7 @@ import csp5
 from extract_csp_strings import classify
 from pathlib import Path
 
-for f in sorted(Path("resource_original/english").iterdir(),
+for f in sorted(Path("resource/english").iterdir(),
                 key=lambda p: -p.stat().st_size):
     container = csp5.parse(f.read_bytes())
     text = sum(classify(t) == "text"

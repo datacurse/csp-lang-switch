@@ -78,7 +78,7 @@ def _default_samples(repo_root: Path) -> list[Path]:
     """The two known 742DEA58 samples used when no arguments are given."""
     candidates = {
         "english": repo_root / "742DEA58-ED6B-4402-BC11-20DFC6D08040_english",
-        "japanese": (repo_root / "resource_original" / "japanese"
+        "japanese": (repo_root / "resource" / "japanese"
                      / "742DEA58-ED6B-4402-BC11-20DFC6D08040"),
     }
     files = []

@@ -1,1 +1,3 @@
-- collect all words from strings, count them up, and ask claude to come up with universal names for some most common words so that we would know how to translate them.
+- write script that would let us replace translations without reinstalling app. it would create backup of english (english_backup), and replace english with whatever language was chosen. Russian would stay as a folder next to those, and the script would pick one of those folders and replace english with them.
+  - question: do we need to create backup and russian folder, or would it be ok to just do from the script and leave those untouched?
+- create boosty account

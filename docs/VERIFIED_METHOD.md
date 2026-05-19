@@ -26,7 +26,7 @@ patched file into a CSP language folder.**
 ### 1. The parser/serializer model is correct — 485/485 round-trip
 
 `serialize(parse(f)) == f`, byte-for-byte, holds for **every** resource file:
-**485/485 files** across all 12 language folders (`resource_original/`) plus the
+**485/485 files** across all 12 language folders (`resource/`) plus the
 working English copy. Because [`csp5.py`](../src/csp5.py) stores **no absolute offsets**
 and `serialize()` recomputes every offset and length from child sizes, a passing
 round-trip is a proof that the structural model is complete and correct.
@@ -34,7 +34,7 @@ round-trip is a proof that the structural model is complete and correct.
 Re-verify any time with:
 
 ```
-python src/roundtrip.py resource_original
+python src/roundtrip.py resource
 ```
 
 ### 2. The index and footer are language-independent — confirmed across all 12 languages

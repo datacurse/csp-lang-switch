@@ -12,8 +12,11 @@ has rendered correctly inside a running copy of CSP.
 ## Status
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
-- **Translation:** not started. The worksheet is exported; the `target` column
-  is still English.
+- **Translation:** `742DEA58` (main UI, 9,368 strings) fully translated to
+  Russian and consistency-audited. The other ~31 content-bearing files are not
+  done yet.
+- **Workflow:** the end-to-end translation process is a reproducible playbook —
+  [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 
 ## Layout
 
@@ -22,13 +25,14 @@ has rendered correctly inside a running copy of CSP.
 | [`docs/`](docs/) | How it works — method, file inventory, format spec |
 | [`src/`](src/) | Python tooling (`csp5.py`, `repack.py`, …); `src/legacy/` = reference-only |
 | [`translation/`](translation/) | The translation worksheet, glossary, word-frequency data |
-| `resource_original/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
-| `patched/` | Output of `repack.py apply` — gitignored (regenerable) |
+| `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
+| `russian/` | Output of `repack.py apply` — the Russian build — gitignored (regenerable) |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
 
-- [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md) — **authoritative** record of what works and how.
+- [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md) — **authoritative** record of what works and how (the binary parse/repack method).
+- [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md) — reproducible playbook for translating a file, CSP version, or language.
 - [`docs/FILE_INVENTORY.md`](docs/FILE_INVENTORY.md) — the 39 shared resource files and what each covers.
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
 - [`translation/english_742DEA58_strings.csv`](translation/english_742DEA58_strings.csv) — main-UI worksheet (`key, source, target`); translate the `target` column only.
