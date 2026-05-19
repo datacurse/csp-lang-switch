@@ -41,7 +41,7 @@ excluded by human judgement — see below — regardless of the oracle).
 | `5634F3A9` | 275,911 | 529 | Animation & timeline editor | ✅ |
 | `DD705E0D` | 112,147 | 630 | Clip Studio cloud menu, profile, direct messages | ✅ |
 | `46B67EA9` | 68,693 | 160 | **GLSL shader source code** — not UI text | ❌ |
-| `7F9F9530` | 48,920 | 907 | Cloud sync UI | ✅ |
+| `7F9F9530` | 48,920 | 907 | Cloud sync UI — block 6 also drives the Material-palette folder tree | ✅ |
 | `F2AD839B` | 26,967 | 288 | License verification dialogs | ✅ |
 | `61F04D2D` | 21,689 | 303 | License verification (has `$$$` placeholders) | ✅ |
 | `97CDB75A` | 17,731 | 27 | Kindle / e-book export settings | ✅ |
@@ -75,6 +75,17 @@ excluded by human judgement — see below — regardless of the oracle).
 | `05F925FA` | 150 | 0 | Empty stub container | ❌ |
 | `3DC534C9` | 150 | 0 | Empty stub container | ❌ |
 | `F549CE76` | 150 | 0 | Empty stub container | ❌ |
+
+## `7F9F9530` block 6 — the Material-palette folder tree
+
+`7F9F9530`'s block 6 is a material-category table that drives the Material
+palette's folder tree (`Все материалы → Цветной узор → …`), not just cloud
+sync. CSP ships block 6 English in **every** language, so the Japanese oracle
+could not see its single-word `key` records as translatable — 90 folder names
+stayed English while the multi-word ones translated. They were patched in by
+hand from CSP's own colon-path translations; see VERIFIED_METHOD.md → "The
+oracle's blind spot" and [`src/_patch_material_tree.py`](../src/_patch_material_tree.py).
+The `907` oracle count above therefore excludes those 90 rows (worksheet: 997).
 
 ## Non-targets — do not translate
 

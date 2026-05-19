@@ -144,6 +144,39 @@ registry paths). Measured on `742DEA58`: the translatable set went 9,368 →
 `classify()` is still fine for the `stats` breakdown — just never let it gate
 what gets translated.
 
+### The oracle's blind spot — strings CSP never localized either
+
+The oracle assumes CSP's Japanese resource is *complete*. It nearly always is —
+but a few blocks ship **identical English in every language** (Japanese,
+Korean, French … all the same English bytes). There `en == ja`, so the oracle
+sees no signal, and a non-prose record in such a block is dropped.
+
+This surfaced as the **Material-palette folder tree** (`Все материалы → Цветной
+узор → …` in the Material palette). Its names live in **block 6 of `7F9F9530`**
+— a material-category table shared by the palette and the cloud-sync UI — and
+CSP ships that block English in *all 12 languages*. Its multi-word names
+(`Color pattern`) are `classify() == "text"`, so the rule's first half kept
+them; its single-word names (`Pattern`, `Background`, `Nature`, `Texture`,
+`Favorite`, …) are `classify() == "key"` **and** `en == ja`, so **both** halves
+missed them — 90 records. Symptom: in the palette tree, multi-word folders were
+Russian, single-word folders stayed English.
+
+This is *not* the `--kind text` bug above — the oracle was used correctly. It is
+the oracle's one structural limit: it cannot flag what CSP's own localizers
+never flagged. No automatic fix exists (there is no third, "more complete"
+reference); such a block is found by **eyeballing the running UI**, then patched
+by hand.
+
+**The fix, when you find such a block.** Translate the missing records straight
+from CSP's own neighbouring translations — block 6 also holds full colon-path
+rows (`Color pattern:Background:Nature`) whose `text` halves *were* translated,
+so every path segment's Russian is already pinned: it is propagation, not fresh
+translation. [`src/_patch_material_tree.py`](../src/_patch_material_tree.py)
+does exactly this for block 6 — it appends the 90 rows to the `7F9F9530`
+worksheet and is **idempotent**. Re-run it after any `batch.py export --force`
+of `7F9F9530`: a re-export regenerates the worksheet from the oracle and drops
+those rows again.
+
 ---
 
 ## The reproducible procedure
