@@ -3,3 +3,4 @@
 - after that try various language, make screenshots, and figure out missing translations from screenshots. like top menu, why not translated? Replacing with japanese language translates perfectly by the way.
 - create boosty account
 - translate Руководство по эксплуатации web page and host it and link to it (wait is it possible to change links? im not sure, perhaps)
+- what are those 9 files that are not in russian folder?
