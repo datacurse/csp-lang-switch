@@ -19,26 +19,36 @@ export ─► dedupe ─► glossary ─► translate (parallel chunks) ─► j
        ─► special cases ─► repack + round-trip ─► consistency audit ─► fix ─► install
 ```
 
-The durable assets are the **tooling** (`src/`), the **glossary**, and this
-doc. The patched binary itself is disposable — regenerable and version-specific.
+The durable assets are the **tooling** (`src/`), the **manifest**, the
+**glossary**, the **worksheets** (`translation/files/`), and this doc. The
+patched binary itself is disposable — regenerable and version-specific.
 
 ---
 
 ## Step 0 — Pick the target file(s)
 
 `742DEA58-…` is the main UI (~9,368 strings). A full UI translation means
-repeating this for the ~32 content-bearing shared files — see
-[`FILE_INVENTORY.md`](FILE_INVENTORY.md). The workflow below is identical for
-every file; do them one at a time.
+repeating this for the ~32 content-bearing shared files. The file set is the
+[`manifest.csv`](../translation/manifest.csv) (`short,guid,slug,covers,target,
+text_count`); [`FILE_INVENTORY.md`](FILE_INVENTORY.md) is its prose companion.
+`python src/batch.py status` prints progress over every file. The workflow
+below is identical for every file; do them one at a time.
+
+Each file gets its own folder `translation/files/<short>-<slug>/` holding
+`strings.csv`, `unique.csv` and `word_frequency.csv`. The orchestrator
+`src/batch.py` drives the whole pipeline by file `<id>` (a short GUID or slug,
+e.g. `742DEA58` or `main-ui`).
 
 ## Step 1 — Export the worksheet
 
 ```
-python src/repack.py export <resource_file> translation/<name>_strings.csv --kind text
+python src/batch.py export <id>      # one file
+python src/batch.py export-all       # every not-yet-exported target file
 ```
 
-Produces a `key,source,target` CSV. **`key` is version-specific — never edit
-it.** The CSV is **UTF-8 with BOM**.
+Writes `translation/files/<short>-<slug>/strings.csv`, a `key,source,target`
+CSV (`export` skips a file that already has one — use `--force` to overwrite).
+**`key` is version-specific — never edit it.** The CSV is **UTF-8 with BOM**.
 
 ## Step 2 — Dedupe
 
@@ -46,20 +56,19 @@ The worksheet has duplicate source strings (9,368 rows → 7,212 unique). Build 
 unique-strings list so each string is translated **once** — less work, and
 exact duplicates are guaranteed identical for free.
 
-```python
-import csv
-seen = {}
-for r in csv.DictReader(open('translation/<name>_strings.csv', encoding='utf-8-sig')):
-    seen.setdefault(r['source'], '')
-with open('translation/unique_strings.csv', 'w', encoding='utf-8-sig', newline='') as f:
-    w = csv.writer(f); w.writerow(['source', 'target'])
-    for s in seen: w.writerow([s, ''])
 ```
+python src/batch.py dedupe <id>
+```
+
+Writes `unique.csv` (one row per distinct `source`) and `word_frequency.csv`
+into the file's folder. Re-running it is safe: any translations already done —
+in `unique.csv` or in the worksheet — are carried over by `source` text.
 
 ## Step 3 — Build the glossary
 
-Tokenize the source column, count word frequencies (`word_frequency.csv`), and
-write a [`GLOSSARY.md`](../translation/GLOSSARY.md) for the target language.
+`dedupe` already wrote the file's `word_frequency.csv`. Use it to write a
+[`GLOSSARY.md`](../translation/GLOSSARY.md) for the target language — **one
+shared glossary across all files**, extended as new files surface new terms.
 
 **The glossary is small on purpose.** Do *not* pre-translate hundreds of
 obvious words — `layer→слой` is not a decision. Lock only:
@@ -73,8 +82,9 @@ The glossary is an **output refined during the work**, not a giant input.
 
 ## Step 4 — Translate the unique strings in parallel chunks
 
-Fan the 7,212 unique strings out to **N parallel translators** (12 chunks of
-576 worked well). Each translator gets the **same brief**: the glossary, a
+Translate the empty `target` cells of the file's `unique.csv`. Fan the unique
+strings out to **N parallel translators** (for `742DEA58`, 12 chunks of 576
+worked well). Each translator gets the **same brief**: the glossary, a
 **locked-terminology table**, and the **formatting rules**. Each returns a JSON
 array of translations, one per source line, in order.
 
@@ -90,20 +100,15 @@ Mandatory formatting rules for every translator:
 
 ## Step 5 — Join back into the worksheet
 
-Apply the chunk translations into `unique_strings.csv`, then map them into the
-full worksheet by **source text** (fills all duplicate rows consistently):
+Apply the chunk translations into the file's `unique.csv`, then:
 
-```python
-import csv
-trans = {r['source']: r['target']
-         for r in csv.DictReader(open('translation/unique_strings.csv', encoding='utf-8-sig'))}
-rows = list(csv.DictReader(open('translation/<name>_strings.csv', encoding='utf-8-sig')))
-for r in rows:
-    r['target'] = trans.get(r['source'], r['target'])
-with open('translation/<name>_strings.csv', 'w', encoding='utf-8-sig', newline='') as f:
-    w = csv.DictWriter(f, fieldnames=['key', 'source', 'target'])
-    w.writeheader(); w.writerows(rows)
 ```
+python src/batch.py join <id>
+```
+
+This maps `unique.csv` into the worksheet by **source text** — filling all
+duplicate rows consistently — and writes `strings.csv` back. It reads the whole
+worksheet into memory before writing, so a crash mid-write can't destroy it.
 
 ## Step 6 — Special cases
 
@@ -120,17 +125,17 @@ with open('translation/<name>_strings.csv', 'w', encoding='utf-8-sig', newline='
 ## Step 7 — Repackage and verify
 
 ```
-python src/repack.py apply <resource_file> translation/<name>_strings.csv russian/<GUID>
-python src/roundtrip.py russian/<GUID>
+python src/batch.py pack <id>        # one file, or `pack-all` for every file
 ```
 
-`apply` re-parses its own output; `roundtrip.py` confirms a byte-for-byte
-round-trip. Both must pass.
+`pack` runs `repack.py apply` (writes the patched file to `russian/<GUID>`)
+**and** the `roundtrip.py` byte-for-byte check on the output, in one step.
+Both must pass.
 
 ## Step 8 — Consistency audit
 
 ```
-python src/audit.py translation/<name>_strings.csv
+python src/batch.py audit <id>       # omit <id> to audit every worksheet
 ```
 
 Flags English UI terms translated in some rows but left English in others —
@@ -150,16 +155,20 @@ install steps: [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md).
 
 ## Gotchas (learned the hard way)
 
+`batch.py` already handles the first two — they bite only if you write your
+own CSV scripts:
+
 * **The CSV is UTF-8 *with BOM*.** Always read and write it with
   `encoding='utf-8-sig'`. Reading with plain `utf-8` makes the first column
   `﻿key`.
 * **Opening a file with `'w'` truncates it immediately.** Read the whole CSV
   into memory *before* opening it for writing — a crash mid-write otherwise
-  destroys the worksheet. (It can be regenerated with Step 1, but don't.)
+  destroys the worksheet.
 * **Translate from `source`, key results by `source`, not by `key`.** `key` is
   version-specific; `source` is stable and is what makes duplicates consistent.
-* The patched binary is **per-version and disposable**. Tooling + glossary +
-  this doc are the assets to keep.
+  Translate in `unique.csv` (keyed by `source`); `join` maps it back.
+* The patched binary is **per-version and disposable**. Tooling + manifest +
+  glossary + this doc are the assets to keep.
 
 ---
 
@@ -169,11 +178,11 @@ install steps: [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md).
 and locked terms, and re-decide the autonym question (Step 6). Everything else
 is identical.
 
-**Another CSP version.** Re-export (Step 1) — string IDs, `key`s and counts may
-all have changed. **Seed the new translation for free** by joining the old
-`unique_strings.csv` onto the new worksheet by `source`: every unchanged
-English string carries its translation over, and only genuinely new/changed
-strings need translating. Then run Steps 4–8 on the remainder.
+**Another CSP version.** Re-export with `batch.py export <id> --force` — string
+IDs, `key`s and counts may all have changed. The translation is **seeded for
+free**: `batch.py dedupe` carries every existing translation over by `source`
+text, so only genuinely new/changed strings land with an empty `target`. Then
+run Steps 4–8 on the remainder.
 
-**Another resource file.** Same pipeline, one file at a time;
-[`FILE_INVENTORY.md`](FILE_INVENTORY.md) lists the ~32 that carry UI text.
+**Another resource file.** Same pipeline, one file at a time. `manifest.csv`
+lists every file and `batch.py status` tracks which are done.

@@ -94,6 +94,11 @@ bytes/char; that is fine).
 
 ## The reproducible procedure
 
+This section is the **binary-level** primitive: `repack.py` on a single file.
+For translating the whole UI (~32 files) drive it through the orchestrator
+`src/batch.py` instead — see [`TRANSLATION_WORKFLOW.md`](TRANSLATION_WORKFLOW.md).
+`batch.py` calls exactly the `repack.py` commands below, one file at a time.
+
 ### 1. Export a translation worksheet
 
 ```
@@ -192,8 +197,11 @@ All Python lives in [`src/`](../src/); run it from the repo root
 (`python src/<tool>.py …`).
 
 * [`csp5.py`](../src/csp5.py) — parser + serializer. The round-trip-verified core.
-* [`repack.py`](../src/repack.py) — `export` / `apply` / `stats`; the CSV
-  translation workflow. **Use this for translation work.**
+* [`repack.py`](../src/repack.py) — `export` / `apply` / `stats`; the
+  single-file CSV primitive.
+* [`batch.py`](../src/batch.py) — **the orchestrator for translation work.**
+  Drives `export` / `dedupe` / `join` / `pack` / `audit` / `status` across all
+  files in `translation/manifest.csv`. Run this; it calls the tools below.
 * [`extract_csp_strings.py`](../src/extract_csp_strings.py) — text/key/url
   classifier; imported by `repack.py`.
 * [`roundtrip.py`](../src/roundtrip.py) — verification harness

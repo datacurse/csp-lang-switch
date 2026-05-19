@@ -2,6 +2,11 @@
 
 > Generated 2026-05-19 from `resource/english/` via `csp5.parse` +
 > `extract_csp_strings.classify`. Companion to [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md).
+>
+> This file is the **human-readable** inventory. Its machine-readable twin is
+> [`translation/manifest.csv`](../translation/manifest.csv) (`short,guid,slug,
+> covers,target,text_count`) — the file list `src/batch.py` drives the
+> translation pipeline from. Keep the two in sync when the file set changes.
 
 Each GUID-named file is a **separate UI resource bundle** for one part of Clip
 Studio Paint — not a single monolithic UI file. `742DEA58-…` is the main app

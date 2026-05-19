@@ -46,6 +46,11 @@ def ngrams(words, n):
 
 
 def main(path):
+    # Windows consoles default to a legacy codepage (cp1252) that cannot encode
+    # Cyrillic; force UTF-8 so printing translated target text never crashes.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     rows = load(path)
     occ = collections.defaultdict(set)          # term -> set of row indices
     for i, r in enumerate(rows):

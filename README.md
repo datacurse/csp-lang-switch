@@ -14,7 +14,7 @@ has rendered correctly inside a running copy of CSP.
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
 - **Translation:** `742DEA58` (main UI, 9,368 strings) fully translated to
   Russian and consistency-audited. The other ~31 content-bearing files are not
-  done yet.
+  done yet — run `python src/batch.py status` for live progress.
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 
@@ -23,10 +23,10 @@ has rendered correctly inside a running copy of CSP.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — method, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py` |
-| [`translation/`](translation/) | The translation worksheet, glossary, word-frequency data |
+| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py` |
+| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, and `files/<short>-<slug>/` — one worksheet folder per resource file |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
-| `russian/` | Output of `repack.py apply` — the Russian build — gitignored (regenerable) |
+| `russian/` | Output of `batch.py pack` — the Russian build — gitignored (regenerable) |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -35,18 +35,25 @@ has rendered correctly inside a running copy of CSP.
 - [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md) — reproducible playbook for translating a file, CSP version, or language.
 - [`docs/FILE_INVENTORY.md`](docs/FILE_INVENTORY.md) — the 39 shared resource files and what each covers.
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
-- [`translation/english_742DEA58_strings.csv`](translation/english_742DEA58_strings.csv) — main-UI worksheet (`key, source, target`); translate the `target` column only.
-- [`translation/GLOSSARY.md`](translation/GLOSSARY.md) — canonical Russian terms for the most frequent words.
+- [`translation/manifest.csv`](translation/manifest.csv) — the machine-readable file list `batch.py` drives the pipeline from.
+- [`translation/files/742DEA58-main-ui/strings.csv`](translation/files/742DEA58-main-ui/strings.csv) — the main-UI worksheet (`key, source, target`); translate the `target` column only.
+- [`translation/GLOSSARY.md`](translation/GLOSSARY.md) — canonical Russian terms for the most frequent words, shared across all files.
 
 ## Workflow
 
-Run tooling from the repo root.
+Run tooling from the repo root. `src/batch.py` orchestrates the whole pipeline
+per file, addressed by short GUID or slug (`742DEA58` or `main-ui`):
 
 ```
-python src/repack.py export <resource_file> strings.csv --kind text   # extract
-# ... edit the target column of strings.csv (UTF-8) ...
-python src/repack.py apply  <resource_file> strings.csv <patched_file> # repack
+python src/batch.py status              # progress over every file
+python src/batch.py export   <id>       # extract a worksheet (export-all for all)
+python src/batch.py dedupe   <id>       # build the unique-strings list
+# ... translate the target column of unique.csv ...
+python src/batch.py join     <id>       # merge translations back
+python src/batch.py pack     <id>       # repack -> russian/, with round-trip check
+python src/batch.py audit    <id>       # consistency audit
 ```
 
-Full procedure, install steps, and the slot strategy are in
+The full translation playbook is [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md);
+the binary method, install steps and slot strategy are in
 [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).

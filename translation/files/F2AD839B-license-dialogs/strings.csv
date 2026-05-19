@@ -1,0 +1,505 @@
+﻿key,source,target
+1/1/5#0,%s - Verify License,%s - Verify License
+1/1/6#0,%s - Cancel License Verification,%s - Cancel License Verification
+1/1/7#0,%s - Processing License Verification,%s - Processing License Verification
+1/1/8#0,%s - License Verified Successfully,%s - License Verified Successfully
+1/1/9#0,%s - Error Verifying License,%s - Error Verifying License
+1/1/10#0,%s - License Expired,%s - License Expired
+1/1/11#0,%s - Cancel Trial Registration,%s - Cancel Trial Registration
+1/1/12#0,%s - Processing Trial Registration,%s - Processing Trial Registration
+1/1/13#0,%s - Trial Registered Successfully,%s - Trial Registered Successfully
+1/1/14#0,%s - Error Registering Trial,%s - Error Registering Trial
+1/1/15#0,%s - Register Trial,%s - Register Trial
+1/1/16#0,%s - Trial Expiration,%s - Trial Expiration
+1/1/17#0,%s - Firewall Authentication,%s - Firewall Authentication
+1/1/18#0,Trial version: You can use limited features.,Trial version: You can use limited features.
+1/1/19#0,Trial version: You can use all features for %d more days.,Trial version: You can use all features for %d more days.
+1/1/20#0,Trial version: You can use all features,Trial version: You can use all features
+1/1/21#0,Trial version: Trial period will expire in %d days.,Trial version: Trial period will expire in %d days.
+1/1/22#0,Trial version: Trial period has expired.,Trial version: Trial period has expired.
+1/1/23#0, - Next license verification will be after %d days., - Next license verification will be after %d days.
+1/1/24#0, - Next license verification will be in %d days., - Next license verification will be in %d days.
+1/1/25#0, - License will be verified upon next launch of the software., - License will be verified upon next launch of the software.
+1/1/26#0,You can use all features for another %d days.,You can use all features for another %d days.
+1/1/27#0,You can use all features,You can use all features
+1/1/28#0,License period will expire in %d days.,License period will expire in %d days.
+1/1/29#0,License period has expired.,License period has expired.
+1/1/30#0,Lost your serial number?,Lost your serial number?
+2/1/2#0,"Thank you for registering. 
+You can now use all features of the software for %d days.","Thank you for registering. 
+You can now use all features of the software for %d days."
+2/1/3#0,"Thank you for choosing our product. 
+Your new license has been registered.","Thank you for choosing our product. 
+Your new license has been registered."
+2/1/4#0,"License verification failed. 
+The license has not been changed.","License verification failed. 
+The license has not been changed."
+2/1/5#0,"Thank you for choosing our product. 
+Your license has now been registered.","Thank you for choosing our product. 
+Your license has now been registered."
+2/1/6#0,"Your trial period was registered successfully. 
+Thank you for registering.","Your trial period was registered successfully. 
+Thank you for registering."
+2/1/7#0,Thank you for choosing Clip Studio Paint.,Thank you for choosing Clip Studio Paint.
+2/1/8#0,"A serial number has not been entered. 
+The application will close.","A serial number has not been entered. 
+The application will close."
+2/1/9#0,"The license for this software has not been verified.
+The application will close.","The license for this software has not been verified.
+The application will close."
+2/1/10#0,"Thank you for verifying your license. 
+The next license verification will be after %d days.","Thank you for verifying your license. 
+The next license verification will be after %d days."
+2/1/11#0,"Thank you for verifying your license. 
+The next license verification will be in %d days.","Thank you for verifying your license. 
+The next license verification will be in %d days."
+2/1/12#0,"Thank you for verifying your license. 
+The license will be verified again the next time the software is launched.","Thank you for verifying your license. 
+The license will be verified again the next time the software is launched."
+2/1/13#0,"Thank you for verifying your license. 
+You can use it for another %d days. The next license verification will be after %d days.","Thank you for verifying your license. 
+You can use it for another %d days. The next license verification will be after %d days."
+2/1/14#0,"Thank you for verifying your license. 
+You can use it for another %d days. The next license verification will be in %d days.","Thank you for verifying your license. 
+You can use it for another %d days. The next license verification will be in %d days."
+2/1/15#0,"Thank you for verifying your license. 
+You can use it for another %d days. The license will be verified again the next time the software is launched.","Thank you for verifying your license. 
+You can use it for another %d days. The license will be verified again the next time the software is launched."
+2/1/16#0,"Failed to verify the license. The server or network may be busy. 
+Please wait and try again later. We apologize for the inconvenience.","Failed to verify the license. The server or network may be busy. 
+Please wait and try again later. We apologize for the inconvenience."
+2/1/17#0,"License verification failed because the current license is not valid. 
+The license will be verified again the next time the software is launched.","License verification failed because the current license is not valid. 
+The license will be verified again the next time the software is launched."
+2/1/18#0,Failed to verify the license.,Failed to verify the license.
+2/1/19#0,"There was an error with the server, so your license will be verified later.
+
+You can still use all features even if you see this message. 
+
+You may see another message that you can use all features for three days, but the original valid period will be restored after the next license verification.","There was an error with the server, so your license will be verified later.
+
+You can still use all features even if you see this message. 
+
+You may see another message that you can use all features for three days, but the original valid period will be restored after the next license verification."
+2/1/20#0,"There was an error with the server, 
+so your license will be verified the next time you launch the software.
+Thank you for choosing our software.","There was an error with the server, 
+so your license will be verified the next time you launch the software.
+Thank you for choosing our software."
+2/1/21#0,"You will need an Internet connection for the next license verification.
+If the license cannot be verified, the software will not launch.","You will need an Internet connection for the next license verification.
+If the license cannot be verified, the software will not launch."
+4/1/1#0,Getting Started with %s,Getting Started with %s
+4/1/2#0,"In the trial version, you can use all the features of PRO or EX for free. Restart the application to switch between grades.","In the trial version, you can use all the features of PRO or EX for free. Restart the application to switch between grades."
+4/1/3#0,"Your license has been updated. Please restart the application to apply the changes. 
+
+If you are using a trial version, you can continue using the trial by entering the following serial number.
+
+Serial number for trial version: %s","Your license has been updated. Please restart the application to apply the changes. 
+
+If you are using a trial version, you can continue using the trial by entering the following serial number.
+
+Serial number for trial version: %s"
+4/1/4#0,Your license has been updated. Please restart the application to apply the changes.,Your license has been updated. Please restart the application to apply the changes.
+4/1/5#0,Your license has been updated. Please restart the application to apply the changes and use the added features.,Your license has been updated. Please restart the application to apply the changes and use the added features.
+4/1/6#0,You will need to relaunch the app to enable pen pressure sensitivity.,You will need to relaunch the app to enable pen pressure sensitivity.
+4/1/8#0,How to restart the app,How to restart the app
+5/1/7#0,Enter again,Enter again
+5/1/8#0,Try again,Try again
+5/1/13#0,$$$ Pause,$$$ Pause
+5/1/14#0,・ From web browser ,・ From web browser 
+5/1/15#0,・ From mobile ,・ From mobile 
+5/1/16#0,"If registering from a mobile phone, please scan the following 2D mobile response code.
+The license authentication key will be automatically entered to the site.","If registering from a mobile phone, please scan the following 2D mobile response code.
+The license authentication key will be automatically entered to the site."
+5/1/17#0,License authentication key,License authentication key
+5/1/20#0,Your subscription information needs to be updated. Please press the [Restore purchases] button to update your subscription information.,Your subscription information needs to be updated. Please press the [Restore purchases] button to update your subscription information.
+5/1/21#0,Restore purchases,Restore purchases
+5/1/22#0,Receive another serial number,Receive another serial number
+5/1/23#0,                                             ,                                             
+5/1/25#0,You’ll be able to purchase the software after starting Clip Studio.,You’ll be able to purchase the software after starting Clip Studio.
+5/1/26#0,"Processing could not be completed because the necessary files were not found.
+The application may not be installed correctly.","Processing could not be completed because the necessary files were not found.
+The application may not be installed correctly."
+5/1/27#0,"Please close Clip Studio to update the license information. 
+After closing it, click [Try again] below.","Please close Clip Studio to update the license information. 
+After closing it, click [Try again] below."
+5/1/28#0,Thank you for choosing Clip Studio Paint.,Thank you for choosing Clip Studio Paint.
+5/1/29#0,Register license,Register license
+5/1/30#0,"If you have a serial number for Clip Studio Paint, enter it below and click Register License.","If you have a serial number for Clip Studio Paint, enter it below and click Register License."
+5/1/31#0,Register License,Register License
+5/1/32#0,Use trial version,Use trial version
+5/1/33#0,Use trial version (with limitations),Use trial version (with limitations)
+5/1/34#0,"You need to register a free Clip Studio account to use the full-feature trial and save your work. 
+","You need to register a free Clip Studio account to use the full-feature trial and save your work. 
+"
+5/1/35#0,Use full trial version,Use full trial version
+5/1/36#0,Purchase Clip Studio Paint,Purchase Clip Studio Paint
+5/1/38#0,Go to purchase page,Go to purchase page
+5/1/40#0,"Please choose how you would like to verify your license. 
+
+If online verification does not work due to your network connection or antivirus software, please choose “Two-step verification”.","Please choose how you would like to verify your license. 
+
+If online verification does not work due to your network connection or antivirus software, please choose “Two-step verification”."
+5/1/41#0,Online verification,Online verification
+5/1/42#0,Two-step verification,Two-step verification
+5/1/43#0,"This license is already in use on another device.
+ If you want to use this product on this device, you will first need to deactivate the license.","This license is already in use on another device.
+ If you want to use this product on this device, you will first need to deactivate the license."
+5/1/44#0,Go to the license deactivation website and enter the above authentication key.,Go to the license deactivation website and enter the above authentication key.
+5/1/45#0,Find details on limited features,Find details on limited features
+5/1/46#0,The application will launch with some limited functions. You will not be able to save your work.,The application will launch with some limited functions. You will not be able to save your work.
+5/1/47#0, , 
+5/1/48#0,"$$$ In case you have a different serial number, please register it. 
+ 1. Click the [Start] button below. 
+ 2. Select [Register License] from the [Help] menu. 
+ 3. Enter your serial number in the dialog.","$$$ In case you have a different serial number, please register it. 
+ 1. Click the [Start] button below. 
+ 2. Select [Register License] from the [Help] menu. 
+ 3. Enter your serial number in the dialog."
+5/1/49#0, , 
+5/1/51#0,"$$$ Click here to check how you can obtain a serial number.
+Click here also to see detailed procedures for license registration
+and purchase of the product.","$$$ Click here to check how you can obtain a serial number.
+Click here also to see detailed procedures for license registration
+and purchase of the product."
+5/1/52#0,"The valid period for this license has expired. 
+Thank you for using Clip Studio Paint.","The valid period for this license has expired. 
+Thank you for using Clip Studio Paint."
+5/1/53#0,Do you want to launch the application with limited features?,Do you want to launch the application with limited features?
+5/1/54#0,"The entered confirmation key is incorrect.
+
+Please check the confirmation key displayed in the browser and try again.","The entered confirmation key is incorrect.
+
+Please check the confirmation key displayed in the browser and try again."
+5/1/55#0,"This product is not registered. 
+
+If you prefer monthly subscription, please sign up from here and get a serial number. 
+If you get a serial number and register your license, you can continue to use all features.","This product is not registered. 
+
+If you prefer monthly subscription, please sign up from here and get a serial number. 
+If you get a serial number and register your license, you can continue to use all features."
+5/1/56#0,Do you want to enter the serial number again?,Do you want to enter the serial number again?
+5/1/57#0,"License could not be verified upon launching the software. Please check the following. 
+
+You can still use all features even if you see this message.","License could not be verified upon launching the software. Please check the following. 
+
+You can still use all features even if you see this message."
+5/1/58#0,"If this computer is connected to the Internet, please read here.","If this computer is connected to the Internet, please read here."
+5/1/59#0,Please check if the following page displays correctly using %s.,Please check if the following page displays correctly using %s.
+5/1/60#0,"If the above page is displayed correctly,
+ it is possible that the license could not be verified due to server congestion. 
+
+If the above page is not displayed correctly,
+ your computer may not be connected to the Internet. 
+Please check your network settings. 
+
+Your license will be verified the next time you launch the software. You may continue to use the software now.","If the above page is displayed correctly,
+ it is possible that the license could not be verified due to server congestion. 
+
+If the above page is not displayed correctly,
+ your computer may not be connected to the Internet. 
+Please check your network settings. 
+
+Your license will be verified the next time you launch the software. You may continue to use the software now."
+5/1/61#0,"If this computer is not connected to the Internet, please read here.","If this computer is not connected to the Internet, please read here."
+5/1/62#0,"License verification will be executed at that time, so you can continue to use the application.","License verification will be executed at that time, so you can continue to use the application."
+5/1/63#0,"This dialog is for checking the online status of your computer and for registering your license.
+
+Please make sure you are logged in with administrator permissions before registering your license.","This dialog is for checking the online status of your computer and for registering your license.
+
+Please make sure you are logged in with administrator permissions before registering your license."
+5/1/64#0,"You need a Clip Studio account to access all features of the trial. 
+Please enter the email and password of your Clip Studio account.","You need a Clip Studio account to access all features of the trial. 
+Please enter the email and password of your Clip Studio account."
+5/1/65#0,E-mail address:,E-mail address:
+5/1/67#0,The e-mail address or password is incorrect.,The e-mail address or password is incorrect.
+5/1/68#0,"The e-mail address or password is incorrect. 
+Please make sure you are using single-byte characters.","The e-mail address or password is incorrect. 
+Please make sure you are using single-byte characters."
+5/1/69#0,"The valid period for this license has expired.
+Thank you for using Clip Studio Paint.","The valid period for this license has expired.
+Thank you for using Clip Studio Paint."
+5/1/70#0,Contact our support team,Contact our support team
+5/1/71#0,Check here for details about limited features and how to register a license.,Check here for details about limited features and how to register a license.
+5/1/72#0,Failed to import license key file.,Failed to import license key file.
+5/1/74#0,Connecting to the network,Connecting to the network
+5/1/76#0,You have news from CELSYS. Read now?,You have news from CELSYS. Read now?
+5/1/80#0,Set up connection,Set up connection
+5/1/81#0,%s - Verify License,%s - Verify License
+5/1/82#0,%s - Firewall Authentication,%s - Firewall Authentication
+5/1/83#0,%s - Error Verifying License,%s - Error Verifying License
+5/1/84#0,%s - Error Verifying License,%s - Error Verifying License
+5/1/85#0,%s - Error Verifying License,%s - Error Verifying License
+5/1/86#0,%s - Verify License,%s - Verify License
+5/1/87#0,%s - Error Verifying License,%s - Error Verifying License
+5/1/88#0,%s - License Verified Successfully,%s - License Verified Successfully
+5/1/89#0,%s - Register Trial,%s - Register Trial
+5/1/90#0,%s - Error Registering Trial,%s - Error Registering Trial
+5/1/91#0,%s - Error Registering Trial,%s - Error Registering Trial
+5/1/92#0,%s - Error Registering Trial,%s - Error Registering Trial
+5/1/93#0,%s - Register Trial,%s - Register Trial
+5/1/94#0,%s - Error Registering Trial,%s - Error Registering Trial
+5/1/95#0,Verifying your license. Please wait.,Verifying your license. Please wait.
+5/1/96#0,"The network is currently busy.
+Your license will be verified the next time you launch the software.
+Thank you for choosing Clip Studio Paint.","The network is currently busy.
+Your license will be verified the next time you launch the software.
+Thank you for choosing Clip Studio Paint."
+5/1/97#0,"Your license has been verified and registered successfully.
+Thank you for choosing Clip Studio Paint.","Your license has been verified and registered successfully.
+Thank you for choosing Clip Studio Paint."
+5/1/98#0,License verification failed.,License verification failed.
+5/1/99#0,"The network is currently busy.
+Your license will be verified later.
+Thank you for choosing Clip Studio Paint.","The network is currently busy.
+Your license will be verified later.
+Thank you for choosing Clip Studio Paint."
+5/1/100#0,"The network is currently busy. Your license will be verified later.
+
+You can still use all features even if you see this message. 
+
+You may see another message that you can use all features for three days, 
+but the original valid period will be restored after the next license verification.","The network is currently busy. Your license will be verified later.
+
+You can still use all features even if you see this message. 
+
+You may see another message that you can use all features for three days, 
+but the original valid period will be restored after the next license verification."
+5/1/101#0,License verification failed.,License verification failed.
+5/1/102#0,"You need to register your trial with a Clip Studio account to access all features.
+Would you like to register your trial now?","You need to register your trial with a Clip Studio account to access all features.
+Would you like to register your trial now?"
+5/1/103#0,"Yes, register now","Yes, register now"
+5/1/104#0,"No, use trial with limited features","No, use trial with limited features"
+5/1/105#0,"Click Next to submit your license number to our server for verification.
+
+No personal information except the provided e-mail address and password will be sent to the server.","Click Next to submit your license number to our server for verification.
+
+No personal information except the provided e-mail address and password will be sent to the server."
+5/1/106#0,"This dialog is for verifying your license registration.
+Please register your license to use this software.","This dialog is for verifying your license registration.
+Please register your license to use this software."
+5/1/107#0,Verify now,Verify now
+5/1/108#0,Verify later (Use with limited features),Verify later (Use with limited features)
+5/1/109#0,"Click Next to submit your license number to our server for verification.
+
+No personal information will be sent to the server.","Click Next to submit your license number to our server for verification.
+
+No personal information will be sent to the server."
+5/1/110#0,"This dialog is for checking your license registration. 
+Please register your license to use this software.","This dialog is for checking your license registration. 
+Please register your license to use this software."
+5/1/111#0,"You have already registered a trial, so you cannot register a second trial. 
+If you enjoyed using this software, consider purchasing the full version. 
+
+If you get this message even if you have not previously registered a trial, please contact our support team with the below license authentication key for help.","You have already registered a trial, so you cannot register a second trial. 
+If you enjoyed using this software, consider purchasing the full version. 
+
+If you get this message even if you have not previously registered a trial, please contact our support team with the below license authentication key for help."
+5/1/112#0,"A new version has been released.
+Please update to the latest version and register your trial again.","A new version has been released.
+Please update to the latest version and register your trial again."
+5/1/113#0,Trial registration was cancelled.,Trial registration was cancelled.
+5/1/114#0,"License verification was cancelled. 
+
+You need to verify a license in order to use all features of the software. 
+The license verification dialog will appear again the next time the software is launched.","License verification was cancelled. 
+
+You need to verify a license in order to use all features of the software. 
+The license verification dialog will appear again the next time the software is launched."
+5/1/115#0,Failed to register the trial.,Failed to register the trial.
+5/1/116#0,"A new version has been released.
+Please update to the latest version from the following page and register your trial again.","A new version has been released.
+Please update to the latest version from the following page and register your trial again."
+5/1/117#0,"This trial serial has already been registered in another computer. 
+The license could not be verified. 
+
+If you see this message even if you are registering for the first time, 
+please contact the Celsys support team with the below license authentication key. ","This trial serial has already been registered in another computer. 
+The license could not be verified. 
+
+If you see this message even if you are registering for the first time, 
+please contact the Celsys support team with the below license authentication key. "
+5/1/118#0,"License verification was cancelled. 
+
+You need to verify the license in order to use this license.","License verification was cancelled. 
+
+You need to verify the license in order to use this license."
+5/1/119#0,License verification was cancelled.,License verification was cancelled.
+5/1/120#0,"License verification was cancelled. 
+
+You need to verify a license in order to use the software.","License verification was cancelled. 
+
+You need to verify a license in order to use the software."
+5/1/121#0,"License verification was cancelled. 
+
+You need to verify a license in order to use the software. 
+The license verification dialog will appear again the next time the software is launched.","License verification was cancelled. 
+
+You need to verify a license in order to use the software. 
+The license verification dialog will appear again the next time the software is launched."
+5/1/122#0,"This trial serial has already been registered on another computer. 
+The license could not be verified.
+
+If this message appears even if you have not registered the license to another computer, 
+please contact exbeans Prototyping from inquiry form with the below license authentication key.","This trial serial has already been registered on another computer. 
+The license could not be verified.
+
+If this message appears even if you have not registered the license to another computer, 
+please contact exbeans Prototyping from inquiry form with the below license authentication key."
+5/1/123#0,Cancelling license verification. Please wait.,Cancelling license verification. Please wait.
+5/1/124#0,Verifying your license. Please wait.,Verifying your license. Please wait.
+5/1/125#0,Registering your trial. Please wait.,Registering your trial. Please wait.
+5/1/126#0,"Your trial was registered successfully.
+You can now use all features of the software.","Your trial was registered successfully.
+You can now use all features of the software."
+5/1/127#0,Failed to login to Clip Studio. Please check your e-mail address and password.,Failed to login to Clip Studio. Please check your e-mail address and password.
+5/1/128#0,You have already registered your trial.,You have already registered your trial.
+5/1/129#0,"The license verification failed. 
+
+Your computer may not be connected to the Internet or there may be a problem with the license system. 
+License verification may fail if your network connection is weak. 
+
+If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
+Would you like to try this instead?","The license verification failed. 
+
+Your computer may not be connected to the Internet or there may be a problem with the license system. 
+License verification may fail if your network connection is weak. 
+
+If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
+Would you like to try this instead?"
+5/1/130#0,"Yes, verify license from another device","Yes, verify license from another device"
+5/1/131#0,"No, I will verify my license later","No, I will verify my license later"
+5/1/132#0,"Failed to register your trial. 
+
+Your computer may not be connected to the Internet or there may be a problem with the license system. 
+License verification may fail if your network connection is weak. 
+
+If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
+Would you like to try this instead?","Failed to register your trial. 
+
+Your computer may not be connected to the Internet or there may be a problem with the license system. 
+License verification may fail if your network connection is weak. 
+
+If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
+Would you like to try this instead?"
+5/1/133#0,"Yes, register trial from another device","Yes, register trial from another device"
+5/1/134#0,"No, use trial with limited features","No, use trial with limited features"
+5/1/135#0,"Trial registration failed.
+There is a problem with the network connection or the license system is busy.
+
+Please check your connection and try again.
+If you keep receiving this error, please contact us with the form below.","Trial registration failed.
+There is a problem with the network connection or the license system is busy.
+
+Please check your connection and try again.
+If you keep receiving this error, please contact us with the form below."
+5/1/136#0,Verify your license with a web browser or smartphone.,Verify your license with a web browser or smartphone.
+5/1/137#0,1. Go to the license verification website and enter the above authentication key.,1. Go to the license verification website and enter the above authentication key.
+5/1/138#0,"2. In the space below, enter the confirmation key shown on the license verification website.","2. In the space below, enter the confirmation key shown on the license verification website."
+5/1/139#0,Register your trial with a web browser or smartphone.,Register your trial with a web browser or smartphone.
+5/1/140#0,1. Go to the trial registration website and enter the above registration key.,1. Go to the trial registration website and enter the above registration key.
+5/1/141#0,"2. In the space below, enter the confirmation key shown on the trial registration website.","2. In the space below, enter the confirmation key shown on the trial registration website."
+5/1/142#0,"If you cannot verify your license even after trying the above method, please contact Support.","If you cannot verify your license even after trying the above method, please contact Support."
+5/1/143#0,"If you cannot register the trial even after trying the above method, please contact Support.","If you cannot register the trial even after trying the above method, please contact Support."
+5/1/144#0,"If you cannot verify your license even after trying the above method, please contact Support.","If you cannot verify your license even after trying the above method, please contact Support."
+5/1/145#0,Verify license from browser,Verify license from browser
+5/1/146#0,Verify license later,Verify license later
+5/1/147#0,Register trial from browser,Register trial from browser
+5/1/148#0,Don’t register now (use trial with limited features),Don’t register now (use trial with limited features)
+5/1/149#0,"This dialog is for verifying your license.
+
+Please make sure you are logged in with administrator permissions before verifying your license.","This dialog is for verifying your license.
+
+Please make sure you are logged in with administrator permissions before verifying your license."
+5/1/150#0,"This dialog is for registering your trial.
+
+Please make sure you are logged in with administrator permissions before registering your trial.","This dialog is for registering your trial.
+
+Please make sure you are logged in with administrator permissions before registering your trial."
+5/1/151#0,"Yes, try again","Yes, try again"
+5/1/152#0,"No, verify license later","No, verify license later"
+5/1/153#0,"Yes, try again","Yes, try again"
+5/1/154#0,"No, use trial with limited features","No, use trial with limited features"
+5/1/155#0,Failed to initialize connection.,Failed to initialize connection.
+5/1/156#0,Failed to send request.,Failed to send request.
+5/1/157#0,Failed to obtain response.,Failed to obtain response.
+5/1/158#0,00403: Unable to connect to server.,00403: Unable to connect to server.
+5/1/159#0,The serial number may not be correctly entered.,The serial number may not be correctly entered.
+5/1/160#0,"Serial number is incorrect.
+Please use single-byte alphanumeric characters.","Serial number is incorrect.
+Please use single-byte alphanumeric characters."
+5/1/161#0,Thank you for registering. You can now use the software for %d days.,Thank you for registering. You can now use the software for %d days.
+5/1/162#0,A serial number has not been entered.,A serial number has not been entered.
+5/1/163#0,"You can’t use this software with the serial number you entered.
+Click here for details.","You can’t use this software with the serial number you entered.
+Click here for details."
+5/1/164#0,"This trial serial number has already been used. 
+You cannot use this serial number.","This trial serial number has already been used. 
+You cannot use this serial number."
+5/1/165#0,You cannot change to this serial number.,You cannot change to this serial number.
+5/1/166#0,The software may not be installed correctly.,The software may not be installed correctly.
+5/1/167#0,"The application failed to launch because the necessary files to verify the license could not be found.
+The application may not be installed correctly.","The application failed to launch because the necessary files to verify the license could not be found.
+The application may not be installed correctly."
+5/1/168#0,"The process failed because the necessary files to verify the license could not be found.
+The application may not be installed correctly.","The process failed because the necessary files to verify the license could not be found.
+The application may not be installed correctly."
+5/1/169#0,Please enter the e-mail address and password for your Clip Studio account.,Please enter the e-mail address and password for your Clip Studio account.
+5/1/170#0,The e-mail address or password is not entered correctly. Please check and try again.,The e-mail address or password is not entered correctly. Please check and try again.
+5/1/171#0,The process could not be carried out because the application is open in a virtual OS.,The process could not be carried out because the application is open in a virtual OS.
+5/1/172#0,"The process failed because the necessary information could not be obtained. 
+If you are not logged in with system administrator permissions, please log in as an administrator and try again.","The process failed because the necessary information could not be obtained. 
+If you are not logged in with system administrator permissions, please log in as an administrator and try again."
+5/1/173#0,"The process failed because the necessary files could not be found, or because you do not have permission to perform this action.","The process failed because the necessary files could not be found, or because you do not have permission to perform this action."
+5/1/174#0,"$$$ You cannot register trial use with early preview version (RC version).
+If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ You cannot register trial use with early preview version (RC version).
+If you register trial use with official version, serial number will appear. Please enter that serial number."
+5/1/175#0,This serial number could not be registered.,This serial number could not be registered.
+5/1/176#0,"$$$ You cannot register trial use with early preview version (RC version).
+If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ You cannot register trial use with early preview version (RC version).
+If you register trial use with official version, serial number will appear. Please enter that serial number."
+5/1/177#0,"This license cannot be verified at the moment. 
+To continue using the software, please choose one of the following options.","This license cannot be verified at the moment. 
+To continue using the software, please choose one of the following options."
+5/1/178#0,"If the license is not verified within %d days, the software will be launched with limited features.","If the license is not verified within %d days, the software will be launched with limited features."
+5/1/179#0,"
+You can still use all features even if you get this message.
+Please confirm that the below page can be displayed with %s.","
+You can still use all features even if you get this message.
+Please confirm that the below page can be displayed with %s."
+5/1/180#0,"If license is not verified in %d days,
+the license verification dialog will appear again. Please verify your license again at that time.","If license is not verified in %d days,
+the license verification dialog will appear again. Please verify your license again at that time."
+5/1/181#0,"If you used a different computer or mobile phone when you verified the license last time, 
+the license verification dialog will appear again after %d days. 
+Please verify the license in the same procedure.","If you used a different computer or mobile phone when you verified the license last time, 
+the license verification dialog will appear again after %d days. 
+Please verify the license in the same procedure."
+5/1/182#0,Enter the serial number and click OK.,Enter the serial number and click OK.
+5/1/183#0,"If you have a serial number, enter the serial number and click OK.","If you have a serial number, enter the serial number and click OK."
+5/1/184#0,"If you have a serial number, enter the serial number and click OK. 
+You can change from the trial version to the licensed product version.","If you have a serial number, enter the serial number and click OK. 
+You can change from the trial version to the licensed product version."
+5/1/185#0,How to obtain a serial number and register your license.,How to obtain a serial number and register your license.
+5/1/186#0,Internet Explorer,Internet Explorer
+5/1/188#0,The software will launch with limited features.,The software will launch with limited features.
+5/1/189#0,The software does not have a verified license. Some features will be limited.,The software does not have a verified license. Some features will be limited.
+5/1/190#0,The trial period has ended.,The trial period has ended.
+5/1/191#0,The valid period for the current serial number has expired.,The valid period for the current serial number has expired.
+6/1/4#0,Restored successfully.,Restored successfully.
+6/1/5#0,Could not find a valid active plan. Please apply for a new plan.,Could not find a valid active plan. Please apply for a new plan.
+6/1/6#0,"Successfully restored purchases.
+
+Your account has a valid active plan.","Successfully restored purchases.
+
+Your account has a valid active plan."
+6/1/7#0,"Successfully restored purchases.
+
+Could not find an active plan for your account.","Successfully restored purchases.
+
+Could not find an active plan for your account."
+6/1/9#0,Restored successfully.,Restored successfully.
+6/1/10#0,Could not find an active plan for your account.,Could not find an active plan for your account.
+6/1/11#0,An active plan for your account was found.,An active plan for your account was found.
