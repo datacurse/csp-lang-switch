@@ -26,17 +26,17 @@ reference -- leave it. `target` is the only column a translator changes. The
 CSV is just an overlay: `apply` re-parses the original binary and substitutes
 text by `key`, so the worksheet needs no structural information of its own.
 
-Usage
+Usage  (run from the repo root)
 -----
-  python repack.py export <resource_file> <out.csv> [--kind text [key url]]
-  python repack.py apply  <resource_file> <translated.csv> <out_file>
-  python repack.py stats  <resource_file>
+  python src/repack.py export <resource_file> <out.csv> [--kind text [key url]]
+  python src/repack.py apply  <resource_file> <translated.csv> <out_file>
+  python src/repack.py stats  <resource_file>
 
 Translation workflow
 --------------------
-  1.  python repack.py export english/742DEA58-... strings.csv --kind text
+  1.  python src/repack.py export english/742DEA58-... strings.csv --kind text
   2.  Edit the "target" column of each row in strings.csv (leave "source").
-  3.  python repack.py apply english/742DEA58-... strings.csv patched/742DEA58-...
+  3.  python src/repack.py apply english/742DEA58-... strings.csv patched/742DEA58-...
   4.  Put the patched file in CSP's resource/english/ folder and test.
 
 No external dependencies (standard library only).

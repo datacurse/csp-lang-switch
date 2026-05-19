@@ -1,0 +1,1 @@
+- collect all words from strings, count them up, and ask claude to come up with universal names for some most common words so that we would know how to translate them.

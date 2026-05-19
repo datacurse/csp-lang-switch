@@ -22,9 +22,9 @@ Outputs:
   <prefix>.json  - list of records, machine-readable
   <prefix>.tsv   - id <tab> offset <tab> kind <tab> text, easy to review
 
-Usage:
-  python extract_csp_strings.py 742DEA58-ED6B-4402-BC11-20DFC6D08040
-  python extract_csp_strings.py <file> --out-prefix japanese_strings
+Usage  (run from the repo root):
+  python src/extract_csp_strings.py 742DEA58-ED6B-4402-BC11-20DFC6D08040
+  python src/extract_csp_strings.py <file> --out-prefix japanese_strings
 """
 
 import sys

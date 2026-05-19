@@ -74,11 +74,11 @@ def _gather(target: Path) -> list[Path]:
     return []
 
 
-def _default_samples(script_dir: Path) -> list[Path]:
+def _default_samples(repo_root: Path) -> list[Path]:
     """The two known 742DEA58 samples used when no arguments are given."""
     candidates = {
-        "english": script_dir / "742DEA58-ED6B-4402-BC11-20DFC6D08040_english",
-        "japanese": (script_dir / "resource_original" / "japanese"
+        "english": repo_root / "742DEA58-ED6B-4402-BC11-20DFC6D08040_english",
+        "japanese": (repo_root / "resource_original" / "japanese"
                      / "742DEA58-ED6B-4402-BC11-20DFC6D08040"),
     }
     files = []
@@ -91,7 +91,7 @@ def _default_samples(script_dir: Path) -> list[Path]:
 
 
 def main(argv: list[str]) -> int:
-    script_dir = Path(__file__).resolve().parent
+    repo_root = Path(__file__).resolve().parent.parent
 
     if argv:
         files: list[Path] = []
@@ -101,7 +101,7 @@ def main(argv: list[str]) -> int:
                 print(f"WARNING: nothing to test at {arg}")
             files += found
     else:
-        files = _default_samples(script_dir)
+        files = _default_samples(repo_root)
 
     if not files:
         print("No files to test.")

@@ -27,14 +27,14 @@ patched file into a CSP language folder.**
 
 `serialize(parse(f)) == f`, byte-for-byte, holds for **every** resource file:
 **485/485 files** across all 12 language folders (`resource_original/`) plus the
-working English copy. Because [`csp5.py`](csp5.py) stores **no absolute offsets**
+working English copy. Because [`csp5.py`](../src/csp5.py) stores **no absolute offsets**
 and `serialize()` recomputes every offset and length from child sizes, a passing
 round-trip is a proof that the structural model is complete and correct.
 
 Re-verify any time with:
 
 ```
-python roundtrip.py resource_original
+python src/roundtrip.py resource_original
 ```
 
 ### 2. The index and footer are language-independent — confirmed across all 12 languages
@@ -97,7 +97,7 @@ bytes/char; that is fine).
 ### 1. Export a translation worksheet
 
 ```
-python repack.py export <resource_file> strings.csv --kind text
+python src/repack.py export <resource_file> strings.csv --kind text
 ```
 
 Produces a CSV with columns `key, source, target`. `key` addresses the string
@@ -112,7 +112,7 @@ CSV is just an overlay; it carries no structural data.
 ### 3. Repackage
 
 ```
-python repack.py apply <resource_file> strings.csv <patched_file>
+python src/repack.py apply <resource_file> strings.csv <patched_file>
 ```
 
 `apply` re-parses the original binary, substitutes text by `key`, recomputes all
@@ -157,6 +157,12 @@ folder.
 * 55 distinct GUID files exist: **39 shared** across all 12 language folders +
   16 present only in `other`. Only the 39 carry translatable UI text.
 
+A per-file breakdown of all 39 shared files — what each one covers, its `text`
+count, and which six are non-targets (shader code, XML templates, empty stubs) —
+is in [`FILE_INVENTORY.md`](FILE_INVENTORY.md). Totals: **14,611 `text` records**,
+**9,368 in `742DEA58`** and **5,243 in the other 38**; a full UI translation
+means patching ~32 of these files, not just `742DEA58`.
+
 ---
 
 ## Corrections to `CSP5_format_spec.md`
@@ -182,20 +188,26 @@ language-independent.
 
 ## Tooling
 
-* [`csp5.py`](csp5.py) — parser + serializer. The round-trip-verified core.
-* [`repack.py`](repack.py) — `export` / `apply` / `stats`; the CSV translation
-  workflow. **Use this for translation work.**
-* [`roundtrip.py`](roundtrip.py) — verification harness (`serialize(parse(f))==f`).
-* `extract_csp_strings.py`, `csp_resource_inspect.py`, `inspector.py` — older
-  heuristic / inventory tools, kept for reference; superseded for repacking by
-  `csp5.py`.
+All Python lives in [`src/`](../src/); run it from the repo root
+(`python src/<tool>.py …`).
+
+* [`csp5.py`](../src/csp5.py) — parser + serializer. The round-trip-verified core.
+* [`repack.py`](../src/repack.py) — `export` / `apply` / `stats`; the CSV
+  translation workflow. **Use this for translation work.**
+* [`extract_csp_strings.py`](../src/extract_csp_strings.py) — text/key/url
+  classifier; imported by `repack.py`.
+* [`roundtrip.py`](../src/roundtrip.py) — verification harness
+  (`serialize(parse(f))==f`).
+* [`src/legacy/`](../src/legacy/) — `inspector.py`, `csp_resource_inspect.py`:
+  older heuristic inventory tools, kept for reference only.
 
 ---
 
 ## What is NOT done yet / open
 
 * Only `742DEA58-…` has been patched and load-tested. A full UI translation
-  means repeating the procedure for all **39 shared files**.
+  means repeating the procedure for the **~32 content-bearing shared files**
+  (39 total minus 6 non-targets — see [`FILE_INVENTORY.md`](FILE_INVENTORY.md)).
 * No Russian translation content exists yet — only the method is proven.
 * CSP updates can change string IDs or add strings; re-export and re-apply
   against each new build. The **tooling** is the durable asset, not any one
