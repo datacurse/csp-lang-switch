@@ -45,6 +45,7 @@ from __future__ import annotations
 import argparse
 import csv
 import os
+import re
 import shutil
 import sqlite3
 import sys
@@ -185,6 +186,91 @@ def backed_up() -> list[tuple[str, Path]]:
 
 
 # ----------------------------------------------------------------------
+# Brush texture / pattern names baked into the Variant blobs
+# ----------------------------------------------------------------------
+# A brush stores its assigned texture / pattern as a binary blob in the
+# Variant table -- a *cached copy* of the material name plus a reference path.
+# CSP shows that cached name (often still Japanese, as CSP authored it), not
+# the catalog name, so it must be patched here too. The name is resolved by
+# the material uuid in the blob -> materials.py's catalog backup -> the
+# materials worksheet.
+MATERIALS_CSV = ROOT / "translation" / "materials.csv"
+MATERIALS_CATALOG = ROOT / "materials" / "catalog"
+BLOB_COLS = ("TextureImage", "DualTextureImage",
+             "BrushPatternImageArray", "DualPatternImageArray")
+_NAME_RE = re.compile(r"<name>([^<]*)</name>")
+_P1_RE = re.compile(r"\.:(?:Install2?:)?Paint\d+:([^:]+)")
+
+
+def material_uuid_map() -> dict[str, str]:
+    """{material-uuid: Russian name}, from materials.py's catalog backup +
+    worksheet. Empty (with a note) if those have not been produced yet."""
+    if not MATERIALS_CSV.exists() or not MATERIALS_CATALOG.is_dir():
+        print("  note: materials worksheet / catalog backup not found -- "
+              "brush texture names left untranslated (run materials.py first)")
+        return {}
+    tr = {r["source"]: r["target"]
+          for r in csv.DictReader(open(MATERIALS_CSV, encoding="utf-8-sig"))
+          if r.get("target", "").strip()}
+    out: dict[str, str] = {}
+    for xml in MATERIALS_CATALOG.rglob("catalog.xml"):
+        name = next((n for n in _NAME_RE.findall(xml.read_text("utf-8"))
+                     if n.strip()), "")
+        ru = tr.get(name)
+        if ru:
+            out[xml.parent.name] = ru          # parent dir == material uuid
+    return out
+
+
+def _u32(b: bytes, o: int) -> int:
+    return int.from_bytes(b[o:o + 4], "big")
+
+
+def blob_frame_ok(b: bytes) -> bool:
+    """True if a Variant blob has the expected [8][count]+[recsize][body]... frame."""
+    if len(b) < 8 or _u32(b, 0) != 8:
+        return False
+    o = 8
+    for _ in range(_u32(b, 4)):
+        if o + 4 > len(b):
+            return False
+        o += _u32(b, o)
+    return o == len(b)
+
+
+def patch_texture_blob(blob: bytes, uuid_map: dict[str, str]) -> tuple[bytes, int]:
+    """Rewrite the cached material name in a brush texture/pattern blob.
+
+    Blob = [u32 8][u32 count] + count*[u32 recsize][body]; each body starts
+    [u32 p1len][p1][u32 tag][u32 namelen][name]... -- only the name (with its
+    length field and the element's recsize) is rewritten; every other byte,
+    including the variable element tail, is preserved. The pack uuid is read
+    from p1 and resolved to the Russian name."""
+    if not blob_frame_ok(blob):
+        return blob, 0
+    out, o, count, n = blob[:8], 8, _u32(blob, 4), 0
+    for _ in range(count):
+        rec = _u32(blob, o)
+        body = blob[o + 4:o + rec]
+        o += rec
+        if len(body) >= 12:
+            p1len = _u32(body, 0)
+            if 12 + p1len <= len(body):
+                namelen = _u32(body, 8 + p1len)
+                if 0 < namelen and 12 + p1len + namelen <= len(body):
+                    p1 = body[4:4 + p1len].decode("utf-16le", "replace")
+                    m = _P1_RE.match(p1)
+                    ru = (uuid_map.get(m.group(1)) if m else None)
+                    rub = ru.encode("utf-16le") if ru else None
+                    if rub and rub != body[12 + p1len:12 + p1len + namelen]:
+                        body = (body[:8 + p1len] + len(rub).to_bytes(4, "big")
+                                + rub + body[12 + p1len + namelen:])
+                        n += 1
+        out += (len(body) + 4).to_bytes(4, "big") + body
+    return out, n
+
+
+# ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
 def cmd_backup(args) -> None:
@@ -258,7 +344,8 @@ def cmd_apply(args) -> None:
     if not dbs:
         sys.exit(f"error: nothing in {TOOLS_DIR} -- run 'backup' first")
 
-    patched_n = strings_n = 0
+    uuid_map = material_uuid_map()
+    patched_n = strings_n = blobs_n = 0
     untranslated: set[str] = set()
     for tag, rel in dbs:
         src = TOOLS_DIR / tag / rel
@@ -278,6 +365,19 @@ def cmd_apply(args) -> None:
         try:
             con.executemany("update Node set NodeName=? where _PW_ID=?",
                             [(t, pid) for pid, t in updates.items()])
+            # brush texture / pattern names baked into the Variant blobs
+            if uuid_map:
+                vcols = {r[1] for r in con.execute(
+                    "pragma table_info(Variant)")}
+                for col in (c for c in BLOB_COLS if c in vcols):
+                    rows = con.execute(f'select _PW_ID, "{col}" from Variant '
+                                       f'where "{col}" is not null').fetchall()
+                    for pid, blob in rows:
+                        new, k = patch_texture_blob(blob, uuid_map)
+                        if k and blob_frame_ok(new):
+                            con.execute(f'update Variant set "{col}"=? '
+                                        f'where _PW_ID=?', (new, pid))
+                            blobs_n += k
             con.commit()
         finally:
             con.close()
@@ -292,6 +392,8 @@ def cmd_apply(args) -> None:
 
     print(f"apply -> {BUILD_DIR}")
     print(f"  patched {patched_n} DB(s), {strings_n} tool names translated")
+    if uuid_map:
+        print(f"  {blobs_n} brush texture/pattern name(s) translated")
     if untranslated:
         print(f"  note: {len(untranslated)} name(s) have no translation and "
               f"stay as-is (downloaded / custom tools):")

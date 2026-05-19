@@ -68,12 +68,45 @@ schema relevant to translation:
 * Table **`Node`** — the tool tree (groups → tools → sub-tools), one row per
   node. `_PW_ID` is the row id; **`NodeName`** is the displayed name. Container
   rows have an empty `NodeName`; named rows are the translatable set.
-* Tables `Manager`, `Variant`, `sqlite_sequence` hold brush parameters and tool
-  state — **never touched**.
+* Table **`Variant`** — brush parameters. Four BLOB columns
+  (`TextureImage`, `DualTextureImage`, `BrushPatternImageArray`,
+  `DualPatternImageArray`) hold the brush's assigned texture / pattern — see
+  the next section. Other `Variant` / `Manager` / `sqlite_sequence` data is
+  **never touched**.
 
-Translation is a plain `UPDATE Node SET NodeName=? WHERE _PW_ID=?`. The shipped
-Japanese seed DB is just the English schema with `NodeName` translated, so a
-patched DB is structurally interchangeable with any slot.
+The tool-name translation is a plain `UPDATE Node SET NodeName=? WHERE _PW_ID=?`.
+The shipped Japanese seed DB is just the English schema with `NodeName`
+translated, so a patched DB is structurally interchangeable with any slot.
+
+---
+
+## Brush texture & pattern names — the `Variant` blobs
+
+The texture / pattern a brush uses (the Tool Settings panel's *Texture* and
+*Brush tip* fields) is **not** read live from the material catalog. Each brush
+**bakes a cached copy of the material name into its own data** — a binary blob
+in a `Variant` column. CSP shows that cached name, so it must be patched too;
+otherwise the slot stays English (or, since CSP authored the brushes in
+Japanese, often *Japanese*).
+
+The blob format — sequential, no offset table:
+
+```
+[u32 8][u32 count]  then count × [u32 recsize][body]
+body:  [u32 p1len][p1][u32 tag][u32 namelen][name][…tail…]
+```
+
+`recsize` counts itself + the body. `p1` is the material's layer path
+(`.:Paint###:<uuid>:data:material_N.layer`); `name` is the cached display name.
+`tools.py` rewrites only `name` (and its length field + the element's
+`recsize`) — every other byte, including the variable tail, is preserved.
+
+The cached name is often Japanese, so it is **not** translated directly:
+the **material uuid** is read from `p1` and resolved through `materials.py`'s
+catalog backup (`materials/catalog/<…>/<uuid>/catalog.xml` → English name) →
+`translation/materials.csv` → Russian. So patching brush textures **depends on
+`materials.py` having been run** (`backup` + a translated `materials.csv`); if
+that data is absent `tools.py` skips the blobs with a note.
 
 ---
 
@@ -132,10 +165,13 @@ previously-patched DB is not a clean original. Standard library only (no
 * **7 DBs** patched — 4 install seed + 3 user data; **240 distinct tool names**,
   all but 5 translated EN→RU against [`GLOSSARY.md`](../translation/GLOSSARY.md)
   with the Japanese seed as the per-string oracle.
+* **1,342 brush texture / pattern names** in the `Variant` blobs translated, via
+  the material-uuid → catalog → `materials.csv` bridge.
 * `apply` round-trip-checked all 7 DBs; `PRAGMA integrity_check` = `ok` on each.
 * **2026-05-19, installed into a live CSP:** the user-data `EditImageTool.todb`
-  reads back **254/259 Russian** (the 5 untranslated are downloaded tools, see
-  below); the seed reads 254/254.
+  reads back **254/259 Russian** tool names (the 5 untranslated are downloaded
+  tools, see below) and **383 Russian** brush texture/pattern names; the seed
+  reads 254/254.
 
 ---
 

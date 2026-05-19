@@ -5,3 +5,4 @@
 - translate Руководство по эксплуатации web page and host it and link to it (wait is it possible to change links? im not sure, perhaps)
 - what are those 9 files that are not in russian folder?
 - let users toggle what they want to be translated and what they want to keep original
+- ask claude to walk over commits and correct names

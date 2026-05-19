@@ -22,8 +22,9 @@ has rendered correctly inside a running copy of CSP.
   and load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
 - **Tool palette:** the left-hand tool / sub-tool names live in SQLite
   databases — both an install seed and a per-user working copy — not the
-  bundles. 240 distinct names are translated and installed into both —
-  see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
+  bundles. 240 distinct names are translated and installed into both; the
+  texture / pattern names baked into each brush's `Variant` blobs (1,342) are
+  patched too — see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
 - **Material catalog:** the built-in materials (paper textures, tones,
   patterns, 3D, balloons, frame templates) live in a per-user SQLite catalog.
   1,419 distinct names translated and installed —
