@@ -5,6 +5,10 @@
 > This file is the **authoritative** record of what works. Where it disagrees
 > with [`CSP5_format_spec.md`](CSP5_format_spec.md) (a *pre-implementation*
 > brief that openly speculates), **this file wins.**
+>
+> Scope: this file covers the **resource bundles**. The Filter menu's
+> **plug-in DLLs** are a separate subsystem with their own method and tool —
+> see [`PLUGIN_TRANSLATION.md`](PLUGIN_TRANSLATION.md).
 
 ---
 
@@ -190,6 +194,11 @@ check. Index and footer ride along verbatim.
 3. Copy the patched file over it — the filename must stay the **exact GUID**, no
    extension, no suffix.
 4. Launch CSP, set the UI language to that language, restart if prompted.
+
+For the whole build, [`src/install.py`](../src/install.py) automates steps 1–3:
+`python src/install.py russian` overwrites the `english` slot with `russian/`
+(the repo's `resource/` holds the originals, so `install.py english` is the
+undo). It refuses to run while CSP is open and self-elevates via UAC.
 
 ---
 
