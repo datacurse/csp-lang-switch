@@ -19,6 +19,11 @@ or rebuild the parser — build on what is here.
 The workflow is: **`repack.py export` → edit a CSV → `repack.py apply` → drop the
 patched file into a CSP language folder.**
 
+Decide *what* to translate with the **Japanese oracle**, not a heuristic:
+`export --reference resource/japanese/<GUID>` includes a record iff it is prose
+text or differs from the finished Japanese resource. See "Choosing the
+translatable set" below — this is the single most important lesson learned.
+
 ---
 
 ## What is proven (and how)
@@ -92,6 +97,51 @@ bytes/char; that is fine).
 
 ---
 
+## Choosing the translatable set — the Japanese oracle
+
+This is the lesson that cost a whole translation pass; do not relearn it.
+
+**The trap.** [`extract_csp_strings.py`](../src/extract_csp_strings.py) has a
+`classify()` heuristic that buckets each string as `text` / `key` / `url`. Its
+rule for `key` is "ASCII, no space, ≤40 chars" — meant to catch identifiers like
+`PWView`. But that description **also fits almost every one-word UI label**:
+`Layer`, `Cancel`, `Save`, `Edit`, `File`, `View`, `Window`, `Color`. The first
+translation pass exported with `--kind text`, so all of these were **silently
+dropped** — ~3,900 strings, ~21% of the UI, including the entire menu bar. The
+symptom in CSP: a half-translated UI where multi-word commands ("Color Wheel")
+were translated but every single-word menu and palette name stayed English.
+
+**Why a heuristic can't fix this.** No lexical rule separates the label `Layer`
+from the identifier `PWView` — both are short ASCII CamelCase-ish tokens. You
+need an external source of truth.
+
+**The oracle.** CSP ships a *fully localized* Japanese resource for every file.
+A record's English text and its Japanese text differ **iff Cygames considered
+it translatable UI text**. So:
+
+> A record is translatable **iff** it is prose (`classify() == "text"`)
+> **OR** its English text differs from the Japanese resource.
+
+`repack.py export --reference resource/japanese/<GUID>` implements exactly this.
+The two halves of the rule are a deliberate **union** — it is always a *superset*
+of the old `text`-only worksheet, so re-exporting can never *lose* an existing
+translation:
+
+* the `classify() == "text"` half keeps all prose, including stray Japanese
+  that CSP's English file ships (which equals the Japanese resource yet still
+  needs translating);
+* the `en != ja` half rescues the one-word labels the heuristic mislabels.
+
+Only records that are **both** non-prose **and** identical in English and
+Japanese are excluded — genuine identifiers (`OK`, `CELSYS`, `5.0.0`, `Ver.%s`,
+registry paths). Measured on `742DEA58`: the translatable set went 9,368 →
+**11,843**; across all 32 target files, **3,888** real strings were recovered.
+
+`classify()` is still fine for the `stats` breakdown — just never let it gate
+what gets translated.
+
+---
+
 ## The reproducible procedure
 
 This section is the **binary-level** primitive: `repack.py` on a single file.
@@ -155,34 +205,40 @@ slot. Two viable approaches:
   `french`) — keeps a real English option intact and turns an unused language
   into the translation slot.
 
-Both are sound: the block-1 tree shape and key set are **identical across all
-languages** (verified: English vs French `742DEA58-…` have the same 12,910
-keys). A patch built against the English file drops cleanly into any language
-folder.
+Both are sound. A patched file is a **complete English-derived resource**;
+dropping it into another language's folder just makes CSP load it. The block-1
+**tree shape and record count are identical across all 12 languages** (verified:
+`742DEA58-…` has 12,910 records and the same nesting in every folder), so the
+file is structurally interchangeable between slots.
+
+The entry-ID *labels* are a subtler matter: identical for most language pairs
+but **not all** — `742DEA58-…` differs from English in 8 id-paths in the
+Japanese file and 10 in the Traditional-Chinese file (0 in the other nine).
+A worksheet `key` is therefore only guaranteed valid against the **same file it
+was exported from**. This is harmless in practice: `repack.py apply` always runs
+against the English source the worksheet came from. It matters only for the
+Japanese **oracle** (`export --reference`), which aligns records by **tree
+position**, not by key — `repack.block1_shape()` asserts the shapes match first.
 
 ---
 
 ## Verified facts & figures (`742DEA58-…`, the main UI file)
 
 * 3,467,072 bytes; block 1 = tree of 1,293 directories, max depth 3.
-* 12,910 structured string records: 9,368 `text` (7,212 unique), 3,433
-  `key`, 109 `url`.
-* ⚠️ The `key`/`url` buckets are **not** safe to skip: the `classify()`
-  heuristic is wrong about them. Diffing English against the Japanese resource
-  shows **2,449 of the 3,433 `key` records and 26 of the 109 `url` records are
-  real UI text** Cygames localized. Across all 32 target files that is ~3,900
-  wrongly-excluded strings. Decide the translatable set with the Japanese
-  oracle (`export --reference`), never with `classify()` alone — the genuine
-  translatable count of `742DEA58` is **11,843**, not 9,368.
+* 12,910 structured string records. The `classify()` buckets are 9,368 `text`,
+  3,433 `key`, 109 `url` — but 2,449 of those `key` records and 26 of the `url`
+  records are **real UI text** (they differ in the Japanese resource). The true
+  translatable count is **11,843** — see "Choosing the translatable set".
 * 495 blob leaves (2.67 MB) — PNG assets + opaque sub-containers, not translated.
 * 55 distinct GUID files exist: **39 shared** across all 12 language folders +
   16 present only in `other`. Only the 39 carry translatable UI text.
 
-A per-file breakdown of all 39 shared files — what each one covers, its `text`
-count, and which six are non-targets (shader code, XML templates, empty stubs) —
-is in [`FILE_INVENTORY.md`](FILE_INVENTORY.md). Totals: **14,611 `text` records**,
-**9,368 in `742DEA58`** and **5,243 in the other 38**; a full UI translation
-means patching ~32 of these files, not just `742DEA58`.
+A per-file breakdown of all 39 shared files — what each one covers, its
+translatable-string count, and which six are non-targets (shader code, XML
+templates, empty stubs) — is in [`FILE_INVENTORY.md`](FILE_INVENTORY.md).
+Totals (oracle count): **18,299 translatable strings** across the 32 target
+files — **11,843 in `742DEA58`** and **6,456 in the other 31**. A full UI
+translation means patching all 32 of these files, not just `742DEA58`.
 
 ---
 

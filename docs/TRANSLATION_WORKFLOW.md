@@ -6,9 +6,11 @@
 > **translation production** side — turning an English worksheet into a good,
 > consistent translation at scale.
 >
-> First executed 2026-05-19: `742DEA58-…` (main UI), English → Russian,
-> 9,368 string records. Follow this to translate another file, another CSP
-> version, or another language **without reinventing the process.**
+> First run 2026-05-19 on `742DEA58-…` (main UI), English → Russian. A second
+> pass the same day fixed the translatable-set bug (Step 1) and re-did all 32
+> target files via the Japanese oracle — `742DEA58` went 9,368 → 11,843
+> strings. Follow this to translate another file, CSP version, or language
+> **without reinventing the process.**
 
 ---
 
@@ -27,8 +29,8 @@ patched binary itself is disposable — regenerable and version-specific.
 
 ## Step 0 — Pick the target file(s)
 
-`742DEA58-…` is the main UI (~9,368 strings). A full UI translation means
-repeating this for the ~32 content-bearing shared files. The file set is the
+`742DEA58-…` is the main UI (~11,843 translatable strings). A full UI
+translation means repeating this for all 32 content-bearing target files. The file set is the
 [`manifest.csv`](../translation/manifest.csv) (`short,guid,slug,covers,target,
 text_count`); [`FILE_INVENTORY.md`](FILE_INVENTORY.md) is its prose companion.
 `python src/batch.py status` prints progress over every file. The workflow
@@ -51,21 +53,18 @@ CSV (`export` skips a file that already has one — use `--force` to overwrite).
 **`key` is version-specific — never edit it.** The CSV is **UTF-8 with BOM**.
 
 **What counts as translatable — the Japanese oracle.** `batch.py` exports with
-`repack.py export --reference <resource/japanese/GUID>`. A record lands in the
+`repack.py export --reference <resource/japanese/GUID>`: a record lands in the
 worksheet when it is EITHER prose text OR differs from the finished, fully
-localized Japanese resource. "Differs from Japanese" is ground truth for "real
-UI text". Do **not** revert to the old `--kind text` classifier: it bucketed
-every space-free ASCII string ≤40 chars as a non-translatable identifier and so
-silently dropped ~3,900 genuine one-word labels (`Layer`, `Cancel`, `Edit`,
-`File`, the entire menu bar). Only records that are both identical to Japanese
-**and** non-prose (true identifiers — `OK`, `CELSYS`, version/format codes) are
-left out.
+localized Japanese resource. Never fall back to the old `--kind text` filter —
+it silently drops ~3,900 one-word UI labels. The full rationale, the bug it
+fixes, and the exact rule are in [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md) →
+"Choosing the translatable set".
 
 ## Step 2 — Dedupe
 
-The worksheet has duplicate source strings (9,368 rows → 7,212 unique). Build a
-unique-strings list so each string is translated **once** — less work, and
-exact duplicates are guaranteed identical for free.
+The worksheet has duplicate source strings (`742DEA58`: 11,843 rows → 8,046
+unique). Build a unique-strings list so each string is translated **once** —
+less work, and exact duplicates are guaranteed identical for free.
 
 ```
 python src/batch.py dedupe <id>
@@ -94,10 +93,18 @@ The glossary is an **output refined during the work**, not a giant input.
 ## Step 4 — Translate the unique strings in parallel chunks
 
 Translate the empty `target` cells of the file's `unique.csv`. Fan the unique
-strings out to **N parallel translators** (for `742DEA58`, 12 chunks of 576
-worked well). Each translator gets the **same brief**: the glossary, a
+strings out to **N parallel translators** (the oracle re-pass used 8 chunks of
+~236). Each translator gets the **same brief**: the glossary, a
 **locked-terminology table**, and the **formatting rules**. Each returns a JSON
-array of translations, one per source line, in order.
+object mapping `source → target` (an object, not an array — it survives an
+agent miscounting, and exact-duplicate keys collapse harmlessly).
+
+**Attach the Japanese rendering as a hint.** Build each chunk as
+`[{"source": …, "ja": …}, …]` — the `ja` value comes free from the oracle
+(English vs Japanese record diff). It resolves the ambiguous glossary terms
+(`frame` = кадр/рамка, `select` = выбрать/выделить, `number` = число/номер) far
+better than guessing from a bare one-word English label, and confirms menu
+names (CSP's "Story" menu is `ページ管理` — page management).
 
 Mandatory formatting rules for every translator:
 
@@ -178,6 +185,12 @@ own CSV scripts:
 * **Translate from `source`, key results by `source`, not by `key`.** `key` is
   version-specific; `source` is stable and is what makes duplicates consistent.
   Translate in `unique.csv` (keyed by `source`); `join` maps it back.
+* **Never gate the translatable set on `classify()`.** Its `key` bucket —
+  "ASCII, no space, ≤40 chars" — swallows every one-word UI label (`Layer`,
+  `Edit`, `Save`, `File`). `batch.py export` uses the Japanese oracle
+  (`--reference`) instead; see Step 1. Symptom of getting this wrong: a UI
+  where multi-word commands translate but single-word menus and palette names
+  stay English. This bug cost one whole translation pass.
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 
@@ -190,10 +203,11 @@ and locked terms, and re-decide the autonym question (Step 6). Everything else
 is identical.
 
 **Another CSP version.** Re-export with `batch.py export <id> --force` — string
-IDs, `key`s and counts may all have changed. The translation is **seeded for
-free**: `batch.py dedupe` carries every existing translation over by `source`
-text, so only genuinely new/changed strings land with an empty `target`. Then
-run Steps 4–8 on the remainder.
+IDs, `key`s and counts may all have changed. (Export needs `resource/japanese/`
+present: it is the oracle.) The translation is **seeded for free**:
+`batch.py dedupe` carries every existing translation over by `source` text, so
+only genuinely new/changed strings land with an empty `target`. Then run Steps
+4–8 on the remainder.
 
 **Another resource file.** Same pipeline, one file at a time. `manifest.csv`
 lists every file and `batch.py status` tracks which are done.
