@@ -87,6 +87,31 @@ hand from CSP's own colon-path translations; see VERIFIED_METHOD.md → "The
 oracle's blind spot" and [`src/_patch_material_tree.py`](../src/_patch_material_tree.py).
 The `907` oracle count above therefore excludes those 90 rows (worksheet: 997).
 
+## The other app — CLIP STUDIO launcher
+
+CSP's install actually contains **two** apps that read independent resource
+trees: the PAINT editor (the 39 files above) and the **CLIP STUDIO launcher**
+(the hub window). The launcher's tree is mirrored to `resource-launcher/` and
+listed in [`translation/manifest.csv`](../translation/manifest.csv) under
+`source=launcher`; the pipeline (`batch.py`) and installer (`install.py`) both
+treat it as a parallel set. Oracle counts regenerated 2026-05-20.
+
+* **25 files**, 21 targets, **~6,200 oracle-translatable strings**.
+* One launcher-only GUID: **`5704E805-…`** (~406 strings) — the launcher's main
+  menu and dialogs (About / Maintenance menu, Organize Materials, Move user
+  data folder, Cloud Settings, …). Slug `launcher-main-ui`.
+* 20 GUIDs overlap with PAINT (`E79C2AC5`, `5634F3A9`, `DD705E0D`, `7F9F9530`,
+  `0A24C606`, …) but ship as **structurally different files** — typically a
+  smaller subset of the same strings. Cannot be patched by copying PAINT's
+  Russian build; each launcher file needs its own translation pass.
+* 4 non-targets on the launcher side: `46B67EA9` (GLSL shaders), `48B1A2B7`
+  (EPUB templates), `F40FE4A2` and `3DC534C9` (empty stubs).
+
+To translate the launcher, run `python src/batch.py export-all` — this picks
+up every not-yet-exported target across both sources. Use a `<source>:` prefix
+to disambiguate a single file (e.g. `python src/batch.py export
+launcher:material-catalog`); with no prefix, paint wins for backward compat.
+
 ## Non-targets — do not translate
 
 The Japanese oracle decides *which strings* in a target file to translate; it

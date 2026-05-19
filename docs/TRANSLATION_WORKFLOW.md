@@ -30,11 +30,18 @@ patched binary itself is disposable — regenerable and version-specific.
 ## Step 0 — Pick the target file(s)
 
 `742DEA58-…` is the main UI (~11,843 translatable strings). A full UI
-translation means repeating this for all 32 content-bearing target files. The file set is the
+translation means repeating this for all 32 content-bearing target files on the
+PAINT side, plus 21 on the CLIP STUDIO launcher side (~6,200 strings — same
+binary format, separate file tree). The file set is the
 [`manifest.csv`](../translation/manifest.csv) (`short,guid,slug,covers,target,
-text_count`); [`FILE_INVENTORY.md`](FILE_INVENTORY.md) is its prose companion.
-`python src/batch.py status` prints progress over every file. The workflow
-below is identical for every file; do them one at a time.
+text_count,source`); [`FILE_INVENTORY.md`](FILE_INVENTORY.md) is its prose
+companion. `python src/batch.py status` prints progress over every file.
+The workflow below is identical for every file; do them one at a time.
+
+The manifest's `source` column splits the file set into `paint` (the editor)
+and `launcher` (the hub app). Both ship many of the same GUIDs as **different**
+files, so disambiguate a slug or short GUID with a prefix when needed:
+`launcher:material-catalog` or `paint:E79C2AC5`. With no prefix, paint wins.
 
 Each file gets its own folder `translation/files/<short>-<slug>/` holding
 `strings.csv`, `unique.csv` and `word_frequency.csv`. The orchestrator

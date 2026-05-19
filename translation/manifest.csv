@@ -1,40 +1,65 @@
-short,guid,slug,covers,target,text_count
-742DEA58,742DEA58-ED6B-4402-BC11-20DFC6D08040,main-ui,"Main UI - menus, tools, palettes, core dialogs",yes,11843
-E79C2AC5,E79C2AC5-BC3F-4838-9E87-F49B629F84B5,material-catalog,Material catalog / material manager,yes,3044
-DD705E0D,DD705E0D-FB6F-4DFE-9887-305FD87766AE,cloud-menu,"Clip Studio cloud menu, profile, direct messages",yes,630
-7F9F9530,7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754,cloud-sync,Cloud sync UI,yes,907
-5634F3A9,5634F3A9-5D0B-4f87-8BC1-DAB1F89966C3,animation-timeline,Animation & timeline editor,yes,529
-61F04D2D,61F04D2D-50BD-4486-B128-E81FFBBF9A31,license-verify,License verification (has $$$ placeholders),yes,303
-F2AD839B,F2AD839B-B279-42C8-AC79-DEA5B560E953,license-dialogs,License verification dialogs,yes,288
-6FFACA71,6FFACA71-426A-4685-9014-D84E4FEC117B,companion-mode,License / Companion Mode,yes,162
-8AF4B718,8AF4B718-C73D-4EC2-A97E-AE6D5355985C,video-export,Video export,yes,67
-B4E918F2,B4E918F2-1A08-4669-82AB-00CDC8C0DD7E,transform-mask,Transform / mask settings,yes,91
-FCBD92AE,FCBD92AE-8CC0-4019-92AB-F384F0517E0C,opengl-checker,OpenGL graphics-performance checker,yes,68
-0A24C606,0A24C606-7FC7-4694-930C-9ED7407B9A18,3d-presets,3D background / pose / layout presets,yes,74
-DE958EF5,DE958EF5-49B5-486A-9AC0-274F63076976,material-settings,Material item settings,yes,35
-5B080EAF,5B080EAF-68DA-4CA4-9ABF-77DDD13ACBFE,storage-access,Storage / folder-access (mobile),yes,37
-4CB47456,4CB47456-1E3C-4ECB-B114-D7FEB961ACC6,book-viewer,Book Viewer (EPUB preview),yes,37
-97CDB75A,97CDB75A-B29E-4AA3-A591-715B5C9B6701,ebook-export,Kindle / e-book export settings,yes,27
-BFA867AE,BFA867AE-51E0-42E0-BF18-A092381CB0D9,quick-access,"Misc dialogs, Quick Access",yes,29
-2D481AE5,2D481AE5-8794-43D4-9BBF-EA645AFD782F,opentoonz-export,OpenToonz scene export,yes,14
-0238E722,0238E722-8627-47F2-B174-2F6EBE210C1C,export-data,Export-data dialog,yes,15
-D6B9C91F,D6B9C91F-A4A6-49ed-91D0-622FD6F76045,3d-lighting,3D lighting,yes,15
-4ed3a72f,4ed3a72f-2ed9-0377-b6f9-d09515d19dcb,monthly-bonus,Monthly-plan bonus material,yes,11
-C50ECAA0,C50ECAA0-1D35-4F57-9756-12C7256B62CF,login-dialog,Login dialog,yes,12
-3CC82939,3CC82939-20AD-415C-9EB7-52B4C8E50033,doodle-mode,Doodle mode / trial prompts,yes,11
-B7DCE242,B7DCE242-4C4F-44DE-8F05-BD4CCE9A4557,3d-figure-import,3D drawing-figure import,yes,11
-7D4C5370,7D4C5370-EC7F-48FB-A5C8-9050D6585BFA,audio-import,Audio import,yes,11
-3D51C869,3D51C869-1035-4A35-BF52-CBA0874A3365,character-motion,Character motion / animation,yes,15
-58F2FDAB,58F2FDAB-882A-468B-A03F-9D420E26F685,data-transfer,Data-transfer dialog,yes,2
-549DCB7C,549DCB7C-5B31-4E8D-85B6-1D71004B3A63,free-drawing-time,Free-drawing-time message,yes,1
-9D97267F,9D97267F-B378-42D6-9DD6-D096539F28A7,close-glyph,Close-button glyph,yes,5
-3FE1708D,3FE1708D-6716-4E13-BFD8-AEC0BEF20719,do-not-show-again,Do-not-show-again toggle,yes,2
-9D7A23F7,9D7A23F7-C2E6-43FC-9675-DCD3D7CF0317,try-again,Try-again message,yes,2
-B8DA21EC,B8DA21EC-427A-48E4-8A50-E7EB8988580F,page-counter,Page counter,yes,1
-A9BED959,A9BED959-98FF-4AAA-8B72-8AF99B4B1D88,production-time-jp,Production-time stats - Japanese-only,maybe,4
-46B67EA9,46B67EA9-0F39-4DE3-A9C2-EAFF2FE37099,glsl-shaders,GLSL shader source code - not UI text,no,160
-48B1A2B7,48B1A2B7-E83F-4C64-AC7A-4E74DF76A169,epub-templates,EPUB/XML markup templates - not UI text,no,36
-F40FE4A2,F40FE4A2-CD27-4A51-AD22-02D62D636AB4,empty-stub-1,Empty stub container,no,0
-05F925FA,05F925FA-9F2F-4C42-9228-9F504F918D21,empty-stub-2,Empty stub container,no,0
-3DC534C9,3DC534C9-F66D-4F6C-A5B0-818F9FE7013E,empty-stub-3,Empty stub container,no,0
-F549CE76,F549CE76-1849-437C-82E1-27A3AD67B5FD,empty-stub-4,Empty stub container,no,0
+short,guid,slug,covers,target,text_count,source
+742DEA58,742DEA58-ED6B-4402-BC11-20DFC6D08040,main-ui,"Main UI - menus, tools, palettes, core dialogs",yes,11843,paint
+E79C2AC5,E79C2AC5-BC3F-4838-9E87-F49B629F84B5,material-catalog,Material catalog / material manager,yes,3044,paint
+DD705E0D,DD705E0D-FB6F-4DFE-9887-305FD87766AE,cloud-menu,"Clip Studio cloud menu, profile, direct messages",yes,630,paint
+7F9F9530,7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754,cloud-sync,Cloud sync UI,yes,907,paint
+5634F3A9,5634F3A9-5D0B-4f87-8BC1-DAB1F89966C3,animation-timeline,Animation & timeline editor,yes,529,paint
+61F04D2D,61F04D2D-50BD-4486-B128-E81FFBBF9A31,license-verify,License verification (has $$$ placeholders),yes,303,paint
+F2AD839B,F2AD839B-B279-42C8-AC79-DEA5B560E953,license-dialogs,License verification dialogs,yes,288,paint
+6FFACA71,6FFACA71-426A-4685-9014-D84E4FEC117B,companion-mode,License / Companion Mode,yes,162,paint
+8AF4B718,8AF4B718-C73D-4EC2-A97E-AE6D5355985C,video-export,Video export,yes,67,paint
+B4E918F2,B4E918F2-1A08-4669-82AB-00CDC8C0DD7E,transform-mask,Transform / mask settings,yes,91,paint
+FCBD92AE,FCBD92AE-8CC0-4019-92AB-F384F0517E0C,opengl-checker,OpenGL graphics-performance checker,yes,68,paint
+0A24C606,0A24C606-7FC7-4694-930C-9ED7407B9A18,3d-presets,3D background / pose / layout presets,yes,74,paint
+DE958EF5,DE958EF5-49B5-486A-9AC0-274F63076976,material-settings,Material item settings,yes,35,paint
+5B080EAF,5B080EAF-68DA-4CA4-9ABF-77DDD13ACBFE,storage-access,Storage / folder-access (mobile),yes,37,paint
+4CB47456,4CB47456-1E3C-4ECB-B114-D7FEB961ACC6,book-viewer,Book Viewer (EPUB preview),yes,37,paint
+97CDB75A,97CDB75A-B29E-4AA3-A591-715B5C9B6701,ebook-export,Kindle / e-book export settings,yes,27,paint
+BFA867AE,BFA867AE-51E0-42E0-BF18-A092381CB0D9,quick-access,"Misc dialogs, Quick Access",yes,29,paint
+2D481AE5,2D481AE5-8794-43D4-9BBF-EA645AFD782F,opentoonz-export,OpenToonz scene export,yes,14,paint
+0238E722,0238E722-8627-47F2-B174-2F6EBE210C1C,export-data,Export-data dialog,yes,15,paint
+D6B9C91F,D6B9C91F-A4A6-49ed-91D0-622FD6F76045,3d-lighting,3D lighting,yes,15,paint
+4ed3a72f,4ed3a72f-2ed9-0377-b6f9-d09515d19dcb,monthly-bonus,Monthly-plan bonus material,yes,11,paint
+C50ECAA0,C50ECAA0-1D35-4F57-9756-12C7256B62CF,login-dialog,Login dialog,yes,12,paint
+3CC82939,3CC82939-20AD-415C-9EB7-52B4C8E50033,doodle-mode,Doodle mode / trial prompts,yes,11,paint
+B7DCE242,B7DCE242-4C4F-44DE-8F05-BD4CCE9A4557,3d-figure-import,3D drawing-figure import,yes,11,paint
+7D4C5370,7D4C5370-EC7F-48FB-A5C8-9050D6585BFA,audio-import,Audio import,yes,11,paint
+3D51C869,3D51C869-1035-4A35-BF52-CBA0874A3365,character-motion,Character motion / animation,yes,15,paint
+58F2FDAB,58F2FDAB-882A-468B-A03F-9D420E26F685,data-transfer,Data-transfer dialog,yes,2,paint
+549DCB7C,549DCB7C-5B31-4E8D-85B6-1D71004B3A63,free-drawing-time,Free-drawing-time message,yes,1,paint
+9D97267F,9D97267F-B378-42D6-9DD6-D096539F28A7,close-glyph,Close-button glyph,yes,5,paint
+3FE1708D,3FE1708D-6716-4E13-BFD8-AEC0BEF20719,do-not-show-again,Do-not-show-again toggle,yes,2,paint
+9D7A23F7,9D7A23F7-C2E6-43FC-9675-DCD3D7CF0317,try-again,Try-again message,yes,2,paint
+B8DA21EC,B8DA21EC-427A-48E4-8A50-E7EB8988580F,page-counter,Page counter,yes,1,paint
+A9BED959,A9BED959-98FF-4AAA-8B72-8AF99B4B1D88,production-time-jp,Production-time stats - Japanese-only,maybe,4,paint
+46B67EA9,46B67EA9-0F39-4DE3-A9C2-EAFF2FE37099,glsl-shaders,GLSL shader source code - not UI text,no,160,paint
+48B1A2B7,48B1A2B7-E83F-4C64-AC7A-4E74DF76A169,epub-templates,EPUB/XML markup templates - not UI text,no,36,paint
+F40FE4A2,F40FE4A2-CD27-4A51-AD22-02D62D636AB4,empty-stub-1,Empty stub container,no,0,paint
+05F925FA,05F925FA-9F2F-4C42-9228-9F504F918D21,empty-stub-2,Empty stub container,no,0,paint
+3DC534C9,3DC534C9-F66D-4F6C-A5B0-818F9FE7013E,empty-stub-3,Empty stub container,no,0,paint
+F549CE76,F549CE76-1849-437C-82E1-27A3AD67B5FD,empty-stub-4,Empty stub container,no,0,paint
+5704E805,5704E805-3428-4095-8D0D-77ED48B10F70,launcher-main-ui,"Launcher main UI - About/Maintenance menu, Organize Materials, Cloud Settings",yes,406,launcher
+E79C2AC5,E79C2AC5-BC3F-4838-9E87-F49B629F84B5,material-catalog,Material catalog (launcher copy),yes,3044,launcher
+DD705E0D,DD705E0D-FB6F-4DFE-9887-305FD87766AE,cloud-menu,Cloud menu (launcher copy),yes,630,launcher
+7F9F9530,7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754,cloud-sync,Cloud sync UI (launcher copy),yes,907,launcher
+5634F3A9,5634F3A9-5D0B-4f87-8BC1-DAB1F89966C3,animation-timeline,Animation & timeline (launcher copy),yes,529,launcher
+0A24C606,0A24C606-7FC7-4694-930C-9ED7407B9A18,3d-presets,3D presets (launcher copy),yes,74,launcher
+97CDB75A,97CDB75A-B29E-4AA3-A591-715B5C9B6701,ebook-export,Kindle / e-book export (launcher copy),yes,27,launcher
+8AF4B718,8AF4B718-C73D-4EC2-A97E-AE6D5355985C,video-export,Video export (launcher copy),yes,67,launcher
+BFA867AE,BFA867AE-51E0-42E0-BF18-A092381CB0D9,quick-access,Quick Access (launcher copy),yes,29,launcher
+DE958EF5,DE958EF5-49B5-486A-9AC0-274F63076976,material-settings,Material item settings (launcher copy),yes,35,launcher
+B7DCE242,B7DCE242-4C4F-44DE-8F05-BD4CCE9A4557,3d-figure-import,3D figure import (launcher copy),yes,11,launcher
+B4E918F2,B4E918F2-1A08-4669-82AB-00CDC8C0DD7E,transform-mask,Transform / mask (launcher copy),yes,91,launcher
+4CB47456,4CB47456-1E3C-4ECB-B114-D7FEB961ACC6,book-viewer,Book Viewer (launcher copy),yes,37,launcher
+0238E722,0238E722-8627-47F2-B174-2F6EBE210C1C,export-data,Export-data dialog (launcher copy),yes,15,launcher
+4ed3a72f,4ed3a72f-2ed9-0377-b6f9-d09515d19dcb,monthly-bonus,Monthly-plan bonus (launcher copy),yes,11,launcher
+D6B9C91F,D6B9C91F-A4A6-49ed-91D0-622FD6F76045,3d-lighting,3D lighting (launcher copy),yes,15,launcher
+7D4C5370,7D4C5370-EC7F-48FB-A5C8-9050D6585BFA,audio-import,Audio import (launcher copy),yes,11,launcher
+3D51C869,3D51C869-1035-4A35-BF52-CBA0874A3365,character-motion,Character motion (launcher copy),yes,15,launcher
+C50ECAA0,C50ECAA0-1D35-4F57-9756-12C7256B62CF,login-dialog,Login dialog (launcher copy),yes,12,launcher
+3FE1708D,3FE1708D-6716-4E13-BFD8-AEC0BEF20719,do-not-show-again,Do-not-show-again (launcher copy),yes,2,launcher
+A9BED959,A9BED959-98FF-4AAA-8B72-8AF99B4B1D88,production-time-jp,Production-time stats (launcher copy),maybe,4,launcher
+46B67EA9,46B67EA9-0F39-4DE3-A9C2-EAFF2FE37099,glsl-shaders,GLSL shader source code (launcher copy) - not UI text,no,180,launcher
+48B1A2B7,48B1A2B7-E83F-4C64-AC7A-4E74DF76A169,epub-templates,EPUB/XML templates (launcher copy) - not UI text,no,45,launcher
+F40FE4A2,F40FE4A2-CD27-4A51-AD22-02D62D636AB4,empty-stub-1,Empty stub container (launcher copy),no,0,launcher
+3DC534C9,3DC534C9-F66D-4F6C-A5B0-818F9FE7013E,empty-stub-3,Empty stub container (launcher copy),no,0,launcher
