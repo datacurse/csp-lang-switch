@@ -198,8 +198,8 @@ All Python lives in [`src/`](../src/); run it from the repo root
   classifier; imported by `repack.py`.
 * [`roundtrip.py`](../src/roundtrip.py) — verification harness
   (`serialize(parse(f))==f`).
-* [`src/legacy/`](../src/legacy/) — `inspector.py`, `csp_resource_inspect.py`:
-  older heuristic inventory tools, kept for reference only.
+* [`audit.py`](../src/audit.py) — translation-consistency audit; see
+  [`TRANSLATION_WORKFLOW.md`](TRANSLATION_WORKFLOW.md).
 
 ---
 

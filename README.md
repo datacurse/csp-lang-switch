@@ -23,7 +23,7 @@ has rendered correctly inside a running copy of CSP.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — method, file inventory, format spec |
-| [`src/`](src/) | Python tooling (`csp5.py`, `repack.py`, …); `src/legacy/` = reference-only |
+| [`src/`](src/) | Python tooling: `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py` |
 | [`translation/`](translation/) | The translation worksheet, glossary, word-frequency data |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
 | `russian/` | Output of `repack.py apply` — the Russian build — gitignored (regenerable) |

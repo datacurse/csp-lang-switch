@@ -1,8 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)",
-      "Bash(python3:*)",
+      "Bash(*)",
       "PowerShell(Get-ChildItem:*)",
       "PowerShell(Test-Path:*)"
     ],
