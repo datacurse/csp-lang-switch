@@ -24,6 +24,10 @@ has rendered correctly inside a running copy of CSP.
   databases — both an install seed and a per-user working copy — not the
   bundles. 240 distinct names are translated and installed into both —
   see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
+- **Material catalog:** the built-in materials (paper textures, tones,
+  patterns, 3D, balloons, frame templates) live in a per-user SQLite catalog.
+  1,419 distinct names translated and installed —
+  see [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 
@@ -32,12 +36,13 @@ has rendered correctly inside a running copy of CSP.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline) |
-| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
+| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
+| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
 | `russian/` | Output of `batch.py pack` — the Russian resource build — gitignored (regenerable) |
 | `plugins/`, `russian-plugins/` | Original / patched filter-DLLs, managed by `plugins.py` — gitignored |
 | `tools/`, `russian-tools/` | Original / patched tool-palette SQLite DBs, managed by `tools.py` — gitignored |
+| `materials/`, `russian-materials/` | Original / patched material-catalog SQLite DB, managed by `materials.py` — gitignored |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -45,6 +50,7 @@ has rendered correctly inside a running copy of CSP.
 - [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md) — **authoritative** record of what works and how (the binary parse/repack method).
 - [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md) — the parallel method for the Filter-menu plug-in DLLs (`plugins.py`).
 - [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md) — the parallel method for the Tool-palette SQLite DBs (`tools.py`).
+- [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md) — the parallel method for the material-catalog SQLite DB (`materials.py`).
 - [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md) — reproducible playbook for translating a file, CSP version, or language.
 - [`docs/FILE_INVENTORY.md`](docs/FILE_INVENTORY.md) — the 39 shared resource files and what each covers.
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
@@ -112,3 +118,20 @@ python src/tools.py install             # deploy into the live CSP install
 
 The method and format are documented in
 [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
+
+### Material catalog
+
+The built-in material names (paper textures, tones, patterns, 3D, balloons,
+frame templates) live in a per-user SQLite catalog — handled by another
+parallel tool — [`src/materials.py`](src/materials.py):
+
+```
+python src/materials.py backup          # save the original catalog DB
+python src/materials.py extract         # -> translation/materials.csv
+# ... translate the target column ...
+python src/materials.py apply           # -> russian-materials/
+python src/materials.py install         # deploy into the live CSP user data
+```
+
+The method and format are documented in
+[`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).

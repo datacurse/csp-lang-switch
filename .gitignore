@@ -45,3 +45,8 @@ russian-plugins/
 # (russian-tools/). Kept on disk, not committed. Managed by src/tools.py.
 tools/
 russian-tools/
+
+# Material-catalog SQLite DB — copyrighted; original (materials/) + Russian
+# build (russian-materials/). Kept on disk, not committed. Via src/materials.py.
+materials/
+russian-materials/
