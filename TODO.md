@@ -1,4 +1,5 @@
 - write script that would let us replace translations without reinstalling app. it would create backup of english (english_backup), and replace english with whatever language was chosen. Russian would stay as a folder next to those, and the script would pick one of those folders and replace english with them.
   - question: do we need to create backup and russian folder, or would it be ok to just do from the script and leave those untouched?
+- after that try various language, make screenshots, and figure out missing translations from screenshots. like top menu, why not translated? Replacing with japanese language translates perfectly by the way.
 - create boosty account
 - translate Руководство по эксплуатации web page and host it and link to it (wait is it possible to change links? im not sure, perhaps)

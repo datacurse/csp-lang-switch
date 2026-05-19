@@ -1,0 +1,16 @@
+﻿source,target
+Exporting data...,Экспорт данных...
+"This will export the work “%s”. 
+ Do you want to continue?","Будет экспортировано произведение “%s”. 
+ Хотите продолжить?"
+Please download the latest version of Clip Studio Paint to export your work.,"Чтобы экспортировать произведение, скачайте последнюю версию Clip Studio Paint."
+Download latest version,Скачать последнюю версию
+"This feature is not available on the version of Clip Studio that you have installed. 
+Please download the latest version and try again.","Эта функция недоступна в установленной у вас версии Clip Studio. 
+Скачайте последнюю версию и повторите попытку."
+Failed to acquire rendering parameters.,Не удалось получить параметры рендеринга.
+"The server is currently under maintenance, so the rendering parameters could not be retrieved.","Сервер в настоящее время на техническом обслуживании, поэтому не удалось получить параметры рендеринга."
+Failed to retrieve draft ID.,Не удалось получить идентификатор черновика.
+Failed to retrieve URL for upload.,Не удалось получить URL для загрузки.
+Failed to upload the file.,Не удалось загрузить файл.
+Uploading your work. Your work will not be made public until you publish your post.,"Загрузка произведения. Произведение не будет опубликовано, пока вы не опубликуете свою запись."

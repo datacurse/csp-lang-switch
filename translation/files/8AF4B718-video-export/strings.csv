@@ -1,32 +1,32 @@
 ﻿key,source,target
-1/1/40#0,Finalizing. Please wait for a while.,Finalizing. Please wait for a while.
-1/1/41#0,Compress video,Compress video
-1/1/42#0,Compression program,Compression program
-1/1/44#0,Compression quality,Compression quality
-1/1/46#0,For each frame,For each frame
-1/1/47#0,Data speed,Data speed
-1/1/50#0,Version information,Version information
-1/1/51#0,%.3fkHz %s,%.3fkHz %s
-1/1/54#0,Movie export settings,Movie export settings
-1/1/55#0,Save to,Save to
-1/1/57#0,Not set.,Not set.
-1/1/58#0,Video settings,Video settings
-1/1/13#0,Audio settings,Audio settings
-1/1/35#0,Enable transparency,Enable transparency
-1/1/60#0,Show shadow,Show shadow
-1/1/31#0,Frame rate,Frame rate
-1/1/61#0,Set a save location.,Set a save location.
-1/1/62#0,Configure video settings.,Configure video settings.
-1/1/63#0,Configure audio settings.,Configure audio settings.
+1/1/40#0,Finalizing. Please wait for a while.,Завершение. Подождите немного.
+1/1/41#0,Compress video,Сжать видео
+1/1/42#0,Compression program,Программа сжатия
+1/1/44#0,Compression quality,Качество сжатия
+1/1/46#0,For each frame,Для каждого кадра
+1/1/47#0,Data speed,Скорость данных
+1/1/50#0,Version information,Сведения о версии
+1/1/51#0,%.3fkHz %s,%.3fкГц %s
+1/1/54#0,Movie export settings,Настройки экспорта видео
+1/1/55#0,Save to,Сохранить в
+1/1/57#0,Not set.,Не задано.
+1/1/58#0,Video settings,Настройки видео
+1/1/13#0,Audio settings,Настройки звука
+1/1/35#0,Enable transparency,Включить прозрачность
+1/1/60#0,Show shadow,Показать тень
+1/1/31#0,Frame rate,Частота кадров
+1/1/61#0,Set a save location.,Задайте расположение для сохранения.
+1/1/62#0,Configure video settings.,Настройте параметры видео.
+1/1/63#0,Configure audio settings.,Настройте параметры звука.
 1/1/64#0,AVI (*.avi)|*.avi;,AVI (*.avi)|*.avi;
 1/1/65#0,AVI (*.avi)|*.avi,AVI (*.avi)|*.avi
-1/1/66#0,QuickTime Movie(*.mov)|*.mov,QuickTime Movie(*.mov)|*.mov
+1/1/66#0,QuickTime Movie(*.mov)|*.mov,Видео QuickTime(*.mov)|*.mov
 1/1/67#0,MP4 (*.mp4)|*.mp4,MP4 (*.mp4)|*.mp4
-1/1/8#0,Export as AVI1.0,Export as AVI1.0
-1/1/10#0,Export as AVI2.0,Export as AVI2.0
-1/1/68#0,AVI1.0 export settings,AVI1.0 export settings
-1/1/69#0,AVI2.0 export settings,AVI2.0 export settings
-1/1/70#0,Quality settings,Quality settings
+1/1/8#0,Export as AVI1.0,Экспортировать как AVI1.0
+1/1/10#0,Export as AVI2.0,Экспортировать как AVI2.0
+1/1/68#0,AVI1.0 export settings,Настройки экспорта AVI1.0
+1/1/69#0,AVI2.0 export settings,Настройки экспорта AVI2.0
+1/1/70#0,Quality settings,Настройки качества
 1/1/72#0,PCM ,PCM 
 1/1/73#0,"You can export videos smaller than 2GB.
 
@@ -34,11 +34,11 @@ Most programs and devices support this video format and it is safer than exporti
 
 It may not be possible to make the background color transparent depending on the video settings.
 
-","You can export videos smaller than 2GB.
+","Можно экспортировать видео размером менее 2 ГБ.
 
-Most programs and devices support this video format and it is safer than exporting in AVI2.0.
+Большинство программ и устройств поддерживают этот формат видео, и он безопаснее, чем экспорт в AVI2.0.
 
-It may not be possible to make the background color transparent depending on the video settings.
+В зависимости от настроек видео сделать цвет фона прозрачным может быть невозможно.
 
 "
 1/1/74#0,"You can export videos bigger than 2GB.
@@ -49,34 +49,34 @@ Moreover, Clip Studio software won’t be able to read the format if the video i
 
 It may not be possible to make the background color transparent depending on the video settings.
 
-","You can export videos bigger than 2GB.
+","Можно экспортировать видео размером более 2 ГБ.
 
-However, there are programs and devices which don’t support this format and it might not be able to play it correctly.
+Однако существуют программы и устройства, которые не поддерживают этот формат, и его воспроизведение может быть некорректным.
 
-Moreover, Clip Studio software won’t be able to read the format if the video is bigger than 2GB.
+Кроме того, программа Clip Studio не сможет прочитать этот формат, если видео больше 2 ГБ.
 
-It may not be possible to make the background color transparent depending on the video settings.
+В зависимости от настроек видео сделать цвет фона прозрачным может быть невозможно.
 
 "
-1/1/75#0,This format supports exporting in sizes with a width of up to 7680 and a height of up to 4320.,This format supports exporting in sizes with a width of up to 7680 and a height of up to 4320.
-1/1/76#0,This format supports exporting in sizes with a width of up to 3840 and a height of up to 2160.,This format supports exporting in sizes with a width of up to 3840 and a height of up to 2160.
-1/1/77#0,This format supports exporting in sizes with a width of up to 1920 and a height of up to 1080.,This format supports exporting in sizes with a width of up to 1920 and a height of up to 1080.
-1/1/78#0,"In this format, you can export between %d–%d px wide and %d–%d px high.","In this format, you can export between %d–%d px wide and %d–%d px high."
-1/1/79#0,"In this format, you can export up to %d px wide and %d px high.","In this format, you can export up to %d px wide and %d px high."
+1/1/75#0,This format supports exporting in sizes with a width of up to 7680 and a height of up to 4320.,Этот формат поддерживает экспорт с шириной до 7680 и высотой до 4320.
+1/1/76#0,This format supports exporting in sizes with a width of up to 3840 and a height of up to 2160.,Этот формат поддерживает экспорт с шириной до 3840 и высотой до 2160.
+1/1/77#0,This format supports exporting in sizes with a width of up to 1920 and a height of up to 1080.,Этот формат поддерживает экспорт с шириной до 1920 и высотой до 1080.
+1/1/78#0,"In this format, you can export between %d–%d px wide and %d–%d px high.",В этом формате можно экспортировать с шириной %d–%d пикс. и высотой %d–%d пикс.
+1/1/79#0,"In this format, you can export up to %d px wide and %d px high.",В этом формате можно экспортировать с шириной до %d пикс. и высотой до %d пикс.
 1/1/80#0,"This video may not be exported properly as the export width or height is greater than 2048.
-Do you want to proceed?","This video may not be exported properly as the export width or height is greater than 2048.
-Do you want to proceed?"
+Do you want to proceed?","Это видео может быть экспортировано некорректно, так как ширина или высота экспорта превышает 2048.
+Хотите продолжить?"
 1/1/81#0,"This video may not be reproduced properly as the export width or height is greater than 2048.
-Do you want to proceed?","This video may not be reproduced properly as the export width or height is greater than 2048.
-Do you want to proceed?"
-1/1/17#0,Scaling settings,Scaling settings
-1/1/82#0,Fix scaling,Fix scaling
-1/1/25#0,Apply 2D camera effects,Apply 2D camera effects
-1/1/88#0, 96 kbps (low sound quality), 96 kbps (low sound quality)
-1/1/89#0,128 kbps (standard sound quality),128 kbps (standard sound quality)
-1/1/90#0,160 kbps (high sound quality),160 kbps (high sound quality)
-1/1/91#0,192 kbps (highest sound quality),192 kbps (highest sound quality)
-1/1/92#0,Failed to export movie.,Failed to export movie.
+Do you want to proceed?","Это видео может воспроизводиться некорректно, так как ширина или высота экспорта превышает 2048.
+Хотите продолжить?"
+1/1/17#0,Scaling settings,Настройки масштабирования
+1/1/82#0,Fix scaling,Зафиксировать масштабирование
+1/1/25#0,Apply 2D camera effects,Применить эффекты 2D-камеры
+1/1/88#0, 96 kbps (low sound quality), 96 кбит/с (низкое качество звука)
+1/1/89#0,128 kbps (standard sound quality),128 кбит/с (стандартное качество звука)
+1/1/90#0,160 kbps (high sound quality),160 кбит/с (высокое качество звука)
+1/1/91#0,192 kbps (highest sound quality),192 кбит/с (наивысшее качество звука)
+1/1/92#0,Failed to export movie.,Не удалось экспортировать видео.
 1/1/93#0,"Failed to export movie.
 There may not be sufficient memory. Please try the following and export again.
 
@@ -84,23 +84,23 @@ There may not be sufficient memory. Please try the following and export again.
 - Make the movie canvas height/width smaller, or reduce the frame rate 
 - Divide the timeline and export it as separate parts
 
-","Failed to export movie.
-There may not be sufficient memory. Please try the following and export again.
+","Не удалось экспортировать видео.
+Возможно, недостаточно памяти. Попробуйте выполнить следующее и экспортировать заново.
 
-- Close other canvases and applications
-- Make the movie canvas height/width smaller, or reduce the frame rate 
-- Divide the timeline and export it as separate parts
+- Закройте другие холсты и приложения
+- Уменьшите высоту/ширину холста видео или снизьте частоту кадров 
+- Разделите шкалу времени и экспортируйте её отдельными частями
 
 "
 1/1/94#0,"Failed to export movie.
 You cannot export a movie to this device with the current settings.
 
-Please try again after making the movie canvas height/width smaller, or reducing the frame rate.","Failed to export movie.
-You cannot export a movie to this device with the current settings.
+Please try again after making the movie canvas height/width smaller, or reducing the frame rate.","Не удалось экспортировать видео.
+Экспорт видео на это устройство с текущими настройками невозможен.
 
-Please try again after making the movie canvas height/width smaller, or reducing the frame rate."
-2/1/1#0,AVI files larger than 2GB cannot be imported. The file size needs to be reduced.,AVI files larger than 2GB cannot be imported. The file size needs to be reduced.
-2/1/2#0,All supported formats,All supported formats
+Повторите попытку после уменьшения высоты/ширины холста видео или снижения частоты кадров."
+2/1/1#0,AVI files larger than 2GB cannot be imported. The file size needs to be reduced.,Файлы AVI размером более 2 ГБ нельзя импортировать. Размер файла необходимо уменьшить.
+2/1/2#0,All supported formats,Все поддерживаемые форматы
 2/1/3#0,AVI (*.avi)|*.avi,AVI (*.avi)|*.avi
 2/1/4#0,MP4 (*.mp4)|*.mp4,MP4 (*.mp4)|*.mp4
-2/1/5#0,QuickTime Movie(*.mov)|*.mov,QuickTime Movie(*.mov)|*.mov
+2/1/5#0,QuickTime Movie(*.mov)|*.mov,Видео QuickTime(*.mov)|*.mov

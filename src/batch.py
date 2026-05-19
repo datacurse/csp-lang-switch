@@ -131,6 +131,11 @@ def _write_rows(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
         w.writerows(rows)
 
 
+def _lf(s: str) -> str:
+    """Normalize CRLF/CR to LF -- a line-ending-agnostic match key."""
+    return s.replace("\r\n", "\n").replace("\r", "\n")
+
+
 # ----------------------------------------------------------------------
 # Subcommand: export
 # ----------------------------------------------------------------------
@@ -229,12 +234,23 @@ def cmd_join(args: argparse.Namespace) -> int:
         sys.exit(f"ERROR: no unique list at {uniq} -- run `batch.py dedupe` first.")
 
     # Read everything before writing -- never truncate the worksheet first.
-    trans = {r["source"]: r["target"] for r in _read_rows(uniq)}
+    # Match by LF-normalized source: an editor (or a translator) may rewrite
+    # unique.csv with different line endings than the worksheet, and an exact
+    # match would then silently miss every multi-line string.
+    trans = {_lf(r["source"]): r["target"] for r in _read_rows(uniq)}
     rows = _read_rows(ws)
 
     changed = 0
     for r in rows:
-        new = trans.get(r["source"], r["target"])
+        new = trans.get(_lf(r["source"]))
+        if new is None:
+            continue
+        # Emit the translation with the worksheet source's newline style, so a
+        # CRLF original keeps CRLF line breaks in the patched file.
+        if "\r\n" in r["source"]:
+            new = _lf(new).replace("\n", "\r\n")
+        elif "\n" in r["source"]:
+            new = _lf(new)
         if new != r["target"]:
             r["target"] = new
             changed += 1

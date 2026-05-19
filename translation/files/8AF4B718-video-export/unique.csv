@@ -1,0 +1,103 @@
+﻿source,target
+Finalizing. Please wait for a while.,Завершение. Подождите немного.
+Compress video,Сжать видео
+Compression program,Программа сжатия
+Compression quality,Качество сжатия
+For each frame,Для каждого кадра
+Data speed,Скорость данных
+Version information,Сведения о версии
+%.3fkHz %s,%.3fкГц %s
+Movie export settings,Настройки экспорта видео
+Save to,Сохранить в
+Not set.,Не задано.
+Video settings,Настройки видео
+Audio settings,Настройки звука
+Enable transparency,Включить прозрачность
+Show shadow,Показать тень
+Frame rate,Частота кадров
+Set a save location.,Задайте расположение для сохранения.
+Configure video settings.,Настройте параметры видео.
+Configure audio settings.,Настройте параметры звука.
+AVI (*.avi)|*.avi;,AVI (*.avi)|*.avi;
+AVI (*.avi)|*.avi,AVI (*.avi)|*.avi
+QuickTime Movie(*.mov)|*.mov,Видео QuickTime(*.mov)|*.mov
+MP4 (*.mp4)|*.mp4,MP4 (*.mp4)|*.mp4
+Export as AVI1.0,Экспортировать как AVI1.0
+Export as AVI2.0,Экспортировать как AVI2.0
+AVI1.0 export settings,Настройки экспорта AVI1.0
+AVI2.0 export settings,Настройки экспорта AVI2.0
+Quality settings,Настройки качества
+PCM ,PCM 
+"You can export videos smaller than 2GB.
+
+Most programs and devices support this video format and it is safer than exporting in AVI2.0.
+
+It may not be possible to make the background color transparent depending on the video settings.
+
+","Можно экспортировать видео размером менее 2 ГБ.
+
+Большинство программ и устройств поддерживают этот формат видео, и он безопаснее, чем экспорт в AVI2.0.
+
+В зависимости от настроек видео сделать цвет фона прозрачным может быть невозможно.
+
+"
+"You can export videos bigger than 2GB.
+
+However, there are programs and devices which don’t support this format and it might not be able to play it correctly.
+
+Moreover, Clip Studio software won’t be able to read the format if the video is bigger than 2GB.
+
+It may not be possible to make the background color transparent depending on the video settings.
+
+","Можно экспортировать видео размером более 2 ГБ.
+
+Однако существуют программы и устройства, которые не поддерживают этот формат, и его воспроизведение может быть некорректным.
+
+Кроме того, программа Clip Studio не сможет прочитать этот формат, если видео больше 2 ГБ.
+
+В зависимости от настроек видео сделать цвет фона прозрачным может быть невозможно.
+
+"
+This format supports exporting in sizes with a width of up to 7680 and a height of up to 4320.,Этот формат поддерживает экспорт с шириной до 7680 и высотой до 4320.
+This format supports exporting in sizes with a width of up to 3840 and a height of up to 2160.,Этот формат поддерживает экспорт с шириной до 3840 и высотой до 2160.
+This format supports exporting in sizes with a width of up to 1920 and a height of up to 1080.,Этот формат поддерживает экспорт с шириной до 1920 и высотой до 1080.
+"In this format, you can export between %d–%d px wide and %d–%d px high.",В этом формате можно экспортировать с шириной %d–%d пикс. и высотой %d–%d пикс.
+"In this format, you can export up to %d px wide and %d px high.",В этом формате можно экспортировать с шириной до %d пикс. и высотой до %d пикс.
+"This video may not be exported properly as the export width or height is greater than 2048.
+Do you want to proceed?","Это видео может быть экспортировано некорректно, так как ширина или высота экспорта превышает 2048.
+Хотите продолжить?"
+"This video may not be reproduced properly as the export width or height is greater than 2048.
+Do you want to proceed?","Это видео может воспроизводиться некорректно, так как ширина или высота экспорта превышает 2048.
+Хотите продолжить?"
+Scaling settings,Настройки масштабирования
+Fix scaling,Зафиксировать масштабирование
+Apply 2D camera effects,Применить эффекты 2D-камеры
+ 96 kbps (low sound quality), 96 кбит/с (низкое качество звука)
+128 kbps (standard sound quality),128 кбит/с (стандартное качество звука)
+160 kbps (high sound quality),160 кбит/с (высокое качество звука)
+192 kbps (highest sound quality),192 кбит/с (наивысшее качество звука)
+Failed to export movie.,Не удалось экспортировать видео.
+"Failed to export movie.
+There may not be sufficient memory. Please try the following and export again.
+
+- Close other canvases and applications
+- Make the movie canvas height/width smaller, or reduce the frame rate 
+- Divide the timeline and export it as separate parts
+
+","Не удалось экспортировать видео.
+Возможно, недостаточно памяти. Попробуйте выполнить следующее и экспортировать заново.
+
+- Закройте другие холсты и приложения
+- Уменьшите высоту/ширину холста видео или снизьте частоту кадров 
+- Разделите шкалу времени и экспортируйте её отдельными частями
+
+"
+"Failed to export movie.
+You cannot export a movie to this device with the current settings.
+
+Please try again after making the movie canvas height/width smaller, or reducing the frame rate.","Не удалось экспортировать видео.
+Экспорт видео на это устройство с текущими настройками невозможен.
+
+Повторите попытку после уменьшения высоты/ширины холста видео или снижения частоты кадров."
+AVI files larger than 2GB cannot be imported. The file size needs to be reduced.,Файлы AVI размером более 2 ГБ нельзя импортировать. Размер файла необходимо уменьшить.
+All supported formats,Все поддерживаемые форматы

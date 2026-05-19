@@ -1,0 +1,12 @@
+﻿source,target
+Unsupported file format.,Неподдерживаемый формат файла.
+"A problem has been found in the audio device settings.
+Playback may not work correctly.","Обнаружена проблема в настройках аудиоустройства.
+Воспроизведение может работать некорректно."
+Loading audio data,Загрузка аудиоданных
+8 bit,8 бит
+16 bit,16 бит
+8.000 kHz,"8,000 кГц"
+11.025 kHz,"11,025 кГц"
+22.050 kHz,"22,050 кГц"
+44.100 kHz,"44,100 кГц"

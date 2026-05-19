@@ -3,25 +3,25 @@
 1/1/3#0,"CELSYS, Inc.","CELSYS, Inc."
 1/1/8#0,.:CELSYS:BOOK VIEWER:1.0,.:CELSYS:BOOK VIEWER:1.0
 1/1/9#0,.:CELSYS:BOOK VIEWER Ver1 Settings,.:CELSYS:BOOK VIEWER Ver1 Settings
-1/1/10#0,3D Preview for Binding,3D Preview for Binding
-1/1/11#0,3D Preview for Binding,3D Preview for Binding
-1/1/12#0,About 3D Preview for Binding,About 3D Preview for Binding
-1/1/13#0,Version information,Version information
-1/1/14#0,Quit 3D Preview for Binding,Quit 3D Preview for Binding
-1/1/15#0,Quit 3D Preview for Binding,Quit 3D Preview for Binding
-1/1/16#0,Version information,Version information
-1/1/17#0,About 3D Preview for Binding,About 3D Preview for Binding
-1/1/26#0,Select All,Select All
-1/1/28#0,Next page (Left binding: Previous page),Next page (Left binding: Previous page)
-1/1/29#0,Previous page (Left binding: Next page),Previous page (Left binding: Next page)
-1/1/30#0,Open / Close,Open / Close
-1/1/32#0,Zoom In,Zoom In
-1/1/33#0,Zoom Out,Zoom Out
-1/1/34#0,Zoom Reset,Zoom Reset
-1/1/35#0,Saddle Stitch/Side Stitch Binding,Saddle Stitch/Side Stitch Binding
-1/1/41#0,/ %d page,/ %d page
+1/1/10#0,3D Preview for Binding,3D-просмотр переплёта
+1/1/11#0,3D Preview for Binding,3D-просмотр переплёта
+1/1/12#0,About 3D Preview for Binding,О 3D-просмотре переплёта
+1/1/13#0,Version information,Сведения о версии
+1/1/14#0,Quit 3D Preview for Binding,Выйти из 3D-просмотра переплёта
+1/1/15#0,Quit 3D Preview for Binding,Выйти из 3D-просмотра переплёта
+1/1/16#0,Version information,Сведения о версии
+1/1/17#0,About 3D Preview for Binding,О 3D-просмотре переплёта
+1/1/26#0,Select All,Выделить всё
+1/1/28#0,Next page (Left binding: Previous page),Следующая страница (переплёт слева: предыдущая страница)
+1/1/29#0,Previous page (Left binding: Next page),Предыдущая страница (переплёт слева: следующая страница)
+1/1/30#0,Open / Close,Открыть / закрыть
+1/1/32#0,Zoom In,Увеличить
+1/1/33#0,Zoom Out,Уменьшить
+1/1/34#0,Zoom Reset,Сбросить масштаб
+1/1/35#0,Saddle Stitch/Side Stitch Binding,Переплёт внакидку / втачку
+1/1/41#0,/ %d page,/ %d стр.
 1/1/42#0,"BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
 
     Product Version: %s","BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
 
-    Product Version: %s"
+    Версия продукта: %s"

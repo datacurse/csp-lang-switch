@@ -1,179 +1,179 @@
 ﻿key,source,target
 2/1/3#0,"If you activate your license on this device, your license will be deactivated from the previous device. 
- There is a limit to the number of times you can transfer licenses across devices.","If you activate your license on this device, your license will be deactivated from the previous device. 
- There is a limit to the number of times you can transfer licenses across devices."
-2/1/4#0,You can use Companion Mode for free.,You can use Companion Mode for free.
-2/1/5#0,How to use Companion Mode,How to use Companion Mode
-2/1/6#0,"If you wish to use Clip Studio Paint on multiple devices regularly, please apply for a plan with the appropriate number of devices.","If you wish to use Clip Studio Paint on multiple devices regularly, please apply for a plan with the appropriate number of devices."
+ There is a limit to the number of times you can transfer licenses across devices.","Если вы активируете лицензию на этом устройстве, лицензия будет деактивирована на предыдущем устройстве. 
+ Число переносов лицензии между устройствами ограничено."
+2/1/4#0,You can use Companion Mode for free.,Вы можете использовать режим компаньона бесплатно.
+2/1/5#0,How to use Companion Mode,Как использовать режим компаньона
+2/1/6#0,"If you wish to use Clip Studio Paint on multiple devices regularly, please apply for a plan with the appropriate number of devices.","Если вы хотите регулярно использовать Clip Studio Paint на нескольких устройствах, оформите план с подходящим количеством устройств."
 2/1/7#0,"Your license will be deactivated from the previous device. If you wish to use your license on more than one device at once, please check for a suitable option. 
-There is a limit to how often you can transfer your license across devices in one day.","Your license will be deactivated from the previous device. If you wish to use your license on more than one device at once, please check for a suitable option. 
-There is a limit to how often you can transfer your license across devices in one day."
+There is a limit to how often you can transfer your license across devices in one day.","Лицензия будет деактивирована на предыдущем устройстве. Если вы хотите использовать лицензию более чем на одном устройстве одновременно, выберите подходящий вариант. 
+Число переносов лицензии между устройствами в день ограничено."
 2/1/8#0,"Your license will be deactivated from the previous device. If you wish to use your license on more devices at once, please check for a suitable plan. 
-There is a limit to the number of times you can transfer your plan across devices.","Your license will be deactivated from the previous device. If you wish to use your license on more devices at once, please check for a suitable plan. 
-There is a limit to the number of times you can transfer your plan across devices."
-2/1/9#0,How to change your plan,How to change your plan
-2/1/10#0,Would you like to switch your active device now?,Would you like to switch your active device now?
-2/1/11#0,Are you sure you want to activate on this device?,Are you sure you want to activate on this device?
-2/1/14#0,Switch device and launch,Switch device and launch
-7/1/1#0,Clip Studio Paint is ready to use.,Clip Studio Paint is ready to use.
-7/1/2#0,You can use all the features free of charge for 30 days.,You can use all the features free of charge for 30 days.
-7/1/3#0,Get Started,Get Started
-8/1/4#0,An error has occurred.,An error has occurred.
-9/1/1#0,Your plan is not connected to an account,Your plan is not connected to an account
-9/1/2#0,Your purchased plan is not connected to a Clip Studio account.,Your purchased plan is not connected to a Clip Studio account.
+There is a limit to the number of times you can transfer your plan across devices.","Лицензия будет деактивирована на предыдущем устройстве. Если вы хотите использовать лицензию на большем числе устройств одновременно, выберите подходящий план. 
+Число переносов плана между устройствами ограничено."
+2/1/9#0,How to change your plan,Как изменить план
+2/1/10#0,Would you like to switch your active device now?,Переключить активное устройство сейчас?
+2/1/11#0,Are you sure you want to activate on this device?,Вы действительно хотите активировать на этом устройстве?
+2/1/14#0,Switch device and launch,Переключить устройство и запустить
+7/1/1#0,Clip Studio Paint is ready to use.,Clip Studio Paint готов к работе.
+7/1/2#0,You can use all the features free of charge for 30 days.,Вы можете бесплатно использовать все функции в течение 30 дней.
+7/1/3#0,Get Started,Начать
+8/1/4#0,An error has occurred.,Произошла ошибка.
+9/1/1#0,Your plan is not connected to an account,Ваш план не привязан к учётной записи
+9/1/2#0,Your purchased plan is not connected to a Clip Studio account.,Приобретённый план не привязан к учётной записи Clip Studio.
 9/1/3#0,"You can connect your plan to a Clip Studio account. If you log in, you will be able to access this plan on other devices. 
-You can also continue to use your plan without logging into an account. ","You can connect your plan to a Clip Studio account. If you log in, you will be able to access this plan on other devices. 
-You can also continue to use your plan without logging into an account. "
-9/1/4#0,Log in,Log in
-9/1/5#0,Skip login,Skip login
-10/1/1#0,An internet connection is required.,An internet connection is required.
+You can also continue to use your plan without logging into an account. ","Вы можете привязать план к учётной записи Clip Studio. После входа вы сможете использовать этот план на других устройствах. 
+Вы также можете продолжить использовать план без входа в учётную запись. "
+9/1/4#0,Log in,Войти
+9/1/5#0,Skip login,Пропустить вход
+10/1/1#0,An internet connection is required.,Требуется подключение к интернету.
 10/1/2#0,"You need an internet connection to use the free trial.
-The app will be launched in doodle mode.","You need an internet connection to use the free trial.
-The app will be launched in doodle mode."
-10/1/3#0,Your free 30 hours have ended.,Your free 30 hours have ended.
-10/1/4#0,The app will launch with limited features.,The app will launch with limited features.
-10/1/5#0,A server error has occurred.,A server error has occurred.
+The app will be launched in doodle mode.","Для использования бесплатной пробной версии необходимо подключение к интернету.
+Приложение будет запущено в режиме набросков."
+10/1/3#0,Your free 30 hours have ended.,Ваши бесплатные 30 часов закончились.
+10/1/4#0,The app will launch with limited features.,Приложение запустится с ограниченными функциями.
+10/1/5#0,A server error has occurred.,Произошла ошибка сервера.
 10/1/6#0,"Please wait and try again to use the app for free.
-The app will launch with limited features.","Please wait and try again to use the app for free.
-The app will launch with limited features."
+The app will launch with limited features.","Подождите и повторите попытку, чтобы использовать приложение бесплатно.
+Приложение запустится с ограниченными функциями."
 11/1/2#0,"Your license was deactivated successfully.
-You can now try all features of the software.","Your license was deactivated successfully.
-You can now try all features of the software."
+You can now try all features of the software.","Лицензия успешно деактивирована.
+Теперь вы можете попробовать все функции программы."
 11/1/3#0,"Your license was deactivated successfully.
-You can now use all features of the software.","Your license was deactivated successfully.
-You can now use all features of the software."
-11/1/4#0,"This license has reached the maximum number of deactivations, so it cannot be activated on this device.","This license has reached the maximum number of deactivations, so it cannot be activated on this device."
-11/1/5#0,Failed to deactivate the license.,Failed to deactivate the license.
-12/1/2#0,Used on the maximum number of devices,Used on the maximum number of devices
-12/1/3#0,This license is already being used on another device. Please choose one of the following ways to launch the app.,This license is already being used on another device. Please choose one of the following ways to launch the app.
-12/1/4#0,Switch device,Switch device
-12/1/5#0,Your license will be deactivated from the previous device. There is a limit to the number of times you can transfer licenses across devices.,Your license will be deactivated from the previous device. There is a limit to the number of times you can transfer licenses across devices.
-12/1/6#0,View plans,View plans
-12/1/7#0,"If you wish to use the app on more devices at once, please check for a suitable plan.","If you wish to use the app on more devices at once, please check for a suitable plan."
-12/1/8#0,How to change your plan,How to change your plan
-12/1/9#0,Use existing plan/free trial,Use existing plan/free trial
-13/1/1#0,Draw and create with Clip Studio Paint,Draw and create with Clip Studio Paint
-13/1/2#0,Purchase a plan to use all features!,Purchase a plan to use all features!
-13/1/3#0,Purchase a plan for unlimited features!,Purchase a plan for unlimited features!
-13/1/4#0,From %s/month /,From %s/month /
-13/1/5#0,From %s/year  ,From %s/year  
-13/1/6#0,Perpetual license from %s,Perpetual license from %s
+You can now use all features of the software.","Лицензия успешно деактивирована.
+Теперь вы можете использовать все функции программы."
+11/1/4#0,"This license has reached the maximum number of deactivations, so it cannot be activated on this device.","Эта лицензия достигла максимального числа деактиваций, поэтому её нельзя активировать на этом устройстве."
+11/1/5#0,Failed to deactivate the license.,Не удалось деактивировать лицензию.
+12/1/2#0,Used on the maximum number of devices,Используется на максимальном числе устройств
+12/1/3#0,This license is already being used on another device. Please choose one of the following ways to launch the app.,Эта лицензия уже используется на другом устройстве. Выберите один из следующих способов запуска приложения.
+12/1/4#0,Switch device,Переключить устройство
+12/1/5#0,Your license will be deactivated from the previous device. There is a limit to the number of times you can transfer licenses across devices.,Лицензия будет деактивирована на предыдущем устройстве. Число переносов лицензии между устройствами ограничено.
+12/1/6#0,View plans,Просмотреть планы
+12/1/7#0,"If you wish to use the app on more devices at once, please check for a suitable plan.","Если вы хотите использовать приложение на большем числе устройств одновременно, выберите подходящий план."
+12/1/8#0,How to change your plan,Как изменить план
+12/1/9#0,Use existing plan/free trial,Использовать существующий план или пробную версию
+13/1/1#0,Draw and create with Clip Studio Paint,Рисуйте и творите с Clip Studio Paint
+13/1/2#0,Purchase a plan to use all features!,"Приобретите план, чтобы использовать все функции!"
+13/1/3#0,Purchase a plan for unlimited features!,Приобретите план для неограниченного доступа к функциям!
+13/1/4#0,From %s/month /,От %s/месяц /
+13/1/5#0,From %s/year  ,От %s/год  
+13/1/6#0,Perpetual license from %s,Бессрочная лицензия от %s
 13/1/7#0,"From %s/month
-From %s/year    ","From %s/month
-From %s/year    "
+From %s/year    ","От %s/месяц
+От %s/год    "
 13/1/8#0,"From %s/month
-Perpetual license from %s","From %s/month
-Perpetual license from %s"
-13/1/9#0,View plans,View plans
-13/1/10#0,Try for free,Try for free
-13/1/11#0,Doodle mode,Doodle mode
-13/1/12#0,Up to 30 hours a month for free with no ads,Up to 30 hours a month for free with no ads
-13/1/13#0,Already have a plan?,Already have a plan?
-13/1/14#0,Log in,Log in
-13/1/15#0,View available plans,View available plans
-13/1/16#0,First time subscribers get 3 months free,First time subscribers get 3 months free
-13/1/17#0,First time subscribers get 20% off,First time subscribers get 20% off
-13/1/18#0,Tap here for support,Tap here for support
-13/1/19#0,Your plan has expired.,Your plan has expired.
+Perpetual license from %s","От %s/месяц
+Бессрочная лицензия от %s"
+13/1/9#0,View plans,Просмотреть планы
+13/1/10#0,Try for free,Попробовать бесплатно
+13/1/11#0,Doodle mode,Режим набросков
+13/1/12#0,Up to 30 hours a month for free with no ads,До 30 часов в месяц бесплатно и без рекламы
+13/1/13#0,Already have a plan?,Уже есть план?
+13/1/14#0,Log in,Войти
+13/1/15#0,View available plans,Просмотреть доступные планы
+13/1/16#0,First time subscribers get 3 months free,Новые подписчики получают 3 месяца бесплатно
+13/1/17#0,First time subscribers get 20% off,Новые подписчики получают скидку 20%
+13/1/18#0,Tap here for support,Нажмите здесь для обращения в поддержку
+13/1/19#0,Your plan has expired.,Срок действия вашего плана истёк.
 13/1/20#0,"Some features are limited in the current mode.
-In doodle mode, you cannot save or export your project.","Some features are limited in the current mode.
-In doodle mode, you cannot save or export your project."
+In doodle mode, you cannot save or export your project.","В текущем режиме некоторые функции ограничены.
+В режиме набросков нельзя сохранять или экспортировать проект."
 13/1/21#0,"Some features are limited in the current mode.
 In doodle mode, you cannot save or export your project.
-Tap “Try for free” to use up to 30 hours free per month without limited features.","Some features are limited in the current mode.
-In doodle mode, you cannot save or export your project.
-Tap “Try for free” to use up to 30 hours free per month without limited features."
-13/1/22#0,I understand,I understand
-14/1/3#0,Downloading the installer for Clip Studio Paint %s.,Downloading the installer for Clip Studio Paint %s.
-14/1/4#0,Failed to download the installer.,Failed to download the installer.
-15/1/1#0,Loading plan details,Loading plan details
-16/1/1#0,Plan list,Plan list
-16/1/2#0,See your plan details here,See your plan details here
-16/1/3#0,Activation code,Activation code
-16/1/4#0,Serial number,Serial number
+Tap “Try for free” to use up to 30 hours free per month without limited features.","В текущем режиме некоторые функции ограничены.
+В режиме набросков нельзя сохранять или экспортировать проект.
+Нажмите “Попробовать бесплатно”, чтобы использовать до 30 часов в месяц бесплатно без ограничений функций."
+13/1/22#0,I understand,Понятно
+14/1/3#0,Downloading the installer for Clip Studio Paint %s.,Загрузка установщика Clip Studio Paint %s.
+14/1/4#0,Failed to download the installer.,Не удалось загрузить установщик.
+15/1/1#0,Loading plan details,Загрузка сведений о плане
+16/1/1#0,Plan list,Список планов
+16/1/2#0,See your plan details here,Просмотрите сведения о вашем плане здесь
+16/1/3#0,Activation code,Код активации
+16/1/4#0,Serial number,Серийный номер
 16/1/5#0,"For smartphones, tablets, and PCs 
-(12 or 13 digits)","For smartphones, tablets, and PCs 
-(12 or 13 digits)"
-16/1/6#0,For Windows/macOS (30 digits),For Windows/macOS (30 digits)
-16/1/10#0,Switch device and launch,Switch device and launch
+(12 or 13 digits)","Для смартфонов, планшетов и ПК 
+(12 или 13 цифр)"
+16/1/6#0,For Windows/macOS (30 digits),Для Windows/macOS (30 цифр)
+16/1/10#0,Switch device and launch,Переключить устройство и запустить
 16/1/14#0,"Install
-compatible version","Install
-compatible version"
-16/1/15#0,Serial number:,Serial number:
-16/1/16#0,Order number:,Order number:
-16/1/17#0,License number:,License number:
-16/1/18#0,Contact us,Contact us
-16/1/19#0,No plans found.,No plans found.
+compatible version","Установить
+совместимую версию"
+16/1/15#0,Serial number:,Серийный номер:
+16/1/16#0,Order number:,Номер заказа:
+16/1/17#0,License number:,Номер лицензии:
+16/1/18#0,Contact us,Связаться с нами
+16/1/19#0,No plans found.,Планы не найдены.
 16/1/20#0,"This license is already being used on another device. 
-You will need to switch the active device to use it on this device.","This license is already being used on another device. 
-You will need to switch the active device to use it on this device."
+You will need to switch the active device to use it on this device.","Эта лицензия уже используется на другом устройстве. 
+Чтобы использовать её на этом устройстве, необходимо переключить активное устройство."
 16/1/21#0,"This license is being used on another device. 
-To use this license, you will need to switch the activation to this device.","This license is being used on another device. 
-To use this license, you will need to switch the activation to this device."
+To use this license, you will need to switch the activation to this device.","Эта лицензия используется на другом устройстве. 
+Чтобы использовать эту лицензию, необходимо переключить активацию на это устройство."
 16/1/22#0,"This license has reached the maximum number of deactivations,
-so it cannot be activated on this device.","This license has reached the maximum number of deactivations,
-so it cannot be activated on this device."
-16/1/23#0,You cannot use this on the current device.,You cannot use this on the current device.
-16/1/24#0,You cannot use this license on the current device.,You cannot use this license on the current device.
-16/1/25#0,This version cannot be activated with the current license.,This version cannot be activated with the current license.
-16/1/26#0,The serial number may not have been entered correctly.,The serial number may not have been entered correctly.
-16/1/27#0,More information,More information
-17/1/2#0,Log into Clip Studio,Log into Clip Studio
-17/1/3#0,Please enter your Clip Studio account details.,Please enter your Clip Studio account details.
-17/1/4#0,Email address,Email address
-17/1/6#0,Log in,Log in
-17/1/7#0,Forgot your password?,Forgot your password?
-17/1/8#0,Continue with Apple,Continue with Apple
-17/1/9#0,Continue with Google,Continue with Google
-17/1/10#0,Create account,Create account
-17/1/12#0,New to Clip Studio?,New to Clip Studio?
-17/1/13#0,Skip login,Skip login
-17/1/14#0,(No access to full-feature trials),(No access to full-feature trials)
-17/1/15#0,Failed to login. Please check your email address and password is correct and try again.,Failed to login. Please check your email address and password is correct and try again.
-18/1/1#0,You can change this at any time from the application menu > Privacy Settings.,You can change this at any time from the application menu > Privacy Settings.
-18/1/2#0,You can change this at any time from File > Privacy Settings.,You can change this at any time from File > Privacy Settings.
-18/1/3#0,You can change this at any time from Menu > Settings > Privacy Settings.,You can change this at any time from Menu > Settings > Privacy Settings.
-19/1/2#0,Get Started,Get Started
-19/1/3#0,Would you like to start the free trial?,Would you like to start the free trial?
-19/1/4#0,・ No payment required after free trial ends,・ No payment required after free trial ends
-19/1/5#0,・ No cancellation necessary,・ No cancellation necessary
-20/1/1#0,Launching %s,Launching %s
-21/1/2#0,Enter serial number,Enter serial number
-21/1/3#0,Windows/macOS (30 characters),Windows/macOS (30 characters)
+so it cannot be activated on this device.","Эта лицензия достигла максимального числа деактиваций,
+поэтому её нельзя активировать на этом устройстве."
+16/1/23#0,You cannot use this on the current device.,Это нельзя использовать на текущем устройстве.
+16/1/24#0,You cannot use this license on the current device.,Эту лицензию нельзя использовать на текущем устройстве.
+16/1/25#0,This version cannot be activated with the current license.,Эту версию нельзя активировать с текущей лицензией.
+16/1/26#0,The serial number may not have been entered correctly.,"Возможно, серийный номер введён неверно."
+16/1/27#0,More information,Подробнее
+17/1/2#0,Log into Clip Studio,Вход в Clip Studio
+17/1/3#0,Please enter your Clip Studio account details.,Введите данные учётной записи Clip Studio.
+17/1/4#0,Email address,Адрес электронной почты
+17/1/6#0,Log in,Войти
+17/1/7#0,Forgot your password?,Забыли пароль?
+17/1/8#0,Continue with Apple,Продолжить с Apple
+17/1/9#0,Continue with Google,Продолжить с Google
+17/1/10#0,Create account,Создать учётную запись
+17/1/12#0,New to Clip Studio?,Впервые в Clip Studio?
+17/1/13#0,Skip login,Пропустить вход
+17/1/14#0,(No access to full-feature trials),(Без доступа к полнофункциональным пробным версиям)
+17/1/15#0,Failed to login. Please check your email address and password is correct and try again.,Не удалось войти. Проверьте правильность адреса электронной почты и пароля и повторите попытку.
+18/1/1#0,You can change this at any time from the application menu > Privacy Settings.,Вы можете изменить это в любое время в меню приложения > Настройки конфиденциальности.
+18/1/2#0,You can change this at any time from File > Privacy Settings.,Вы можете изменить это в любое время в меню Файл > Настройки конфиденциальности.
+18/1/3#0,You can change this at any time from Menu > Settings > Privacy Settings.,Вы можете изменить это в любое время в Меню > Настройки > Настройки конфиденциальности.
+19/1/2#0,Get Started,Начать
+19/1/3#0,Would you like to start the free trial?,Начать бесплатную пробную версию?
+19/1/4#0,・ No payment required after free trial ends,・ Оплата не требуется после окончания пробного периода
+19/1/5#0,・ No cancellation necessary,・ Отмена не требуется
+20/1/1#0,Launching %s,Запуск %s
+21/1/2#0,Enter serial number,Введите серийный номер
+21/1/3#0,Windows/macOS (30 characters),Windows/macOS (30 символов)
 21/1/4#0,"Failed to launch.
-Please check your serial number and try again.","Failed to launch.
-Please check your serial number and try again."
-21/1/5#0,Having trouble with your serial number?,Having trouble with your serial number?
-22/1/2#0,An internet connection is required.,An internet connection is required.
+Please check your serial number and try again.","Не удалось запустить.
+Проверьте серийный номер и повторите попытку."
+21/1/5#0,Having trouble with your serial number?,Проблемы с серийным номером?
+22/1/2#0,An internet connection is required.,Требуется подключение к интернету.
 22/1/3#0,"You need an internet connection to use the free trial.
-The app will be launched in doodle mode.","You need an internet connection to use the free trial.
-The app will be launched in doodle mode."
-23/1/2#0,Continue offline,Continue offline
-24/1/2#0,Enter 2-step verification code,Enter 2-step verification code
-24/1/3#0,Enter the 6-digit code,Enter the 6-digit code
+The app will be launched in doodle mode.","Для использования бесплатной пробной версии необходимо подключение к интернету.
+Приложение будет запущено в режиме набросков."
+23/1/2#0,Continue offline,Продолжить офлайн
+24/1/2#0,Enter 2-step verification code,Введите код двухэтапной проверки
+24/1/3#0,Enter the 6-digit code,Введите 6-значный код
 24/1/4#0,"A verification code has been sent to your registered email address.
-The verification code will expire in 10 minutes.","A verification code has been sent to your registered email address.
-The verification code will expire in 10 minutes."
-24/1/5#0,Resend verification code,Resend verification code
-24/1/6#0,Skip verification for 90 days on this device,Skip verification for 90 days on this device
+The verification code will expire in 10 minutes.","Код проверки отправлен на зарегистрированный адрес электронной почты.
+Срок действия кода проверки истечёт через 10 минут."
+24/1/5#0,Resend verification code,Отправить код проверки повторно
+24/1/6#0,Skip verification for 90 days on this device,Пропускать проверку на этом устройстве в течение 90 дней
 24/1/8#0,"Verification failed.
-Please enter the verification code again or try reissuing it.","Verification failed.
-Please enter the verification code again or try reissuing it."
+Please enter the verification code again or try reissuing it.","Не удалось выполнить проверку.
+Введите код проверки заново или попробуйте запросить его повторно."
 24/1/9#0,"Verification failed.
-Please check the connectivity of your device.","Verification failed.
-Please check the connectivity of your device."
-25/1/1#0,Draw and create with Clip Studio Paint,Draw and create with Clip Studio Paint
-25/1/2#0,Purchase a license,Purchase a license
-25/1/4#0,Switch to another license,Switch to another license
-25/1/6#0,Download Ver.%s,Download Ver.%s
-25/1/8#0,Launch in doodle mode,Launch in doodle mode
+Please check the connectivity of your device.","Не удалось выполнить проверку.
+Проверьте подключение вашего устройства."
+25/1/1#0,Draw and create with Clip Studio Paint,Рисуйте и творите с Clip Studio Paint
+25/1/2#0,Purchase a license,Приобрести лицензию
+25/1/4#0,Switch to another license,Переключиться на другую лицензию
+25/1/6#0,Download Ver.%s,Загрузить версию %s
+25/1/8#0,Launch in doodle mode,Запустить в режиме набросков
 25/1/9#0,"Your current license (Ver.%s) is not compatible with this version. 
-To use all features, please use a license for Ver.%s.","Your current license (Ver.%s) is not compatible with this version. 
-To use all features, please use a license for Ver.%s."
+To use all features, please use a license for Ver.%s.","Ваша текущая лицензия (версия %s) несовместима с этой версией. 
+Чтобы использовать все функции, используйте лицензию для версии %s."
 25/1/10#0,"Your Update Pass has expired.
-In order to continue using the app, you need a license or plan for Ver.%s.","Your Update Pass has expired.
-In order to continue using the app, you need a license or plan for Ver.%s."
-26/1/2#0,You cannot use this version.,You cannot use this version.
+In order to continue using the app, you need a license or plan for Ver.%s.","Срок действия вашего абонемента на обновления истёк.
+Чтобы продолжить использовать приложение, необходима лицензия или план для версии %s."
+26/1/2#0,You cannot use this version.,Эту версию нельзя использовать.
 26/1/3#0,"This version cannot be launched with your current license.
-Please install the appropriate version for your license.","This version cannot be launched with your current license.
-Please install the appropriate version for your license."
+Please install the appropriate version for your license.","Эту версию нельзя запустить с текущей лицензией.
+Установите подходящую для вашей лицензии версию."

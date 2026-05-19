@@ -1,54 +1,54 @@
 ﻿key,source,target
-1/1/4#0,Scale ratio,Scale ratio
-1/1/5#0,Scale ratio,Scale ratio
-1/1/7#0,Center of rotation,Center of rotation
-1/1/9#0,Mask position,Mask position
-1/1/10#0,Mask scale,Mask scale
-1/1/11#0,Mask angle,Mask angle
-1/1/12#0,Mask rotation center,Mask rotation center
-1/1/13#0,Top left,Top left
-1/1/14#0,Top right,Top right
-1/1/15#0,Bottom left,Bottom left
-1/1/16#0,Bottom right,Bottom right
-2/1/1#0,Camera position,Camera position
-2/1/2#0,Focal point,Focal point
-4/1/1#0,Ambient light,Ambient light
-4/1/2#0,Enable ambient light,Enable ambient light
-4/1/3#0,Color components of ambient light,Color components of ambient light
-4/1/4#0,Ambient light intensity,Ambient light intensity
-4/1/5#0,Directional light,Directional light
-4/1/7#0,Color components of diffused light,Color components of diffused light
-4/1/8#0,Diffused light intensity,Diffused light intensity
-4/1/10#0,Color components of highlight,Color components of highlight
-4/1/11#0,Highlight intensity,Highlight intensity
-5/1/8#0,Movable parts,Movable parts
-5/1/9#0, :Value, :Value
-5/1/10#0, :Select, :Select
-7/1/4#0,Direction of neck,Direction of neck
-7/1/5#0,Left arm,Left arm
-7/1/6#0,Position of left hand,Position of left hand
-7/1/7#0,Direction of left hand,Direction of left hand
-7/1/8#0,Direction of left elbow,Direction of left elbow
-7/1/9#0,Left fingers,Left fingers
-7/1/10#0,Right arm,Right arm
-7/1/11#0,Position of right hand,Position of right hand
-7/1/12#0,Direction of right hand,Direction of right hand
-7/1/13#0,Direction of right elbow,Direction of right elbow
-7/1/14#0,Right fingers,Right fingers
-7/1/16#0,Position of chest,Position of chest
-7/1/17#0,Direction of chest,Direction of chest
-7/1/19#0,Position of stomach,Position of stomach
-7/1/20#0,Direction of stomach,Direction of stomach
-7/1/21#0,Left leg,Left leg
-7/1/22#0,Position of left foot,Position of left foot
-7/1/23#0,Direction of left foot,Direction of left foot
-7/1/24#0,Direction of left knee,Direction of left knee
-7/1/25#0,Right leg,Right leg
-7/1/26#0,Position of right foot,Position of right foot
-7/1/27#0,Direction of right foot,Direction of right foot
-7/1/28#0,Direction of right knee,Direction of right knee
-7/1/29#0,Other bones,Other bones
-7/1/32#0,Whole position,Whole position
-7/1/33#0,Whole rotation,Whole rotation
-7/1/35#0,Facial expression,Facial expression
-8/1/3#0,Track label,Track label
+1/1/4#0,Scale ratio,Коэффициент масштаба
+1/1/5#0,Scale ratio,Коэффициент масштаба
+1/1/7#0,Center of rotation,Центр вращения
+1/1/9#0,Mask position,Положение маски
+1/1/10#0,Mask scale,Масштаб маски
+1/1/11#0,Mask angle,Угол маски
+1/1/12#0,Mask rotation center,Центр вращения маски
+1/1/13#0,Top left,Слева вверху
+1/1/14#0,Top right,Справа вверху
+1/1/15#0,Bottom left,Слева внизу
+1/1/16#0,Bottom right,Справа внизу
+2/1/1#0,Camera position,Положение камеры
+2/1/2#0,Focal point,Фокальная точка
+4/1/1#0,Ambient light,Окружающий свет
+4/1/2#0,Enable ambient light,Включить окружающий свет
+4/1/3#0,Color components of ambient light,Цветовые компоненты окружающего света
+4/1/4#0,Ambient light intensity,Интенсивность окружающего света
+4/1/5#0,Directional light,Направленный источник света
+4/1/7#0,Color components of diffused light,Цветовые компоненты рассеянного света
+4/1/8#0,Diffused light intensity,Интенсивность рассеянного света
+4/1/10#0,Color components of highlight,Цветовые компоненты блика
+4/1/11#0,Highlight intensity,Интенсивность блика
+5/1/8#0,Movable parts,Подвижные части
+5/1/9#0, :Value, :Значение
+5/1/10#0, :Select, :Выбрать
+7/1/4#0,Direction of neck,Направление шеи
+7/1/5#0,Left arm,Левая рука
+7/1/6#0,Position of left hand,Положение левой кисти
+7/1/7#0,Direction of left hand,Направление левой кисти
+7/1/8#0,Direction of left elbow,Направление левого локтя
+7/1/9#0,Left fingers,Пальцы левой руки
+7/1/10#0,Right arm,Правая рука
+7/1/11#0,Position of right hand,Положение правой кисти
+7/1/12#0,Direction of right hand,Направление правой кисти
+7/1/13#0,Direction of right elbow,Направление правого локтя
+7/1/14#0,Right fingers,Пальцы правой руки
+7/1/16#0,Position of chest,Положение груди
+7/1/17#0,Direction of chest,Направление груди
+7/1/19#0,Position of stomach,Положение живота
+7/1/20#0,Direction of stomach,Направление живота
+7/1/21#0,Left leg,Левая нога
+7/1/22#0,Position of left foot,Положение левой стопы
+7/1/23#0,Direction of left foot,Направление левой стопы
+7/1/24#0,Direction of left knee,Направление левого колена
+7/1/25#0,Right leg,Правая нога
+7/1/26#0,Position of right foot,Положение правой стопы
+7/1/27#0,Direction of right foot,Направление правой стопы
+7/1/28#0,Direction of right knee,Направление правого колена
+7/1/29#0,Other bones,Другие кости
+7/1/32#0,Whole position,Положение целиком
+7/1/33#0,Whole rotation,Вращение целиком
+7/1/35#0,Facial expression,Выражение лица
+8/1/3#0,Track label,Метка дорожки

@@ -1,19 +1,19 @@
 ﻿key,source,target
-1/1/24#0,Export settings for Kindle format,Export settings for Kindle format
-1/1/2#0,Output size,Output size
-1/1/9#0,Do not make tone gray,Do not make tone gray
+1/1/24#0,Export settings for Kindle format,Настройки экспорта в формат Kindle
+1/1/2#0,Output size,Размер вывода
+1/1/9#0,Do not make tone gray,Не делать тон серым
 1/1/25#0,%4d x %4d,%4d x %4d
-1/1/26#0,%s (recommended size),%s (recommended size)
+1/1/26#0,%s (recommended size),%s (рекомендуемый размер)
 1/1/27#0,%s (%s),%s (%s)
-1/1/29#0,"(large size, high quality)","(large size, high quality)"
-1/1/31#0,"(small size, low quality)","(small size, low quality)"
+1/1/29#0,"(large size, high quality)","(большой размер, высокое качество)"
+1/1/31#0,"(small size, low quality)","(малый размер, низкое качество)"
 2/1/1#0,"This operation cannot be executed because the Kindle preview tool is not installed.
-Do you want to go to the installation guide?","This operation cannot be executed because the Kindle preview tool is not installed.
-Do you want to go to the installation guide?"
+Do you want to go to the installation guide?","Не удалось выполнить эту операцию, так как средство предпросмотра Kindle не установлено.
+Хотите перейти к руководству по установке?"
 4/1/1#0,"The Kindle preview tool is required for the preview of exported data.
-Press the [About the Kindle preview tool] button for more information.","The Kindle preview tool is required for the preview of exported data.
-Press the [About the Kindle preview tool] button for more information."
-4/1/2#0,About the Kindle preview tool,About the Kindle preview tool
-4/1/3#0,Install path settings for Kindle preview tool,Install path settings for Kindle preview tool
-4/1/8#0,Set Kindle preview tool,Set Kindle preview tool
-4/1/9#0,Set path for Kindle preview tool,Set path for Kindle preview tool
+Press the [About the Kindle preview tool] button for more information.","Средство предпросмотра Kindle необходимо для предпросмотра экспортированных данных.
+Для получения дополнительных сведений нажмите кнопку [About the Kindle preview tool]."
+4/1/2#0,About the Kindle preview tool,О средстве предпросмотра Kindle
+4/1/3#0,Install path settings for Kindle preview tool,Настройки пути установки средства предпросмотра Kindle
+4/1/8#0,Set Kindle preview tool,Задать средство предпросмотра Kindle
+4/1/9#0,Set path for Kindle preview tool,Задать путь к средству предпросмотра Kindle

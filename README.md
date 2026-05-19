@@ -12,9 +12,11 @@ has rendered correctly inside a running copy of CSP.
 ## Status
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
-- **Translation:** `742DEA58` (main UI, 9,368 strings) fully translated to
-  Russian and consistency-audited. The other ~31 content-bearing files are not
-  done yet — run `python src/batch.py status` for live progress.
+- **Translation:** all **32 content-bearing files** translated to Russian,
+  packed into `russian/`, and round-trip-verified (32/32 byte-for-byte). The
+  consistency audit is clean apart from known false positives (brand names, CC
+  license names, shader code, internal config keys). Run
+  `python src/batch.py status` for live progress.
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 

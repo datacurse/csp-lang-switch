@@ -1,0 +1,65 @@
+﻿source,target
+OPENGL CHECKER,ПРОВЕРКА OPENGL
+Graphics performance check,Проверка производительности графики
+About graphics performance check,О проверке производительности графики
+Version information,Сведения о версии
+Close graphics performance check,Закрыть проверку производительности графики
+Save as,Сохранить как
+Page settings,Настройки страницы
+CLIP website,Веб-сайт CLIP
+"CELSYS, Inc.","CELSYS, Inc."
+.:CELSYS:Graphics performance check:0.6,.:CELSYS:Graphics performance check:0.6
+.:CELSYS:Settings of graphics performance check,.:CELSYS:Settings of graphics performance check
+"Graphics performance check 1.0.6
+
+(C) CELSYS, Inc. All Rights Reserved.","Проверка производительности графики 1.0.6
+
+(C) CELSYS, Inc. All Rights Reserved."
+"Check the graphics performance in the using environment and whether 3D features of the software
+will work correctly. Proceed to graphics performance check?","Проверьте производительность графики в используемой среде и то, будут ли 3D-функции программы
+работать корректно. Перейти к проверке производительности графики?"
+"The previous graphics performance check closed unexpectedly. 
+ Do you want to run another graphics performance check?","Предыдущая проверка производительности графики завершилась непредвиденно. 
+ Хотите запустить ещё одну проверку производительности графики?"
+You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
+Refer to proper status of display,Ознакомьтесь с правильным состоянием отображения
+Is this displayed properly like this?,"Отображается ли это корректно, как здесь?"
+Open the result of investigation,Открыть результат проверки
+* Result of graphics performance check,* Результат проверки производительности графики
+Your environment is,Ваша среда:
+Copy the result of investigation,Копировать результат проверки
+Copied to clipboard.,Скопировано в буфер обмена.
+Check the required performance environment,Проверить требуемую среду производительности
+Ask from the form,Задать вопрос через форму
+Open the instruction page of how to update,Открыть страницу с инструкцией по обновлению
+Graphics card,Видеокарта
+Details of graphics card,Сведения о видеокарте
+Graphic renderer,Графический рендерер
+OpenGL version,Версия OpenGL
+OpenGL shader version,Версия шейдеров OpenGL
+You can use 3D functions without problems with your computer.,Вы можете без проблем использовать 3D-функции на своём компьютере.
+You may have problems for 3D functions with your computer.,При использовании 3D-функций на вашем компьютере возможны проблемы.
+You cannot use any 3D features with your computer.,Вы не можете использовать 3D-функции на своём компьютере.
+"If 3D function doesn't work correctly when using it, click 
+ the below button and check the operation environment.","Если 3D-функция работает некорректно при использовании, нажмите 
+ кнопку ниже и проверьте рабочую среду."
+"If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
+"If 3D function doesn't work correctly when using it, it may be fixed with 
+ the update of graphic driver.","Если 3D-функция работает некорректно при использовании, проблему можно устранить 
+ обновлением графического драйвера."
+Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
+"If you want to use 3D function, please check 
+ the operation environment for 3D function from the below web page and use the appropriate computer.","Если вы хотите использовать 3D-функцию, проверьте 
+ рабочую среду для 3D-функции на веб-странице ниже и используйте подходящий компьютер."
+You can use this software without problems with your computer.,Вы можете без проблем использовать эту программу на своём компьютере.
+You may have problems for this software with your computer.,При использовании этой программы на вашем компьютере возможны проблемы.
+You cannot use this software with your computer.,Вы не можете использовать эту программу на своём компьютере.
+"If the software does not start correctly or works slowly, click 
+ the below button and check the operation environment.","Если программа не запускается корректно или работает медленно, нажмите 
+ кнопку ниже и проверьте рабочую среду."
+"If the software does not start correctly or works slowly, it may be fixed with 
+ the update of graphic driver.","Если программа не запускается корректно или работает медленно, проблему можно устранить 
+ обновлением графического драйвера."
+"Please check the operation environment for this software from the below web page
+ and use the appropriate computer.","Проверьте рабочую среду для этой программы на веб-странице ниже
+ и используйте подходящий компьютер."

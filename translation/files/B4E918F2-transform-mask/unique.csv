@@ -1,0 +1,53 @@
+﻿source,target
+Scale ratio,Коэффициент масштаба
+Center of rotation,Центр вращения
+Mask position,Положение маски
+Mask scale,Масштаб маски
+Mask angle,Угол маски
+Mask rotation center,Центр вращения маски
+Top left,Слева вверху
+Top right,Справа вверху
+Bottom left,Слева внизу
+Bottom right,Справа внизу
+Camera position,Положение камеры
+Focal point,Фокальная точка
+Ambient light,Окружающий свет
+Enable ambient light,Включить окружающий свет
+Color components of ambient light,Цветовые компоненты окружающего света
+Ambient light intensity,Интенсивность окружающего света
+Directional light,Направленный источник света
+Color components of diffused light,Цветовые компоненты рассеянного света
+Diffused light intensity,Интенсивность рассеянного света
+Color components of highlight,Цветовые компоненты блика
+Highlight intensity,Интенсивность блика
+Movable parts,Подвижные части
+ :Value, :Значение
+ :Select, :Выбрать
+Direction of neck,Направление шеи
+Left arm,Левая рука
+Position of left hand,Положение левой кисти
+Direction of left hand,Направление левой кисти
+Direction of left elbow,Направление левого локтя
+Left fingers,Пальцы левой руки
+Right arm,Правая рука
+Position of right hand,Положение правой кисти
+Direction of right hand,Направление правой кисти
+Direction of right elbow,Направление правого локтя
+Right fingers,Пальцы правой руки
+Position of chest,Положение груди
+Direction of chest,Направление груди
+Position of stomach,Положение живота
+Direction of stomach,Направление живота
+Left leg,Левая нога
+Position of left foot,Положение левой стопы
+Direction of left foot,Направление левой стопы
+Direction of left knee,Направление левого колена
+Right leg,Правая нога
+Position of right foot,Положение правой стопы
+Direction of right foot,Направление правой стопы
+Direction of right knee,Направление правого колена
+Other bones,Другие кости
+Whole position,Положение целиком
+Whole rotation,Вращение целиком
+Facial expression,Выражение лица
+Track label,Метка дорожки

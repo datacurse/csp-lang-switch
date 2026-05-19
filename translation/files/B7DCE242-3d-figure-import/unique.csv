@@ -1,0 +1,18 @@
+﻿source,target
+3D drawing figure (male),3D-фигура для рисования (мужская)
+3D drawing figure (female),3D-фигура для рисования (женская)
+Import 3D file,Импортировать 3D-файл
+"This file can be imported with realistic rendering.
+Please select how to import the texture for this file.","Этот файл можно импортировать с реалистичным рендерингом.
+Выберите способ импорта текстуры для этого файла."
+Do not show again,Больше не показывать
+About texture import settings,О настройках импорта текстур
+Realistic (recommended),Реалистичный (рекомендуется)
+You cannot edit this 3D layer in Version 4.1.4 or earlier.,Этот 3D-слой нельзя редактировать в версии 4.1.4 или более ранней.
+"You cannot edit this 3D layer in Version 4.1.4 or earlier.
+
+To enable rendering, go to Advanced Tool Settings > Light Source 
+and turn on “Apply light source”.","Этот 3D-слой нельзя редактировать в версии 4.1.4 или более ранней.
+
+Чтобы включить рендеринг, откройте «Расширенные настройки инструмента» > «Источник света» 
+и включите параметр «Применить источник света»."

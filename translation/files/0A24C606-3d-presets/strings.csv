@@ -1,22 +1,22 @@
 ﻿key,source,target
-1/1/8#0,BG parts,BG parts
-1/1/9#0,Matrial preset,Matrial preset
-1/1/10#0,Angle preset,Angle preset
-1/1/11#0,Layout preset,Layout preset
-1/1/12#0,Pose preset,Pose preset
-1/1/13#0,Situation preset,Situation preset
-1/1/14#0,Feature point,Feature point
-1/1/16#0,Hair style,Hair style
-1/1/17#0,Facial expression,Facial expression
-1/1/29#0,Background parts,Background parts
-1/1/30#0,Material preset,Material preset
-1/1/31#0,Angle preset,Angle preset
-1/1/32#0,Layout preset,Layout preset
-1/1/33#0,Moveable preset,Moveable preset
-1/1/37#0,Movable parts,Movable parts
-1/1/39#0,Small object,Small object
-1/1/41#0,Character Motion,Character Motion
-1/1/42#0,Unique point,Unique point
+1/1/8#0,BG parts,Части фона
+1/1/9#0,Matrial preset,Набор настроек материала
+1/1/10#0,Angle preset,Набор настроек ракурса
+1/1/11#0,Layout preset,Набор настроек компоновки
+1/1/12#0,Pose preset,Набор настроек позы
+1/1/13#0,Situation preset,Набор настроек ситуации
+1/1/14#0,Feature point,Характерная точка
+1/1/16#0,Hair style,Причёска
+1/1/17#0,Facial expression,Выражение лица
+1/1/29#0,Background parts,Части фона
+1/1/30#0,Material preset,Набор настроек материала
+1/1/31#0,Angle preset,Набор настроек ракурса
+1/1/32#0,Layout preset,Набор настроек компоновки
+1/1/33#0,Moveable preset,Набор настроек подвижности
+1/1/37#0,Movable parts,Подвижные части
+1/1/39#0,Small object,Небольшой объект
+1/1/41#0,Character Motion,Движение персонажа
+1/1/42#0,Unique point,Уникальная точка
 2/1/1#0,"
 
 #version 110
@@ -851,11 +851,11 @@ void main (void)
 }
 
 "
-7/1/16#0,Left eye,Left eye
-7/1/17#0,Right eye,Right eye
-7/1/18#0,Left ear,Left ear
-7/1/19#0,Right ear,Right ear
-7/1/21#0,Seating point,Seating point
-10/1/11#0,Upper face,Upper face
-10/1/12#0,Lower face,Lower face
-10/1/21#0,Face parts,Face parts
+7/1/16#0,Left eye,Левый глаз
+7/1/17#0,Right eye,Правый глаз
+7/1/18#0,Left ear,Левое ухо
+7/1/19#0,Right ear,Правое ухо
+7/1/21#0,Seating point,Точка посадки
+10/1/11#0,Upper face,Верхняя часть лица
+10/1/12#0,Lower face,Нижняя часть лица
+10/1/21#0,Face parts,Части лица

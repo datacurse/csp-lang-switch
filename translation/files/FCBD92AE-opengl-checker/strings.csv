@@ -1,70 +1,70 @@
 ﻿key,source,target
-1/1/1#0,OPENGL CHECKER,OPENGL CHECKER
-1/1/2#0,Graphics performance check,Graphics performance check
-1/1/5#0,Graphics performance check,Graphics performance check
-1/1/6#0,About graphics performance check,About graphics performance check
-1/1/7#0,Version information,Version information
-1/1/9#0,Close graphics performance check,Close graphics performance check
-1/1/15#0,Save as,Save as
-1/1/17#0,Page settings,Page settings
-1/1/19#0,CLIP website,CLIP website
-1/1/20#0,Graphics performance check,Graphics performance check
-1/1/21#0,Graphics performance check,Graphics performance check
+1/1/1#0,OPENGL CHECKER,ПРОВЕРКА OPENGL
+1/1/2#0,Graphics performance check,Проверка производительности графики
+1/1/5#0,Graphics performance check,Проверка производительности графики
+1/1/6#0,About graphics performance check,О проверке производительности графики
+1/1/7#0,Version information,Сведения о версии
+1/1/9#0,Close graphics performance check,Закрыть проверку производительности графики
+1/1/15#0,Save as,Сохранить как
+1/1/17#0,Page settings,Настройки страницы
+1/1/19#0,CLIP website,Веб-сайт CLIP
+1/1/20#0,Graphics performance check,Проверка производительности графики
+1/1/21#0,Graphics performance check,Проверка производительности графики
 1/1/22#0,"CELSYS, Inc.","CELSYS, Inc."
 1/1/27#0,.:CELSYS:Graphics performance check:0.6,.:CELSYS:Graphics performance check:0.6
 1/1/28#0,.:CELSYS:Settings of graphics performance check,.:CELSYS:Settings of graphics performance check
 1/1/29#0,"Graphics performance check 1.0.6
 
-(C) CELSYS, Inc. All Rights Reserved.","Graphics performance check 1.0.6
+(C) CELSYS, Inc. All Rights Reserved.","Проверка производительности графики 1.0.6
 
 (C) CELSYS, Inc. All Rights Reserved."
 1/1/30#0,"Check the graphics performance in the using environment and whether 3D features of the software
-will work correctly. Proceed to graphics performance check?","Check the graphics performance in the using environment and whether 3D features of the software
-will work correctly. Proceed to graphics performance check?"
+will work correctly. Proceed to graphics performance check?","Проверьте производительность графики в используемой среде и то, будут ли 3D-функции программы
+работать корректно. Перейти к проверке производительности графики?"
 1/1/31#0,"The previous graphics performance check closed unexpectedly. 
- Do you want to run another graphics performance check?","The previous graphics performance check closed unexpectedly. 
- Do you want to run another graphics performance check?"
-1/1/32#0,You can run a graphics performance check from the Help menu.,You can run a graphics performance check from the Help menu.
-2/1/1#0,Refer to proper status of display,Refer to proper status of display
-2/1/2#0,Is this displayed properly like this?,Is this displayed properly like this?
-3/1/1#0,Open the result of investigation,Open the result of investigation
-3/1/2#0,* Result of graphics performance check,* Result of graphics performance check
-3/1/3#0,Your environment is,Your environment is
-3/1/4#0,Copy the result of investigation,Copy the result of investigation
-3/1/5#0,Copied to clipboard.,Copied to clipboard.
-3/1/6#0,Check the required performance environment,Check the required performance environment
-3/1/7#0,Ask from the form,Ask from the form
-3/1/8#0,Open the instruction page of how to update,Open the instruction page of how to update
-3/1/9#0,Graphics card,Graphics card
-3/1/10#0,Details of graphics card,Details of graphics card
-3/1/12#0,Graphic renderer,Graphic renderer
-3/1/13#0,OpenGL version,OpenGL version
-3/1/14#0,OpenGL shader version,OpenGL shader version
-4/1/1#0,You can use 3D functions without problems with your computer.,You can use 3D functions without problems with your computer.
-4/1/2#0,You may have problems for 3D functions with your computer.,You may have problems for 3D functions with your computer.
-4/1/3#0,You cannot use any 3D features with your computer.,You cannot use any 3D features with your computer.
+ Do you want to run another graphics performance check?","Предыдущая проверка производительности графики завершилась непредвиденно. 
+ Хотите запустить ещё одну проверку производительности графики?"
+1/1/32#0,You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
+2/1/1#0,Refer to proper status of display,Ознакомьтесь с правильным состоянием отображения
+2/1/2#0,Is this displayed properly like this?,"Отображается ли это корректно, как здесь?"
+3/1/1#0,Open the result of investigation,Открыть результат проверки
+3/1/2#0,* Result of graphics performance check,* Результат проверки производительности графики
+3/1/3#0,Your environment is,Ваша среда:
+3/1/4#0,Copy the result of investigation,Копировать результат проверки
+3/1/5#0,Copied to clipboard.,Скопировано в буфер обмена.
+3/1/6#0,Check the required performance environment,Проверить требуемую среду производительности
+3/1/7#0,Ask from the form,Задать вопрос через форму
+3/1/8#0,Open the instruction page of how to update,Открыть страницу с инструкцией по обновлению
+3/1/9#0,Graphics card,Видеокарта
+3/1/10#0,Details of graphics card,Сведения о видеокарте
+3/1/12#0,Graphic renderer,Графический рендерер
+3/1/13#0,OpenGL version,Версия OpenGL
+3/1/14#0,OpenGL shader version,Версия шейдеров OpenGL
+4/1/1#0,You can use 3D functions without problems with your computer.,Вы можете без проблем использовать 3D-функции на своём компьютере.
+4/1/2#0,You may have problems for 3D functions with your computer.,При использовании 3D-функций на вашем компьютере возможны проблемы.
+4/1/3#0,You cannot use any 3D features with your computer.,Вы не можете использовать 3D-функции на своём компьютере.
 4/1/4#0,"If 3D function doesn't work correctly when using it, click 
- the below button and check the operation environment.","If 3D function doesn't work correctly when using it, click 
- the below button and check the operation environment."
-4/1/5#0,"If this does not resolve the issue, please contact us from the following page.","If this does not resolve the issue, please contact us from the following page."
+ the below button and check the operation environment.","Если 3D-функция работает некорректно при использовании, нажмите 
+ кнопку ниже и проверьте рабочую среду."
+4/1/5#0,"If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
 4/1/6#0,"If 3D function doesn't work correctly when using it, it may be fixed with 
- the update of graphic driver.","If 3D function doesn't work correctly when using it, it may be fixed with 
- the update of graphic driver."
-4/1/7#0,Refer to how to update by clicking the below button.,Refer to how to update by clicking the below button.
+ the update of graphic driver.","Если 3D-функция работает некорректно при использовании, проблему можно устранить 
+ обновлением графического драйвера."
+4/1/7#0,Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
 4/1/8#0,"If you want to use 3D function, please check 
- the operation environment for 3D function from the below web page and use the appropriate computer.","If you want to use 3D function, please check 
- the operation environment for 3D function from the below web page and use the appropriate computer."
-5/1/1#0,You can use this software without problems with your computer.,You can use this software without problems with your computer.
-5/1/2#0,You may have problems for this software with your computer.,You may have problems for this software with your computer.
-5/1/3#0,You cannot use this software with your computer.,You cannot use this software with your computer.
+ the operation environment for 3D function from the below web page and use the appropriate computer.","Если вы хотите использовать 3D-функцию, проверьте 
+ рабочую среду для 3D-функции на веб-странице ниже и используйте подходящий компьютер."
+5/1/1#0,You can use this software without problems with your computer.,Вы можете без проблем использовать эту программу на своём компьютере.
+5/1/2#0,You may have problems for this software with your computer.,При использовании этой программы на вашем компьютере возможны проблемы.
+5/1/3#0,You cannot use this software with your computer.,Вы не можете использовать эту программу на своём компьютере.
 5/1/4#0,"If the software does not start correctly or works slowly, click 
- the below button and check the operation environment.","If the software does not start correctly or works slowly, click 
- the below button and check the operation environment."
-5/1/5#0,"If this does not resolve the issue, please contact us from the following page.","If this does not resolve the issue, please contact us from the following page."
+ the below button and check the operation environment.","Если программа не запускается корректно или работает медленно, нажмите 
+ кнопку ниже и проверьте рабочую среду."
+5/1/5#0,"If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
 5/1/6#0,"If the software does not start correctly or works slowly, it may be fixed with 
- the update of graphic driver.","If the software does not start correctly or works slowly, it may be fixed with 
- the update of graphic driver."
-5/1/7#0,Refer to how to update by clicking the below button.,Refer to how to update by clicking the below button.
+ the update of graphic driver.","Если программа не запускается корректно или работает медленно, проблему можно устранить 
+ обновлением графического драйвера."
+5/1/7#0,Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
 5/1/8#0,"Please check the operation environment for this software from the below web page
- and use the appropriate computer.","Please check the operation environment for this software from the below web page
- and use the appropriate computer."
+ and use the appropriate computer.","Проверьте рабочую среду для этой программы на веб-странице ниже
+ и используйте подходящий компьютер."

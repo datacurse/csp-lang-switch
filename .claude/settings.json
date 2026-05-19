@@ -3,7 +3,9 @@
     "allow": [
       "Bash(*)",
       "PowerShell(Get-ChildItem:*)",
-      "PowerShell(Test-Path:*)"
+      "PowerShell(Test-Path:*)",
+      "PowerShell(python C:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\_fix_5634F3A9.py)",
+      "PowerShell(python C:\\\\Users\\\\loki\\\\code\\\\csp-translation\\\\_verify_5634F3A9.py)"
     ],
     "deny": [
       "Read(./.env)",

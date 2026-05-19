@@ -1,192 +1,192 @@
 ﻿key,source,target
-1/1/5#0,%s - Verify License,%s - Verify License
-1/1/6#0,%s - Cancel License Verification,%s - Cancel License Verification
-1/1/7#0,%s - Processing License Verification,%s - Processing License Verification
-1/1/8#0,%s - License Verified Successfully,%s - License Verified Successfully
-1/1/9#0,%s - Error Verifying License,%s - Error Verifying License
-1/1/10#0,%s - License Expired,%s - License Expired
-1/1/11#0,%s - Cancel Trial Registration,%s - Cancel Trial Registration
-1/1/12#0,%s - Processing Trial Registration,%s - Processing Trial Registration
-1/1/13#0,%s - Trial Registered Successfully,%s - Trial Registered Successfully
-1/1/14#0,%s - Error Registering Trial,%s - Error Registering Trial
-1/1/15#0,%s - Register Trial,%s - Register Trial
-1/1/16#0,%s - Trial Expiration,%s - Trial Expiration
-1/1/17#0,%s - Firewall Authentication,%s - Firewall Authentication
-1/1/18#0,Trial version: You can use limited features.,Trial version: You can use limited features.
-1/1/19#0,Trial version: You can use all features for %d more days.,Trial version: You can use all features for %d more days.
-1/1/20#0,Trial version: You can use all features,Trial version: You can use all features
-1/1/21#0,Trial version: Trial period will expire in %d days.,Trial version: Trial period will expire in %d days.
-1/1/22#0,Trial version: Trial period has expired.,Trial version: Trial period has expired.
-1/1/23#0, - Next license verification will be after %d days., - Next license verification will be after %d days.
-1/1/24#0, - Next license verification will be in %d days., - Next license verification will be in %d days.
-1/1/25#0, - License will be verified upon next launch of the software., - License will be verified upon next launch of the software.
-1/1/26#0,You can use all features for another %d days.,You can use all features for another %d days.
-1/1/27#0,You can use all features,You can use all features
-1/1/28#0,License period will expire in %d days.,License period will expire in %d days.
-1/1/29#0,License period has expired.,License period has expired.
-1/1/30#0,Lost your serial number?,Lost your serial number?
+1/1/5#0,%s - Verify License,%s - Проверка лицензии
+1/1/6#0,%s - Cancel License Verification,%s - Отмена проверки лицензии
+1/1/7#0,%s - Processing License Verification,%s - Выполняется проверка лицензии
+1/1/8#0,%s - License Verified Successfully,%s - Лицензия успешно проверена
+1/1/9#0,%s - Error Verifying License,%s - Ошибка проверки лицензии
+1/1/10#0,%s - License Expired,%s - Срок действия лицензии истёк
+1/1/11#0,%s - Cancel Trial Registration,%s - Отмена регистрации пробной версии
+1/1/12#0,%s - Processing Trial Registration,%s - Выполняется регистрация пробной версии
+1/1/13#0,%s - Trial Registered Successfully,%s - Пробная версия успешно зарегистрирована
+1/1/14#0,%s - Error Registering Trial,%s - Ошибка регистрации пробной версии
+1/1/15#0,%s - Register Trial,%s - Регистрация пробной версии
+1/1/16#0,%s - Trial Expiration,%s - Окончание пробного периода
+1/1/17#0,%s - Firewall Authentication,%s - Аутентификация брандмауэра
+1/1/18#0,Trial version: You can use limited features.,Пробная версия: доступны ограниченные функции.
+1/1/19#0,Trial version: You can use all features for %d more days.,Пробная версия: все функции доступны ещё %d дн.
+1/1/20#0,Trial version: You can use all features,Пробная версия: доступны все функции
+1/1/21#0,Trial version: Trial period will expire in %d days.,Пробная версия: пробный период истекает через %d дн.
+1/1/22#0,Trial version: Trial period has expired.,Пробная версия: пробный период истёк.
+1/1/23#0, - Next license verification will be after %d days., - Следующая проверка лицензии будет через %d дн.
+1/1/24#0, - Next license verification will be in %d days., - Следующая проверка лицензии будет через %d дн.
+1/1/25#0, - License will be verified upon next launch of the software., - Лицензия будет проверена при следующем запуске программы.
+1/1/26#0,You can use all features for another %d days.,Все функции доступны ещё %d дн.
+1/1/27#0,You can use all features,Доступны все функции
+1/1/28#0,License period will expire in %d days.,Срок действия лицензии истекает через %d дн.
+1/1/29#0,License period has expired.,Срок действия лицензии истёк.
+1/1/30#0,Lost your serial number?,Потеряли серийный номер?
 2/1/2#0,"Thank you for registering. 
-You can now use all features of the software for %d days.","Thank you for registering. 
-You can now use all features of the software for %d days."
+You can now use all features of the software for %d days.","Благодарим за регистрацию. 
+Теперь все функции программы доступны вам в течение %d дн."
 2/1/3#0,"Thank you for choosing our product. 
-Your new license has been registered.","Thank you for choosing our product. 
-Your new license has been registered."
+Your new license has been registered.","Благодарим за выбор нашего продукта. 
+Ваша новая лицензия зарегистрирована."
 2/1/4#0,"License verification failed. 
-The license has not been changed.","License verification failed. 
-The license has not been changed."
+The license has not been changed.","Не удалось выполнить проверку лицензии. 
+Лицензия не была изменена."
 2/1/5#0,"Thank you for choosing our product. 
-Your license has now been registered.","Thank you for choosing our product. 
-Your license has now been registered."
+Your license has now been registered.","Благодарим за выбор нашего продукта. 
+Ваша лицензия зарегистрирована."
 2/1/6#0,"Your trial period was registered successfully. 
-Thank you for registering.","Your trial period was registered successfully. 
-Thank you for registering."
-2/1/7#0,Thank you for choosing Clip Studio Paint.,Thank you for choosing Clip Studio Paint.
+Thank you for registering.","Пробный период успешно зарегистрирован. 
+Благодарим за регистрацию."
+2/1/7#0,Thank you for choosing Clip Studio Paint.,Благодарим за выбор Clip Studio Paint.
 2/1/8#0,"A serial number has not been entered. 
-The application will close.","A serial number has not been entered. 
-The application will close."
+The application will close.","Серийный номер не введён. 
+Приложение будет закрыто."
 2/1/9#0,"The license for this software has not been verified.
-The application will close.","The license for this software has not been verified.
-The application will close."
+The application will close.","Лицензия для этой программы не проверена.
+Приложение будет закрыто."
 2/1/10#0,"Thank you for verifying your license. 
-The next license verification will be after %d days.","Thank you for verifying your license. 
-The next license verification will be after %d days."
+The next license verification will be after %d days.","Благодарим за проверку лицензии. 
+Следующая проверка лицензии будет через %d дн."
 2/1/11#0,"Thank you for verifying your license. 
-The next license verification will be in %d days.","Thank you for verifying your license. 
-The next license verification will be in %d days."
+The next license verification will be in %d days.","Благодарим за проверку лицензии. 
+Следующая проверка лицензии будет через %d дн."
 2/1/12#0,"Thank you for verifying your license. 
-The license will be verified again the next time the software is launched.","Thank you for verifying your license. 
-The license will be verified again the next time the software is launched."
+The license will be verified again the next time the software is launched.","Благодарим за проверку лицензии. 
+Лицензия будет проверена снова при следующем запуске программы."
 2/1/13#0,"Thank you for verifying your license. 
-You can use it for another %d days. The next license verification will be after %d days.","Thank you for verifying your license. 
-You can use it for another %d days. The next license verification will be after %d days."
+You can use it for another %d days. The next license verification will be after %d days.","Благодарим за проверку лицензии. 
+Вы можете использовать её ещё %d дн. Следующая проверка лицензии будет через %d дн."
 2/1/14#0,"Thank you for verifying your license. 
-You can use it for another %d days. The next license verification will be in %d days.","Thank you for verifying your license. 
-You can use it for another %d days. The next license verification will be in %d days."
+You can use it for another %d days. The next license verification will be in %d days.","Благодарим за проверку лицензии. 
+Вы можете использовать её ещё %d дн. Следующая проверка лицензии будет через %d дн."
 2/1/15#0,"Thank you for verifying your license. 
-You can use it for another %d days. The license will be verified again the next time the software is launched.","Thank you for verifying your license. 
-You can use it for another %d days. The license will be verified again the next time the software is launched."
+You can use it for another %d days. The license will be verified again the next time the software is launched.","Благодарим за проверку лицензии. 
+Вы можете использовать её ещё %d дн. Лицензия будет проверена снова при следующем запуске программы."
 2/1/16#0,"Failed to verify the license. The server or network may be busy. 
-Please wait and try again later. We apologize for the inconvenience.","Failed to verify the license. The server or network may be busy. 
-Please wait and try again later. We apologize for the inconvenience."
+Please wait and try again later. We apologize for the inconvenience.","Не удалось выполнить проверку лицензии. Возможно, сервер или сеть перегружены. 
+Подождите и повторите попытку позже. Приносим извинения за неудобства."
 2/1/17#0,"License verification failed because the current license is not valid. 
-The license will be verified again the next time the software is launched.","License verification failed because the current license is not valid. 
-The license will be verified again the next time the software is launched."
-2/1/18#0,Failed to verify the license.,Failed to verify the license.
+The license will be verified again the next time the software is launched.","Не удалось выполнить проверку лицензии, так как текущая лицензия недействительна. 
+Лицензия будет проверена снова при следующем запуске программы."
+2/1/18#0,Failed to verify the license.,Не удалось выполнить проверку лицензии.
 2/1/19#0,"There was an error with the server, so your license will be verified later.
 
 You can still use all features even if you see this message. 
 
-You may see another message that you can use all features for three days, but the original valid period will be restored after the next license verification.","There was an error with the server, so your license will be verified later.
+You may see another message that you can use all features for three days, but the original valid period will be restored after the next license verification.","Произошла ошибка сервера, поэтому ваша лицензия будет проверена позже.
 
-You can still use all features even if you see this message. 
+Даже при появлении этого сообщения все функции остаются доступными. 
 
-You may see another message that you can use all features for three days, but the original valid period will be restored after the next license verification."
+Возможно появление ещё одного сообщения о том, что все функции доступны в течение трёх дней, но исходный срок действия будет восстановлен после следующей проверки лицензии."
 2/1/20#0,"There was an error with the server, 
 so your license will be verified the next time you launch the software.
-Thank you for choosing our software.","There was an error with the server, 
-so your license will be verified the next time you launch the software.
-Thank you for choosing our software."
+Thank you for choosing our software.","Произошла ошибка сервера, 
+поэтому ваша лицензия будет проверена при следующем запуске программы.
+Благодарим за выбор нашей программы."
 2/1/21#0,"You will need an Internet connection for the next license verification.
-If the license cannot be verified, the software will not launch.","You will need an Internet connection for the next license verification.
-If the license cannot be verified, the software will not launch."
-4/1/1#0,Getting Started with %s,Getting Started with %s
-4/1/2#0,"In the trial version, you can use all the features of PRO or EX for free. Restart the application to switch between grades.","In the trial version, you can use all the features of PRO or EX for free. Restart the application to switch between grades."
+If the license cannot be verified, the software will not launch.","Для следующей проверки лицензии потребуется подключение к Интернету.
+Если лицензию не удастся проверить, программа не запустится."
+4/1/1#0,Getting Started with %s,Начало работы с %s
+4/1/2#0,"In the trial version, you can use all the features of PRO or EX for free. Restart the application to switch between grades.",В пробной версии вы можете бесплатно использовать все функции PRO или EX. Перезапустите приложение для переключения между редакциями.
 4/1/3#0,"Your license has been updated. Please restart the application to apply the changes. 
 
 If you are using a trial version, you can continue using the trial by entering the following serial number.
 
-Serial number for trial version: %s","Your license has been updated. Please restart the application to apply the changes. 
+Serial number for trial version: %s","Ваша лицензия обновлена. Перезапустите приложение, чтобы применить изменения. 
 
-If you are using a trial version, you can continue using the trial by entering the following serial number.
+Если вы используете пробную версию, вы можете продолжить работу с ней, введя следующий серийный номер.
 
-Serial number for trial version: %s"
-4/1/4#0,Your license has been updated. Please restart the application to apply the changes.,Your license has been updated. Please restart the application to apply the changes.
-4/1/5#0,Your license has been updated. Please restart the application to apply the changes and use the added features.,Your license has been updated. Please restart the application to apply the changes and use the added features.
-4/1/6#0,You will need to relaunch the app to enable pen pressure sensitivity.,You will need to relaunch the app to enable pen pressure sensitivity.
-4/1/8#0,How to restart the app,How to restart the app
-5/1/7#0,Enter again,Enter again
-5/1/8#0,Try again,Try again
-5/1/13#0,$$$ Pause,$$$ Pause
-5/1/14#0,・ From web browser ,・ From web browser 
-5/1/15#0,・ From mobile ,・ From mobile 
+Серийный номер для пробной версии: %s"
+4/1/4#0,Your license has been updated. Please restart the application to apply the changes.,"Ваша лицензия обновлена. Перезапустите приложение, чтобы применить изменения."
+4/1/5#0,Your license has been updated. Please restart the application to apply the changes and use the added features.,"Ваша лицензия обновлена. Перезапустите приложение, чтобы применить изменения и использовать добавленные функции."
+4/1/6#0,You will need to relaunch the app to enable pen pressure sensitivity.,"Чтобы включить чувствительность к нажиму пера, потребуется перезапустить приложение."
+4/1/8#0,How to restart the app,Как перезапустить приложение
+5/1/7#0,Enter again,Ввести снова
+5/1/8#0,Try again,Повторить попытку
+5/1/13#0,$$$ Pause,$$$ Пауза
+5/1/14#0,・ From web browser ,・ Из веб-браузера 
+5/1/15#0,・ From mobile ,・ С мобильного устройства 
 5/1/16#0,"If registering from a mobile phone, please scan the following 2D mobile response code.
-The license authentication key will be automatically entered to the site.","If registering from a mobile phone, please scan the following 2D mobile response code.
-The license authentication key will be automatically entered to the site."
-5/1/17#0,License authentication key,License authentication key
-5/1/20#0,Your subscription information needs to be updated. Please press the [Restore purchases] button to update your subscription information.,Your subscription information needs to be updated. Please press the [Restore purchases] button to update your subscription information.
-5/1/21#0,Restore purchases,Restore purchases
-5/1/22#0,Receive another serial number,Receive another serial number
+The license authentication key will be automatically entered to the site.","При регистрации с мобильного телефона отсканируйте следующий двухмерный мобильный код.
+Ключ аутентификации лицензии будет автоматически введён на сайте."
+5/1/17#0,License authentication key,Ключ аутентификации лицензии
+5/1/20#0,Your subscription information needs to be updated. Please press the [Restore purchases] button to update your subscription information.,"Сведения о вашей подписке необходимо обновить. Нажмите кнопку [Восстановить покупки], чтобы обновить сведения о подписке."
+5/1/21#0,Restore purchases,Восстановить покупки
+5/1/22#0,Receive another serial number,Получить другой серийный номер
 5/1/23#0,                                             ,                                             
-5/1/25#0,You’ll be able to purchase the software after starting Clip Studio.,You’ll be able to purchase the software after starting Clip Studio.
+5/1/25#0,You’ll be able to purchase the software after starting Clip Studio.,Вы сможете приобрести программу после запуска Clip Studio.
 5/1/26#0,"Processing could not be completed because the necessary files were not found.
-The application may not be installed correctly.","Processing could not be completed because the necessary files were not found.
-The application may not be installed correctly."
+The application may not be installed correctly.","Не удалось завершить обработку, так как необходимые файлы не найдены.
+Возможно, приложение установлено неправильно."
 5/1/27#0,"Please close Clip Studio to update the license information. 
-After closing it, click [Try again] below.","Please close Clip Studio to update the license information. 
-After closing it, click [Try again] below."
-5/1/28#0,Thank you for choosing Clip Studio Paint.,Thank you for choosing Clip Studio Paint.
-5/1/29#0,Register license,Register license
-5/1/30#0,"If you have a serial number for Clip Studio Paint, enter it below and click Register License.","If you have a serial number for Clip Studio Paint, enter it below and click Register License."
-5/1/31#0,Register License,Register License
-5/1/32#0,Use trial version,Use trial version
-5/1/33#0,Use trial version (with limitations),Use trial version (with limitations)
+After closing it, click [Try again] below.","Закройте Clip Studio, чтобы обновить сведения о лицензии. 
+После закрытия нажмите [Повторить попытку] ниже."
+5/1/28#0,Thank you for choosing Clip Studio Paint.,Благодарим за выбор Clip Studio Paint.
+5/1/29#0,Register license,Зарегистрировать лицензию
+5/1/30#0,"If you have a serial number for Clip Studio Paint, enter it below and click Register License.","Если у вас есть серийный номер для Clip Studio Paint, введите его ниже и нажмите «Зарегистрировать лицензию»."
+5/1/31#0,Register License,Зарегистрировать лицензию
+5/1/32#0,Use trial version,Использовать пробную версию
+5/1/33#0,Use trial version (with limitations),Использовать пробную версию (с ограничениями)
 5/1/34#0,"You need to register a free Clip Studio account to use the full-feature trial and save your work. 
-","You need to register a free Clip Studio account to use the full-feature trial and save your work. 
+","Чтобы использовать полнофункциональную пробную версию и сохранять свои произведения, необходимо зарегистрировать бесплатную учётную запись Clip Studio. 
 "
-5/1/35#0,Use full trial version,Use full trial version
-5/1/36#0,Purchase Clip Studio Paint,Purchase Clip Studio Paint
-5/1/38#0,Go to purchase page,Go to purchase page
+5/1/35#0,Use full trial version,Использовать полную пробную версию
+5/1/36#0,Purchase Clip Studio Paint,Приобрести Clip Studio Paint
+5/1/38#0,Go to purchase page,Перейти на страницу покупки
 5/1/40#0,"Please choose how you would like to verify your license. 
 
-If online verification does not work due to your network connection or antivirus software, please choose “Two-step verification”.","Please choose how you would like to verify your license. 
+If online verification does not work due to your network connection or antivirus software, please choose “Two-step verification”.","Выберите способ проверки лицензии. 
 
-If online verification does not work due to your network connection or antivirus software, please choose “Two-step verification”."
-5/1/41#0,Online verification,Online verification
-5/1/42#0,Two-step verification,Two-step verification
+Если проверка через Интернет не работает из-за сетевого подключения или антивирусной программы, выберите «Двухэтапную проверку»."
+5/1/41#0,Online verification,Проверка через Интернет
+5/1/42#0,Two-step verification,Двухэтапная проверка
 5/1/43#0,"This license is already in use on another device.
- If you want to use this product on this device, you will first need to deactivate the license.","This license is already in use on another device.
- If you want to use this product on this device, you will first need to deactivate the license."
-5/1/44#0,Go to the license deactivation website and enter the above authentication key.,Go to the license deactivation website and enter the above authentication key.
-5/1/45#0,Find details on limited features,Find details on limited features
-5/1/46#0,The application will launch with some limited functions. You will not be able to save your work.,The application will launch with some limited functions. You will not be able to save your work.
+ If you want to use this product on this device, you will first need to deactivate the license.","Эта лицензия уже используется на другом устройстве.
+ Если вы хотите использовать этот продукт на данном устройстве, сначала необходимо деактивировать лицензию."
+5/1/44#0,Go to the license deactivation website and enter the above authentication key.,Перейдите на сайт деактивации лицензии и введите указанный выше ключ аутентификации.
+5/1/45#0,Find details on limited features,Узнать подробнее об ограниченных функциях
+5/1/46#0,The application will launch with some limited functions. You will not be able to save your work.,Приложение запустится с некоторыми ограниченными функциями. Вы не сможете сохранять свои произведения.
 5/1/47#0, , 
 5/1/48#0,"$$$ In case you have a different serial number, please register it. 
  1. Click the [Start] button below. 
  2. Select [Register License] from the [Help] menu. 
- 3. Enter your serial number in the dialog.","$$$ In case you have a different serial number, please register it. 
- 1. Click the [Start] button below. 
- 2. Select [Register License] from the [Help] menu. 
- 3. Enter your serial number in the dialog."
+ 3. Enter your serial number in the dialog.","$$$ Если у вас есть другой серийный номер, зарегистрируйте его. 
+ 1. Нажмите кнопку [Пуск] ниже. 
+ 2. Выберите [Зарегистрировать лицензию] в меню [Справка]. 
+ 3. Введите серийный номер в диалоговом окне."
 5/1/49#0, , 
 5/1/51#0,"$$$ Click here to check how you can obtain a serial number.
 Click here also to see detailed procedures for license registration
-and purchase of the product.","$$$ Click here to check how you can obtain a serial number.
-Click here also to see detailed procedures for license registration
-and purchase of the product."
+and purchase of the product.","$$$ Нажмите здесь, чтобы узнать, как получить серийный номер.
+Здесь также можно ознакомиться с подробными инструкциями по регистрации лицензии
+и покупке продукта."
 5/1/52#0,"The valid period for this license has expired. 
-Thank you for using Clip Studio Paint.","The valid period for this license has expired. 
-Thank you for using Clip Studio Paint."
-5/1/53#0,Do you want to launch the application with limited features?,Do you want to launch the application with limited features?
+Thank you for using Clip Studio Paint.","Срок действия этой лицензии истёк. 
+Благодарим за использование Clip Studio Paint."
+5/1/53#0,Do you want to launch the application with limited features?,Запустить приложение с ограниченными функциями?
 5/1/54#0,"The entered confirmation key is incorrect.
 
-Please check the confirmation key displayed in the browser and try again.","The entered confirmation key is incorrect.
+Please check the confirmation key displayed in the browser and try again.","Введённый ключ подтверждения неверен.
 
-Please check the confirmation key displayed in the browser and try again."
+Проверьте ключ подтверждения, отображаемый в браузере, и повторите попытку."
 5/1/55#0,"This product is not registered. 
 
 If you prefer monthly subscription, please sign up from here and get a serial number. 
-If you get a serial number and register your license, you can continue to use all features.","This product is not registered. 
+If you get a serial number and register your license, you can continue to use all features.","Этот продукт не зарегистрирован. 
 
-If you prefer monthly subscription, please sign up from here and get a serial number. 
-If you get a serial number and register your license, you can continue to use all features."
-5/1/56#0,Do you want to enter the serial number again?,Do you want to enter the serial number again?
+Если вы предпочитаете ежемесячную подписку, оформите её здесь и получите серийный номер. 
+Получив серийный номер и зарегистрировав лицензию, вы сможете продолжить использовать все функции."
+5/1/56#0,Do you want to enter the serial number again?,Ввести серийный номер снова?
 5/1/57#0,"License could not be verified upon launching the software. Please check the following. 
 
-You can still use all features even if you see this message.","License could not be verified upon launching the software. Please check the following. 
+You can still use all features even if you see this message.","Не удалось проверить лицензию при запуске программы. Проверьте следующее. 
 
-You can still use all features even if you see this message."
-5/1/58#0,"If this computer is connected to the Internet, please read here.","If this computer is connected to the Internet, please read here."
-5/1/59#0,Please check if the following page displays correctly using %s.,Please check if the following page displays correctly using %s.
+Даже при появлении этого сообщения все функции остаются доступными."
+5/1/58#0,"If this computer is connected to the Internet, please read here.","Если этот компьютер подключён к Интернету, читайте здесь."
+5/1/59#0,Please check if the following page displays correctly using %s.,"Проверьте, корректно ли отображается следующая страница в %s."
 5/1/60#0,"If the above page is displayed correctly,
  it is possible that the license could not be verified due to server congestion. 
 
@@ -194,312 +194,312 @@ If the above page is not displayed correctly,
  your computer may not be connected to the Internet. 
 Please check your network settings. 
 
-Your license will be verified the next time you launch the software. You may continue to use the software now.","If the above page is displayed correctly,
- it is possible that the license could not be verified due to server congestion. 
+Your license will be verified the next time you launch the software. You may continue to use the software now.","Если указанная выше страница отображается корректно,
+ возможно, лицензию не удалось проверить из-за перегрузки сервера. 
 
-If the above page is not displayed correctly,
- your computer may not be connected to the Internet. 
-Please check your network settings. 
+Если указанная выше страница отображается некорректно,
+ возможно, ваш компьютер не подключён к Интернету. 
+Проверьте настройки сети. 
 
-Your license will be verified the next time you launch the software. You may continue to use the software now."
-5/1/61#0,"If this computer is not connected to the Internet, please read here.","If this computer is not connected to the Internet, please read here."
-5/1/62#0,"License verification will be executed at that time, so you can continue to use the application.","License verification will be executed at that time, so you can continue to use the application."
+Ваша лицензия будет проверена при следующем запуске программы. Вы можете продолжить работу с программой сейчас."
+5/1/61#0,"If this computer is not connected to the Internet, please read here.","Если этот компьютер не подключён к Интернету, читайте здесь."
+5/1/62#0,"License verification will be executed at that time, so you can continue to use the application.","В этот момент будет выполнена проверка лицензии, поэтому вы можете продолжить использовать приложение."
 5/1/63#0,"This dialog is for checking the online status of your computer and for registering your license.
 
-Please make sure you are logged in with administrator permissions before registering your license.","This dialog is for checking the online status of your computer and for registering your license.
+Please make sure you are logged in with administrator permissions before registering your license.","Это диалоговое окно служит для проверки сетевого состояния вашего компьютера и регистрации лицензии.
 
-Please make sure you are logged in with administrator permissions before registering your license."
+Перед регистрацией лицензии убедитесь, что вы вошли в систему с правами администратора."
 5/1/64#0,"You need a Clip Studio account to access all features of the trial. 
-Please enter the email and password of your Clip Studio account.","You need a Clip Studio account to access all features of the trial. 
-Please enter the email and password of your Clip Studio account."
-5/1/65#0,E-mail address:,E-mail address:
-5/1/67#0,The e-mail address or password is incorrect.,The e-mail address or password is incorrect.
+Please enter the email and password of your Clip Studio account.","Для доступа ко всем функциям пробной версии необходима учётная запись Clip Studio. 
+Введите адрес электронной почты и пароль вашей учётной записи Clip Studio."
+5/1/65#0,E-mail address:,Адрес электронной почты:
+5/1/67#0,The e-mail address or password is incorrect.,Адрес электронной почты или пароль неверны.
 5/1/68#0,"The e-mail address or password is incorrect. 
-Please make sure you are using single-byte characters.","The e-mail address or password is incorrect. 
-Please make sure you are using single-byte characters."
+Please make sure you are using single-byte characters.","Адрес электронной почты или пароль неверны. 
+Убедитесь, что вы используете однобайтовые символы."
 5/1/69#0,"The valid period for this license has expired.
-Thank you for using Clip Studio Paint.","The valid period for this license has expired.
-Thank you for using Clip Studio Paint."
-5/1/70#0,Contact our support team,Contact our support team
-5/1/71#0,Check here for details about limited features and how to register a license.,Check here for details about limited features and how to register a license.
-5/1/72#0,Failed to import license key file.,Failed to import license key file.
-5/1/74#0,Connecting to the network,Connecting to the network
-5/1/76#0,You have news from CELSYS. Read now?,You have news from CELSYS. Read now?
-5/1/80#0,Set up connection,Set up connection
-5/1/81#0,%s - Verify License,%s - Verify License
-5/1/82#0,%s - Firewall Authentication,%s - Firewall Authentication
-5/1/83#0,%s - Error Verifying License,%s - Error Verifying License
-5/1/84#0,%s - Error Verifying License,%s - Error Verifying License
-5/1/85#0,%s - Error Verifying License,%s - Error Verifying License
-5/1/86#0,%s - Verify License,%s - Verify License
-5/1/87#0,%s - Error Verifying License,%s - Error Verifying License
-5/1/88#0,%s - License Verified Successfully,%s - License Verified Successfully
-5/1/89#0,%s - Register Trial,%s - Register Trial
-5/1/90#0,%s - Error Registering Trial,%s - Error Registering Trial
-5/1/91#0,%s - Error Registering Trial,%s - Error Registering Trial
-5/1/92#0,%s - Error Registering Trial,%s - Error Registering Trial
-5/1/93#0,%s - Register Trial,%s - Register Trial
-5/1/94#0,%s - Error Registering Trial,%s - Error Registering Trial
-5/1/95#0,Verifying your license. Please wait.,Verifying your license. Please wait.
+Thank you for using Clip Studio Paint.","Срок действия этой лицензии истёк.
+Благодарим за использование Clip Studio Paint."
+5/1/70#0,Contact our support team,Обратитесь в нашу службу поддержки
+5/1/71#0,Check here for details about limited features and how to register a license.,"Здесь можно узнать подробнее об ограниченных функциях и о том, как зарегистрировать лицензию."
+5/1/72#0,Failed to import license key file.,Не удалось импортировать файл ключа лицензии.
+5/1/74#0,Connecting to the network,Подключение к сети
+5/1/76#0,You have news from CELSYS. Read now?,Для вас есть новости от CELSYS. Прочитать сейчас?
+5/1/80#0,Set up connection,Настроить подключение
+5/1/81#0,%s - Verify License,%s - Проверка лицензии
+5/1/82#0,%s - Firewall Authentication,%s - Аутентификация брандмауэра
+5/1/83#0,%s - Error Verifying License,%s - Ошибка проверки лицензии
+5/1/84#0,%s - Error Verifying License,%s - Ошибка проверки лицензии
+5/1/85#0,%s - Error Verifying License,%s - Ошибка проверки лицензии
+5/1/86#0,%s - Verify License,%s - Проверка лицензии
+5/1/87#0,%s - Error Verifying License,%s - Ошибка проверки лицензии
+5/1/88#0,%s - License Verified Successfully,%s - Лицензия успешно проверена
+5/1/89#0,%s - Register Trial,%s - Регистрация пробной версии
+5/1/90#0,%s - Error Registering Trial,%s - Ошибка регистрации пробной версии
+5/1/91#0,%s - Error Registering Trial,%s - Ошибка регистрации пробной версии
+5/1/92#0,%s - Error Registering Trial,%s - Ошибка регистрации пробной версии
+5/1/93#0,%s - Register Trial,%s - Регистрация пробной версии
+5/1/94#0,%s - Error Registering Trial,%s - Ошибка регистрации пробной версии
+5/1/95#0,Verifying your license. Please wait.,Выполняется проверка лицензии. Подождите.
 5/1/96#0,"The network is currently busy.
 Your license will be verified the next time you launch the software.
-Thank you for choosing Clip Studio Paint.","The network is currently busy.
-Your license will be verified the next time you launch the software.
-Thank you for choosing Clip Studio Paint."
+Thank you for choosing Clip Studio Paint.","Сеть сейчас перегружена.
+Ваша лицензия будет проверена при следующем запуске программы.
+Благодарим за выбор Clip Studio Paint."
 5/1/97#0,"Your license has been verified and registered successfully.
-Thank you for choosing Clip Studio Paint.","Your license has been verified and registered successfully.
-Thank you for choosing Clip Studio Paint."
-5/1/98#0,License verification failed.,License verification failed.
+Thank you for choosing Clip Studio Paint.","Ваша лицензия успешно проверена и зарегистрирована.
+Благодарим за выбор Clip Studio Paint."
+5/1/98#0,License verification failed.,Не удалось выполнить проверку лицензии.
 5/1/99#0,"The network is currently busy.
 Your license will be verified later.
-Thank you for choosing Clip Studio Paint.","The network is currently busy.
-Your license will be verified later.
-Thank you for choosing Clip Studio Paint."
+Thank you for choosing Clip Studio Paint.","Сеть сейчас перегружена.
+Ваша лицензия будет проверена позже.
+Благодарим за выбор Clip Studio Paint."
 5/1/100#0,"The network is currently busy. Your license will be verified later.
 
 You can still use all features even if you see this message. 
 
 You may see another message that you can use all features for three days, 
-but the original valid period will be restored after the next license verification.","The network is currently busy. Your license will be verified later.
+but the original valid period will be restored after the next license verification.","Сеть сейчас перегружена. Ваша лицензия будет проверена позже.
 
-You can still use all features even if you see this message. 
+Даже при появлении этого сообщения все функции остаются доступными. 
 
-You may see another message that you can use all features for three days, 
-but the original valid period will be restored after the next license verification."
-5/1/101#0,License verification failed.,License verification failed.
+Возможно появление ещё одного сообщения о том, что все функции доступны в течение трёх дней, 
+но исходный срок действия будет восстановлен после следующей проверки лицензии."
+5/1/101#0,License verification failed.,Не удалось выполнить проверку лицензии.
 5/1/102#0,"You need to register your trial with a Clip Studio account to access all features.
-Would you like to register your trial now?","You need to register your trial with a Clip Studio account to access all features.
-Would you like to register your trial now?"
-5/1/103#0,"Yes, register now","Yes, register now"
-5/1/104#0,"No, use trial with limited features","No, use trial with limited features"
+Would you like to register your trial now?","Чтобы получить доступ ко всем функциям, необходимо зарегистрировать пробную версию с учётной записью Clip Studio.
+Зарегистрировать пробную версию сейчас?"
+5/1/103#0,"Yes, register now","Да, зарегистрировать сейчас"
+5/1/104#0,"No, use trial with limited features","Нет, использовать пробную версию с ограниченными функциями"
 5/1/105#0,"Click Next to submit your license number to our server for verification.
 
-No personal information except the provided e-mail address and password will be sent to the server.","Click Next to submit your license number to our server for verification.
+No personal information except the provided e-mail address and password will be sent to the server.","Нажмите «Далее», чтобы отправить номер вашей лицензии на наш сервер для проверки.
 
-No personal information except the provided e-mail address and password will be sent to the server."
+На сервер не будут отправлены никакие персональные данные, кроме указанных адреса электронной почты и пароля."
 5/1/106#0,"This dialog is for verifying your license registration.
-Please register your license to use this software.","This dialog is for verifying your license registration.
-Please register your license to use this software."
-5/1/107#0,Verify now,Verify now
-5/1/108#0,Verify later (Use with limited features),Verify later (Use with limited features)
+Please register your license to use this software.","Это диалоговое окно служит для проверки регистрации вашей лицензии.
+Зарегистрируйте лицензию, чтобы использовать эту программу."
+5/1/107#0,Verify now,Проверить сейчас
+5/1/108#0,Verify later (Use with limited features),Проверить позже (использовать с ограниченными функциями)
 5/1/109#0,"Click Next to submit your license number to our server for verification.
 
-No personal information will be sent to the server.","Click Next to submit your license number to our server for verification.
+No personal information will be sent to the server.","Нажмите «Далее», чтобы отправить номер вашей лицензии на наш сервер для проверки.
 
-No personal information will be sent to the server."
+На сервер не будут отправлены никакие персональные данные."
 5/1/110#0,"This dialog is for checking your license registration. 
-Please register your license to use this software.","This dialog is for checking your license registration. 
-Please register your license to use this software."
+Please register your license to use this software.","Это диалоговое окно служит для проверки регистрации вашей лицензии. 
+Зарегистрируйте лицензию, чтобы использовать эту программу."
 5/1/111#0,"You have already registered a trial, so you cannot register a second trial. 
 If you enjoyed using this software, consider purchasing the full version. 
 
-If you get this message even if you have not previously registered a trial, please contact our support team with the below license authentication key for help.","You have already registered a trial, so you cannot register a second trial. 
-If you enjoyed using this software, consider purchasing the full version. 
+If you get this message even if you have not previously registered a trial, please contact our support team with the below license authentication key for help.","Вы уже зарегистрировали пробную версию, поэтому повторная регистрация невозможна. 
+Если вам понравилось работать с этой программой, рассмотрите возможность покупки полной версии. 
 
-If you get this message even if you have not previously registered a trial, please contact our support team with the below license authentication key for help."
+Если это сообщение появляется, хотя ранее вы не регистрировали пробную версию, обратитесь в нашу службу поддержки, указав приведённый ниже ключ аутентификации лицензии."
 5/1/112#0,"A new version has been released.
-Please update to the latest version and register your trial again.","A new version has been released.
-Please update to the latest version and register your trial again."
-5/1/113#0,Trial registration was cancelled.,Trial registration was cancelled.
+Please update to the latest version and register your trial again.","Вышла новая версия.
+Обновите программу до последней версии и зарегистрируйте пробную версию снова."
+5/1/113#0,Trial registration was cancelled.,Регистрация пробной версии отменена.
 5/1/114#0,"License verification was cancelled. 
 
 You need to verify a license in order to use all features of the software. 
-The license verification dialog will appear again the next time the software is launched.","License verification was cancelled. 
+The license verification dialog will appear again the next time the software is launched.","Проверка лицензии отменена. 
 
-You need to verify a license in order to use all features of the software. 
-The license verification dialog will appear again the next time the software is launched."
-5/1/115#0,Failed to register the trial.,Failed to register the trial.
+Для использования всех функций программы необходимо проверить лицензию. 
+Диалоговое окно проверки лицензии появится снова при следующем запуске программы."
+5/1/115#0,Failed to register the trial.,Не удалось зарегистрировать пробную версию.
 5/1/116#0,"A new version has been released.
-Please update to the latest version from the following page and register your trial again.","A new version has been released.
-Please update to the latest version from the following page and register your trial again."
+Please update to the latest version from the following page and register your trial again.","Вышла новая версия.
+Обновите программу до последней версии на следующей странице и зарегистрируйте пробную версию снова."
 5/1/117#0,"This trial serial has already been registered in another computer. 
 The license could not be verified. 
 
 If you see this message even if you are registering for the first time, 
-please contact the Celsys support team with the below license authentication key. ","This trial serial has already been registered in another computer. 
-The license could not be verified. 
+please contact the Celsys support team with the below license authentication key. ","Этот серийный номер пробной версии уже зарегистрирован на другом компьютере. 
+Не удалось проверить лицензию. 
 
-If you see this message even if you are registering for the first time, 
-please contact the Celsys support team with the below license authentication key. "
+Если это сообщение появляется, хотя вы регистрируетесь впервые, 
+обратитесь в службу поддержки Celsys, указав приведённый ниже ключ аутентификации лицензии. "
 5/1/118#0,"License verification was cancelled. 
 
-You need to verify the license in order to use this license.","License verification was cancelled. 
+You need to verify the license in order to use this license.","Проверка лицензии отменена. 
 
-You need to verify the license in order to use this license."
-5/1/119#0,License verification was cancelled.,License verification was cancelled.
+Для использования этой лицензии необходимо её проверить."
+5/1/119#0,License verification was cancelled.,Проверка лицензии отменена.
 5/1/120#0,"License verification was cancelled. 
 
-You need to verify a license in order to use the software.","License verification was cancelled. 
+You need to verify a license in order to use the software.","Проверка лицензии отменена. 
 
-You need to verify a license in order to use the software."
+Для использования программы необходимо проверить лицензию."
 5/1/121#0,"License verification was cancelled. 
 
 You need to verify a license in order to use the software. 
-The license verification dialog will appear again the next time the software is launched.","License verification was cancelled. 
+The license verification dialog will appear again the next time the software is launched.","Проверка лицензии отменена. 
 
-You need to verify a license in order to use the software. 
-The license verification dialog will appear again the next time the software is launched."
+Для использования программы необходимо проверить лицензию. 
+Диалоговое окно проверки лицензии появится снова при следующем запуске программы."
 5/1/122#0,"This trial serial has already been registered on another computer. 
 The license could not be verified.
 
 If this message appears even if you have not registered the license to another computer, 
-please contact exbeans Prototyping from inquiry form with the below license authentication key.","This trial serial has already been registered on another computer. 
-The license could not be verified.
+please contact exbeans Prototyping from inquiry form with the below license authentication key.","Этот серийный номер пробной версии уже зарегистрирован на другом компьютере. 
+Не удалось проверить лицензию.
 
-If this message appears even if you have not registered the license to another computer, 
-please contact exbeans Prototyping from inquiry form with the below license authentication key."
-5/1/123#0,Cancelling license verification. Please wait.,Cancelling license verification. Please wait.
-5/1/124#0,Verifying your license. Please wait.,Verifying your license. Please wait.
-5/1/125#0,Registering your trial. Please wait.,Registering your trial. Please wait.
+Если это сообщение появляется, хотя вы не регистрировали лицензию на другом компьютере, 
+обратитесь в exbeans Prototyping через форму запроса, указав приведённый ниже ключ аутентификации лицензии."
+5/1/123#0,Cancelling license verification. Please wait.,Отмена проверки лицензии. Подождите.
+5/1/124#0,Verifying your license. Please wait.,Выполняется проверка лицензии. Подождите.
+5/1/125#0,Registering your trial. Please wait.,Выполняется регистрация пробной версии. Подождите.
 5/1/126#0,"Your trial was registered successfully.
-You can now use all features of the software.","Your trial was registered successfully.
-You can now use all features of the software."
-5/1/127#0,Failed to login to Clip Studio. Please check your e-mail address and password.,Failed to login to Clip Studio. Please check your e-mail address and password.
-5/1/128#0,You have already registered your trial.,You have already registered your trial.
+You can now use all features of the software.","Пробная версия успешно зарегистрирована.
+Теперь вам доступны все функции программы."
+5/1/127#0,Failed to login to Clip Studio. Please check your e-mail address and password.,Не удалось войти в Clip Studio. Проверьте адрес электронной почты и пароль.
+5/1/128#0,You have already registered your trial.,Вы уже зарегистрировали пробную версию.
 5/1/129#0,"The license verification failed. 
 
 Your computer may not be connected to the Internet or there may be a problem with the license system. 
 License verification may fail if your network connection is weak. 
 
 If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
-Would you like to try this instead?","The license verification failed. 
+Would you like to try this instead?","Не удалось выполнить проверку лицензии. 
 
-Your computer may not be connected to the Internet or there may be a problem with the license system. 
-License verification may fail if your network connection is weak. 
+Возможно, ваш компьютер не подключён к Интернету или возникла проблема с системой лицензирования. 
+Проверка лицензии может завершиться неудачей при слабом сетевом подключении. 
 
-If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
-Would you like to try this instead?"
-5/1/130#0,"Yes, verify license from another device","Yes, verify license from another device"
-5/1/131#0,"No, I will verify my license later","No, I will verify my license later"
+Если вы не можете подключить это устройство к Интернету, вы можете зарегистрировать лицензию с другого устройства, подключённого к Интернету. 
+Хотите попробовать этот способ?"
+5/1/130#0,"Yes, verify license from another device","Да, проверить лицензию с другого устройства"
+5/1/131#0,"No, I will verify my license later","Нет, я проверю лицензию позже"
 5/1/132#0,"Failed to register your trial. 
 
 Your computer may not be connected to the Internet or there may be a problem with the license system. 
 License verification may fail if your network connection is weak. 
 
 If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
-Would you like to try this instead?","Failed to register your trial. 
+Would you like to try this instead?","Не удалось зарегистрировать пробную версию. 
 
-Your computer may not be connected to the Internet or there may be a problem with the license system. 
-License verification may fail if your network connection is weak. 
+Возможно, ваш компьютер не подключён к Интернету или возникла проблема с системой лицензирования. 
+Проверка лицензии может завершиться неудачей при слабом сетевом подключении. 
 
-If you cannot connect this device to the Internet, you can register your license from another device with Internet connection. 
-Would you like to try this instead?"
-5/1/133#0,"Yes, register trial from another device","Yes, register trial from another device"
-5/1/134#0,"No, use trial with limited features","No, use trial with limited features"
+Если вы не можете подключить это устройство к Интернету, вы можете зарегистрировать лицензию с другого устройства, подключённого к Интернету. 
+Хотите попробовать этот способ?"
+5/1/133#0,"Yes, register trial from another device","Да, зарегистрировать пробную версию с другого устройства"
+5/1/134#0,"No, use trial with limited features","Нет, использовать пробную версию с ограниченными функциями"
 5/1/135#0,"Trial registration failed.
 There is a problem with the network connection or the license system is busy.
 
 Please check your connection and try again.
-If you keep receiving this error, please contact us with the form below.","Trial registration failed.
-There is a problem with the network connection or the license system is busy.
+If you keep receiving this error, please contact us with the form below.","Не удалось зарегистрировать пробную версию.
+Возникла проблема с сетевым подключением или система лицензирования перегружена.
 
-Please check your connection and try again.
-If you keep receiving this error, please contact us with the form below."
-5/1/136#0,Verify your license with a web browser or smartphone.,Verify your license with a web browser or smartphone.
-5/1/137#0,1. Go to the license verification website and enter the above authentication key.,1. Go to the license verification website and enter the above authentication key.
-5/1/138#0,"2. In the space below, enter the confirmation key shown on the license verification website.","2. In the space below, enter the confirmation key shown on the license verification website."
-5/1/139#0,Register your trial with a web browser or smartphone.,Register your trial with a web browser or smartphone.
-5/1/140#0,1. Go to the trial registration website and enter the above registration key.,1. Go to the trial registration website and enter the above registration key.
-5/1/141#0,"2. In the space below, enter the confirmation key shown on the trial registration website.","2. In the space below, enter the confirmation key shown on the trial registration website."
-5/1/142#0,"If you cannot verify your license even after trying the above method, please contact Support.","If you cannot verify your license even after trying the above method, please contact Support."
-5/1/143#0,"If you cannot register the trial even after trying the above method, please contact Support.","If you cannot register the trial even after trying the above method, please contact Support."
-5/1/144#0,"If you cannot verify your license even after trying the above method, please contact Support.","If you cannot verify your license even after trying the above method, please contact Support."
-5/1/145#0,Verify license from browser,Verify license from browser
-5/1/146#0,Verify license later,Verify license later
-5/1/147#0,Register trial from browser,Register trial from browser
-5/1/148#0,Don’t register now (use trial with limited features),Don’t register now (use trial with limited features)
+Проверьте подключение и повторите попытку.
+Если эта ошибка продолжает появляться, свяжитесь с нами через форму ниже."
+5/1/136#0,Verify your license with a web browser or smartphone.,Проверьте лицензию с помощью веб-браузера или смартфона.
+5/1/137#0,1. Go to the license verification website and enter the above authentication key.,1. Перейдите на сайт проверки лицензии и введите указанный выше ключ аутентификации.
+5/1/138#0,"2. In the space below, enter the confirmation key shown on the license verification website.","2. В поле ниже введите ключ подтверждения, отображённый на сайте проверки лицензии."
+5/1/139#0,Register your trial with a web browser or smartphone.,Зарегистрируйте пробную версию с помощью веб-браузера или смартфона.
+5/1/140#0,1. Go to the trial registration website and enter the above registration key.,1. Перейдите на сайт регистрации пробной версии и введите указанный выше регистрационный ключ.
+5/1/141#0,"2. In the space below, enter the confirmation key shown on the trial registration website.","2. В поле ниже введите ключ подтверждения, отображённый на сайте регистрации пробной версии."
+5/1/142#0,"If you cannot verify your license even after trying the above method, please contact Support.","Если вам не удаётся проверить лицензию даже после применения указанного выше способа, обратитесь в службу поддержки."
+5/1/143#0,"If you cannot register the trial even after trying the above method, please contact Support.","Если вам не удаётся зарегистрировать пробную версию даже после применения указанного выше способа, обратитесь в службу поддержки."
+5/1/144#0,"If you cannot verify your license even after trying the above method, please contact Support.","Если вам не удаётся проверить лицензию даже после применения указанного выше способа, обратитесь в службу поддержки."
+5/1/145#0,Verify license from browser,Проверить лицензию из браузера
+5/1/146#0,Verify license later,Проверить лицензию позже
+5/1/147#0,Register trial from browser,Зарегистрировать пробную версию из браузера
+5/1/148#0,Don’t register now (use trial with limited features),Не регистрировать сейчас (использовать пробную версию с ограниченными функциями)
 5/1/149#0,"This dialog is for verifying your license.
 
-Please make sure you are logged in with administrator permissions before verifying your license.","This dialog is for verifying your license.
+Please make sure you are logged in with administrator permissions before verifying your license.","Это диалоговое окно служит для проверки вашей лицензии.
 
-Please make sure you are logged in with administrator permissions before verifying your license."
+Перед проверкой лицензии убедитесь, что вы вошли в систему с правами администратора."
 5/1/150#0,"This dialog is for registering your trial.
 
-Please make sure you are logged in with administrator permissions before registering your trial.","This dialog is for registering your trial.
+Please make sure you are logged in with administrator permissions before registering your trial.","Это диалоговое окно служит для регистрации вашей пробной версии.
 
-Please make sure you are logged in with administrator permissions before registering your trial."
-5/1/151#0,"Yes, try again","Yes, try again"
-5/1/152#0,"No, verify license later","No, verify license later"
-5/1/153#0,"Yes, try again","Yes, try again"
-5/1/154#0,"No, use trial with limited features","No, use trial with limited features"
-5/1/155#0,Failed to initialize connection.,Failed to initialize connection.
-5/1/156#0,Failed to send request.,Failed to send request.
-5/1/157#0,Failed to obtain response.,Failed to obtain response.
-5/1/158#0,00403: Unable to connect to server.,00403: Unable to connect to server.
-5/1/159#0,The serial number may not be correctly entered.,The serial number may not be correctly entered.
+Перед регистрацией пробной версии убедитесь, что вы вошли в систему с правами администратора."
+5/1/151#0,"Yes, try again","Да, повторить попытку"
+5/1/152#0,"No, verify license later","Нет, проверить лицензию позже"
+5/1/153#0,"Yes, try again","Да, повторить попытку"
+5/1/154#0,"No, use trial with limited features","Нет, использовать пробную версию с ограниченными функциями"
+5/1/155#0,Failed to initialize connection.,Не удалось инициализировать подключение.
+5/1/156#0,Failed to send request.,Не удалось отправить запрос.
+5/1/157#0,Failed to obtain response.,Не удалось получить ответ.
+5/1/158#0,00403: Unable to connect to server.,00403: Не удалось подключиться к серверу.
+5/1/159#0,The serial number may not be correctly entered.,"Возможно, серийный номер введён неправильно."
 5/1/160#0,"Serial number is incorrect.
-Please use single-byte alphanumeric characters.","Serial number is incorrect.
-Please use single-byte alphanumeric characters."
-5/1/161#0,Thank you for registering. You can now use the software for %d days.,Thank you for registering. You can now use the software for %d days.
-5/1/162#0,A serial number has not been entered.,A serial number has not been entered.
+Please use single-byte alphanumeric characters.","Серийный номер неверен.
+Используйте однобайтовые буквенно-цифровые символы."
+5/1/161#0,Thank you for registering. You can now use the software for %d days.,Благодарим за регистрацию. Теперь вы можете использовать программу в течение %d дн.
+5/1/162#0,A serial number has not been entered.,Серийный номер не введён.
 5/1/163#0,"You can’t use this software with the serial number you entered.
-Click here for details.","You can’t use this software with the serial number you entered.
-Click here for details."
+Click here for details.","Вы не можете использовать эту программу с введённым серийным номером.
+Нажмите здесь для получения подробностей."
 5/1/164#0,"This trial serial number has already been used. 
-You cannot use this serial number.","This trial serial number has already been used. 
-You cannot use this serial number."
-5/1/165#0,You cannot change to this serial number.,You cannot change to this serial number.
-5/1/166#0,The software may not be installed correctly.,The software may not be installed correctly.
+You cannot use this serial number.","Этот серийный номер пробной версии уже использован. 
+Вы не можете использовать этот серийный номер."
+5/1/165#0,You cannot change to this serial number.,Вы не можете перейти на этот серийный номер.
+5/1/166#0,The software may not be installed correctly.,"Возможно, программа установлена неправильно."
 5/1/167#0,"The application failed to launch because the necessary files to verify the license could not be found.
-The application may not be installed correctly.","The application failed to launch because the necessary files to verify the license could not be found.
-The application may not be installed correctly."
+The application may not be installed correctly.","Не удалось запустить приложение, так как не удалось найти файлы, необходимые для проверки лицензии.
+Возможно, приложение установлено неправильно."
 5/1/168#0,"The process failed because the necessary files to verify the license could not be found.
-The application may not be installed correctly.","The process failed because the necessary files to verify the license could not be found.
-The application may not be installed correctly."
-5/1/169#0,Please enter the e-mail address and password for your Clip Studio account.,Please enter the e-mail address and password for your Clip Studio account.
-5/1/170#0,The e-mail address or password is not entered correctly. Please check and try again.,The e-mail address or password is not entered correctly. Please check and try again.
-5/1/171#0,The process could not be carried out because the application is open in a virtual OS.,The process could not be carried out because the application is open in a virtual OS.
+The application may not be installed correctly.","Не удалось выполнить операцию, так как не удалось найти файлы, необходимые для проверки лицензии.
+Возможно, приложение установлено неправильно."
+5/1/169#0,Please enter the e-mail address and password for your Clip Studio account.,Введите адрес электронной почты и пароль вашей учётной записи Clip Studio.
+5/1/170#0,The e-mail address or password is not entered correctly. Please check and try again.,Адрес электронной почты или пароль введены неправильно. Проверьте их и повторите попытку.
+5/1/171#0,The process could not be carried out because the application is open in a virtual OS.,"Не удалось выполнить операцию, так как приложение открыто в виртуальной ОС."
 5/1/172#0,"The process failed because the necessary information could not be obtained. 
-If you are not logged in with system administrator permissions, please log in as an administrator and try again.","The process failed because the necessary information could not be obtained. 
-If you are not logged in with system administrator permissions, please log in as an administrator and try again."
-5/1/173#0,"The process failed because the necessary files could not be found, or because you do not have permission to perform this action.","The process failed because the necessary files could not be found, or because you do not have permission to perform this action."
+If you are not logged in with system administrator permissions, please log in as an administrator and try again.","Не удалось выполнить операцию, так как не удалось получить необходимые сведения. 
+Если вы не вошли в систему с правами системного администратора, войдите как администратор и повторите попытку."
+5/1/173#0,"The process failed because the necessary files could not be found, or because you do not have permission to perform this action.","Не удалось выполнить операцию, так как не удалось найти необходимые файлы или у вас нет разрешения на выполнение этого действия."
 5/1/174#0,"$$$ You cannot register trial use with early preview version (RC version).
-If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ You cannot register trial use with early preview version (RC version).
-If you register trial use with official version, serial number will appear. Please enter that serial number."
-5/1/175#0,This serial number could not be registered.,This serial number could not be registered.
+If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ Вы не можете зарегистрировать пробное использование с предварительной версией (версией RC).
+Если вы регистрируете пробное использование с официальной версией, появится серийный номер. Введите этот серийный номер."
+5/1/175#0,This serial number could not be registered.,Не удалось зарегистрировать этот серийный номер.
 5/1/176#0,"$$$ You cannot register trial use with early preview version (RC version).
-If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ You cannot register trial use with early preview version (RC version).
-If you register trial use with official version, serial number will appear. Please enter that serial number."
+If you register trial use with official version, serial number will appear. Please enter that serial number.","$$$ Вы не можете зарегистрировать пробное использование с предварительной версией (версией RC).
+Если вы регистрируете пробное использование с официальной версией, появится серийный номер. Введите этот серийный номер."
 5/1/177#0,"This license cannot be verified at the moment. 
-To continue using the software, please choose one of the following options.","This license cannot be verified at the moment. 
-To continue using the software, please choose one of the following options."
-5/1/178#0,"If the license is not verified within %d days, the software will be launched with limited features.","If the license is not verified within %d days, the software will be launched with limited features."
+To continue using the software, please choose one of the following options.","Сейчас не удаётся проверить эту лицензию. 
+Чтобы продолжить использовать программу, выберите один из следующих вариантов."
+5/1/178#0,"If the license is not verified within %d days, the software will be launched with limited features.","Если лицензия не будет проверена в течение %d дн., программа запустится с ограниченными функциями."
 5/1/179#0,"
 You can still use all features even if you get this message.
 Please confirm that the below page can be displayed with %s.","
-You can still use all features even if you get this message.
-Please confirm that the below page can be displayed with %s."
+Даже при появлении этого сообщения все функции остаются доступными.
+Убедитесь, что приведённая ниже страница может отображаться в %s."
 5/1/180#0,"If license is not verified in %d days,
-the license verification dialog will appear again. Please verify your license again at that time.","If license is not verified in %d days,
-the license verification dialog will appear again. Please verify your license again at that time."
+the license verification dialog will appear again. Please verify your license again at that time.","Если лицензия не будет проверена в течение %d дн.,
+диалоговое окно проверки лицензии появится снова. Проверьте лицензию ещё раз в этот момент."
 5/1/181#0,"If you used a different computer or mobile phone when you verified the license last time, 
 the license verification dialog will appear again after %d days. 
-Please verify the license in the same procedure.","If you used a different computer or mobile phone when you verified the license last time, 
-the license verification dialog will appear again after %d days. 
-Please verify the license in the same procedure."
-5/1/182#0,Enter the serial number and click OK.,Enter the serial number and click OK.
-5/1/183#0,"If you have a serial number, enter the serial number and click OK.","If you have a serial number, enter the serial number and click OK."
+Please verify the license in the same procedure.","Если при последней проверке лицензии вы использовали другой компьютер или мобильный телефон, 
+диалоговое окно проверки лицензии появится снова через %d дн. 
+Проверьте лицензию тем же способом."
+5/1/182#0,Enter the serial number and click OK.,Введите серийный номер и нажмите «ОК».
+5/1/183#0,"If you have a serial number, enter the serial number and click OK.","Если у вас есть серийный номер, введите его и нажмите «ОК»."
 5/1/184#0,"If you have a serial number, enter the serial number and click OK. 
-You can change from the trial version to the licensed product version.","If you have a serial number, enter the serial number and click OK. 
-You can change from the trial version to the licensed product version."
-5/1/185#0,How to obtain a serial number and register your license.,How to obtain a serial number and register your license.
+You can change from the trial version to the licensed product version.","Если у вас есть серийный номер, введите его и нажмите «ОК». 
+Вы можете перейти с пробной версии на лицензионную версию продукта."
+5/1/185#0,How to obtain a serial number and register your license.,Как получить серийный номер и зарегистрировать лицензию.
 5/1/186#0,Internet Explorer,Internet Explorer
-5/1/188#0,The software will launch with limited features.,The software will launch with limited features.
-5/1/189#0,The software does not have a verified license. Some features will be limited.,The software does not have a verified license. Some features will be limited.
-5/1/190#0,The trial period has ended.,The trial period has ended.
-5/1/191#0,The valid period for the current serial number has expired.,The valid period for the current serial number has expired.
-6/1/4#0,Restored successfully.,Restored successfully.
-6/1/5#0,Could not find a valid active plan. Please apply for a new plan.,Could not find a valid active plan. Please apply for a new plan.
+5/1/188#0,The software will launch with limited features.,Программа запустится с ограниченными функциями.
+5/1/189#0,The software does not have a verified license. Some features will be limited.,У программы нет проверенной лицензии. Некоторые функции будут ограничены.
+5/1/190#0,The trial period has ended.,Пробный период завершён.
+5/1/191#0,The valid period for the current serial number has expired.,Срок действия текущего серийного номера истёк.
+6/1/4#0,Restored successfully.,Восстановление выполнено успешно.
+6/1/5#0,Could not find a valid active plan. Please apply for a new plan.,Не удалось найти действующий активный план. Оформите новый план.
 6/1/6#0,"Successfully restored purchases.
 
-Your account has a valid active plan.","Successfully restored purchases.
+Your account has a valid active plan.","Покупки успешно восстановлены.
 
-Your account has a valid active plan."
+У вашей учётной записи есть действующий активный план."
 6/1/7#0,"Successfully restored purchases.
 
-Could not find an active plan for your account.","Successfully restored purchases.
+Could not find an active plan for your account.","Покупки успешно восстановлены.
 
-Could not find an active plan for your account."
-6/1/9#0,Restored successfully.,Restored successfully.
-6/1/10#0,Could not find an active plan for your account.,Could not find an active plan for your account.
-6/1/11#0,An active plan for your account was found.,An active plan for your account was found.
+Не удалось найти активный план для вашей учётной записи."
+6/1/9#0,Restored successfully.,Восстановление выполнено успешно.
+6/1/10#0,Could not find an active plan for your account.,Не удалось найти активный план для вашей учётной записи.
+6/1/11#0,An active plan for your account was found.,Активный план для вашей учётной записи найден.
