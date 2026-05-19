@@ -26,15 +26,27 @@ reference -- leave it. `target` is the only column a translator changes. The
 CSV is just an overlay: `apply` re-parses the original binary and substitutes
 text by `key`, so the worksheet needs no structural information of its own.
 
+Choosing what to export
+-----------------------
+Pass the matching Japanese resource file with `--reference`. `export` then emits
+a record when EITHER it is prose text OR it differs from the (finished, fully
+localized) Japanese resource. "Differs from Japanese" == "real UI text", so this
+rescues one-word labels ("Layer", "Cancel", "Edit") that the older `--kind text`
+classifier wrongly bucketed as identifiers and silently dropped -- while still
+keeping every string the classifier already recognised. Only records that are
+both identical to Japanese and non-prose (genuine identifiers: "OK", "CELSYS",
+version/format codes) are left out.
+
 Usage  (run from the repo root)
 -----
-  python src/repack.py export <resource_file> <out.csv> [--kind text [key url]]
+  python src/repack.py export <resource_file> <out.csv> --reference <jp_file>
   python src/repack.py apply  <resource_file> <translated.csv> <out_file>
   python src/repack.py stats  <resource_file>
 
 Translation workflow
 --------------------
-  1.  python src/repack.py export english/742DEA58-... strings.csv --kind text
+  1.  python src/repack.py export english/742DEA58-... strings.csv \
+          --reference japanese/742DEA58-...
   2.  Edit the "target" column of each row in strings.csv (leave "source").
   3.  python src/repack.py apply english/742DEA58-... strings.csv russian/742DEA58-...
   4.  Put the patched file in CSP's resource/english/ folder and test.
@@ -66,6 +78,21 @@ def iter_records(container: csp5.Container):
     for path, node in csp5.iter_string_nodes(container.block1):
         for i, text in enumerate(node.strings):
             yield leaf_key(path, i), classify(text), text
+
+
+def block1_shape(node: csp5.Node):
+    """Structural signature of a block-1 subtree, ignoring entry IDs and text.
+
+    A resource file for one GUID has the same shape in every language -- the
+    nesting and per-leaf record counts are language-independent, even though a
+    few entry-ID labels differ. Equal shape guarantees the string-record
+    streams of two files align position-for-position.
+    """
+    if isinstance(node, csp5.DirectoryNode):
+        return ("D", tuple(block1_shape(c) for _, c in node.children))
+    if isinstance(node, csp5.StringStreamNode):
+        return ("S", len(node.strings))
+    return ("B",)
 
 
 # ----------------------------------------------------------------------
@@ -144,18 +171,52 @@ def _collect_blobs(node: csp5.Node, out: list[bytes]) -> None:
 def cmd_export(args: argparse.Namespace) -> int:
     data = Path(args.file).read_bytes()
     container = csp5.parse(data)
+    en_records = list(iter_records(container))
 
-    wanted = set(args.kind) if args.kind else None
     records = []
-    for key, kind, text in iter_records(container):
-        if wanted is not None and kind not in wanted:
-            continue
-        records.append({
-            "key": key,
-            "kind": kind,
-            "source": text,
-            "target": text,        # translator edits this column
-        })
+    if args.reference:
+        # Translatable set = the UNION of two signals, so it is always a
+        # SUPERSET of the old classify()-based worksheet -- no translation is
+        # ever lost:
+        #   * classify()=="text" -- multi-word prose, CJK, long strings (this
+        #     also keeps stray Japanese that CSP's English file ships, which
+        #     equals the Japanese resource yet still needs translating);
+        #   * en != ja -- the Japanese oracle: any record the finished
+        #     Japanese resource renders differently is real UI text. This
+        #     rescues one-word ASCII labels ("Layer", "Cancel", "Edit") that
+        #     classify() wrongly buckets as non-translatable identifiers.
+        # A record is dropped only when it is BOTH a non-text identifier AND
+        # identical in English and Japanese -- a genuine identifier ("OK",
+        # "CELSYS", version/format codes).
+        ref = csp5.parse(Path(args.reference).read_bytes())
+        jp_records = list(iter_records(ref))
+        # Equal tree shape guarantees the two record streams align
+        # position-for-position. Entry-ID labels may differ between languages,
+        # so we align by position and key each row by its ENGLISH id-path
+        # (`apply` later runs against the English file).
+        if block1_shape(container.block1) != block1_shape(ref.block1):
+            print("ERROR: source and reference have different block-1 tree "
+                  "shapes -- not the same resource file across languages.")
+            return 1
+        for (ekey, ekind, etext), (_jk, _jkind, jtext) in zip(en_records, jp_records):
+            if ekind == "text" or etext != jtext:
+                records.append({
+                    "key": ekey,
+                    "kind": ekind,
+                    "source": etext,
+                    "target": etext,   # translator edits this column
+                })
+    else:
+        wanted = set(args.kind) if args.kind else None
+        for key, kind, text in en_records:
+            if wanted is not None and kind not in wanted:
+                continue
+            records.append({
+                "key": key,
+                "kind": kind,
+                "source": text,
+                "target": text,        # translator edits this column
+            })
 
     out = Path(args.out)
     _write_csv(out, records)
@@ -287,8 +348,13 @@ def main(argv: list[str]) -> int:
     p_exp = sub.add_parser("export", help="dump strings to a CSV worksheet")
     p_exp.add_argument("file", help="CSP5 resource file to read")
     p_exp.add_argument("out", help="output .csv path")
+    p_exp.add_argument("--reference", metavar="JP_FILE",
+                       help="Japanese resource file to use as a translatable "
+                            "oracle: export only records whose text differs "
+                            "from it (recommended -- supersedes --kind)")
     p_exp.add_argument("--kind", nargs="+", choices=["text", "key", "url"],
-                       help="only export these kinds (recommend: --kind text)")
+                       help="only export these kinds (ignored when --reference "
+                            "is given; the heuristic misses one-word UI labels)")
     p_exp.set_defaults(func=cmd_export)
 
     p_app = sub.add_parser("apply", help="apply a translated CSV, write a patched file")

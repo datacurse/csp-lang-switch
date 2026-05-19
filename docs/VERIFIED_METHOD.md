@@ -102,11 +102,20 @@ For translating the whole UI (~32 files) drive it through the orchestrator
 ### 1. Export a translation worksheet
 
 ```
-python src/repack.py export <resource_file> strings.csv --kind text
+python src/repack.py export <resource_file> strings.csv --reference <japanese_file>
 ```
 
 Produces a CSV with columns `key, source, target`. `key` addresses the string
 inside the file (an entry-ID tree path, e.g. `1/1/3#0`) — **never edit it**.
+
+**Use `--reference`, not `--kind`.** `--reference` points at the matching file
+in `resource/japanese/`; a record is exported when it is prose text **or**
+differs from that finished Japanese resource. The old `--kind text` filter
+relied on the `classify()` heuristic, which labels every space-free ASCII string
+≤40 chars a non-translatable "identifier" — so it silently dropped ~3,900 real
+one-word UI labels (`Layer`, `Cancel`, `Edit`, `File`, and the whole menu bar).
+The Japanese resource is fully localized, so "differs from Japanese" is the
+ground truth for "translatable UI text".
 
 ### 2. Translate
 
@@ -156,8 +165,15 @@ folder.
 ## Verified facts & figures (`742DEA58-…`, the main UI file)
 
 * 3,467,072 bytes; block 1 = tree of 1,293 directories, max depth 3.
-* 12,910 structured string records: **9,368 `text`** (7,212 unique), 3,433
+* 12,910 structured string records: 9,368 `text` (7,212 unique), 3,433
   `key`, 109 `url`.
+* ⚠️ The `key`/`url` buckets are **not** safe to skip: the `classify()`
+  heuristic is wrong about them. Diffing English against the Japanese resource
+  shows **2,449 of the 3,433 `key` records and 26 of the 109 `url` records are
+  real UI text** Cygames localized. Across all 32 target files that is ~3,900
+  wrongly-excluded strings. Decide the translatable set with the Japanese
+  oracle (`export --reference`), never with `classify()` alone — the genuine
+  translatable count of `742DEA58` is **11,843**, not 9,368.
 * 495 blob leaves (2.67 MB) — PNG assets + opaque sub-containers, not translated.
 * 55 distinct GUID files exist: **39 shared** across all 12 language folders +
   16 present only in `other`. Only the 39 carry translatable UI text.
@@ -213,10 +229,9 @@ All Python lives in [`src/`](../src/); run it from the repo root
 
 ## What is NOT done yet / open
 
-* Only `742DEA58-…` has been patched and load-tested. A full UI translation
-  means repeating the procedure for the **~32 content-bearing shared files**
-  (39 total minus 6 non-targets — see [`FILE_INVENTORY.md`](FILE_INVENTORY.md)).
-* No Russian translation content exists yet — only the method is proven.
+* All **32 content-bearing shared files** are translated to Russian and packed
+  into `russian/` (all 32 round-trip byte-for-byte). Re-confirm a full live
+  load-test in CSP after any re-pack.
 * CSP updates can change string IDs or add strings; re-export and re-apply
   against each new build. The **tooling** is the durable asset, not any one
   patched file.

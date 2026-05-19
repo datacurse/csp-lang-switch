@@ -1,22 +1,36 @@
 ﻿key,source,target
+1/1/33#0,F,F
+1/1/35#0,E,E
 1/1/36#0,Switch syncing,Переключить синхронизацию
 1/1/37#0,Sync now,Синхронизировать сейчас
+1/1/38#0,Favorites,Избранное
 1/1/39#0,Show menu,Показать меню
+1/1/3#0,Title,Название
+1/1/5#0,Type,Тип
+1/1/7#0,Cloud,Облако
+1/1/9#0,Favorites,Избранное
 1/1/11#0,Output data,Данные вывода
 1/1/13#0,Date added,Дата добавления
 1/1/15#0,Date modified,Дата изменения
 1/1/17#0,Date synced,Дата синхронизации
+1/1/21#0,Teamwork,Командная работа
 1/1/19#0,Work time,Время работы
+1/1/40#0,Fanzine,Фанзин
 1/1/42#0,Corner store,Магазин у дома
+1/1/43#0,Type,Тип
 1/1/44#0,User tag,Пользовательский тег
 1/1/45#0,Default tag,Тег по умолчанию
+1/1/46#0,Label,Метка
+1/1/47#0,Fanzine,Фанзин
 1/1/50#0,Corner store,Магазин у дома
 1/1/51#0,Date modified,Дата изменения
+1/1/52#0,Type,Тип
 1/1/53#0,Type search keywords,Введите ключевые слова для поиска
 1/1/54#0,Show all files with this label,Показать все файлы с этой меткой
 1/1/55#0,Works added to your Favorites will appear here.,"Произведения, добавленные в избранное, появятся здесь."
 1/1/56#0,You can add to or remove from your Favorites by clicking the “%s” button.,"Вы можете добавлять в избранное или удалять из него, нажимая кнопку “%s”."
 1/1/57#0,You can create multiple-page files and select files to export.,Вы можете создавать многостраничные файлы и выбирать файлы для экспорта.
+1/1/58#0,New,Новый
 1/1/59#0,Delete %s,Удалить %s
 1/1/60#0,Please be aware of the following points before deleting.,Перед удалением учтите следующее.
 1/1/61#0,"・ Work files within this label will be removed and the files will be moved to the Recycle Bin/Trash on your computer. 
@@ -41,6 +55,9 @@ If the files are saved to external storage, the files will be deleted without be
 1/1/76#0,Show files in Favorites,Показать файлы в избранном
 1/1/77#0,Search tags,Искать теги
 1/1/78#0,Save location label for file,Метка места сохранения файла
+1/1/79#0,Large,Большой
+1/1/80#0,Small,Маленький
+1/1/81#0,Details,Подробнее
 1/1/82#0,"The selected %d items will be moved to the Recycle Bin/Trash of your computer.
 If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
 This operation cannot be undone.","Выбранные элементы (%d) будут перемещены в корзину вашего компьютера.
@@ -60,6 +77,8 @@ This operation cannot be undone.","Выбранные элементы (%d) бу
 1/1/86#0,"Delete selected %d files from this device.
 This operation cannot be undone. ","Удалить выбранные файлы (%d) с этого устройства.
 Эту операцию нельзя отменить. "
+1/1/87#0,Delete,Удалить
+1/1/88#0,Cancel,Отмена
 1/1/89#0,Delete file,Удалить файл
 1/1/90#0,"Do you want to delete these works from your Favorites?
 ","Удалить эти произведения из избранного?
@@ -87,6 +106,8 @@ Please wait for a while and try it again.","База данных произве
 1/1/109#0,Clip Studio Modeler shape,Фигура Clip Studio Modeler
 1/1/110#0,Clip Studio Modeler background,Фон Clip Studio Modeler
 1/1/111#0,Clip Studio Modeler object,Объект Clip Studio Modeler
+1/1/112#0,File,Файл
+1/1/113#0,All,Все
 1/1/114#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/115#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/116#0,Clip Studio Paint project,Проект Clip Studio Paint
@@ -103,17 +124,29 @@ Please wait for a while and try it again.","База данных произве
 1/1/129#0,Clip Studio Modeler shape,Фигура Clip Studio Modeler
 1/1/130#0,Clip Studio Modeler background,Фон Clip Studio Modeler
 1/1/131#0,Clip Studio Modeler object,Объект Clip Studio Modeler
+1/1/132#0,Favorites,Избранное
+1/1/133#0,Teamwork,Командная работа
+1/1/134#0,Updated,Обновлено
 2/1/1#0,すべての作品,Все произведения
 2/1/2#0,すべて,Все
 2/1/3#0,作品,Произведение
 2/1/4#0,お気に入り,Избранное
 2/1/5#0,チーム制作,Командная работа
 3/1/1#0,All works,Все произведения
+4/1/31#0,Material,Материал
+4/1/32#0,Layer,Слой
+4/1/33#0,File,Файл
 4/1/34#0,Tool setting,Настройка инструмента
+4/1/35#0,Other,Другое
 4/1/36#0,Not specified,Не указано
 4/1/37#0,Page template,Шаблон страницы
+4/1/38#0,Frame,Кадр
+4/1/39#0,Balloon,Облачко
+4/1/40#0,Sign,Знак
 4/1/41#0,Sound effect,Звуковой эффект
 4/1/42#0,Effect line,Линия эффекта
+4/1/43#0,Background,Фон
+4/1/44#0,Foreground,Передний план
 4/1/46#0,3D pose,3D-поза
 4/1/47#0,3D drawing figure,3D-фигура рисования
 4/1/48#0,3D primitive,3D-примитив
@@ -153,11 +186,16 @@ sound effects.","Вставка на переднем плане рамки хо
 4/1/64#0,Fit to text,Подогнать по тексту
 4/1/65#0,Convert to raster layer,Преобразовать в растровый слой
 4/1/66#0,Do not scale,Не масштабировать
+4/1/67#0,Other,Другое
+4/1/68#0,Type,Тип
 4/1/69#0,(not recommended),(не рекомендуется)
+4/1/70#0,Content,Содержимое
 4/1/71#0,User tag,Пользовательский тег
 4/1/72#0,Default tag,Тег по умолчанию
 4/1/73#0,Material Folder,Папка материалов
+4/1/74#0,Toning,Тонирование
 4/1/75#0,Do not clip,Не обрезать
+4/1/76#0,Type,Тип
 4/1/77#0,Type search keywords,Введите ключевые слова для поиска
 4/1/78#0,Show all the materials in the folder.,Показать все материалы в папке.
 4/1/79#0,Search for materials on ASSETS,Искать материалы в ASSETS
@@ -165,11 +203,20 @@ sound effects.","Вставка на переднем плане рамки хо
 4/1/81#0,Materials added to your Favorites will appear here.,"Материалы, добавленные в избранное, появятся здесь."
 4/1/82#0,You can add to or remove from your Favorites by clicking the “%s” button.,"Вы можете добавлять в избранное или удалять из него, нажимая кнопку “%s”."
 4/1/83#0,Recently used materials will appear here,Недавно использованные материалы появятся здесь
+4/1/3#0,Title,Название
+4/1/5#0,Type,Тип
+4/1/7#0,Cloud,Облако
+4/1/9#0,Favorites,Избранное
 4/1/13#0,Date added,Дата добавления
 4/1/15#0,Date modified,Дата изменения
 4/1/17#0,Date synced,Дата синхронизации
+4/1/27#0,Information,Сведения
+4/1/11#0,Status,Состояние
+4/1/19#0,Frequency,Частота
 4/1/84#0,Editing material information,Редактирование сведений о материале
 4/1/85#0,Uploaded to Assets,Загружено в Assets
+4/1/86#0,Install,Установить
+4/1/87#0,User,Пользователь
 4/1/88#0,New folder,Новая папка
 4/1/89#0,Delete %s,Удалить %s
 4/1/90#0,Please be aware of the following points before deleting.,Перед удалением учтите следующее.
@@ -235,6 +282,9 @@ They may be open in another application.","Не удалось удалить н
 4/1/134#0,"Material database is being used right now, so this command cannot be executed. 
 Please wait for a while and try it again.","База данных материалов сейчас используется, поэтому эту команду нельзя выполнить. 
 Подождите немного и повторите попытку."
+4/1/135#0,Large,Большой
+4/1/136#0,Small,Маленький
+4/1/137#0,Details,Подробнее
 4/1/138#0,Framing template,Шаблон кадрирования
 4/1/139#0,Layer template,Шаблон слоя
 4/1/140#0,3D image,3D-изображение
@@ -245,35 +295,54 @@ Please wait for a while and try it again.","База данных материа
 4/1/145#0,3D shape,3D-фигура
 4/1/146#0,3D background,3D-фон
 4/1/147#0,Old format 3D background,3D-фон старого формата
+4/1/148#0,Pose,Поза
 4/1/149#0,Body shape,Форма тела
 4/1/150#0,3D head,3D-голова
 4/1/151#0,3D hand model,3D-модель руки
 4/1/152#0,3D primitive,3D-примитив
+4/1/153#0,Panorama,Панорама
 4/1/154#0,Paper texture,Текстура бумаги
 4/1/155#0,Brush tip shape,Форма кончика кисти
+4/1/156#0,Balloon,Облачко
 4/1/157#0,Image material,Материал изображения
+4/1/158#0,Layer,Слой
+4/1/159#0,Animation,Анимация
+4/1/160#0,Brush,Кисть
+4/1/161#0,Gradient,Градиент
 4/1/162#0,Tool settings (others),Настройки инструмента (прочее)
 4/1/163#0,Color Set,Набор цветов
 4/1/164#0,Character Motion,Движение персонажа
 4/1/165#0,Camera movement,Движение камеры
 4/1/166#0,Auto Action,Автооперация
 4/1/167#0,Gradient set,Набор градиентов
+4/1/168#0,Workspace,Рабочая среда
 4/1/169#0,Face parts,Части лица
 4/1/170#0,Body parts,Части тела
 4/1/171#0,Hair parts,Части волос
 4/1/172#0,Material catalog,Каталог материалов
+4/1/173#0,All,Все
+4/1/174#0,Other,Другое
 4/1/175#0,Framing template,Шаблон кадрирования
 4/1/176#0,Layer template,Шаблон слоя
+4/1/177#0,Frame,Кадр
 4/1/178#0,3D image,3D-изображение
 4/1/179#0,3D character,3D-персонаж
 4/1/180#0,3D Object,3D-объект
 4/1/181#0,3D shape,3D-фигура
 4/1/182#0,3D background,3D-фон
+4/1/183#0,Pose,Поза
 4/1/184#0,Body shape,Форма тела
 4/1/185#0,3D head,3D-голова
 4/1/186#0,3D hand model,3D-модель руки
 4/1/187#0,3D primitive,3D-примитив
+4/1/188#0,Panorama,Панорама
+4/1/189#0,Balloon,Облачко
+4/1/190#0,Vector,Векторный
+4/1/191#0,Tone,Тон
+4/1/192#0,Gradient,Градиент
+4/1/193#0,Fill,Заливка
 4/1/194#0,Image material,Материал изображения
+4/1/195#0,Ruler,Линейка
 4/1/196#0,Special ruler,Специальная линейка
 4/1/197#0,Perspective ruler,Линейка перспективы
 4/1/198#0,Selection Layer,Слой выделения
@@ -284,9 +353,11 @@ Please wait for a while and try it again.","База данных материа
 4/1/203#0,2D foreground (Feeling),2D-передний план (Настроение)
 4/1/204#0,Sound effect,Звуковой эффект
 4/1/205#0,Sound effect (Font),Звуковой эффект (Шрифт)
+4/1/206#0,Sign,Знак
 4/1/207#0,Effect line,Линия эффекта
 4/1/208#0,Paper texture,Текстура бумаги
 4/1/209#0,Brush shape,Форма кисти
+4/1/210#0,Animation,Анимация
 4/1/211#0,Brush tool,Инструмент кисти
 4/1/212#0,Gradient tool,Инструмент градиента
 4/1/213#0,Other tool,Другой инструмент
@@ -298,6 +369,8 @@ Please wait for a while and try it again.","База данных материа
 4/1/219#0,Face parts,Части лица
 4/1/220#0,Body parts,Части тела
 4/1/221#0,Hair parts,Части волос
+4/1/222#0,Workspace,Рабочая среда
+4/1/223#0,Favorites,Избранное
 4/1/224#0,Bonus Materials,Бонусные материалы
 4/1/225#0,Extracting materials...,Извлечение материалов...
 5/1/1#0,すべて,Все
@@ -866,6 +939,7 @@ Please wait for a while and try it again.","База данных материа
 7/1/140#0,素材,Материал
 7/1/141#0,資源回收筒,Корзина
 8/1/2#0,New folder,Новая папка
+8/1/3#0,Delete,Удалить
 8/1/4#0,Change name,Изменить имя
 9/1/1#0,Moving folder...,Перемещение папки...
 9/1/2#0,Changing folder name...,Изменение имени папки...

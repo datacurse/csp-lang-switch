@@ -61,6 +61,9 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "translation" / "manifest.csv"
 FILES_DIR = ROOT / "translation" / "files"
 RESOURCE_DIR = ROOT / "resource" / "english"
+# The finished Japanese resources are the oracle for what is translatable UI
+# text: export emits a record only where English and Japanese differ.
+REFERENCE_DIR = ROOT / "resource" / "japanese"
 RUSSIAN_DIR = ROOT / "russian"
 
 # Word tokenizer for the frequency aid: alpha runs only, lowercased. Digits are
@@ -110,6 +113,10 @@ def resource_for(rec: dict) -> Path:
     return RESOURCE_DIR / rec["guid"]
 
 
+def reference_for(rec: dict) -> Path:
+    return REFERENCE_DIR / rec["guid"]
+
+
 def output_for(rec: dict) -> Path:
     return RUSSIAN_DIR / rec["guid"]
 
@@ -151,9 +158,14 @@ def _export_one(rec: dict, force: bool) -> bool:
         print(f"SKIP   {rec['short']}-{rec['slug']}  "
               f"(resource file not found: {src})")
         return False
+    ref = reference_for(rec)
+    if not ref.exists():
+        print(f"SKIP   {rec['short']}-{rec['slug']}  "
+              f"(Japanese reference not found: {ref})")
+        return False
     ws.parent.mkdir(parents=True, exist_ok=True)
     print(f"export {rec['short']}-{rec['slug']}")
-    rc = repack.main(["export", str(src), str(ws), "--kind", "text"])
+    rc = repack.main(["export", str(src), str(ws), "--reference", str(ref)])
     return rc == 0
 
 

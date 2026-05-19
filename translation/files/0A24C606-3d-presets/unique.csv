@@ -6,13 +6,27 @@ Layout preset,Набор настроек компоновки
 Pose preset,Набор настроек позы
 Situation preset,Набор настроек ситуации
 Feature point,Характерная точка
+Base,Основа
 Hair style,Причёска
 Facial expression,Выражение лица
+Body,Тело
+Accessories,Аксессуары
+Background,Фон
+Hair,Волосы
+Face,Лицо
+Motion,Движение
+Pose,Поза
+Shape,Фигура
 Background parts,Части фона
 Material preset,Набор настроек материала
 Moveable preset,Набор настроек подвижности
+Material,Материал
+Angle,Угол
+Layout,Макет
 Movable parts,Подвижные части
+Scene,Сцена
 Small object,Небольшой объект
+Rotate,Повернуть
 Character Motion,Движение персонажа
 Unique point,Уникальная точка
 "
@@ -849,11 +863,29 @@ void main (void)
 }
 
 "
+Mouth,Рот
 Left eye,Левый глаз
 Right eye,Правый глаз
 Left ear,Левое ухо
 Right ear,Правое ухо
+Nose,Нос
 Seating point,Точка посадки
+Untitled,Без названия
+Default,По умолчанию
+Smile,Улыбка
+Angry,Злость
+Sad,Грустный
+A,А
+I,И
+U,U
+E,E
+O,O
 Upper face,Верхняя часть лица
 Lower face,Нижняя часть лица
+Open,Открыть
+Close,Закрыть
+Up,Вверх
+Down,Вниз
+Left,Слева
+Right,Вправо
 Face parts,Части лица

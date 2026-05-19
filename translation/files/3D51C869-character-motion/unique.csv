@@ -1,6 +1,16 @@
 ﻿source,target
+Body,Тело
+Face,Лицо
+Hair,Волосы
+Accessories,Аксессуары
+Pose,Поза
 Character Motion,Движение персонажа
 Unique point,Уникальная точка
 Facial expression,Выражение лица
 Facial expression parts,Элементы выражения лица
+Material,Материал
+Allocate,Разместить
 Movable parts,Подвижные элементы
+Angle,Угол
+Layout,Макет
+Scene,Сцена

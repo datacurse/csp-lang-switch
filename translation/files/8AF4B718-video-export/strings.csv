@@ -1,17 +1,28 @@
 ﻿key,source,target
 1/1/40#0,Finalizing. Please wait for a while.,Завершение. Подождите немного.
+1/1/5#0,Cancel,Отмена
 1/1/41#0,Compress video,Сжать видео
 1/1/42#0,Compression program,Программа сжатия
+1/1/43#0,Uncompressed,Без сжатия
 1/1/44#0,Compression quality,Качество сжатия
+1/1/45#0,Keyframe,Ключевой кадр
 1/1/46#0,For each frame,Для каждого кадра
 1/1/47#0,Data speed,Скорость данных
+1/1/48#0,KB/sec,КБ/сек
+1/1/49#0,Configuration,Конфигурация
 1/1/50#0,Version information,Сведения о версии
 1/1/51#0,%.3fkHz %s,%.3fкГц %s
+1/1/52#0,Stereo,Стерео
+1/1/53#0,Mono,Моно
 1/1/54#0,Movie export settings,Настройки экспорта видео
 1/1/55#0,Save to,Сохранить в
+1/1/56#0,Browse,Обзор
 1/1/57#0,Not set.,Не задано.
 1/1/58#0,Video settings,Настройки видео
+1/1/59#0,Settings,Настройки
 1/1/13#0,Audio settings,Настройки звука
+1/1/15#0,Settings,Настройки
+1/1/28#0,Options,Параметры
 1/1/35#0,Enable transparency,Включить прозрачность
 1/1/60#0,Show shadow,Показать тень
 1/1/31#0,Frame rate,Частота кадров
@@ -27,6 +38,7 @@
 1/1/68#0,AVI1.0 export settings,Настройки экспорта AVI1.0
 1/1/69#0,AVI2.0 export settings,Настройки экспорта AVI2.0
 1/1/70#0,Quality settings,Настройки качества
+1/1/71#0,Attributes,Атрибуты
 1/1/72#0,PCM ,PCM 
 1/1/73#0,"You can export videos smaller than 2GB.
 
@@ -70,6 +82,8 @@ Do you want to proceed?","Это видео может быть экспорти
 Do you want to proceed?","Это видео может воспроизводиться некорректно, так как ширина или высота экспорта превышает 2048.
 Хотите продолжить?"
 1/1/17#0,Scaling settings,Настройки масштабирования
+1/1/18#0,Width,Ширина
+1/1/21#0,Height,Высота
 1/1/82#0,Fix scaling,Зафиксировать масштабирование
 1/1/25#0,Apply 2D camera effects,Применить эффекты 2D-камеры
 1/1/88#0, 96 kbps (low sound quality), 96 кбит/с (низкое качество звука)

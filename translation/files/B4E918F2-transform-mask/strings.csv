@@ -1,7 +1,12 @@
 ﻿key,source,target
+1/1/1#0,Transform,Трансформировать
+1/1/2#0,cel,ячейка
+1/1/3#0,Position,Положение
 1/1/4#0,Scale ratio,Коэффициент масштаба
 1/1/5#0,Scale ratio,Коэффициент масштаба
+1/1/6#0,Rotate,Повернуть
 1/1/7#0,Center of rotation,Центр вращения
+1/1/8#0,Mask,Маска
 1/1/9#0,Mask position,Положение маски
 1/1/10#0,Mask scale,Масштаб маски
 1/1/11#0,Mask angle,Угол маски
@@ -12,18 +17,39 @@
 1/1/16#0,Bottom right,Справа внизу
 2/1/1#0,Camera position,Положение камеры
 2/1/2#0,Focal point,Фокальная точка
+2/1/3#0,Perspective,Перспектива
+2/1/4#0,Roll,Поворот
+3/1/1#0,Folder,Папка
+3/1/2#0,Position,Положение
+3/1/3#0,Rotate,Повернуть
+3/1/4#0,View,Вид
 4/1/1#0,Ambient light,Окружающий свет
 4/1/2#0,Enable ambient light,Включить окружающий свет
 4/1/3#0,Color components of ambient light,Цветовые компоненты окружающего света
 4/1/4#0,Ambient light intensity,Интенсивность окружающего света
 4/1/5#0,Directional light,Направленный источник света
+4/1/6#0,Direction,Направление
 4/1/7#0,Color components of diffused light,Цветовые компоненты рассеянного света
 4/1/8#0,Diffused light intensity,Интенсивность рассеянного света
+4/1/9#0,Enable,Включить
 4/1/10#0,Color components of highlight,Цветовые компоненты блика
 4/1/11#0,Highlight intensity,Интенсивность блика
+4/1/12#0,Status,Состояние
+5/1/1#0,Transform,Трансформировать
+5/1/2#0,Position,Положение
+5/1/3#0,Rotate,Повернуть
+5/1/4#0,Status,Состояние
+5/1/5#0,Material,Материал
+5/1/6#0,Layout,Макет
+5/1/7#0,Parts,Части
 5/1/8#0,Movable parts,Подвижные части
 5/1/9#0, :Value, :Значение
 5/1/10#0, :Select, :Выбрать
+6/1/1#0,Audio,Аудио
+6/1/2#0,Volume,Громкость
+7/1/1#0,Pose,Поза
+7/1/2#0,Head,Голова
+7/1/3#0,Eyeline,Линия взгляда
 7/1/4#0,Direction of neck,Направление шеи
 7/1/5#0,Left arm,Левая рука
 7/1/6#0,Position of left hand,Положение левой кисти
@@ -35,8 +61,10 @@
 7/1/12#0,Direction of right hand,Направление правой кисти
 7/1/13#0,Direction of right elbow,Направление правого локтя
 7/1/14#0,Right fingers,Пальцы правой руки
+7/1/15#0,Chest,Грудь
 7/1/16#0,Position of chest,Положение груди
 7/1/17#0,Direction of chest,Направление груди
+7/1/18#0,Stomach,Живот
 7/1/19#0,Position of stomach,Положение живота
 7/1/20#0,Direction of stomach,Направление живота
 7/1/21#0,Left leg,Левая нога
@@ -48,7 +76,17 @@
 7/1/27#0,Direction of right foot,Направление правой стопы
 7/1/28#0,Direction of right knee,Направление правого колена
 7/1/29#0,Other bones,Другие кости
+7/1/30#0,Status,Состояние
+7/1/31#0,Allocate,Разместить
 7/1/32#0,Whole position,Положение целиком
 7/1/33#0,Whole rotation,Вращение целиком
+7/1/34#0,Face,Лицо
 7/1/35#0,Facial expression,Выражение лица
+7/1/36#0,Eyes,Глаза
+7/1/37#0,Mouth,Рот
+7/1/38#0,Shape,Фигура
+8/1/1#0,View,Вид
+8/1/2#0,Opacity,Непрозрачность
 8/1/3#0,Track label,Метка дорожки
+9/1/1#0,Audio,Аудио
+9/1/2#0,Volume,Громкость

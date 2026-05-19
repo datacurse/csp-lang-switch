@@ -1,6 +1,9 @@
 ﻿source,target
+Camera,Камера
 Ambient light,Рассеянный свет
 Directional light %d,Направленный источник света %d
+Group,Сгруппировать
+Panorama,Панорама
 3D character,3D-персонаж
 3D Object,3D-объект
 3D background,3D-фон

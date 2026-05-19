@@ -1,6 +1,7 @@
 ﻿key,source,target
 1/1/1#0,Log into Clip Studio,Вход в Clip Studio
 1/1/2#0,Email address,Адрес эл. почты
+1/1/3#0,Password,Пароль
 1/1/4#0,Log in,Войти
 1/1/5#0,Forgot your password?,Забыли пароль?
 1/1/6#0,Log in with a different account,Войти с другой учётной записью
@@ -8,4 +9,5 @@
 1/1/8#0,Continue with Google,Продолжить с Google
 1/1/9#0,Create account,Создать учётную запись
 1/1/10#0,Create account,Создать учётную запись
+1/1/11#0,OR,ИЛИ
 1/1/12#0,New to Clip Studio?,Впервые в Clip Studio?

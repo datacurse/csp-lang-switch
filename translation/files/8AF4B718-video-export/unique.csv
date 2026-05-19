@@ -1,17 +1,27 @@
 ﻿source,target
 Finalizing. Please wait for a while.,Завершение. Подождите немного.
+Cancel,Отмена
 Compress video,Сжать видео
 Compression program,Программа сжатия
+Uncompressed,Без сжатия
 Compression quality,Качество сжатия
+Keyframe,Ключевой кадр
 For each frame,Для каждого кадра
 Data speed,Скорость данных
+KB/sec,КБ/сек
+Configuration,Конфигурация
 Version information,Сведения о версии
 %.3fkHz %s,%.3fкГц %s
+Stereo,Стерео
+Mono,Моно
 Movie export settings,Настройки экспорта видео
 Save to,Сохранить в
+Browse,Обзор
 Not set.,Не задано.
 Video settings,Настройки видео
+Settings,Настройки
 Audio settings,Настройки звука
+Options,Параметры
 Enable transparency,Включить прозрачность
 Show shadow,Показать тень
 Frame rate,Частота кадров
@@ -27,6 +37,7 @@ Export as AVI2.0,Экспортировать как AVI2.0
 AVI1.0 export settings,Настройки экспорта AVI1.0
 AVI2.0 export settings,Настройки экспорта AVI2.0
 Quality settings,Настройки качества
+Attributes,Атрибуты
 PCM ,PCM 
 "You can export videos smaller than 2GB.
 
@@ -70,6 +81,8 @@ Do you want to proceed?","Это видео может быть экспорти
 Do you want to proceed?","Это видео может воспроизводиться некорректно, так как ширина или высота экспорта превышает 2048.
 Хотите продолжить?"
 Scaling settings,Настройки масштабирования
+Width,Ширина
+Height,Высота
 Fix scaling,Зафиксировать масштабирование
 Apply 2D camera effects,Применить эффекты 2D-камеры
  96 kbps (low sound quality), 96 кбит/с (низкое качество звука)

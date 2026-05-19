@@ -4,9 +4,17 @@
 1/1/5#0,Graphics performance check,Проверка производительности графики
 1/1/6#0,About graphics performance check,О проверке производительности графики
 1/1/7#0,Version information,Сведения о версии
+1/1/8#0,Preferences,Настройки
 1/1/9#0,Close graphics performance check,Закрыть проверку производительности графики
+1/1/10#0,File,Файл
+1/1/11#0,New,Новый
+1/1/12#0,Open,Открыть
+1/1/13#0,Close,Закрыть
+1/1/14#0,Save,Сохранить
 1/1/15#0,Save as,Сохранить как
+1/1/16#0,Print,Печать
 1/1/17#0,Page settings,Настройки страницы
+1/1/18#0,Help,Справка
 1/1/19#0,CLIP website,Веб-сайт CLIP
 1/1/20#0,Graphics performance check,Проверка производительности графики
 1/1/21#0,Graphics performance check,Проверка производительности графики
@@ -25,8 +33,18 @@ will work correctly. Proceed to graphics performance check?","Проверьте
  Do you want to run another graphics performance check?","Предыдущая проверка производительности графики завершилась непредвиденно. 
  Хотите запустить ещё одну проверку производительности графики?"
 1/1/32#0,You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
+1/1/34#0,http://www.clipstudio.net/en/site/opengl/nvidia.html,http://www.clipstudio.net/en/site/opengl/nvidia.html
+1/1/35#0,http://www.clipstudio.net/en/site/opengl/amd.html,http://www.clipstudio.net/en/site/opengl/amd.html
+1/1/36#0,http://www.clipstudio.net/en/site/opengl/intel.html,http://www.clipstudio.net/en/site/opengl/intel.html
+1/1/37#0,http://www.clipstudio.net/en/site/opengl/etc.html,http://www.clipstudio.net/en/site/opengl/etc.html
+1/1/38#0,http://www.clipstudio.net/en/site/opengl/mac.html,http://www.clipstudio.net/en/site/opengl/mac.html
+1/1/39#0,http://www.clipstudio.net/en/site/opengl/unsupported.html,http://www.clipstudio.net/en/site/opengl/unsupported.html
+1/1/40#0,http://www.clipstudio.net/en/site/opengl/list.html,http://www.clipstudio.net/en/site/opengl/list.html
+1/1/41#0,http://www.clipstudio.net/en/support/,http://www.clipstudio.net/en/support/
 2/1/1#0,Refer to proper status of display,Ознакомьтесь с правильным состоянием отображения
 2/1/2#0,Is this displayed properly like this?,"Отображается ли это корректно, как здесь?"
+2/1/3#0,Yes,Да
+2/1/4#0,No,Нет
 3/1/1#0,Open the result of investigation,Открыть результат проверки
 3/1/2#0,* Result of graphics performance check,* Результат проверки производительности графики
 3/1/3#0,Your environment is,Ваша среда:
@@ -37,6 +55,7 @@ will work correctly. Proceed to graphics performance check?","Проверьте
 3/1/8#0,Open the instruction page of how to update,Открыть страницу с инструкцией по обновлению
 3/1/9#0,Graphics card,Видеокарта
 3/1/10#0,Details of graphics card,Сведения о видеокарте
+3/1/11#0,Vender,Поставщик
 3/1/12#0,Graphic renderer,Графический рендерер
 3/1/13#0,OpenGL version,Версия OpenGL
 3/1/14#0,OpenGL shader version,Версия шейдеров OpenGL

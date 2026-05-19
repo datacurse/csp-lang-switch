@@ -2,7 +2,13 @@
 Open storage,Открыть хранилище
 Select from storage,Выбрать из хранилища
 Add a directory,Добавить каталог
+Open,Открыть
+Save,Сохранить
+Folder,Папка
+Confirm,Подтвердить
 """%s"" already exists. Do you want to replace it?","""%s"" уже существует. Хотите заменить его?"
+Replace,Заменить
+Back,Назад
 "From “Select Folder”, select the folder you want to display, then grant access.
 If you do not want to grant access permissions, use “Open storage” and select the file.","В разделе “Select Folder” выберите папку, которую хотите отобразить, и предоставьте доступ.
 Если вы не хотите предоставлять разрешения на доступ, используйте “Open storage” и выберите файл."
@@ -12,8 +18,13 @@ Save to other directory,Сохранить в другой каталог
 Select All,Выделить всё
 Deselect all,Снять всё выделение
 Selected: %d,Выделено: %d
+Type,Тип
 Date modified,Дата изменения
+Name,Имя
+Format,Формат
+Size,Размер
 Create new folder,Создать папку
+Cancel,Отмена
 "You cannot use folder names that begin with a period (.) or any of the following characters.
 %s","Нельзя использовать имена папок, которые начинаются с точки (.) или содержат любой из следующих символов.
 %s"
@@ -30,3 +41,4 @@ You cannot choose a folder beginning with a period (.) or inside a folder that b
 "You cannot use a file name starting with a period (.) or including any of the following characters.
 %s","Нельзя использовать имя файла, начинающееся с точки (.) или содержащее любой из следующих символов.
 %s"
+Close,Закрыть

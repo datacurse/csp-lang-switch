@@ -1,20 +1,30 @@
 ﻿source,target
+F,F
+E,E
 Switch syncing,Переключить синхронизацию
 Sync now,Синхронизировать сейчас
+Favorites,Избранное
 Show menu,Показать меню
+Title,Название
+Type,Тип
+Cloud,Облако
 Output data,Данные вывода
 Date added,Дата добавления
 Date modified,Дата изменения
 Date synced,Дата синхронизации
+Teamwork,Командная работа
 Work time,Время работы
+Fanzine,Фанзин
 Corner store,Магазин у дома
 User tag,Пользовательский тег
 Default tag,Тег по умолчанию
+Label,Метка
 Type search keywords,Введите ключевые слова для поиска
 Show all files with this label,Показать все файлы с этой меткой
 Works added to your Favorites will appear here.,"Произведения, добавленные в избранное, появятся здесь."
 You can add to or remove from your Favorites by clicking the “%s” button.,"Вы можете добавлять в избранное или удалять из него, нажимая кнопку “%s”."
 You can create multiple-page files and select files to export.,Вы можете создавать многостраничные файлы и выбирать файлы для экспорта.
+New,Новый
 Delete %s,Удалить %s
 Please be aware of the following points before deleting.,Перед удалением учтите следующее.
 "・ Work files within this label will be removed and the files will be moved to the Recycle Bin/Trash on your computer. 
@@ -38,6 +48,9 @@ Show file labels,Показать метки файлов
 Show files in Favorites,Показать файлы в избранном
 Search tags,Искать теги
 Save location label for file,Метка места сохранения файла
+Large,Большой
+Small,Маленький
+Details,Подробнее
 "The selected %d items will be moved to the Recycle Bin/Trash of your computer.
 If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
 This operation cannot be undone.","Выбранные элементы (%d) будут перемещены в корзину вашего компьютера.
@@ -49,6 +62,8 @@ This operation cannot be undone. ","Удалить выбранные файлы
 "%d items could not be found and will be deleted from this list.
  This operation does not affect the actual files.","Не удалось найти элементы (%d), и они будут удалены из этого списка.
  Эта операция не затрагивает сами файлы."
+Delete,Удалить
+Cancel,Отмена
 Delete file,Удалить файл
 "Do you want to delete these works from your Favorites?
 ","Удалить эти произведения из избранного?
@@ -74,17 +89,28 @@ Clip Studio Modeler character,Персонаж Clip Studio Modeler
 Clip Studio Modeler shape,Фигура Clip Studio Modeler
 Clip Studio Modeler background,Фон Clip Studio Modeler
 Clip Studio Modeler object,Объект Clip Studio Modeler
+File,Файл
+All,Все
+Updated,Обновлено
 すべての作品,Все произведения
 すべて,Все
 作品,Произведение
 お気に入り,Избранное
 チーム制作,Командная работа
 All works,Все произведения
+Material,Материал
+Layer,Слой
 Tool setting,Настройка инструмента
+Other,Другое
 Not specified,Не указано
 Page template,Шаблон страницы
+Frame,Кадр
+Balloon,Облачко
+Sign,Знак
 Sound effect,Звуковой эффект
 Effect line,Линия эффекта
+Background,Фон
+Foreground,Передний план
 3D pose,3D-поза
 3D drawing figure,3D-фигура рисования
 3D primitive,3D-примитив
@@ -124,15 +150,22 @@ Fit to text,Подогнать по тексту
 Convert to raster layer,Преобразовать в растровый слой
 Do not scale,Не масштабировать
 (not recommended),(не рекомендуется)
+Content,Содержимое
 Material Folder,Папка материалов
+Toning,Тонирование
 Do not clip,Не обрезать
 Show all the materials in the folder.,Показать все материалы в папке.
 Search for materials on ASSETS,Искать материалы в ASSETS
 Show CLIP STUDIO and open [ASSETS],Показать CLIP STUDIO и открыть [ASSETS]
 Materials added to your Favorites will appear here.,"Материалы, добавленные в избранное, появятся здесь."
 Recently used materials will appear here,Недавно использованные материалы появятся здесь
+Information,Сведения
+Status,Состояние
+Frequency,Частота
 Editing material information,Редактирование сведений о материале
 Uploaded to Assets,Загружено в Assets
+Install,Установить
+User,Пользователь
 New folder,Новая папка
 ・ All included data will be deleted.,・ Все включённые данные будут удалены.
 "・ The data contains unavailable materials that are hidden because the setting [Show materials that cannot be used] is turned off. 
@@ -203,22 +236,32 @@ Old format 3D object,3D-объект старого формата
 3D shape,3D-фигура
 3D background,3D-фон
 Old format 3D background,3D-фон старого формата
+Pose,Поза
 Body shape,Форма тела
 3D head,3D-голова
 3D hand model,3D-модель руки
+Panorama,Панорама
 Paper texture,Текстура бумаги
 Brush tip shape,Форма кончика кисти
 Image material,Материал изображения
+Animation,Анимация
+Brush,Кисть
+Gradient,Градиент
 Tool settings (others),Настройки инструмента (прочее)
 Color Set,Набор цветов
 Character Motion,Движение персонажа
 Camera movement,Движение камеры
 Auto Action,Автооперация
 Gradient set,Набор градиентов
+Workspace,Рабочая среда
 Face parts,Части лица
 Body parts,Части тела
 Hair parts,Части волос
 Material catalog,Каталог материалов
+Vector,Векторный
+Tone,Тон
+Fill,Заливка
+Ruler,Линейка
 Special ruler,Специальная линейка
 Perspective ruler,Линейка перспективы
 Selection Layer,Слой выделения

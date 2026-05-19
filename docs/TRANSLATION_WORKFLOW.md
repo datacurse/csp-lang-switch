@@ -15,8 +15,8 @@
 ## The pipeline at a glance
 
 ```
-export ─► dedupe ─► glossary ─► translate (parallel chunks) ─► join
-       ─► special cases ─► repack + round-trip ─► consistency audit ─► fix ─► install
+export (Japanese oracle) ─► dedupe ─► glossary ─► translate (parallel chunks)
+       ─► join ─► special cases ─► repack + round-trip ─► consistency audit ─► fix ─► install
 ```
 
 The durable assets are the **tooling** (`src/`), the **manifest**, the
@@ -49,6 +49,17 @@ python src/batch.py export-all       # every not-yet-exported target file
 Writes `translation/files/<short>-<slug>/strings.csv`, a `key,source,target`
 CSV (`export` skips a file that already has one — use `--force` to overwrite).
 **`key` is version-specific — never edit it.** The CSV is **UTF-8 with BOM**.
+
+**What counts as translatable — the Japanese oracle.** `batch.py` exports with
+`repack.py export --reference <resource/japanese/GUID>`. A record lands in the
+worksheet when it is EITHER prose text OR differs from the finished, fully
+localized Japanese resource. "Differs from Japanese" is ground truth for "real
+UI text". Do **not** revert to the old `--kind text` classifier: it bucketed
+every space-free ASCII string ≤40 chars as a non-translatable identifier and so
+silently dropped ~3,900 genuine one-word labels (`Layer`, `Cancel`, `Edit`,
+`File`, the entire menu bar). Only records that are both identical to Japanese
+**and** non-prose (true identifiers — `OK`, `CELSYS`, version/format codes) are
+left out.
 
 ## Step 2 — Dedupe
 

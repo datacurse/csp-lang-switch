@@ -3,9 +3,17 @@ OPENGL CHECKER,ПРОВЕРКА OPENGL
 Graphics performance check,Проверка производительности графики
 About graphics performance check,О проверке производительности графики
 Version information,Сведения о версии
+Preferences,Настройки
 Close graphics performance check,Закрыть проверку производительности графики
+File,Файл
+New,Новый
+Open,Открыть
+Close,Закрыть
+Save,Сохранить
 Save as,Сохранить как
+Print,Печать
 Page settings,Настройки страницы
+Help,Справка
 CLIP website,Веб-сайт CLIP
 "CELSYS, Inc.","CELSYS, Inc."
 .:CELSYS:Graphics performance check:0.6,.:CELSYS:Graphics performance check:0.6
@@ -22,8 +30,18 @@ will work correctly. Proceed to graphics performance check?","Проверьте
  Do you want to run another graphics performance check?","Предыдущая проверка производительности графики завершилась непредвиденно. 
  Хотите запустить ещё одну проверку производительности графики?"
 You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
+http://www.clipstudio.net/en/site/opengl/nvidia.html,http://www.clipstudio.net/en/site/opengl/nvidia.html
+http://www.clipstudio.net/en/site/opengl/amd.html,http://www.clipstudio.net/en/site/opengl/amd.html
+http://www.clipstudio.net/en/site/opengl/intel.html,http://www.clipstudio.net/en/site/opengl/intel.html
+http://www.clipstudio.net/en/site/opengl/etc.html,http://www.clipstudio.net/en/site/opengl/etc.html
+http://www.clipstudio.net/en/site/opengl/mac.html,http://www.clipstudio.net/en/site/opengl/mac.html
+http://www.clipstudio.net/en/site/opengl/unsupported.html,http://www.clipstudio.net/en/site/opengl/unsupported.html
+http://www.clipstudio.net/en/site/opengl/list.html,http://www.clipstudio.net/en/site/opengl/list.html
+http://www.clipstudio.net/en/support/,http://www.clipstudio.net/en/support/
 Refer to proper status of display,Ознакомьтесь с правильным состоянием отображения
 Is this displayed properly like this?,"Отображается ли это корректно, как здесь?"
+Yes,Да
+No,Нет
 Open the result of investigation,Открыть результат проверки
 * Result of graphics performance check,* Результат проверки производительности графики
 Your environment is,Ваша среда:
@@ -34,6 +52,7 @@ Ask from the form,Задать вопрос через форму
 Open the instruction page of how to update,Открыть страницу с инструкцией по обновлению
 Graphics card,Видеокарта
 Details of graphics card,Сведения о видеокарте
+Vender,Поставщик
 Graphic renderer,Графический рендерер
 OpenGL version,Версия OpenGL
 OpenGL shader version,Версия шейдеров OpenGL

@@ -1,6 +1,18 @@
 ﻿source,target
- ,
+ , 
+Cancel,Отмена
+Clear,Очистить
+Backspace,Backspace
+OK,OK
+Progress,Ход выполнения
+Close,Закрыть
+Maximize,Развернуть
+Minimize,Свернуть
+Yes,Да
+No,Нет
+Save,Сохранить
 Do Not Save,Не сохранять
+Apply,Применить
 Do Not apply,Не применять
 Do not show again,Больше не показывать
 Added to Quick Access.,Добавлено в «Быстрый доступ».
@@ -11,3 +23,5 @@ Unable to save to %s.,Не удалось сохранить в %s.
 %s already exists. Do you want to overwrite?,%s уже существует. Хотите перезаписать?
 The path to the selected folder is too long. Please select a different folder.,Путь к выбранной папке слишком длинный. Выберите другую папку.
 Noto Sans CJK JP Regular,Noto Sans CJK JP Regular
+Menu,Меню
+Back,Назад

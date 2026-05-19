@@ -5,6 +5,7 @@ Import 3D file,Импортировать 3D-файл
 "This file can be imported with realistic rendering.
 Please select how to import the texture for this file.","Этот файл можно импортировать с реалистичным рендерингом.
 Выберите способ импорта текстуры для этого файла."
+Cancel,Отмена
 Do not show again,Больше не показывать
 About texture import settings,О настройках импорта текстур
 Realistic (recommended),Реалистичный (рекомендуется)
@@ -16,3 +17,4 @@ and turn on “Apply light source”.","Этот 3D-слой нельзя ред
 
 Чтобы включить рендеринг, откройте «Расширенные настройки инструмента» > «Источник света» 
 и включите параметр «Применить источник света»."
+Basic,Базовый

@@ -6,7 +6,10 @@ OpenToonz 1.%d,OpenToonz 1.%d
  Чтобы узнать больше об OpenToonz, посетите официальный веб-сайт OpenToonz."
 OpenToonz Official Home Page,Официальная домашняя страница OpenToonz
 Install path settings for OpenToonz,Настройки пути установки OpenToonz
+Browse,Обзор
+Cancel,Отмена
 Unknown error.,Неизвестная ошибка.
 OpenToonz install path not specified.,Путь установки OpenToonz не указан.
 Could not find “%s”.,Не удалось найти “%s”.
+Application|*.app,Приложение|*.app
 Exporting file. (%d/%d),Экспорт файла. (%d/%d)
