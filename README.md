@@ -20,6 +20,10 @@ has rendered correctly inside a running copy of CSP.
 - **Plug-in filters:** the new Filter menu (categories, filter names, dialog
   parameters) lives in ~37 plug-in DLLs, not the bundles. All 37 are translated
   and load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
+- **Tool palette:** the left-hand tool / sub-tool names live in SQLite
+  databases — both an install seed and a per-user working copy — not the
+  bundles. 240 distinct names are translated and installed into both —
+  see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 
@@ -28,17 +32,19 @@ has rendered correctly inside a running copy of CSP.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline) |
-| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
+| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline) |
+| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
 | `russian/` | Output of `batch.py pack` — the Russian resource build — gitignored (regenerable) |
 | `plugins/`, `russian-plugins/` | Original / patched filter-DLLs, managed by `plugins.py` — gitignored |
+| `tools/`, `russian-tools/` | Original / patched tool-palette SQLite DBs, managed by `tools.py` — gitignored |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
 
 - [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md) — **authoritative** record of what works and how (the binary parse/repack method).
 - [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md) — the parallel method for the Filter-menu plug-in DLLs (`plugins.py`).
+- [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md) — the parallel method for the Tool-palette SQLite DBs (`tools.py`).
 - [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md) — reproducible playbook for translating a file, CSP version, or language.
 - [`docs/FILE_INVENTORY.md`](docs/FILE_INVENTORY.md) — the 39 shared resource files and what each covers.
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
@@ -89,3 +95,20 @@ python src/plugins.py install           # deploy into the live CSP install
 
 The method and format are documented in
 [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
+
+### Tool palette
+
+The left-hand tool / sub-tool names live in SQLite databases in the CSP
+install, not the resource bundles, and are handled by another parallel tool —
+[`src/tools.py`](src/tools.py):
+
+```
+python src/tools.py backup              # save the original tool DBs
+python src/tools.py extract             # -> translation/tools.csv
+# ... translate the target column ...
+python src/tools.py apply               # -> russian-tools/
+python src/tools.py install             # deploy into the live CSP install
+```
+
+The method and format are documented in
+[`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).

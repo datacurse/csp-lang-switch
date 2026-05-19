@@ -40,3 +40,8 @@ spike/
 # (russian-plugins/). Kept on disk, not committed. Managed by src/plugins.py.
 plugins/
 russian-plugins/
+
+# Tool-palette SQLite DBs — copyrighted; originals (tools/) + Russian build
+# (russian-tools/). Kept on disk, not committed. Managed by src/tools.py.
+tools/
+russian-tools/
