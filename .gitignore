@@ -32,3 +32,11 @@ desktop.ini
 # CSP resource binaries — copyrighted + large; kept on disk, not committed.
 # Untracked with `git rm --cached` (the local files are not deleted).
 resource/
+
+# Scratch dir for the plugin-DLL spike — patched copies of copyrighted DLLs.
+spike/
+
+# Filter plug-in DLLs — copyrighted; originals (plugins/) + Russian build
+# (russian-plugins/). Kept on disk, not committed. Managed by src/plugins.py.
+plugins/
+russian-plugins/
