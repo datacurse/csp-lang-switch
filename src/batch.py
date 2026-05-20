@@ -404,10 +404,17 @@ def cmd_audit(args: argparse.Namespace) -> int:
 # Subcommand: status
 # ----------------------------------------------------------------------
 def _translated_pct(ws: Path) -> tuple[int, int]:
-    """(translated, total) over rows with a non-empty source."""
+    """(translated, total) over rows with a non-empty source.
+
+    A row counts as translated only when its target is non-empty *and*
+    differs from the source. Empty target means "no translation, leave the
+    original" -- it must not be conflated with real translations, or status
+    silently reports 100% on partially-translated builds (which the launcher
+    pre-seed pass exposed)."""
     rows = _read_rows(ws)
     total = sum(1 for r in rows if r["source"])
-    done = sum(1 for r in rows if r["source"] and r["target"] != r["source"])
+    done = sum(1 for r in rows
+               if r["source"] and r["target"] and r["target"] != r["source"])
     return done, total
 
 

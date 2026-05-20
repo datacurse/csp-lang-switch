@@ -1,0 +1,81 @@
+﻿source,target
+Transform,Трансформировать
+cel,ячейка
+Position,Положение
+Scale ratio,Коэффициент масштабирования
+Rotate,Повернуть
+Center of rotation,Центр поворота
+Mask,Маска
+Mask position,Положение маски
+Mask scale,Масштаб маски
+Mask angle,Угол маски
+Mask rotation center,Центр вращения маски
+Top left,Сверху слева
+Top right,Сверху справа
+Bottom left,Снизу слева
+Bottom right,Снизу справа
+Camera position,Положение камеры
+Focal point,Фокальная точка
+Perspective,Перспектива
+Roll,Поворот
+Folder,Папка
+View,Вид
+Ambient light,Окружающий свет
+Enable ambient light,Включить окружающий свет
+Color components of ambient light,Цветовые компоненты окружающего света
+Ambient light intensity,Интенсивность окружающего света
+Directional light,Направленный свет
+Direction,Направление
+Color components of diffused light,Цветовые компоненты рассеянного света
+Diffused light intensity,Интенсивность рассеянного света
+Enable,Включить
+Color components of highlight,Цветовые компоненты блика
+Highlight intensity,Интенсивность блика
+Status,Состояние
+Material,Материал
+Layout,Макет
+Parts,Части
+Movable parts,Подвижные части
+ :Value, :Значение
+ :Select, :Выбрать
+Audio,Аудио
+Volume,Громкость
+Pose,Поза
+Head,Голова
+Eyeline,Линия взгляда
+Direction of neck,Направление шеи
+Left arm,Левая рука
+Position of left hand,Положение левой кисти
+Direction of left hand,Направление левой кисти
+Direction of left elbow,Направление левого локтя
+Left fingers,Пальцы левой руки
+Right arm,Правая рука
+Position of right hand,Положение правой кисти
+Direction of right hand,Направление правой кисти
+Direction of right elbow,Направление правого локтя
+Right fingers,Пальцы правой руки
+Chest,Грудь
+Position of chest,Положение груди
+Direction of chest,Направление груди
+Stomach,Живот
+Position of stomach,Положение живота
+Direction of stomach,Направление живота
+Left leg,Левая нога
+Position of left foot,Положение левой стопы
+Direction of left foot,Направление левой стопы
+Direction of left knee,Направление левого колена
+Right leg,Правая нога
+Position of right foot,Положение правой стопы
+Direction of right foot,Направление правой стопы
+Direction of right knee,Направление правого колена
+Other bones,Другие кости
+Allocate,Разместить
+Whole position,Положение целиком
+Whole rotation,Полный поворот
+Face,Лицо
+Facial expression,Выражение лица
+Eyes,Глаза
+Mouth,Рот
+Shape,Фигура
+Opacity,Непрозрачность
+Track label,Метка дорожки

@@ -1,0 +1,474 @@
+﻿source,target
+Assign multiple cels,Назначить несколько ячеек
+Cancel,Отмена
+Assign by value,Назначить по значению
+Assign by cel name,Назначить по имени ячейки
+Assign cels,Назначить фазы
+Start number,Начальный номер
+End number,Конечный номер
+Start cel,Начальная ячейка
+End cel,Конечная ячейка
+Number of frames,Количество кадров
+Repeat settings,Настройки повтора
+Number of repeats,Количество повторов
+Repeat to end,Повторять до конца
+Advanced settings,Дополнительные настройки
+Add empty frames between cels,Добавлять пустые кадры между ячейками
+Skip cel numbers,Пропускать номера ячеек
+Number of cels,Количество ячеек
+Animated GIF export settings,Настройки экспорта анимированного GIF
+Animated sticker (APNG) export settings ,Настройки экспорта анимированного стикера (APNG) 
+Animated WebP Export Settings,Настройки экспорта анимированного WebP
+Width,Ширина
+Height,Высота
+Export range,Диапазон экспорта
+to,до
+Frame rate,Частота кадров
+Loop count,Число циклов
+Unlimited,Без ограничений
+Number of loops,Число циклов
+Time(s),Раз(а)
+Export options,Параметры экспорта
+Dithering,Дизеринг
+Delete blank spaces,Удалять пустые места
+Color reduction,Уменьшение числа цветов
+Export transparency,Экспортировать прозрачность
+Background color,Цвет фона
+Compression method,Метод сжатия
+Prioritize quality,Приоритет качества
+Prioritize file size,Приоритет размера файла
+Quality,Качество
+Playback time: 0.00 s ( Image number: 1 ),Время воспроизведения: 0.00 с ( Номер изображения: 1 )
+Playback time: %0.1f s ( Image number: %d ),Время воспроизведения: %0.1f с ( Номер изображения: %d )
+Exporting animated GIF,Экспорт анимированного GIF
+Exporting animated sticker (APNG),Экспорт анимированного стикера (APNG)
+Exporting animated WebP,Экспорт анимированного WebP
+Manage timeline,Управление шкалой времени
+Manage shots,Управление кадрами
+New timeline,Новая шкала времени
+New script,Новый сценарий
+Duplicate,Дублировать
+Delete,Удалить
+Change settings,Изменить настройки
+Move up,Переместить вверх
+Move down,Переместить вниз
+Image sequence export settings,Настройки экспорта последовательности изображений
+Preset,Набор настроек
+Add to presets,Добавить в наборы настроек
+Edit preset,Редактировать набор настроек
+Export to,Экспортировать в
+Browse,Обзор
+File name settings,Настройки имени файла
+File name,Имя файла
+File prefix,Префикс файла
+File suffix,Суффикс файла
+Separator,Разделитель
+Advanced Settings,Дополнительные настройки
+Type,Тип
+Settings,Настройки
+Export draft,Экспортировать черновик
+Export frames,Экспортировать кадры
+Embed ICC profile,Внедрить ICC-профиль
+Size Settings,Настройки размера
+Drawing area,Область рисования
+Output frame,Кадр вывода
+Overflow frame,Рамка переполнения
+Selection area,Область выделения
+Entire canvas,Весь холст
+Output image,Выводимое изображение
+Fix scaling,Зафиксировать масштаб
+Apply 2D camera effects,Применить эффекты 2D-камеры
+Frame export,Экспорт кадров
+All frames,Все кадры
+Frame area,Область кадра
+To,До
+Options,Параметры
+Make background color transparent,Сделать цвет фона прозрачным
+Show shadow,Показывать тень
+Select export folder.,Выберите папку для экспорта.
+Could not find the specified folder.,Не удалось найти указанную папку.
+Please enter file name.,Введите имя файла.
+A file with the same name as the folder already exists.,"Файл с таким же именем, как у папки, уже существует."
+"Files with the same name as the export files already exist in the export folder.
+These files will be overwritten. Do you want to proceed?",
+A folder with the same name already exists. Would you like to save the file to the existing folder?,Папка с таким именем уже существует. Сохранить файл в существующую папку?
+You cannot save images with a height or width of more than %d px in this format.,В этом формате нельзя сохранять изображения с высотой или шириной более %d пикс.
+"Due to the file name settings, some file names may exceed %d characters: 
+
+%s
+(%d characters)
+
+If you continue, the file may not be exported due to system restrictions. 
+We recommend you rename with a shorter name.
+Do you want to continue exporting anyway?",
+Custom,Пользовательский
+"The output size of  %d by %d  px registered for this preset cannot be applied due to the aspect ratio of the current canvas.
+The output size will be set to %d by%dpx.",
+BMP settings,Настройки BMP
+JPEG settings,Настройки JPEG
+PNG settings,Настройки PNG
+TGA settings,Настройки TGA
+WebP Settings ,Настройки WebP 
+8 bit,8 бит
+16 bit,16 бит
+24 bit,24 бита
+32 bit,32 бита
+Color depth,Глубина цвета
+Filter,Фильтр
+None,Нет
+Parse,Разобрать
+Confirm,Подтвердить
+Discard,Отклонить
+Back,Назад
+Rename preset,Переименовать набор настроек
+Confirm edit?,Подтвердить изменение?
+"Preset with the same name already exist.
+Overwrite?",
+"“%s“ cannot be registered.
+Please enter a different preset name.",
+Save,Сохранить
+Change name,Изменить имя
+Apply to all models,Применить ко всем моделям
+Save as default,Сохранить как настройки по умолчанию
+Reset to default,Сбросить к значениям по умолчанию
+Import,Импортировать
+Physical settings,Настройки физики
+Set selected models,Задать выбранные модели
+Skirt,Юбка
+Gravity,Гравитация
+Activeness,Активность
+Bending spring,Пружина изгиба
+Bend toes automatically,Сгибать пальцы ног автоматически
+3D layer settings,Настройки 3D-слоя
+Physical operation,Физическая операция
+Skirt only,Только юбка
+Physical operation for skirt only,Физическая операция только для юбки
+Ground height,Высота земли
+During dragging and playback,При перетаскивании и воспроизведении
+During playback only,Только при воспроизведении
+Do not use physical operation,Не использовать физическую операцию
+Rendering settings,Настройки рендеринга
+Outline,Контур
+Add outline,Добавить контур
+Opacity,Непрозрачность
+Offset amount,Величина смещения
+Color,Цвет
+Method,Метод
+Lighting,Освещение
+Rendering Method,Метод рендеринга
+ ,
+Apply light source,Применить источник света
+Cast shadows,Отбрасывать тени
+Texture,Текстура
+Use texture,Использовать текстуру
+Alpha test,Альфа-тест
+Backface culling,Отсечение задних граней
+Clipping planes,Плоскости отсечения
+Set automatically when resetting camera,Задавать автоматически при сбросе камеры
+Near plane,Ближняя плоскость
+Far plane,Дальняя плоскость
+Shadows follow light source,Тени следуют за источником света
+Ver. 1.11.4 or earlier,Ver. 1.11.4 или раньше
+Ver. 1.12.3 or earlier,Ver. 1.12.3 или раньше
+Polygon,Многоугольник
+Line,Линия
+Connect polygons,Соединить полигоны
+Gouraud,Гуро
+Phong,Фонг
+Realistic,Реалистичный
+Toon,Мультяшный
+Character,Персонаж
+Toon shading,Мультяшное затенение
+Summer sunlight,Летний солнечный свет
+Linear,Линейный
+Mipmap,
+Alpha threshold,Порог альфа-канала
+Cast shadows down,Отбрасывать тени вниз
+Follow light source,Следовать за источником света
+Normal,Обычный
+Select layer,Выбрать слой
+Enter layer name,Введите имя слоя
+Audio export settings,Настройки экспорта аудио
+Export frame settings,Настройки экспорта кадров
+Audio settings,Настройки аудио
+Quality settings,Настройки качества
+Attributes,Атрибуты
+PCM ,
+Configure audio settings.,Настройте параметры аудио.
+Script name,Имя сценария
+Duplicate script,Дублировать сценарий
+(Frame),(Кадр)
+(Seconds + frames),(Секунды + кадры)
+(Minutes:seconds:frames),(Минуты:секунды:кадры)
+Start frame,Начальный кадр
+End frame,Конечный кадр
+Current frame,Текущий кадр
+Playback speed,Скорость воспроизведения
+%0.1f fps,%0.1f кадр/с
+Hold,Удерживать
+Smooth,Сглаживание
+Keyframe interpolation,Интерполяция ключевых кадров
+Zoom In,Увеличить
+Zoom Out,Уменьшить
+Create keyframe: Hold interpolation,Создать ключевой кадр: интерполяция с удержанием
+Create keyframe: Linear interpolation,Создать ключевой кадр: линейная интерполяция
+Create keyframe: Smooth interpolation,Создать ключевой кадр: плавная интерполяция
+Duplicate timeline,Дублировать шкалу времени
+Change frame rate,Изменить частоту кадров
+Frame settings,Настройки кадров
+Shot information,Сведения о кадре
+Timeline name,Имя шкалы времени
+Change total number of frames,Изменить общее число кадров
+Playback time,Время воспроизведения
+Scene number,Номер сцены
+Shot number,Номер кадра
+Set timeline name automatically,Задавать имя шкалы времени автоматически
+Drop frame,Пропуск кадров
+Playback method,Метод воспроизведения
+Division line,Линия разделения
+Image interpolation,Интерполяция изображения
+How to show frames,Способ отображения кадров
+Frame number (from 0),Номер кадра (с 0)
+Frame number (from 1),Номер кадра (от 1)
+Seconds + frame,Секунды + кадр
+Time code,Тайм-код
+1-frame units (for movies),Единицы в 1 кадр (для видео)
+Use decimal values (for 3D motions),Использовать десятичные значения (для 3D-движений)
+Smooth edges (bilinear),Сглаженные края (билинейная)
+Hard edges (nearest neighbor),Резкие края (метод ближайшего соседа)
+Clear edges (bicubic),Чёткие края (бикубическая)
+High accuracy (average colors),Высокая точность (усреднение цветов)
+ fps, кадр/с
+Please enter the timeline name.,Введите имя шкалы времени.
+Set the end frame value so that it is higher than the start frame value.,Задайте значение конечного кадра больше значения начального кадра.
+The start and end frame values cannot be changed.,Значения начального и конечного кадров нельзя изменить.
+The value exceeds the range that can be set for the timeline.,"Значение превышает диапазон, который можно задать для шкалы времени."
+ %d seconds + %d frames, %d секунд + %d кадров
+%0.1f seconds,%0.1f секунд
+%d (%ds),%d (%dс)
+"The animation folder composition for this canvas does not match the Digital Exposure Sheet file.
+ Please choose from the following options to manage the animation folders in this document. 
+The Digital Exposure Sheet information will not be affected.",
+Import Toei Digital Exposure Sheet,Импортировать цифровой экспозиционный лист Toei
+Deletes the selected animation folder,Удаляет выбранную папку анимации
+Hides the selected animation folder,Скрывает выбранную папку анимации
+Ignore,Игнорировать
+"There are cels below the selected folder, so you cannot choose this option.","Под выбранной папкой есть фазы, поэтому этот вариант выбрать нельзя."
+"The selected folder is locked, so you cannot choose this option.","Выбранная папка заблокирована, поэтому этот вариант выбрать нельзя."
+"The selected 2D camera folder has keyframes, so you cannot choose this option.","В выбранной папке 2D-камеры есть ключевые кадры, поэтому этот вариант выбрать нельзя."
+Select from List,Выбрать из списка
+Preset name,Имя набора настроек
+Items to be included in preset,Элементы для включения в набор настроек
+Please enter preset name.,Введите имя набора настроек.
+Create timeline label,Создать метку шкалы времени
+Create track label,Создать метку дорожки
+Label name,Имя метки
+Range,Диапазон
+Frame ,Кадр 
+Please enter name.,Введите имя.
+A label with the same name already exists.,Метка с таким же именем уже существует.
+Go to timeline label,Перейти к метке шкалы времени
+The label cannot be moved as it is not in the playback range.,"Метку нельзя переместить, так как она вне диапазона воспроизведения."
+Go to specified frame,Перейти к указанному кадру
+Frame number,Номер кадра
+A,А
+I,И
+U,
+E,
+O,
+Blink,Моргание
+Left blink,Моргание левым глазом
+Right blink,Моргание правым глазом
+Happy,Радость
+Angry,Злость
+Sad,Грустный
+Relaxed,Расслабленная
+Surprised,Удивление
+Look up,Взгляд вверх
+Look down,Взгляд вниз
+Look left,Взгляд влево
+Look right,Взгляд вправо
+Overweight,Полный
+Slim,Стройность
+Sensual,Чувственный
+Kid,Ребёнок
+Head length,Длина головы
+Head width,Ширина головы
+Neck length,Длина шеи
+Neck width,Ширина шеи
+Torso length,Длина туловища
+Torso width,Ширина туловища
+Arm length,Длина руки
+Arm width,Ширина руки
+Leg length,Длина ноги
+Leg width,Ширина ноги
+Hand length,Длина кисти
+Hand width,Ширина кисти
+Foot length,Длина стопы
+Foot width,Ширина стопы
+Shoulder width,Ширина плеч
+Waist width,Ширина талии
+Rugged,Грубый
+Slender,Стройный
+Cartoon,Мультяшный
+Boney,Острый
+Plump,Пышный
+Delicate,Мягкость
+Limit hand mixer,Ограничить микшер кисти
+Limit the hand mixer so the model does not distort,"Ограничить микшер кисти, чтобы модель не искажалась"
+Reset the hand mixer to the basic hand,Сбросить микшер кисти к базовой кисти
+All fingers,Все пальцы
+Thumb,Большой палец
+Index finger,Указательный палец
+Middle finger,Средний палец
+Ring finger,Безымянный палец
+Pinky finger,Мизинец
+Palm,Ладонь
+Wrist,Запястье
+Finger length,Длина пальца
+Finger thickness,Толщина пальца
+Fingertip taper,Сужение кончика пальца
+Nail length,Длина ногтя
+Nail width,Ширина ногтя
+Nail shape,Форма ногтя
+Palm width,Ширина ладони
+Palm height,Высота ладони
+Palm thickness,Толщина ладони
+Hand veins,Вены кисти
+Vein prominence,Выраженность вен
+Show wristbone,Показывать кость запястья
+Wrist width,Ширина запястья
+Reset selected parameters,Сбросить выбранные параметры
+Cartoon - soft,Мультфильм — мягкий
+Anime - soft,Аниме — мягкий
+Realistic - soft,Реалистичный — мягкий
+Chibi,Чиби
+Skeletal,Скелет
+Cartoon - sharp,Мультфильм — чёткий
+Anime - sharp,Аниме — чёткий
+Realistic - sharp,Реалистичный — чёткий
+Base,Основа
+Face Mixer,Микшер лица
+Limit face mixer,Ограничить микшер лица
+Limit the face mixer so that features are not distorted,"Ограничить микшер лица, чтобы черты не искажались"
+Reset the face mixer to the basic face,Сбросить микшер лица к базовому лицу
+Reset,Сбросить
+Reset the current facial feature sliders,Сбросить текущие ползунки черт лица
+Left,Слева
+Right,Вправо
+Symmetry,Симметрия
+Eyes,Глаза
+Brows,Брови
+Nose,Нос
+Mouth,Рот
+Ears,Уши
+Neck,Шея
+Head,Голова
+Direction,Направление
+Size (W),Размер (Ш)
+Size (H),Размер (В)
+Slant,Наклон
+Depth,Глубина
+Rotation,Поворот
+Tilt,Наклон
+Protrusion,Выступ
+Position,Положение
+Nose tip tilt,Наклон кончика носа
+Nose bridge depth,Глубина переносицы
+Angle,Угол
+Fullness,Полнота
+Offset,Смещение
+Forward/back,Вперёд/назад
+Flare,Расширение
+Thickness,Толщина
+Length,Длина
+Side tilt,Боковой наклон
+Circumference,Обхват
+(Active),(Используется)
+Change the object visibility,Изменить видимость объекта
+Lock/unlock the object,Заблокировать/разблокировать объект
+Change whether the object is selectable,"Изменить, можно ли выбирать объект"
+"This tool can only be used for the following: 
+-Raster layers
+-Selection layers
+-Layer masks 
+To convert to a raster layer, select [Layer] menu > [Rasterize].",
+You cannot use this tool on the current layer.,Этот инструмент нельзя использовать на текущем слое.
+"Some layers were not processed.
+This tool can only be used for the following: 
+- Raster layers
+- Selection layers
+- Layer masks 
+To change to a raster layer, select [Layer] menu > [Rasterize].",
+"You cannot draw on the selected 3D object.
+Please switch to the Object tool and select only one 3D primitive or 3D drawing figure (Ver.2), or 3D object.",
+"You cannot draw on the selected 3D primitive.
+Please switch to the Object tool, and in the Advanced Tool Settings palette’s Texture Settings tab, set the position to 0 and the scale ratio to 100.",
+"You cannot draw on the selected 3D object.
+Please switch to the Object tool, and in the Advanced Tool Settings palette’s Preferences tab, open the Rendering Settings and turn on “Use texture”.",
+"You cannot draw on the selected 3D object.
+Please switch to the Object tool and check the layer visibility and layer lock settings.",
+"You cannot draw on the selected 3D object.
+The UV map of this object is not set up correctly.",
+You cannot draw on the selected 3D object as it does not have an editable texture.,"На выбранном 3D-объекте нельзя рисовать, так как у него нет редактируемой текстуры."
+The texture thumbnail will be shown,Будет показан эскиз текстуры
+Exporting cel %d of %d.,Экспорт фазы %d из %d.
+Add/delete %s keyframe,Добавить/удалить ключевой кадр %s
+Previous keyframe,Предыдущий ключевой кадр
+Next keyframe,Следующий ключевой кадр
+Layer color,Цвет слоя
+Sub color,Дополнительный цвет
+Switch using layer color,Переключить использование цвета слоя
+Sync all pages now,Синхронизировать все страницы сейчас
+"Title: Sample
+A: Hi (subtitle: Hi) (simultaneous)
+A: (bows)
+(wait 1 second)
+A: Enter the script here (subtitle: Enter the script here)",
+Enter script,Ввести сценарий
+Delete script,Удалить сценарий
+Change script settings,Изменить настройки сценария
+○,
+●,
+ (TBD), (не определено)
+Convert to transformable layer,Преобразовать в трансформируемый слой
+Change assigned cel,Изменить назначенную фазу
+Change start frame,Изменить начальный кадр
+Change end frame,Изменить конечный кадр
+Move clip,Переместить клип
+Change clip size,Изменить размер клипа
+Change clip scale,Изменить масштаб клипа
+Move keyframe,Переместить ключевой кадр
+Duplicate keyframe,Дублировать ключевой кадр
+Create inbetween track label “○”,Создать метку промежуточной дорожки «○»
+Create inbetween track label “●”,Создать метку промежуточной дорожки «●»
+Create label,Создать метку
+Move label,Переместить метку
+Resize label,Изменить размер метки
+Rename label,Переименовать метку
+Delete track label,Удалить метку дорожки
+Duplicate label,Дублировать метку
+Move keyframe and label,Переместить ключевой кадр и метку
+Duplicate keyframe and label,Дублировать ключевой кадр и метку
+"The existing keyframe and assigned cel will be overwritten.
+Do you want to continue?",
+"The existing track label will be overwritten.
+Do you want to continue?",
+"The existing keyframe, assigned cel, and track label will be overwritten.
+Do you want to continue?",
+C- + Scenes + Shots,C- + сцены + кадры
+Scenes + Shots,Сцены + кадры
+Number of stories + Scenes + Shots,Число историй + сцены + кадры
+Story name + Number of stories + Scenes + Shots,Имя истории + число историй + сцены + кадры
+You are about to quit playback. Do you want to proceed?,Вы собираетесь завершить воспроизведение. Продолжить?
+The previous movie playback results will be lost. Do you want to proceed?,Предыдущие результаты воспроизведения видео будут потеряны. Продолжить?
+Rendering playback range.,Рендеринг диапазона воспроизведения.
+Edit timeline,Редактировать шкалу времени
+Click,Щёлкните
+Select type of operation for clicking canvas,Выберите тип операции для нажатия на холст
+Next,Далее
+Drag,Перетаскивание
+Select type of operation for drag,Выберите тип операции для перетаскивания
+"Left for previous, right for next","Влево — предыдущий, вправо — следующий"
+The file format of the Digital Exposure Sheet file is not correct.,Формат файла цифрового экспозиционного листа неверен.
+"One or more animation folders are locked, so changes could not be loaded.","Одна или несколько папок анимации заблокированы, поэтому изменения не удалось загрузить."

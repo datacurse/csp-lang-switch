@@ -1,0 +1,40 @@
+﻿key,source,target
+1/1/1#0,BOOK VIEWER,
+1/1/3#0,"CELSYS, Inc.",
+1/1/8#0,.:CELSYS:BOOK VIEWER:1.0,
+1/1/9#0,.:CELSYS:BOOK VIEWER Ver1 Settings,
+1/1/10#0,3D Preview for Binding,3D-просмотр переплёта
+1/1/11#0,3D Preview for Binding,3D-просмотр переплёта
+1/1/12#0,About 3D Preview for Binding,О 3D-просмотре переплёта
+1/1/13#0,Version information,Сведения о версии
+1/1/14#0,Quit 3D Preview for Binding,Выйти из 3D-просмотра переплёта
+1/1/15#0,Quit 3D Preview for Binding,Выйти из 3D-просмотра переплёта
+1/1/16#0,Version information,Сведения о версии
+1/1/17#0,About 3D Preview for Binding,О 3D-просмотре переплёта
+1/1/18#0,File,Файл
+1/1/19#0,Edit,Правка
+1/1/20#0,Undo,Отменить
+1/1/21#0,Redo,Повторить
+1/1/22#0,Cut,Вырезать
+1/1/23#0,Copy,Копировать
+1/1/24#0,Paste,Вставить
+1/1/25#0,Delete,Удалить
+1/1/26#0,Select All,Выделить всё
+1/1/27#0,Page,Страница
+1/1/28#0,Next page (Left binding: Previous page),Следующая страница (переплёт слева: предыдущая страница)
+1/1/29#0,Previous page (Left binding: Next page),Предыдущая страница (переплёт слева: следующая страница)
+1/1/30#0,Open / Close,Открыть / закрыть
+1/1/31#0,View,Вид
+1/1/32#0,Zoom In,Увеличить
+1/1/33#0,Zoom Out,Уменьшить
+1/1/34#0,Zoom Reset,Сбросить масштаб
+1/1/35#0,Saddle Stitch/Side Stitch Binding,Переплёт внакидку / втачку
+1/1/36#0,Window,Окно
+1/1/37#0,Help,Справка
+1/1/38#0,Customize,Настроить
+1/1/39#0,Close,Закрыть
+1/1/40#0,Output,Вывод
+1/1/41#0,/ %d page,/ %d стр.
+1/1/42#0,"BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
+
+    Product Version: %s",

@@ -1,0 +1,30 @@
+﻿key,source,target
+1/1/40#0, ,
+1/1/16#0,Cancel,Отмена
+1/1/24#0,Clear,Очистить
+1/1/32#0,Backspace,
+1/1/39#0,OK,
+2/1/7#0,Progress,Ход выполнения
+2/1/5#0,Cancel,Отмена
+3/1/1#0,Close,Закрыть
+3/1/2#0,Maximize,Развернуть
+3/1/3#0,Minimize,Свернуть
+3/1/5#0,Cancel,Отмена
+3/1/6#0,Yes,Да
+3/1/7#0,No,Нет
+3/1/8#0,Save,Сохранить
+3/1/9#0,Do Not Save,Не сохранять
+3/1/10#0,Apply,Применить
+3/1/11#0,Do Not apply,Не применять
+3/1/12#0,Do not show again,Больше не показывать
+4/1/1#0,Added to Quick Access.,Добавлено в «Быстрый доступ».
+4/1/2#0,Deleted from Quick Access.,Удалено из «Быстрого доступа».
+5/1/3#0,sRGB Color Space Profile.icm,
+5/1/4#0,Display P3.icc,
+6/1/1#0,Unable to save to %s.,Не удалось сохранить в %s.
+6/1/2#0,%s already exists. Do you want to overwrite?,%s уже существует. Хотите перезаписать?
+6/1/3#0,The path to the selected folder is too long. Please select a different folder.,Путь к выбранной папке слишком длинный. Выберите другую папку.
+7/1/1#0,Noto Sans CJK JP Regular,
+8/1/1#0,Menu,Меню
+9/1/1#0,Back,Назад
+10/1/1#0,Menu,Меню
