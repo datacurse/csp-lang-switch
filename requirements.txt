@@ -1,0 +1,8 @@
+# Runtime: only the plugins pipeline (src/plugins.py) needs pefile to read
+# and write RT_STRING resources in CSP's filter DLLs. Everything else uses
+# the Python standard library.
+pefile==2024.8.26
+
+# Build only: bundles src/lang.py + the four patched builds into
+# dist/csp-russian.exe via `pyinstaller csp-russian.spec`.
+pyinstaller==6.20.0

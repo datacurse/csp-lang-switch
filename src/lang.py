@@ -7,6 +7,7 @@ Top-level "change the language of my CSP install" switcher.
     python src/lang.py russian      <- show the Russian translation everywhere
     python src/lang.py original     <- restore whatever was there before we ran
     python src/lang.py status       <- per-pipeline current state
+    python src/lang.py              <- (interactive: show a numbered menu)
 
 This is the user-facing entrypoint. It wraps the four per-subsystem pipelines:
 
@@ -21,34 +22,39 @@ Two states are exposed to the user:
   * `original`  -- whatever was on this machine before we ever ran. For the
                    main UI that is the stock English CSP ships in
                    `resource/english/`; for the other three it is the local
-                   backup snapshot the pipelines maintain in `plugins/`,
-                   `tools/`, and `materials/`.
+                   backup snapshot the pipelines maintain under `originals/`
+                   (in source mode) or `%LOCALAPPDATA%/csp-russian/` (in the
+                   bundled exe).
 
 The four backup snapshots are taken automatically the first time `lang.py
 russian` runs, so the user never has to remember an ordering of `backup` then
 `install`. If a snapshot already exists it is left untouched (the per-pipeline
 `backup` commands refuse to overwrite an original with a patched file).
 
-State tracking
---------------
-A `.lang-state.json` at the repo root caches the last-known current state per
-pipeline (`russian`, `original`, or `unknown`) alongside a content fingerprint
-of the install. The fingerprint is verified before trusting the cache; if the
-files on disk have drifted, the cache entry is treated as `unknown` and
-recomputed.
+Source mode vs bundled exe
+--------------------------
+This module runs in two layouts:
 
-The fingerprint is a sha256 over a sorted manifest of "<relpath>\\t<sha256>" for
-every relevant file in the pipeline's install location. It is content-only and
-ignores mtime / size metadata, so it survives backup-and-restore round trips.
+  * **Source mode**: `python src/lang.py ...` from a git checkout. Paths are
+    repo-relative (russian/, originals/, ...). State lives at the repo root.
 
-Admin elevation
----------------
-Three of the four pipelines write into `C:\\Program Files` and self-elevate via
-UAC. To avoid four separate UAC prompts (and four elevated consoles), this
-wrapper self-elevates once at the start of any state-changing command, then
-spawns the per-pipeline scripts as subprocesses -- which inherit elevation.
+  * **Bundled exe** (PyInstaller / csp-russian.spec): patched builds are
+    read-only inside the extracted bundle (`sys._MEIPASS`). The writeable
+    backup snapshots and state file live in `%LOCALAPPDATA%/csp-russian/` --
+    persistent across runs, survives "exe in a new folder", no admin needed
+    to write. The pipeline modules' own path constants are monkey-patched
+    once at startup so they read/write in the right places without any other
+    changes to their code.
 
-No external dependencies (standard library only).
+Direct calls, not subprocess
+----------------------------
+We import the four pipeline modules and call their cmd_* functions directly.
+That keeps everything in one process (one UAC prompt, one console window) and
+is what makes the PyInstaller bundle work -- subprocesses would try to
+re-launch the bundled exe instead of running scripts.
+
+No external dependencies beyond what the pipeline modules already need
+(`pefile` for plugins; otherwise standard library).
 """
 
 from __future__ import annotations
@@ -56,16 +62,56 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import subprocess
+import os
 import sys
 from pathlib import Path
 
 import install  # for ensure_admin, check_csp_closed, find_csp_resource, etc.
 
 
-# Lazy loaders for the per-pipeline scripts. Lazy so an environment where one
-# of them sys.exits at import-time (e.g. no %APPDATA% layout) doesn't break the
-# wrapper itself.
+# ----------------------------------------------------------------------
+# Paths -- source mode vs bundled exe
+# ----------------------------------------------------------------------
+FROZEN = getattr(sys, "frozen", False)
+
+if FROZEN:
+    # PyInstaller extracts the bundle's contents here (read-only, ephemeral
+    # per-process -- fine for the patched builds we ship inside the exe).
+    DATA_ROOT = Path(sys._MEIPASS)  # type: ignore[attr-defined]
+    # Persistent per-user state and writeable backup snapshots.
+    _localappdata = os.environ.get("LOCALAPPDATA") or \
+        str(Path.home() / "AppData" / "Local")
+    USER_DATA = Path(_localappdata) / "csp-russian"
+    USER_DATA.mkdir(parents=True, exist_ok=True)
+    STATE_FILE = USER_DATA / "state.json"
+else:
+    DATA_ROOT = Path(__file__).resolve().parent.parent
+    USER_DATA = DATA_ROOT
+    STATE_FILE = DATA_ROOT / ".lang-state.json"
+
+# Bundled read-only references. All four Russian builds live under a single
+# `russian/` tree on disk and inside the .exe.
+RUSSIAN_BUILD     = DATA_ROOT / "russian" / "ui"
+RUSSIAN_PLUGINS   = DATA_ROOT / "russian" / "plugins"
+RUSSIAN_TOOLS     = DATA_ROOT / "russian" / "tools"
+RUSSIAN_MATERIALS = DATA_ROOT / "russian" / "materials"
+ENGLISH_STOCK     = DATA_ROOT / "resource" / "english"
+
+# Writeable backup snapshots (per-machine). In bundled mode these live at
+# %LOCALAPPDATA%/csp-russian/{plugins,tools,materials}/; the path is kept
+# stable across versions so existing user backups are not stranded. In source
+# mode these constants are unused (each pipeline module's own ROOT-relative
+# paths under originals/ apply).
+PLUGINS_BACKUP    = USER_DATA / "plugins"
+TOOLS_BACKUP      = USER_DATA / "tools"
+MATERIALS_BACKUP  = USER_DATA / "materials"
+
+PIPELINES = ("main-ui", "plugins", "tools", "materials")
+
+
+# Lazy module loaders. Lazy so the wrapper itself loads even on an environment
+# where a pipeline module would sys.exit at import time (no %APPDATA% layout,
+# missing pefile in a stripped install, etc.).
 def _tools_module():
     import tools
     return tools
@@ -75,26 +121,39 @@ def _materials_module():
     import materials
     return materials
 
+
+def _plugins_module():
+    import plugins
+    return plugins
+
+
 # ----------------------------------------------------------------------
-# Paths
+# Pipeline path overrides (bundled mode only)
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "src"
-STATE_FILE = ROOT / ".lang-state.json"
+_pipelines_configured = False
 
-# Repo locations of patched builds + original snapshots.
-RUSSIAN_BUILD     = ROOT / "russian"
-RUSSIAN_PLUGINS   = ROOT / "russian-plugins"
-RUSSIAN_TOOLS     = ROOT / "russian-tools"
-RUSSIAN_MATERIALS = ROOT / "russian-materials"
 
-PLUGINS_BACKUP    = ROOT / "plugins"
-TOOLS_BACKUP      = ROOT / "tools"
-MATERIALS_BACKUP  = ROOT / "materials"
-
-ENGLISH_STOCK     = ROOT / "resource" / "english"
-
-PIPELINES = ("main-ui", "plugins", "tools", "materials")
+def _configure_pipelines() -> None:
+    """In bundled mode, point each pipeline module's path constants at the
+    right places: russian build inside the read-only bundle, backups in
+    %LOCALAPPDATA%. In source mode this is a no-op (their own ROOT-relative
+    paths are already correct)."""
+    global _pipelines_configured
+    if _pipelines_configured or not FROZEN:
+        _pipelines_configured = True
+        return
+    install.ROOT = DATA_ROOT
+    install.ORIGINALS_DIR = DATA_ROOT / "resource"
+    p = _plugins_module()
+    p.PLUGINS_DIR = PLUGINS_BACKUP
+    p.BUILD_DIR = RUSSIAN_PLUGINS
+    t = _tools_module()
+    t.TOOLS_DIR = TOOLS_BACKUP
+    t.BUILD_DIR = RUSSIAN_TOOLS
+    m = _materials_module()
+    m.MATERIALS_DIR = MATERIALS_BACKUP
+    m.BUILD_DIR = RUSSIAN_MATERIALS
+    _pipelines_configured = True
 
 
 # ----------------------------------------------------------------------
@@ -113,6 +172,7 @@ def load_state() -> dict:
 
 
 def save_state(state: dict) -> None:
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
     STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
 
 
@@ -169,32 +229,25 @@ def fingerprint_files(files: list[Path]) -> str | None:
 
 
 # ----------------------------------------------------------------------
-# Per-pipeline locators (read-only — used by status + fingerprinting)
+# Per-pipeline locators (read-only -- used by status + fingerprinting)
 #
 # We deliberately reuse the per-pipeline scripts' own path resolvers, so the
 # wrapper can't drift from what they actually read and write.
 # ----------------------------------------------------------------------
 def main_ui_install_dir(csp: str | None, slot: str) -> Path:
-    """The CSP slot we overwrite for the main UI (e.g. resource/english)."""
     return install.find_csp_resource(csp) / slot
 
 
 def main_ui_resource_files(folder: Path) -> list[Path]:
-    """GUID-named resource files in `folder` -- the only files install.py
-    copies. Stray Thumbs.db etc. are ignored so they cannot poison hashing."""
     return install.resource_files(folder)
 
 
 def plugin_install_dir(csp: str | None) -> Path:
     res = install.find_csp_resource(csp)
-    # res = <csp>/resource ; plug-ins live at <csp>/PlugIn/PAINT
     return res.parent / "PlugIn" / "PAINT"
 
 
 def tool_install_files(csp: str | None) -> list[Path]:
-    """Every name-bearing tool DB that tools.py would patch, across both the
-    install seed and the per-user working copy. Returns [] if either root is
-    missing -- status should keep working on a partial setup."""
     try:
         t = _tools_module()
         out: list[Path] = []
@@ -207,8 +260,6 @@ def tool_install_files(csp: str | None) -> list[Path]:
 
 
 def material_install_files() -> list[Path]:
-    """The catalog DB + every per-pack catalog.xml / catalogMaterial.cac that
-    materials.py would patch. Returns [] if the user data tree is missing."""
     try:
         m = _materials_module()
         out: list[Path] = []
@@ -226,8 +277,17 @@ def material_install_files() -> list[Path]:
 
 
 # ----------------------------------------------------------------------
-# Pipeline definitions
+# Pipeline plumbing
 # ----------------------------------------------------------------------
+def _pipe_args(**kwargs) -> argparse.Namespace:
+    """An argparse.Namespace with the defaults every pipeline cmd_* expects.
+    `yes=True` because the wrapper does its own confirmation at the top."""
+    defaults = dict(csp=None, dry_run=False, yes=True, force=False,
+                    keep_open=False)
+    defaults.update(kwargs)
+    return argparse.Namespace(**defaults)
+
+
 def _files_equal(slot_dir: Path, ref_dir: Path,
                  names: set[str]) -> bool | None:
     """True iff every `name` exists in both folders with identical content.
@@ -255,9 +315,8 @@ class Pipeline:
     install location -- which is used only as the cache key (drift detection),
     never as the truth source for which state we're in."""
 
-    def __init__(self, name: str, script: str):
+    def __init__(self, name: str):
         self.name = name
-        self.script = SRC / script
 
     def install_fingerprint(self, csp: str | None) -> str | None:
         raise NotImplementedError
@@ -271,11 +330,7 @@ class Pipeline:
 
 class MainUIPipeline(Pipeline):
     """Main UI bundles. `resource/english/` (stock) is `original`;
-    `russian/` (the patched build, a 32-file subset of the 39 stock files) is
-    `russian`. We compare only the GUID-named files install.py copies --
-    Thumbs.db etc. would otherwise poison hashing -- and only on the
-    intersection with the reference, since the russian build is a strict
-    subset of the english stock."""
+    `russian/` (a 32-file subset of the 39 stock files) is `russian`."""
 
     def install_fingerprint(self, csp):
         return fingerprint_files(
@@ -289,12 +344,12 @@ class MainUIPipeline(Pipeline):
 
     def switch_to(self, target, csp, dry_run):
         target_lang = "russian" if target == "russian" else "english"
-        _run_pipeline(self.script, target_lang, csp=csp, dry_run=dry_run)
+        install.cmd_install(_pipe_args(
+            target=target_lang, slot="english", csp=csp, dry_run=dry_run))
 
 
 class PluginsPipeline(Pipeline):
-    """Filter-menu plug-in DLLs. The backup in `plugins/` is `original`;
-    the patched build in `russian-plugins/` is `russian`."""
+    """Filter-menu plug-in DLLs."""
 
     def install_fingerprint(self, csp):
         return fingerprint_dir(plugin_install_dir(csp), ("*.dll",))
@@ -306,23 +361,25 @@ class PluginsPipeline(Pipeline):
         return _files_equal(slot, ref, ref_names)
 
     def switch_to(self, target, csp, dry_run):
+        p = _plugins_module()
         if target == "russian":
-            _ensure_backup(self.script, PLUGINS_BACKUP, "*.dll",
-                           label="plug-in", dry_run=dry_run)
-            _run_pipeline(self.script, "install", csp=csp, dry_run=dry_run)
+            self._ensure_backup(dry_run)
+            p.cmd_install(_pipe_args(csp=csp, dry_run=dry_run))
         else:
-            _run_pipeline(self.script, "restore", csp=csp, dry_run=dry_run)
+            p.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
+
+    def _ensure_backup(self, dry_run):
+        p = _plugins_module()
+        if p.PLUGINS_DIR.is_dir() and any(p.PLUGINS_DIR.glob("*.dll")):
+            return
+        print(f"\n(no plug-in backup at {p.PLUGINS_DIR} -- snapshotting first)")
+        p.cmd_backup(_pipe_args(dry_run=dry_run))
 
 
 class ToolsPipeline(Pipeline):
-    """Tool-palette SQLite DBs across two roots (install seed + per-user data).
-    tools.py preserves each file's relpath under the backup tag (`install/`
-    vs `userdata/`), so the backup root mirrors the live tree.
-
-    State detection only compares the *install seed* (tag `install`). The
-    per-user `userdata` working copy is mutated by CSP at runtime, so it
-    diverges from any reference within minutes of running CSP -- byte-
-    equality there is unreliable. Patching still covers both roots."""
+    """Tool-palette SQLite DBs (install seed + per-user data). State detection
+    only compares the *install seed* -- the per-user copy is mutated by CSP at
+    runtime so byte-equality there is unreliable. Patching still covers both."""
 
     def install_fingerprint(self, csp):
         return fingerprint_files(tool_install_files(csp))
@@ -351,23 +408,25 @@ class ToolsPipeline(Pipeline):
             return None
 
     def switch_to(self, target, csp, dry_run):
+        t = _tools_module()
         if target == "russian":
-            _ensure_backup(self.script, TOOLS_BACKUP, "*.sqlite",
-                           label="tool DB", dry_run=dry_run, recursive=True)
-            _run_pipeline(self.script, "install", csp=csp, dry_run=dry_run)
+            self._ensure_backup(dry_run, csp)
+            t.cmd_install(_pipe_args(csp=csp, dry_run=dry_run))
         else:
-            _run_pipeline(self.script, "restore", csp=csp, dry_run=dry_run)
+            t.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
+
+    def _ensure_backup(self, dry_run, csp):
+        t = _tools_module()
+        if t.TOOLS_DIR.is_dir() and any(p.is_file() for p in t.TOOLS_DIR.rglob("*")):
+            return
+        print(f"\n(no tool-DB backup at {t.TOOLS_DIR} -- snapshotting first)")
+        t.cmd_backup(_pipe_args(csp=csp, dry_run=dry_run))
 
 
 class MaterialsPipeline(Pipeline):
-    """Material catalog: a single .cmdb plus per-pack catalog.xml / .cac files.
-    materials.py mirrors the live tree under `materials/`.
-
-    State detection only compares the per-pack files (`catalog.xml`,
-    `catalogMaterial.cac`) -- they are static after install. The top-level
-    CatalogMaterial.cmdb is mutated by CSP at runtime (favourites, recent,
-    user-added materials) and would make byte-equality fail. Patching still
-    covers the .cmdb too."""
+    """Material catalog: .cmdb + per-pack catalog.xml / .cac files. State
+    detection compares the per-pack files only -- the .cmdb is mutated by CSP
+    at runtime. Patching still covers the .cmdb."""
 
     def install_fingerprint(self, csp):
         return fingerprint_files(material_install_files())
@@ -378,8 +437,6 @@ class MaterialsPipeline(Pipeline):
             ref_root = RUSSIAN_MATERIALS if state == "russian" else MATERIALS_BACKUP
             if not ref_root.is_dir():
                 return None
-            # materials.py stores pack files at <root>/<CATALOG>/<pack-relpath>/<file>,
-            # where pack-relpath is relative to common_dir()/Material/.
             md = m.material_dir()
             packs = m.live_packs()
             if not packs:
@@ -402,55 +459,29 @@ class MaterialsPipeline(Pipeline):
             return None
 
     def switch_to(self, target, csp, dry_run):
+        m = _materials_module()
         if target == "russian":
-            _ensure_backup(self.script, MATERIALS_BACKUP, "*",
-                           label="material DB", dry_run=dry_run, recursive=True)
-            _run_pipeline(self.script, "install", csp=csp, dry_run=dry_run)
+            self._ensure_backup(dry_run)
+            m.cmd_install(_pipe_args(dry_run=dry_run))
         else:
-            _run_pipeline(self.script, "restore", csp=csp, dry_run=dry_run)
+            m.cmd_restore(_pipe_args(dry_run=dry_run))
+
+    def _ensure_backup(self, dry_run):
+        m = _materials_module()
+        if m.MATERIALS_DIR.is_dir() and any(
+                p.is_file() for p in m.MATERIALS_DIR.rglob("*")):
+            return
+        print(f"\n(no material backup at {m.MATERIALS_DIR} -- snapshotting first)")
+        m.cmd_backup(_pipe_args(dry_run=dry_run))
 
 
 def all_pipelines() -> dict[str, Pipeline]:
     return {
-        "main-ui":   MainUIPipeline("main-ui", "install.py"),
-        "plugins":   PluginsPipeline("plugins", "plugins.py"),
-        "tools":     ToolsPipeline("tools", "tools.py"),
-        "materials": MaterialsPipeline("materials", "materials.py"),
+        "main-ui":   MainUIPipeline("main-ui"),
+        "plugins":   PluginsPipeline("plugins"),
+        "tools":     ToolsPipeline("tools"),
+        "materials": MaterialsPipeline("materials"),
     }
-
-
-# ----------------------------------------------------------------------
-# Subprocess plumbing
-# ----------------------------------------------------------------------
-def _run_pipeline(script: Path, *cmd_args: str, csp: str | None,
-                  dry_run: bool) -> None:
-    """Invoke `python <script> <cmd_args> --yes [--csp DIR] [--dry-run]`,
-    inheriting our stdio so the user sees the pipeline's normal output.
-
-    --yes is passed because the wrapper already confirmed at its own level.
-    Children inherit our elevation, so no extra UAC prompts."""
-    cmd: list[str] = [sys.executable, str(script), *cmd_args, "--yes"]
-    # plugins.py / tools.py / install.py accept --csp; materials.py does not.
-    # Pass --csp only to scripts that accept it.
-    if csp and script.name in ("install.py", "plugins.py", "tools.py"):
-        cmd += ["--csp", csp]
-    if dry_run:
-        cmd += ["--dry-run"]
-    print(f"\n>>> {script.name} {' '.join(cmd_args)}")
-    subprocess.run(cmd, check=True)
-
-
-def _ensure_backup(script: Path, backup_dir: Path, glob: str, *,
-                   label: str, dry_run: bool,
-                   recursive: bool = False) -> None:
-    """If `backup_dir` has no matching files yet, run the script's `backup`
-    command to populate it. Idempotent: a second call is a no-op."""
-    if backup_dir.is_dir():
-        it = backup_dir.rglob(glob) if recursive else backup_dir.glob(glob)
-        if any(p.is_file() for p in it):
-            return
-    print(f"\n(no {label} backup found at {backup_dir} -- snapshotting first)")
-    _run_pipeline(script, "backup", csp=None, dry_run=dry_run)
 
 
 # ----------------------------------------------------------------------
@@ -458,17 +489,14 @@ def _ensure_backup(script: Path, backup_dir: Path, glob: str, *,
 # ----------------------------------------------------------------------
 def classify(pipe: Pipeline, csp: str | None,
              cached: dict | None) -> tuple[str, str | None]:
-    """Return (current_state, fingerprint).
-
-    `current_state` ∈ {`russian`, `original`, `unknown`}. The cache is used as
-    a fast path: if the on-disk fingerprint matches what the cache last saw,
-    we trust its label. Otherwise we recompute by asking the pipeline whether
-    the install matches its `russian` or `original` reference."""
+    """Return (current_state, fingerprint). `current_state` ∈ {russian, original,
+    unknown}. The cache is the fast path; if the install's fingerprint matches
+    what we saw last time, we trust the cached label. Otherwise we recompute by
+    asking each pipeline whether its install matches `russian` or `original`."""
     fp = pipe.install_fingerprint(csp)
     if cached and cached.get("fingerprint") == fp and \
             cached.get("current") in ("russian", "original"):
         return cached["current"], fp
-
     if pipe.is_state(csp, "russian") is True:
         return "russian", fp
     if pipe.is_state(csp, "original") is True:
@@ -479,31 +507,39 @@ def classify(pipe: Pipeline, csp: str | None,
 # ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
+_LABELS = {"main-ui": "main UI", "plugins": "plug-ins",
+           "tools": "tool palette", "materials": "materials"}
+
+_MARKERS = {"russian": "RU", "original": "EN", "unknown": "??"}
+
+
 def cmd_status(args) -> None:
     state = load_state()
     pipes = all_pipelines()
     cached_all = state.get("pipelines", {})
 
     print()
-    width = max(len(n) for n in pipes)
+    print("  Current state:")
+    width = max(len(_LABELS[n]) for n in pipes)
     for name, pipe in pipes.items():
         current, fp = classify(pipe, args.csp, cached_all.get(name))
-        # Refresh the cache so the user sees a consistent picture next run.
         if fp is not None:
             set_pipeline_state(state, name, current, fp)
-        marker = {"russian": "RU", "original": "ORIG", "unknown": "??"}[current]
-        print(f"  {name.ljust(width)}   {marker:<5}   ({current})")
+        label = _LABELS[name].ljust(width)
+        print(f"    {label}   {_MARKERS[current]}   ({current})")
     save_state(state)
 
-    print()
-    print("  switch:  python src/lang.py russian   |   python src/lang.py original")
+    if not FROZEN:
+        print()
+        print("  switch:  python src/lang.py russian   |   python src/lang.py original")
     print()
 
 
 def cmd_switch(args) -> None:
     target = args.target
     if target not in ("russian", "original"):
-        sys.exit(f"error: unknown target '{target}' (expected 'russian' or 'original')")
+        sys.exit(f"error: unknown target '{target}' "
+                 f"(expected 'russian' or 'original')")
 
     state = load_state()
     pipes = all_pipelines()
@@ -514,27 +550,28 @@ def cmd_switch(args) -> None:
     for name, pipe in pipes.items():
         current, _fp = classify(pipe, args.csp, cached_all.get(name))
         if current == target:
-            print(f"  {name}: already {target} -- skipping")
+            print(f"  {_LABELS[name]}: already {target} -- skipping")
         else:
             plan.append((name, pipe, current))
 
     if not plan:
-        print(f"\nall pipelines already on '{target}'. Nothing to do.")
+        print(f"\nAll subsystems already on '{target}'. Nothing to do.")
         return
 
-    print(f"\nwill switch {len(plan)} pipeline(s) to '{target}':")
+    print(f"\nWill switch {len(plan)} subsystem(s) to '{target}':")
     for name, _pipe, current in plan:
-        print(f"  - {name}  ({current} -> {target})")
+        print(f"  - {_LABELS[name]}  ({current} -> {target})")
 
     if not args.dry_run:
         install.check_csp_closed(args.force)
-        install.ensure_admin()  # one prompt, children inherit elevation
+        install.ensure_admin()  # one prompt; pipelines re-enter it as no-op
 
     for name, pipe, _current in plan:
         try:
             pipe.switch_to(target, args.csp, args.dry_run)
-        except subprocess.CalledProcessError as e:
-            sys.exit(f"\nerror: pipeline '{name}' failed (exit {e.returncode})")
+        except SystemExit as e:
+            # Pipeline modules sys.exit on errors; surface that as our own exit.
+            sys.exit(f"\nerror: subsystem '{_LABELS[name]}' failed: {e}")
 
     # Re-fingerprint everything afterwards so the cache reflects reality.
     if not args.dry_run:
@@ -544,27 +581,145 @@ def cmd_switch(args) -> None:
                 set_pipeline_state(state, name, current, fp)
         save_state(state)
 
-    print(f"\ndone -- switched to '{target}'. Restart CSP to see the change.")
+    print(f"\nDone -- switched to '{target}'. Restart CSP to see the change.")
+
+
+# ----------------------------------------------------------------------
+# Interactive menu (no-args / double-click launch)
+# ----------------------------------------------------------------------
+_BANNER = """
+=============================================================
+  Clip Studio Paint  --  Russian translation switcher
+=============================================================
+"""
+
+
+def _maybe_initial_snapshot() -> None:
+    """One-time snapshot of the user's CSP originals so 'restore' has
+    something to copy back, and so status detection works against a real
+    reference. Subsequent runs no-op -- each pipeline's `backup` command
+    skips files whose backup already exists, and refuses to overwrite a
+    saved original with a patched file."""
+    needs_msg = True
+    for label, module_loader, target_dir, has_files in [
+        ("plug-ins", _plugins_module, lambda mod: mod.PLUGINS_DIR,
+         lambda d: d.is_dir() and any(d.glob("*.dll"))),
+        ("tool palette", _tools_module, lambda mod: mod.TOOLS_DIR,
+         lambda d: d.is_dir() and any(p.is_file() for p in d.rglob("*"))),
+        ("materials", _materials_module, lambda mod: mod.MATERIALS_DIR,
+         lambda d: d.is_dir() and any(p.is_file() for p in d.rglob("*"))),
+    ]:
+        try:
+            mod = module_loader()
+        except SystemExit:
+            continue
+        if has_files(target_dir(mod)):
+            continue
+        if needs_msg:
+            print("\n  First launch: snapshotting your current CSP files so we")
+            print("  can restore them later. This may take a moment for the")
+            print("  material catalog (a few thousand small files)...\n")
+            needs_msg = False
+        try:
+            mod.cmd_backup(_pipe_args())
+        except SystemExit as e:
+            # Don't abort the whole menu over one pipeline failing to snapshot
+            # (e.g. live install already patched -- backup detects this and exits).
+            print(f"  (could not snapshot {label}: {e})")
+
+
+def cmd_menu(args) -> None:
+    _maybe_initial_snapshot()
+    while True:
+        print(_BANNER)
+
+        state = load_state()
+        pipes = all_pipelines()
+        cached_all = state.get("pipelines", {})
+
+        statuses: dict[str, str] = {}
+        print("  Current state:")
+        width = max(len(_LABELS[n]) for n in pipes)
+        for name, pipe in pipes.items():
+            current, fp = classify(pipe, args.csp, cached_all.get(name))
+            if fp is not None:
+                set_pipeline_state(state, name, current, fp)
+            statuses[name] = current
+            label = _LABELS[name].ljust(width)
+            print(f"    {label}   {_MARKERS[current]}   ({current})")
+        save_state(state)
+
+        # Summary line
+        unique = set(statuses.values())
+        if unique == {"russian"}:
+            summary = "Everything is in Russian."
+        elif unique == {"original"}:
+            summary = "Everything is in English (original)."
+        else:
+            summary = "Subsystems are in a mix of states."
+        print(f"\n  {summary}")
+
+        print()
+        print("  [1] Switch to Russian")
+        print("  [2] Restore the original (English)")
+        print("  [0] Exit")
+        print()
+
+        try:
+            choice = input("  Choose: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            return
+
+        if choice == "0" or choice.lower() in ("q", "quit", "exit"):
+            return
+        if choice in ("1", "2"):
+            target = "russian" if choice == "1" else "original"
+            args.target = target
+            # If cmd_switch needs to re-launch elevated, make the new admin
+            # process resume on the chosen target instead of the menu.
+            sys.argv = [sys.argv[0], target, "--keep-open"]
+            try:
+                cmd_switch(args)
+            except SystemExit as e:
+                print(f"\n{e}")
+            _pause()
+            # Restore for the next menu iteration.
+            sys.argv = [sys.argv[0]]
+            continue
+        print(f"\n  unknown choice: {choice!r}")
+        _pause()
+
+
+def _pause() -> None:
+    try:
+        input("\n  press Enter to continue...")
+    except EOFError:
+        pass
 
 
 # ----------------------------------------------------------------------
 # CLI
 # ----------------------------------------------------------------------
 def main(argv: list[str] | None = None) -> None:
+    raw = sys.argv[1:] if argv is None else argv
+    no_args = len(raw) == 0
+
     parser = argparse.ArgumentParser(
-        prog="lang.py",
+        prog="lang.py" if not FROZEN else "csp-russian",
         description="Switch CSP between Russian and the original install, "
-                    "across all four pipelines, in one command.",
+                    "across all four subsystems, in one command.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="examples:\n"
-               "  python src/lang.py russian      install Russian everywhere\n"
-               "  python src/lang.py original     restore the original install\n"
-               "  python src/lang.py status       show what is installed",
+               "  csp-russian russian      install Russian everywhere\n"
+               "  csp-russian original     restore the original install\n"
+               "  csp-russian status       show what is installed\n"
+               "  csp-russian              interactive menu",
     )
-    parser.add_argument("target", nargs="?", default="status",
+    parser.add_argument("target", nargs="?", default="menu",
                         metavar="TARGET",
-                        help="'russian', 'original', or 'status' "
-                             "(default: status)")
+                        help="'russian', 'original', 'status', or 'menu' "
+                             "(default: menu)")
     parser.add_argument("--csp", metavar="DIR",
                         help="CSP 'resource' folder (auto-detected if omitted)")
     parser.add_argument("--dry-run", action="store_true",
@@ -574,16 +729,29 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--keep-open", action="store_true",
                         help=argparse.SUPPRESS)
 
-    args = parser.parse_args(argv)
+    args = parser.parse_args(raw)
+
+    # `lang.py` without args = menu (the documented double-click UX).
+    # Explicit `lang.py status` = old non-interactive behaviour.
+    if no_args:
+        args.target = "menu"
+
+    _configure_pipelines()
+
     try:
-        if args.target == "status":
+        if args.target == "menu":
+            cmd_menu(args)
+        elif args.target == "status":
             cmd_status(args)
         else:
             cmd_switch(args)
     finally:
+        # Pause before closing the window when we're an elevated re-launch
+        # (single-shot, no menu loop) so the user can read the output. The
+        # menu loop pauses internally between actions, so no double-pause.
         if args.keep_open:
             try:
-                input("\npress Enter to close this window...")
+                input("\nPress Enter to close this window...")
             except EOFError:
                 pass
 

@@ -1,285 +1,285 @@
 ﻿key,source,target
-Dust.dll:7:5,Correction,Коррекция
-Dust.dll:7:6,Remove dust,Удалить пыль
-Dust.dll:7:7,Dust size,Размер пыли
-Dust.dll:7:8,Mode,Режим
-Dust.dll:7:14,Remove dust from transparency,Удалять пыль с прозрачности
-Dust.dll:7:15,Remove dust from white background,Удалять пыль с белого фона
-Dust.dll:8:0,Fill transparent gaps with surrounding color,Заполнить прозрачные области окружающим цветом
-Dust.dll:8:1,Fill transparent gaps with foreground color,Заполнить прозрачные области основным цветом
-ExportPDFX.dll:63:8,PDF format,Формат PDF
-ExportPDFX.dll:63:9,pdf,pdf
-ExportPDFX.dll:126:0,Compression,Сжатие
-ExportPDFX.dll:126:10,ZIP,ZIP
-ExportPDFX.dll:127:4,JPEG (Highest),JPEG (наивысшее)
-ExportPDFX.dll:127:5,JPEG (High),JPEG (высокое)
-ExportPDFX.dll:127:6,JPEG (Medium),JPEG (среднее)
-ExportPDFX.dll:127:7,JPEG (Low),JPEG (низкое)
-ExportPDFX.dll:127:8,JPEG (Lowest),JPEG (наименьшее)
-ExportPDFX.dll:132:4,Title,Название
-ExportPDFX.dll:138:8,Subject,Тема
-ExportPDFX.dll:144:12,Author,Автор
-ExportPDFX.dll:151:0,Keywords,Ключевые слова
-ExportPDFX.dll:157:4,Page Layout,Макет страницы
-ExportPDFX.dll:157:5,Single Page,Одна страница
-ExportPDFX.dll:157:6,Single Page Continuous,"Одна страница, непрерывно"
-ExportPDFX.dll:157:7,Two-Up,Две страницы
-ExportPDFX.dll:157:8,Two-Up Continuous,"Две страницы, непрерывно"
-ExportPSB.dll:7:5,Photoshop Big Document,Photoshop Big Document
-ExportPSB.dll:7:6,psb|psb,psb|psb
-ExportPSB.dll:7:7,Compression rate,Степень сжатия
-ExportPSB.dll:7:8,Flattened image only,Только сведённое изображение
-ExportPSB.dll:7:9,Text layer,Текстовый слой
-ExportPSB.dll:7:10,Balloon,Облачко
-ExportPSD.dll:7:5,Photoshop Document,Photoshop Document
-ExportPSD.dll:7:6,psd|psd,psd|psd
-ExportPSD.dll:7:7,Compression rate,Степень сжатия
-ExportPSD.dll:7:8,Flattened image only,Только сведённое изображение
-ExportPSD.dll:7:9,Text layer,Текстовый слой
-ExportPSD.dll:7:10,Balloon,Облачко
-FlowBasedAbstraction.dll:7:5,Effect,Эффект
-FlowBasedAbstraction.dll:7:6,Artistic,Художественный
-FlowBasedAbstraction.dll:7:7,Process,Способ обработки
-FlowBasedAbstraction.dll:7:8,Line thickness,Толщина линии
-FlowBasedAbstraction.dll:7:9,Line simplicity,Простота линий
-FlowBasedAbstraction.dll:7:10,Line density,Плотность линий
-FlowBasedAbstraction.dll:7:11,Line opacity,Непрозрачность линий
-FlowBasedAbstraction.dll:7:12,Line anti-aliasing,Сглаживание линий
-FlowBasedAbstraction.dll:7:13,Color blending,Смешивание цвета
-FlowBasedAbstraction.dll:7:14,Color blur,Размытие цвета
-FlowBasedAbstraction.dll:7:15,Number of colors,Количество цветов
-FlowBasedAbstraction.dll:8:0,Reset,Сбросить
-FlowBasedAbstraction.dll:13:9,Color and lines,Цвет и линии
-FlowBasedAbstraction.dll:13:10,Color only,Только цвет
-FlowBasedAbstraction.dll:13:11,Lines only,Только линии
-GaussBlur.dll:7:5,Blur,Размытие
-GaussBlur.dll:7:6,Gaussian blur,Размытие по Гауссу
-GaussBlur.dll:7:7,Strength,Сила
-GeometricDistortionFishEye.dll:7:5,Distort,Искажение
-GeometricDistortionFishEye.dll:7:6,Geometric distortion,Геометрическое искажение
-GeometricDistortionFishEye.dll:7:14,Distortion,Искажение
-GeometricDistortionFishEye.dll:7:15,Center,Центр
-GeometricDistortionFishEye.dll:8:0,Scale ratio,Коэффициент масштабирования
-GeometricDistortionPanorama.dll:7:5,Distort,Искажение
-GeometricDistortionPanorama.dll:7:6,Convert to Panorama,Преобразовать в панораму
-GeometricDistortionPanorama.dll:7:14,Distortion,Искажение
-GeometricDistortionPanorama.dll:7:15,Center,Центр
-GeometricDistortionPanorama.dll:8:0,Angle,Угол
-GeometricDistortionPanorama.dll:8:1,Scale ratio,Коэффициент масштабирования
-ImportPDFX.dll:63:8,PDF format,Формат PDF
-ImportPDFX.dll:63:9,pdf,pdf
-ImportPDFX.dll:126:0,Preset,Набор настроек
-ImportPDFX.dll:126:1,Custom,Пользовательский
-ImportPDFX.dll:126:2,72dpi,72dpi
-ImportPDFX.dll:126:3,144dpi,144dpi
-ImportPDFX.dll:126:4,300dpi,300dpi
-ImportPDFX.dll:126:5,350dpi,350dpi
-ImportPDFX.dll:126:6,600dpi,600dpi
-ImportPDFX.dll:126:7,1200dpi,1200dpi
-ImportPDFX.dll:132:4,Input resolution,Входное разрешение
-ImportPDFX.dll:138:8,Binding point,Точка переплёта
-ImportPDFX.dll:138:9,Left binding,Переплёт слева
-ImportPDFX.dll:138:10,Right binding,Переплёт справа
-ImportPDFX.dll:144:12,Start page,Начальная страница
-ImportPDFX.dll:144:13,From left,Слева
-ImportPDFX.dll:144:14,From right,Справа
-ImportPDFX.dll:151:0,Import annotations as image,Импортировать аннотации как изображение
-ImportPDFX.dll:626:0,Layer 1,Слой 1
-ImportPDFX.dll:1657:9,clipstudio.module.plugin.paint.pdf.import,clipstudio.module.plugin.paint.pdf.import
-ImportPSB.dll:7:5,Photoshop Big Document,Photoshop Big Document
-ImportPSB.dll:7:6,psb|psb,psb|psb
-ImportPSB.dll:7:7,Background,Фон
-ImportPSD.dll:7:5,Photoshop Document,Photoshop Document
-ImportPSD.dll:7:6,psd|psd,psd|psd
-ImportPSD.dll:7:7,Background,Фон
-LensDistortion.dll:7:5,Distort,Искажение
-LensDistortion.dll:7:6,Fish-eye lens,Объектив «рыбий глаз»
-LensDistortion.dll:7:14,Distortion,Искажение
-LensDistortion.dll:7:15,Radius,Радиус
-LensDistortion.dll:8:0,Shape,Фигура
-LensDistortion.dll:8:1,Center,Центр
-LensDistortion.dll:8:2,Area,Область
-LensDistortion.dll:8:8,Entire selection,Всё выделение
-LensDistortion.dll:8:9,Specify area (use Radius and Shape),Указать область (через радиус и форму)
-LineWidth.dll:7:5,Correction,Коррекция
-LineWidth.dll:7:6,Adjust line width,Настроить ширину линии
-LineWidth.dll:7:7,Process,Способ обработки
-LineWidth.dll:7:8,Scale,Масштаб
-LineWidth.dll:7:9,At least 1 pixel,Не менее 1 пикселя
-LineWidth.dll:7:14,Thicken,Утолщить
-LineWidth.dll:7:15,Narrow,Сузить
-Mosaic.dll:7:5,Effect,Эффект
-Mosaic.dll:7:6,Mosaic,Мозаика
-Mosaic.dll:7:7,Tile size,Размер плитки
-MotionBlur.dll:7:5,Blur,Размытие
-MotionBlur.dll:7:6,Motion blur,Размытие в движении
-MotionBlur.dll:7:7,Strength,Сила
-MotionBlur.dll:7:8,Angle,Угол
-MotionBlur.dll:7:9,Direction,Направление
-MotionBlur.dll:7:10,Mode,Режим
-MotionBlur.dll:7:14,Both directions,Оба направления
-MotionBlur.dll:7:15,Forward,Вперёд
-MotionBlur.dll:8:0,Backward,Назад
-MotionBlur.dll:8:8,Box,Прямоугольник
-MotionBlur.dll:8:9,Smooth,Сглаживание
-PencilArtFilter.dll:7:5,Effect,Эффект
-PencilArtFilter.dll:7:6,Pencil drawing,Рисунок карандашом
-PencilArtFilter.dll:13:9,Show outline,Показать контур
-PencilArtFilter.dll:19:13,Show hatching ,Показать штриховку
-PencilArtFilter.dll:19:14,Hatching size,Размер штриховки
-PencilArtFilter.dll:19:15,Hatching roughness,Грубость штриховки
-PencilArtFilter.dll:20:0,Hatching angle,Угол штриховки
-PencilArtFilter.dll:20:1,Grayscale output,Вывод в градациях серого
-PerlinNoise.dll:7:5,Render,Рендеринг
-PerlinNoise.dll:7:6,Perlin noise,Шум Перлина
-PerlinNoise.dll:7:7,Scale,Масштаб
-PerlinNoise.dll:7:8,Amplitude,Амплитуда
-PerlinNoise.dll:7:9,Attenuation,Затухание
-PerlinNoise.dll:7:10,Repetition,Повторение
-PerlinNoise.dll:7:11,Offset X,Смещение X
-PerlinNoise.dll:7:12,Offset Y,Смещение Y
-Pinch.dll:7:5,Distort,Искажение
-Pinch.dll:7:6,Pinch,Сжатие
-Pinch.dll:7:14,Strength,Сила
-Pinch.dll:7:15,Radius,Радиус
-Pinch.dll:8:0,Shape,Фигура
-Pinch.dll:8:1,Center,Центр
-Pinch.dll:8:2,Area,Область
-Pinch.dll:8:8,Entire selection,Всё выделение
-Pinch.dll:8:9,Specify area (use Radius and Shape),Указать область (через радиус и форму)
-PolarCd.dll:7:5,Distort,Искажение
-PolarCd.dll:7:6,Polar coordinates,Полярные координаты
-PolarCd.dll:7:7,Transformation method,Метод преобразования
-PolarCd.dll:7:14,Rectangular to polar,Из прямоугольных в полярные
-PolarCd.dll:7:15,Polar to rectangular,Из полярных в прямоугольные
-PolarCd.dll:8:0,Spherize,Сферизация
-RadialBlur.dll:7:5,Blur,Размытие
-RadialBlur.dll:7:6,Radial blur,Радиальное размытие
-RadialBlur.dll:7:7,Strength,Сила
-RadialBlur.dll:7:8,Direction,Направление
-RadialBlur.dll:7:9,Mode,Режим
-RadialBlur.dll:7:10,Center,Центр
-RadialBlur.dll:7:14,Both directions,Оба направления
-RadialBlur.dll:7:15,Outward,Наружу
-RadialBlur.dll:8:0,Inward,К центру
-RadialBlur.dll:8:8,Box,Прямоугольник
-RadialBlur.dll:8:9,Smooth,Сглаживание
-Sharp.dll:7:5,Sharpen,Резкость
-Sharp.dll:7:6,Sharpen,Резкость
-SharpOff.dll:7:5,Blur,Размытие
-SharpOff.dll:7:6,Blur,Размытие
-SharpOffStrong.dll:7:5,Blur,Размытие
-SharpOffStrong.dll:7:6,Blur (strong),Размытие (сильное)
-SharpStrong.dll:7:5,Sharpen,Резкость
-SharpStrong.dll:7:6,Sharpen more,Резкость (сильнее)
-SimpleWave.dll:7:5,Distort,Искажение
-SimpleWave.dll:7:6,ZigZag,Зигзаг
-SimpleWave.dll:7:14,Angle,Угол
-SimpleWave.dll:7:15,Wave height,Высота волны
-SimpleWave.dll:8:0,Number of waves,Количество волн
-Smoothing.dll:7:5,Blur,Размытие
-Smoothing.dll:7:6,Smoothing,Сглаживание
-Sphere.dll:7:5,Distort,Искажение
-Sphere.dll:7:6,Curved surface,Изогнутая поверхность
-Sphere.dll:7:14,Strength,Сила
-Sphere.dll:7:15,Method,Метод
-Sphere.dll:8:0,Angle,Угол
-Sphere.dll:8:1,Center,Центр
-Sphere.dll:8:2,Area,Область
-Sphere.dll:8:3,Radius,Радиус
-Sphere.dll:8:4,Shape,Фигура
-Sphere.dll:8:8,Sphere,Сфера
-Sphere.dll:8:9,Cylinder,Цилиндр
-Sphere.dll:8:10,Entire selection,Всё выделение
-Sphere.dll:8:11,Specify area (use Radius and Shape),Указать область (через радиус и форму)
-Spiral.dll:7:5,Distort,Искажение
-Spiral.dll:7:6,Twirl,Скручивание
-Spiral.dll:7:14,Twist,Закручивание
-Spiral.dll:7:15,Tension,Натяжение
-Spiral.dll:8:0,Radius,Радиус
-Spiral.dll:8:1,Shape,Фигура
-Spiral.dll:8:2,Center,Центр
-Spiral.dll:8:3,Area,Область
-Spiral.dll:8:8,Entire selection,Всё выделение
-Spiral.dll:8:9,Specify area (use Radius and Shape),Указать область (через радиус и форму)
-TPPAddNoise.dll:7:4,Effect,Эффект
-TPPAddNoise.dll:7:5,Noise,Шум
-TPPAddNoise.dll:13:8,Color Mode,Цветовой режим
-TPPAddNoise.dll:13:9,Color,Цвет
-TPPAddNoise.dll:13:10,Gray,Серый
-TPPAddNoise.dll:19:12,Noise strength,Сила шума
-TPPChromaticAberration.dll:7:4,Effect,Эффект
-TPPChromaticAberration.dll:7:5,Chromatic aberration,Хроматическая аберрация
-TPPChromaticAberration.dll:13:8,Mode,Режим
-TPPChromaticAberration.dll:13:9,Radial (use center point),Радиальная (по центральной точке)
-TPPChromaticAberration.dll:13:10,Lateral (use Angle),Боковая (по углу)
-TPPChromaticAberration.dll:19:12,Intensity,Интенсивность
-TPPChromaticAberration.dll:26:0,Angle,Угол
-TPPChromaticAberration.dll:32:4,Center of chromatic aberration,Центр хроматической аберрации
-TPPFilmCameraStyle.dll:7:4,Effect,Эффект
-TPPFilmCameraStyle.dll:7:5,Retro film,Ретро-плёнка
-TPPFilmCameraStyle.dll:19:12,Intensity,Интенсивность
-TPPFilmCameraStyle.dll:32:4,Center of chromatic aberration,Центр хроматической аберрации
-TPPFilmCameraStyle.dll:38:8,Noise strength,Сила шума
-TPPFilmCameraStyle.dll:44:12,Effect,Эффект
-TPPFilmCameraStyle.dll:44:13,None,Нет
-TPPFilmCameraStyle.dll:44:14,Sepia,Сепия
-TPPFilmCameraStyle.dll:44:15,Light leak (slant),Засветка (под углом)
-TPPFilmCameraStyle.dll:45:0,Light leak (all),Засветка (вся)
-TPPFilmCameraStyle.dll:45:1,Sepia + Light leak (slant),Сепия + засветка (под углом)
-TPPFilmCameraStyle.dll:45:2,Sepia + Light leak (all),Сепия + засветка (вся)
-TPPFilmCameraStyle.dll:51:0,Preset,Набор настроек
-TPPFilmCameraStyle.dll:51:1,Vintage,Винтаж
-TPPFilmCameraStyle.dll:51:2,Modern,Современный
-TPPFilmCameraStyle.dll:51:3,Warm,Тёплый
-TPPFilmCameraStyle.dll:51:4,None,Нет
-TPPNormalMap.dll:7:4,Effect,Эффект
-TPPNormalMap.dll:7:5,Normal map,Карта нормалей
-TPPNormalMap.dll:13:8,Strength,Сила
-TPPNormalMap.dll:19:12,Y orientation,Ориентация Y
-TPPNormalMap.dll:19:13,Y up (CLIP STUDIO 3D standard format),Y вверх (стандартный формат CLIP STUDIO 3D)
-TPPNormalMap.dll:19:14,Y down,Y вниз
-TPPRotationBlur.dll:7:4,Blur,Размытие
-TPPRotationBlur.dll:7:5,Spin blur,Вращательное размытие
-TPPRotationBlur.dll:13:8,Strength,Сила
-TPPRotationBlur.dll:19:12,Direction,Направление
-TPPRotationBlur.dll:19:13,Rotate right,Повернуть вправо
-TPPRotationBlur.dll:19:14,Rotate left,Повернуть влево
-TPPRotationBlur.dll:19:15,Both directions,Оба направления
-TPPRotationBlur.dll:26:0,Shape,Фигура
-TPPRotationBlur.dll:32:4,Tilt,Наклон
-TPPRotationBlur.dll:38:8,Center point,Центральная точка
-TPReduceNoiseFilter.dll:7:5,Effect,Эффект
-TPReduceNoiseFilter.dll:7:6,Remove jpeg noise,Удалить шум JPEG
-UnSharpMask.dll:7:5,Sharpen,Резкость
-UnSharpMask.dll:7:6,Unsharp mask,Контурная резкость
-UnSharpMask.dll:7:7,Radius,Радиус
-UnSharpMask.dll:7:8,Strength,Сила
-UnSharpMask.dll:7:9,Threshold,Порог
-Waveform.dll:7:5,Distort,Искажение
-Waveform.dll:7:6,Wave,Волна
-Waveform.dll:7:14,Shape,Фигура
-Waveform.dll:7:15,Number of waves,Количество волн
-Waveform.dll:8:0,Wavelength (Minimum),Длина волны (минимум)
-Waveform.dll:8:1,Wavelength (Maximum),Длина волны (максимум)
-Waveform.dll:8:2,Amplitude (Minimum),Амплитуда (минимум)
-Waveform.dll:8:3,Amplitude (Maximum),Амплитуда (максимум)
-Waveform.dll:8:4,Horizontal ratio,Горизонтальное соотношение
-Waveform.dll:8:5,Vertical ratio,Вертикальное соотношение
-Waveform.dll:8:6,Undefined areas,Неопределённые области
-Waveform.dll:8:7,Regenerate,Создать заново
-Waveform.dll:8:8,Sine,Синусоида
-Waveform.dll:8:9,Triangle,Треугольник
-Waveform.dll:8:10,Rectangular,Прямоугольная
-Waveform.dll:8:11,Wrap around,Заворачивать
-Waveform.dll:8:12,Repeat edge pixels,Повторять краевые пиксели
-Zigzag.dll:7:5,Distort,Искажение
-Zigzag.dll:7:6,Ripple,Рябь
-Zigzag.dll:7:14,Rotation,Поворот
-Zigzag.dll:7:15,Number of waves,Количество волн
-Zigzag.dll:8:0,Center,Центр
-Zigzag.dll:8:1,Area,Область
-Zigzag.dll:8:2,Radius,Радиус
-Zigzag.dll:8:3,Shape,Фигура
-Zigzag.dll:8:8,Entire selection,Всё выделение
-Zigzag.dll:8:9,Specify area (use Radius and Shape),Указать область (через радиус и форму)
+Dust.dll:7:5,Correction,
+Dust.dll:7:6,Remove dust,
+Dust.dll:7:7,Dust size,
+Dust.dll:7:8,Mode,
+Dust.dll:7:14,Remove dust from transparency,
+Dust.dll:7:15,Remove dust from white background,
+Dust.dll:8:0,Fill transparent gaps with surrounding color,
+Dust.dll:8:1,Fill transparent gaps with foreground color,
+ExportPDFX.dll:63:8,PDF format,
+ExportPDFX.dll:63:9,pdf,
+ExportPDFX.dll:126:0,Compression,
+ExportPDFX.dll:126:10,ZIP,
+ExportPDFX.dll:127:4,JPEG (Highest),
+ExportPDFX.dll:127:5,JPEG (High),
+ExportPDFX.dll:127:6,JPEG (Medium),
+ExportPDFX.dll:127:7,JPEG (Low),
+ExportPDFX.dll:127:8,JPEG (Lowest),
+ExportPDFX.dll:132:4,Title,
+ExportPDFX.dll:138:8,Subject,
+ExportPDFX.dll:144:12,Author,
+ExportPDFX.dll:151:0,Keywords,
+ExportPDFX.dll:157:4,Page Layout,
+ExportPDFX.dll:157:5,Single Page,
+ExportPDFX.dll:157:6,Single Page Continuous,
+ExportPDFX.dll:157:7,Two-Up,
+ExportPDFX.dll:157:8,Two-Up Continuous,
+ExportPSB.dll:7:5,Photoshop Big Document,
+ExportPSB.dll:7:6,psb|psb,
+ExportPSB.dll:7:7,Compression rate,
+ExportPSB.dll:7:8,Flattened image only,
+ExportPSB.dll:7:9,Text layer,
+ExportPSB.dll:7:10,Balloon,
+ExportPSD.dll:7:5,Photoshop Document,
+ExportPSD.dll:7:6,psd|psd,
+ExportPSD.dll:7:7,Compression rate,
+ExportPSD.dll:7:8,Flattened image only,
+ExportPSD.dll:7:9,Text layer,
+ExportPSD.dll:7:10,Balloon,
+FlowBasedAbstraction.dll:7:5,Effect,
+FlowBasedAbstraction.dll:7:6,Artistic,
+FlowBasedAbstraction.dll:7:7,Process,
+FlowBasedAbstraction.dll:7:8,Line thickness,
+FlowBasedAbstraction.dll:7:9,Line simplicity,
+FlowBasedAbstraction.dll:7:10,Line density,
+FlowBasedAbstraction.dll:7:11,Line opacity,
+FlowBasedAbstraction.dll:7:12,Line anti-aliasing,
+FlowBasedAbstraction.dll:7:13,Color blending,
+FlowBasedAbstraction.dll:7:14,Color blur,
+FlowBasedAbstraction.dll:7:15,Number of colors,
+FlowBasedAbstraction.dll:8:0,Reset,
+FlowBasedAbstraction.dll:13:9,Color and lines,
+FlowBasedAbstraction.dll:13:10,Color only,
+FlowBasedAbstraction.dll:13:11,Lines only,
+GaussBlur.dll:7:5,Blur,
+GaussBlur.dll:7:6,Gaussian blur,
+GaussBlur.dll:7:7,Strength,
+GeometricDistortionFishEye.dll:7:5,Distort,
+GeometricDistortionFishEye.dll:7:6,Geometric distortion,
+GeometricDistortionFishEye.dll:7:14,Distortion,
+GeometricDistortionFishEye.dll:7:15,Center,
+GeometricDistortionFishEye.dll:8:0,Scale ratio,
+GeometricDistortionPanorama.dll:7:5,Distort,
+GeometricDistortionPanorama.dll:7:6,Convert to Panorama,
+GeometricDistortionPanorama.dll:7:14,Distortion,
+GeometricDistortionPanorama.dll:7:15,Center,
+GeometricDistortionPanorama.dll:8:0,Angle,
+GeometricDistortionPanorama.dll:8:1,Scale ratio,
+ImportPDFX.dll:63:8,PDF format,
+ImportPDFX.dll:63:9,pdf,
+ImportPDFX.dll:126:0,Preset,
+ImportPDFX.dll:126:1,Custom,
+ImportPDFX.dll:126:2,72dpi,
+ImportPDFX.dll:126:3,144dpi,
+ImportPDFX.dll:126:4,300dpi,
+ImportPDFX.dll:126:5,350dpi,
+ImportPDFX.dll:126:6,600dpi,
+ImportPDFX.dll:126:7,1200dpi,
+ImportPDFX.dll:132:4,Input resolution,
+ImportPDFX.dll:138:8,Binding point,
+ImportPDFX.dll:138:9,Left binding,
+ImportPDFX.dll:138:10,Right binding,
+ImportPDFX.dll:144:12,Start page,
+ImportPDFX.dll:144:13,From left,
+ImportPDFX.dll:144:14,From right,
+ImportPDFX.dll:151:0,Import annotations as image,
+ImportPDFX.dll:626:0,Layer 1,
+ImportPDFX.dll:1657:9,clipstudio.module.plugin.paint.pdf.import,
+ImportPSB.dll:7:5,Photoshop Big Document,
+ImportPSB.dll:7:6,psb|psb,
+ImportPSB.dll:7:7,Background,
+ImportPSD.dll:7:5,Photoshop Document,
+ImportPSD.dll:7:6,psd|psd,
+ImportPSD.dll:7:7,Background,
+LensDistortion.dll:7:5,Distort,
+LensDistortion.dll:7:6,Fish-eye lens,
+LensDistortion.dll:7:14,Distortion,
+LensDistortion.dll:7:15,Radius,
+LensDistortion.dll:8:0,Shape,
+LensDistortion.dll:8:1,Center,
+LensDistortion.dll:8:2,Area,
+LensDistortion.dll:8:8,Entire selection,
+LensDistortion.dll:8:9,Specify area (use Radius and Shape),
+LineWidth.dll:7:5,Correction,
+LineWidth.dll:7:6,Adjust line width,
+LineWidth.dll:7:7,Process,
+LineWidth.dll:7:8,Scale,
+LineWidth.dll:7:9,At least 1 pixel,
+LineWidth.dll:7:14,Thicken,
+LineWidth.dll:7:15,Narrow,
+Mosaic.dll:7:5,Effect,
+Mosaic.dll:7:6,Mosaic,
+Mosaic.dll:7:7,Tile size,
+MotionBlur.dll:7:5,Blur,
+MotionBlur.dll:7:6,Motion blur,
+MotionBlur.dll:7:7,Strength,
+MotionBlur.dll:7:8,Angle,
+MotionBlur.dll:7:9,Direction,
+MotionBlur.dll:7:10,Mode,
+MotionBlur.dll:7:14,Both directions,
+MotionBlur.dll:7:15,Forward,
+MotionBlur.dll:8:0,Backward,
+MotionBlur.dll:8:8,Box,
+MotionBlur.dll:8:9,Smooth,
+PencilArtFilter.dll:7:5,Effect,
+PencilArtFilter.dll:7:6,Pencil drawing,
+PencilArtFilter.dll:13:9,Show outline,
+PencilArtFilter.dll:19:13,Show hatching ,
+PencilArtFilter.dll:19:14,Hatching size,
+PencilArtFilter.dll:19:15,Hatching roughness,
+PencilArtFilter.dll:20:0,Hatching angle,
+PencilArtFilter.dll:20:1,Grayscale output,
+PerlinNoise.dll:7:5,Render,
+PerlinNoise.dll:7:6,Perlin noise,
+PerlinNoise.dll:7:7,Scale,
+PerlinNoise.dll:7:8,Amplitude,
+PerlinNoise.dll:7:9,Attenuation,
+PerlinNoise.dll:7:10,Repetition,
+PerlinNoise.dll:7:11,Offset X,
+PerlinNoise.dll:7:12,Offset Y,
+Pinch.dll:7:5,Distort,
+Pinch.dll:7:6,Pinch,
+Pinch.dll:7:14,Strength,
+Pinch.dll:7:15,Radius,
+Pinch.dll:8:0,Shape,
+Pinch.dll:8:1,Center,
+Pinch.dll:8:2,Area,
+Pinch.dll:8:8,Entire selection,
+Pinch.dll:8:9,Specify area (use Radius and Shape),
+PolarCd.dll:7:5,Distort,
+PolarCd.dll:7:6,Polar coordinates,
+PolarCd.dll:7:7,Transformation method,
+PolarCd.dll:7:14,Rectangular to polar,
+PolarCd.dll:7:15,Polar to rectangular,
+PolarCd.dll:8:0,Spherize,
+RadialBlur.dll:7:5,Blur,
+RadialBlur.dll:7:6,Radial blur,
+RadialBlur.dll:7:7,Strength,
+RadialBlur.dll:7:8,Direction,
+RadialBlur.dll:7:9,Mode,
+RadialBlur.dll:7:10,Center,
+RadialBlur.dll:7:14,Both directions,
+RadialBlur.dll:7:15,Outward,
+RadialBlur.dll:8:0,Inward,
+RadialBlur.dll:8:8,Box,
+RadialBlur.dll:8:9,Smooth,
+Sharp.dll:7:5,Sharpen,
+Sharp.dll:7:6,Sharpen,
+SharpOff.dll:7:5,Blur,
+SharpOff.dll:7:6,Blur,
+SharpOffStrong.dll:7:5,Blur,
+SharpOffStrong.dll:7:6,Blur (strong),
+SharpStrong.dll:7:5,Sharpen,
+SharpStrong.dll:7:6,Sharpen more,
+SimpleWave.dll:7:5,Distort,
+SimpleWave.dll:7:6,ZigZag,
+SimpleWave.dll:7:14,Angle,
+SimpleWave.dll:7:15,Wave height,
+SimpleWave.dll:8:0,Number of waves,
+Smoothing.dll:7:5,Blur,
+Smoothing.dll:7:6,Smoothing,
+Sphere.dll:7:5,Distort,
+Sphere.dll:7:6,Curved surface,
+Sphere.dll:7:14,Strength,
+Sphere.dll:7:15,Method,
+Sphere.dll:8:0,Angle,
+Sphere.dll:8:1,Center,
+Sphere.dll:8:2,Area,
+Sphere.dll:8:3,Radius,
+Sphere.dll:8:4,Shape,
+Sphere.dll:8:8,Sphere,
+Sphere.dll:8:9,Cylinder,
+Sphere.dll:8:10,Entire selection,
+Sphere.dll:8:11,Specify area (use Radius and Shape),
+Spiral.dll:7:5,Distort,
+Spiral.dll:7:6,Twirl,
+Spiral.dll:7:14,Twist,
+Spiral.dll:7:15,Tension,
+Spiral.dll:8:0,Radius,
+Spiral.dll:8:1,Shape,
+Spiral.dll:8:2,Center,
+Spiral.dll:8:3,Area,
+Spiral.dll:8:8,Entire selection,
+Spiral.dll:8:9,Specify area (use Radius and Shape),
+TPPAddNoise.dll:7:4,Effect,
+TPPAddNoise.dll:7:5,Noise,
+TPPAddNoise.dll:13:8,Color Mode,
+TPPAddNoise.dll:13:9,Color,
+TPPAddNoise.dll:13:10,Gray,
+TPPAddNoise.dll:19:12,Noise strength,
+TPPChromaticAberration.dll:7:4,Effect,
+TPPChromaticAberration.dll:7:5,Chromatic aberration,
+TPPChromaticAberration.dll:13:8,Mode,
+TPPChromaticAberration.dll:13:9,Radial (use center point),
+TPPChromaticAberration.dll:13:10,Lateral (use Angle),
+TPPChromaticAberration.dll:19:12,Intensity,
+TPPChromaticAberration.dll:26:0,Angle,
+TPPChromaticAberration.dll:32:4,Center of chromatic aberration,
+TPPFilmCameraStyle.dll:7:4,Effect,
+TPPFilmCameraStyle.dll:7:5,Retro film,
+TPPFilmCameraStyle.dll:19:12,Intensity,
+TPPFilmCameraStyle.dll:32:4,Center of chromatic aberration,
+TPPFilmCameraStyle.dll:38:8,Noise strength,
+TPPFilmCameraStyle.dll:44:12,Effect,
+TPPFilmCameraStyle.dll:44:13,None,
+TPPFilmCameraStyle.dll:44:14,Sepia,
+TPPFilmCameraStyle.dll:44:15,Light leak (slant),
+TPPFilmCameraStyle.dll:45:0,Light leak (all),
+TPPFilmCameraStyle.dll:45:1,Sepia + Light leak (slant),
+TPPFilmCameraStyle.dll:45:2,Sepia + Light leak (all),
+TPPFilmCameraStyle.dll:51:0,Preset,
+TPPFilmCameraStyle.dll:51:1,Vintage,
+TPPFilmCameraStyle.dll:51:2,Modern,
+TPPFilmCameraStyle.dll:51:3,Warm,
+TPPFilmCameraStyle.dll:51:4,None,
+TPPNormalMap.dll:7:4,Effect,
+TPPNormalMap.dll:7:5,Normal map,
+TPPNormalMap.dll:13:8,Strength,
+TPPNormalMap.dll:19:12,Y orientation,
+TPPNormalMap.dll:19:13,Y up (CLIP STUDIO 3D standard format),
+TPPNormalMap.dll:19:14,Y down,
+TPPRotationBlur.dll:7:4,Blur,
+TPPRotationBlur.dll:7:5,Spin blur,
+TPPRotationBlur.dll:13:8,Strength,
+TPPRotationBlur.dll:19:12,Direction,
+TPPRotationBlur.dll:19:13,Rotate right,
+TPPRotationBlur.dll:19:14,Rotate left,
+TPPRotationBlur.dll:19:15,Both directions,
+TPPRotationBlur.dll:26:0,Shape,
+TPPRotationBlur.dll:32:4,Tilt,
+TPPRotationBlur.dll:38:8,Center point,
+TPReduceNoiseFilter.dll:7:5,Effect,
+TPReduceNoiseFilter.dll:7:6,Remove jpeg noise,
+UnSharpMask.dll:7:5,Sharpen,
+UnSharpMask.dll:7:6,Unsharp mask,
+UnSharpMask.dll:7:7,Radius,
+UnSharpMask.dll:7:8,Strength,
+UnSharpMask.dll:7:9,Threshold,
+Waveform.dll:7:5,Distort,
+Waveform.dll:7:6,Wave,
+Waveform.dll:7:14,Shape,
+Waveform.dll:7:15,Number of waves,
+Waveform.dll:8:0,Wavelength (Minimum),
+Waveform.dll:8:1,Wavelength (Maximum),
+Waveform.dll:8:2,Amplitude (Minimum),
+Waveform.dll:8:3,Amplitude (Maximum),
+Waveform.dll:8:4,Horizontal ratio,
+Waveform.dll:8:5,Vertical ratio,
+Waveform.dll:8:6,Undefined areas,
+Waveform.dll:8:7,Regenerate,
+Waveform.dll:8:8,Sine,
+Waveform.dll:8:9,Triangle,
+Waveform.dll:8:10,Rectangular,
+Waveform.dll:8:11,Wrap around,
+Waveform.dll:8:12,Repeat edge pixels,
+Zigzag.dll:7:5,Distort,
+Zigzag.dll:7:6,Ripple,
+Zigzag.dll:7:14,Rotation,
+Zigzag.dll:7:15,Number of waves,
+Zigzag.dll:8:0,Center,
+Zigzag.dll:8:1,Area,
+Zigzag.dll:8:2,Radius,
+Zigzag.dll:8:3,Shape,
+Zigzag.dll:8:8,Entire selection,
+Zigzag.dll:8:9,Specify area (use Radius and Shape),

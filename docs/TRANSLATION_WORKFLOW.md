@@ -146,7 +146,7 @@ worksheet into memory before writing, so a crash mid-write can't destroy it.
 python src/batch.py pack <id>        # one file, or `pack-all` for every file
 ```
 
-`pack` runs `repack.py apply` (writes the patched file to `russian/<GUID>`)
+`pack` runs `repack.py apply` (writes the patched file to `russian/ui/<GUID>`)
 **and** the `roundtrip.py` byte-for-byte check on the output, in one step.
 Both must pass.
 

@@ -132,25 +132,27 @@ A 5-command pipeline, the Tool-palette counterpart of `plugins.py`. Run from the
 repo root:
 
 ```
-python src/tools.py backup     copy the seed + user-data tool DBs -> tools/
+python src/tools.py backup     copy the seed + user-data tool DBs -> originals/tools/
 python src/tools.py extract    distinct tool names                -> translation/tools.csv
 # ... translate the `target` column of tools.csv ...
-python src/tools.py apply      write patched DBs                  -> russian-tools/
+python src/tools.py apply      write patched DBs                  -> russian/tools/
 python src/tools.py install    copy patched DBs back into seed + user data
 python src/tools.py restore    copy the originals back
 ```
 
-* **`tools/`** — the original DBs; the repo's only backup of them. Gitignored.
-  Laid out `tools/<tag>/<relpath>` where `<tag>` is `install` (the seed) or
-  `userdata`, recording where each DB must be copied back to.
-* **`russian-tools/`** — the patched build, output of `apply`, same layout.
+* **`originals/tools/`** — the original DBs; the repo's only backup of them.
+  Gitignored. Laid out `originals/tools/<tag>/<relpath>` where `<tag>` is
+  `install` (the seed) or `userdata`, recording where each DB must be copied
+  back to.
+* **`russian/tools/`** — the patched build, output of `apply`, same layout.
   Gitignored.
 * **`translation/tools.csv`** — the dictionary worksheet (`source,japanese,
   target`). Tracked in git. Edit `target`, re-run `apply`. Re-running `extract`
   **preserves** existing `target` values, matched by `source`.
 * `install` / `restore` write the seed into `C:\Program Files` (self-elevate via
-  a UAC prompt, reusing `install.py`) and the user-data DBs into `%APPDATA%`;
-  both refuse to run while CSP is open (CSP locks the SQLite files).
+  a UAC prompt, shared with `install.py`) and the user-data DBs into
+  `%APPDATA%`; both refuse to run while CSP is open (CSP locks the SQLite
+  files).
 
 Safeguards: `apply` round-trip-checks every DB (re-reads each patched node and
 asserts `NodeName` equals the target). `backup` never overwrites a saved

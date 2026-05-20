@@ -48,14 +48,24 @@ No external dependencies (standard library only).
 from __future__ import annotations
 
 import argparse
-import ctypes
 import filecmp
-import os
 import re
 import shutil
-import subprocess
 import sys
 from pathlib import Path
+
+# Cross-pipeline helpers (originally defined here; now shared in common.py).
+# Re-imported into install's namespace so external callers using
+# `install.find_csp_resource` etc. continue to work as a stable facade.
+from common import (
+    CSP_PROCESS,
+    csp_is_running,
+    is_admin,
+    ensure_admin,
+    check_csp_closed,
+    confirm,
+    find_csp_resource,
+)
 
 # ----------------------------------------------------------------------
 # Project paths
@@ -64,84 +74,9 @@ ROOT = Path(__file__).resolve().parent.parent
 # The untouched original CSP resources, one folder per stock language.
 ORIGINALS_DIR = ROOT / "resource"
 
-CSP_PROCESS = "CLIPStudioPaint.exe"
-
 # A resource file is GUID-named with no extension. Matching on this tells a
 # real resource/build folder apart from any other directory in the repo.
 GUID_RE = re.compile(r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}\Z", re.I)
-
-
-# ----------------------------------------------------------------------
-# Locating the CSP install
-# ----------------------------------------------------------------------
-def find_csp_resource(explicit: str | None) -> Path:
-    """Return CSP's `resource` folder, or exit with a clear message."""
-    if explicit:
-        p = Path(explicit)
-        if not (p / "english").is_dir():
-            sys.exit(f"error: {p} has no 'english' subfolder -- not a CSP "
-                     f"resource directory")
-        return p
-
-    # Glob the version directory so a CSP update (1.5 -> 1.6 ...) still resolves.
-    for base in (Path(r"C:\Program Files\CELSYS"),
-                 Path(r"C:\Program Files (x86)\CELSYS")):
-        if not base.is_dir():
-            continue
-        for cand in sorted(base.glob("*/CLIP STUDIO PAINT/resource")):
-            if (cand / "english").is_dir():
-                return cand
-
-    sys.exit("error: could not find a CSP install. Pass --csp <resource dir>, "
-             r"e.g. --csp \"C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP "
-             r"STUDIO PAINT\resource\"")
-
-
-def csp_is_running() -> bool:
-    """True if CLIPStudioPaint.exe shows up in the Windows task list."""
-    try:
-        out = subprocess.run(
-            ["tasklist", "/FI", f"IMAGENAME eq {CSP_PROCESS}"],
-            capture_output=True, text=True, timeout=15,
-        ).stdout
-    except (OSError, subprocess.SubprocessError):
-        return False  # cannot tell -- do not block on it
-    return CSP_PROCESS.lower() in out.lower()
-
-
-# ----------------------------------------------------------------------
-# Administrator elevation
-# ----------------------------------------------------------------------
-# Writing into C:\Program Files needs Administrator rights. Rather than make the
-# user remember to open an elevated terminal, we detect a normal process and
-# re-launch the same command through the UAC "runas" verb.
-def is_admin() -> bool:
-    """True on non-Windows, or when this Windows process is elevated."""
-    if os.name != "nt":
-        return True
-    try:
-        return bool(ctypes.windll.shell32.IsUserAnAdmin())
-    except Exception:
-        return False
-
-
-def ensure_admin() -> None:
-    """If not elevated, re-launch this exact command via UAC and exit.
-
-    The relaunched copy gets a hidden --keep-open flag so its (separate,
-    elevated) console stays open afterwards for the user to read."""
-    if is_admin():
-        return
-    params = subprocess.list2cmdline(
-        [str(Path(sys.argv[0]).resolve()), *sys.argv[1:], "--keep-open"])
-    rc = ctypes.windll.shell32.ShellExecuteW(
-        None, "runas", sys.executable, params, str(Path.cwd()), 1)
-    if rc <= 32:  # ShellExecuteW returns <=32 on failure (incl. UAC declined)
-        sys.exit("\nerror: this needs Administrator rights and the UAC prompt "
-                 "was declined.\n       Accept it, or re-run from an "
-                 "Administrator terminal.")
-    print("Administrator rights needed -- continuing in an elevated window.")
-    sys.exit(0)
 
 
 # ----------------------------------------------------------------------
@@ -161,13 +96,17 @@ def resource_files(folder: Path) -> list[Path]:
 def language_sources() -> dict[str, Path]:
     """Installable languages mapped to their source folder, in display order.
 
-    Translated builds at the repo root (e.g. russian/) are listed first; the
-    stock originals shipped per language (resource/<lang>/) follow. `other` is
-    a misc bucket, not a UI language, so it is skipped."""
+    Translated builds live at `<lang>/ui/<GUID files>` at the repo root (e.g.
+    `russian/ui/`) and are listed first; the stock originals shipped per
+    language under `resource/<lang>/<GUID files>` follow. `other` is a misc
+    bucket, not a UI language, so it is skipped."""
     sources: dict[str, Path] = {}
     for d in sorted(ROOT.iterdir()):
-        if d.name != "resource" and resource_files(d):
-            sources[d.name] = d
+        if d.name == "resource" or not d.is_dir():
+            continue
+        ui = d / "ui"
+        if ui.is_dir() and resource_files(ui):
+            sources[d.name] = ui
     for d in sorted(ORIGINALS_DIR.iterdir()) if ORIGINALS_DIR.is_dir() else []:
         if d.name != "other" and d.name not in sources and resource_files(d):
             sources[d.name] = d
@@ -184,23 +123,6 @@ def diff_against(folder: Path, reference: Path) -> list[str]:
         if ref.is_file() and not filecmp.cmp(f, ref, shallow=False):
             changed.append(f.name)
     return changed
-
-
-def confirm(prompt: str, assume_yes: bool) -> bool:
-    if assume_yes:
-        return True
-    try:
-        return input(f"{prompt} [y/N] ").strip().lower() in ("y", "yes")
-    except EOFError:
-        return False
-
-
-def check_csp_closed(force: bool) -> None:
-    if csp_is_running():
-        msg = "CSP is running -- close it before changing its resource files."
-        if not force:
-            sys.exit(f"error: {msg}")
-        print(f"warning: {msg} (continuing: --force)")
 
 
 def copy_over(src_files: list[Path], dst: Path, dry_run: bool) -> None:

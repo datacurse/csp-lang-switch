@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-_patch_material_tree.py  --  one-off worksheet fix
-==================================================
+patch_material_tree.py  --  one-off worksheet fix
+=================================================
 Adds the Material-palette folder-tree node names to the 7F9F9530 worksheet.
 
 These live in block 6 of 7F9F9530 as a mix of `text` records (multi-word
@@ -17,7 +17,7 @@ sibling records -- the colon-path `text` rows in the same block (e.g.
 'Color pattern:Background:Nature' -> 'Цветной узор:Фон:Природа') pin the Russian
 for every segment. So this is not a fresh translation, it is propagation.
 
-Run once from the repo root:  python src/_patch_material_tree.py
+Run once from the repo root:  python scripts/patch_material_tree.py
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ import csv
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 import csp5
 from repack import iter_records
 

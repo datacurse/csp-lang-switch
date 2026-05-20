@@ -229,7 +229,7 @@ check. Index and footer ride along verbatim.
 4. Launch CSP, set the UI language to that language, restart if prompted.
 
 For the whole build, [`src/install.py`](../src/install.py) automates steps 1–3:
-`python src/install.py russian` overwrites the `english` slot with `russian/`
+`python src/install.py russian` overwrites the `english` slot with `russian/ui/`
 (the repo's `resource/` holds the originals, so `install.py english` is the
 undo). It refuses to run while CSP is open and self-elevates via UAC.
 
@@ -328,7 +328,7 @@ All Python lives in [`src/`](../src/); run it from the repo root
 ## What is NOT done yet / open
 
 * All **32 content-bearing shared files** are translated to Russian and packed
-  into `russian/` (all 32 round-trip byte-for-byte). Re-confirm a full live
+  into `russian/ui/` (all 32 round-trip byte-for-byte). Re-confirm a full live
   load-test in CSP after any re-pack.
 * CSP updates can change string IDs or add strings; re-export and re-apply
   against each new build. The **tooling** is the durable asset, not any one

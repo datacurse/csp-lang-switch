@@ -64,7 +64,7 @@ RESOURCE_DIR = ROOT / "resource" / "english"
 # The finished Japanese resources are the oracle for what is translatable UI
 # text: export emits a record only where English and Japanese differ.
 REFERENCE_DIR = ROOT / "resource" / "japanese"
-RUSSIAN_DIR = ROOT / "russian"
+RUSSIAN_DIR = ROOT / "russian" / "ui"
 
 # Word tokenizer for the frequency aid: alpha runs only, lowercased. Digits are
 # dropped on purpose (so "3D" contributes "d", matching the original glossary

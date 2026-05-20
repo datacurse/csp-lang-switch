@@ -31,11 +31,11 @@ Pipeline (run from the repo root: python src/tools.py <cmd>)
   backup    copy the seed + user-data tool DBs into the repo -> tools/
   extract   collect every distinct tool name -> translation/tools.csv
   ...translate the `target` column of tools.csv...
-  apply     write the translations into patched DBs -> russian-tools/
+  apply     write the translations into patched DBs -> russian/tools/
   install   copy the patched DBs back into the live CSP install + user data
   restore   copy the original DBs back
 
-`install` / `restore` self-elevate via UAC (reusing install.py) for the
+`install` / `restore` self-elevate via UAC (via common.py) for the
 Program Files seed; the user-data copies need no elevation but ride along.
 Only the Python standard library is needed.
 """
@@ -51,18 +51,18 @@ import sqlite3
 import sys
 from pathlib import Path
 
-import install  # reuse find_csp_resource / ensure_admin / check_csp_closed / confirm
+from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-TOOLS_DIR = ROOT / "tools"                 # original DBs -- the backup
-BUILD_DIR = ROOT / "russian-tools"         # patched DBs -- the Russian build
+TOOLS_DIR = ROOT / "originals" / "tools"   # original DBs -- the backup
+BUILD_DIR = ROOT / "russian" / "tools"     # patched DBs -- the Russian build
 WORKSHEET = ROOT / "translation" / "tools.csv"
 
-# A backup lives at  tools/<tag>/<relpath>  ;  <tag> says which root it
-# came from and where `install` must copy it back to.
+# A backup lives at  originals/tools/<tag>/<relpath>  ;  <tag> says which root
+# it came from and where `install` must copy it back to.
 SEED = "install"       # the install's per-language seed (english slot)
 USER = "userdata"      # the live per-user working copy
 
@@ -72,7 +72,7 @@ USER = "userdata"      # the live per-user working copy
 # ----------------------------------------------------------------------
 def seed_root(explicit: str | None) -> Path:
     """`<CSP install>/Settings/PAINT` -- holds the per-language tool seeds."""
-    p = install.find_csp_resource(explicit).parent / "Settings" / "PAINT"
+    p = find_csp_resource(explicit).parent / "Settings" / "PAINT"
     if not p.is_dir():
         sys.exit(f"error: settings folder not found: {p}")
     return p
@@ -176,7 +176,7 @@ def existing_targets() -> dict[str, str]:
 
 
 def backed_up() -> list[tuple[str, Path]]:
-    """[(tag, relpath)] for every DB saved under tools/<install|userdata>/."""
+    """[(tag, relpath)] for every DB saved under originals/tools/<install|userdata>/."""
     out = []
     for db in sorted(p for p in TOOLS_DIR.rglob("*") if p.is_file()):
         rel = db.relative_to(TOOLS_DIR)
@@ -417,9 +417,9 @@ def _deploy(src_root: Path, label: str, args) -> None:
     if not jobs:
         sys.exit(f"error: nothing to install from {src_root}")
 
-    install.check_csp_closed(args.force)
+    check_csp_closed(args.force)
     if not args.dry_run:
-        install.ensure_admin()  # re-launches elevated if needed, then exits
+        ensure_admin()  # re-launches elevated if needed, then exits
 
     print(f"will install {len(jobs)} {label} tool DB(s)")
     for src, dst in jobs:
@@ -427,7 +427,7 @@ def _deploy(src_root: Path, label: str, args) -> None:
     if args.dry_run:
         print("[dry-run] nothing was changed")
         return
-    if not install.confirm("proceed?", args.yes):
+    if not confirm("proceed?", args.yes):
         print("aborted")
         return
 

@@ -13,7 +13,7 @@ has rendered correctly inside a running copy of CSP.
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
 - **Translation:** all **32 content-bearing files** translated to Russian,
-  packed into `russian/`, and round-trip-verified (32/32 byte-for-byte). The
+  packed into `russian/ui/`, and round-trip-verified (32/32 byte-for-byte). The
   consistency audit is clean apart from known false positives (brand names, CC
   license names, shader code, internal config keys). Run
   `python src/batch.py status` for live progress.
@@ -41,13 +41,31 @@ has rendered correctly inside a running copy of CSP.
 
 ## Install it / undo it
 
-One command switches every subsystem (main UI, plug-in filters, tool palette,
-material catalog) between Russian and the original install:
+### For end users — the bundled exe
+
+Download `csp-russian.exe` and double-click it. Pick `[1] Switch to Russian` or
+`[2] Restore the original (English)`. UAC fires once when you commit to a
+switch (it needs to write into `C:\Program Files`). Close CSP first.
+
+The exe also takes CLI args if you'd rather skip the menu:
+
+```
+csp-russian.exe russian        # install Russian everywhere
+csp-russian.exe original       # restore the original install
+csp-russian.exe status         # show what is installed
+```
+
+Per-machine backups and state live at `%LOCALAPPDATA%\csp-russian\`.
+
+### For developers — the source-tree scripts
+
+The same functionality, run directly from the repo:
 
 ```
 python src/lang.py russian        # show Russian everywhere
 python src/lang.py original       # restore the original install
 python src/lang.py status         # show what is installed right now
+python src/lang.py                # interactive menu
 ```
 
 `russian` snapshots the original DLLs / SQLite DBs the first time it runs, so
@@ -55,14 +73,21 @@ python src/lang.py status         # show what is installed right now
 `.lang-state.json` and verified against on-disk content hashes on every run, so
 if anything drifts the next `status` will show it as `unknown` rather than lie.
 
-Three of the four pipelines write into `C:\Program Files` and need
-Administrator rights; `lang.py` self-elevates once via UAC at the start of a
-state-changing command. Close CSP before switching.
-
 The per-pipeline scripts ([`install.py`](src/install.py),
 [`plugins.py`](src/plugins.py), [`tools.py`](src/tools.py),
 [`materials.py`](src/materials.py)) remain available for maintenance and for
 testing each pipeline in isolation — see [Workflow](#workflow) below.
+
+### Building the exe
+
+```
+pip install -r requirements.txt
+pyinstaller csp-russian.spec
+```
+
+The resulting `dist/csp-russian.exe` bundles the four patched builds + stock
+English `resource/english/` inside a single ~20 MB file. End users need
+nothing else installed (no Python, no extra files).
 
 ## Layout
 
@@ -72,10 +97,8 @@ testing each pipeline in isolation — see [Workflow](#workflow) below.
 | [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
 | [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
-| `russian/` | Output of `batch.py pack` — the Russian resource build — gitignored (regenerable) |
-| `plugins/`, `russian-plugins/` | Original / patched filter-DLLs, managed by `plugins.py` — gitignored |
-| `tools/`, `russian-tools/` | Original / patched tool-palette SQLite DBs, managed by `tools.py` — gitignored |
-| `materials/`, `russian-materials/` | Original / patched material-catalog SQLite DB, managed by `materials.py` — gitignored |
+| `russian/` | The Russian build tree (gitignored, regenerable). Subfolders: `ui/` (main UI resource files, from `batch.py pack`), `plugins/` (patched filter DLLs, from `plugins.py apply`), `tools/` (patched tool DBs, from `tools.py apply`), `materials/` (patched material catalog, from `materials.py apply`) |
+| `originals/` | Untouched per-machine snapshots of the live CSP install — `plugins/`, `tools/`, `materials/`. Taken by `*.py backup`, used by `*.py restore`. Gitignored (copyrighted) |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -128,7 +151,7 @@ are handled by a parallel tool — [`src/plugins.py`](src/plugins.py):
 python src/plugins.py backup            # save the original PlugIn/PAINT DLLs
 python src/plugins.py extract           # -> translation/plugins.csv
 # ... translate the target column ...
-python src/plugins.py apply             # -> russian-plugins/
+python src/plugins.py apply             # -> russian/plugins/
 python src/plugins.py install           # deploy into the live CSP install
 ```
 
@@ -145,7 +168,7 @@ install, not the resource bundles, and are handled by another parallel tool —
 python src/tools.py backup              # save the original tool DBs
 python src/tools.py extract             # -> translation/tools.csv
 # ... translate the target column ...
-python src/tools.py apply               # -> russian-tools/
+python src/tools.py apply               # -> russian/tools/
 python src/tools.py install             # deploy into the live CSP install
 ```
 
@@ -162,7 +185,7 @@ parallel tool — [`src/materials.py`](src/materials.py):
 python src/materials.py backup          # save the original catalog DB
 python src/materials.py extract         # -> translation/materials.csv
 # ... translate the target column ...
-python src/materials.py apply           # -> russian-materials/
+python src/materials.py apply           # -> russian/materials/
 python src/materials.py install         # deploy into the live CSP user data
 ```
 

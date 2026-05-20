@@ -24,12 +24,12 @@ Pipeline (run from the repo root: python src/plugins.py <cmd>)
   backup    copy the install's PlugIn/PAINT/*.dll into the repo -> plugins/
   extract   read every DLL's English strings -> translation/plugins.csv
   ...translate the `target` column of plugins.csv...
-  apply     write the translations into patched DLLs -> russian-plugins/
+  apply     write the translations into patched DLLs -> russian/plugins/
   install   copy the patched DLLs into the live CSP install
   restore   copy the original DLLs back into the live CSP install
 
 `install` / `restore` write into C:\\Program Files and self-elevate via UAC
-(reusing install.py). `extract` / `apply` need `pefile` (`pip install pefile`).
+(via common.py). `extract` / `apply` need `pefile` (`pip install pefile`).
 """
 
 from __future__ import annotations
@@ -49,14 +49,14 @@ except ImportError:
     sys.exit("error: this tool needs 'pefile' -- install it with:\n"
              "       pip install pefile")
 
-import install  # reuse find_csp_resource / ensure_admin / check_csp_closed / confirm
+from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-PLUGINS_DIR = ROOT / "plugins"             # original DLLs -- the backup
-BUILD_DIR = ROOT / "russian-plugins"       # patched DLLs -- the Russian build
+PLUGINS_DIR = ROOT / "originals" / "plugins"   # original DLLs -- the backup
+BUILD_DIR = ROOT / "russian" / "plugins"       # patched DLLs -- the Russian build
 WORKSHEET = ROOT / "translation" / "plugins.csv"
 
 ENGLISH_LANG = 9                           # RT_STRING LANG id for English
@@ -156,7 +156,7 @@ def write_english_blocks(dll_path: str, blocks: dict[int, list[str]]) -> None:
 # ----------------------------------------------------------------------
 def csp_plugin_dir(explicit: str | None) -> Path:
     """The live install's PlugIn/PAINT folder (sibling of resource/)."""
-    p = install.find_csp_resource(explicit).parent / "PlugIn" / "PAINT"
+    p = find_csp_resource(explicit).parent / "PlugIn" / "PAINT"
     if not p.is_dir():
         sys.exit(f"error: plug-in folder not found: {p}")
     return p
@@ -194,7 +194,7 @@ def cmd_backup(args) -> None:
     print(f"backup -> {PLUGINS_DIR}")
     print(f"  copied {len(copied)} original DLL(s)")
     if kept:
-        print(f"  kept {len(kept)} already in plugins/ (left untouched)")
+        print(f"  kept {len(kept)} already in {PLUGINS_DIR} (left untouched)")
     if patched:
         print(f"  SKIPPED {len(patched)} already-patched DLL(s) -- need the "
               f"stock original: {', '.join(patched)}")
@@ -283,9 +283,9 @@ def cmd_install(args) -> None:
     if not builds:
         sys.exit(f"error: no patched DLLs in {BUILD_DIR} -- run 'apply' first")
 
-    install.check_csp_closed(args.force)
+    check_csp_closed(args.force)
     if not args.dry_run:
-        install.ensure_admin()  # re-launches elevated if needed, then exits
+        ensure_admin()  # re-launches elevated if needed, then exits
 
     print(f"will install {len(builds)} patched plug-in DLL(s)")
     print(f"  {BUILD_DIR}  ->  {plugin_dir}")
@@ -294,7 +294,7 @@ def cmd_install(args) -> None:
             print(f"  [dry-run] {b.name}")
         print("[dry-run] nothing was changed")
         return
-    if not install.confirm("proceed?", args.yes):
+    if not confirm("proceed?", args.yes):
         print("aborted")
         return
 
@@ -311,16 +311,16 @@ def cmd_restore(args) -> None:
     if not originals:
         sys.exit(f"error: no originals in {PLUGINS_DIR} -- nothing to restore")
 
-    install.check_csp_closed(args.force)
+    check_csp_closed(args.force)
     if not args.dry_run:
-        install.ensure_admin()
+        ensure_admin()
 
     print(f"will restore {len(originals)} original plug-in DLL(s)")
     print(f"  {PLUGINS_DIR}  ->  {plugin_dir}")
     if args.dry_run:
         print("[dry-run] nothing was changed")
         return
-    if not install.confirm("proceed?", args.yes):
+    if not confirm("proceed?", args.yes):
         print("aborted")
         return
 

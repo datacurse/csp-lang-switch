@@ -37,7 +37,7 @@ Pipeline (run from the repo root: python src/materials.py <cmd>)
   backup    copy the catalog DB + every pack's catalog files -> materials/
   extract   collect every material + tag name -> translation/materials.csv
   ...translate the `target` column of materials.csv...
-  apply     write the translations into patched copies -> russian-materials/
+  apply     write the translations into patched copies -> russian/materials/
   install   copy the patched files into the live CSP user data
   restore   copy the originals back
 
@@ -57,18 +57,18 @@ import struct
 import sys
 from pathlib import Path
 
-import install  # reuse check_csp_closed / confirm
+from common import check_csp_closed, confirm
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-MATERIALS_DIR = ROOT / "materials"             # originals -- the backup
-BUILD_DIR = ROOT / "russian-materials"         # patched -- the Russian build
+MATERIALS_DIR = ROOT / "originals" / "materials"   # originals -- the backup
+BUILD_DIR = ROOT / "russian" / "materials"         # patched -- the Russian build
 WORKSHEET = ROOT / "translation" / "materials.csv"
 
 DB_NAME = "CatalogMaterial.cmdb"
-# Catalog files live under materials/<CATALOG>/<rel-to-Material-dir>/...
+# Catalog files live under originals/materials/<CATALOG>/<rel-to-Material-dir>/...
 CATALOG = "catalog"
 PACK_FILES = ("catalog.xml", "catalogMaterial.cac")
 INSTALL_DIRS = ("Install", "Install2")
@@ -345,7 +345,7 @@ def _deploy(src_root: Path, label: str, args) -> None:
     if not db_src.is_file() or not cat_src.is_dir():
         sys.exit(f"error: nothing in {src_root} -- run the earlier step first")
 
-    install.check_csp_closed(args.force)
+    check_csp_closed(args.force)
     md = material_dir()
     jobs = [(db_src, catalog_db())]
     for f in sorted(cat_src.rglob("*")):
@@ -360,7 +360,7 @@ def _deploy(src_root: Path, label: str, args) -> None:
         print(f"  ... ({len(jobs)} total)")
         print("[dry-run] nothing was changed")
         return
-    if not install.confirm("proceed?", args.yes):
+    if not confirm("proceed?", args.yes):
         print("aborted")
         return
     for s, d in jobs:
