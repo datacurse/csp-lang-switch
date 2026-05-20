@@ -19,6 +19,10 @@ russian/
 # Claude Code per-machine settings (.claude/settings.json IS tracked)
 .claude/settings.local.json
 
+# Per-machine state for src/lang.py — caches current per-pipeline language
+# (russian / original / unknown) + a content fingerprint of the install.
+.lang-state.json
+
 # Editor / IDE
 .idea/
 *.swp

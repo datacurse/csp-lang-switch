@@ -39,12 +39,37 @@ has rendered correctly inside a running copy of CSP.
   tree, but a v18 partial-translation attempt crashed the launcher. The
   project intentionally ships PAINT-only.
 
+## Install it / undo it
+
+One command switches every subsystem (main UI, plug-in filters, tool palette,
+material catalog) between Russian and the original install:
+
+```
+python src/lang.py russian        # show Russian everywhere
+python src/lang.py original       # restore the original install
+python src/lang.py status         # show what is installed right now
+```
+
+`russian` snapshots the original DLLs / SQLite DBs the first time it runs, so
+`original` always has somewhere to copy back from. State is cached in
+`.lang-state.json` and verified against on-disk content hashes on every run, so
+if anything drifts the next `status` will show it as `unknown` rather than lie.
+
+Three of the four pipelines write into `C:\Program Files` and need
+Administrator rights; `lang.py` self-elevates once via UAC at the start of a
+state-changing command. Close CSP before switching.
+
+The per-pipeline scripts ([`install.py`](src/install.py),
+[`plugins.py`](src/plugins.py), [`tools.py`](src/tools.py),
+[`materials.py`](src/materials.py)) remain available for maintenance and for
+testing each pipeline in isolation — see [Workflow](#workflow) below.
+
 ## Layout
 
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
+| [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
 | [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
 | `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
 | `russian/` | Output of `batch.py pack` — the Russian resource build — gitignored (regenerable) |
