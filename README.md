@@ -12,19 +12,11 @@ has rendered correctly inside a running copy of CSP.
 ## Status
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
-- **Translation:** all **32 content-bearing PAINT files** translated to Russian,
+- **Translation:** all **32 content-bearing files** translated to Russian,
   packed into `russian/`, and round-trip-verified (32/32 byte-for-byte). The
   consistency audit is clean apart from known false positives (brand names, CC
   license names, shader code, internal config keys). Run
   `python src/batch.py status` for live progress.
-- **Launcher (the separate "CLIP STUDIO" hub app):** **inventoried, not yet
-  translated.** CSP ships two apps in one install — PAINT (the editor) and the
-  CLIP STUDIO launcher. The launcher has its own resource tree of 21
-  content-bearing files (~6,200 strings), mirrored at `resource-launcher/` and
-  listed in [`translation/manifest.csv`](translation/manifest.csv) under
-  `source=launcher`. The pipeline (`batch.py`) and installer (`install.py`)
-  both handle launcher files; run `python src/batch.py export-all` to extract
-  worksheets.
 - **Plug-in filters:** the new Filter menu (categories, filter names, dialog
   parameters) lives in ~37 plug-in DLLs, not the bundles. All 37 are translated
   and load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
@@ -39,6 +31,13 @@ has rendered correctly inside a running copy of CSP.
   see [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
+- **Out of scope: the CLIP STUDIO launcher** (the separate hub window that
+  opens before PAINT). Its visible home screen — Continue Drawing, project
+  cards, announcements, notices — is **cloud-served** by Celsys with no
+  Russian feed, so most of it is unreachable from local patching. The local
+  parts (sidebar / About / Maintenance menus) live in a separate resource
+  tree, but a v18 partial-translation attempt crashed the launcher. The
+  project intentionally ships PAINT-only.
 
 ## Layout
 
@@ -47,9 +46,8 @@ has rendered correctly inside a running copy of CSP.
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
 | [`src/`](src/) | Python tooling: `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
 | [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
-| `resource/` | Original PAINT resource binaries, 12 languages — gitignored (copyrighted, large) |
-| `russian/` | Output of `batch.py pack` for PAINT — the Russian resource build — gitignored (regenerable) |
-| `resource-launcher/`, `russian-launcher/` | Same pair for the CLIP STUDIO launcher app — gitignored |
+| `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
+| `russian/` | Output of `batch.py pack` — the Russian resource build — gitignored (regenerable) |
 | `plugins/`, `russian-plugins/` | Original / patched filter-DLLs, managed by `plugins.py` — gitignored |
 | `tools/`, `russian-tools/` | Original / patched tool-palette SQLite DBs, managed by `tools.py` — gitignored |
 | `materials/`, `russian-materials/` | Original / patched material-catalog SQLite DB, managed by `materials.py` — gitignored |

@@ -16,20 +16,12 @@ dedupe (Step 2) and join (Step 5) -- into real subcommands.
 
 Layout it manages
 -----------------
-  translation/manifest.csv               the file list (short,guid,slug,...,source)
-
-  Paint (the main CSP app):
-    resource/<lang>/<guid>               pristine CSP originals
-    translation/files/<short>-<slug>/    per-file worksheets
-        strings.csv         key,source,target worksheet (repack.py export output)
-        unique.csv          one row per distinct source (translate this)
-        word_frequency.csv  term-frequency aid for the glossary
-    russian/<guid>                       patched build (repack.py apply output)
-
-  Launcher (the separate "CLIP STUDIO" hub app):
-    resource-launcher/<lang>/<guid>      pristine launcher originals
-    translation/files-launcher/...       per-file worksheets (same layout)
-    russian-launcher/<guid>              patched build
+  translation/manifest.csv               the file list (short,guid,slug,...)
+  translation/files/<short>-<slug>/
+      strings.csv         key,source,target worksheet (repack.py export output)
+      unique.csv          one row per distinct source (translate this)
+      word_frequency.csv  term-frequency aid for the glossary
+  russian/<guid>                         patched build (repack.py apply output)
 
 Subcommands  (run from the repo root: python src/batch.py <cmd> ...)
 -----------
@@ -42,10 +34,8 @@ Subcommands  (run from the repo root: python src/batch.py <cmd> ...)
   pack-all             pack every target file that has a worksheet
   audit    [<id>]      consistency audit of one worksheet, or all of them
 
-<id> is a file's short GUID or slug (e.g. 742DEA58 or main-ui). Paint and
-launcher both ship the same GUIDs in many cases, so disambiguate with a
-`<source>:` prefix when needed (e.g. `launcher:material-catalog`). With no
-prefix, paint wins. Use --force with export to overwrite an existing worksheet.
+<id> is a file's short GUID or slug (e.g. 742DEA58 or main-ui). Use --force
+with export to overwrite an existing worksheet.
 
 No external dependencies (standard library only).
 """
@@ -69,31 +59,12 @@ import audit
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "translation" / "manifest.csv"
-
-# Paint (the main CSP app) vs. launcher (the separate "CLIP STUDIO" hub app).
-# Each is a full, independent set of GUID-named resource files, located under
-# its own pair of folders in the repo. The manifest's `source` column picks
-# which set each row belongs to; the paths below are derived from that.
-#
-#   source=paint     -> resource/<lang>/      russian/      translation/files/
-#   source=launcher  -> resource-launcher/    russian-launcher/  files-launcher/
-#
+FILES_DIR = ROOT / "translation" / "files"
+RESOURCE_DIR = ROOT / "resource" / "english"
 # The finished Japanese resources are the oracle for what is translatable UI
 # text: export emits a record only where English and Japanese differ.
-_PAINT = {
-    "originals":  ROOT / "resource",
-    "russian":    ROOT / "russian",
-    "worksheets": ROOT / "translation" / "files",
-}
-_LAUNCHER = {
-    "originals":  ROOT / "resource-launcher",
-    "russian":    ROOT / "russian-launcher",
-    "worksheets": ROOT / "translation" / "files-launcher",
-}
-
-
-def _paths(rec: dict) -> dict[str, Path]:
-    return _LAUNCHER if rec.get("source") == "launcher" else _PAINT
+REFERENCE_DIR = ROOT / "resource" / "japanese"
+RUSSIAN_DIR = ROOT / "russian"
 
 # Word tokenizer for the frequency aid: alpha runs only, lowercased. Digits are
 # dropped on purpose (so "3D" contributes "d", matching the original glossary
@@ -113,47 +84,17 @@ def load_manifest() -> list[dict]:
 
 
 def resolve(manifest: list[dict], ident: str) -> dict:
-    """Find a manifest row by short GUID, slug or full GUID (case-insensitive).
-
-    Paint and launcher both ship a file under the same GUID (e.g. E79C2AC5
-    appears twice). Disambiguate with a `<source>:` prefix --
-    ``launcher:material-catalog`` or ``paint:E79C2AC5``. With no prefix,
-    paint wins (backward compat with the original paint-only manifest)."""
-    src = None
-    if ":" in ident:
-        head, _, tail = ident.partition(":")
-        if head.lower() in ("paint", "launcher"):
-            src, ident = head.lower(), tail
+    """Find a manifest row by short GUID, slug or full GUID (case-insensitive)."""
     low = ident.lower()
-    matches = [rec for rec in manifest
-               if low in (rec["short"].lower(),
-                          rec["slug"].lower(),
-                          rec["guid"].lower())
-               and (src is None or rec.get("source", "paint") == src)]
-    if not matches:
-        sys.exit(f"ERROR: '{ident}' matches no manifest file "
-                 f"(try `batch.py status`).")
-    if len(matches) == 1:
-        return matches[0]
-    # Multiple matches across sources -- prefer paint, warn the user.
-    paint = next((r for r in matches if r.get("source", "paint") == "paint"), None)
-    if paint is not None:
-        others = ", ".join(f"{r.get('source','paint')}:{r['short']}"
-                           for r in matches if r is not paint)
-        print(f"note: '{ident}' is ambiguous; picking paint "
-              f"(also matches {others}). Use `launcher:{ident}` to override.",
-              file=sys.stderr)
-        return paint
-    return matches[0]
+    for rec in manifest:
+        if low in (rec["short"].lower(), rec["slug"].lower(), rec["guid"].lower()):
+            return rec
+    sys.exit(f"ERROR: '{ident}' matches no manifest file (try `batch.py status`).")
 
 
 def folder_for(rec: dict) -> Path:
-    """The per-file worksheet folder.
-
-    Paint:    translation/files/<short>-<slug>/
-    Launcher: translation/files-launcher/<short>-<slug>/
-    """
-    return _paths(rec)["worksheets"] / f"{rec['short']}-{rec['slug']}"
+    """The per-file worksheet folder, translation/files/<short>-<slug>/."""
+    return FILES_DIR / f"{rec['short']}-{rec['slug']}"
 
 
 def worksheet_for(rec: dict) -> Path:
@@ -169,15 +110,15 @@ def freq_for(rec: dict) -> Path:
 
 
 def resource_for(rec: dict) -> Path:
-    return _paths(rec)["originals"] / "english" / rec["guid"]
+    return RESOURCE_DIR / rec["guid"]
 
 
 def reference_for(rec: dict) -> Path:
-    return _paths(rec)["originals"] / "japanese" / rec["guid"]
+    return REFERENCE_DIR / rec["guid"]
 
 
 def output_for(rec: dict) -> Path:
-    return _paths(rec)["russian"] / rec["guid"]
+    return RUSSIAN_DIR / rec["guid"]
 
 
 # ----------------------------------------------------------------------
@@ -404,17 +345,10 @@ def cmd_audit(args: argparse.Namespace) -> int:
 # Subcommand: status
 # ----------------------------------------------------------------------
 def _translated_pct(ws: Path) -> tuple[int, int]:
-    """(translated, total) over rows with a non-empty source.
-
-    A row counts as translated only when its target is non-empty *and*
-    differs from the source. Empty target means "no translation, leave the
-    original" -- it must not be conflated with real translations, or status
-    silently reports 100% on partially-translated builds (which the launcher
-    pre-seed pass exposed)."""
+    """(translated, total) over rows with a non-empty source."""
     rows = _read_rows(ws)
     total = sum(1 for r in rows if r["source"])
-    done = sum(1 for r in rows
-               if r["source"] and r["target"] and r["target"] != r["source"])
+    done = sum(1 for r in rows if r["source"] and r["target"] != r["source"])
     return done, total
 
 
@@ -427,9 +361,9 @@ def cmd_status(args: argparse.Namespace) -> int:
           f"({sum(r['target'] == 'yes' for r in manifest)} targets, "
           f"{sum(r['target'] == 'maybe' for r in manifest)} maybe, "
           f"{len(skipped)} skipped)\n")
-    print(f"  {'src':8} {'short':9} {'slug':22} {'text':>6}  {'exported':9} "
+    print(f"  {'short':9} {'slug':22} {'text':>6}  {'exported':9} "
           f"{'translated':12} packed")
-    print(f"  {'-'*8} {'-'*9} {'-'*22} {'-'*6}  {'-'*9} {'-'*12} {'-'*6}")
+    print(f"  {'-'*9} {'-'*22} {'-'*6}  {'-'*9} {'-'*12} {'-'*6}")
 
     packed_count = 0
     for rec in targets:
@@ -448,8 +382,7 @@ def cmd_status(args: argparse.Namespace) -> int:
         else:
             packed = "no"
         flag = " " if rec["target"] == "yes" else "?"
-        src = rec.get("source", "paint")
-        print(f" {flag}{src:8} {rec['short']:9} {rec['slug']:22} "
+        print(f" {flag}{rec['short']:9} {rec['slug']:22} "
               f"{rec['text_count']:>6}  {exported:9} {pct:12} {packed}")
 
     print(f"\n  {packed_count} file(s) packed into russian/.")
