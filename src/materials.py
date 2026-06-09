@@ -37,7 +37,7 @@ Pipeline (run from the repo root: python src/materials.py <cmd>)
   backup    copy the catalog DB + every pack's catalog files -> materials/
   extract   collect every material + tag name -> translation/materials.csv
   ...translate the `target` column of materials.csv...
-  apply     write the translations into patched copies -> russian/materials/
+  apply     write the translations into patched copies -> langs/russian/materials/
   install   copy the patched files into the live CSP user data
   restore   copy the originals back
 
@@ -63,12 +63,12 @@ from common import check_csp_closed, confirm
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-MATERIALS_DIR = ROOT / "originals" / "materials"   # originals -- the backup
-BUILD_DIR = ROOT / "russian" / "materials"         # patched -- the Russian build
+MATERIALS_DIR = ROOT / "langs" / "english" / "materials"   # originals (English)
+BUILD_DIR = ROOT / "langs" / "russian" / "materials"       # patched (Russian)
 WORKSHEET = ROOT / "translation" / "materials.csv"
 
 DB_NAME = "CatalogMaterial.cmdb"
-# Catalog files live under originals/materials/<CATALOG>/<rel-to-Material-dir>/...
+# Catalog files live under langs/english/materials/<CATALOG>/<rel-to-Material-dir>/...
 CATALOG = "catalog"
 PACK_FILES = ("catalog.xml", "catalogMaterial.cac")
 INSTALL_DIRS = ("Install", "Install2")

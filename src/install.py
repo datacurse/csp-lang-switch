@@ -12,20 +12,20 @@ reinstalling the app.
 
 How it works
 ------------
-CSP loads its UI strings from `resource/<language>/`, one folder per language,
-and picks the folder by the UI language set in CSP. It has no `russian` slot,
-so we overwrite the `english` slot in place: `install.py <language>` copies a
-language's resource files onto that slot, and CSP shows them when set to
-English.
+CSP loads its UI strings from `resource/<language>/` inside its install, one
+folder per language, and picks the folder by the UI language set in CSP. It
+has no `russian` slot, so we overwrite the `english` slot in place:
+`install.py <language>` copies a language's resource files onto that slot, and
+CSP shows them when set to English.
 
-Where each language comes from:
-  * `russian`  -- the translated build in the repo's `russian/` folder
-                  (produced by `batch.py pack`)
-  * any other  -- the stock originals CSP ships, kept in `resource/<language>/`
+Each installable language is a folder under the repo's `langs/`, with the
+main-UI resource files at `langs/<language>/ui/`:
+  * `russian`  -- the translated build (produced by `batch.py pack`)
+  * `english`  -- the untouched stock English snapshot
 
 So `install.py english` is simply "install the original English" -- it is the
-undo. Nothing is backed up into the CSP install: `resource/` already holds the
-untouched originals for every stock language.
+undo. Nothing is backed up into the CSP install: `langs/english/ui/` already
+holds the untouched stock English.
 
 Usage
 -----
@@ -71,8 +71,10 @@ from common import (
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-# The untouched original CSP resources, one folder per stock language.
-ORIGINALS_DIR = ROOT / "resource"
+# One folder per language, each a complete tree: langs/<lang>/ui/ (main UI
+# resource files) plus optional plugins/ tools/ materials/ for languages we
+# patch ourselves.
+LANGS_DIR = ROOT / "langs"
 
 # A resource file is GUID-named with no extension. Matching on this tells a
 # real resource/build folder apart from any other directory in the repo.
@@ -94,22 +96,18 @@ def resource_files(folder: Path) -> list[Path]:
 
 
 def language_sources() -> dict[str, Path]:
-    """Installable languages mapped to their source folder, in display order.
+    """Installable languages mapped to their main-UI source folder.
 
-    Translated builds live at `<lang>/ui/<GUID files>` at the repo root (e.g.
-    `russian/ui/`) and are listed first; the stock originals shipped per
-    language under `resource/<lang>/<GUID files>` follow. `other` is a misc
-    bucket, not a UI language, so it is skipped."""
+    Every language is a folder under `langs/`; its installable main UI lives
+    at `langs/<lang>/ui/<GUID files>`. A folder without a populated `ui/` is
+    skipped (so an incomplete language is simply not offered)."""
     sources: dict[str, Path] = {}
-    for d in sorted(ROOT.iterdir()):
-        if d.name == "resource" or not d.is_dir():
+    for d in sorted(LANGS_DIR.iterdir()) if LANGS_DIR.is_dir() else []:
+        if not d.is_dir():
             continue
         ui = d / "ui"
         if ui.is_dir() and resource_files(ui):
             sources[d.name] = ui
-    for d in sorted(ORIGINALS_DIR.iterdir()) if ORIGINALS_DIR.is_dir() else []:
-        if d.name != "other" and d.name not in sources and resource_files(d):
-            sources[d.name] = d
     return sources
 
 

@@ -15,19 +15,15 @@ dist/
 venv/
 env/
 
-# The Russian build tree: regenerable patched copies of CSP's own data
-# (resource files, plug-in DLLs, tool DBs, material catalog). Layout:
-#   russian/ui/         — patched GUID-named resource files (main UI)
-#   russian/plugins/    — patched filter DLLs
-#   russian/tools/      — patched tool-palette SQLite DBs
-#   russian/materials/  — patched material catalog + per-pack files
-russian/
-
-# Untouched per-machine snapshots of the live CSP install's plug-ins, tools,
-# and material catalog. Taken once by `*.py backup` and used by `*.py restore`.
-#   originals/plugins/   /tools/   /materials/
-# Copyrighted + machine-specific; kept on disk, never committed.
-originals/
+# Per-language data trees — copyrighted CSP data + regenerable patched copies.
+# Kept on disk, never committed. Layout, one folder per language:
+#   langs/<lang>/ui/         — GUID-named resource files (main UI)
+#   langs/<lang>/plugins/    — filter plug-in DLLs
+#   langs/<lang>/tools/      — tool-palette SQLite DBs
+#   langs/<lang>/materials/  — material catalog + per-pack files
+# langs/english/ is the untouched stock CSP snapshot; langs/russian/ is the
+# patched build; langs/japanese/ui/ is the translation oracle.
+langs/
 
 # Claude Code per-machine settings (.claude/settings.json IS tracked)
 .claude/settings.local.json
@@ -45,8 +41,4 @@ originals/
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# CSP resource binaries — copyrighted + large; kept on disk, not committed.
-# Untracked with `git rm --cached` (the local files are not deleted).
-resource/
 

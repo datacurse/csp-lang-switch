@@ -3,7 +3,7 @@
 csp5.py
 =======
 Parser and serializer for the Clip Studio Paint 5 binary resource file format
-(the GUID-named files under resource/<language>/, e.g.
+(the GUID-named files under langs/<language>/ui/, e.g.
 742DEA58-ED6B-4402-BC11-20DFC6D08040).
 
 Format -- all integers are unsigned 32-bit BIG-ENDIAN:

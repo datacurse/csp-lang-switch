@@ -31,7 +31,7 @@ Pipeline (run from the repo root: python src/tools.py <cmd>)
   backup    copy the seed + user-data tool DBs into the repo -> tools/
   extract   collect every distinct tool name -> translation/tools.csv
   ...translate the `target` column of tools.csv...
-  apply     write the translations into patched DBs -> russian/tools/
+  apply     write the translations into patched DBs -> langs/russian/tools/
   install   copy the patched DBs back into the live CSP install + user data
   restore   copy the original DBs back
 
@@ -57,12 +57,12 @@ from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-TOOLS_DIR = ROOT / "originals" / "tools"   # original DBs -- the backup
-BUILD_DIR = ROOT / "russian" / "tools"     # patched DBs -- the Russian build
+TOOLS_DIR = ROOT / "langs" / "english" / "tools"   # original DBs (English)
+BUILD_DIR = ROOT / "langs" / "russian" / "tools"   # patched DBs (Russian)
 WORKSHEET = ROOT / "translation" / "tools.csv"
 
-# A backup lives at  originals/tools/<tag>/<relpath>  ;  <tag> says which root
-# it came from and where `install` must copy it back to.
+# A backup lives at  langs/english/tools/<tag>/<relpath>  ;  <tag> says which
+# root it came from and where `install` must copy it back to.
 SEED = "install"       # the install's per-language seed (english slot)
 USER = "userdata"      # the live per-user working copy
 
@@ -176,7 +176,7 @@ def existing_targets() -> dict[str, str]:
 
 
 def backed_up() -> list[tuple[str, Path]]:
-    """[(tag, relpath)] for every DB saved under originals/tools/<install|userdata>/."""
+    """[(tag, relpath)] for every DB under langs/english/tools/<install|userdata>/."""
     out = []
     for db in sorted(p for p in TOOLS_DIR.rglob("*") if p.is_file()):
         rel = db.relative_to(TOOLS_DIR)

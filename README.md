@@ -13,7 +13,7 @@ has rendered correctly inside a running copy of CSP.
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
 - **Translation:** all **32 content-bearing files** translated to Russian,
-  packed into `russian/ui/`, and round-trip-verified (32/32 byte-for-byte). The
+  packed into `langs/russian/ui/`, and round-trip-verified (32/32 byte-for-byte). The
   consistency audit is clean apart from known false positives (brand names, CC
   license names, shader code, internal config keys). Run
   `python src/batch.py status` for live progress.
@@ -85,9 +85,10 @@ pip install -r requirements.txt
 pyinstaller csp-russian.spec
 ```
 
-The resulting `dist/csp-russian.exe` bundles the four patched builds + stock
-English `resource/english/` inside a single ~20 MB file. End users need
-nothing else installed (no Python, no extra files).
+The resulting `dist/csp-russian.exe` bundles the patched Russian build
+(`langs/russian/`) + the stock English UI (`langs/english/ui/`) inside a
+single ~20 MB file. End users need nothing else installed (no Python, no
+extra files).
 
 ## Layout
 
@@ -96,9 +97,7 @@ nothing else installed (no Python, no extra files).
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
 | [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
 | [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
-| `resource/` | Original CSP resource binaries, 12 languages — gitignored (copyrighted, large) |
-| `russian/` | The Russian build tree (gitignored, regenerable). Subfolders: `ui/` (main UI resource files, from `batch.py pack`), `plugins/` (patched filter DLLs, from `plugins.py apply`), `tools/` (patched tool DBs, from `tools.py apply`), `materials/` (patched material catalog, from `materials.py apply`) |
-| `originals/` | Untouched per-machine snapshots of the live CSP install — `plugins/`, `tools/`, `materials/`. Taken by `*.py backup`, used by `*.py restore`. Gitignored (copyrighted) |
+| `langs/` | One folder per language, gitignored (copyrighted CSP data). Each is a tree of `ui/` (main UI resource files), `plugins/` (filter DLLs), `tools/` (tool-palette DBs), `materials/` (material catalog). `langs/english/` is the untouched stock CSP snapshot; `langs/russian/` is the patched build (`ui/` from `batch.py pack`, the rest from `plugins.py`/`tools.py`/`materials.py apply`); `langs/japanese/ui/` is the translation oracle |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -151,7 +150,7 @@ are handled by a parallel tool — [`src/plugins.py`](src/plugins.py):
 python src/plugins.py backup            # save the original PlugIn/PAINT DLLs
 python src/plugins.py extract           # -> translation/plugins.csv
 # ... translate the target column ...
-python src/plugins.py apply             # -> russian/plugins/
+python src/plugins.py apply             # -> langs/russian/plugins/
 python src/plugins.py install           # deploy into the live CSP install
 ```
 
@@ -168,7 +167,7 @@ install, not the resource bundles, and are handled by another parallel tool —
 python src/tools.py backup              # save the original tool DBs
 python src/tools.py extract             # -> translation/tools.csv
 # ... translate the target column ...
-python src/tools.py apply               # -> russian/tools/
+python src/tools.py apply               # -> langs/russian/tools/
 python src/tools.py install             # deploy into the live CSP install
 ```
 
@@ -185,7 +184,7 @@ parallel tool — [`src/materials.py`](src/materials.py):
 python src/materials.py backup          # save the original catalog DB
 python src/materials.py extract         # -> translation/materials.csv
 # ... translate the target column ...
-python src/materials.py apply           # -> russian/materials/
+python src/materials.py apply           # -> langs/russian/materials/
 python src/materials.py install         # deploy into the live CSP user data
 ```
 

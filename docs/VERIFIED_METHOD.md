@@ -24,7 +24,7 @@ The workflow is: **`repack.py export` → edit a CSV → `repack.py apply` → d
 patched file into a CSP language folder.**
 
 Decide *what* to translate with the **Japanese oracle**, not a heuristic:
-`export --reference resource/japanese/<GUID>` includes a record iff it is prose
+`export --reference langs/japanese/ui/<GUID>` includes a record iff it is prose
 text or differs from the finished Japanese resource. See "Choosing the
 translatable set" below — this is the single most important lesson learned.
 
@@ -35,7 +35,7 @@ translatable set" below — this is the single most important lesson learned.
 ### 1. The parser/serializer model is correct — 485/485 round-trip
 
 `serialize(parse(f)) == f`, byte-for-byte, holds for **every** resource file:
-**485/485 files** across all 12 language folders (`resource/`) plus the
+**485/485 files** across all 12 stock language folders CSP shipped plus the
 working English copy. Because [`csp5.py`](../src/csp5.py) stores **no absolute offsets**
 and `serialize()` recomputes every offset and length from child sizes, a passing
 round-trip is a proof that the structural model is complete and correct.
@@ -126,7 +126,7 @@ it translatable UI text**. So:
 > A record is translatable **iff** it is prose (`classify() == "text"`)
 > **OR** its English text differs from the Japanese resource.
 
-`repack.py export --reference resource/japanese/<GUID>` implements exactly this.
+`repack.py export --reference langs/japanese/ui/<GUID>` implements exactly this.
 The two halves of the rule are a deliberate **union** — it is always a *superset*
 of the old `text`-only worksheet, so re-exporting can never *lose* an existing
 translation:
@@ -196,7 +196,7 @@ Produces a CSV with columns `key, source, target`. `key` addresses the string
 inside the file (an entry-ID tree path, e.g. `1/1/3#0`) — **never edit it**.
 
 **Use `--reference`, not `--kind`.** `--reference` points at the matching file
-in `resource/japanese/`; a record is exported when it is prose text **or**
+in `langs/japanese/ui/`; a record is exported when it is prose text **or**
 differs from that finished Japanese resource. The old `--kind text` filter
 relied on the `classify()` heuristic, which labels every space-free ASCII string
 ≤40 chars a non-translatable "identifier" — so it silently dropped ~3,900 real
@@ -229,9 +229,10 @@ check. Index and footer ride along verbatim.
 4. Launch CSP, set the UI language to that language, restart if prompted.
 
 For the whole build, [`src/install.py`](../src/install.py) automates steps 1–3:
-`python src/install.py russian` overwrites the `english` slot with `russian/ui/`
-(the repo's `resource/` holds the originals, so `install.py english` is the
-undo). It refuses to run while CSP is open and self-elevates via UAC.
+`python src/install.py russian` overwrites the `english` slot with
+`langs/russian/ui/` (the repo's `langs/english/ui/` holds the stock English,
+so `install.py english` is the undo). It refuses to run while CSP is open and
+self-elevates via UAC.
 
 ---
 
@@ -328,7 +329,7 @@ All Python lives in [`src/`](../src/); run it from the repo root
 ## What is NOT done yet / open
 
 * All **32 content-bearing shared files** are translated to Russian and packed
-  into `russian/ui/` (all 32 round-trip byte-for-byte). Re-confirm a full live
+  into `langs/russian/ui/` (all 32 round-trip byte-for-byte). Re-confirm a full live
   load-test in CSP after any re-pack.
 * CSP updates can change string IDs or add strings; re-export and re-apply
   against each new build. The **tooling** is the durable asset, not any one

@@ -53,7 +53,7 @@ CSV (`export` skips a file that already has one — use `--force` to overwrite).
 **`key` is version-specific — never edit it.** The CSV is **UTF-8 with BOM**.
 
 **What counts as translatable — the Japanese oracle.** `batch.py` exports with
-`repack.py export --reference <resource/japanese/GUID>`: a record lands in the
+`repack.py export --reference <langs/japanese/ui/GUID>`: a record lands in the
 worksheet when it is EITHER prose text OR differs from the finished, fully
 localized Japanese resource. Never fall back to the old `--kind text` filter —
 it silently drops ~3,900 one-word UI labels. The full rationale, the bug it
@@ -146,7 +146,7 @@ worksheet into memory before writing, so a crash mid-write can't destroy it.
 python src/batch.py pack <id>        # one file, or `pack-all` for every file
 ```
 
-`pack` runs `repack.py apply` (writes the patched file to `russian/ui/<GUID>`)
+`pack` runs `repack.py apply` (writes the patched file to `langs/russian/ui/<GUID>`)
 **and** the `roundtrip.py` byte-for-byte check on the output, in one step.
 Both must pass.
 
@@ -210,7 +210,7 @@ and locked terms, and re-decide the autonym question (Step 6). Everything else
 is identical.
 
 **Another CSP version.** Re-export with `batch.py export <id> --force` — string
-IDs, `key`s and counts may all have changed. (Export needs `resource/japanese/`
+IDs, `key`s and counts may all have changed. (Export needs `langs/japanese/ui/`
 present: it is the oracle.) The translation is **seeded for free**:
 `batch.py dedupe` carries every existing translation over by `source` text, so
 only genuinely new/changed strings land with an empty `target`. Then run Steps

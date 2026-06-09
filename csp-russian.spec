@@ -6,9 +6,9 @@ Builds a single-file Windows executable that bundles:
 
   * `src/lang.py` as the entrypoint
   * the four pipeline modules (install / plugins / tools / materials)
-  * the four patched builds rooted at `russian/` (ui / plugins / tools /
+  * the patched Russian build, `langs/russian/` (ui / plugins / tools /
     materials)
-  * `resource/english/` (so reverting the main UI works with no network)
+  * `langs/english/ui/` (so reverting the main UI works with no network)
 
 Outputs:  dist/csp-russian.exe
 
@@ -40,11 +40,11 @@ a = Analysis(
     noarchive=False,
 )
 
-# Bundle the read-only patched builds + the english stock as data trees.
+# Bundle the read-only patched build + the english stock UI as data trees.
 # These end up at sys._MEIPASS/<prefix>/... at runtime, which lang.py reads
 # via DATA_ROOT.
-a.datas += Tree('russian',          prefix='russian')
-a.datas += Tree('resource/english', prefix='resource/english')
+a.datas += Tree('langs/russian',     prefix='langs/russian')
+a.datas += Tree('langs/english/ui',  prefix='langs/english/ui')
 
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)

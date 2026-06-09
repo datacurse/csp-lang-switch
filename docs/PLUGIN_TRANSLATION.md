@@ -102,17 +102,17 @@ A 5-command pipeline, the plug-in counterpart of `batch.py`. Run from the repo
 root:
 
 ```
-python src/plugins.py backup     copy PlugIn/PAINT/*.dll  -> originals/plugins/
+python src/plugins.py backup     copy PlugIn/PAINT/*.dll  -> langs/english/plugins/
 python src/plugins.py extract    English strings          -> translation/plugins.csv
 # ... translate the `target` column of plugins.csv ...
-python src/plugins.py apply      write patched DLLs        -> russian/plugins/
+python src/plugins.py apply      write patched DLLs        -> langs/russian/plugins/
 python src/plugins.py install    copy patched DLLs into the live CSP install
 python src/plugins.py restore    copy the originals back into the live install
 ```
 
-* **`originals/plugins/`** — the original DLLs; the repo's only backup of the
-  plug-in originals. Gitignored.
-* **`russian/plugins/`** — the patched build, output of `apply`. Gitignored.
+* **`langs/english/plugins/`** — the original DLLs; the repo's only backup of
+  the plug-in originals. Gitignored.
+* **`langs/russian/plugins/`** — the patched build, output of `apply`. Gitignored.
 * **`translation/plugins.csv`** — the worksheet (`key,source,target`); `key` is
   `<dll>:<block>:<slot>`. Tracked in git. Edit `target`, re-run `apply`.
 * `install` / `restore` write into `C:\Program Files`, self-elevate via a UAC

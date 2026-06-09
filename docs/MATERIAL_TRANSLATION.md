@@ -88,18 +88,18 @@ A name with no translation (an auto-generated `Layer 16`, a pixiv-id import,
 ## The tooling — `src/materials.py`
 
 ```
-python src/materials.py backup     copy the catalog DB + every pack's catalog files -> originals/materials/
+python src/materials.py backup     copy the catalog DB + every pack's catalog files -> langs/english/materials/
 python src/materials.py extract    distinct material + tag names -> translation/materials.csv
 # ... translate the `target` column of materials.csv ...
-python src/materials.py apply      write patched copies -> russian/materials/
+python src/materials.py apply      write patched copies -> langs/russian/materials/
 python src/materials.py install    copy the patched files into the live CSP user data
 python src/materials.py restore    copy the originals back
 ```
 
-* **`originals/materials/`** — the originals: `CatalogMaterial.cmdb` +
+* **`langs/english/materials/`** — the originals: `CatalogMaterial.cmdb` +
   `catalog/<rel>/…` (every pack's `catalog.xml` + `catalogMaterial.cac`).
   Gitignored.
-* **`russian/materials/`** — the patched build, same layout. Gitignored.
+* **`langs/russian/materials/`** — the patched build, same layout. Gitignored.
 * **`translation/materials.csv`** — the dictionary worksheet (`source,target`).
   Tracked in git. Edit `target`, re-run `apply`. `extract` preserves existing
   targets, matched by `source`.

@@ -30,7 +30,7 @@ import csp5
 from repack import iter_records
 
 ROOT = Path(__file__).resolve().parent.parent
-RES = ROOT / "resource" / "english" / "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
+RES = ROOT / "langs" / "english" / "ui" / "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
 WS = ROOT / "translation" / "files" / "7F9F9530-cloud-sync" / "strings.csv"
 
 # English material-category term -> Russian. Single-segment terms only; colon

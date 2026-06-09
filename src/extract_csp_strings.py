@@ -3,7 +3,7 @@
 extract_csp_strings.py
 ======================
 Extracts UI strings from a Clip Studio Paint 5 resource file (the GUID-named
-files in resource/<language>/, e.g. 742DEA58-ED6B-4402-BC11-20DFC6D08040).
+files in langs/<language>/ui/, e.g. 742DEA58-ED6B-4402-BC11-20DFC6D08040).
 
 CSP 5 resource file format (reverse-engineered):
   * Big-endian throughout.

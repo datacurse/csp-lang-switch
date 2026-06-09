@@ -24,7 +24,7 @@ Pipeline (run from the repo root: python src/plugins.py <cmd>)
   backup    copy the install's PlugIn/PAINT/*.dll into the repo -> plugins/
   extract   read every DLL's English strings -> translation/plugins.csv
   ...translate the `target` column of plugins.csv...
-  apply     write the translations into patched DLLs -> russian/plugins/
+  apply     write the translations into patched DLLs -> langs/russian/plugins/
   install   copy the patched DLLs into the live CSP install
   restore   copy the original DLLs back into the live CSP install
 
@@ -55,8 +55,8 @@ from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
 # Project paths
 # ----------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent
-PLUGINS_DIR = ROOT / "originals" / "plugins"   # original DLLs -- the backup
-BUILD_DIR = ROOT / "russian" / "plugins"       # patched DLLs -- the Russian build
+PLUGINS_DIR = ROOT / "langs" / "english" / "plugins"   # original DLLs (English)
+BUILD_DIR = ROOT / "langs" / "russian" / "plugins"     # patched DLLs (Russian)
 WORKSHEET = ROOT / "translation" / "plugins.csv"
 
 ENGLISH_LANG = 9                           # RT_STRING LANG id for English

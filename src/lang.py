@@ -21,10 +21,10 @@ Two states are exposed to the user:
   * `russian`   -- the patched build for every pipeline
   * `original`  -- whatever was on this machine before we ever ran. For the
                    main UI that is the stock English CSP ships in
-                   `resource/english/`; for the other three it is the local
-                   backup snapshot the pipelines maintain under `originals/`
-                   (in source mode) or `%LOCALAPPDATA%/csp-russian/` (in the
-                   bundled exe).
+                   `langs/english/ui/`; for the other three it is the local
+                   backup snapshot the pipelines maintain under
+                   `langs/english/` (in source mode) or
+                   `%LOCALAPPDATA%/csp-russian/` (in the bundled exe).
 
 The four backup snapshots are taken automatically the first time `lang.py
 russian` runs, so the user never has to remember an ordering of `backup` then
@@ -36,7 +36,8 @@ Source mode vs bundled exe
 This module runs in two layouts:
 
   * **Source mode**: `python src/lang.py ...` from a git checkout. Paths are
-    repo-relative (russian/, originals/, ...). State lives at the repo root.
+    repo-relative (langs/russian/, langs/english/, ...). State lives at the
+    repo root.
 
   * **Bundled exe** (PyInstaller / csp-russian.spec): patched builds are
     read-only inside the extracted bundle (`sys._MEIPASS`). The writeable
@@ -89,19 +90,19 @@ else:
     USER_DATA = DATA_ROOT
     STATE_FILE = DATA_ROOT / ".lang-state.json"
 
-# Bundled read-only references. All four Russian builds live under a single
-# `russian/` tree on disk and inside the .exe.
-RUSSIAN_BUILD     = DATA_ROOT / "russian" / "ui"
-RUSSIAN_PLUGINS   = DATA_ROOT / "russian" / "plugins"
-RUSSIAN_TOOLS     = DATA_ROOT / "russian" / "tools"
-RUSSIAN_MATERIALS = DATA_ROOT / "russian" / "materials"
-ENGLISH_STOCK     = DATA_ROOT / "resource" / "english"
+# Bundled read-only references. Every language is a tree under `langs/`, both
+# on disk and inside the .exe.
+RUSSIAN_BUILD     = DATA_ROOT / "langs" / "russian" / "ui"
+RUSSIAN_PLUGINS   = DATA_ROOT / "langs" / "russian" / "plugins"
+RUSSIAN_TOOLS     = DATA_ROOT / "langs" / "russian" / "tools"
+RUSSIAN_MATERIALS = DATA_ROOT / "langs" / "russian" / "materials"
+ENGLISH_STOCK     = DATA_ROOT / "langs" / "english" / "ui"
 
 # Writeable backup snapshots (per-machine). In bundled mode these live at
 # %LOCALAPPDATA%/csp-russian/{plugins,tools,materials}/; the path is kept
 # stable across versions so existing user backups are not stranded. In source
 # mode these constants are unused (each pipeline module's own ROOT-relative
-# paths under originals/ apply).
+# paths under langs/english/ apply).
 PLUGINS_BACKUP    = USER_DATA / "plugins"
 TOOLS_BACKUP      = USER_DATA / "tools"
 MATERIALS_BACKUP  = USER_DATA / "materials"
@@ -143,7 +144,7 @@ def _configure_pipelines() -> None:
         _pipelines_configured = True
         return
     install.ROOT = DATA_ROOT
-    install.ORIGINALS_DIR = DATA_ROOT / "resource"
+    install.LANGS_DIR = DATA_ROOT / "langs"
     p = _plugins_module()
     p.PLUGINS_DIR = PLUGINS_BACKUP
     p.BUILD_DIR = RUSSIAN_PLUGINS
@@ -329,8 +330,8 @@ class Pipeline:
 
 
 class MainUIPipeline(Pipeline):
-    """Main UI bundles. `resource/english/` (stock) is `original`;
-    `russian/` (a 32-file subset of the 39 stock files) is `russian`."""
+    """Main UI bundles. `langs/english/ui/` (stock) is `original`;
+    `langs/russian/ui/` (a 32-file subset of the 39 stock files) is `russian`."""
 
     def install_fingerprint(self, csp):
         return fingerprint_files(

@@ -132,20 +132,20 @@ A 5-command pipeline, the Tool-palette counterpart of `plugins.py`. Run from the
 repo root:
 
 ```
-python src/tools.py backup     copy the seed + user-data tool DBs -> originals/tools/
+python src/tools.py backup     copy the seed + user-data tool DBs -> langs/english/tools/
 python src/tools.py extract    distinct tool names                -> translation/tools.csv
 # ... translate the `target` column of tools.csv ...
-python src/tools.py apply      write patched DBs                  -> russian/tools/
+python src/tools.py apply      write patched DBs                  -> langs/russian/tools/
 python src/tools.py install    copy patched DBs back into seed + user data
 python src/tools.py restore    copy the originals back
 ```
 
-* **`originals/tools/`** — the original DBs; the repo's only backup of them.
-  Gitignored. Laid out `originals/tools/<tag>/<relpath>` where `<tag>` is
-  `install` (the seed) or `userdata`, recording where each DB must be copied
-  back to.
-* **`russian/tools/`** — the patched build, output of `apply`, same layout.
-  Gitignored.
+* **`langs/english/tools/`** — the original DBs; the repo's only backup of
+  them. Gitignored. Laid out `langs/english/tools/<tag>/<relpath>` where
+  `<tag>` is `install` (the seed) or `userdata`, recording where each DB must
+  be copied back to.
+* **`langs/russian/tools/`** — the patched build, output of `apply`, same
+  layout. Gitignored.
 * **`translation/tools.csv`** — the dictionary worksheet (`source,japanese,
   target`). Tracked in git. Edit `target`, re-run `apply`. Re-running `extract`
   **preserves** existing `target` values, matched by `source`.

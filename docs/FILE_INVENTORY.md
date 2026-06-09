@@ -1,6 +1,6 @@
 # CSP5 Resource File Inventory — the 39 shared GUID files
 
-> Counts regenerated 2026-05-19 from `resource/english/` vs `resource/japanese/`
+> Counts regenerated 2026-05-19 from `langs/english/ui/` vs `langs/japanese/ui/`
 > via the **Japanese oracle** (see [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md) →
 > "Choosing the translatable set"). Companion to `VERIFIED_METHOD.md`.
 >
@@ -112,10 +112,10 @@ import csp5
 from repack import iter_records, block1_shape
 from pathlib import Path
 
-for f in sorted(Path("resource/english").iterdir(),
+for f in sorted(Path("langs/english/ui").iterdir(),
                 key=lambda p: -p.stat().st_size):
     en = csp5.parse(f.read_bytes())
-    ja = csp5.parse((Path("resource/japanese") / f.name).read_bytes())
+    ja = csp5.parse((Path("langs/japanese/ui") / f.name).read_bytes())
     assert block1_shape(en.block1) == block1_shape(ja.block1), f.name
     n = sum(1 for (_k, kind, et), (_jk, _jkind, jt)
             in zip(iter_records(en), iter_records(ja))
