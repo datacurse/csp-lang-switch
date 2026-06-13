@@ -33,6 +33,7 @@ from version import (
     LANGS_ROOT,
     ACTIVE_VERSION,
     GUARD_GUID,
+    GUARD_SLOT,
     GUARD_SIZE,
     GUARD_SHA256,
     fingerprint_guard_file,
@@ -86,14 +87,16 @@ def _backup_dir(name: str) -> Path:
 PLUGINS_BACKUP = _backup_dir("plugins")
 TOOLS_BACKUP = _backup_dir("tools")
 MATERIALS_BACKUP = _backup_dir("materials")
+COLORSETS_BACKUP = _backup_dir("colorsets")
 
 if not FROZEN:
     # In source mode, stock snapshots live under the active version tree.
     PLUGINS_BACKUP = LANGS_ROOT / "english" / "plugins"
     TOOLS_BACKUP = LANGS_ROOT / "english" / "tools"
     MATERIALS_BACKUP = LANGS_ROOT / "english" / "materials"
+    COLORSETS_BACKUP = LANGS_ROOT / "english" / "colorsets"
 
-PIPELINES = ("main-ui", "plugins", "tools", "materials")
+PIPELINES = ("main-ui", "plugins", "tools", "materials", "colorsets")
 ORIGINAL = "original"
 UNKNOWN = "unknown"
 WARNINGS: list[str] = []
@@ -215,6 +218,7 @@ PIPELINES_SUBDIRS = {
     "plugins": "plugins",
     "tools": "tools",
     "materials": "materials",
+    "colorsets": "colorsets",
 }
 
 
@@ -287,6 +291,11 @@ def _plugins_module():
     return plugins
 
 
+def _colorsets_module():
+    import colorsets
+    return colorsets
+
+
 # ----------------------------------------------------------------------
 # Pipeline path overrides
 # ----------------------------------------------------------------------
@@ -307,6 +316,8 @@ def _configure_pipelines() -> None:
         t.TOOLS_DIR = TOOLS_BACKUP
         m = _materials_module()
         m.MATERIALS_DIR = MATERIALS_BACKUP
+        c = _colorsets_module()
+        c.COLORSETS_DIR = COLORSETS_BACKUP
         _seed_bundled_backups()
     _pipelines_configured = True
 
@@ -327,7 +338,7 @@ def _install_matches_active_version(csp: str | None) -> bool:
     if GUARD_SIZE is not None and GUARD_SHA256 is not None:
         expected = (GUARD_SIZE, GUARD_SHA256)
     resource = install.find_csp_resource(csp)
-    actual = fingerprint_guard_file(resource / "english" / GUARD_GUID)
+    actual = fingerprint_guard_file(resource / GUARD_SLOT / GUARD_GUID)
     return actual == expected
 
 
@@ -351,6 +362,7 @@ def _seed_bundled_backups() -> None:
         ("plugins", PLUGINS_BACKUP, ("*.dll",)),
         ("tools", TOOLS_BACKUP, ("**/*",)),
         ("materials", MATERIALS_BACKUP, ("**/*",)),
+        ("colorsets", COLORSETS_BACKUP, ("**/*",)),
     )
     for sub, dst, _patterns in jobs:
         src = BUNDLED_ENGLISH / sub
@@ -380,6 +392,12 @@ def _set_build_dir(pipeline: str, pack: str) -> None:
             mod.BUILD_DIR = root
     elif pipeline == "materials":
         mod = _materials_module()
+        if hasattr(mod, "configure_language"):
+            mod.configure_language(pack)
+        else:
+            mod.BUILD_DIR = root
+    elif pipeline == "colorsets":
+        mod = _colorsets_module()
         if hasattr(mod, "configure_language"):
             mod.configure_language(pack)
         else:
@@ -484,6 +502,18 @@ def tool_install_files(csp: str | None) -> list[Path]:
         out: list[Path] = []
         for tag, root in t.roots(csp).items():
             for abspath, _rel in t.discover(root, tag):
+                out.append(abspath)
+        return out
+    except SystemExit:
+        return []
+
+
+def colorset_install_files(csp: str | None) -> list[Path]:
+    try:
+        c = _colorsets_module()
+        out: list[Path] = []
+        for tag, root in c.roots(csp).items():
+            for abspath, _rel in c.discover(root, tag):
                 out.append(abspath)
         return out
     except SystemExit:
@@ -769,12 +799,68 @@ class MaterialsPipeline(Pipeline):
         m.cmd_restore(_pipe_args(dry_run=dry_run))
 
 
+class ColorSetsPipeline(Pipeline):
+    subdir = "colorsets"
+
+    def install_fingerprint(self, csp):
+        return fingerprint_files(colorset_install_files(csp))
+
+    def is_state(self, csp, state):
+        try:
+            c = _colorsets_module()
+            ref_root = COLORSETS_BACKUP if state == ORIGINAL else self.community_ref(state)
+            if not ref_root.is_dir():
+                return None
+            saw_any = False
+            for tag, root in c.roots(csp).items():
+                for abspath, rel in c.discover(root, tag):
+                    saw_any = True
+                    rf = ref_root / tag / rel
+                    if not rf.is_file():
+                        return False
+                    if abspath.stat().st_size != rf.stat().st_size:
+                        return False
+                    if _hash_file(abspath) != _hash_file(rf):
+                        return False
+            return True if saw_any else None
+        except SystemExit:
+            return None
+
+    def switch_to(self, choice, csp, dry_run):
+        c = _colorsets_module()
+        if choice.kind == "community" and self.has_community_ref(choice.id):
+            self._ensure_backup(dry_run, csp)
+            _set_build_dir(self.name, choice.id)
+            c.cmd_install(_pipe_args(csp=csp, dry_run=dry_run))
+        else:
+            self._restore_if_possible(c, csp, dry_run)
+
+    def _ensure_backup(self, dry_run, csp):
+        c = _colorsets_module()
+        if c.COLORSETS_DIR.is_dir() and any(
+                p.is_file() for p in c.COLORSETS_DIR.rglob("*")):
+            return
+        if dry_run:
+            print(f"\n[dry-run] would snapshot color sets to {c.COLORSETS_DIR}")
+            return
+        print(f"\n(no color-set backup at {c.COLORSETS_DIR} -- snapshotting first)")
+        c.cmd_backup(_pipe_args(csp=csp, dry_run=dry_run))
+
+    def _restore_if_possible(self, c, csp, dry_run):
+        if not (c.COLORSETS_DIR.is_dir() and any(
+                p.is_file() for p in c.COLORSETS_DIR.rglob("*"))):
+            add_warning("\nWARNING: no color-set backup found; color sets were not restored.")
+            return
+        c.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
+
+
 def all_pipelines() -> dict[str, Pipeline]:
     return {
         "main-ui": MainUIPipeline("main-ui"),
         "plugins": PluginsPipeline("plugins"),
         "tools": ToolsPipeline("tools"),
         "materials": MaterialsPipeline("materials"),
+        "colorsets": ColorSetsPipeline("colorsets"),
     }
 
 
@@ -850,7 +936,8 @@ def summary_for(statuses: dict[str, str]) -> str:
 # Commands
 # ----------------------------------------------------------------------
 _LABELS = {"main-ui": "main UI", "plugins": "plug-ins",
-           "tools": "tool palette", "materials": "materials"}
+           "tools": "tool palette", "materials": "materials",
+           "colorsets": "color sets"}
 
 
 def _print_status(args) -> dict[str, str]:

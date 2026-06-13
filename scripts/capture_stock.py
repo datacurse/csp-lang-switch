@@ -129,10 +129,11 @@ def main() -> int:
                 continue
             copy_ui(d, LANGS_ROOT / d.name / "ui", d.name)
 
-    print("\nPlug-ins, tools, materials:")
+    print("\nPlug-ins, tools, materials, color sets:")
     run_pipeline_backup("plugins.py", args.csp)
     run_pipeline_backup("tools.py", args.csp)
     run_pipeline_backup("materials.py", None)
+    run_pipeline_backup("colorsets.py", args.csp)
 
     print("\nVersion guard:")
     update_version_guard()

@@ -19,7 +19,10 @@ ACTIVE_VERSION = "5.0.0"
 LANGS_ROOT = ROOT / "versions" / ACTIVE_VERSION / "langs"
 
 # Main-UI resource file used to detect a matching CSP install at runtime.
+# Compare against `resource/other/` — CSP keeps stock UI there. Community
+# packs install into `resource/english/`, so that slot must not be used here.
 GUARD_GUID = "742DEA58-ED6B-4402-BC11-20DFC6D08040"
+GUARD_SLOT = "other"
 # Filled when stock is captured from a verified 5.0.0 install.
 GUARD_SIZE: int | None = 3467072
 GUARD_SHA256: str | None = "383463d7b274bf55c764fe955fc39de96853fa71252654cbdd8f4420a4ade815"
@@ -60,5 +63,7 @@ def install_matches_active_version(guard_path: Path) -> bool:
     expected = guard_profile()
     if expected is None:
         return True  # dev tree without captured stock — do not block
+    if GUARD_SIZE is not None and GUARD_SHA256 is not None:
+        expected = (GUARD_SIZE, GUARD_SHA256)
     actual = fingerprint_guard_file(guard_path)
     return actual == expected

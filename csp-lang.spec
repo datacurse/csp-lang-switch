@@ -5,8 +5,8 @@ PyInstaller spec for the end-user csp-lang.exe.
 Builds a single-file Windows executable that bundles:
 
   * `src/lang.py` as the entrypoint
-  * the four pipeline modules (install / plugins / tools / materials)
-  * `versions/<active>/langs/english/` stock (ui + plugins + tools + materials)
+  * the five pipeline modules (install / plugins / tools / materials / colorsets)
+  * `versions/<active>/langs/english/` stock (ui + plugins + tools + materials + colorsets)
   * every community pack under the active version tree
 
 Bundled paths use the `langs/` prefix at runtime (sys._MEIPASS/langs/...).
@@ -47,6 +47,7 @@ a = Analysis(
         'plugins',
         'tools',
         'materials',
+        'colorsets',
         'version',
         'pefile',
         'tkinter',
@@ -65,7 +66,7 @@ a = Analysis(
 
 if LANGS.is_dir():
     english = LANGS / "english"
-    for sub in ("ui", "plugins", "tools", "materials"):
+    for sub in ("ui", "plugins", "tools", "materials", "colorsets"):
         folder = english / sub
         if folder.is_dir() and any(folder.rglob("*")):
             a.datas += Tree(str(folder), prefix=f"langs/english/{sub}")
@@ -73,7 +74,7 @@ if LANGS.is_dir():
     for lang_dir in sorted(LANGS.iterdir()):
         if not lang_dir.is_dir() or lang_dir.name in OFFICIAL_LANGS:
             continue
-        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins", "tools", "materials")):
+        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins", "tools", "materials", "colorsets")):
             a.datas += Tree(str(lang_dir), prefix=f"langs/{lang_dir.name}")
 
 
