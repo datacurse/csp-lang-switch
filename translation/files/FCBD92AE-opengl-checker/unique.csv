@@ -20,15 +20,11 @@ CLIP website,Веб-сайт CLIP
 .:CELSYS:Settings of graphics performance check,.:CELSYS:Settings of graphics performance check
 "Graphics performance check 1.0.6
 
-(C) CELSYS, Inc. All Rights Reserved.","Проверка производительности графики 1.0.6
-
-(C) CELSYS, Inc. All Rights Reserved."
+(C) CELSYS, Inc. All Rights Reserved.",
 "Check the graphics performance in the using environment and whether 3D features of the software
-will work correctly. Proceed to graphics performance check?","Проверьте производительность графики в используемой среде и то, будут ли 3D-функции программы
-работать корректно. Перейти к проверке производительности графики?"
+will work correctly. Proceed to graphics performance check?",
 "The previous graphics performance check closed unexpectedly. 
- Do you want to run another graphics performance check?","Предыдущая проверка производительности графики завершилась непредвиденно. 
- Хотите запустить ещё одну проверку производительности графики?"
+ Do you want to run another graphics performance check?",
 You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
 http://www.clipstudio.net/en/site/opengl/nvidia.html,http://www.clipstudio.net/en/site/opengl/nvidia.html
 http://www.clipstudio.net/en/site/opengl/amd.html,http://www.clipstudio.net/en/site/opengl/amd.html
@@ -60,25 +56,19 @@ You can use 3D functions without problems with your computer.,Вы можете 
 You may have problems for 3D functions with your computer.,При использовании 3D-функций на вашем компьютере возможны проблемы.
 You cannot use any 3D features with your computer.,Вы не можете использовать 3D-функции на своём компьютере.
 "If 3D function doesn't work correctly when using it, click 
- the below button and check the operation environment.","Если 3D-функция работает некорректно при использовании, нажмите 
- кнопку ниже и проверьте рабочую среду."
+ the below button and check the operation environment.",
 "If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
 "If 3D function doesn't work correctly when using it, it may be fixed with 
- the update of graphic driver.","Если 3D-функция работает некорректно при использовании, проблему можно устранить 
- обновлением графического драйвера."
+ the update of graphic driver.",
 Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
 "If you want to use 3D function, please check 
- the operation environment for 3D function from the below web page and use the appropriate computer.","Если вы хотите использовать 3D-функцию, проверьте 
- рабочую среду для 3D-функции на веб-странице ниже и используйте подходящий компьютер."
+ the operation environment for 3D function from the below web page and use the appropriate computer.",
 You can use this software without problems with your computer.,Вы можете без проблем использовать эту программу на своём компьютере.
 You may have problems for this software with your computer.,При использовании этой программы на вашем компьютере возможны проблемы.
 You cannot use this software with your computer.,Вы не можете использовать эту программу на своём компьютере.
 "If the software does not start correctly or works slowly, click 
- the below button and check the operation environment.","Если программа не запускается корректно или работает медленно, нажмите 
- кнопку ниже и проверьте рабочую среду."
+ the below button and check the operation environment.",
 "If the software does not start correctly or works slowly, it may be fixed with 
- the update of graphic driver.","Если программа не запускается корректно или работает медленно, проблему можно устранить 
- обновлением графического драйвера."
+ the update of graphic driver.",
 "Please check the operation environment for this software from the below web page
- and use the appropriate computer.","Проверьте рабочую среду для этой программы на веб-странице ниже
- и используйте подходящий компьютер."
+ and use the appropriate computer.",

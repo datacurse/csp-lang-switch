@@ -45,9 +45,9 @@ findings below.
 **Slot strategy.** CSP picks a resource folder by the selected UI language; it will
 not look for a `russian` folder that does not exist in its internal list.
 Recommended approach: **translate the files and overwrite the `english` folder**,
-then ship as a resource-folder overlay. Users set CSP's language to English and see
-Russian. Advantage: any string left untranslated falls back to readable English
-rather than Japanese. (A stretch goal — finding and editing the internal
+then ship as a resource-folder overlay. The switcher copies the selected language
+into that English slot. Advantage: any string left untranslated falls back to
+readable English rather than Japanese. (A stretch goal — finding and editing the internal
 language→folder map to add a real "Russian" entry — is out of scope for v1.)
 
 **Legal note.** This modifies copyrighted software resources. Distribute a

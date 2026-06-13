@@ -1,43 +1,4 @@
 ﻿source,target
-*aggggghhhh!* horizontal,*а-а-а-а!* горизонтальный
-*blush* horizontal,*румянец* горизонтальный
-*boom* horizontal,*бум* горизонтальный
-*chatter chatter*,*бормотание бормотание*
-*chatter chatter* 03_yellow,*бормотание бормотание* 03_жёлтый
-*click* vertical,*щёлк* вертикальный
-*crack* horizontal,*треск* горизонтальный
-*crash* horizontal,*грохот* горизонтальный
-*doooh* horizontal,*ох* горизонтальный
-*flowing* wreath,*струящийся* венок
-*flowing* wreath c_transparent_IS,*струящийся* венок c_прозрачный_IS
-"*flowing* wreath, stipple","*струящийся* венок, растушёвка"
-*gawp* horizontal,*разинутый рот* горизонтальный
-*giggle giggle* horizontal,*хи-хи хи-хи* горизонтальный
-*glare* horizontal,*злой взгляд* горизонтальный
-*glint* horizontal,*блеск* горизонтальный
-*heart thump*_vertical,*стук сердца*_вертикальный
-*hmph*_white,*хмф*_белый
-*impact* vertical,*удар* вертикальный
-*Messy*,*Беспорядок*
-*munch munch* horizontal,*хрум-хрум* горизонтальный
-*pass* vertical,*мимо* вертикальный
-*pissed* vertical,*злость* вертикальный
-*pouring...* horizontal,*льёт...* горизонтальный
-*quick* horizontal,*быстро* горизонтальный
-*rumble* horizontal,*грохот* горизонтальный
-*running lightly...* vertical,*бежит легко...* вертикальный
-*rustle* vertical,*шорох* вертикальный
-*shock* horizontal,*шок* горизонтальный
-*sigh* vertical,*вздох* вертикальный
-*silence* horizontal,*тишина* горизонтальный
-*smile* vertical,*улыбка* вертикальный
-*sob sob...* horizontal,*всхлип всхлип...* горизонтальный
-*Soft*,*Мягкий*
-*soft* 01_transparent,*мягкий* 01_прозрачный
-*Soft* A,*Мягкий* A
-*soft* pentagonal,*мягкий* пятиугольный
-*twinkle*_yellow,*мерцание*_жёлтый
-*zing* vertical,*вжик* вертикальный
 001,001
 002,002
 003,003
@@ -45,1833 +6,527 @@
 005,005
 006,006
 007,007
-01-up,01-вверх
-0122 _ 08,0122 _ 08
-03 Feather _ paint,03 Перо _ закраска
-1 frame,1 кадр
-100% Circular L,100% круговая L
-100% Circular M,100% круговая M
-100% Circular S,100% круговая S
-100% Linear L,100% линейная L
-100% Linear M,100% линейная M
-100% Linear S,100% линейная S
-12026662_p0 copy of,12026662_p0 copy of
+0122_08,
+12026662_p0 のコピー,
 19506925_p11,19506925_p11
-1st Floor Entrance,Вход на 1-м этаже
-2 rows 2 frames 1,2 ряда 2 кадра 1
-2 rows 2 frames 2,2 ряда 2 кадра 2
-2 rows 3 frames 1,2 ряда 3 кадра 1
-2 rows 3 frames 2,2 ряда 3 кадра 2
-2 rows 3 frames 3,2 ряда 3 кадра 3
-2 rows 4 frames 1,2 ряда 4 кадра 1
-2 rows evenly,2 ряда равномерно
-2_frames,2_кадра
-2nd Floor,2-й этаж
-3 rows 4 frames 1,3 ряда 4 кадра 1
-3 rows 4 frames 2,3 ряда 4 кадра 2
-3 rows 4 frames 3,3 ряда 4 кадра 3
-3 rows 4 frames 4,3 ряда 4 кадра 4
-3 rows 4 frames 5,3 ряда 4 кадра 5
-3 rows 5 frames 1,3 ряда 5 кадров 1
-3 rows 5 frames 2,3 ряда 5 кадров 2
-3 rows 5 frames 3,3 ряда 5 кадров 3
-3 rows 5 frames 4,3 ряда 5 кадров 4
-3 rows 6 frames 1,3 ряда 6 кадров 1
-3 rows 6 frames 2,3 ряда 6 кадров 2
-3 rows 6 frames 3,3 ряда 6 кадров 3
-3 rows evenly,3 ряда равномерно
-3_frames,3_кадра
+1コマ,
+2カケやわらか,
+2コマ,
+2段2コマ1,
+2段2コマ2,
+2段3コマ1,
+2段3コマ2,
+2段3コマ3,
+2段4コマ1,
+2段等分,
+33714841_p2 のコピー,
 3D,3D
-3D drawing figure (Female),3D-фигура для рисования (женская)
-3D drawing figure (Male),3D-фигура для рисования (мужская)
-3D drawing figure-Ver.2 (Female),3D-фигура для рисования-Ver.2 (женская)
-3D drawing figure-Ver.2 (Male),3D-фигура для рисования-Ver.2 (мужская)
-4 frames 2 strips,4 кадра 2 полосы
-4 frames 2 strips with titles,4 кадра 2 полосы с заголовками
-4 frames bottom,4 кадра снизу
-4 frames bottom with title,4 кадра снизу с заголовком
-4 frames left,4 кадра слева
-4 frames left with title,4 кадра слева с заголовком
-4 frames right,4 кадра справа
-4 frames right with title,4 кадра справа с заголовком
-4 frames upper,4 кадра сверху
-4 frames upper with title,4 кадра сверху с заголовком
-4 rows 6 frames 1,4 ряда 6 кадров 1
-4 rows 6 frames 2,4 ряда 6 кадров 2
-4 rows 6 frames 3,4 ряда 6 кадров 3
-4 rows evenly,4 ряда равномерно
-4_frames,4_кадра
-4_frames_comic,4_кадра_комикс
-50% Circular L,50% круговая L
-50% Circular M,50% круговая M
-50% Circular S,50% круговая S
-50% Linear L,50% линейная L
-50% Linear M,50% линейная M
-50% Linear S,50% линейная S
-5_frames,5_кадров
-6_frames,6_кадров
-8 frames with title,8 кадров с заголовком
-A,A
-Accessories,Аксессуары
-Action,Действие
-All alone... vertical,Совсем одна... вертикальный
-Allocate,Разместить
-Along crossing1,Вдоль перекрёстка1
-Along crossing2,Вдоль перекрёстка2
-Along road,Вдоль дороги
-Alto_Saxophone,Альт_саксофон
-Anger,Гнев
-Anger mark_yellow,Метка гнева_жёлтый
-Angle,Угол
-Announcement,Объявление
-Announcement_01,Объявление_01
-Announcement_02,Объявление_02
-Announcement_03,Объявление_03
-Another arrangement,Другая компоновка
-Antique frame,Антикварная рамка
-Antique gold frame,Антикварная золотая рамка
-Antique rose,Антикварная роза
-Anxious_01,Тревожный_01
-Anxious_02,Тревожный_02
-Arabesque pattern 02_IS,Арабесковый узор 02_IS
-Arabesque pattern_IS,Арабесковый узор_IS
-Area1(Undisplayed),Область1(Не отображается)
-Area2(Undisplayed),Область2(Не отображается)
-Area3(Undisplayed),Область3(Не отображается)
-Area4(Undisplayed),Область4(Не отображается)
-Argyle_transparent_IS,Аргайл_прозрачный_IS
-Artificial,Искусственный
-B,B
-Back door,Задняя дверь
-Backflip,Сальто назад
-Background,Фон
-Background trees,Фоновые деревья
-Backstop,Защитная сетка
-Backstop back,Защитная сетка сзади
-Bag,Сумка
-Balloon maiden,Дева с шаром
-Ballpoint pen,Шариковая ручка
-Bamboo sword,Бамбуковый меч
-Bangs 01,Чёлка 01
-Bangs 02,Чёлка 02
-Bangs 03,Чёлка 03
-Bangs 04,Чёлка 04
-Bangs 05,Чёлка 05
-Barbed wire,Колючая проволока
-Barcode frame.,Рамка со штрихкодом.
-Base,Основа
-Base 01,Основа 01
-Base 02,Основа 02
-Basic,Базовый
-Basic - Left,Базовый - Слева
-Basic - Right,Базовый - Справа
-Basic standing,Базовая стойка
-Basic(without fence),Базовый(без забора)
-Basic(without train),Базовый(без поезда)
-Basic_uniform,Базовая_форма
-Basic_uniform (blue),Базовая_форма (синяя)
-Basic_uniform(white),Базовая_форма(белая)
-Bead Accessories 1,Бисерные аксессуары 1
-Bead Accessories 2,Бисерные аксессуары 2
-Bead Accessories 3,Бисерные аксессуары 3
-Bead chain 01,Цепочка из бусин 01
-Bead chain 02,Цепочка из бусин 02
-Bead chain 03,Цепочка из бусин 03
-Bear 01,Медведь 01
-Bear 02,Медведь 02
-Bench,Скамейка
-Beta flash 01,Бета-вспышка 01
-Beta_flash,Бета_вспышка
-Bicycle,Велосипед
-Billboard,Рекламный щит
-Bird's eye maple,Птичий глаз клён
-Bird's-eye view,Вид с высоты птичьего полёта
-Bird's-eye view entrance,Вход с высоты птичьего полёта
-Bird's-eye view1,Вид с высоты птичьего полёта1
-Bird's-eye view2,Вид с высоты птичьего полёта2
-Black,Чёрный
-Black and white rough line vertical,Чёрно-белая грубая линия вертикальный
-Black fog,Чёрный туман
-Black soot,Чёрная копоть
-Blackboard,Школьная доска
-Blackboard_Japanese history,Доска_история Японии
-Blade 1,Лезвие 1
-Blade 2,Лезвие 2
-Blade 3,Лезвие 3
-Bleeding 1,Растекание 1
-Bleeding 2,Растекание 2
-Bleeding 3,Растекание 3
-Blood 001,Кровь 001
-Blood 002,Кровь 002
-Blood 003,Кровь 003
-Blood 004,Кровь 004
-Blood 005,Кровь 005
-Blood 006,Кровь 006
-Blood 007,Кровь 007
-Blood 01,Кровь 01
-Blood 02,Кровь 02
-Blood 03,Кровь 03
-Blood 04,Кровь 04
-Blood 05,Кровь 05
-Blood 06,Кровь 06
-Blood 07,Кровь 07
-Blood 1,Кровь 1
-Blood splatter,Брызги крови
-"Blood splatter, lighter","Брызги крови, светлее"
-Blood_drip,Кровь_капля
-Bloodstain,Пятно крови
-Blossom pattern,Узор из цветов
-Blossom pattern1,Узор из цветов 1
-Blossom pattern2,Узор из цветов 2
-Blossom pattern3,Узор из цветов 3
-Blossom pattern4,Узор из цветов 4
-Blossom pattern5,Узор из цветов 5
-Blossom pattern6,Узор из цветов 6
-Blue,Синий
-Blue flower pattern,Узор из синих цветов
-Blue lights,Синие огни
-Blue sky 02,Синее небо 02
-Blue sky 02_with distant view,Синее небо 02_с видом вдали
-Blur B,Размытие B
-Blurred ink adjustment,Настройка размытых чернил
-Blurred rainbow,Размытая радуга
-Blurred spray,Размытое распыление
-Blush_red,Румянец_красный
-Bobby pin,Невидимка
-Body,Тело
-Body_type,Тип_телосложения
-Boney - Left,Костлявый - Слева
-Boney - Right,Костлявый - Справа
-Book 01,Книга 01
-Book 02,Книга 02
-Book 03,Книга 03
-Book 04,Книга 04
-Book 05,Книга 05
-Book 06,Книга 06
-Book 07,Книга 07
-Bottom,Низ
-Braid 01,Коса 01
-Braid 02,Коса 02
-Braided rope,Плетёная верёвка
-Brick,Кирпич
-Brick-like line drawing,Кирпичный штриховой рисунок
-Brick_IS,Кирпич_IS
-Bright_Quiet_Soft_Delight,Яркий_Тихий_Мягкий_Восторг
-Bright・Soft Star 02,Яркая・Мягкая звезда 02
-Bright・Soft Star 04_transparent,Яркая・Мягкая звезда 04_прозрачный
-Broad,Широкий
-Brush,Кисть
-Brush pen 01,Кисть-перо 01
-Brush pen 02,Кисть-перо 02
-Brush pen 03,Кисть-перо 03
-Bucket,Ведро
-Building,Здание
-Building 001,Здание 001
-Building 002,Здание 002
-Building 003,Здание 003
-Building 004,Здание 004
-Building 005,Здание 005
-Building 006,Здание 006
-Building 007,Здание 007
-Building 008,Здание 008
-Building 009,Здание 009
-Building 01,Здание 01
-Building 010,Здание 010
-Building 011,Здание 011
-Building 012,Здание 012
-Building 013,Здание 013
-Building 02,Здание 02
-Building 03,Здание 03
-Building 04,Здание 04
-Building 05,Здание 05
-Building 06,Здание 06
-Building 07,Здание 07
-Building 08,Здание 08
-Building 09,Здание 09
-Building 10,Здание 10
-Building 11,Здание 11
-Building 12,Здание 12
-Building 13,Здание 13
-Building1,Здание1
-Building2,Здание2
-Bump 02_flesh color,Бугорок 02_цвет тела
-Bumpy,Бугристый
-Burnt Texture_Fiber,Обожжённая текстура_волокно
-Butterfly ivy,Бабочка плющ
-Butterfly pattern,Узор с бабочками
-Button 003,Кнопка 003
-Button 01,Пуговица 01
-C,C
-C.,C.
-Cafe,Кафе
-Caltrop,Чеснок-каракатица
-Camouflage,Камуфляж
-Camouflage01_IS,Камуфляж01_IS
-Camouflage02_IS,Камуфляж02_IS
-Canned coffee,Кофе в банке
-Canvas,Холст
-Canvas 02,Холст 02
-Canvas _y_02,Холст _y_02
-Car (sedan) A,Машина (седан) A
-Card pattern 01,Карточный узор 01
-Card pattern 01c_transparent_IS,Карточный узор 01c_прозрачный_IS
-Card pattern 02,Карточный узор 02
-Carry a bucket 01,Несёт ведро 01
-Cartoon - Left,Мультяшный - Слева
-Cartoon - Right,Мультяшный - Справа
-Cat 01,Кот 01
-Cat 02,Кот 02
-Cat ears,Кошачьи уши
-Chain 002,Цепь 002
-Chain 003 Filled,Цепь 003 Заполненная
-Chain 01,Цепь 01
-Chain 02,Цепь 02
-Chair_001,Стул_001
-Chair_002,Стул_002
-Chalk,Мел
-Character,Персонаж
-charcoal,уголь
-Charcoal 01,Уголь 01
-Charcoal 02,Уголь 02
-Checker,Шахматная клетка
-Checkered pattern 01_IS,Шахматный узор 01_IS
-Checkered pattern 02_IS,Шахматный узор 02_IS
-Cherry blossom,Сакура
-Cherry blossom petal,Лепесток сакуры
-Cherry blossoms (nearby view) 1,Цветы сакуры (вблизи) 1
-Cherry blossoms (nearby view) 3,Цветы сакуры (вблизи) 3
-Cherry Blossoms 05,Цветы сакуры 05
-Chibi,Чиби
-Chic small flower,Изящный мелкий цветок
-Chinese 02,Китайский 02
-Chinese pattern_transparent_IS,Китайский узор_прозрачный_IS
-Circle flash_coarse 01,Круговая вспышка_грубая 01
-Circle flash_medium 01,Круговая вспышка_средняя 01
-Circle flash_slim 01,Круговая вспышка_тонкая 01
-Circular,Круговой
-City_transparent,Город_прозрачный
-Clasp the knee 01,Обнимает колено 01
-Clasp the knee 02,Обнимает колено 02
-Classdoor1_A,Дверь класса1_A
-Classdoor1_B,Дверь класса1_B
-Classdoor2_A,Дверь класса2_A
-Classdoor2_B,Дверь класса2_B
-Classroom 01,Класс 01
-Classroom 01-Ver.2,Класс 01-Ver.2
-Classroom 01_daytime,Класс 01_день
-Classroom 01_evening,Класс 01_вечер
-Classroom 01_morning,Класс 01_утро
-Classroom Basic1,Класс базовый1
-Classroom Basic2,Класс базовый2
-Classroom Hallway Edge,Край коридора класса
-Classroom Hallway Side,Сторона коридора класса
-Claw,Коготь
-Cleaning_supply,Чистящие_принадлежности
-Clematis A,Клематис A
-Clematis B,Клематис B
-Clematis C,Клематис C
-Clench,Сжимает
-Close,Закрыть
-Close cross_area1_hidden,Закрытый перекрёсток_область1_скрыта
-Close cross_area2_hidden,Закрытый перекрёсток_область2_скрыта
-Close cross_area3_hidden,Закрытый перекрёсток_область3_скрыта
-Close cross_area4_hidden,Закрытый перекрёсток_область4_скрыта
-Close fingers,Сомкнутые пальцы
-Closeup,Крупный план
-Closeup of crossing,Крупный план перекрёстка
-Closeup of side view,Крупный план вида сбоку
-Closeup-entrance,Крупный план-вход
-Closeup-Veranda,Крупный план-Веранда
-Cloth pen case (brown),Тканевый пенал (коричневый)
-Clothes_pattern,Узор_одежды
-Clothing,Одежда
-Cloud,Облако
-Cloud 01,Облако 01
-Cloud 02,Облако 02
-Cloud and Thunder,Облако и гром
-Cloud ding,Облачко динь
-Cloud vertical small_01,Облако вертикальное мелкое_01
-Cloud vertical small_02,Облако вертикальное мелкое_02
-Cloud vertical small_03,Облако вертикальное мелкое_03
-Cloud vertical_01,Облако вертикальное_01
-Cloud vertical_02,Облако вертикальное_02
-Cloud vertical_03,Облако вертикальное_03
-Cloud_01,Облако_01
-Cloud_02,Облако_02
-Cloud_03,Облако_03
-Cloud_04,Облако_04
-Cloud_shape,Облако_форма
-Cloudy sky 01,Облачное небо 01
-Cloudy sky 01_with distance view,Облачное небо 01_с видом вдаль
-Clubroom (liberal arts),Клубная комната (гуманитарные науки)
-Clubroom (liberal arts)-Ver.2,Клубная комната (гуманитарные науки)-Ver.2
-Clumsy fall,Неуклюжее падение
-Clutch head,Хватается за голову
-Coarse Dot,Крупный точечный узор
-Code_and_figure,Код_и_цифра
-Cold color group,Группа холодных цветов
-Cold Sweat,Холодный пот
-Cold wind,Холодный ветер
-Color,Цвет
-Color_pattern,Цветовой_узор
-Colored pencil,Цветной карандаш
-Comic magazine_close,Журнал комиксов_закрытый
-Comic_material,Материал_комикса
-ComicStudio journal,Дневник ComicStudio
-Commercial_facility,Коммерческое_заведение
-Commodity,Товар
-Community_facility_and_road,Общественное_заведение_и_дорога
-Concentration 01,Концентрация 01
-Concept Art Watercolor 5,Концепт-арт акварель 5
-Condo 01,Многоквартирный дом 01
-Condo 01-Ver.2,Многоквартирный дом 01-Ver.2
-Confusion,Замешательство
-Confusion 03,Замешательство 03
-Convenience store,Магазин у дома
-Convenience store-Ver.2,Магазин у дома-Ver.2
-Copy 0324_4 of Drawing Pencil Tip 2,Copy 0324_4 of Drawing Pencil Tip 2
-Copy 33714841_p2,Copy 33714841_p2
-Copy Gradient for Manga 2,Копия градиента для манги 2
-Copy Gradient for Manga 3,Копия градиента для манги 3
-Copy Layer 4,Копия слоя 4
-Cork 02,Пробка 02
-Cosmos １,Космея 1
-Cosmos ２,Космея 2
-Cosmos ３,Космея 3
-Cotton,Хлопок
-Crack,Трещина
-Cracked heart 02_peach,Разбитое сердце 02_персиковый
-Crawling 01,Ползёт 01
-Crawling 02,Ползёт 02
-Crayon heart,Восковое сердце
-Crazy hair 01,Безумные волосы 01
-Crescent moon,Полумесяц
-Cross and flower,Крест и цветок
-Cross-hatching,Штриховка
-Cross-hatching (for tone scraping),Штриховка (для соскабливания тона)
-Cross-hatching snake rope 01A,Штриховка змеиная верёвка 01A
-Cross-hatching snake rope 01B,Штриховка змеиная верёвка 01B
-Cross-hatching snake rope 02A,Штриховка змеиная верёвка 02A
-Cross-hatching snake rope 02B,Штриховка змеиная верёвка 02B
-Cross-hatching x1,Штриховка x1
-Cross-hatching x2,Штриховка x2
-Cross-hatching x4,Штриховка x4
-Crossing1,Перекрёсток1
-Crossing2,Перекрёсток2
-Crossing3,Перекрёсток3
-Crowds of people 01,Толпы людей 01
-Crowds of people 02,Толпы людей 02
-Cry,Плач
-Cry_01,Плач_01
-Cry_02,Плач_02
-Cube,Куб
-Cupped hand,Сложенная горстью ладонь
-Cute anime,Милое аниме
-Cute cartoon,Милый мультфильм
-Cute running,Милый бег
-Cute sitting,Милая поза сидя
-Cutout lace,Ажурное кружево
-Cyberspace hexagons,Гексагоны киберпространства
-Cyberspace lighting,Освещение киберпространства
-D,D
-Daily_behavior,Повседневное_поведение
-Dainty flowers,Изящные цветы
-Dappled cloud 1,Пятнистое облако 1
-Dappled cloud 2,Пятнистое облако 2
-Dark drawing paper,Тёмная рисовальная бумага
-Dark_Loud_Tense_Anger,Тёмный_громкий_напряжённый_гнев
-Dashed line,Пунктирная линия
-Dead Leaves 1,Сухие листья 1
-Dead Leaves 10,Сухие листья 10
-Dead Leaves 2,Сухие листья 2
-Dead Leaves 3,Сухие листья 3
-Dead Leaves 4,Сухие листья 4
-Dead Leaves 5,Сухие листья 5
-Dead Leaves 6,Сухие листья 6
-Dead Leaves 7,Сухие листья 7
-Dead Leaves 8,Сухие листья 8
-Dead Leaves 9,Сухие листья 9
-Deadwood,Сухостой
-Decorated line 01_IS,Декоративная линия 01_IS
-Decorated line 02_IS,Декоративная линия 02_IS
-Decorated line 03_IS,Декоративная линия 03_IS
-Decorated line 04_IS,Декоративная линия 04_IS
-Decorated line pattern,Узор декоративной линии
-Decoration,Украшение
-Deep Pencil 02,Глубокий карандаш 02
-Deep Pencil 06,Глубокий карандаш 06
-Deep Pencil 07,Глубокий карандаш 07
-Default material,Материал по умолчанию
-Default_01,По умолчанию_01
-Default_02,По умолчанию_02
-Deformed glitter,Деформированные блёстки
-Delicate - Left,Деликатный - влево
-Delicate - Right,Деликатный - вправо
-Department of Basic,Базовый отдел
-Diagonal line,Диагональная линия
-Dialog,Диалог
-Dig in,Вгрызается
-Dish,Блюдо
-Dislike,Неприязнь
-Disorganized tile,Беспорядочная плитка
-Distorted circle_01,Искажённый круг_01
-Distorted circle_02,Искажённый круг_02
-Distorted circle_03,Искажённый круг_03
-Do,Делать
-Dog ears,Собачьи уши
-Door(porchL)_Open/Close,Дверь(крыльцоL)_Открыть/Закрыть
-Dot,Точка
-Dotted rectangle,Пунктирный прямоугольник
-Down in the Dumps,В унынии
-Dramatic comic style,Драматичный стиль комикса
-Drawing paper,Бумага для рисования
-Drawing paper C,Бумага для рисования C
-Drawing Pencil 01,Карандаш для рисования 01
-Drawing Pencil 02,Карандаш для рисования 02
-Drawing Pencil 03,Карандаш для рисования 03
-Drawing Pencil 04,Карандаш для рисования 04
-Drink,Напиток
-Drink coffee,Пьёт кофе
-Droop,Поникает
-Droplet 1,Капля 1
-Droplet 2,Капля 2
-Droplet 3,Капля 3
-Droplet 4,Капля 4
-Droplet 5,Капля 5
-Dry ink,Сухие чернила
-"Dumpling,border","Пельмень,кайма"
-Dusk,Сумерки
-Eat,Ест
-Eat a meal,Ест еду
-Effect_and_feeling,Эффект_и_чувство
-Effect_and_stage_direction,Эффект_и_постановка
-Effect_line,Линия_эффекта
-Elevation,Фасад
-Ellipse_01,Эллипс_01
-Ellipse_02,Эллипс_02
-Ellipse_03,Эллипс_03
-Emergency staircase,Пожарная лестница
-End of platform,Конец платформы
-Enter a doorway,Входит в дверной проём
-Entire,Целиком
-Entire classroom1,Весь класс1
-Entire classroom2,Весь класс2
-Entire classroom3,Весь класс3
-Entire1,Целиком1
-Entire2,Целиком2
-Entire3,Целиком3
-Entire4,Целиком4
-Entire5,Целиком5
-Entire_body,Всё_тело
-Entrance,Вход
-Entrance door,Входная дверь
-Entrance of condo,Вход в многоквартирный дом
-Entrance of condo-Ver.2,Вход в многоквартирный дом-Ver.2
-Entrance to platform,Вход на платформу
-Entrance-Front 1,Вход-Спереди 1
-Entrance-Front 2,Вход-Спереди 2
-Entrance-Rear,Вход-Сзади
-Entrance1,Вход1
-Entrance2,Вход2
-Entrance3,Вход3
-Entrance_Open,Вход_Открыт
-Equal interval,Равный интервал
-Erase blackboard,Стирает с доски
-Ethnic line,Этническая линия
-Ethnic line_IS,Этническая линия_IS
-euro01,euro01
-euro03,euro03
-euro04,euro04
-euro05,euro05
-euro06,euro06
-euro07,euro07
-euro08,euro08
-euro09,euro09
-euro10,euro10
-Evening,Вечер
-Exclamation mark 01_yellow,Восклицательный знак 01_жёлтый
-Exterior,Экстерьер
-Exterior of school,Экстерьер школы
-Exterior of school-Ver.2,Экстерьер школы-Ver.2
-Exterior of train-Ver.2,Экстерьер поезда-Ver.2
-Fabric C,Ткань C
-Face,Лицо
-Facepalm,Закрывает лицо ладонью
-Fallen leaf1,Опавший лист 1
-Fallen leaf2,Опавший лист 2
-Fallen leaf3,Опавший лист 3
-Fallen leaf4,Опавший лист 4
-Fallen leaf5,Опавший лист 5
-Fallen leaves 01,Опавшие листья 01
-Fallen leaves 02,Опавшие листья 02
-Fallen leaves 03,Опавшие листья 03
-Fallen leaves 04,Опавшие листья 04
-Fallen leaves 05,Опавшие листья 05
-Fallen leaves 06,Опавшие листья 06
-Fallen leaves 07,Опавшие листья 07
-Fallen leaves 08,Опавшие листья 08
-Fallen leaves 09,Опавшие листья 09
-Fallen leaves 10,Опавшие листья 10
-Family Crest pattern,Узор фамильного герба
-Fan,Веер
-Far-away Mountain,Далёкая гора
-Far-away trees-black,Далёкие деревья-чёрный
-Far-away trees-gradation,Далёкие деревья-градация
-Fashion,Мода
-Fearless,Бесстрашный
-Feather,Перо
-Feather 01,Перо 01
-Feather 01 _ paint,Перо 01 _ закраска
-Feather 02,Перо 02
-Feather 03,Перо 03
-Feather 04,Перо 04
-Feather 05,Перо 05
-Feather 05 _ paint,Перо 05 _ закраска
-Features Dot,Точечный узор Features
-Feel dizzy,Чувствует головокружение
-Feeling,Чувство
-Feigning Ignorance,Изображает неведение
-Female,Женщина
-Fence 2,Забор 2
-"Fence,gray","Забор,серый"
-"Fence,monochrome","Забор,монохромный"
-Figure,Фигура
-Fine brush 01,Тонкая кисть 01
-Fine textured,Тонкая текстура
-Fine textured02,Тонкая текстура02
-Finger mark 02,Отпечаток пальца 02
-Fir forest,Еловый лес
-"Fir forest,gray","Еловый лес,серый"
-Fire a gun,Стреляет из пистолета
-Fish,Рыба
-Fist,Кулак
-Flame,Пламя
-Flame (strip-shaped),Пламя (в форме полосы)
-Flame mark 02,Знак пламени 02
-Flash,Вспышка
-Flash of light,Вспышка света
-"Flash of light,Beta flash like","Вспышка света,как бета-вспышка"
-"Flash of light,large","Вспышка света,большая"
-Flat brush,Плоская кисть
-Flip hair back,Откидывает волосы назад
-Floor brush,Кисть для пола
-Flow line beta upright,Линия потока бета вертикальная
-Flow line gray upright,Линия потока серая вертикальная
-"Flow line,gray","Линия потока,серый"
-"Flow line,rough","Линия потока,грубый"
-Flower,Цветок
-Flower 2_warm color_transparent,Цветок 2_тёплый цвет_прозрачный
-Flower blur_transparent,Размытие цветка_прозрачный
-Flower gradation,Градация цветка
-"Flower gradation,gray","Градация цветка,серый"
-Flower pattern,Узор с цветами
-Flower pattern 01_transparent_IS,Узор с цветами 01_прозрачный_IS
-Flower pattern 02_IS,Узор с цветами 02_IS
-Flower pattern 03_IS,Узор с цветами 03_IS
-Flower pattern 04_IS,Узор с цветами 04_IS
-Flower_and_plant,Цветок_и_растение
-Flower_and_plant_pattern,Цветок_и_растение_узор
-Fluffy wreath c_1,Пушистый венок c_1
-"Fog,gray","Туман,серый"
-Foliage1,Листва 1
-Foliage10,Листва 10
-Foliage11,Листва 11
-Foliage2,Листва 2
-Foliage3,Листва 3
-Foliage4,Листва 4
-Foliage5,Листва 5
-Foliage6,Листва 6
-Foliage7,Листва 7
-Foliage8,Листва 8
-Foliage9,Листва 9
-Food_and_beverage,Еда_и_напитки
-For Balloon Image,Для изображения выноски
-Forest,Лес
-Forest 01-black,Лес 01-чёрный
-Forest 01-sunshine filtering through foliage,Лес 01-солнечный свет сквозь листву
-Forest 02-black,Лес 02-чёрный
-Forest 02-sunshine filtering through foliage,Лес 02-солнечный свет сквозь листву
-Friction,Трение
-Frill 01,Оборка 01
-Front,Спереди
-Front door,Передняя дверь
-Front of entrance,Перед входом
-Front of house 1,Перед домом 1
-Front of house 2,Перед домом 2
-Full moon,Полная луна
-Full-bloomed spring,Цветущая весна
-Funny running,Забавный бег
-Furniture_and_interior,Мебель_и_интерьер
-Fury,Ярость
-Gate closed,Ворота закрыты
-Gate closed(with train),Ворота закрыты(с поездом)
-Gate open(without train),Ворота открыты(без поезда)
-Gauze,Марля
-Gauze cloud,Марлевое облако
-Gingko leaf,Лист гинкго
-Glitter,Блёстки
-Glitter 01,Блёстки 01
-Glitter 05_transparent,Блёстки 05_прозрачный
-Glitter Circle cross1,Блёстки круг крест1
-Glitter Circle cross2,Блёстки круг крест2
-Glitter Circle cross3,Блёстки круг крест3
-Glitter Circle cross4,Блёстки круг крест4
-Gloss gradation flower,Глянцевая градация цветка
-"Gloss gradation flower,stipple","Глянцевая градация цветка,растушёвка"
-Go down stairs,Спускается по лестнице
-Go up stairs,Поднимается по лестнице
-Gold chain,Золотая цепь
-Goldfish fabric,Ткань с золотыми рыбками
-Good Mood,Хорошее настроение
-Gothic roses,Готические розы
-Gouache 01,Гуашь 01
-Grab a can,Хватает банку
-Grab a handle,Хватает ручку
-Grab a strap,Хватает поручень
-Grab shoulders,Хватает за плечи
-Gradation dot_transparent_IS,Точечная градация_прозрачный_IS
-Gradation flash,Градационная вспышка
-Gradation flower_cold color_transparent,Градационный цветок_холодный цвет_прозрачный
-Grass 01,Трава 01
-Grass 02,Трава 02
-Grass A1,Трава A1
-Grass A2,Трава A2
-Grass A3,Трава A3
-Grass A4,Трава A4
-Grass A5,Трава A5
-Grass A6,Трава A6
-Grass A7,Трава A7
-Grass A8,Трава A8
-Grass B,Трава B
-Grass C1,Трава C1
-Grass C10,Трава C10
-Grass C11,Трава C11
-Grass C12,Трава C12
-Grass C2,Трава C2
-Grass C3,Трава C3
-Grass C4,Трава C4
-Grass C5,Трава C5
-Grass C6,Трава C6
-Grass C7,Трава C7
-Grass C8,Трава C8
-Grass C9,Трава C9
-Grass patch 01,Участок травы 01
-Grass patch 02,Участок травы 02
-Grass patch 03,Участок травы 03
-Grass Silhouette Brush 1b,Кисть силуэта травы 1b
-Grass Silhouette Brush 2 2,Кисть силуэта травы 2 2
-Grassland1,Луг 1
-Grassland2,Луг 2
-Gravure,Гравюра
-Green,Зелёный
-Grid up,Сетка вверх
-Ground 001,Земля 001
-Ground 002,Земля 002
-Ground 003,Земля 003
-Ground 004,Земля 004
-Ground 005,Земля 005
-Ground 006,Земля 006
-Ground 01,Земля 01
-Ground 02,Земля 02
-Ground 03,Земля 03
-Ground 04,Земля 04
-Ground 05,Земля 05
-Ground 06,Земля 06
-Guitar case,Чехол для гитары
-Hair,Волосы
-Hallway 01_daytime,Коридор 01_день
-Hallway 01_evening,Коридор 01_вечер
-Hallway 01_morning,Коридор 01_утро
-Hallway1,Коридор1
-Hallway2,Коридор2
-Hallway3,Коридор3
-Hallway4,Коридор4
-Hand,Рука
-Hand gesture 001,Жест руки 001
-Hand gesture 002,Жест руки 002
-Hand gesture 003,Жест руки 003
-Hand gesture 004,Жест руки 004
-Hand gesture 005,Жест руки 005
-Hand gesture 006,Жест руки 006
-Hand gesture 007,Жест руки 007
-Hand gesture 008,Жест руки 008
-Hand gesture 009,Жест руки 009
-Hand gesture 010,Жест руки 010
-Hand gesture 011,Жест руки 011
-Hand gesture 012,Жест руки 012
-Hand gesture 013,Жест руки 013
-Hand gesture 014,Жест руки 014
-Hand gesture 015,Жест руки 015
-Hand gesture 016,Жест руки 016
-Hand out papers,Раздаёт бумаги
-Hand shake,Рукопожатие
-Hand_gesture,Жест_руки
-Hand_model,Модель_руки
-Handgun A,Пистолет A
-Happy,Счастливый
-Hat 01,Шляпа 01
-Haunting,Преследование
-hawaii02,hawaii02
-hawaii03,hawaii03
-Hawaiian fabric_IS,Гавайская ткань_IS
-Heads,Головы
-Heart,Сердце
-Heart 01_peach,Сердце 01_персиковый
-Heart Cherry,Сердце вишня
-Heart chocolate,Сердце шоколад
-Heart color A1,Цвет сердца A1
-Heart color A2,Цвет сердца A2
-Heart color B1,Цвет сердца B1
-Heart color B2,Цвет сердца B2
-Heart color C1,Цвет сердца C1
-Heart color C2,Цвет сердца C2
-Heart color D1,Цвет сердца D1
-Heart color D2,Цвет сердца D2
-Heart effect 06_transparent,Эффект сердца 06_прозрачный
-Heart pattern,Узор с сердцами
-Hmmm,Хмм
-Hold,Держит
-Hold a bat,Держит биту
-Hold a can,Держит банку
-Hold a dictionary,Держит словарь
-Hold a heavy bag,Держит тяжёлую сумку
-Hold a light bag,Держит лёгкую сумку
-Hold a mobile phone,Держит мобильный телефон
-Hold a pen case,Держит пенал
-Hold a plastic bag,Держит пластиковый пакет
-Hold a thick book,Держит толстую книгу
-Hold a thin book,Держит тонкую книгу
-Hold an egg,Держит яйцо
-Hold an eraser,Держит ластик
-Hold an umbrella,Держит зонт
-Hold chopsticks,Держит палочки для еды
-Hold stick,Держит палку
-Home_electronics,Бытовая_электроника
-Honeycomb structure_transparent_IS,Сотовая структура_прозрачный_IS
-Horizontal striped cloud,Облако в горизонтальную полоску
-Horizontal_seamless,Горизонтальный_бесшовный
-Horizontal_writing,Горизонтальное_письмо
-Horror_01,Ужасы_01
-Houndstooth,Гусиная лапка
-Houndstooth_IS,Гусиная лапка_IS
-Houndstooth_transparent_IS,Гусиная лапка_прозрачный_IS
-House Closeup 1,Крупный план дома 1
-House Closeup 2,Крупный план дома 2
-Housing,Жильё
-Huh,А
-Hum note a_03,Напеваемая нота a_03
-Husky maple leaf A,Кленовый лист хаски A
-Husky maple leaf B,Кленовый лист хаски B
-Husky maple leaf C,Кленовый лист хаски C
-Hydrangea1,Гортензия 1
-Hydrangea2,Гортензия 2
-Hydrangea3,Гортензия 3
-Icon,Значок
-Illustration,Иллюстрация
-IllustStudio journal,Журнал IllustStudio
-ILY sign,Знак ILY
-Impact,Удар
-Impasto,Импасто
-Inbound platform,Платформа прибытия
-Ink 1,Чернила 1
-InPlatformOnly(W_Train),ТолькоНаПлатформе(С_Поездом)
-Inside of entrance,Внутри входа
-Inside Store,Внутри магазина
-Inside tennis court,Внутри теннисного корта
-Interior,Интерьер
-Interior of train-Ver.2,Интерьер поезда-Ver.2
-Interrupted rectangle,Прерывистый прямоугольник
-InW_outWall(W_outTrain),ВнутрБезВнешСтены(С_ВнешПоездом)
-InW_outWall(WithTrain),ВнутрБезВнешСтены(СПоездом)
-Iron fence,Железный забор
-Ivy,Плющ
-Jaggy_curve_01,Зубчатая_кривая_01
-Jaggy_curve_02,Зубчатая_кривая_02
-Jaggy_curve_03,Зубчатая_кривая_03
-Jaggy_curve_04,Зубчатая_кривая_04
-Jaggy_curve_small_01,Зубчатая_кривая_маленькая_01
-Jaggy_curve_small_02,Зубчатая_кривая_маленькая_02
-Jaggy_curve_small_03,Зубчатая_кривая_маленькая_03
-Jaggy_straight line_01,Зубчатая_прямая линия_01
-Jaggy_straight line_02,Зубчатая_прямая линия_02
-Jaggy_straight line_03,Зубчатая_прямая линия_03
-Jaggy_straight line_distroted,Зубчатая_прямая линия_искажённая
-Jaggy_straight line_small_01,Зубчатая_прямая линия_маленькая_01
-Jaggy_thick line,Зубчатая_толстая линия
-Japanese arrow feather,Японское стрелковое перо
-Japanese crest,Японский герб
-Japanese crest_IS,Японский герб_IS
-Japanese Paper 02,Японская бумага 02
-Japanese pattern,Японский узор
-Japanese pattern 01_IS,Японский узор 01_IS
-Japanese pattern 02 small plum_IS,Японский узор 02 маленькая слива_IS
-Japanese ribbon (black),Японская лента (чёрная)
-Japanese_arrow_feather_IS,Японское_стрелковое_перо_IS
-Japanese_pattern,Японский_узор
-jpn02,jpn02
-jpn06,jpn06
-jpn07,jpn07
-jpn08,jpn08
-Jungle gym,Спортивный городок
-Kacaremi cohesive thin 1,Kacaremi сплошной тонкий 1
-Kacaremi cohesive thin 2,Kacaremi сплошной тонкий 2
-Kacaremi cohesive thin 3,Kacaremi сплошной тонкий 3
-Kacaremi cohesive thin 4,Kacaremi сплошной тонкий 4
-Kacaremi cohesive thin 5,Kacaremi сплошной тонкий 5
-Kacaremi cohesive thin 6,Kacaremi сплошной тонкий 6
+3Dデッサン人形-Ver.2（女性）,
+3Dデッサン人形-Ver.2（男性）,
+3コマ,
+3段4コマ1,
+3段4コマ2,
+3段4コマ3,
+3段4コマ4,
+3段4コマ5,
+3段5コマ1,
+3段5コマ2,
+3段5コマ3,
+3段5コマ4,
+3段6コマ1,
+3段6コマ2,
+3段6コマ3,
+3段等分,
+4コマ,
+4コマ2本,
+4コマ2本タイトルあり,
+4コマ上,
+4コマ上タイトルあり,
+4コマ下,
+4コマ下タイトルあり,
+4コマ右,
+4コマ右タイトルあり,
+4コマ左,
+4コマ左タイトルあり,
+4コマ漫画,
+4段6コマ1,
+4段6コマ2,
+4段6コマ3,
+4段等分,
+5コマ,
+6コマ,
+8コマタイトルあり,
+IllustStudio収録,
 KEEPOUT,НЕ ВХОДИТЬ
-Kicking legs,Бьёт ногами
-Kimono 01,Кимоно 01
-Kimono 02,Кимоно 02
-Kimono cloth,Ткань кимоно
-Kneeling (man),Стоит на коленях (мужчина)
-Kneeling (woman),Стоит на коленях (женщина)
-L,L
-Lace,Кружево
-Lace 01,Кружево 01
-Laced ribbon,Кружевная лента
-Landscape,Пейзаж
-Landscape cloud _01,Пейзажное облако _01
-Landscape cloud _02,Пейзажное облако _02
-Landscape cloud _03,Пейзажное облако _03
-Lapped circle pattern,Узор из перекрывающихся кругов
-Laptop PC,Ноутбук
-Laugh,Смех
-Laughing Hysterically,Истерический хохот
-Lay down,Лежит
-Layer 1,Layer 1
-Layer 16,Layer 16
-Layer 2,Слой 2
-Layer 3,Слой 3
-Layer 9 2,Layer 9 2
-Layered lace,Многослойное кружево
-"Layered lace,gray","Многослойное кружево,серый"
-"Layered lace,stipple","Многослойное кружево,растушёвка"
-Layout,Компоновка
-Leather loveseat sofa,Кожаный диван-софа
-Leaves 01,Листья 01
-Leaves 02,Листья 02
-Leaves 03,Листья 03
-Lee,Ли
-Left,Слева
-Left door A,Левая дверь A
-Left door B,Левая дверь B
-Left door(open),Левая дверь(открыта)
-Left Door_Open/Closed,Левая дверь_Открыта/Закрыта
-Left ear,Левое ухо
-Left entrance,Левый вход
-Left eye,Левый глаз
-Leopard print_IS,Леопардовый принт_IS
-Levelly,Ровно
-Lie on back 01,Лежит на спине 01
-Lie on back 02,Лежит на спине 02
-Light,Свет
-Light bulb 05,Лампочка 05
-Light crosshatch 01,Лёгкая штриховка 01
-Light crosshatch 02,Лёгкая штриховка 02
-Light crosshatch 03,Лёгкая штриховка 03
-Light crosshatch 04,Лёгкая штриховка 04
-Light crosshatch 05,Лёгкая штриховка 05
-Light crosshatch 06,Лёгкая штриховка 06
-Lightning gradation 01,Градиент молнии 01
-Lightning gradation 02,Градиент молнии 02
-"Lightning,white","Молния,белый"
-Lily1,Лилия 1
-Lily2,Лилия 2
-Linear,Линейный
-Living doorOpen/Close,"Дверь в гостиную, открыть/закрыть"
-Living room1,Гостиная 1
-Living room2,Гостиная 2
-Living room3,Гостиная 3
-Living room4,Гостиная 4
-Livingroom Entrance,Прихожая гостиной
-Livingroom Entrance-Ver.2,Прихожая гостиной-Ver.2
-Long 01,Длинные 01
-Long 02,Длинные 02
-Long spike of hair,Длинный вихор
-Look inside desk,Заглядывает в стол
-Looking-up trees-gray,Деревья снизу вверх-серый
-Looking-up trees-with shadow,Деревья снизу вверх-с тенью
-Luxury,Роскошь
-M,M
-Macaroon,Макарун
-Male,Мужчина
-Many thorns_01,Много шипов_01
-Many thorns_02,Много шипов_02
-Many thorns_03,Много шипов_03
-Maple leaf,Кленовый лист
-Marble,Мрамор
-Marine pattern,Морской узор
-Marker,Маркер
-Mass of rock,Глыба камня
-Material,Материал
-Medium 01,Средние 01
-Medium 02,Средние 02
-Medium 03,Средние 03
-Medium 04,Средние 04
-Medium textured,Средняя текстура
-Melody,Мелодия
-Mermaid,Русалка
-Mesh 01,Сетка 01
-Milky Way,Млечный Путь
-Mischievous,Озорной
-Mist (yellow),Туман (жёлтый)
-MM01-aquilegia pattern,MM01-узор аквилегии
-MM01-bell flower pattern,MM01-узор колокольчика
-MM01-cherry blossom pattern 01,MM01-узор сакуры 01
-MM01-cherry blossom pattern 02,MM01-узор сакуры 02
-MM01-cherry blossom pattern 03,MM01-узор сакуры 03
-MM01-clematis pattern,MM01-узор клематиса
-MM01-cosmos pattern,MM01-узор космеи
-MM01-eustoma pattern,MM01-узор эустомы
-MM01-flower pattern,MM01-цветочный узор
-MM01-freesia pattern 01,MM01-узор фрезии 01
-MM01-freesia pattern 02,MM01-узор фрезии 02
-MM01-gerbera pattern,MM01-узор герберы
-MM01-rose pattern 01,MM01-узор розы 01
-MM01-rose pattern 02,MM01-узор розы 02
-MM01-rose pattern 02-with leaf,MM01-узор розы 02-с листом
-MM01-scabiosa pattern,MM01-узор скабиозы
-MM03-school building K01-daytime,MM03-школьное здание K01-день
-MM03-school building K01-night,MM03-школьное здание K01-ночь
-MM03-school building K02-daytime,MM03-школьное здание K02-день
-MM03-school building K02-night,MM03-школьное здание K02-ночь
-MM03-school building K03-daytime,MM03-школьное здание K03-день
-MM03-school building K03-night,MM03-школьное здание K03-ночь
-MM03-school building K04-daytime,MM03-школьное здание K04-день
-MM03-school building K04-night,MM03-школьное здание K04-ночь
-MM03-school building K05-daytime,MM03-школьное здание K05-день
-MM03-school building K05-night,MM03-школьное здание K05-ночь
-MM03-school building K06-daytime,MM03-школьное здание K06-день
-MM03-school building K06-night,MM03-школьное здание K06-ночь
-MM03-school building K07-daytime,MM03-школьное здание K07-день
-MM03-school building K07-night,MM03-школьное здание K07-ночь
-MM03-school building S01-daytime,MM03-школьное здание S01-день
-MM03-school building S01-night,MM03-школьное здание S01-ночь
-MM03-school building S02-daytime,MM03-школьное здание S02-день
-MM03-school building S02-night,MM03-школьное здание S02-ночь
-MM03-school building S03-daytime,MM03-школьное здание S03-день
-MM03-school building S03-night,MM03-школьное здание S03-ночь
-MM04-bonfire,MM04-костёр
-MM04-bonfire-black base,MM04-костёр-чёрная основа
-MM04-explosion in the sky,MM04-взрыв в небе
-MM04-flame 01,MM04-пламя 01
-MM04-flame 01-black base,MM04-пламя 01-чёрная основа
-MM04-flame 02,MM04-пламя 02
-MM04-flame 02-black base,MM04-пламя 02-чёрная основа
-MM04-flame 03,MM04-пламя 03
-MM04-flame 03-black base,MM04-пламя 03-чёрная основа
-MM04-flame 04,MM04-пламя 04
-MM04-flame 04-black base,MM04-пламя 04-чёрная основа
-MM04-heavy rain,MM04-ливень
-MM04-Launching,MM04-Запуск
-MM04-rain 01,MM04-дождь 01
-MM04-rain 02,MM04-дождь 02
-MM04-volcanic eruption,MM04-извержение вулкана
-MM08-cloud 01,MM08-облако 01
-MM08-cloud 02,MM08-облако 02
-MM08-cloud 03,MM08-облако 03
-MM08-cloud 04,MM08-облако 04
-MM08-cloud 05,MM08-облако 05
-MM08-cloud 06,MM08-облако 06
-MM08-cloud 07,MM08-облако 07
-MM08-cloud 08,MM08-облако 08
-MM08-cloud 09,MM08-облако 09
-MM08-cloud 10,MM08-облако 10
-MM08-cloud 11,MM08-облако 11
-MM08-cloud 12,MM08-облако 12
-MM08-cloud 13,MM08-облако 13
-MM08-cloud 14,MM08-облако 14
-MM08-cloud 15,MM08-облако 15
-MM08-cloud 16,MM08-облако 16
-MM08-cloud 17,MM08-облако 17
-MM08-cloud 18,MM08-облако 18
-MM08-cloud 19,MM08-облако 19
-MM08-cloud 20,MM08-облако 20
-MM08-cloud 21,MM08-облако 21
-MM08-cloud 22,MM08-облако 22
-MM08-cloud 23,MM08-облако 23
-MM08-cloud 24,MM08-облако 24
-MM08-cloud 25,MM08-облако 25
-MM08-cloud 26,MM08-облако 26
-MM08-cloud 27,MM08-облако 27
-MM08-cloud 28,MM08-облако 28
-MM08-cloud 29,MM08-облако 29
-MM08-cloud 30,MM08-облако 30
-MM08-cloud 31,MM08-облако 31
-MM08-cloud 32,MM08-облако 32
-MM08-cloud 33,MM08-облако 33
-MM08-cloud 34,MM08-облако 34
-MM08-cloud 35,MM08-облако 35
-MM08-cloud 36,MM08-облако 36
-MM08-cloud 37,MM08-облако 37
-MM08-cloud 38,MM08-облако 38
-MM08-cloud 39,MM08-облако 39
-MM08-cloud 40,MM08-облако 40
-MM08-cloud 41,MM08-облако 41
-MM08-cloud 42,MM08-облако 42
-MM08-cloud 43,MM08-облако 43
-MM08-cloud 44,MM08-облако 44
-MM08-cloud 45,MM08-облако 45
-MM08-cloud 46,MM08-облако 46
-MM08-cloud 47,MM08-облако 47
-MM08-cloud 48,MM08-облако 48
-MM08-cloud 49,MM08-облако 49
-MM08-cloud 50,MM08-облако 50
-MM09-rhombic window,MM09-ромбовидное окно
-MM11-condo 01,MM11-многоквартирный дом 01
-MM11-condo 02,MM11-многоквартирный дом 02
-MM11-condo 03_01,MM11-многоквартирный дом 03_01
-MM11-condo 03_02,MM11-многоквартирный дом 03_02
-MM11-condo 04,MM11-многоквартирный дом 04
-MM11-condo 05,MM11-многоквартирный дом 05
-MM11-condo 06,MM11-многоквартирный дом 06
-MM11-condo 07,MM11-многоквартирный дом 07
-MM11-condo 08,MM11-многоквартирный дом 08
-MM11-condo 09,MM11-многоквартирный дом 09
-MM11-condo 10,MM11-многоквартирный дом 10
-MM11-condo 11,MM11-многоквартирный дом 11
-MM11-condo 12,MM11-многоквартирный дом 12
-MM11-condo 13,MM11-многоквартирный дом 13
-MM11-condo 14,MM11-многоквартирный дом 14
-MM11-condo 15,MM11-многоквартирный дом 15
-MM11-condo 16,MM11-многоквартирный дом 16
-MM11-front of a station 01,MM11-перед станцией 01
-MM11-front of a station 02,MM11-перед станцией 02
-MM11-front of a station 03,MM11-перед станцией 03
-MM11-front of a station 04,MM11-перед станцией 04
-MM11-front of a station 05,MM11-перед станцией 05
-MM11-front of a station 06,MM11-перед станцией 06
-MM11-house 01,MM11-дом 01
-MM11-house 02,MM11-дом 02
-MM11-house 03,MM11-дом 03
-MM11-house 04,MM11-дом 04
-MM11-house 05,MM11-дом 05
-MM11-house 06,MM11-дом 06
-MM11-house 07,MM11-дом 07
-MM11-house 08,MM11-дом 08
-MM11-house 09,MM11-дом 09
-MM11-house 10,MM11-дом 10
-MM11-house 11,MM11-дом 11
-MM11-house 12,MM11-дом 12
-MM11-house 13,MM11-дом 13
-MM11-house 14,MM11-дом 14
-MM11-house 15,MM11-дом 15
-MM11-house 16,MM11-дом 16
-MM11-house 17,MM11-дом 17
-MM11-house 18,MM11-дом 18
-MM11-house 19,MM11-дом 19
-MM11-house 20,MM11-дом 20
-MM11-house 21,MM11-дом 21
-MM11-house 22,MM11-дом 22
-MM11-house 23,MM11-дом 23
-MM11-store 01,MM11-магазин 01
-MM11-store 02,MM11-магазин 02
-MM11-store 03,MM11-магазин 03
-MM11-store 04,MM11-магазин 04
-MM11-store 05,MM11-магазин 05
-Mob_boy 01 front,Mob_парень 01 спереди
-Mob_girl 01 front,Mob_девушка 01 спереди
-Mobile_phone,Мобильный_телефон
-Model pose,Поза модели
-Monochromatic_pattern,Монохромный_узор
-Monochrome,Монохромный
-Mop 01,Швабра 01
-Morning Glory1,Ипомея 1
-Morning Glory2,Ипомея 2
-Morning Glory3,Ипомея 3
-Mortar,Раствор
-Mosaic 05,Мозаика 05
-Mosaic 07,Мозаика 07
-Mosaic tile,Мозаичная плитка
-Mouth,Рот
-Movement 04,Движение 04
-Movement 08,Движение 08
-Movement_and_feeling,Движение_и_чувство
-Mug A,Кружка A
-Multivalve flower c_transparent_IS,Многолепестковый цветок c_прозрачный_IS
-Mumble,Бормотание
-Music_Instrument,Музыкальный_инструмент
-Musical note,Музыкальная нота
-"Mysterious tile,fog","Загадочная плитка,туман"
-Narration,Повествование
-Nature,Природа
-Near railroad crossing,Возле железнодорожного переезда
-Near railroad crossing-Ver.2,Возле железнодорожного переезда-Ver.2
-Nearby tree,Соседнее дерево
-"Negative,black","Негатив,чёрный"
-"Negative,gray","Негатив,серый"
-New 3D drawing figure _ 0,New 3D drawing figure _ 0
-New 3D Hand Models_0,New 3D Hand Models_0
-New 3D Head Model_0,New 3D Head Model_0
-New 3D Head Model_9,New 3D Head Model_9
-New 3D Primitive_0,New 3D Primitive_0
-New Celestial Sphere_0,New Celestial Sphere_0
-New Sequential Pause_0,New Sequential Pause_0
-Nico painting _ Agape,Картина Нико _ Агапе
-Nico painting _ fearless,Картина Нико _ бесстрашие
-Nico painting _ laughs,Картина Нико _ смеётся
-Nico painting _ Maggie,Картина Нико _ Мэгги
-Nico painting _ Masih co in,Картина Нико _ Масих ко ин
-Nico painting _ nihil,Картина Нико _ нигиль
-Nico painting _ old,Картина Нико _ старая
-Nico painting _ pokee,Картина Нико _ покее
-Nico painting _ seriously,Картина Нико _ серьёзно
-Nico painting _ standard,Картина Нико _ стандарт
-Nico painting _ Tara,Картина Нико _ Тара
-Nico paintings _ good humor,Картины Нико _ хорошее настроение
-Nico paintings _ happy,Картины Нико _ счастливая
-Nico paintings _ than laughter,Картины Нико _ больше чем смех
-Nico paintings _ will be-I,Картины Нико _ будет — я
-Nico picture _ is done done done,Рисунок Нико _ готово готово готово
-Nico picture _ is done done done embarrassed,Рисунок Нико _ готово готово готово смущённый
-Nico picture _ shirabakkure,Рисунок Нико _ сирабаккуре
-Night,Ночь
-Night sky 05,Ночное небо 05
-Night sky 05_with distance view,Ночное небо 05_с видом вдаль
-Nihilistic,Нигилистический
-Ninja star like,Подобно метательной звезде ниндзя
-No Front Side,Без передней стороны
-No Left Side,Без левой стороны
-No Rear Side,Без задней стороны
-No Right Side,Без правой стороны
-No Roof,Без крыши
-Noise brush,Кисть «шум»
-Noise type,Тип шума
-Noise_and_machine_sound,Noise_and_machine_sound
-Normal_map,Normal_map
-North Europe color stripe 01_IS,Североевропейская цветная полоса 01_IS
-North Europe color stripe 02_IS,Североевропейская цветная полоса 02_IS
-Nose,Нос
-Notebook(blue)_open,Блокнот (синий)_открыт
-Notice_and_impact,Notice_and_impact
-Noticed sign B_yellow,Знак внимания B_жёлтый
-Noticed sign C_yellow,Знак внимания C_жёлтый
-Noticing line 02,Линия внимания 02
-O,O
-ocean02,ocean02
-Offhand line,Небрежная линия
-Offhand rectangle,Небрежный прямоугольник
-Office chair,Офисный стул
-Oh No,О нет
-Oil color pill pen 07,Масляная ручка-таблетка 07
-Oil paint,Масляная краска
-Oil paint 01,Масляная краска 01
-Oil paint 02,Масляная краска 02
-Oil paint 03,Масляная краска 03
-OK sign,Знак ОК
-On,Включено
-On the knee,На колене
-One side 01,Одна сторона 01
-One side 05,Одна сторона 05
-One side strong 01,Одна сторона сильная 01
-One side thin 03,Одна сторона тонкая 03
-Open,Открыто
-Open a door,Открывает дверь
-Open cross_area1_hidden,Open cross_area1_hidden
-Open cross_area2_hidden,Open cross_area2_hidden
-Open cross_area3_hidden,Open cross_area3_hidden
-Open cross_area4_hidden,Open cross_area4_hidden
-Other side platform,Платформа на другой стороне
-Other_building,Other_building
-Outbound platform,Платформа отправления
-OutPlatformOnly(W_Train),OutPlatformOnly(W_Train)
-Outside tennis court,Снаружи теннисного корта
-OutW_outWall(W_outTrain),OutW_outWall(W_outTrain)
-OutW_outWall(WithTrain),OutW_outWall(WithTrain)
-Overcast,Пасмурно
-Painting_material,Painting_material
-Paper 20171013,Бумага 20171013
-Paper fan,Веер
-Parallel_line,Parallel_line
-Parchment,Пергамент
-Park,Парк
-Park-Ver.2,Парк-Ver.2
-Passage,Проход
-Pastel flower pattern,Пастельный цветочный узор
-Pattern,Узор
-Peace sign,Знак мира
-Peacock,Павлин
-Pearl,Жемчужина
-Pebble A for comic,Галька A для комикса
-Pebble B for comic,Галька B для комикса
-Pebble C for comic,Галька C для комикса
-Pen which scratched Monochrome,"Ручка, царапающая монохром"
-Pencil,Карандаш
-Pencil 2,Карандаш 2
-Pencil 20171014,Карандаш 20171014
-PET bottle,ПЭТ-бутылка
-Petal 01,Лепесток 01
-Petit fog,Лёгкий туман
-"Petit fog,stipple","Лёгкий туман,растушёвка"
-Phone call 01,Телефонный звонок 01
-Phone call 02,Телефонный звонок 02
-Pick pushpins,Берёт кнопки
-Pick something up,Поднимает что-то
-Pick tissue paper,Берёт бумажную салфетку
-Picture,Картина
-Pile of books,Стопка книг
-Pink,Розовый
-Piyo,Пиё
-"Piyo,gray","Пиё,серый"
-Plain cloth,Простая ткань
-Plane,Самолёт
-Plaster 2,Штукатурка 2
-Plum,Слива
-Plump - Left,Пухлый - левый
-Plump - Right,Пухлый - правый
-Pocketwatch,Карманные часы
-Point a finger,Указывает пальцем
-Polka dot pattern,Узор в горошек
-Polygon,Многоугольник
-Pop glitter 01,Поп-блёстки 01
-Pop glitter 02,Поп-блёстки 02
-Pop style_IS,Поп-стиль_IS
-Poppy 2,Мак 2
-Poppy 3,Мак 3
-Poppy １,Мак 1
-Porch door_A_Open/Close,Дверь крыльца_A_открыть/закрыть
-Porch door_B_Open/Close,Дверь крыльца_B_открыть/закрыть
-Pose parts,Детали позы
-Pose_part,Pose_part
-Pose_sequence,Pose_sequence
-Posed look,Поза с осанкой
-Poster,Плакат
-Powa powa,Пова-пова
-"Powa powa,stipple","Пова-пова,растушёвка"
-PowerTone,PowerTone
-primitive,primitive
-Prism,Призма
-Prop,Реквизит
-Puchi-ding watercolor 3,Акварель пути-динь 3
-Puchi-ing watercolor,Акварель пути-инь
-Punk,Панк
-Punk_01,Панк_01
-Punk_landscape,Панк_пейзаж
-Put hands on knees,Кладёт руки на колени
-Put hands on shoulders,Кладёт руки на плечи
-Put on boots,Надевает ботинки
-Pyramid,Пирамида
-Question mark 01_transparent,Вопросительный знак 01_прозрачный
-Question mark 01_yellow,Вопросительный знак 01_жёлтый
-Question mark 04_transparent,Вопросительный знак 04_прозрачный
-Rabbit 01,Кролик 01
-Rabbit 02,Кролик 02
-Rabbit ears,Кроличьи уши
-Race RE003,Гонка RE003
-Radiant,Сияющий
-Radiant small,Сияющий малый
-"Radiant small,black","Сияющий малый,чёрный"
-"Radiant,black","Сияющий,чёрный"
-Railway crossing_blink01,Железнодорожный переезд_blink01
-Railway crossing_blink02,Железнодорожный переезд_blink02
-railwaycrossingArea,railwaycrossingArea
-Rain 02,Дождь 02
-Rainbow (large),Радуга (большая)
-Raise a hand,Поднимает руку
-Read a book 02,Читает книгу 02
-Real G-pen,Настоящее G-перо
-Real Pencil,Настоящий карандаш
-Really Mad,По-настоящему злой
-Recline,Откидывается назад
-Rectangle,Прямоугольник
-Rectangle twinkle,Прямоугольное мерцание
-Red,Красный
-Register,Касса
-Regular chair,Обычный стул
-Regular chair(PulledOut),Обычный стул (отодвинутый)
-Relax,Расслабление
-Relax (man),Расслабление (мужчина)
-Relax (woman),Расслабление (женщина)
-Relaxed stance,Расслабленная стойка
-Residential area01,Жилой район 01
-Residential area01-Ver.2,Жилой район 01-Ver.2
-Rest chin in hand 01,Подпирает подбородок рукой 01
-Rest chin in hand 02,Подпирает подбородок рукой 02
-Retro style_IS,Ретро-стиль_IS
-Ribbon (green),Лента (зелёная)
-Ribbon 02,Лента 02
-Ribbon 03_left,Лента 03_левая
-Ribbon 03_right,Лента 03_правая
-Ribbon banner,Лента-баннер
-Right,Право
-Right door A,Правая дверь A
-Right door B,Правая дверь B
-Right door(open),Правая дверь (открыта)
-Right Door_Open/Close,"Правая дверь, открыть/закрыть"
-Right ear,Правое ухо
-Right entrance,Правый вход
-Right eye,Правый глаз
-Ring,Кольцо
-"Ring,stipple","Кольцо,растушёвка"
-Rise to full height,Встаёт во весь рост
-River_daytime,River_daytime
-River_evening,River_evening
-River_night,River_night
-Roof1,Крыша 1
-Roof2,Крыша 2
-Rose 01,Роза 01
-Rose 02,Роза 02
-Rose 1,Роза 1
-Rose 2,Роза 2
-Rose 3,Роза 3
-Rose 4,Роза 4
-Rose leaves 01,Листья розы 01
-Rose leaves 02,Листья розы 02
-Rose leaves 03,Листья розы 03
-Rose stripe 01,Полоса из роз 01
-Rough brush,Грубая кисть
-Rough crosshatch,Грубая штриховка
-Rough edged,С грубым краем
-Rough line,Грубая линия
-"Rough line,darker","Грубая линия,темнее"
-Rough paper,Грубая бумага
-Rough textured,С грубой текстурой
-Round anime,Округлый аниме
-Round cartoon,Округлый мультяшный
-Round chair,Круглый стул
-Round hole_large,Круглое отверстие_большое
-Round realistic,Округлый реалистичный
-Round_shape,Round_shape
-Rounded lace,Округлое кружево
-Rounded rectangle_01,Скруглённый прямоугольник_01
-Rounded rectangle_02,Скруглённый прямоугольник_02
-Rub forehead,Трёт лоб
-Rubble_A,Rubble_A
-Rubble_B,Rubble_B
-Rubble_C,Rubble_C
-Rubble_D,Rubble_D
-Rugged - Left,Грубый - левый
-Rugged - Right,Грубый - правый
-Run with toes inside left front,Бежит косолапо влево вперёд
-Run with toes inside right front,Бежит косолапо вправо вперёд
-Running,Бежит
-Running color C,Бегущий цвет C
-Running color D,Бегущий цвет D
-Running left front,Бежит влево вперёд
-Running right front,Бежит вправо вперёд
-S,S
-Sad,Грусть
-Sakura 01,Сакура 01
-Sakura 02,Сакура 02
-Sakura 03,Сакура 03
-Sand,Песок
-Sand *soft* A,Песок *мягкий* A
-Sand *soft* B,Песок *мягкий* B
-Sand cloud 1,Песчаное облако 1
-Sand cloud1,Песчаное облако 1
-Sand cloud2,Песчаное облако 2
-Sand cloud3,Песчаное облако 3
-Sand cloud4,Песчаное облако 4
-Sand cloud5,Песчаное облако 5
-Sand eye brush,Кисть «песчаный глаз»
-Sand_pattern,Sand_pattern
-Sandwich A,Сэндвич A
-Saturated line 01,Насыщенная линия 01
-Saturated line 02,Насыщенная линия 02
-Saturated line 11,Насыщенная линия 11
-Saturated line 14,Насыщенная линия 14
-Saturated line_birght 02,Насыщенная линия_яркая 02
-Saturated_line,Saturated_line
-Scared,Испуганный
-Scene 1,Сцена 1
-Scene 1A,Сцена 1A
-Scene 1B,Сцена 1B
-Scene 1C,Сцена 1C
-Scene 1D,Сцена 1D
-Scene 1E,Сцена 1E
-Scene 1F,Сцена 1F
-Scene 2,Сцена 2
-Scene 2A,Сцена 2A
-Scene 2B,Сцена 2B
-Scene 2C,Сцена 2C
-Scene 2D,Сцена 2D
-Scene 2E,Сцена 2E
-Scene 3,Сцена 3
-Scene 3A,Сцена 3A
-Scene 3B,Сцена 3B
-Scene 3C,Сцена 3C
-Scene 3D,Сцена 3D
-Scene 3E,Сцена 3E
-Scene 4,Сцена 4
-Scene 4A,Сцена 4A
-Scene 4B,Сцена 4B
-Scene 4C,Сцена 4C
-Scene3F,Сцена 3F
-Scene4D,Сцена 4D
-Scene4E,Сцена 4E
-Scene4F,Сцена 4F
-SceneA,Сцена A
-SceneB,Сцена B
-SceneC,Сцена C
-SceneD,Сцена D
-SceneE,Сцена E
-SceneF,Сцена F
-SceneG,Сцена G
-SceneH,Сцена H
-SceneI,Сцена I
-SceneJ,Сцена J
-SceneK,Сцена K
-SceneL,Сцена L
-SceneM,Сцена M
-School,Школа
-School bag,Школьный рюкзак
-School boy A-Ver.3,Школьник A-Ver.3
-School boy B-Ver.3,Школьник B-Ver.3
-School building(white),Школьное здание (белое)
-School chair,Школьный стул
-School desk,Школьная парта
-School gate,Школьные ворота
-School gate_L_Open/Close,Школьные ворота_L_открыть/закрыть
-School gate_R_Open/Close,Школьные ворота_R_открыть/закрыть
-School girl A-Ver.3,Школьница A-Ver.3
-School girl B-Ver.3,Школьница B-Ver.3
-School_facility,School_facility
-School_supply,School_supply
-Scratch,Царапина
-Scream,Крик
-Sea food,Морепродукты
-Sea urchin flash circle,Круг вспышки-морского-ежа
-Sea urchin flash circle thin 02,Круг вспышки-морского-ежа тонкий 02
-Sea urchin flash vertical,Вертикальная вспышка-морского-ежа
-Sea urchin flash vertical thin 02,Вертикальная вспышка-морского-ежа тонкая 02
-Sea_01,Sea_01
-Sea_04,Sea_04
-Sea_urchin_flash,Sea_urchin_flash
-Seamless,Бесшовный
-Seat1,Сиденье 1
-Seat2,Сиденье 2
-Seating point,Точка посадки
-Seize by collar 01,Хватает за воротник 01
-Seized by collar,Схвачен за воротник
-Semi 01,Полудлинные 01
-Separated 01,Раздельный 01
-Serious,Серьёзный
-Seven petaled flower (aqua),Семилепестковый цветок (аква)
-Seven petaled flower (blue),Семилепестковый цветок (синий)
-Seven petaled flower (magenta),Семилепестковый цветок (пурпурный)
-Seven petaled flower (orange),Семилепестковый цветок (оранжевый)
-Seven petaled flower (pink),Семилепестковый цветок (розовый)
-Seven petaled flower (purple),Семилепестковый цветок (фиолетовый)
-Seven petaled flower (red),Семилепестковый цветок (красный)
-Seven petaled flower (turquoise),Семилепестковый цветок (бирюзовый)
-Seven petaled flower (violet blue),Семилепестковый цветок (сине-фиолетовый)
-Seven petaled flower (white),Семилепестковый цветок (белый)
-Seven petaled flower (yellow green),Семилепестковый цветок (жёлто-зелёный)
-Seven petaled flower (yellow),Семилепестковый цветок (жёлтый)
-Shadow of tree,Тень дерева
-Shadow of woods,Тень леса
-Sharp anime,Резкий аниме
-Sharp cartoon,Резкий мультяшный
-Sharp pain! horizontal,Острая боль! горизонтальная
-Sharp realistic,Резкий реалистичный
-Sharp webtoon,Резкий вебтун
-Shh,Тссс
-Shiver 01,Дрожь 01
-Shock 01,Шок 01
-Short 01,Короткие 01
-Shriek,Визг
-Shy 1,Стеснение 1
-Shy 2,Стеснение 2
-Side,Сторона
-Side hair 01,Боковые волосы 01
-Side hair 02,Боковые волосы 02
-Side of hallway,Сторона коридора
-Side recline,Полулёжа на боку
-Side tail 01,Боковой хвост 01
-Side tail 02_left,Боковой хвост 02_левый
-Side tail 02_right,Боковой хвост 02_правый
-Sign,Знак
-Silver frame,Серебряная рамка
-Simple checkered_blue,Простая клетка_синий
-Simple checkered_yellow,Простая клетка_жёлтый
-Simple flower,Простой цветок
-"Simple flower, Maiden","Простой цветок,дева"
-Simple frill,Простая оборка
-Simple Jaggy_01,Простая зазубрина_01
-Simple Jaggy_02,Простая зазубрина_02
-Simple Jaggy_03,Простая зазубрина_03
-Simple textile,Простая ткань
-Sit_down,Сесть
-Sitting,Сидя
-Sitting 03,Сидя 03
-Skeletal,Скелет
-Skull 04,Череп 04
-Sky,Небо
-Slap,Шлепок
-Slapped,Получает шлепок
-Sleek,Гладкий
-Sleep,Спит
-Sleep at desk,Спит за столом
-Slender - Left,Стройный - Слева
-Slender - Right,Стройный - Справа
-Slide,Слайд
-Slip on a banana peel,Поскальзывается на банановой кожуре
-SLR Camera,Зеркальная камера
-Small_object,Маленький_объект
-Smear (big),Размазывание (большое)
-Smile,Улыбка
-Smoke_and_breath,Дым_и_дыхание
-Snow crystal_realistic 1,Снежный кристалл_реалистичный 1
-Snow crystal_realistic 2,Снежный кристалл_реалистичный 2
-Snow rabbit,Снежный кролик
-Soap bubble,Мыльный пузырь
-Soccer 01,Футбол 01
-Soccer 02,Футбол 02
-Soccer ball,Футбольный мяч
-Sofa,Диван
-Soft Aqua 02,Мягкая вода 02
-Soft Clover 02,Мягкий клевер 02
-Soft Flower Lace 02,Мягкое цветочное кружево 02
-Soft light,Мягкий свет
-Soft webtoon,Мягкий вебтун
-Soft Wreath c01_transparent,Мягкий венок c01_прозрачный
-Soft_Float,Мягкое_парение
-Sound_effect,Звуковой_эффект
-Southern land trees-black,Деревья южных земель-чёрный
-Southern land trees-gray,Деревья южных земель-серый
-Sparkle B,Блеск B
-Sparkle large,Большой блеск
-Special 2,Особый 2
-Speed_line,Линия_скорости
-Sphere,Сфера
-Spiky glitter,Колючие блёстки
-Sport,Спорт
-Sporty anime,Спортивное аниме
-Spread fingers,Растопыривает пальцы
-Sprint,Спринт
-Square,Квадрат
-Stage lights,Сценические огни
-Stained glass,Витраж
-Stairs1,Лестница 1
-Stairs2,Лестница 2
-Stand,Стоять
-Stand firm,Стоит твёрдо
-Standing,Стоя
-Standing 01,Стоя 01
-Standing 03,Стоя 03
-Standing prim,Стоит чинно
-Star,Звезда
-Star 01_yellow,Звезда 01_жёлтый
-StarA,Звезда A
-StarB,Звезда B
-Starry sky,Звёздное небо
-"Starry sky,gray","Звёздное небо,серый"
-Station platform (ground level),Платформа станции (на уровне земли)
-Station platform (ground level)-Ver.2,Платформа станции (на уровне земли)-Ver.2
-Stationary_and_book,Канцелярия_и_книга
-Stipple,Растушёвка
-Stippled monologue ring 01,Растушёванное кольцо монолога 01
-Stippled monologue ring 02,Растушёванное кольцо монолога 02
-Stippled sphere,Растушёванная сфера
-Stone,Камень
-Storage(in)_A_Open/Close,Кладовка (внутри)_A_открыть/закрыть
-Storage(in)_B_Open/Close,Кладовка (внутри)_B_открыть/закрыть
-Storagedoor_A_Open/Close,Дверь кладовки_A_открыть/закрыть
-Storagedoor_B_Open/Close,Дверь кладовки_B_открыть/закрыть
-Straight left,Прямо влево
-Straight long,Прямые длинные
-Straw hat,Соломенная шляпа
-Strawberry ribbon,Клубничная лента
-Stride left front,Шаг влево вперёд
-Stride right front,Шаг вправо вперёд
-String body,Корпус со струнами
-Student,Студент
-student's entrance1,Вход для учеников 1
-student's entrance2,Вход для учеников 2
-Sunflower01,Подсолнух01
-Sunflower1,Подсолнух 1
-Sunflower2,Подсолнух 2
-Sunflower3,Подсолнух 3
-Sunflower4,Подсолнух 4
-Sunset glow 01,Закатное зарево 01
-Sunset glow 01_with distance view,Закатное зарево 01_с видом вдаль
-Surprise,Удивление
-Surprised,Удивлён
-Surprised 4_yellow,Удивлён 4_жёлтый
-Surprised and Bashful,Удивлён и смущён
-Sweat 03_white,Пот 03_белый
-Sweat splattering,Брызги пота
-Sweat_and_tear,Пот_и_слёзы
-Swing1,Качели 1
-Swing2,Качели 2
-Tablecloth,Скатерть
-Take notes,Делает заметки
-Tarot frame,Рамка таро
-Tartan 03(brown),Шотландка 03(коричневый)
-Teacher's desk,Учительский стол
-Tear 04,Слеза 04
-Telephone pole,Телефонный столб
-Text and notebook,Текст и блокнот
-Textile 01_IS,Ткань 01_IS
-Textile 02_IS,Ткань 02_IS
-Textile 03_IS,Ткань 03_IS
-Textile 04_IS,Ткань 04_IS
-Texture,Текстура
-Thin chain 01,Тонкая цепь 01
-Thinking,Думает
-Thorn_01,Шип_01
-Thorn_02,Шип_02
-Thorn_03,Шип_03
-Threshold,Порог
-Thunder,Гром
-Tint ink adjustment,Настройка тонировочных чернил
-Tirolean Tape blue,Тирольская лента синий
-Tirolean Tape red,Тирольская лента красный
-Tirolean Tape yellow,Тирольская лента жёлтый
-Tool,Инструмент
-Tool_in_hands,Инструмент_в_руках
-Touch hair,Касается волос
-Track1,Путь 1
-Track2,Путь 2
-Train(interior),Поезд(интерьер)
-Train1,Поезд 1
-Train2,Поезд 2
-TrainA(moving),Поезд A (в движении)
-TrainB(moving),Поезд B (в движении)
-trainExterior,trainExterior
-Tree-Japanese,Дерево-японское
-Trees,Деревья
-Trees1,Деревья 1
-Trees2,Деревья 2
-Trees3,Деревья 3
-Trees4,Деревья 4
-Trees5,Деревья 5
-Triple flash,Тройная вспышка
-Triumphant look,Торжествующий вид
-Turn around,Оборачивается
-Turn pale 03,Бледнеет 03
-Twill carbon_IS,Углеволокно саржа_IS
-Twin tail 01_left,Два хвоста 01_левый
-Twin tail 01_right,Два хвоста 01_правый
-Twin tail 02_left,Два хвоста 02_левый
-Twin tail 02_right,Два хвоста 02_правый
-Ultrasound Mark,Знак ультразвука
-Umbrella_close,Зонт_закрыт
-Umbrella_open,Зонт_открыт
-Unstable line,Неустойчивая линия
-Uppercut,Апперкот
-usa05,usa05
-Use mobile phone,Пользуется мобильным телефоном
-Vegetation,Растительность
-Vehicle,Транспорт
-Vertical line,Вертикальная линия
-"Vertical line,Maiden","Вертикальная линия,дева"
-Vertical_seamless,Вертикальный_бесшовный
-Vertical_writing,Вертикальное_письмо
-Vibration_01,Вибрация_01
-Vibration_02,Вибрация_02
-Vibration_03,Вибрация_03
-Vibration_04,Вибрация_04
-Violin,Скрипка
-Violin bow,Смычок скрипки
-Voice_and_breath,Голос_и_дыхание
-Vortex 01,Вихрь 01
-Vortex 02,Вихрь 02
-Vortex and circle,Вихрь и круг
-Vortex and circle gray,Вихрь и круг серый
-Walk,Идёт
-Walk with a notebook,Идёт с блокнотом
-Walk with an umbrella 01,Идёт с зонтом 01
-Walk with an umbrella 03,Идёт с зонтом 03
-Walking hurriedly left front,Спешно идёт влево вперёд
-Walking hurriedly right front,Спешно идёт вправо вперёд
-Walling brick wall 01_IS,Кладка кирпичная стена 01_IS
-Walling brick wall 02_IS,Кладка кирпичная стена 02_IS
-Walling cement_IS,Кладка цемент_IS
-Walling Provence style_IS,Кладка прованский стиль_IS
-Walling tile_IS,Кладка плитка_IS
-Walling wire mesh fence_IS,Кладка сетчатый забор_IS
-Walling wooden wall_IS,Кладка деревянная стена_IS
-Wallpaper sky_IS,Обои небо_IS
-Warm color group,Группа тёплых цветов
-Water,Вода
-Water lily1,Кувшинка 1
-Water lily2,Кувшинка 2
-Water lily3,Кувшинка 3
-Watercolor checkered,Акварельная клетка
-Watercolor splash 01,Акварельный всплеск 01
-Watercolor splash 02,Акварельный всплеск 02
-Watercolor splash 03,Акварельный всплеск 03
-Watercolor splash 04,Акварельный всплеск 04
-Watercolor splash 05,Акварельный всплеск 05
-Waterside,У воды
-Watery ink,Водянистые чернила
-Wave looking left,Машет глядя влево
-Wave looking right,Машет глядя вправо
-Wave_shape,Форма_волны
-Waved line,Волнистая линия
-Weapon,Оружие
-Web items,Веб-элементы
-"Well, well",Ну-ну
-Wet blotting ink 01,Мокрые расплывшиеся чернила 01
-Wet blotting ink 02,Мокрые расплывшиеся чернила 02
-Whispering voice,Шепчущий голос
-Whispering voice 02 (relatively square),Шепчущий голос 02 (относительно квадратный)
-Whispering voice 02_landscape,Шепчущий голос 02_горизонтальный
-Whispering voice_landscape,Шепчущий голос_горизонтальный
-White,Белый
-White *soft* circle,Белый *мягкий* круг
-White cross-hatching 02,Белая штриховка 02
-White cross-hatching circle,Белый штрихованный круг
-White cross-line 01,Белая перекрёстная линия 01
-White cross-line 02,Белая перекрёстная линия 02
-White cross-line 03,Белая перекрёстная линия 03
-White cross-line 04,Белая перекрёстная линия 04
-White cross-line 05,Белая перекрёстная линия 05
-White spotted pattern rough,Белый пятнистый узор грубый
-White_tone,Белый_тон
-Windmill,Ветряная мельница
-Windmill-Ver.2,Ветряная мельница-Ver.2
-Window 02-1_transparent,Окно 02-1_прозрачный
-Window side,Сторона окна
-Window side of classroom,Сторона окна класса
-Winter uniform,Зимняя форма
-Wipe a window,Протирает окно
-Wish,Желание
-With Train_InPlatform,With Train_InPlatform
-With Train_OutPlatform,With Train_OutPlatform
-With_physical_setting,С_физической_обстановкой
-Without back,Без задней части
-Without blackboard side,Без стороны с доской
-Without bookshelf side,Без стороны с книжным шкафом
-Without ceiling,Без потолка
-Without Entrance,Без входа
-Without exterior wall,Без наружной стены
-Without front,Без передней части
-Without hallway side,Без стороны коридора
-Without left wall,Без левой стены
-Without right wall,Без правой стены
-Without roof,Без крыши
-Without small object,Без мелких предметов
-Without window,Без окна
-Without window side,Без стороны с окном
-Without_InPlatformWall,Without_InPlatformWall
-Without_OutPlatformWall,Without_OutPlatformWall
-WithoutEntanceLeftWall,WithoutEntanceLeftWall
-WithoutEntanceRightWall,WithoutEntanceRightWall
-WithoutEntanceWall,WithoutEntanceWall
-WithoutEntranceFrontWall,WithoutEntranceFrontWall
-WithoutEntranceInnerWall,WithoutEntranceInnerWall
-WithoutRightRoomWall,WithoutRightRoomWall
-WithoutRoof(W_outTrain),WithoutRoof(W_outTrain)
-WithoutRoof(WithTrain),WithoutRoof(WithTrain)
-Wood,Дерево
-Wood chair(PulledOut),Деревянный стул (отодвинутый)
-Wood Grain_Brown,Текстура дерева_коричневый
-Wood Grain_White,Текстура дерева_белый
-Wooden,Деревянный
-Wooden chair,Деревянный стул
-Wooden fence,Деревянный забор
-Worm's-eye view entrance,Вход с ракурса снизу
-Wound,Рана
-Wound (drip),Рана (капля)
-Write with marker,Рисует маркером
-Write with pen,Рисует ручкой
-Writing on blackboard,Пишет на доске
-Yawn 01,Зевок 01
-Youthful,Юный
-Zipper 01,Молния 01
-Zipper 02,Молния 02
-Zoning Out,Отрешённость
-ZZZ…,ZZZ…
+あじさい1,
+あじさい2,
+あじさい3,
+かすれ墨,
+かすれ墨調整,
+かすれ紅葉A,
+かすれ紅葉B,
+かすれ紅葉C,
+きらめきB,
+きらめき大,
+しゃぼん玉,
+ちび,
+にじみC,
+にじみD,
+にじみスプレー,
+にじみ墨01,
+にじみ墨02,
+にじみＢ,
+ひまわり1,
+ひまわり2,
+ひまわり3,
+ひまわり4,
+ぷちもや,
+ほわ,
+ほわA,
+ほわ・ふわ,
+ほわ五角形,
+ぼかし虹,
+やんちゃ,
+アクティブ,
+インパスト,
+エレガント,
+カケアミ,
+カケアミ(トーン削り用),
+カケアミ1カケ,
+カケアミ4カケ,
+カケアミまとまり薄1,
+カケアミまとまり薄2,
+カケアミまとまり薄3,
+カケアミまとまり薄4,
+カケアミまとまり薄5,
+カケアミまとまり薄6,
+カケアミ薄01,
+カケアミ薄02,
+カケアミ薄03,
+カケアミ薄04,
+カケアミ薄05,
+カケアミ薄06,
+カラー,
+ガッシュ01,
+ガーゼ,
+キャンバス_y_02,
+キャンバス地,
+キャンバス地02,
+キュート,
+キラキラ,
+キラキラ○十字1,
+キラキラ○十字2,
+キラキラ○十字3,
+キラキラ○十字4,
+ギザギザ,
+クレマチスA,
+クレマチスB,
+クレマチスC,
+クール,
+コスモス1,
+コスモス2,
+コスモス3,
+コットン,
+コンセプトアート水彩5,
+ゴールドチェーン,
+シンプルフリル,
+シームレス,
+ジェントル,
+ジッパー01,
+ジッパー02,
+スプラッシュ水彩01,
+スプラッシュ水彩02,
+スプラッシュ水彩03,
+スプラッシュ水彩04,
+スプラッシュ水彩05,
+タフ,
+チェーン002,
+チェーン003塗り,
+チェーン01,
+チャーミング,
+チョーク,
+チロリアンテープ赤,
+チロリアンテープ青,
+チロリアンテープ黄,
+ツタ,
+ツタ蝶々,
+テクスチャ,
+デコボコ,
+デッサン鉛筆01,
+デッサン鉛筆02,
+デッサン鉛筆03,
+デッサン鉛筆04,
+デッサン鉛筆先端0324_4 のコピー 2,
+トゥーン-シャープ,
+トゥーンｰソフト,
+ドクロ風,
+ノイズブラシ,
+ハンドモデル,
+ハート,
+ハートカラーA1,
+ハートカラーA2,
+ハートカラーB1,
+ハートカラーB2,
+ハートカラーC1,
+ハートカラーC2,
+ハートカラーD1,
+ハートカラーD2,
+バラ02,
+ヒビ割れ,
+ビル001,
+ビル002,
+ビル003,
+ビル004,
+ビル005,
+ビル006,
+ビル007,
+ビル008,
+ビル009,
+ビル01,
+ビル010,
+ビル011,
+ビル012,
+ビル013,
+ビル02,
+ビル03,
+ビル04,
+ビル05,
+ビル06,
+ビル07,
+ビル08,
+ビル09,
+ビル10,
+ビル11,
+ビル12,
+ビル13,
+ビーズアクセサリー01,
+ビーズアクセサリー02,
+ビーズアクセサリー03,
+ビーズアクセサリー１,
+ビーズアクセサリー２,
+ビーズアクセサリー３,
+フチにじみ水彩,
+フチにじみ水彩3,
+フリル01,
+プリミティブ,
+ベース,
+ベース-右手,
+ベース-左手,
+ペン先かすれモノクロ,
+ボタン003,
+ボタン01,
+ポピー1,
+ポピー2,
+ポピー3,
+マイルド,
+マンガ-シャープ,
+マンガ-ソフト,
+マンガ用グラデーション のコピー 2,
+マンガ用グラデーション のコピー 3,
+マーメイド,
+メロディ,
+リアル-シャープ,
+リアル-ソフト,
+リアルGペン,
+リアル鉛筆,
+レイヤー 1,
+レイヤー 16,
+レイヤー 2,
+レイヤー 3,
+レイヤー 4 のコピー,
+レイヤー 9 2,
+レース,
+レース01,
+レースRE003,
+レースリボン,
+七弁花(桃色),
+七弁花(橙),
+七弁花(水色),
+七弁花(白),
+七弁花(紫),
+七弁花(赤),
+七弁花(赤紫),
+七弁花(青),
+七弁花(青紫),
+七弁花(青緑),
+七弁花(黄),
+七弁花(黄緑),
+三つ編み縄,
+中目,
+切り紙レース,
+効果・演出,
+単色,
+単色パターン,
+和柄,
+和柄リボン(黒),
+図形,
+地面001,
+地面002,
+地面003,
+地面004,
+地面005,
+地面006,
+地面01,
+地面02,
+地面03,
+地面04,
+地面05,
+地面06,
+大理石,
+岩塊,
+平毛筆,
+平面,
+手,
+擦れ,
+擦れ大,
+斑雲1,
+斑雲2,
+斜線,
+新規3Dデッサン人形_0,
+新規3Dハンドモデル_0,
+新規3Dプリミティブ_0,
+新規3D頭部モデル_0,
+新規3D頭部モデル_9,
+星,
+星A,
+星B,
+服飾,
+朝顔1,
+朝顔2,
+朝顔3,
+木の柵,
+木材,
+木炭,
+木炭01,
+木炭02,
+本01,
+本02,
+本03,
+本04,
+本05,
+本06,
+本07,
+枝葉1,
+枝葉10,
+枝葉11,
+枝葉2,
+枝葉3,
+枝葉4,
+枝葉5,
+枝葉6,
+枝葉7,
+枝葉8,
+枝葉9,
+枯葉1,
+枯葉10,
+枯葉2,
+枯葉3,
+枯葉4,
+枯葉5,
+枯葉6,
+枯葉7,
+枯葉8,
+枯葉9,
+柄,
+桜,
+桜(近景)1,
+桜(近景)3,
+桜01,
+桜02,
+桜03,
+桜05,
+桜文様1,
+桜文様2,
+桜文様3,
+桜文様4,
+桜文様5,
+桜文様6,
+桜花弁,
+梅,
+横すじ雲,
+樹木1,
+樹木2,
+樹木3,
+樹木4,
+樹木5,
+毛筆,
+水仙1,
+水仙2,
+水仙3,
+油彩01,
+油彩02,
+油彩03,
+油彩丸筆０7,
+油絵,
+波線,
+滲1,
+滲2,
+滲3,
+漆喰,
+漫画向け小石A,
+漫画向け小石B,
+漫画向け小石C,
+漫画素材,
+濃い画用紙,
+濃淡,
+濃淡墨調整,
+濃鉛筆02,
+濃鉛筆06,
+濃鉛筆07,
+炎,
+点描,
+玉杢,
+球,
+瓦礫_A,
+瓦礫_B,
+瓦礫_C,
+瓦礫_D,
+画材,
+画用紙,
+画用紙20171013,
+画用紙C,
+白ほわ丸,
+百合1,
+百合2,
+真珠,
+石,
+砂,
+砂煙 1,
+砂煙1,
+砂煙2,
+砂煙3,
+砂煙4,
+砂煙5,
+砂目ほわA,
+砂目ほわB,
+砂目ブラシ,
+破線,
+空,
+立方体,
+筆ペン01,
+筆ペン02,
+筆ペン03,
+粗い毛筆,
+粗い点,
+粗い画用紙,
+粗い線,
+粗目,
+紐本体,
+細目,
+細目02,
+細筆,
+細筆01,
+組紐01,
+組紐02,
+網目,
+繊維C,
+羽,
+羽01,
+羽02,
+羽03,
+羽04,
+羽05,
+背景,
+色鉛筆,
+花,
+花びら01,
+花模様,
+草01,
+草02,
+草03,
+草A1,
+草A2,
+草A3,
+草A4,
+草A5,
+草A6,
+草A7,
+草A8,
+草B,
+草C1,
+草C10,
+草C11,
+草C12,
+草C2,
+草C3,
+草C4,
+草C5,
+草C6,
+草C7,
+草C8,
+草C9,
+草むら01,
+草むら02,
+草シルエットブラシ1b,
+草シルエットブラシ2 2,
+草原1,
+草原2,
+草木,
+落ち葉01,
+落ち葉02,
+落ち葉03,
+落ち葉04,
+落ち葉05,
+落ち葉06,
+落ち葉07,
+落ち葉08,
+落ち葉09,
+落ち葉1,
+落ち葉10,
+落ち葉2,
+落ち葉3,
+落ち葉4,
+落ち葉5,
+葉01,
+葉02,
+葉03,
+薔薇01,
+薔薇02,
+薔薇1,
+薔薇2,
+薔薇3,
+薔薇4,
+薔薇葉01,
+薔薇葉02,
+薔薇葉03,
+血001,
+血002,
+血003,
+血004,
+血005,
+血006,
+血007,
+血01,
+血02,
+血03,
+血04,
+血05,
+血06,
+血07,
+血痕,
+装飾,
+角柱,
+角錐,
+鉄条網,
+鉄柵,
+鉛筆,
+鉛筆2,
+鉛筆20171014,
+銀杏葉,
+鎖01,
+鎖02,
+雪の結晶_リアル1,
+雪の結晶_リアル2,
+雲,
+雲にじみ,
+雲ガーゼ,
+電柱,
+音符,
+頭部,
+風景,
+飛沫１,
+飛沫２,
+飛沫３,
+飛沫４,
+飛沫５,
+黒砂目,

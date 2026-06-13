@@ -66,15 +66,15 @@ from common import (
     confirm,
     find_csp_resource,
 )
+from version import LANGS_ROOT, ROOT
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
 # One folder per language, each a complete tree: langs/<lang>/ui/ (main UI
 # resource files) plus optional plugins/ tools/ materials/ for languages we
 # patch ourselves.
-LANGS_DIR = ROOT / "langs"
+LANGS_DIR = LANGS_ROOT
 
 # A resource file is GUID-named with no extension. Matching on this tells a
 # real resource/build folder apart from any other directory in the repo.

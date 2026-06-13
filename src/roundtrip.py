@@ -76,11 +76,10 @@ def _gather(target: Path) -> list[Path]:
 
 def _default_samples(repo_root: Path) -> list[Path]:
     """The two known 742DEA58 samples used when no arguments are given."""
+    from version import english_ui_dir, japanese_ui_dir, GUARD_GUID
     candidates = {
-        "english": (repo_root / "langs" / "english" / "ui"
-                    / "742DEA58-ED6B-4402-BC11-20DFC6D08040"),
-        "japanese": (repo_root / "langs" / "japanese" / "ui"
-                     / "742DEA58-ED6B-4402-BC11-20DFC6D08040"),
+        "english": english_ui_dir() / GUARD_GUID,
+        "japanese": japanese_ui_dir() / GUARD_GUID,
     }
     files = []
     for label, path in candidates.items():

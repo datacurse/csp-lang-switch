@@ -37,7 +37,7 @@ Pipeline (run from the repo root: python src/materials.py <cmd>)
   backup    copy the catalog DB + every pack's catalog files -> materials/
   extract   collect every material + tag name -> translation/materials.csv
   ...translate the `target` column of materials.csv...
-  apply     write the translations into patched copies -> langs/russian/materials/
+  apply     write the translations into patched copies -> langs/<language>/materials/
   install   copy the patched files into the live CSP user data
   restore   copy the originals back
 
@@ -58,13 +58,13 @@ import sys
 from pathlib import Path
 
 from common import check_csp_closed, confirm
+from version import LANGS_ROOT, ROOT
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
-MATERIALS_DIR = ROOT / "langs" / "english" / "materials"   # originals (English)
-BUILD_DIR = ROOT / "langs" / "russian" / "materials"       # patched (Russian)
+MATERIALS_DIR = LANGS_ROOT / "english" / "materials"   # originals (English)
+BUILD_DIR = LANGS_ROOT / "russian" / "materials"       # patched build
 WORKSHEET = ROOT / "translation" / "materials.csv"
 
 DB_NAME = "CatalogMaterial.cmdb"
@@ -73,6 +73,12 @@ CATALOG = "catalog"
 PACK_FILES = ("catalog.xml", "catalogMaterial.cac")
 INSTALL_DIRS = ("Install", "Install2")
 NAME_RE = re.compile(r"<name>([^<]*)</name>")
+
+
+def configure_language(language: str) -> None:
+    """Select which langs/<language>/materials build directory to use."""
+    global BUILD_DIR
+    BUILD_DIR = LANGS_ROOT / language / "materials"
 
 
 # ----------------------------------------------------------------------
@@ -372,7 +378,7 @@ def _deploy(src_root: Path, label: str, args) -> None:
 
 def cmd_install(args) -> None:
     _deploy(BUILD_DIR, "patched", args)
-    print("restart CSP; material names are now Russian.")
+    print("restart CSP; material names now use the selected pack.")
     print("run 'python src/materials.py restore' to undo.")
 
 
@@ -396,12 +402,15 @@ def main(argv: list[str] | None = None) -> None:
                         help="skip the confirmation prompt")
     parser.add_argument("--force", action="store_true",
                         help="proceed even if CSP appears to be running")
+    parser.add_argument("--language", default="russian",
+                        help="community pack under langs/ (default: russian)")
     parser.add_argument("command",
                         choices=("backup", "extract", "apply",
                                  "install", "restore"),
                         help="pipeline step to run")
 
     args = parser.parse_args(argv)
+    configure_language(args.language)
     {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
      "install": cmd_install, "restore": cmd_restore}[args.command](args)
 

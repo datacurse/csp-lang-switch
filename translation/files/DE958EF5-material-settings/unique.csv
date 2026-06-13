@@ -5,8 +5,7 @@ Item name,Имя элемента
 Please enter name.,Введите имя.
 """%s"" cannot be used as an item name.",«%s» нельзя использовать как имя элемента.
 "The item name already exists.
- If duplicate items exist, it may no longer be possible to use the intended item when specified during script edits.","Имя элемента уже существует.
- При наличии повторяющихся элементов может стать невозможным использование нужного элемента, указанного при редактировании скрипта."
+ If duplicate items exist, it may no longer be possible to use the intended item when specified during script edits.",
 Play,Воспроизвести
 Stop,Стоп
 Trial,Прослушивание
@@ -24,19 +23,14 @@ All supported formats |*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp
 All supported formats|*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb;*.mp4|Images (*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb)|;*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb|Movie (*.mp4)|*.mp4,Все поддерживаемые форматы|*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb;*.mp4|Изображения (*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb)|;*.clip;*.bmp;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.tga;*.webp;*.psd;*.psb|Видеоролик (*.mp4)|*.mp4
 This item cannot be deleted as it contains data that may be in use.,"Этот элемент нельзя удалить, так как он содержит данные, которые могут использоваться."
 "Cannot register the item since there are types of items which cannot be used when syncing to the Clip Studio cloud. 
-It is possible to use these items by turning off syncing in the “Projects” tab in Clip Studio.","Не удалось зарегистрировать элемент, так как существуют типы элементов, которые нельзя использовать при синхронизации с облаком Clip Studio. 
-Эти элементы можно использовать, отключив синхронизацию на вкладке “Projects” в Clip Studio."
+It is possible to use these items by turning off syncing in the “Projects” tab in Clip Studio.",
 This file format is not supported.,Этот формат файла не поддерживается.
 "Failed to import some files. This may be due to the following:
 
 ・The file was in an unsupported format.
-・The process was cancelled from the “Import 3D File” dialog.","Не удалось импортировать некоторые файлы. Это может быть вызвано следующим:
-
-・Файл был в неподдерживаемом формате.
-・Процесс был отменён в диалоговом окне “Import 3D File”."
+・The process was cancelled from the “Import 3D File” dialog.",
 "Failed to import the file because there is no Documents folder in the Internal Storage of the device. 
-Please create a Documents folder directly under Internal Storage in the file manager app and try again.","Не удалось импортировать файл, так как во внутреннем хранилище устройства нет папки Documents. 
-Создайте папку Documents непосредственно во внутреннем хранилище через приложение файлового менеджера и повторите попытку."
+Please create a Documents folder directly under Internal Storage in the file manager app and try again.",
 Settings,Настройки
 Register,Зарегистрировать
 Delete,Удалить
@@ -44,6 +38,5 @@ Add item,Добавить элемент
 Change item settings,Изменить настройки элемента
 Delete item,Удалить элемент
 "%s is being used in a script. 
-Do you want to delete it?","%s используется в скрипте. 
-Хотите удалить его?"
+Do you want to delete it?",
 Importing %s... (%d/%d),Импорт %s... (%d/%d)

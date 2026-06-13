@@ -28,9 +28,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 import csp5
 from repack import iter_records
+from version import english_ui_dir
 
 ROOT = Path(__file__).resolve().parent.parent
-RES = ROOT / "langs" / "english" / "ui" / "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
+RES = english_ui_dir() / "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
 WS = ROOT / "translation" / "files" / "7F9F9530-cloud-sync" / "strings.csv"
 
 # English material-category term -> Russian. Single-segment terms only; colon
@@ -101,7 +102,8 @@ def main() -> None:
 
     print(f"added {len(new_rows)} block-6 material-tree rows to {WS.name}")
     for r in new_rows[:8]:
-        print(f"  {r['key']:12} {r['source']!r} -> {r['target']!r}")
+        line = f"  {r['key']:12} {r['source']!r} -> {r['target']!r}"
+        print(line.encode("utf-8", errors="replace").decode("utf-8", errors="replace"))
     print(f"  ... ({len(new_rows)} total)")
 
 

@@ -1,22 +1,27 @@
 # csp-translation
 
-Translating the **Clip Studio Paint 5** user interface into **Russian** by
-patching its binary resource files.
+Community localization tooling for **Clip Studio Paint 5**, starting with a
+complete **Russian** UI pack.
 
-CSP has no Russian localization. Its UI strings live in binary resource bundles
-(GUID-named files, one per subsystem). This project parses those bundles,
-exports their text to editable CSVs, lets us translate, and repacks them into
-files CSP loads directly. The method is **verified end-to-end** — a patched file
-has rendered correctly inside a running copy of CSP.
+CSP has no slots for community languages such as Russian, Ukrainian, or Kazakh.
+Its UI strings live in binary resource bundles (GUID-named files, one per
+subsystem) and in a few parallel stores. This project parses those assets,
+exports their text to editable CSVs, lets us translate, repacks them into files
+CSP loads directly, and switches one community pack at a time through CSP's
+English slot. The method is **verified end-to-end** — a patched file has
+rendered correctly inside a running copy of CSP.
 
 ## Status
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
-- **Translation:** all **32 content-bearing files** translated to Russian,
+- **First community pack:** all **32 content-bearing files** translated to Russian,
   packed into `langs/russian/ui/`, and round-trip-verified (32/32 byte-for-byte). The
   consistency audit is clean apart from known false positives (brand names, CC
   license names, shader code, internal config keys). Run
   `python src/batch.py status` for live progress.
+- **Switcher:** `src/lang.py` discovers community packs under `langs/<language>/`
+  and official CSP languages from the live install. Every selected language is
+  copied into the `english` slot, so users can switch without reinstalling CSP.
 - **Plug-in filters:** the new Filter menu (categories, filter names, dialog
   parameters) lives in ~37 plug-in DLLs, not the bundles. All 37 are translated
   and load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
@@ -34,42 +39,47 @@ has rendered correctly inside a running copy of CSP.
 - **Out of scope: the CLIP STUDIO launcher** (the separate hub window that
   opens before PAINT). Its visible home screen — Continue Drawing, project
   cards, announcements, notices — is **cloud-served** by Celsys with no
-  Russian feed, so most of it is unreachable from local patching. The local
+  community-language feed, so most of it is unreachable from local patching. The local
   parts (sidebar / About / Maintenance menus) live in a separate resource
   tree, but a v18 partial-translation attempt crashed the launcher. The
   project intentionally ships PAINT-only.
 
-## Install it / undo it
+## Install it / switch languages
 
 ### For end users — the bundled exe
 
-Download `csp-russian.exe` and double-click it. Pick `[1] Switch to Russian` or
-`[2] Restore the original (English)`. UAC fires once when you commit to a
-switch (it needs to write into `C:\Program Files`). Close CSP first.
+Download `csp-lang.exe` and double-click it. Pick a community pack, such as
+Russian, or an official CSP language, such as English or Japanese. UAC fires
+once when you commit to a switch (it needs to write into `C:\Program Files`).
+Close CSP first.
 
 The exe also takes CLI args if you'd rather skip the menu:
 
 ```
-csp-russian.exe russian        # install Russian everywhere
-csp-russian.exe original       # restore the original install
-csp-russian.exe status         # show what is installed
+csp-lang.exe russian        # install the Russian community pack
+csp-lang.exe english        # install stock English into the English slot
+csp-lang.exe japanese       # install stock Japanese into the English slot
+csp-lang.exe status         # show what is installed
 ```
 
-Per-machine backups and state live at `%LOCALAPPDATA%\csp-russian\`.
+Per-machine backups and state live at `%LOCALAPPDATA%\csp-lang\`. Existing
+`%LOCALAPPDATA%\csp-russian\` backups are still recognized after upgrading.
 
 ### For developers — the source-tree scripts
 
 The same functionality, run directly from the repo:
 
 ```
-python src/lang.py russian        # show Russian everywhere
-python src/lang.py original       # restore the original install
+python src/lang.py russian        # install the Russian community pack
+python src/lang.py english        # install stock English into the English slot
+python src/lang.py japanese       # install stock Japanese into the English slot
 python src/lang.py status         # show what is installed right now
-python src/lang.py                # interactive menu
+python src/lang.py                # simple GUI picker
 ```
 
-`russian` snapshots the original DLLs / SQLite DBs the first time it runs, so
-`original` always has somewhere to copy back from. State is cached in
+Installing a community pack snapshots the original DLLs / SQLite DBs the first
+time it runs, so official-language restore has somewhere to copy back from.
+State is cached in
 `.lang-state.json` and verified against on-disk content hashes on every run, so
 if anything drifts the next `status` will show it as `unknown` rather than lie.
 
@@ -82,13 +92,22 @@ testing each pipeline in isolation — see [Workflow](#workflow) below.
 
 ```
 pip install -r requirements.txt
-pyinstaller csp-russian.spec
+pyinstaller csp-lang.spec
 ```
 
-The resulting `dist/csp-russian.exe` bundles the patched Russian build
-(`langs/russian/`) + the stock English UI (`langs/english/ui/`) inside a
-single ~20 MB file. End users need nothing else installed (no Python, no
-extra files).
+The resulting `dist/csp-lang.exe` bundles the active version tree
+(`versions/5.0.0/langs/`: Russian community pack + full English stock for
+restore). End users need nothing else installed (no Python, no extra files).
+
+### Capturing stock from a CSP install (maintainers)
+
+```
+python scripts/capture_stock.py
+```
+
+Copies English + Japanese oracle UI, plug-in DLLs, tool DBs, and materials
+into `versions/5.0.0/langs/`. Requires CSP closed; launch CSP once beforehand
+so materials user data exists.
 
 ## Layout
 
@@ -96,8 +115,8 @@ extra files).
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
 | [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
-| [`translation/`](translation/) | `manifest.csv` (file list), `GLOSSARY.md`, `plugins.csv` (filter-DLL worksheet), `tools.csv` (tool-palette worksheet), `materials.csv` (material-catalog worksheet), and `files/<short>-<slug>/` — one worksheet folder per resource file |
-| `langs/` | One folder per language, gitignored (copyrighted CSP data). Each is a tree of `ui/` (main UI resource files), `plugins/` (filter DLLs), `tools/` (tool-palette DBs), `materials/` (material catalog). `langs/english/` is the untouched stock CSP snapshot; `langs/russian/` is the patched build (`ui/` from `batch.py pack`, the rest from `plugins.py`/`tools.py`/`materials.py apply`); `langs/japanese/ui/` is the translation oracle |
+| [`translation/`](translation/) | Shared Russian worksheets: `manifest.csv`, `GLOSSARY.md`, `plugins.csv`, `tools.csv`, `materials.csv`, and `files/<short>-<slug>/` |
+| `versions/<csp-version>/langs/` | Per-build language trees (gitignored). Active target: **5.0.0**. Archive: **5.0.4** |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -111,7 +130,7 @@ extra files).
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
 - [`translation/manifest.csv`](translation/manifest.csv) — the machine-readable file list `batch.py` drives the pipeline from.
 - [`translation/files/742DEA58-main-ui/strings.csv`](translation/files/742DEA58-main-ui/strings.csv) — the main-UI worksheet (`key, source, target`); translate the `target` column only.
-- [`translation/GLOSSARY.md`](translation/GLOSSARY.md) — canonical Russian terms for the most frequent words, shared across all files.
+- [`translation/GLOSSARY.md`](translation/GLOSSARY.md) — canonical Russian terms for the most frequent words, shared across all Russian worksheets.
 
 ## Workflow
 
@@ -124,7 +143,8 @@ python src/batch.py export   <id>       # extract a worksheet (export-all for al
 python src/batch.py dedupe   <id>       # build the unique-strings list
 # ... translate the target column of unique.csv ...
 python src/batch.py join     <id>       # merge translations back
-python src/batch.py pack     <id>       # repack -> russian/, with round-trip check
+python src/batch.py pack     <id>       # repack -> langs/russian/ui/, with round-trip check
+python src/batch.py pack     <id> --language ukrainian
 python src/batch.py audit    <id>       # consistency audit
 ```
 
@@ -136,7 +156,7 @@ Deploy a build into a live CSP install — and switch languages back — without
 reinstalling the app, with `src/install.py`:
 
 ```
-python src/install.py russian           # install the Russian build onto CSP
+python src/install.py russian           # install the Russian UI build onto the English slot
 python src/install.py english           # restore the original English
 python src/install.py                   # show what is currently installed
 ```
@@ -151,6 +171,7 @@ python src/plugins.py backup            # save the original PlugIn/PAINT DLLs
 python src/plugins.py extract           # -> translation/plugins.csv
 # ... translate the target column ...
 python src/plugins.py apply             # -> langs/russian/plugins/
+python src/plugins.py apply --language ukrainian
 python src/plugins.py install           # deploy into the live CSP install
 ```
 
@@ -168,6 +189,7 @@ python src/tools.py backup              # save the original tool DBs
 python src/tools.py extract             # -> translation/tools.csv
 # ... translate the target column ...
 python src/tools.py apply               # -> langs/russian/tools/
+python src/tools.py apply --language ukrainian
 python src/tools.py install             # deploy into the live CSP install
 ```
 
@@ -185,6 +207,7 @@ python src/materials.py backup          # save the original catalog DB
 python src/materials.py extract         # -> translation/materials.csv
 # ... translate the target column ...
 python src/materials.py apply           # -> langs/russian/materials/
+python src/materials.py apply --language ukrainian
 python src/materials.py install         # deploy into the live CSP user data
 ```
 

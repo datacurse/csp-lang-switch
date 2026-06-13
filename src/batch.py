@@ -21,7 +21,7 @@ Layout it manages
       strings.csv         key,source,target worksheet (repack.py export output)
       unique.csv          one row per distinct source (translate this)
       word_frequency.csv  term-frequency aid for the glossary
-  russian/<guid>                         patched build (repack.py apply output)
+  langs/<language>/ui/<guid>             patched build (repack.py apply output)
 
 Subcommands  (run from the repo root: python src/batch.py <cmd> ...)
 -----------
@@ -30,7 +30,7 @@ Subcommands  (run from the repo root: python src/batch.py <cmd> ...)
   export-all           export every not-yet-exported target file
   dedupe   <id>        build unique.csv + word_frequency.csv from strings.csv
   join     <id>        merge unique.csv translations back into strings.csv
-  pack     <id>...     apply translation -> russian/<guid>, then round-trip
+  pack     <id>...     apply translation -> langs/<language>/ui, then round-trip
   pack-all             pack every target file that has a worksheet
   audit    [<id>]      consistency audit of one worksheet, or all of them
 
@@ -52,19 +52,19 @@ import csp5            # noqa: F401  (kept for parity / future use)
 import repack
 import roundtrip
 import audit
+from version import LANGS_ROOT, ROOT
 
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "translation" / "manifest.csv"
 FILES_DIR = ROOT / "translation" / "files"
-RESOURCE_DIR = ROOT / "langs" / "english" / "ui"
+RESOURCE_DIR = LANGS_ROOT / "english" / "ui"
 # The finished Japanese resources are the oracle for what is translatable UI
 # text: export emits a record only where English and Japanese differ.
-REFERENCE_DIR = ROOT / "langs" / "japanese" / "ui"
-RUSSIAN_DIR = ROOT / "langs" / "russian" / "ui"
+REFERENCE_DIR = LANGS_ROOT / "japanese" / "ui"
+DEFAULT_LANGUAGE = "russian"
 
 # Word tokenizer for the frequency aid: alpha runs only, lowercased. Digits are
 # dropped on purpose (so "3D" contributes "d", matching the original glossary
@@ -117,8 +117,12 @@ def reference_for(rec: dict) -> Path:
     return REFERENCE_DIR / rec["guid"]
 
 
-def output_for(rec: dict) -> Path:
-    return RUSSIAN_DIR / rec["guid"]
+def output_dir(language: str) -> Path:
+    return LANGS_ROOT / language / "ui"
+
+
+def output_for(rec: dict, language: str = DEFAULT_LANGUAGE) -> Path:
+    return output_dir(language) / rec["guid"]
 
 
 # ----------------------------------------------------------------------
@@ -277,9 +281,9 @@ def cmd_join(args: argparse.Namespace) -> int:
 # ----------------------------------------------------------------------
 # Subcommand: pack  (repack.py apply + roundtrip.py verification)
 # ----------------------------------------------------------------------
-def _pack_one(rec: dict) -> bool:
+def _pack_one(rec: dict, language: str) -> bool:
     """Apply a translation and round-trip-check the output. Return True on pass."""
-    ws, src, out = worksheet_for(rec), resource_for(rec), output_for(rec)
+    ws, src, out = worksheet_for(rec), resource_for(rec), output_for(rec, language)
     if not ws.exists():
         print(f"SKIP   {rec['short']}-{rec['slug']}  (no worksheet)")
         return False
@@ -301,7 +305,7 @@ def _pack_one(rec: dict) -> bool:
 def cmd_pack(args: argparse.Namespace) -> int:
     manifest = load_manifest()
     recs = [resolve(manifest, i) for i in args.ids]
-    ok = sum(_pack_one(r) for r in recs)
+    ok = sum(_pack_one(r, args.language) for r in recs)
     print(f"\nPacked {ok}/{len(recs)} file(s).")
     return 0 if ok == len(recs) else 1
 
@@ -313,7 +317,7 @@ def cmd_pack_all(args: argparse.Namespace) -> int:
     if not targets:
         print("No exported target worksheets to pack.")
         return 0
-    ok = sum(_pack_one(r) for r in targets)
+    ok = sum(_pack_one(r, args.language) for r in targets)
     print(f"\nPacked {ok}/{len(targets)} file(s).")
     return 0 if ok == len(targets) else 1
 
@@ -353,6 +357,7 @@ def _translated_pct(ws: Path) -> tuple[int, int]:
 
 
 def cmd_status(args: argparse.Namespace) -> int:
+    language = getattr(args, "language", DEFAULT_LANGUAGE)
     manifest = load_manifest()
     targets = [r for r in manifest if r["target"] in ("yes", "maybe")]
     skipped = [r for r in manifest if r["target"] == "no"]
@@ -374,7 +379,7 @@ def cmd_status(args: argparse.Namespace) -> int:
             exported = "yes"
         else:
             pct, exported = "-", "no"
-        out = output_for(rec)
+        out = output_for(rec, language)
         if out.exists():
             stale = ws.exists() and out.stat().st_mtime < ws.stat().st_mtime
             packed = "stale" if stale else "yes"
@@ -385,7 +390,7 @@ def cmd_status(args: argparse.Namespace) -> int:
         print(f" {flag}{rec['short']:9} {rec['slug']:22} "
               f"{rec['text_count']:>6}  {exported:9} {pct:12} {packed}")
 
-    print(f"\n  {packed_count} file(s) packed into russian/.")
+    print(f"\n  {packed_count} file(s) packed into {output_dir(language)}.")
     if skipped:
         print(f"  skipped (non-target): "
               f"{', '.join(r['short'] for r in skipped)}")
@@ -403,6 +408,8 @@ def main(argv: list[str]) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("status", help="progress table over every manifest file")
+    p.add_argument("--language", default=DEFAULT_LANGUAGE,
+                   help="packed-build language to check (default: russian)")
     p.set_defaults(func=cmd_status)
 
     p = sub.add_parser("export", help="export worksheet(s) for the given files")
@@ -424,11 +431,15 @@ def main(argv: list[str]) -> int:
     p.add_argument("id", help="file id: short GUID or slug")
     p.set_defaults(func=cmd_join)
 
-    p = sub.add_parser("pack", help="apply translation -> russian/, then round-trip")
+    p = sub.add_parser("pack", help="apply translation -> langs/<language>/ui, then round-trip")
     p.add_argument("ids", nargs="+", help="file id(s): short GUID or slug")
+    p.add_argument("--language", default=DEFAULT_LANGUAGE,
+                   help="output language under langs/ (default: russian)")
     p.set_defaults(func=cmd_pack)
 
     p = sub.add_parser("pack-all", help="pack every target file that has a worksheet")
+    p.add_argument("--language", default=DEFAULT_LANGUAGE,
+                   help="output language under langs/ (default: russian)")
     p.set_defaults(func=cmd_pack_all)
 
     p = sub.add_parser("audit", help="consistency audit of one worksheet or all")

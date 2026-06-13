@@ -31,7 +31,7 @@ Pipeline (run from the repo root: python src/tools.py <cmd>)
   backup    copy the seed + user-data tool DBs into the repo -> tools/
   extract   collect every distinct tool name -> translation/tools.csv
   ...translate the `target` column of tools.csv...
-  apply     write the translations into patched DBs -> langs/russian/tools/
+  apply     write the translations into patched DBs -> langs/<language>/tools/
   install   copy the patched DBs back into the live CSP install + user data
   restore   copy the original DBs back
 
@@ -52,13 +52,13 @@ import sys
 from pathlib import Path
 
 from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
+from version import LANGS_ROOT, ROOT
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
-TOOLS_DIR = ROOT / "langs" / "english" / "tools"   # original DBs (English)
-BUILD_DIR = ROOT / "langs" / "russian" / "tools"   # patched DBs (Russian)
+TOOLS_DIR = LANGS_ROOT / "english" / "tools"   # original DBs (English)
+BUILD_DIR = LANGS_ROOT / "russian" / "tools"   # patched DBs
 WORKSHEET = ROOT / "translation" / "tools.csv"
 
 # A backup lives at  langs/english/tools/<tag>/<relpath>  ;  <tag> says which
@@ -200,6 +200,12 @@ BLOB_COLS = ("TextureImage", "DualTextureImage",
              "BrushPatternImageArray", "DualPatternImageArray")
 _NAME_RE = re.compile(r"<name>([^<]*)</name>")
 _P1_RE = re.compile(r"\.:(?:Install2?:)?Paint\d+:([^:]+)")
+
+
+def configure_language(language: str) -> None:
+    """Select which langs/<language>/tools build directory to use."""
+    global BUILD_DIR
+    BUILD_DIR = LANGS_ROOT / language / "tools"
 
 
 def material_uuid_map() -> dict[str, str]:
@@ -438,7 +444,7 @@ def _deploy(src_root: Path, label: str, args) -> None:
 
 def cmd_install(args) -> None:
     _deploy(BUILD_DIR, "patched", args)
-    print("restart CSP; the Tool palette names are now Russian.")
+    print("restart CSP; the Tool palette names now use the selected pack.")
     print("run 'python src/tools.py restore' to undo.")
 
 
@@ -464,6 +470,8 @@ def main(argv: list[str] | None = None) -> None:
                         help="skip the confirmation prompt")
     parser.add_argument("--force", action="store_true",
                         help="proceed even if CSP appears to be running")
+    parser.add_argument("--language", default="russian",
+                        help="community pack under langs/ (default: russian)")
     # Set automatically on the elevated relaunch; keeps that console open.
     parser.add_argument("--keep-open", action="store_true",
                         help=argparse.SUPPRESS)
@@ -473,6 +481,7 @@ def main(argv: list[str] | None = None) -> None:
                         help="pipeline step to run")
 
     args = parser.parse_args(argv)
+    configure_language(args.language)
     try:
         {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
          "install": cmd_install, "restore": cmd_restore}[args.command](args)

@@ -33,6 +33,4 @@ Output,Вывод
 / %d page,/ %d стр.
 "BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
 
-    Product Version: %s","BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
-
-    Версия продукта: %s"
+    Product Version: %s",

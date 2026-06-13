@@ -33,7 +33,6 @@ Circular text,円形テキスト,Текст по кругу
 Clothing,服飾,Одежда
 Cloud,雲,Облако
 Comic,コミック,Комикс
-Concept,,
 Connect vector lines,ベクター線つなぎ,Соединить векторные линии
 Continuous curve,連続曲線,Непрерывная кривая
 Control point,制御点,Контрольная точка
@@ -61,11 +60,11 @@ Divide frame folder,コマフォルダー分割,Разделить папку к
 Dot pen,ドットペン,Точечное перо
 Dotted line,点線,Пунктирная линия
 Download,ダウンロード,Загрузка
+Downloads,,
 Droplet,飛沫,Капли
 Dry Gouache,ドライガッシュ,Сухая гуашь
 Dry ink,かすれ墨,Сухая тушь
 Dynamic Eraser,速度消しゴム,Скоростной ластик
-Dynamic_Smooth,,
 Edit timeline,タイムライン編集,Редактировать таймлайн
 Effect,効果・演出,Эффекты
 Ellipse,楕円選択,Эллипс
@@ -118,7 +117,6 @@ Leaves,葉,Листья
 Leftover pen,すきま塗りペン,Перо для зазоров
 Light crosshatch,カケアミ薄,Лёгкая штриховка
 Light table,ライトテーブル,Лайтбокс
-Line_Smooth,,
 Linear ruler,直線定規,Прямая линейка
 Liquify,ゆがみ,Пластика
 Magnetic lasso,線画に沿って選択,Магнитное лассо
@@ -151,7 +149,6 @@ Photosphere,光球,Световая сфера
 Pick color from layer,レイヤーから色を取得,Взять цвет со слоя
 Pick displayed color,表示色を取得,Взять отображаемый цвет
 Pinch vector line,ベクター線つまみ,Сжать векторную линию
-Pixel_Line,,
 Pointillism,点描,Пуантилизм
 Polygon,多角形,Многоугольник
 Polyline,折れ線選択,Ломаная
@@ -214,7 +211,6 @@ Sunset,夕焼け,Закат
 Symmetrical ruler,対称定規,Симметричная линейка
 System,システム,Система
 Text,テキスト,Текст
-Texture_Line,,
 Textured blender,質感残しなじませ,Текстурная растушёвка
 Textured pen,ざらつきペン,Шероховатое перо
 The deepest shadow,最も濃い陰,Самая тёмная тень

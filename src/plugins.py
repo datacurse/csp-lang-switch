@@ -12,8 +12,8 @@ plug-in DLLs in `<CSP install>/PlugIn/PAINT/`, stored as standard Windows
 entry, so those menus fall back to English in the Russian build.
 
 This tool patches the **English (LANG 9)** `RT_STRING` entry of each DLL with
-Russian -- the same "english slot = our translation" idea the resource tooling
-uses. CSP set to English then serves the (now Russian) strings.
+the selected community pack -- the same "English slot = our translation" idea
+the resource tooling uses.
 
 Layout of one DLL's English strings: a `RT_STRING` block is 16 consecutive
 `[uint16 length][UTF-16LE text]` slots. Each filter plug-in uses a handful:
@@ -24,7 +24,7 @@ Pipeline (run from the repo root: python src/plugins.py <cmd>)
   backup    copy the install's PlugIn/PAINT/*.dll into the repo -> plugins/
   extract   read every DLL's English strings -> translation/plugins.csv
   ...translate the `target` column of plugins.csv...
-  apply     write the translations into patched DLLs -> langs/russian/plugins/
+  apply     write the translations into patched DLLs -> langs/<language>/plugins/
   install   copy the patched DLLs into the live CSP install
   restore   copy the original DLLs back into the live CSP install
 
@@ -50,18 +50,24 @@ except ImportError:
              "       pip install pefile")
 
 from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
+from version import LANGS_ROOT, ROOT
 
 # ----------------------------------------------------------------------
 # Project paths
 # ----------------------------------------------------------------------
-ROOT = Path(__file__).resolve().parent.parent
-PLUGINS_DIR = ROOT / "langs" / "english" / "plugins"   # original DLLs (English)
-BUILD_DIR = ROOT / "langs" / "russian" / "plugins"     # patched DLLs (Russian)
+PLUGINS_DIR = LANGS_ROOT / "english" / "plugins"   # original DLLs (English)
+BUILD_DIR = LANGS_ROOT / "russian" / "plugins"     # patched DLLs
 WORKSHEET = ROOT / "translation" / "plugins.csv"
 
 ENGLISH_LANG = 9                           # RT_STRING LANG id for English
 RT_STRING = 6                              # resource type id
 RSRC = pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_RESOURCE"]
+
+
+def configure_language(language: str) -> None:
+    """Select which langs/<language>/plugins build directory to use."""
+    global BUILD_DIR
+    BUILD_DIR = LANGS_ROOT / language / "plugins"
 
 
 # ----------------------------------------------------------------------
@@ -173,6 +179,20 @@ def load_worksheet() -> dict[str, str]:
     return out
 
 
+def existing_targets() -> dict[str, str]:
+    """Existing translations keyed by worksheet key or English source text."""
+    if not WORKSHEET.exists():
+        return {}
+    out: dict[str, str] = {}
+    for r in csv.DictReader(open(WORKSHEET, encoding="utf-8-sig")):
+        t = r.get("target", "").strip()
+        if not t:
+            continue
+        out[r["key"]] = t
+        out.setdefault(r["source"], t)
+    return out
+
+
 # ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
@@ -205,6 +225,7 @@ def cmd_extract(args) -> None:
     if not dlls:
         sys.exit(f"error: no DLLs in {PLUGINS_DIR} -- run 'backup' first")
 
+    keep = existing_targets()
     rows, no_english = [], []
     for dll in dlls:
         en = english_strings(dll)
@@ -214,7 +235,9 @@ def cmd_extract(args) -> None:
         for bid in sorted(en):
             for slot, text in enumerate(en[bid]):
                 if text.strip():
-                    rows.append((f"{dll.name}:{bid}:{slot}", text, ""))
+                    key = f"{dll.name}:{bid}:{slot}"
+                    target = keep.get(key, keep.get(text, ""))
+                    rows.append((key, text, target))
 
     WORKSHEET.parent.mkdir(exist_ok=True)
     with open(WORKSHEET, "w", newline="", encoding="utf-8-sig") as f:
@@ -223,9 +246,11 @@ def cmd_extract(args) -> None:
         w.writerows(rows)
 
     uniq = len({src for _k, src, _t in rows})
+    done = sum(1 for _k, _s, t in rows if t.strip())
     print(f"extract -> {WORKSHEET}")
     print(f"  {len(rows)} strings ({uniq} unique) from "
           f"{len(dlls) - len(no_english)} DLL(s)")
+    print(f"  {done} translated, {len(rows) - done} to go")
     if no_english:
         print(f"  ({len(no_english)} DLL(s) had no English RT_STRING: "
               f"{', '.join(no_english)})")
@@ -301,7 +326,7 @@ def cmd_install(args) -> None:
     for b in builds:
         shutil.copy2(b, plugin_dir / b.name)
     print(f"\ndone -- {len(builds)} plug-in DLL(s) installed.")
-    print("restart CSP; the Filter menu plug-ins are now Russian.")
+    print("restart CSP; the Filter menu plug-ins now use the selected pack.")
     print("run 'python src/plugins.py restore' to undo.")
 
 
@@ -346,6 +371,8 @@ def main(argv: list[str] | None = None) -> None:
                         help="skip the confirmation prompt")
     parser.add_argument("--force", action="store_true",
                         help="proceed even if CSP appears to be running")
+    parser.add_argument("--language", default="russian",
+                        help="community pack under langs/ (default: russian)")
     # Set automatically on the elevated relaunch; keeps that console open.
     parser.add_argument("--keep-open", action="store_true",
                         help=argparse.SUPPRESS)
@@ -355,6 +382,7 @@ def main(argv: list[str] | None = None) -> None:
                         help="pipeline step to run")
 
     args = parser.parse_args(argv)
+    configure_language(args.language)
     try:
         {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
          "install": cmd_install, "restore": cmd_restore}[args.command](args)

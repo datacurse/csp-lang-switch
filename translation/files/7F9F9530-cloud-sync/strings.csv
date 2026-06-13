@@ -35,9 +35,7 @@
 1/1/60#0,Please be aware of the following points before deleting.,Перед удалением учтите следующее.
 1/1/61#0,"・ Work files within this label will be removed and the files will be moved to the Recycle Bin/Trash on your computer. 
 If there is not sufficient storage in your Recycle Bin, the files will be deleted entirely.
-If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.","・ Файлы произведений с этой меткой будут убраны, а сами файлы перемещены в корзину вашего компьютера. 
-Если в корзине недостаточно места, файлы будут удалены полностью.
-Если файлы сохранены во внешнем хранилище, они будут удалены без перемещения в корзину."
+If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.",
 1/1/62#0,・ Work files within this label will be deleted.,・ Файлы произведений с этой меткой будут удалены.
 1/1/63#0,"・ Works indicated as ""Not Found"" will be deleted only from this list. The actual files will not be affected.","・ Произведения с пометкой ""Не найдено"" будут удалены только из этого списка. Сами файлы не будут затронуты."
 1/1/64#0,Do you want to delete this data?,Удалить эти данные?
@@ -60,36 +58,26 @@ If the files are saved to external storage, the files will be deleted without be
 1/1/81#0,Details,Подробнее
 1/1/82#0,"The selected %d items will be moved to the Recycle Bin/Trash of your computer.
 If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
-This operation cannot be undone.","Выбранные элементы (%d) будут перемещены в корзину вашего компьютера.
-Если файлы сохранены во внешнем хранилище, они будут удалены без перемещения в корзину.
-Эту операцию нельзя отменить."
+This operation cannot be undone.",
 1/1/83#0,"Delete selected %d files from this device.
-This operation cannot be undone. ","Удалить выбранные файлы (%d) с этого устройства.
-Эту операцию нельзя отменить. "
+This operation cannot be undone. ",
 1/1/84#0,"%d items could not be found and will be deleted from this list.
- This operation does not affect the actual files.","Не удалось найти элементы (%d), и они будут удалены из этого списка.
- Эта операция не затрагивает сами файлы."
+ This operation does not affect the actual files.",
 1/1/85#0,"The selected %d items will be moved to the Recycle Bin/Trash of your computer.
 If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
-This operation cannot be undone.","Выбранные элементы (%d) будут перемещены в корзину вашего компьютера.
-Если файлы сохранены во внешнем хранилище, они будут удалены без перемещения в корзину.
-Эту операцию нельзя отменить."
+This operation cannot be undone.",
 1/1/86#0,"Delete selected %d files from this device.
-This operation cannot be undone. ","Удалить выбранные файлы (%d) с этого устройства.
-Эту операцию нельзя отменить. "
+This operation cannot be undone. ",
 1/1/87#0,Delete,Удалить
 1/1/88#0,Cancel,Отмена
 1/1/89#0,Delete file,Удалить файл
 1/1/90#0,"Do you want to delete these works from your Favorites?
-","Удалить эти произведения из избранного?
-"
+",
 1/1/91#0,"Do you want to delete these %d works from your Favorites?
-","Удалить эти произведения (%d) из избранного?
-"
+",
 1/1/92#0,Importing a selected work that has not been imported.,"Импорт выбранного произведения, которое не было импортировано."
 1/1/93#0,"Work database is being used right now, so this command cannot be executed.
-Please wait for a while and try it again.","База данных произведений сейчас используется, поэтому эту команду нельзя выполнить.
-Подождите немного и повторите попытку."
+Please wait for a while and try it again.",
 1/1/94#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/95#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/96#0,Clip Studio Paint project,Проект Clip Studio Paint
@@ -153,30 +141,21 @@ Please wait for a while and try it again.","База данных произве
 4/1/49#0,3D Panorama,3D-панорама
 4/1/50#0,Tool setting,Настройка инструмента
 4/1/51#0,"Insert at the bottom of canvas frame.
-Settings for material in background.","Вставка в нижней части рамки холста.
-Настройки для материала на фоне."
+Settings for material in background.",
 4/1/52#0,"Insert in front of background.
 Setting suited for material like person or some items in
-hands of person.","Вставка перед фоном.
-Настройка подходит для материала вроде человека или предметов в
-руках человека."
+hands of person.",
 4/1/53#0,"Insert before person, but after effect.
-Setting suited for material expressing feeling or like rain or lens flare.","Вставка перед человеком, но после эффекта.
-Настройка подходит для материала, выражающего чувства, либо вроде дождя или бликов."
+Setting suited for material expressing feeling or like rain or lens flare.",
 4/1/54#0,"Insert above the background, but below balloons and text. 
-Suitable for effect materials such as focus lines.","Вставка над фоном, но под выносками и текстом. 
-Подходит для материалов эффектов, таких как линии фокусировки."
+Suitable for effect materials such as focus lines.",
 4/1/55#0,"Insert before foreground, but after balloon or signs.
-Setting suited for signs like sweats of characters.","Вставка перед передним планом, но после выноски или знаков.
-Настройка подходит для знаков, таких как капли пота персонажей."
+Setting suited for signs like sweats of characters.",
 4/1/56#0,"Insert before foreground, but after balloon or signs.
-Setting suited for materials which you do not want to be hidden under balloons or texts.","Вставка перед передним планом, но после выноски или знаков.
-Настройка подходит для материалов, которые вы не хотите скрывать под выносками или текстом."
+Setting suited for materials which you do not want to be hidden under balloons or texts.",
 4/1/57#0,"Insert in the foreground of canvas frame.
 Settings of material in foreground of image such as
-sound effects.","Вставка на переднем плане рамки холста.
-Настройки для материала на переднем плане изображения, такого как
-звуковые эффекты."
+sound effects.",
 4/1/58#0,No adjustment for order of overlapping.,Без настройки порядка наложения.
 4/1/59#0, , 
 4/1/60#0,Adjust after pasting,Настроить после вставки
@@ -222,8 +201,7 @@ sound effects.","Вставка на переднем плане рамки хо
 4/1/90#0,Please be aware of the following points before deleting.,Перед удалением учтите следующее.
 4/1/91#0,・ All included data will be deleted.,・ Все включённые данные будут удалены.
 4/1/92#0,"・ The data contains unavailable materials that are hidden because the setting [Show materials that cannot be used] is turned off. 
-  These materials will be deleted.","・ Данные содержат недоступные материалы, которые скрыты, так как настройка [Показывать материалы, которые нельзя использовать] отключена. 
-  Эти материалы будут удалены."
+  These materials will be deleted.",
 4/1/93#0,Do you want to delete this data?,Удалить эти данные?
 4/1/94#0,"A folder with the same name exists in the same hierarchy, so you cannot rename it.","Папка с таким же именем существует на том же уровне иерархии, поэтому её нельзя переименовать."
 4/1/95#0,You cannot move it. A folder with the same name exists in the destination hierarchy.,Её нельзя переместить. Папка с таким же именем существует в целевой иерархии.
@@ -256,32 +234,24 @@ sound effects.","Вставка на переднем плане рамки хо
 4/1/122#0,Switch thumbnail of the material to small,Переключить эскиз материала на маленький
 4/1/123#0,Switch thumbnail of the material,Переключить эскиз материала
 4/1/124#0,"Delete the following material files. 
-Do you want to proceed?","Удалить следующие файлы материалов. 
-Продолжить?"
+Do you want to proceed?",
 4/1/125#0,"Delete these %d material files. 
-Do you want to proceed?","Удалить эти файлы материалов (%d). 
-Продолжить?"
+Do you want to proceed?",
 4/1/126#0,"”%s” is used in the following brush shape preset. 
-Do you want to delete the material?","”%s” используется в следующем наборе настроек формы кисти. 
-Удалить материал?"
+Do you want to delete the material?",
 4/1/127#0,Settings of other %d,Настройки прочих %d
 4/1/128#0,"Do you want to delete these materials from your Favorites?
-","Удалить эти материалы из избранного?
-"
+",
 4/1/129#0,"Do you want to delete these %d materials from your Favorites?
-","Удалить эти материалы (%d) из избранного?
-"
+",
 4/1/130#0,"The following materials could not be deleted.
-They may be open in another application.","Не удалось удалить следующие материалы.
-Возможно, они открыты в другом приложении."
+They may be open in another application.",
 4/1/131#0,"Some materials could not be deleted.
-They may be open in another application.","Не удалось удалить некоторые материалы.
-Возможно, они открыты в другом приложении."
+They may be open in another application.",
 4/1/132#0,Searching for tools that use this material...(Cancel to delete without searching),"Поиск инструментов, использующих этот материал...(Отмените, чтобы удалить без поиска)"
 4/1/133#0,Importing selected material that is unimported.,"Импорт выбранного материала, который не был импортирован."
 4/1/134#0,"Material database is being used right now, so this command cannot be executed. 
-Please wait for a while and try it again.","База данных материалов сейчас используется, поэтому эту команду нельзя выполнить. 
-Подождите немного и повторите попытку."
+Please wait for a while and try it again.",
 4/1/135#0,Large,Большой
 4/1/136#0,Small,Маленький
 4/1/137#0,Details,Подробнее
@@ -968,7 +938,7 @@ Please wait for a while and try it again.","База данных материа
 10/1/13#0,Materials not added,Материалы не добавлены
 6/1/1#0,All,Все
 6/1/2#0,Template,Шаблон
-6/1/4#0,Frame,Рамка
+6/1/4#0,Frame,Кадр
 6/1/5#0,Character,Персонаж
 6/1/6#0,Pose,Поза
 6/1/7#0,Background,Фон
@@ -976,13 +946,13 @@ Please wait for a while and try it again.","База данных материа
 6/1/9#0,Character,Персонаж
 6/1/10#0,Camera,Камера
 6/1/15#0,Item,Предмет
-6/1/16#0,Balloon,Выноска
+6/1/16#0,Balloon,Облачко
 6/1/19#0,Sign,Знак
 6/1/20#0,Effect,Эффект
-6/1/21#0,Other,Прочее
+6/1/21#0,Other,Другое
 6/1/23#0,Material,Материал
 6/1/28#0,Pattern,Узор
-6/1/32#0,Other,Прочее
+6/1/32#0,Other,Другое
 6/1/36#0,Background,Фон
 6/1/37#0,Nature,Природа
 6/1/38#0,Artificial,Искусственное
@@ -993,12 +963,12 @@ Please wait for a while and try it again.","База данных материа
 6/1/46#0,Dot,Точки
 6/1/49#0,Cross-hatching,Перекрёстная штриховка
 6/1/50#0,Pattern,Узор
-6/1/54#0,Other,Прочее
+6/1/54#0,Other,Другое
 6/1/58#0,Background,Фон
 6/1/59#0,Nature,Природа
 6/1/60#0,Artificial,Искусственное
 6/1/61#0,Texture,Текстура
-6/1/64#0,Balloon,Выноска
+6/1/64#0,Balloon,Облачко
 6/1/65#0,Dialog,Реплика
 6/1/66#0,Feeling,Настроение
 6/1/67#0,Narration,Повествование
@@ -1008,7 +978,7 @@ Please wait for a while and try it again.","База данных материа
 6/1/84#0,Wound,Рана
 6/1/85#0,Light,Свет
 6/1/87#0,Icon,Значок
-6/1/88#0,Other,Прочее
+6/1/88#0,Other,Другое
 6/1/90#0,Illustration,Иллюстрация
 6/1/91#0,Building,Здание
 6/1/92#0,Tool,Инструмент

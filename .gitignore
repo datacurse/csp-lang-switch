@@ -16,14 +16,11 @@ venv/
 env/
 
 # Per-language data trees — copyrighted CSP data + regenerable patched copies.
-# Kept on disk, never committed. Layout, one folder per language:
-#   langs/<lang>/ui/         — GUID-named resource files (main UI)
-#   langs/<lang>/plugins/    — filter plug-in DLLs
-#   langs/<lang>/tools/      — tool-palette SQLite DBs
-#   langs/<lang>/materials/  — material catalog + per-pack files
-# langs/english/ is the untouched stock CSP snapshot; langs/russian/ is the
-# patched build; langs/japanese/ui/ is the translation oracle.
-langs/
+# Kept on disk, never committed. Layout under versions/<csp-version>/langs/:
+#   english/    — stock CSP snapshot (ui, plugins, tools, materials)
+#   japanese/   — translation oracle (ui/)
+#   russian/    — patched community build
+versions/*/langs/
 
 # Claude Code per-machine settings (.claude/settings.json IS tracked)
 .claude/settings.local.json

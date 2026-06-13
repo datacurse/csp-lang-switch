@@ -3,6 +3,6 @@
 # the Python standard library.
 pefile==2024.8.26
 
-# Build only: bundles src/lang.py + the four patched builds into
-# dist/csp-russian.exe via `pyinstaller csp-russian.spec`.
+# Build only: bundles src/lang.py + community packs into
+# dist/csp-lang.exe via `pyinstaller csp-lang.spec`.
 pyinstaller==6.20.0

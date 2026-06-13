@@ -241,9 +241,9 @@ self-elevates via UAC.
 CSP picks a resource folder by the selected UI language and has no `russian`
 slot. Two viable approaches:
 
-* **Overwrite `english`** (the original spec's recommendation) — users set CSP
-  to English and see the translation; untranslated strings fall back to readable
-  English.
+* **Overwrite `english`** (the current switcher strategy) — the app copies the
+  selected community or official language into CSP's English slot; untranslated
+  community strings fall back to readable English.
 * **Use a different language slot** (the 2026-05-19 verified approach used
   `french`) — keeps a real English option intact and turns an unused language
   into the translation slot.
