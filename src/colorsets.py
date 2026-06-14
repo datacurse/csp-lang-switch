@@ -203,6 +203,11 @@ def load_dict() -> dict[str, str]:
     return out
 
 
+def restore_dict() -> dict[str, str]:
+    """Map translated names back to English for restore."""
+    return {tgt: src for src, tgt in load_dict().items()}
+
+
 def existing_targets() -> dict[str, str]:
     if not WORKSHEET.exists():
         return {}
@@ -335,50 +340,72 @@ def cmd_apply(args) -> None:
             print(f"    {n!r}")
 
 
-def _deploy(src_root: Path, label: str, args) -> None:
+def _deploy(src_root: Path, label: str, args, *, to_russian: bool) -> None:
+    """Deploy color-set translations.
+
+    * install seed ``.cls`` files are copied (needs admin).
+    * the live ``default.pcs`` is patched in place via SQLite so we never
+      replace the user's profile DB wholesale.
+    """
     dst_roots = roots(args.csp)
-    jobs: list[tuple[Path, Path]] = []
+    table = load_dict() if to_russian else restore_dict()
+    copies: list[tuple[Path, Path, str]] = []
+    pcs_dst = dst_roots.get(USER, Path()) / "default.pcs"
+
     for src in sorted(p for p in src_root.rglob("*") if p.is_file()):
         rel = src.relative_to(src_root)
         tag = rel.parts[0]
         sub = Path(*rel.parts[1:])
         if tag not in dst_roots:
             continue
-        jobs.append((src, dst_roots[tag] / sub))
+        if tag == USER and sub.name == "default.pcs":
+            continue  # handled below
+        if tag == SEED:
+            copies.append((src, dst_roots[tag] / sub, rel.as_posix()))
 
-    if not jobs:
+    if not copies and not pcs_dst:
         sys.exit(f"error: nothing to install from {src_root}")
 
     check_csp_closed(args.force)
-    needs_admin = any(
-        src.relative_to(src_root).parts[0] == SEED for src, _ in jobs
-    )
+    needs_admin = bool(copies)
     if not args.dry_run and needs_admin:
         ensure_admin()
 
-    print(f"will install {len(jobs)} {label} color-set file(s)")
-    for src, dst in jobs:
-        print(f"  {src.relative_to(src_root).as_posix()}  ->  {dst}")
+    n = len(copies) + (1 if pcs_dst else 0)
+    print(f"will install {n} {label} color-set change(s)")
+    for src, dst, rel in copies:
+        print(f"  {rel}  ->  {dst}")
+    if pcs_dst:
+        names = "Russian" if to_russian else "English"
+        print(f"  userdata/default.pcs  ->  patch {names} names in place ({pcs_dst})")
     if args.dry_run:
         print("[dry-run] nothing was changed")
         return
     if not confirm("proceed?", args.yes):
         print("aborted")
         return
-    for src, dst in jobs:
+    for src, dst, _rel in copies:
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
-    print(f"\ndone -- {len(jobs)} {label} color-set file(s) installed.")
+    if pcs_dst.is_file():
+        patch_pcs(pcs_dst, table)
+    elif pcs_dst.parent.is_dir():
+        seed_pcs = src_root / USER / "default.pcs"
+        if seed_pcs.is_file():
+            pcs_dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(seed_pcs, pcs_dst)
+            patch_pcs(pcs_dst, table)
+    print(f"\ndone -- {n} {label} color-set change(s) installed.")
 
 
 def cmd_install(args) -> None:
-    _deploy(BUILD_DIR, "patched", args)
+    _deploy(BUILD_DIR, "patched", args, to_russian=True)
     print("restart CSP; color-set names now use the selected pack.")
     print("run 'python src/colorsets.py restore' to undo.")
 
 
 def cmd_restore(args) -> None:
-    _deploy(COLORSETS_DIR, "original", args)
+    _deploy(COLORSETS_DIR, "original", args, to_russian=False)
     print("restart CSP; color-set names are English again.")
 
 
@@ -393,13 +420,22 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--language", default="russian",
                         help="community pack under langs/ (default: russian)")
+    parser.add_argument("--keep-open", action="store_true",
+                        help=argparse.SUPPRESS)
     parser.add_argument("command",
                         choices=("backup", "extract", "apply",
                                  "install", "restore"))
     args = parser.parse_args(argv)
     configure_language(args.language)
-    {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
-     "install": cmd_install, "restore": cmd_restore}[args.command](args)
+    try:
+        {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
+         "install": cmd_install, "restore": cmd_restore}[args.command](args)
+    finally:
+        if args.keep_open:
+            try:
+                input("\nPress Enter to close this window...")
+            except EOFError:
+                pass
 
 
 if __name__ == "__main__":

@@ -34,6 +34,11 @@ rendered correctly inside a running copy of CSP.
   patterns, 3D, balloons, frame templates) live in a per-user SQLite catalog.
   1,419 distinct names translated and installed —
   see [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).
+- **Color sets:** the Color Set palette dropdown names (`Default color set`,
+  `Additional color set`) live in `.cls` seed files and the profile's
+  `default.pcs` SQLite DB — not the resource bundles. Both stock sets are
+  translated and load-tested on 5.0.0 —
+  see [`docs/COLORSET_TRANSLATION.md`](docs/COLORSET_TRANSLATION.md).
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
 - **Out of scope: the CLIP STUDIO launcher** (the separate hub window that
@@ -85,7 +90,7 @@ if anything drifts the next `status` will show it as `unknown` rather than lie.
 
 The per-pipeline scripts ([`install.py`](src/install.py),
 [`plugins.py`](src/plugins.py), [`tools.py`](src/tools.py),
-[`materials.py`](src/materials.py)) remain available for maintenance and for
+[`materials.py`](src/materials.py), [`colorsets.py`](src/colorsets.py)) remain available for maintenance and for
 testing each pipeline in isolation — see [Workflow](#workflow) below.
 
 ### Building the exe
@@ -105,8 +110,8 @@ restore). End users need nothing else installed (no Python, no extra files).
 python scripts/capture_stock.py
 ```
 
-Copies English + Japanese oracle UI, plug-in DLLs, tool DBs, and materials
-into `versions/5.0.0/langs/`. Requires CSP closed; launch CSP once beforehand
+Copies English + Japanese oracle UI, plug-in DLLs, tool DBs, materials,
+and color-set files into `versions/5.0.0/langs/`. Requires CSP closed; launch CSP once beforehand
 so materials user data exists.
 
 ## Layout
@@ -114,8 +119,8 @@ so materials user data exists.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline) |
-| [`translation/`](translation/) | Shared Russian worksheets: `manifest.csv`, `GLOSSARY.md`, `plugins.csv`, `tools.csv`, `materials.csv`, and `files/<short>-<slug>/` |
+| [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline), `colorsets.py` (color-set pipeline) |
+| [`translation/`](translation/) | Shared Russian worksheets: `manifest.csv`, `GLOSSARY.md`, `plugins.csv`, `tools.csv`, `materials.csv`, `colorsets.csv`, and `files/<short>-<slug>/` |
 | `versions/<csp-version>/langs/` | Per-build language trees (gitignored). Active target: **5.0.0**. Archive: **5.0.4** |
 | [`TODO.md`](TODO.md) | Current task |
 
@@ -125,6 +130,7 @@ so materials user data exists.
 - [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md) — the parallel method for the Filter-menu plug-in DLLs (`plugins.py`).
 - [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md) — the parallel method for the Tool-palette SQLite DBs (`tools.py`).
 - [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md) — the parallel method for the material-catalog SQLite DB (`materials.py`).
+- [`docs/COLORSET_TRANSLATION.md`](docs/COLORSET_TRANSLATION.md) — the parallel method for the Color Set palette names (`.cls` + `default.pcs`, `colorsets.py`).
 - [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md) — reproducible playbook for translating a file, CSP version, or language.
 - [`docs/FILE_INVENTORY.md`](docs/FILE_INVENTORY.md) — the 39 shared resource files and what each covers.
 - [`docs/CSP5_format_spec.md`](docs/CSP5_format_spec.md) — pre-implementation brief; **stale** where it disagrees with `VERIFIED_METHOD.md`.
@@ -213,3 +219,21 @@ python src/materials.py install         # deploy into the live CSP user data
 
 The method and format are documented in
 [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).
+
+### Color sets
+
+The Color Set palette dropdown names live in `.cls` seed files and the
+profile's `default.pcs` SQLite DB — handled by another parallel tool —
+[`src/colorsets.py`](src/colorsets.py):
+
+```
+python src/colorsets.py backup          # save the original .cls + default.pcs
+python src/colorsets.py extract         # -> translation/colorsets.csv
+# ... translate the target column ...
+python src/colorsets.py apply           # -> langs/russian/colorsets/
+python src/colorsets.py apply --language ukrainian
+python src/colorsets.py install         # deploy .cls + patch live default.pcs
+```
+
+The method and format are documented in
+[`docs/COLORSET_TRANSLATION.md`](docs/COLORSET_TRANSLATION.md).

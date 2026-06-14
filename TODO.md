@@ -7,7 +7,7 @@
 # Versions
 5.x
 - 5.0.4 https://bbs.itzmx.com/forum.php?mod=viewthread&tid=116680&highlight=clip%2Bstudio%2Bpaint
-- 5.0.2
+- 5.0.2 https://bbs.itzmx.com/forum.php?mod=viewthread&tid=116409&highlight=clip%2Bstudio%2Bpaint
 - 5.0.0 https://bbs.itzmx.com/thread-115829-1-1.html
 
 4.x
