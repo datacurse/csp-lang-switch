@@ -61,11 +61,13 @@ if FROZEN:
     LEGACY_USER_DATA = Path(_localappdata) / LEGACY_APP_NAME
     USER_DATA.mkdir(parents=True, exist_ok=True)
     STATE_FILE = USER_DATA / "state.json"
+    SETTINGS_FILE = USER_DATA / "settings.json"
 else:
     DATA_ROOT = Path(__file__).resolve().parent.parent
     USER_DATA = DATA_ROOT
     LEGACY_USER_DATA = DATA_ROOT
     STATE_FILE = DATA_ROOT / ".lang-state.json"
+    SETTINGS_FILE = DATA_ROOT / ".csp-lang-settings.json"
 
 if FROZEN:
     LANGS_DIR = DATA_ROOT / "langs"
@@ -248,6 +250,30 @@ def state_label(state: str) -> str:
         label = OFFICIAL_LABELS.get(lang, lang.replace("_", " ").title())
         return f"official:{label}"
     return state
+
+
+def pipeline_display_state(state: str, gui_lang: str | None = None) -> str:
+    """Human-readable pipeline state for the GUI."""
+    import gui_i18n as i18n
+
+    if state == ORIGINAL:
+        if gui_lang and gui_lang != "en":
+            return i18n.t(gui_lang, "state_stock")
+        return "English (stock)"
+    if state == UNKNOWN:
+        if gui_lang and gui_lang != "en":
+            return i18n.t(gui_lang, "state_unknown")
+        return "Unknown"
+    if is_official_state(state):
+        lang = official_id_from_state(state)
+        label = OFFICIAL_LABELS.get(lang, lang.replace("_", " ").title())
+        if gui_lang and gui_lang != "en":
+            return i18n.t(gui_lang, "state_official", label=label)
+        return f"{label} (official)"
+    choice = discover_community_packs().get(state)
+    if choice:
+        return choice.display
+    return state.replace("_", " ").title()
 
 
 def state_marker(state: str) -> str:
@@ -932,12 +958,48 @@ def summary_for(statuses: dict[str, str]) -> str:
     return "Subsystems are in a mix of original and unknown states."
 
 
+def summary_for_gui(statuses: dict[str, str], gui_lang: str) -> str:
+    import gui_i18n as i18n
+
+    if gui_lang == "en":
+        return summary_for(statuses)
+    unique = set(statuses.values())
+    if len(unique) == 1:
+        only = next(iter(unique))
+        if only == ORIGINAL:
+            return i18n.t(gui_lang, "summary_all_stock")
+        if only == UNKNOWN:
+            return i18n.t(gui_lang, "summary_all_unknown")
+        if is_official_state(only):
+            lang = official_id_from_state(only)
+            label = discover_official_languages(None).get(lang)
+            display = label.display if label else state_label(only)
+            return i18n.t(gui_lang, "summary_official_ui", display=display)
+        choice = discover_community_packs().get(only)
+        display = choice.display if choice else only
+        return i18n.t(gui_lang, "summary_community", display=display)
+    official = [s for s in unique if is_official_state(s)]
+    if official and unique <= {ORIGINAL, *official}:
+        lang = official_id_from_state(official[0])
+        label = discover_official_languages(None).get(lang)
+        display = label.display if label else state_label(official[0])
+        return i18n.t(gui_lang, "summary_official_mixed", display=display)
+    communities = [s for s in unique if s not in (ORIGINAL, UNKNOWN)]
+    if communities:
+        return i18n.t(gui_lang, "summary_mixed")
+    return i18n.t(gui_lang, "summary_mixed_unknown")
+
+
 # ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
 _LABELS = {"main-ui": "main UI", "plugins": "plug-ins",
            "tools": "tool palette", "materials": "materials",
            "colorsets": "color sets"}
+
+_GUI_LABELS = {"main-ui": "Main UI", "plugins": "Plug-ins",
+               "tools": "Tool palette", "materials": "Materials",
+               "colorsets": "Color sets"}
 
 
 def _print_status(args) -> dict[str, str]:
@@ -996,9 +1058,12 @@ def cmd_switch(args) -> None:
     state = load_state()
     pipes = all_pipelines()
     cached_all = state.get("pipelines", {})
+    enabled: set[str] | None = getattr(args, "pipelines", None)
 
     plan: list[tuple[str, Pipeline, str, str]] = []
     for name, pipe in pipes.items():
+        if enabled is not None and name not in enabled:
+            continue
         current, _fp = classify(pipe, args.csp, cached_all.get(name))
         desired = pipe.desired_state(choice)
         if current == desired:
@@ -1006,8 +1071,15 @@ def cmd_switch(args) -> None:
         else:
             plan.append((name, pipe, current, desired))
 
+    if enabled is not None and not enabled:
+        sys.exit("error: no subsystems selected")
+
     if not plan:
-        print(f"\nAll subsystems already match '{choice.display}'. Nothing to do.")
+        if enabled is not None and len(enabled) < len(PIPELINES):
+            print(f"\nSelected subsystems already match '{choice.display}'. "
+                  f"Nothing to do.")
+        else:
+            print(f"\nAll subsystems already match '{choice.display}'. Nothing to do.")
         print(_final_instruction(choice))
         return
 
@@ -1102,119 +1174,18 @@ def _pause() -> None:
 # ----------------------------------------------------------------------
 def cmd_gui(args) -> None:
     try:
-        import tkinter as tk
-        from tkinter import messagebox, ttk
-    except Exception as e:  # pragma: no cover - depends on local Python build
-        print(f"GUI unavailable ({e}); falling back to console menu.")
+        from gui_picker import run_picker
+        run_picker(args, SETTINGS_FILE)
+    except KeyboardInterrupt:
+        pass
+    except ImportError:
+        print(
+            'GUI unavailable (install customtkinter: pip install customtkinter); '
+            'falling back to console menu.')
         cmd_menu(args)
-        return
-
-    root = tk.Tk()
-    root.title("Clip Studio Paint Language Switcher")
-    root.geometry("560x430")
-
-    status_var = tk.StringVar(value="Checking current state...")
-    selected = tk.StringVar(value="")
-    choice_map: dict[str, LanguageChoice] = {}
-
-    frame = ttk.Frame(root, padding=12)
-    frame.pack(fill="both", expand=True)
-
-    ttk.Label(frame, text="Choose a language").pack(anchor="w")
-    ttk.Label(
-        frame,
-        text=("Community packs use CSP's English slot. Official languages "
-              "are also copied into that slot, so no CSP reinstall is needed."),
-        wraplength=520,
-    ).pack(anchor="w", pady=(2, 10))
-
-    body = ttk.Frame(frame)
-    body.pack(fill="both", expand=True)
-
-    community_box = ttk.LabelFrame(body, text="Community translations")
-    official_box = ttk.LabelFrame(body, text="Official CSP languages")
-    community_box.pack(side="left", fill="both", expand=True, padx=(0, 6))
-    official_box.pack(side="left", fill="both", expand=True, padx=(6, 0))
-
-    def add_choice(parent, choice: LanguageChoice) -> None:
-        key = f"{choice.kind}:{choice.id}"
-        choice_map[key] = choice
-        ttk.Radiobutton(parent, text=choice.display, value=key,
-                        variable=selected).pack(anchor="w", pady=2)
-        if not selected.get():
-            selected.set(key)
-
-    def refresh_choices() -> None:
-        for child in community_box.winfo_children():
-            child.destroy()
-        for child in official_box.winfo_children():
-            child.destroy()
-        choice_map.clear()
-        selected.set("")
-        communities = discover_community_packs()
-        officials = discover_official_languages(args.csp)
-        if communities:
-            for choice in communities.values():
-                add_choice(community_box, choice)
-        else:
-            ttk.Label(community_box, text="No community packs bundled.").pack(anchor="w")
-        if officials:
-            for choice in officials.values():
-                add_choice(official_box, choice)
-        else:
-            ttk.Label(official_box, text="CSP install not found.").pack(anchor="w")
-
-    def refresh_status() -> None:
-        try:
-            statuses = classify_all(args)
-            status_var.set(summary_for(statuses))
-        except SystemExit as e:
-            status_var.set(str(e))
-
-    def apply_selected() -> None:
-        key = selected.get()
-        choice = choice_map.get(key)
-        if not choice:
-            messagebox.showerror("No language selected", "Choose a language first.")
-            return
-        if not messagebox.askyesno(
-                "Apply language",
-                f"Apply {choice.display}?\n\nClose Clip Studio Paint first."):
-            return
-        args.target = choice.id
-        sys.argv = [sys.argv[0], choice.id, "--keep-open"]
-        try:
-            cmd_switch(args)
-        except SystemExit as e:
-            if e.code == 0:
-                messagebox.showinfo(
-                    "Continuing as administrator",
-                    "An elevated window was opened to finish the switch.")
-                root.destroy()
-                return
-            messagebox.showerror("Switch failed", str(e))
-        else:
-            if WARNINGS:
-                messagebox.showwarning(
-                    "Finished with warnings",
-                    "\n".join(w.strip() for w in WARNINGS) + "\n\n" +
-                    _final_instruction(choice))
-            else:
-                messagebox.showinfo("Done", _final_instruction(choice))
-        finally:
-            sys.argv = [sys.argv[0]]
-            refresh_status()
-
-    ttk.Label(frame, textvariable=status_var, wraplength=520).pack(anchor="w", pady=(10, 4))
-    buttons = ttk.Frame(frame)
-    buttons.pack(fill="x", pady=(8, 0))
-    ttk.Button(buttons, text="Apply", command=apply_selected).pack(side="right")
-    ttk.Button(buttons, text="Refresh", command=lambda: (refresh_choices(), refresh_status())).pack(side="right", padx=6)
-    ttk.Button(buttons, text="Close", command=root.destroy).pack(side="right")
-
-    refresh_choices()
-    refresh_status()
-    root.mainloop()
+    except Exception as e:  # pragma: no cover
+        print(f'GUI unavailable ({e}); falling back to console menu.')
+        cmd_menu(args)
 
 
 # ----------------------------------------------------------------------

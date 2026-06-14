@@ -17,7 +17,11 @@ Outputs:  dist/csp-lang.exe
 
 from pathlib import Path
 
+from PyInstaller.utils.hooks import collect_all
+
 block_cipher = None
+
+_ctk_datas, _ctk_binaries, _ctk_hidden = collect_all("customtkinter")
 
 ACTIVE_VERSION = "5.0.0"
 LANGS = Path("versions") / ACTIVE_VERSION / "langs"
@@ -40,19 +44,22 @@ OFFICIAL_LANGS = {
 a = Analysis(
     ['src/lang.py'],
     pathex=['src'],
-    binaries=[],
-    datas=[],
+    binaries=_ctk_binaries,
+    datas=_ctk_datas,
     hiddenimports=[
         'install',
         'plugins',
         'tools',
         'materials',
         'colorsets',
+        'gui_i18n',
+        'gui_picker',
         'version',
         'pefile',
+        'customtkinter',
         'tkinter',
-        'tkinter.ttk',
         'tkinter.messagebox',
+        *_ctk_hidden,
     ],
     hookspath=[],
     hooksconfig={},

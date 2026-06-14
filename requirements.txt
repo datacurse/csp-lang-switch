@@ -2,6 +2,7 @@
 # and write RT_STRING resources in CSP's filter DLLs. Everything else uses
 # the Python standard library.
 pefile==2024.8.26
+customtkinter>=5.2.0
 
 # Build only: bundles src/lang.py + community packs into
 # dist/csp-lang.exe via `pyinstaller csp-lang.spec`.
