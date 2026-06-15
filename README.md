@@ -1,7 +1,8 @@
-# csp-translation
+# csp-lang-switch
 
-Community localization tooling for **Clip Studio Paint 5**, plus **csp-lang-switch** —
-a Windows language switcher that installs community packs into a live CSP install.
+A Windows language switcher and localization toolchain for **Clip Studio Paint 5**.
+It installs community packs into a live CSP install and provides the tooling to
+build and maintain those packs.
 
 CSP has no slots for community languages such as Russian, Ukrainian, or Kazakh.
 Its UI strings live in binary resource bundles (GUID-named files, one per
