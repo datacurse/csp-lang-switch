@@ -24,11 +24,13 @@ import json
 import os
 import shutil
 import sys
+from contextlib import nullcontext
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
 
 import install  # for ensure_admin, check_csp_closed, find_csp_resource, etc.
+from common import is_admin, quiet_stdout, run_elevated_sync
 from version import (
     LANGS_ROOT,
     ACTIVE_VERSION,
@@ -1050,7 +1052,25 @@ def _final_instruction(choice: LanguageChoice) -> str:
     return f"Restart CSP to see {choice.display}."
 
 
+def build_switch_argv(args) -> list[str]:
+    """Build argv for an elevated re-launch (GUI or UAC handoff)."""
+    argv = [args.target]
+    if getattr(args, "from_gui", False):
+        argv.append("--from-gui")
+    if args.csp:
+        argv.extend(["--csp", args.csp])
+    if args.force:
+        argv.append("--force")
+    if args.dry_run:
+        argv.append("--dry-run")
+    enabled = getattr(args, "pipelines", None)
+    if enabled is not None and enabled != set(PIPELINES):
+        argv.extend(["--pipelines", ",".join(sorted(enabled))])
+    return argv
+
+
 def cmd_switch(args) -> None:
+    from_gui = getattr(args, "from_gui", False)
     clear_warnings()
     choice = _choice_or_exit(args.target, args.csp)
     _configure_pipelines()
@@ -1067,7 +1087,8 @@ def cmd_switch(args) -> None:
         current, _fp = classify(pipe, args.csp, cached_all.get(name))
         desired = pipe.desired_state(choice)
         if current == desired:
-            print(f"  {_LABELS[name]}: already {state_label(desired)} -- skipping")
+            if not from_gui:
+                print(f"  {_LABELS[name]}: already {state_label(desired)} -- skipping")
         else:
             plan.append((name, pipe, current, desired))
 
@@ -1075,41 +1096,51 @@ def cmd_switch(args) -> None:
         sys.exit("error: no subsystems selected")
 
     if not plan:
-        if enabled is not None and len(enabled) < len(PIPELINES):
-            print(f"\nSelected subsystems already match '{choice.display}'. "
-                  f"Nothing to do.")
-        else:
-            print(f"\nAll subsystems already match '{choice.display}'. Nothing to do.")
-        print(_final_instruction(choice))
+        if not from_gui:
+            if enabled is not None and len(enabled) < len(PIPELINES):
+                print(f"\nSelected subsystems already match '{choice.display}'. "
+                      f"Nothing to do.")
+            else:
+                print(f"\nAll subsystems already match '{choice.display}'. "
+                      f"Nothing to do.")
+            print(_final_instruction(choice))
         return
-
-    print(f"\nWill switch {len(plan)} subsystem(s) for '{choice.display}':")
-    for name, _pipe, current, desired in plan:
-        print(f"  - {_LABELS[name]}  ({state_label(current)} -> "
-              f"{state_label(desired)})")
 
     if not args.dry_run:
         install.check_csp_closed(args.force)
-        install.ensure_admin()
+        if not is_admin():
+            if from_gui:
+                rc, err = run_elevated_sync(build_switch_argv(args))
+                if rc != 0:
+                    sys.exit(err or "error: switch failed")
+                return
+            install.ensure_admin()
 
-    for name, pipe, _current, _desired in plan:
-        try:
-            pipe.switch_to(choice, args.csp, args.dry_run)
-        except SystemExit as e:
-            sys.exit(f"\nerror: subsystem '{_LABELS[name]}' failed: {e}")
+    out = quiet_stdout() if from_gui else nullcontext()
+    with out:
+        print(f"\nWill switch {len(plan)} subsystem(s) for '{choice.display}':")
+        for name, _pipe, current, desired in plan:
+            print(f"  - {_LABELS[name]}  ({state_label(current)} -> "
+                  f"{state_label(desired)})")
 
-    if not args.dry_run:
-        for name, pipe in pipes.items():
-            current, fp = classify(pipe, args.csp, None)
-            if fp is not None:
-                set_pipeline_state(state, name, current, fp)
-        save_state(state)
+        for name, pipe, _current, _desired in plan:
+            try:
+                pipe.switch_to(choice, args.csp, args.dry_run)
+            except SystemExit as e:
+                sys.exit(f"\nerror: subsystem '{_LABELS[name]}' failed: {e}")
 
-    if WARNINGS:
-        print(f"\nFinished with {len(WARNINGS)} warning(s) for '{choice.display}'.")
-    else:
-        print(f"\nDone -- switched file state for '{choice.display}'.")
-    print(_final_instruction(choice))
+        if not args.dry_run:
+            for name, pipe in pipes.items():
+                current, fp = classify(pipe, args.csp, None)
+                if fp is not None:
+                    set_pipeline_state(state, name, current, fp)
+            save_state(state)
+
+        if WARNINGS:
+            print(f"\nFinished with {len(WARNINGS)} warning(s) for '{choice.display}'.")
+        else:
+            print(f"\nDone -- switched file state for '{choice.display}'.")
+        print(_final_instruction(choice))
 
 
 # ----------------------------------------------------------------------
@@ -1219,8 +1250,16 @@ def main(argv: list[str] | None = None) -> None:
                         help="proceed even if CSP appears to be running")
     parser.add_argument("--keep-open", action="store_true",
                         help=argparse.SUPPRESS)
+    parser.add_argument("--from-gui", action="store_true",
+                        help=argparse.SUPPRESS)
+    parser.add_argument("--pipelines", default=None,
+                        help=argparse.SUPPRESS)
+    parser.add_argument("--gui-error-file", default=None,
+                        help=argparse.SUPPRESS)
 
     args = parser.parse_args(raw)
+    if args.pipelines:
+        args.pipelines = {p.strip() for p in args.pipelines.split(",") if p.strip()}
     if no_args:
         args.target = "gui"
 
@@ -1235,6 +1274,16 @@ def main(argv: list[str] | None = None) -> None:
             cmd_status(args)
         else:
             cmd_switch(args)
+    except SystemExit as e:
+        err_file = getattr(args, "gui_error_file", None)
+        if err_file and e.args:
+            msg = str(e.args[0])
+            if msg and msg not in ("0", "None"):
+                try:
+                    Path(err_file).write_text(msg, encoding="utf-8")
+                except OSError:
+                    pass
+        raise
     finally:
         if args.keep_open:
             try:

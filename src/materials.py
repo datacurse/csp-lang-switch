@@ -369,11 +369,26 @@ def _deploy(src_root: Path, label: str, args) -> None:
     if not confirm("proceed?", args.yes):
         print("aborted")
         return
+    skipped = 0
+    installed = 0
     for s, d in jobs:
         if not d.parent.is_dir():
-            sys.exit(f"error: target folder missing: {d.parent}")
+            skipped += 1
+            continue
         copy_over(s, d)
-    print(f"\ndone -- {label} material data installed ({len(jobs)} files).")
+        installed += 1
+    if skipped:
+        print(f"  note: {skipped} file(s) skipped (pack folder not in this install)")
+        try:
+            import lang
+            lang.add_warning(
+                f"\nWARNING: {skipped} material file(s) were skipped because "
+                f"those pack folders are not present in this CSP install.")
+        except ImportError:
+            pass
+    if installed == 0:
+        sys.exit("error: nothing was installed -- CSP material data not found")
+    print(f"\ndone -- {label} material data installed ({installed} files).")
 
 
 def cmd_install(args) -> None:

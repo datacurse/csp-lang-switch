@@ -89,6 +89,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "now_prefix": "now:",
         "now_unknown": "now: ?",
         "checking_status": "Checking current state…",
+        "switching": "Switching language…",
         "no_community": "No community packs bundled.",
         "no_official": "CSP install not found.",
         "btn_apply": "Apply",
@@ -98,12 +99,12 @@ _STRINGS: dict[str, dict[str, str]] = {
         "err_no_language": "Choose a language first.",
         "err_nothing_title": "Nothing selected",
         "err_nothing": "Check at least one subsystem to switch.",
-        "confirm_apply_title": "Apply language",
-        "confirm_apply": ("Apply {display} to:\n  {labels}\n\n"
-                          "Close Clip Studio Paint first."),
-        "elevated_title": "Continuing as administrator",
-        "elevated_body": "An elevated window was opened to finish the switch.",
         "failed_title": "Switch failed",
+        "switch_failed": ("Could not complete the switch. Close Clip Studio Paint, "
+                          "accept the administrator prompt if shown, and try again."),
+        "materials_missing_folder": ("Some material folders from the translation pack "
+                                     "are not in your CSP install; other parts still "
+                                     "switched. Try again or re-check status."),
         "warnings_title": "Finished with warnings",
         "done_title": "Done",
         "restart_csp": "Restart CSP to see {display}.",
@@ -137,6 +138,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "now_prefix": "сейчас:",
         "now_unknown": "сейчас: ?",
         "checking_status": "Проверка текущего состояния…",
+        "switching": "Переключение языка…",
         "no_community": "Сообщественные пакеты не найдены.",
         "no_official": "Установка CSP не найдена.",
         "btn_apply": "Применить",
@@ -146,12 +148,12 @@ _STRINGS: dict[str, dict[str, str]] = {
         "err_no_language": "Сначала выберите язык.",
         "err_nothing_title": "Ничего не выбрано",
         "err_nothing": "Отметьте хотя бы одну подсистему для переключения.",
-        "confirm_apply_title": "Применить язык",
-        "confirm_apply": ("Применить {display} к:\n  {labels}\n\n"
-                          "Сначала закройте Clip Studio Paint."),
-        "elevated_title": "Запуск от администратора",
-        "elevated_body": "Открыто окно с правами администратора для завершения переключения.",
         "failed_title": "Ошибка переключения",
+        "switch_failed": ("Не удалось переключить язык. Закройте Clip Studio Paint, "
+                          "подтвердите запрос администратора и попробуйте снова."),
+        "materials_missing_folder": ("Часть папок материалов из пакета перевода "
+                                       "отсутствует в вашей установке CSP; остальное "
+                                       "переключено. Проверьте статус ещё раз."),
         "warnings_title": "Готово с предупреждениями",
         "done_title": "Готово",
         "restart_csp": "Перезапустите CSP, чтобы увидеть {display}.",

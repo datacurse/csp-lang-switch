@@ -14,9 +14,75 @@ import ctypes
 import os
 import subprocess
 import sys
+import tempfile
+from contextlib import contextmanager
 from pathlib import Path
 
 CSP_PROCESS = "CLIPStudioPaint.exe"
+
+_CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+
+
+@contextmanager
+def quiet_stdout():
+    """Suppress console output (used when the GUI triggers a switch)."""
+    with open(os.devnull, "w", encoding="utf-8") as devnull:
+        old = sys.stdout
+        sys.stdout = devnull
+        try:
+            yield
+        finally:
+            sys.stdout = old
+
+
+def _elevated_workdir() -> Path:
+    entry = Path(sys.argv[0]).resolve()
+    if getattr(sys, "frozen", False):
+        return entry.parent
+    if entry.suffix.lower() in (".py", ".pyw") and entry.parent.name == "src":
+        return entry.parent.parent
+    return entry.parent
+
+
+def run_elevated_sync(argv: list[str]) -> tuple[int, str]:
+    """Re-launch elevated, wait, hide window. Returns (exit code, error text)."""
+    if os.name != "nt":
+        return 1, ""
+    executable = Path(sys.executable)
+    if getattr(sys, "frozen", False):
+        args = list(argv)
+    else:
+        args = [str(Path(sys.argv[0]).resolve()), *argv]
+
+    err_file = Path(tempfile.gettempdir()) / "csp-lang-gui-error.txt"
+    try:
+        err_file.unlink(missing_ok=True)
+    except OSError:
+        pass
+    args.extend(["--gui-error-file", str(err_file)])
+
+    exe = str(executable).replace("'", "''")
+    workdir = str(_elevated_workdir()).replace("'", "''")
+    arg_parts = ", ".join("'" + a.replace("'", "''") + "'" for a in args)
+    ps = (
+        f"$p = Start-Process -FilePath '{exe}' "
+        f"-ArgumentList @({arg_parts}) "
+        f"-WorkingDirectory '{workdir}' "
+        f"-Verb RunAs -Wait -PassThru -WindowStyle Hidden; "
+        f"if ($null -eq $p) {{ exit 1 }}; exit $p.ExitCode"
+    )
+    cp = subprocess.run(
+        ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", ps],
+        creationflags=_CREATE_NO_WINDOW,
+    )
+    if cp.returncode != 0 and err_file.is_file():
+        try:
+            text = err_file.read_text(encoding="utf-8").strip()
+            if text:
+                return cp.returncode, text
+        except OSError:
+            pass
+    return int(cp.returncode), ""
 
 
 # ----------------------------------------------------------------------

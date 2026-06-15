@@ -8,10 +8,11 @@ CustomTkinter language picker for csp-lang.
 from __future__ import annotations
 
 import sys
+import threading
 import tkinter as tk
 from argparse import Namespace
 from pathlib import Path
-from tkinter import BooleanVar, StringVar, messagebox
+from tkinter import BooleanVar, StringVar
 
 import customtkinter as ctk
 
@@ -19,6 +20,8 @@ import gui_i18n as i18n
 
 # Fixed inner height for the language columns (official list scrolls inside).
 _LANG_LIST_HEIGHT = 128
+_STATUS_OK = ("#2d6a4f", "#52b788")
+_STATUS_ERR = ("#9b2226", "#e5383b")
 
 
 def _canvas_bg() -> str:
@@ -83,6 +86,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         UNKNOWN,
         WARNINGS,
         LanguageChoice,
+        build_switch_argv,
         classify_all,
         cmd_switch,
         discover_community_packs,
@@ -90,6 +94,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         pipeline_display_state,
         summary_for_gui,
     )
+    from common import is_admin, run_elevated_sync
 
     ctk.set_appearance_mode("system")
     ctk.set_default_color_theme("blue")
@@ -188,6 +193,9 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         wraplength=500, justify="left", font=ctk.CTkFont(size=12))
     status_label.pack(anchor="w", pady=(6, 0))
 
+    progress = ctk.CTkProgressBar(main, mode="indeterminate")
+    busy = False
+
     buttons = ctk.CTkFrame(main, fg_color="transparent")
     buttons.pack(fill="x", pady=(8, 0))
     apply_btn = ctk.CTkButton(buttons, text=i18n.t(gui_lang, "btn_apply"),
@@ -273,7 +281,32 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 official_inner, text=i18n.t(gui_lang, "no_official"),
                 font=ctk.CTkFont(size=12)).pack(anchor="w")
 
-    def refresh_status() -> None:
+    def _set_status(text: str, *, kind: str = "normal") -> None:
+        colors = {
+            "normal": ("gray10", "gray90"),
+            "ok": _STATUS_OK,
+            "err": _STATUS_ERR,
+        }
+        status_label.configure(text=text, text_color=colors.get(kind, colors["normal"]))
+
+    def _set_busy(on: bool) -> None:
+        nonlocal busy
+        busy = on
+        state = "disabled" if on else "normal"
+        apply_btn.configure(state=state)
+        refresh_btn.configure(state=state)
+        close_btn.configure(state=state)
+        if on:
+            progress.pack(fill="x", pady=(6, 0))
+            progress.start()
+            _set_status(i18n.t(gui_lang, "switching"))
+        else:
+            progress.stop()
+            progress.pack_forget()
+
+    def refresh_status(
+        final_message: str | None = None, final_kind: str = "normal",
+    ) -> None:
         try:
             statuses = classify_all(args)
             prefix = i18n.t(gui_lang, "now_prefix")
@@ -281,59 +314,81 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 current = statuses.get(name, UNKNOWN)
                 pipeline_status_labels[name].configure(
                     text=f"{prefix} {pipeline_display_state(current, gui_lang)}")
-            status_label.configure(text=summary_for_gui(statuses, gui_lang))
+            if final_message is not None:
+                _set_status(final_message, kind=final_kind)
+            else:
+                _set_status(summary_for_gui(statuses, gui_lang))
         except SystemExit as e:
-            status_label.configure(text=str(e))
+            _set_status(str(e), kind="err")
             for name in PIPELINES:
                 pipeline_status_labels[name].configure(
                     text=i18n.t(gui_lang, "now_unknown"))
 
+    def _localize_error(msg: str) -> str:
+        text = msg.removeprefix("error: ").strip()
+        if "subsystem '" in text and " failed:" in text:
+            text = text.split(" failed:", 1)[-1].strip()
+        text = text.removeprefix("error: ").strip()
+        if not text or text.isdigit():
+            return i18n.t(gui_lang, "switch_failed")
+        if text.startswith("target folder missing:"):
+            return i18n.t(gui_lang, "materials_missing_folder")
+        return text
+
+    def _finish_apply(error: str | None, display: str) -> None:
+        _set_busy(False)
+        if error:
+            _set_status(_localize_error(error), kind="err")
+            return
+        restart = i18n.t(gui_lang, "restart_csp", display=display)
+        if WARNINGS:
+            notes = "\n".join(w.strip() for w in WARNINGS)
+            refresh_status(f"{notes}\n\n{restart}", final_kind="ok")
+        else:
+            refresh_status(restart, final_kind="ok")
+
     def apply_selected() -> None:
+        if busy:
+            return
         key = selected.get()
         choice = choice_map.get(key)
         if not choice:
-            messagebox.showerror(
-                i18n.t(gui_lang, "err_no_language_title"),
-                i18n.t(gui_lang, "err_no_language"))
+            _set_status(i18n.t(gui_lang, "err_no_language"), kind="err")
             return
         enabled = {name for name in PIPELINES if pipeline_vars[name].get()}
         if not enabled:
-            messagebox.showerror(
-                i18n.t(gui_lang, "err_nothing_title"),
-                i18n.t(gui_lang, "err_nothing"))
+            _set_status(i18n.t(gui_lang, "err_nothing"), kind="err")
             return
-        labels = ", ".join(
-            i18n.pipeline_label(gui_lang, n) for n in PIPELINES if n in enabled)
-        if not messagebox.askyesno(
-                i18n.t(gui_lang, "confirm_apply_title"),
-                i18n.t(gui_lang, "confirm_apply",
-                       display=choice.display, labels=labels)):
+
+        switch_args = Namespace(
+            target=choice.id,
+            csp=args.csp,
+            dry_run=False,
+            force=getattr(args, "force", False),
+            keep_open=False,
+            from_gui=True,
+            pipelines=enabled,
+        )
+        display = choice.display
+        _set_busy(True)
+        root.update()
+
+        # UAC must run on the main thread; a background thread often fails silently.
+        if not is_admin():
+            rc, err = run_elevated_sync(build_switch_argv(switch_args))
+            _finish_apply(err if rc != 0 else None, display)
             return
-        args.target = choice.id
-        args.pipelines = enabled
-        sys.argv = [sys.argv[0], choice.id, "--keep-open"]
-        try:
-            cmd_switch(args)
-        except SystemExit as e:
-            if e.code == 0:
-                messagebox.showinfo(
-                    i18n.t(gui_lang, "elevated_title"),
-                    i18n.t(gui_lang, "elevated_body"))
-                root.destroy()
-                return
-            messagebox.showerror(i18n.t(gui_lang, "failed_title"), str(e))
-        else:
-            restart = i18n.t(gui_lang, "restart_csp", display=choice.display)
-            if WARNINGS:
-                messagebox.showwarning(
-                    i18n.t(gui_lang, "warnings_title"),
-                    "\n".join(w.strip() for w in WARNINGS) + "\n\n" + restart)
-            else:
-                messagebox.showinfo(i18n.t(gui_lang, "done_title"), restart)
-        finally:
-            args.pipelines = None
-            sys.argv = [sys.argv[0]]
-            refresh_status()
+
+        def work() -> None:
+            error: str | None = None
+            try:
+                cmd_switch(switch_args)
+            except SystemExit as e:
+                error = str(e) if e.args else ""
+
+            root.after(0, lambda: _finish_apply(error, display))
+
+        threading.Thread(target=work, daemon=True).start()
 
     apply_gui_language(gui_lang)
     refresh_choices()
