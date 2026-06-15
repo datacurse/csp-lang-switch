@@ -53,7 +53,7 @@ rendered correctly inside a running copy of CSP.
 
 ### For end users — the bundled exe
 
-Download `csp-lang.exe` and double-click it. Pick a community pack, such as
+Download `csp-lang-switch.exe` and double-click it. Pick a community pack, such as
 Russian, or an official CSP language, such as English or Japanese. UAC fires
 once when you commit to a switch (it needs to write into `C:\Program Files`).
 Close CSP first.
@@ -61,14 +61,15 @@ Close CSP first.
 The exe also takes CLI args if you'd rather skip the menu:
 
 ```
-csp-lang.exe russian        # install the Russian community pack
-csp-lang.exe english        # install stock English into the English slot
-csp-lang.exe japanese       # install stock Japanese into the English slot
-csp-lang.exe status         # show what is installed
+csp-lang-switch.exe russian        # install the Russian community pack
+csp-lang-switch.exe english        # install stock English into the English slot
+csp-lang-switch.exe japanese       # install stock Japanese into the English slot
+csp-lang-switch.exe status         # show what is installed
 ```
 
-Per-machine backups and state live at `%LOCALAPPDATA%\csp-lang\`. Existing
-`%LOCALAPPDATA%\csp-russian\` backups are still recognized after upgrading.
+Per-machine backups and state live at `%LOCALAPPDATA%\csp-lang-switch\`. Existing
+`%LOCALAPPDATA%\csp-lang\` and `%LOCALAPPDATA%\csp-russian\` backups are still
+recognized after upgrading.
 
 ### For developers — the source-tree scripts
 
@@ -97,12 +98,16 @@ testing each pipeline in isolation — see [Workflow](#workflow) below.
 
 ```
 pip install -r requirements.txt
-pyinstaller csp-lang.spec
+pyinstaller csp-lang-switch.spec
 ```
 
-The resulting `dist/csp-lang.exe` bundles the active version tree
+The resulting `dist/csp-lang-switch.exe` bundles the active version tree
 (`versions/5.0.0/langs/`: Russian community pack + full English stock for
 restore). End users need nothing else installed (no Python, no extra files).
+
+GitHub release notes live in [`release-notes/`](release-notes/). Each file is
+bilingual: English first, then `---`, then the same text in Russian. Copy
+[`release-notes/TEMPLATE.md`](release-notes/TEMPLATE.md) when cutting a new tag.
 
 ### Capturing stock from a CSP install (maintainers)
 

@@ -2,7 +2,7 @@
 """
 gui_i18n.py
 ===========
-Strings and locale helpers for the csp-lang picker GUI.
+Strings and locale helpers for the csp-lang-switch picker GUI.
 """
 
 from __future__ import annotations

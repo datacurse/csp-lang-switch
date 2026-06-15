@@ -28,6 +28,8 @@ versions/*/langs/
 # Per-machine state for src/lang.py — caches current per-pipeline language
 # (russian / original / unknown) + a content fingerprint of the install.
 .lang-state.json
+.csp-lang-switch-settings.json
+.csp-lang-settings.json
 
 # Editor / IDE
 .idea/

@@ -1,6 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 """
-PyInstaller spec for the end-user csp-lang.exe.
+PyInstaller spec for the end-user csp-lang-switch.exe.
 
 Builds a single-file Windows executable that bundles:
 
@@ -11,8 +11,8 @@ Builds a single-file Windows executable that bundles:
 
 Bundled paths use the `langs/` prefix at runtime (sys._MEIPASS/langs/...).
 
-Build:    pyinstaller csp-lang.spec
-Outputs:  dist/csp-lang.exe
+Build:    pyinstaller csp-lang-switch.spec
+Outputs:  dist/csp-lang-switch.exe
 """
 
 from pathlib import Path
@@ -95,7 +95,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='csp-lang',
+    name='csp-lang-switch',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

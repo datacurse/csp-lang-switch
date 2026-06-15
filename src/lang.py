@@ -30,7 +30,7 @@ from pathlib import Path
 from typing import Callable
 
 import install  # for ensure_admin, check_csp_closed, find_csp_resource, etc.
-from common import is_admin, quiet_stdout, run_elevated_sync
+from common import is_admin, pause_console, quiet_stdout, run_elevated_sync, attach_console
 from version import (
     LANGS_ROOT,
     ACTIVE_VERSION,
@@ -51,25 +51,46 @@ for _stream in (sys.stdout, sys.stderr):
 # Paths -- source mode vs bundled exe
 # ----------------------------------------------------------------------
 FROZEN = getattr(sys, "frozen", False)
-APP_NAME = "csp-lang"
-LEGACY_APP_NAME = "csp-russian"
+APP_NAME = "csp-lang-switch"
+LEGACY_APP_NAMES = ("csp-lang", "csp-russian")
 COMMUNITY_SLOT = "english"
+
+
+def _local_appdata() -> Path:
+    return Path(os.environ.get("LOCALAPPDATA") or str(Path.home() / "AppData" / "Local"))
+
+
+def _legacy_user_data_roots() -> list[Path]:
+    return [_local_appdata() / name for name in LEGACY_APP_NAMES]
+
+
+def _migrate_file_if_missing(dst: Path, *candidates: Path) -> None:
+    """Copy the first existing legacy file into *dst* when the new path is empty."""
+    if dst.is_file():
+        return
+    for src in candidates:
+        if src.is_file():
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            return
+
 
 if FROZEN:
     DATA_ROOT = Path(sys._MEIPASS)  # type: ignore[attr-defined]
-    _localappdata = os.environ.get("LOCALAPPDATA") or \
-        str(Path.home() / "AppData" / "Local")
-    USER_DATA = Path(_localappdata) / APP_NAME
-    LEGACY_USER_DATA = Path(_localappdata) / LEGACY_APP_NAME
+    USER_DATA = _local_appdata() / APP_NAME
     USER_DATA.mkdir(parents=True, exist_ok=True)
     STATE_FILE = USER_DATA / "state.json"
     SETTINGS_FILE = USER_DATA / "settings.json"
+    for legacy_root in _legacy_user_data_roots():
+        _migrate_file_if_missing(STATE_FILE, legacy_root / "state.json")
+        _migrate_file_if_missing(SETTINGS_FILE, legacy_root / "settings.json")
 else:
     DATA_ROOT = Path(__file__).resolve().parent.parent
     USER_DATA = DATA_ROOT
-    LEGACY_USER_DATA = DATA_ROOT
     STATE_FILE = DATA_ROOT / ".lang-state.json"
-    SETTINGS_FILE = DATA_ROOT / ".csp-lang-settings.json"
+    SETTINGS_FILE = DATA_ROOT / ".csp-lang-switch-settings.json"
+    _migrate_file_if_missing(
+        SETTINGS_FILE, DATA_ROOT / ".csp-lang-settings.json")
 
 if FROZEN:
     LANGS_DIR = DATA_ROOT / "langs"
@@ -78,13 +99,15 @@ else:
 ENGLISH_STOCK = LANGS_DIR / "english" / "ui"
 BUNDLED_ENGLISH = LANGS_DIR / "english"
 
-# In bundled mode, prefer new backup locations but keep old csp-russian backups
-# usable so existing users are not stranded after the product rename.
+# In bundled mode, prefer the new data folder but keep older backup locations
+# usable so existing users are not stranded after product renames.
 def _backup_dir(name: str) -> Path:
     current = USER_DATA / name
-    legacy = LEGACY_USER_DATA / name
-    if FROZEN and not any(current.rglob("*")) and any(legacy.rglob("*")):
-        return legacy
+    if FROZEN and not any(current.rglob("*")):
+        for legacy_root in _legacy_user_data_roots():
+            legacy = legacy_root / name
+            if any(legacy.rglob("*")):
+                return legacy
     return current
 
 
@@ -394,7 +417,7 @@ def _require_matching_csp_version(csp: str | None, choice: LanguageChoice) -> No
     sys.exit(
         f"error: this build targets Clip Studio Paint {ACTIVE_VERSION}, but the "
         f"installed CSP resource files do not match.\n"
-        f"       Update CSP to {ACTIVE_VERSION} or use a matching csp-lang build."
+        f"       Update CSP to {ACTIVE_VERSION} or use a matching csp-lang-switch build."
     )
 
 
@@ -422,30 +445,16 @@ def _seed_bundled_backups() -> None:
 def _set_build_dir(pipeline: str, pack: str) -> None:
     """Set a pipeline module's build directory for the selected community pack."""
     root = community_subdir(pack, PIPELINES_SUBDIRS[pipeline])
-    if pipeline == "plugins":
-        mod = _plugins_module()
-        if hasattr(mod, "configure_language"):
-            mod.configure_language(pack)
-        else:
-            mod.BUILD_DIR = root
-    elif pipeline == "tools":
-        mod = _tools_module()
-        if hasattr(mod, "configure_language"):
-            mod.configure_language(pack)
-        else:
-            mod.BUILD_DIR = root
-    elif pipeline == "materials":
-        mod = _materials_module()
-        if hasattr(mod, "configure_language"):
-            mod.configure_language(pack)
-        else:
-            mod.BUILD_DIR = root
-    elif pipeline == "colorsets":
-        mod = _colorsets_module()
-        if hasattr(mod, "configure_language"):
-            mod.configure_language(pack)
-        else:
-            mod.BUILD_DIR = root
+    modules = {
+        "plugins": _plugins_module,
+        "tools": _tools_module,
+        "materials": _materials_module,
+        "colorsets": _colorsets_module,
+    }
+    loader = modules.get(pipeline)
+    if loader is None:
+        return
+    loader().BUILD_DIR = root
 
 
 def add_warning(message: str) -> None:
@@ -949,6 +958,14 @@ class ColorSetsPipeline(Pipeline):
                 p.is_file() for p in c.COLORSETS_DIR.rglob("*"))):
             add_warning("\nWARNING: no color-set backup found; color sets were not restored.")
             return
+        # Restoring patches the live .pcs names back to English. Without a
+        # bundled worksheet, that map is derived from a community build, so
+        # point BUILD_DIR at an available pack first.
+        if not c.WORKSHEET.is_file():
+            for pack in discover_community_packs():
+                if self.has_community_ref(pack):
+                    _set_build_dir(self.name, pack)
+                    break
         c.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
 
 
@@ -1127,6 +1144,8 @@ def build_switch_argv(args) -> list[str]:
     argv = [args.target]
     if getattr(args, "from_gui", False):
         argv.append("--from-gui")
+    if getattr(args, "keep_open", False):
+        argv.append("--keep-open")
     if args.csp:
         argv.extend(["--csp", args.csp])
     if args.force:
@@ -1302,11 +1321,11 @@ def main(argv: list[str] | None = None) -> None:
                     "stock official languages.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="examples:\n"
-               "  csp-lang russian      install the Russian community pack\n"
-               "  csp-lang english      restore stock files for English\n"
-               "  csp-lang japanese     restore stock files for Japanese\n"
-               "  csp-lang status       show what is installed\n"
-               "  csp-lang              open the language picker",
+               "  csp-lang-switch russian      install the Russian community pack\n"
+               "  csp-lang-switch english      restore stock files for English\n"
+               "  csp-lang-switch japanese     restore stock files for Japanese\n"
+               "  csp-lang-switch status       show what is installed\n"
+               "  csp-lang-switch              open the language picker",
     )
     parser.add_argument("target", nargs="?", default="gui",
                         metavar="TARGET",
@@ -1332,6 +1351,8 @@ def main(argv: list[str] | None = None) -> None:
         args.pipelines = {p.strip() for p in args.pipelines.split(",") if p.strip()}
     if no_args:
         args.target = "gui"
+    if args.keep_open:
+        attach_console()
 
     _configure_pipelines()
 
@@ -1356,10 +1377,7 @@ def main(argv: list[str] | None = None) -> None:
         raise
     finally:
         if args.keep_open:
-            try:
-                input("\nPress Enter to close this window...")
-            except EOFError:
-                pass
+            pause_console()
 
 
 if __name__ == "__main__":

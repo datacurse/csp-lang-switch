@@ -5,5 +5,5 @@ pefile==2024.8.26
 customtkinter>=5.2.0
 
 # Build only: bundles src/lang.py + community packs into
-# dist/csp-lang.exe via `pyinstaller csp-lang.spec`.
+# dist/csp-lang-switch.exe via `pyinstaller csp-lang-switch.spec`.
 pyinstaller==6.20.0

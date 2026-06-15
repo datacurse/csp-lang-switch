@@ -177,4 +177,4 @@ python src/lang.py status     # shows  color sets   RU   (russian)
 * [`src/colorsets.py`](../src/colorsets.py) — module docstring and implementation
 * [`scripts/capture_stock.py`](../scripts/capture_stock.py) — runs `colorsets.py backup`
   when capturing stock from a live install
-* [`csp-lang.spec`](../csp-lang.spec) — bundles `langs/english/colorsets/` into the exe
+* [`csp-lang-switch.spec`](../csp-lang-switch.spec) — bundles `langs/english/colorsets/` into the exe

@@ -208,6 +208,43 @@ def restore_dict() -> dict[str, str]:
     return {tgt: src for src, tgt in load_dict().items()}
 
 
+def _paired_names_from_build() -> dict[str, str]:
+    """English -> patched names by comparing the backup tree to BUILD_DIR."""
+    table: dict[str, str] = {}
+    if not BUILD_DIR.is_dir():
+        return table
+    for ru_path in sorted(p for p in BUILD_DIR.rglob("*") if p.is_file()):
+        rel = ru_path.relative_to(BUILD_DIR)
+        en_path = COLORSETS_DIR / rel
+        if not en_path.is_file():
+            continue
+        if is_cls(ru_path):
+            en = read_cls_name(en_path.read_bytes())
+            ru = read_cls_name(ru_path.read_bytes())
+            if en and ru:
+                table[en] = ru
+        elif is_pcs(ru_path):
+            en_names = pcs_names(en_path)
+            ru_names = pcs_names(ru_path)
+            if len(en_names) == len(ru_names):
+                for en, ru in zip(en_names, ru_names):
+                    if en and ru:
+                        table[en] = ru
+    return table
+
+
+def deploy_table(*, to_russian: bool) -> dict[str, str]:
+    """Name map for install/restore; falls back to backup vs build when no CSV."""
+    if WORKSHEET.is_file():
+        return load_dict() if to_russian else restore_dict()
+    paired = _paired_names_from_build()
+    if not paired:
+        sys.exit(f"error: {WORKSHEET} not found -- run 'extract' first")
+    if to_russian:
+        return paired
+    return {tgt: src for src, tgt in paired.items()}
+
+
 def existing_targets() -> dict[str, str]:
     if not WORKSHEET.exists():
         return {}
@@ -348,7 +385,7 @@ def _deploy(src_root: Path, label: str, args, *, to_russian: bool) -> None:
       replace the user's profile DB wholesale.
     """
     dst_roots = roots(args.csp)
-    table = load_dict() if to_russian else restore_dict()
+    table = deploy_table(to_russian=to_russian)
     copies: list[tuple[Path, Path, str]] = []
     pcs_dst = dst_roots.get(USER, Path()) / "default.pcs"
 

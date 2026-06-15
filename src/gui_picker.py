@@ -2,7 +2,7 @@
 """
 gui_picker.py
 =============
-CustomTkinter language picker for csp-lang.
+CustomTkinter language picker for csp-lang-switch.
 """
 
 from __future__ import annotations
@@ -323,12 +323,17 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     def refresh_status(
         final_message: str | None = None, final_kind: str = "normal",
     ) -> None:
+        if not root.winfo_exists():
+            return
         try:
             statuses = classify_all(args)
             prefix = i18n.t(gui_lang, "now_prefix")
             for name in PIPELINES:
+                label = pipeline_status_labels[name]
+                if not label.winfo_exists():
+                    continue
                 current = statuses.get(name, UNKNOWN)
-                pipeline_status_labels[name].configure(
+                label.configure(
                     text=f"{prefix} {pipeline_display_state(current, gui_lang)}")
             if final_message is not None:
                 _set_status(final_message, kind=final_kind)
@@ -337,8 +342,11 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         except SystemExit as e:
             _set_status(i18n.localize_error(gui_lang, str(e)), kind="err")
             for name in PIPELINES:
-                pipeline_status_labels[name].configure(
-                    text=i18n.t(gui_lang, "now_unknown"))
+                label = pipeline_status_labels[name]
+                if label.winfo_exists():
+                    label.configure(text=i18n.t(gui_lang, "now_unknown"))
+        except tk.TclError:
+            pass
 
     def _localize_error(msg: str) -> str:
         return i18n.localize_error(gui_lang, msg)

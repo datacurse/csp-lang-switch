@@ -35,6 +35,39 @@ def quiet_stdout():
             sys.stdout = old
 
 
+def attach_console() -> None:
+    """Give a windowed (PyInstaller) process a console for --keep-open debugging."""
+    if os.name != "nt":
+        return
+    try:
+        if ctypes.windll.kernel32.GetConsoleWindow():
+            return
+        ctypes.windll.kernel32.AllocConsole()
+        sys.stdin = open("CONIN$", "r", encoding="utf-8", errors="replace")
+        sys.stdout = open("CONOUT$", "w", encoding="utf-8", errors="replace")
+        sys.stderr = open("CONERR$", "w", encoding="utf-8", errors="replace")
+    except OSError:
+        pass
+
+
+def pause_console(prompt: str = "\nPress Enter to close this window...") -> None:
+    """Wait so an elevated/debug console stays readable."""
+    if os.name == "nt":
+        try:
+            import msvcrt
+
+            print(prompt, end="", flush=True)
+            while msvcrt.getch() not in (b"\r", b"\n"):
+                pass
+            return
+        except (ImportError, OSError):
+            pass
+    try:
+        input(prompt)
+    except (EOFError, RuntimeError, OSError):
+        pass
+
+
 def _elevated_workdir() -> Path:
     entry = Path(sys.argv[0]).resolve()
     if getattr(sys, "frozen", False):
@@ -54,7 +87,7 @@ def run_elevated_sync(argv: list[str]) -> tuple[int, str]:
     else:
         args = [str(Path(sys.argv[0]).resolve()), *argv]
 
-    err_file = Path(tempfile.gettempdir()) / "csp-lang-gui-error.txt"
+    err_file = Path(tempfile.gettempdir()) / "csp-lang-switch-gui-error.txt"
     try:
         err_file.unlink(missing_ok=True)
     except OSError:
@@ -117,6 +150,7 @@ def csp_is_running() -> bool:
         out = subprocess.run(
             ["tasklist", "/FI", f"IMAGENAME eq {CSP_PROCESS}"],
             capture_output=True, text=True, timeout=15,
+            creationflags=_CREATE_NO_WINDOW,
         ).stdout
     except (OSError, subprocess.SubprocessError):
         return False  # cannot tell -- do not block on it
