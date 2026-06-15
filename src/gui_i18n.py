@@ -18,6 +18,54 @@ DEFAULT = "en"
 
 NATIVE_LABELS = {"en": "English", "ru": "Русский"}
 
+# Localized names for language ids (official + community packs).
+LANGUAGE_NAMES: dict[str, dict[str, str]] = {
+    "en": {
+        "japanese": "Japanese",
+        "english": "English",
+        "korean": "Korean",
+        "chinese_t": "Traditional Chinese",
+        "chinese_tc": "Traditional Chinese",
+        "chinese_s": "Simplified Chinese",
+        "chinese_sc": "Simplified Chinese",
+        "french": "French",
+        "spanish": "Spanish",
+        "german": "German",
+        "thai": "Thai",
+        "indonesian": "Indonesian",
+        "portuguese_b": "Portuguese (Brazil)",
+        "portuguese": "Portuguese (Brazil)",
+        "russian": "Russian",
+        "ukrainian": "Ukrainian",
+        "kazakh": "Kazakh",
+    },
+    "ru": {
+        "japanese": "Японский",
+        "english": "Английский",
+        "korean": "Корейский",
+        "chinese_t": "Традиционный китайский",
+        "chinese_tc": "Традиционный китайский",
+        "chinese_s": "Упрощённый китайский",
+        "chinese_sc": "Упрощённый китайский",
+        "french": "Французский",
+        "spanish": "Испанский",
+        "german": "Немецкий",
+        "thai": "Тайский",
+        "indonesian": "Индонезийский",
+        "portuguese_b": "Португальский (Бразилия)",
+        "portuguese": "Португальский (Бразилия)",
+        "russian": "Русский",
+        "ukrainian": "Украинский",
+        "kazakh": "Казахский",
+    },
+}
+
+
+def language_label(gui_lang: str, lang_id: str) -> str | None:
+    """Return the language name in the GUI locale, or None if unknown."""
+    lang = normalize_language(gui_lang)
+    return LANGUAGE_NAMES.get(lang, LANGUAGE_NAMES[DEFAULT]).get(lang_id)
+
 
 def detect_system_language() -> str:
     """Pick a supported GUI language from the OS locale."""
@@ -92,6 +140,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "switching": "Switching language…",
         "no_community": "No community packs bundled.",
         "no_official": "CSP install not found.",
+        "official_not_yet": "not available yet",
         "btn_apply": "Apply",
         "btn_refresh": "Re-check",
         "btn_close": "Close",
@@ -105,6 +154,22 @@ _STRINGS: dict[str, dict[str, str]] = {
         "materials_missing_folder": ("Some material folders from the translation pack "
                                      "are not in your CSP install; other parts still "
                                      "switched. Try again or re-check status."),
+        "err_csp_not_found": ("Clip Studio Paint was not found on this computer. "
+                              "Install CSP or check that it is installed in the "
+                              "default location."),
+        "err_csp_running": "Close Clip Studio Paint before switching languages.",
+        "err_csp_userdata": ("Could not find CSP user data. Launch Clip Studio Paint "
+                             "at least once, then try again."),
+        "err_csp_resource_path": "The selected folder is not a valid CSP resource directory.",
+        "err_admin_denied": ("Administrator permission was not granted. Accept the "
+                             "UAC prompt and try again."),
+        "err_version_mismatch": ("This language pack is for Clip Studio Paint {version}, "
+                                 "but your installed CSP version does not match."),
+        "err_unknown_language": "Unknown language selected.",
+        "err_permission_denied": ("Could not write to Program Files. Run as "
+                                  "administrator or accept the UAC prompt."),
+        "err_materials_data": "Could not install material translations — CSP user data not found.",
+        "err_generic": "Something went wrong. Close CSP, try again, or re-check status.",
         "warnings_title": "Finished with warnings",
         "done_title": "Done",
         "restart_csp": "Restart CSP to see {display}.",
@@ -141,6 +206,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "switching": "Переключение языка…",
         "no_community": "Сообщественные пакеты не найдены.",
         "no_official": "Установка CSP не найдена.",
+        "official_not_yet": "пока недоступен",
         "btn_apply": "Применить",
         "btn_refresh": "Проверить снова",
         "btn_close": "Закрыть",
@@ -154,6 +220,24 @@ _STRINGS: dict[str, dict[str, str]] = {
         "materials_missing_folder": ("Часть папок материалов из пакета перевода "
                                        "отсутствует в вашей установке CSP; остальное "
                                        "переключено. Проверьте статус ещё раз."),
+        "err_csp_not_found": ("Clip Studio Paint не найден на этом компьютере. "
+                              "Установите CSP или проверьте, что программа "
+                              "установлена в стандартную папку."),
+        "err_csp_running": "Закройте Clip Studio Paint перед переключением языка.",
+        "err_csp_userdata": ("Не найдены пользовательские данные CSP. Запустите "
+                             "Clip Studio Paint хотя бы один раз и попробуйте снова."),
+        "err_csp_resource_path": "Выбранная папка не является каталогом resource CSP.",
+        "err_admin_denied": ("Не получены права администратора. Подтвердите запрос UAC "
+                             "и попробуйте снова."),
+        "err_version_mismatch": ("Этот пакет перевода рассчитан на Clip Studio Paint "
+                                 "{version}, но установленная версия CSP не совпадает."),
+        "err_unknown_language": "Выбран неизвестный язык.",
+        "err_permission_denied": ("Не удалось записать файлы в Program Files. Запустите "
+                                  "от имени администратора или подтвердите запрос UAC."),
+        "err_materials_data": ("Не удалось установить перевод материалов — "
+                               "не найдены пользовательские данные CSP."),
+        "err_generic": ("Что-то пошло не так. Закройте CSP, попробуйте снова "
+                        "или нажмите «Проверить снова»."),
         "warnings_title": "Готово с предупреждениями",
         "done_title": "Готово",
         "restart_csp": "Перезапустите CSP, чтобы увидеть {display}.",
@@ -184,3 +268,40 @@ def t(language: str, key: str, **kwargs: str) -> str:
 
 def pipeline_label(language: str, pipeline: str) -> str:
     return t(language, f"pipeline_{pipeline}")
+
+
+def localize_error(gui_lang: str, message: str) -> str:
+    """Turn a technical sys.exit message into a user-facing GUI string."""
+    from version import ACTIVE_VERSION
+
+    lang = normalize_language(gui_lang)
+    text = message.strip().removeprefix("error:").strip()
+    if "subsystem '" in text and " failed:" in text:
+        text = text.split(" failed:", 1)[-1].strip().removeprefix("error:").strip()
+    low = text.lower()
+
+    if not text or text.isdigit() or "switch failed" in low:
+        return t(lang, "switch_failed")
+    if "could not find a csp install" in low:
+        return t(lang, "err_csp_not_found")
+    if "csp is running" in low:
+        return t(lang, "err_csp_running")
+    if "administrator rights" in low or "uac prompt" in low:
+        return t(lang, "err_admin_denied")
+    if "this build targets clip studio paint" in low:
+        return t(lang, "err_version_mismatch", version=ACTIVE_VERSION)
+    if "target folder missing" in low:
+        return t(lang, "materials_missing_folder")
+    if "nothing was installed" in low and "material" in low:
+        return t(lang, "err_materials_data")
+    if "csp user data not found" in low or "%appdata% is not set" in low:
+        return t(lang, "err_csp_userdata")
+    if "english' subfolder" in low or "not a csp resource directory" in low:
+        return t(lang, "err_csp_resource_path")
+    if "unknown language target" in low:
+        return t(lang, "err_unknown_language")
+    if "no subsystems selected" in low:
+        return t(lang, "err_nothing")
+    if "permission denied" in low:
+        return t(lang, "err_permission_denied")
+    return t(lang, "err_generic")

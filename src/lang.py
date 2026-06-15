@@ -168,6 +168,19 @@ class LanguageChoice:
         return f"{self.autonym} ({self.label})" if self.autonym != self.label else self.label
 
 
+def choice_display(choice: LanguageChoice, gui_lang: str | None = None) -> str:
+    """Language label for the GUI, using localized names when requested."""
+    if not gui_lang or gui_lang == "en":
+        return choice.display
+    import gui_i18n as i18n
+    loc = i18n.language_label(gui_lang, choice.id)
+    if not loc:
+        return choice.display
+    if choice.autonym.casefold() == loc.casefold():
+        return choice.autonym
+    return f"{choice.autonym} ({loc})"
+
+
 def _has_files(folder: Path) -> bool:
     return folder.is_dir() and any(p.is_file() for p in folder.rglob("*"))
 
@@ -268,13 +281,16 @@ def pipeline_display_state(state: str, gui_lang: str | None = None) -> str:
         return "Unknown"
     if is_official_state(state):
         lang = official_id_from_state(state)
-        label = OFFICIAL_LABELS.get(lang, lang.replace("_", " ").title())
         if gui_lang and gui_lang != "en":
+            import gui_i18n as i18n
+            label = (i18n.language_label(gui_lang, lang)
+                     or OFFICIAL_LABELS.get(lang, lang.replace("_", " ").title()))
             return i18n.t(gui_lang, "state_official", label=label)
+        label = OFFICIAL_LABELS.get(lang, lang.replace("_", " ").title())
         return f"{label} (official)"
     choice = discover_community_packs().get(state)
     if choice:
-        return choice.display
+        return choice_display(choice, gui_lang)
     return state.replace("_", " ").title()
 
 
@@ -590,6 +606,54 @@ def _files_equal(slot_dir: Path, ref_dir: Path,
     return True
 
 
+def _compare_discovered_files(csp, ref_root, discover_fn, roots_fn, *,
+                              tags: tuple[str, ...] | None = None) -> bool | None:
+    """Byte-compare live files under *roots_fn* to *ref_root*; None if none found."""
+    saw_any = False
+    for tag, root in roots_fn(csp).items():
+        if tags is not None and tag not in tags:
+            continue
+        for abspath, rel in discover_fn(root, tag):
+            saw_any = True
+            rf = ref_root / tag / rel
+            if not rf.is_file():
+                return False
+            if abspath.stat().st_size != rf.stat().st_size:
+                return False
+            if _hash_file(abspath) != _hash_file(rf):
+                return False
+    return True if saw_any else None
+
+
+def _tools_live_cyrillic(csp) -> bool | None:
+    """True if any live tool name is Cyrillic; False if English-only; None if no DBs."""
+    t = _tools_module()
+    saw_any = False
+    for tag, root in t.roots(csp).items():
+        for abspath, _rel in t.discover(root, tag):
+            saw_any = True
+            if any(t.has_cyrillic(n) for n in t.node_names(abspath).values()):
+                return True
+    return False if saw_any else None
+
+
+def _colorsets_live_cyrillic(csp) -> bool | None:
+    """True if any live color-set name is Cyrillic; False if not; None if none found."""
+    c = _colorsets_module()
+    saw_any = False
+    for tag, root in c.roots(csp).items():
+        for abspath, _rel in c.discover(root, tag):
+            saw_any = True
+            if c.is_cls(abspath):
+                name = c.read_cls_name(abspath.read_bytes())
+                if name and c.has_cyrillic(name):
+                    return True
+            elif c.is_pcs(abspath):
+                if any(c.has_cyrillic(n) for n in c.pcs_names(abspath)):
+                    return True
+    return False if saw_any else None
+
+
 class Pipeline:
     """One swappable subsystem."""
 
@@ -725,18 +789,22 @@ class ToolsPipeline(Pipeline):
             ref_root = TOOLS_BACKUP if state == ORIGINAL else self.community_ref(state)
             if not ref_root.is_dir():
                 return None
-            saw_any = False
-            for tag, root in t.roots(csp).items():
-                for abspath, rel in t.discover(root, tag):
-                    saw_any = True
-                    rf = ref_root / tag / rel
-                    if not rf.is_file():
-                        return False
-                    if abspath.stat().st_size != rf.stat().st_size:
-                        return False
-                    if _hash_file(abspath) != _hash_file(rf):
-                        return False
-            return True if saw_any else None
+            exact = _compare_discovered_files(csp, ref_root, t.discover, t.roots)
+            if exact is True:
+                return True
+            if exact is None:
+                return None
+            # User profile DBs change size after normal CSP use; fall back to
+            # install seed + whether display names look translated (Cyrillic).
+            if state == ORIGINAL:
+                seed = _compare_discovered_files(
+                    csp, ref_root, t.discover, t.roots, tags=(t.SEED,))
+                if seed is True and _tools_live_cyrillic(csp) is False:
+                    return True
+                return False
+            if _tools_live_cyrillic(csp) is True:
+                return True
+            return False
         except SystemExit:
             return None
 
@@ -839,18 +907,20 @@ class ColorSetsPipeline(Pipeline):
             ref_root = COLORSETS_BACKUP if state == ORIGINAL else self.community_ref(state)
             if not ref_root.is_dir():
                 return None
-            saw_any = False
-            for tag, root in c.roots(csp).items():
-                for abspath, rel in c.discover(root, tag):
-                    saw_any = True
-                    rf = ref_root / tag / rel
-                    if not rf.is_file():
-                        return False
-                    if abspath.stat().st_size != rf.stat().st_size:
-                        return False
-                    if _hash_file(abspath) != _hash_file(rf):
-                        return False
-            return True if saw_any else None
+            exact = _compare_discovered_files(csp, ref_root, c.discover, c.roots)
+            if exact is True:
+                return True
+            if exact is None:
+                return None
+            if state == ORIGINAL:
+                seed = _compare_discovered_files(
+                    csp, ref_root, c.discover, c.roots, tags=(c.SEED,))
+                if seed is True and _colorsets_live_cyrillic(csp) is False:
+                    return True
+                return False
+            if _colorsets_live_cyrillic(csp) is True:
+                return True
+            return False
         except SystemExit:
             return None
 
@@ -975,16 +1045,16 @@ def summary_for_gui(statuses: dict[str, str], gui_lang: str) -> str:
         if is_official_state(only):
             lang = official_id_from_state(only)
             label = discover_official_languages(None).get(lang)
-            display = label.display if label else state_label(only)
+            display = choice_display(label, gui_lang) if label else state_label(only)
             return i18n.t(gui_lang, "summary_official_ui", display=display)
         choice = discover_community_packs().get(only)
-        display = choice.display if choice else only
+        display = choice_display(choice, gui_lang) if choice else only
         return i18n.t(gui_lang, "summary_community", display=display)
     official = [s for s in unique if is_official_state(s)]
     if official and unique <= {ORIGINAL, *official}:
         lang = official_id_from_state(official[0])
         label = discover_official_languages(None).get(lang)
-        display = label.display if label else state_label(official[0])
+        display = choice_display(label, gui_lang) if label else state_label(official[0])
         return i18n.t(gui_lang, "summary_official_mixed", display=display)
     communities = [s for s in unique if s not in (ORIGINAL, UNKNOWN)]
     if communities:

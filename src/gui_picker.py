@@ -22,6 +22,8 @@ import gui_i18n as i18n
 _LANG_LIST_HEIGHT = 128
 _STATUS_OK = ("#2d6a4f", "#52b788")
 _STATUS_ERR = ("#9b2226", "#e5383b")
+# Official CSP languages the switcher can apply (others are shown but disabled).
+_OFFICIAL_SELECTABLE = frozenset({"english"})
 
 
 def _canvas_bg() -> str:
@@ -87,6 +89,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         WARNINGS,
         LanguageChoice,
         build_switch_argv,
+        choice_display,
         classify_all,
         cmd_switch,
         discover_community_packs,
@@ -120,12 +123,12 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     top = ctk.CTkFrame(main, fg_color="transparent")
     top.pack(fill="x", pady=(0, 6))
     gui_lang_label = ctk.CTkLabel(top, text=i18n.t(gui_lang, "gui_language"))
-    gui_lang_label.pack(side="right", padx=(8, 6))
+    gui_lang_label.pack(side="left")
     gui_lang_combo = ctk.CTkComboBox(
         top, values=gui_labels, width=130, state="readonly",
         command=lambda _v: on_gui_lang_change())
     gui_lang_combo.set(i18n.NATIVE_LABELS[gui_lang])
-    gui_lang_combo.pack(side="right")
+    gui_lang_combo.pack(side="left", padx=(6, 0))
 
     choose_label = ctk.CTkLabel(
         main, text=i18n.t(gui_lang, "choose_language"),
@@ -226,6 +229,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         apply_btn.configure(text=i18n.t(gui_lang, "btn_apply"))
         refresh_btn.configure(text=i18n.t(gui_lang, "btn_refresh"))
         close_btn.configure(text=i18n.t(gui_lang, "btn_close"))
+        refresh_choices()
         refresh_status()
 
     def on_gui_lang_change() -> None:
@@ -239,7 +243,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         key = f"{choice.kind}:{choice.id}"
         choice_map[key] = choice
         ctk.CTkRadioButton(
-            parent, text=choice.display, variable=selected, value=key,
+            parent, text=choice_display(choice, gui_lang), variable=selected, value=key,
             radiobutton_width=16, radiobutton_height=16,
             font=ctk.CTkFont(size=12),
         ).pack(anchor="w", pady=1)
@@ -248,14 +252,26 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
     def add_official_choice(choice: LanguageChoice) -> None:
         key = f"{choice.kind}:{choice.id}"
-        choice_map[key] = choice
+        selectable = choice.id in _OFFICIAL_SELECTABLE
+        if selectable:
+            choice_map[key] = choice
+        label = choice_display(choice, gui_lang)
+        if not selectable:
+            label = f"{label} ({i18n.t(gui_lang, 'official_not_yet')})"
         ctk.CTkRadioButton(
-            official_inner, text=choice.display, variable=selected, value=key,
+            official_inner, text=label, variable=selected, value=key,
             radiobutton_width=16, radiobutton_height=16,
             font=ctk.CTkFont(size=12),
+            state="normal" if selectable else "disabled",
         ).pack(anchor="w", pady=1)
-        if not selected.get():
+        if selectable and not selected.get():
             selected.set(key)
+
+    def _official_choices(officials: dict[str, LanguageChoice]) -> list[LanguageChoice]:
+        """English first, then the rest alphabetically by display name."""
+        items = list(officials.values())
+        items.sort(key=lambda c: (0 if c.id == "english" else 1, c.display.casefold()))
+        return items
 
     def refresh_choices() -> None:
         for child in community_inner.winfo_children():
@@ -274,7 +290,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 community_inner, text=i18n.t(gui_lang, "no_community"),
                 font=ctk.CTkFont(size=12)).pack(anchor="w")
         if officials:
-            for choice in officials.values():
+            for choice in _official_choices(officials):
                 add_official_choice(choice)
         else:
             ctk.CTkLabel(
@@ -319,21 +335,13 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             else:
                 _set_status(summary_for_gui(statuses, gui_lang))
         except SystemExit as e:
-            _set_status(str(e), kind="err")
+            _set_status(i18n.localize_error(gui_lang, str(e)), kind="err")
             for name in PIPELINES:
                 pipeline_status_labels[name].configure(
                     text=i18n.t(gui_lang, "now_unknown"))
 
     def _localize_error(msg: str) -> str:
-        text = msg.removeprefix("error: ").strip()
-        if "subsystem '" in text and " failed:" in text:
-            text = text.split(" failed:", 1)[-1].strip()
-        text = text.removeprefix("error: ").strip()
-        if not text or text.isdigit():
-            return i18n.t(gui_lang, "switch_failed")
-        if text.startswith("target folder missing:"):
-            return i18n.t(gui_lang, "materials_missing_folder")
-        return text
+        return i18n.localize_error(gui_lang, msg)
 
     def _finish_apply(error: str | None, display: str) -> None:
         _set_busy(False)
@@ -369,7 +377,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             from_gui=True,
             pipelines=enabled,
         )
-        display = choice.display
+        display = choice_display(choice, gui_lang)
         _set_busy(True)
         root.update()
 
