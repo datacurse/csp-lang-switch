@@ -1,43 +1,57 @@
 # csp-translation
 
-Community localization tooling for **Clip Studio Paint 5**, starting with a
-complete **Russian** UI pack.
+Community localization tooling for **Clip Studio Paint 5**, plus **csp-lang-switch** —
+a Windows language switcher that installs community packs into a live CSP install.
 
 CSP has no slots for community languages such as Russian, Ukrainian, or Kazakh.
 Its UI strings live in binary resource bundles (GUID-named files, one per
 subsystem) and in a few parallel stores. This project parses those assets,
 exports their text to editable CSVs, lets us translate, repacks them into files
 CSP loads directly, and switches one community pack at a time through CSP's
-English slot. The method is **verified end-to-end** — a patched file has
-rendered correctly inside a running copy of CSP.
+English slot. The method is **verified end-to-end** — patched files render
+correctly inside a running copy of CSP.
+
+## What ships today
+
+**csp-lang-switch** targets **Clip Studio Paint 5.0.0** only. The bundled exe
+(`csp-lang-switch.exe`) includes:
+
+| Subsystem | What it covers |
+|---|---|
+| **Main UI** | 32 shared resource-bundle files under the English slot |
+| **Plug-ins** | Filter-menu strings in ~37 `PlugIn/PAINT` DLLs |
+| **Tool palette** | Tool / sub-tool names in SQLite DBs (+ brush texture names) |
+| **Materials** | Built-in material names in the per-user catalog |
+| **Color sets** | Color Set palette dropdown names (`.cls` + `default.pcs`) |
+
+The **Russian** community pack is bundled for all five subsystems. **English
+stock** is bundled for restore. Pick Russian or English in the switcher, then
+choose **English** as the UI language inside CSP.
+
+Per-machine backups and state live at `%LOCALAPPDATA%\csp-lang-switch\`.
+Upgrades from older `%LOCALAPPDATA%\csp-lang\` and `%LOCALAPPDATA%\csp-russian\`
+folders are migrated automatically.
 
 ## Status
 
 - **Method:** proven and load-tested. See [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
-- **First community pack:** all **32 content-bearing files** translated to Russian,
-  packed into `langs/russian/ui/`, and round-trip-verified (32/32 byte-for-byte). The
-  consistency audit is clean apart from known false positives (brand names, CC
-  license names, shader code, internal config keys). Run
-  `python src/batch.py status` for live progress.
-- **Switcher:** `src/lang.py` discovers community packs under `langs/<language>/`
-  and official CSP languages from the live install. Every selected language is
-  copied into the `english` slot, so users can switch without reinstalling CSP.
-- **Plug-in filters:** the new Filter menu (categories, filter names, dialog
-  parameters) lives in ~37 plug-in DLLs, not the bundles. All 37 are translated
-  and load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
-- **Tool palette:** the left-hand tool / sub-tool names live in SQLite
-  databases — both an install seed and a per-user working copy — not the
-  bundles. 240 distinct names are translated and installed into both; the
-  texture / pattern names baked into each brush's `Variant` blobs (1,342) are
-  patched too — see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
-- **Material catalog:** the built-in materials (paper textures, tones,
-  patterns, 3D, balloons, frame templates) live in a per-user SQLite catalog.
-  1,419 distinct names translated and installed —
+- **Shipped switcher:** `csp-lang-switch` (`src/lang.py`) discovers community
+  packs under `versions/5.0.0/langs/<language>/` and official CSP languages from
+  the live install. It tracks **five pipelines** independently (main UI,
+  plug-ins, tools, materials, color sets) and refuses to run when the installed
+  CSP build does not match **5.0.0**.
+- **Russian pack — main UI:** all **32 content-bearing resource files** are
+  packed into `versions/5.0.0/langs/russian/ui/`. Untranslated strings fall
+  back to readable English in the English slot. Run `python src/batch.py status`
+  for worksheet progress.
+- **Russian pack — plug-ins:** all **37 filter DLLs** translated and
+  load-tested — see [`docs/PLUGIN_TRANSLATION.md`](docs/PLUGIN_TRANSLATION.md).
+- **Russian pack — tool palette:** **240** tool / sub-tool names plus **1,342**
+  brush texture names — see [`docs/TOOL_TRANSLATION.md`](docs/TOOL_TRANSLATION.md).
+- **Russian pack — materials:** **1,419** distinct built-in material names —
   see [`docs/MATERIAL_TRANSLATION.md`](docs/MATERIAL_TRANSLATION.md).
-- **Color sets:** the Color Set palette dropdown names (`Default color set`,
-  `Additional color set`) live in `.cls` seed files and the profile's
-  `default.pcs` SQLite DB — not the resource bundles. Both stock sets are
-  translated and load-tested on 5.0.0 —
+- **Russian pack — color sets:** both stock Color Set entries translated and
+  load-tested on 5.0.0 —
   see [`docs/COLORSET_TRANSLATION.md`](docs/COLORSET_TRANSLATION.md).
 - **Workflow:** the end-to-end translation process is a reproducible playbook —
   [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATION_WORKFLOW.md).
@@ -53,46 +67,55 @@ rendered correctly inside a running copy of CSP.
 
 ### For end users — the bundled exe
 
-Download `csp-lang-switch.exe` and double-click it. Pick a community pack, such as
-Russian, or an official CSP language, such as English or Japanese. UAC fires
-once when you commit to a switch (it needs to write into `C:\Program Files`).
-Close CSP first.
+Download `csp-lang-switch.exe` and double-click it. A **CustomTkinter** picker
+opens (English or Russian interface, auto-detected from Windows). Pick a
+community pack or stock English, choose which **subsystems** to switch, and
+click **Apply**. UAC fires once when you commit (it needs to write into
+`C:\Program Files`). **Close CSP first.**
 
-The exe also takes CLI args if you'd rather skip the menu:
+In CSP itself, set the UI language to **English** — community packs install
+into CSP's English resource slot.
+
+The exe also accepts CLI args:
 
 ```
-csp-lang-switch.exe russian        # install the Russian community pack
-csp-lang-switch.exe english        # install stock English into the English slot
-csp-lang-switch.exe japanese       # install stock Japanese into the English slot
-csp-lang-switch.exe status         # show what is installed
+csp-lang-switch.exe                  # open the GUI picker (default)
+csp-lang-switch.exe russian          # install the Russian community pack (all subsystems)
+csp-lang-switch.exe english          # restore stock English everywhere
+csp-lang-switch.exe japanese         # copy official Japanese main UI into the English slot;
+                                     # plug-ins / tools / materials / color sets stay stock
+csp-lang-switch.exe status           # show per-subsystem state
 ```
 
-Per-machine backups and state live at `%LOCALAPPDATA%\csp-lang-switch\`. Existing
-`%LOCALAPPDATA%\csp-lang\` and `%LOCALAPPDATA%\csp-russian\` backups are still
-recognized after upgrading.
+In the GUI, only **English** is selectable among official CSP languages today;
+other installed languages are listed but marked *not available yet*. The CLI
+still accepts any official language folder present in your CSP install (main UI
+only — global subsystems restore to stock unless you pick a community pack).
 
 ### For developers — the source-tree scripts
 
 The same functionality, run directly from the repo:
 
 ```
-python src/lang.py russian        # install the Russian community pack
-python src/lang.py english        # install stock English into the English slot
-python src/lang.py japanese       # install stock Japanese into the English slot
-python src/lang.py status         # show what is installed right now
-python src/lang.py                # simple GUI picker
+python src/lang.py                   # GUI picker (needs customtkinter)
+python src/lang.py russian           # install the Russian community pack
+python src/lang.py english           # restore stock English
+python src/lang.py status            # show per-subsystem state
+python src/lang.py menu              # console menu (no customtkinter needed)
 ```
 
 Installing a community pack snapshots the original DLLs / SQLite DBs the first
 time it runs, so official-language restore has somewhere to copy back from.
-State is cached in
-`.lang-state.json` and verified against on-disk content hashes on every run, so
-if anything drifts the next `status` will show it as `unknown` rather than lie.
+State is cached in `.lang-state.json` and verified against on-disk content
+hashes on every run — if anything drifts, the next `status` will show it as
+`unknown` rather than lie. GUI language preference is stored in
+`.csp-lang-switch-settings.json`.
 
 The per-pipeline scripts ([`install.py`](src/install.py),
 [`plugins.py`](src/plugins.py), [`tools.py`](src/tools.py),
-[`materials.py`](src/materials.py), [`colorsets.py`](src/colorsets.py)) remain available for maintenance and for
-testing each pipeline in isolation — see [Workflow](#workflow) below.
+[`materials.py`](src/materials.py), [`colorsets.py`](src/colorsets.py)) remain
+available for maintenance and for testing each pipeline in isolation — see
+[Workflow](#workflow) below.
 
 ### Building the exe
 
@@ -124,9 +147,10 @@ so materials user data exists.
 | Path | Contents |
 |---|---|
 | [`docs/`](docs/) | How it works — methods, file inventory, format spec |
-| [`src/`](src/) | Python tooling: `lang.py` (top-level language switcher); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py` (deploy a build into CSP), `plugins.py` (filter-DLL pipeline), `tools.py` (tool-palette pipeline), `materials.py` (material-catalog pipeline), `colorsets.py` (color-set pipeline) |
+| [`src/`](src/) | Python tooling: `lang.py` (top-level switcher); `gui_picker.py` / `gui_i18n.py` (GUI); `batch.py` (orchestrator), `csp5.py`, `repack.py`, `audit.py`, `roundtrip.py`; `install.py`, `plugins.py`, `tools.py`, `materials.py`, `colorsets.py` (per-pipeline deploy); `common.py`, `version.py` |
 | [`translation/`](translation/) | Shared Russian worksheets: `manifest.csv`, `GLOSSARY.md`, `plugins.csv`, `tools.csv`, `materials.csv`, `colorsets.csv`, and `files/<short>-<slug>/` |
 | `versions/<csp-version>/langs/` | Per-build language trees (gitignored). Active target: **5.0.0**. Archive: **5.0.4** |
+| [`csp-lang-switch.spec`](csp-lang-switch.spec) | PyInstaller spec for the end-user exe |
 | [`TODO.md`](TODO.md) | Current task |
 
 ## Key files
@@ -163,8 +187,8 @@ The full translation playbook is [`docs/TRANSLATION_WORKFLOW.md`](docs/TRANSLATI
 the binary method, install steps and slot strategy are in
 [`docs/VERIFIED_METHOD.md`](docs/VERIFIED_METHOD.md).
 
-Deploy a build into a live CSP install — and switch languages back — without
-reinstalling the app, with `src/install.py`:
+For a live install, prefer `src/lang.py` — it switches all five subsystems and
+tracks state. The lower-level `src/install.py` handles main UI only:
 
 ```
 python src/install.py russian           # install the Russian UI build onto the English slot
