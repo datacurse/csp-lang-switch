@@ -130,12 +130,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "community_box": "Community translations",
         "official_box": "Official CSP languages",
-        "subsystems_box": "What to switch",
-        "pipeline_main-ui": "Main UI",
-        "pipeline_plugins": "Plug-ins",
-        "pipeline_tools": "Tool palette",
-        "pipeline_materials": "Materials",
-        "pipeline_colorsets": "Color sets",
         "now_prefix": "now:",
         "now_unknown": "now: ?",
         "now_active": "active now",
@@ -155,11 +149,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "switch_failed": (
             "Could not complete the switch. Close Clip Studio Paint, "
             "accept the administrator prompt if shown, and try again."
-        ),
-        "materials_missing_folder": (
-            "Some material folders from the translation pack "
-            "are not in your CSP install; other parts still "
-            "switched. Try again or re-check status."
         ),
         "err_csp_not_found": (
             "Clip Studio Paint was not found on this computer. "
@@ -185,7 +174,6 @@ _STRINGS: dict[str, dict[str, str]] = {
             "Could not write to Program Files. Run as "
             "administrator or accept the UAC prompt."
         ),
-        "err_materials_data": "Could not install material translations — CSP user data not found.",
         "err_generic": "Something went wrong. Close CSP, try again, or re-check status.",
         "warnings_title": "Finished with warnings",
         "done_title": "Done",
@@ -215,12 +203,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "community_box": "Сообщественные переводы",
         "official_box": "Официальные языки CSP",
-        "subsystems_box": "Что переключить",
-        "pipeline_main-ui": "Основной интерфейс",
-        "pipeline_plugins": "Подключаемые модули",
-        "pipeline_tools": "Палитра инструментов",
-        "pipeline_materials": "Материалы",
-        "pipeline_colorsets": "Наборы цветов",
         "now_prefix": "сейчас:",
         "now_unknown": "сейчас: ?",
         "now_active": "сейчас активен",
@@ -240,11 +222,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "switch_failed": (
             "Не удалось переключить язык. Закройте Clip Studio Paint, "
             "подтвердите запрос администратора и попробуйте снова."
-        ),
-        "materials_missing_folder": (
-            "Часть папок материалов из пакета перевода "
-            "отсутствует в вашей установке CSP; остальное "
-            "переключено. Проверьте статус ещё раз."
         ),
         "err_csp_not_found": (
             "Clip Studio Paint не найден на этом компьютере. "
@@ -269,10 +246,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "err_permission_denied": (
             "Не удалось записать файлы в Program Files. Запустите "
             "от имени администратора или подтвердите запрос UAC."
-        ),
-        "err_materials_data": (
-            "Не удалось установить перевод материалов — "
-            "не найдены пользовательские данные CSP."
         ),
         "err_generic": (
             "Что-то пошло не так. Закройте CSP, попробуйте снова "
@@ -308,10 +281,6 @@ def t(language: str, key: str, **kwargs: str) -> str:
     return text
 
 
-def pipeline_label(language: str, pipeline: str) -> str:
-    return t(language, f"pipeline_{pipeline}")
-
-
 def localize_error(gui_lang: str, message: str) -> str:
     """Turn a technical sys.exit message into a user-facing GUI string."""
     from version import ACTIVE_VERSION
@@ -332,10 +301,6 @@ def localize_error(gui_lang: str, message: str) -> str:
         return t(lang, "err_admin_denied")
     if "this build targets clip studio paint" in low:
         return t(lang, "err_version_mismatch", version=ACTIVE_VERSION)
-    if "target folder missing" in low:
-        return t(lang, "materials_missing_folder")
-    if "nothing was installed" in low and "material" in low:
-        return t(lang, "err_materials_data")
     if "csp user data not found" in low or "%appdata% is not set" in low:
         return t(lang, "err_csp_userdata")
     if "english' subfolder" in low or "not a csp resource directory" in low:

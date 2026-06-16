@@ -1,6 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
 """
-PyInstaller spec for a local test build with all five subsystem checkboxes.
+PyInstaller spec for a separately-named local test build.
+
+Identical to csp-lang-switch.spec except for the output name, so a dev build
+can sit next to a release build without overwriting it.
 
 Build:    pyinstaller csp-lang-switch-dev.spec
 Outputs:  dist/csp-lang-switch-dev.exe
@@ -36,13 +39,10 @@ a = Analysis(
     ['src/lang.py'],
     pathex=['src'],
     binaries=_ctk_binaries,
-    datas=_ctk_datas + [('dev/full_gui.marker', '.')],
+    datas=_ctk_datas,
     hiddenimports=[
         'install',
         'plugins',
-        'tools',
-        'materials',
-        'colorsets',
         'gui_i18n',
         'gui_picker',
         'version',
@@ -64,7 +64,7 @@ a = Analysis(
 
 if LANGS.is_dir():
     english = LANGS / "english"
-    for sub in ("ui", "plugins", "tools", "materials", "colorsets"):
+    for sub in ("ui", "plugins"):
         folder = english / sub
         if folder.is_dir() and any(folder.rglob("*")):
             a.datas += Tree(str(folder), prefix=f"langs/english/{sub}")
@@ -72,7 +72,7 @@ if LANGS.is_dir():
     for lang_dir in sorted(LANGS.iterdir()):
         if not lang_dir.is_dir() or lang_dir.name in OFFICIAL_LANGS:
             continue
-        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins", "tools", "materials", "colorsets")):
+        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins")):
             a.datas += Tree(str(lang_dir), prefix=f"langs/{lang_dir.name}")
 
 

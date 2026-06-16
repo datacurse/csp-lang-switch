@@ -171,7 +171,7 @@ by hand.
 from CSP's own neighbouring translations — block 6 also holds full colon-path
 rows (`Color pattern:Background:Nature`) whose `text` halves *were* translated,
 so every path segment's Russian is already pinned: it is propagation, not fresh
-translation. [`src/_patch_material_tree.py`](../src/_patch_material_tree.py)
+translation. [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py)
 does exactly this for block 6 — it appends the 90 rows to the `7F9F9530`
 worksheet and is **idempotent**. Re-run it after any `batch.py export --force`
 of `7F9F9530`: a re-export regenerates the worksheet from the oracle and drops

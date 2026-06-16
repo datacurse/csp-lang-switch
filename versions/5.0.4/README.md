@@ -11,7 +11,7 @@ Layout matches the old flat `langs/` tree:
 
 ```
 langs/
-  english/    stock English UI (+ plugins/tools/materials if captured)
+  english/    stock English UI (+ plugins if captured)
   japanese/   translation oracle (ui/)
   russian/    patched Russian community build
 ```

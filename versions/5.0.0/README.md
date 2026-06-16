@@ -5,7 +5,7 @@ Populated by `scripts/capture_stock.py` from a local English CSP install.
 
 ```
 langs/
-  english/    stock English (ui, plugins, tools, materials)
+  english/    stock English (ui, plugins)
   japanese/   translation oracle (ui/)
   russian/    patched Russian community build (after pack)
 ```

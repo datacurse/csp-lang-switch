@@ -84,7 +84,7 @@ sync. CSP ships block 6 English in **every** language, so the Japanese oracle
 could not see its single-word `key` records as translatable — 90 folder names
 stayed English while the multi-word ones translated. They were patched in by
 hand from CSP's own colon-path translations; see VERIFIED_METHOD.md → "The
-oracle's blind spot" and [`src/_patch_material_tree.py`](../src/_patch_material_tree.py).
+oracle's blind spot" and [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py).
 The `907` oracle count above therefore excludes those 90 rows (worksheet: 997).
 
 ## Non-targets — do not translate

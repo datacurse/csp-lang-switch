@@ -72,8 +72,7 @@ from version import LANGS_ROOT, ROOT
 # Project paths
 # ----------------------------------------------------------------------
 # One folder per language, each a complete tree: langs/<lang>/ui/ (main UI
-# resource files) plus optional plugins/ tools/ materials/ for languages we
-# patch ourselves.
+# resource files) plus optional plugins/ for languages we patch ourselves.
 LANGS_DIR = LANGS_ROOT
 
 # A resource file is GUID-named with no extension. Matching on this tells a

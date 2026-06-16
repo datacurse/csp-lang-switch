@@ -2,7 +2,7 @@
 """
 common.py
 =========
-Cross-pipeline helpers shared by install/plugins/tools/materials.
+Cross-pipeline helpers shared by install/plugins.
 
 These live here rather than in install.py (their original home) so any
 pipeline can use them without going through install as a side-door.

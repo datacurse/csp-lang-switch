@@ -17,7 +17,7 @@ env/
 
 # Per-language data trees — copyrighted CSP data + regenerable patched copies.
 # Kept on disk, never committed. Layout under versions/<csp-version>/langs/:
-#   english/    — stock CSP snapshot (ui, plugins, tools, materials)
+#   english/    — stock CSP snapshot (ui, plugins)
 #   japanese/   — translation oracle (ui/)
 #   russian/    — patched community build
 versions/*/langs/

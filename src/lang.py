@@ -5,8 +5,8 @@ lang.py
 Top-level language-pack switcher for a Clip Studio Paint install.
 
 Community translations (Russian today; Ukrainian, Kazakh, etc. later) are
-installed into CSP's English slot and into the global plug-in/tool/material
-locations. Official CSP languages are not patched; selecting one restores the
+installed into CSP's English slot and into the global plug-in location.
+Official CSP languages are not patched; selecting one restores the
 community changes and tells the user which CSP language to choose manually.
 
 Examples:
@@ -112,18 +112,12 @@ def _backup_dir(name: str) -> Path:
 
 
 PLUGINS_BACKUP = _backup_dir("plugins")
-TOOLS_BACKUP = _backup_dir("tools")
-MATERIALS_BACKUP = _backup_dir("materials")
-COLORSETS_BACKUP = _backup_dir("colorsets")
 
 if not FROZEN:
     # In source mode, stock snapshots live under the active version tree.
     PLUGINS_BACKUP = LANGS_ROOT / "english" / "plugins"
-    TOOLS_BACKUP = LANGS_ROOT / "english" / "tools"
-    MATERIALS_BACKUP = LANGS_ROOT / "english" / "materials"
-    COLORSETS_BACKUP = LANGS_ROOT / "english" / "colorsets"
 
-PIPELINES = ("main-ui", "plugins", "tools", "materials", "colorsets")
+PIPELINES = ("main-ui", "plugins")
 ORIGINAL = "original"
 UNKNOWN = "unknown"
 WARNINGS: list[str] = []
@@ -256,9 +250,6 @@ def discover_official_languages(csp: str | None) -> dict[str, LanguageChoice]:
 PIPELINES_SUBDIRS = {
     "main-ui": "ui",
     "plugins": "plugins",
-    "tools": "tools",
-    "materials": "materials",
-    "colorsets": "colorsets",
 }
 
 
@@ -343,24 +334,9 @@ def choice_by_target(target: str, csp: str | None) -> LanguageChoice | None:
 # ----------------------------------------------------------------------
 # Lazy module loaders
 # ----------------------------------------------------------------------
-def _tools_module():
-    import tools
-    return tools
-
-
-def _materials_module():
-    import materials
-    return materials
-
-
 def _plugins_module():
     import plugins
     return plugins
-
-
-def _colorsets_module():
-    import colorsets
-    return colorsets
 
 
 # ----------------------------------------------------------------------
@@ -379,12 +355,6 @@ def _configure_pipelines() -> None:
     if FROZEN:
         p = _plugins_module()
         p.PLUGINS_DIR = PLUGINS_BACKUP
-        t = _tools_module()
-        t.TOOLS_DIR = TOOLS_BACKUP
-        m = _materials_module()
-        m.MATERIALS_DIR = MATERIALS_BACKUP
-        c = _colorsets_module()
-        c.COLORSETS_DIR = COLORSETS_BACKUP
         _seed_bundled_backups()
     _pipelines_configured = True
 
@@ -427,9 +397,6 @@ def _seed_bundled_backups() -> None:
         return
     jobs = (
         ("plugins", PLUGINS_BACKUP, ("*.dll",)),
-        ("tools", TOOLS_BACKUP, ("**/*",)),
-        ("materials", MATERIALS_BACKUP, ("**/*",)),
-        ("colorsets", COLORSETS_BACKUP, ("**/*",)),
     )
     for sub, dst, _patterns in jobs:
         src = BUNDLED_ENGLISH / sub
@@ -447,9 +414,6 @@ def _set_build_dir(pipeline: str, pack: str) -> None:
     root = community_subdir(pack, PIPELINES_SUBDIRS[pipeline])
     modules = {
         "plugins": _plugins_module,
-        "tools": _tools_module,
-        "materials": _materials_module,
-        "colorsets": _colorsets_module,
     }
     loader = modules.get(pipeline)
     if loader is None:
@@ -549,47 +513,6 @@ def plugin_install_dir(csp: str | None) -> Path:
     return res.parent / "PlugIn" / "PAINT"
 
 
-def tool_install_files(csp: str | None) -> list[Path]:
-    try:
-        t = _tools_module()
-        out: list[Path] = []
-        for tag, root in t.roots(csp).items():
-            for abspath, _rel in t.discover(root, tag):
-                out.append(abspath)
-        return out
-    except SystemExit:
-        return []
-
-
-def colorset_install_files(csp: str | None) -> list[Path]:
-    try:
-        c = _colorsets_module()
-        out: list[Path] = []
-        for tag, root in c.roots(csp).items():
-            for abspath, _rel in c.discover(root, tag):
-                out.append(abspath)
-        return out
-    except SystemExit:
-        return []
-
-
-def material_install_files() -> list[Path]:
-    try:
-        m = _materials_module()
-        out: list[Path] = []
-        cat = m.catalog_db()
-        if cat.is_file():
-            out.append(cat)
-        for pack in m.live_packs():
-            for fname in m.PACK_FILES:
-                p = pack / fname
-                if p.is_file():
-                    out.append(p)
-        return out
-    except SystemExit:
-        return []
-
-
 # ----------------------------------------------------------------------
 # Pipeline plumbing
 # ----------------------------------------------------------------------
@@ -613,54 +536,6 @@ def _files_equal(slot_dir: Path, ref_dir: Path,
         if _hash_file(a) != _hash_file(b):
             return False
     return True
-
-
-def _compare_discovered_files(csp, ref_root, discover_fn, roots_fn, *,
-                              tags: tuple[str, ...] | None = None) -> bool | None:
-    """Byte-compare live files under *roots_fn* to *ref_root*; None if none found."""
-    saw_any = False
-    for tag, root in roots_fn(csp).items():
-        if tags is not None and tag not in tags:
-            continue
-        for abspath, rel in discover_fn(root, tag):
-            saw_any = True
-            rf = ref_root / tag / rel
-            if not rf.is_file():
-                return False
-            if abspath.stat().st_size != rf.stat().st_size:
-                return False
-            if _hash_file(abspath) != _hash_file(rf):
-                return False
-    return True if saw_any else None
-
-
-def _tools_live_cyrillic(csp) -> bool | None:
-    """True if any live tool name is Cyrillic; False if English-only; None if no DBs."""
-    t = _tools_module()
-    saw_any = False
-    for tag, root in t.roots(csp).items():
-        for abspath, _rel in t.discover(root, tag):
-            saw_any = True
-            if any(t.has_cyrillic(n) for n in t.node_names(abspath).values()):
-                return True
-    return False if saw_any else None
-
-
-def _colorsets_live_cyrillic(csp) -> bool | None:
-    """True if any live color-set name is Cyrillic; False if not; None if none found."""
-    c = _colorsets_module()
-    saw_any = False
-    for tag, root in c.roots(csp).items():
-        for abspath, _rel in c.discover(root, tag):
-            saw_any = True
-            if c.is_cls(abspath):
-                name = c.read_cls_name(abspath.read_bytes())
-                if name and c.has_cyrillic(name):
-                    return True
-            elif c.is_pcs(abspath):
-                if any(c.has_cyrillic(n) for n in c.pcs_names(abspath)):
-                    return True
-    return False if saw_any else None
 
 
 class Pipeline:
@@ -786,196 +661,10 @@ class PluginsPipeline(Pipeline):
         p.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
 
 
-class ToolsPipeline(Pipeline):
-    subdir = "tools"
-
-    def install_fingerprint(self, csp):
-        return fingerprint_files(tool_install_files(csp))
-
-    def is_state(self, csp, state):
-        try:
-            t = _tools_module()
-            ref_root = TOOLS_BACKUP if state == ORIGINAL else self.community_ref(state)
-            if not ref_root.is_dir():
-                return None
-            exact = _compare_discovered_files(csp, ref_root, t.discover, t.roots)
-            if exact is True:
-                return True
-            if exact is None:
-                return None
-            # User profile DBs change size after normal CSP use; fall back to
-            # install seed + whether display names look translated (Cyrillic).
-            if state == ORIGINAL:
-                seed = _compare_discovered_files(
-                    csp, ref_root, t.discover, t.roots, tags=(t.SEED,))
-                if seed is True and _tools_live_cyrillic(csp) is False:
-                    return True
-                return False
-            if _tools_live_cyrillic(csp) is True:
-                return True
-            return False
-        except SystemExit:
-            return None
-
-    def switch_to(self, choice, csp, dry_run):
-        t = _tools_module()
-        if choice.kind == "community" and self.has_community_ref(choice.id):
-            self._ensure_backup(dry_run, csp)
-            _set_build_dir(self.name, choice.id)
-            t.cmd_install(_pipe_args(csp=csp, dry_run=dry_run))
-        else:
-            self._restore_if_possible(t, csp, dry_run)
-
-    def _ensure_backup(self, dry_run, csp):
-        t = _tools_module()
-        if t.TOOLS_DIR.is_dir() and any(p.is_file() for p in t.TOOLS_DIR.rglob("*")):
-            return
-        if dry_run:
-            print(f"\n[dry-run] would snapshot tool DBs to {t.TOOLS_DIR}")
-            return
-        print(f"\n(no tool-DB backup at {t.TOOLS_DIR} -- snapshotting first)")
-        t.cmd_backup(_pipe_args(csp=csp, dry_run=dry_run))
-
-    def _restore_if_possible(self, t, csp, dry_run):
-        if not (t.TOOLS_DIR.is_dir() and any(p.is_file() for p in t.TOOLS_DIR.rglob("*"))):
-            add_warning("\nWARNING: no tool-DB backup found; tool palette was not restored.")
-            return
-        t.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
-
-
-class MaterialsPipeline(Pipeline):
-    subdir = "materials"
-
-    def install_fingerprint(self, csp):
-        return fingerprint_files(material_install_files())
-
-    def is_state(self, csp, state):
-        try:
-            m = _materials_module()
-            ref_root = MATERIALS_BACKUP if state == ORIGINAL else self.community_ref(state)
-            if not ref_root.is_dir():
-                return None
-            md = m.material_dir()
-            packs = m.live_packs()
-            if not packs:
-                return None
-            for pack in packs:
-                rel_pack = pack.relative_to(md)
-                for fname in m.PACK_FILES:
-                    sf = pack / fname
-                    if not sf.is_file():
-                        continue
-                    rf = ref_root / m.CATALOG / rel_pack / fname
-                    if not rf.is_file():
-                        return False
-                    if sf.stat().st_size != rf.stat().st_size:
-                        return False
-                    if _hash_file(sf) != _hash_file(rf):
-                        return False
-            return True
-        except (SystemExit, ValueError):
-            return None
-
-    def switch_to(self, choice, csp, dry_run):
-        m = _materials_module()
-        if choice.kind == "community" and self.has_community_ref(choice.id):
-            self._ensure_backup(dry_run)
-            _set_build_dir(self.name, choice.id)
-            m.cmd_install(_pipe_args(dry_run=dry_run))
-        else:
-            self._restore_if_possible(m, dry_run)
-
-    def _ensure_backup(self, dry_run):
-        m = _materials_module()
-        if m.MATERIALS_DIR.is_dir() and any(
-                p.is_file() for p in m.MATERIALS_DIR.rglob("*")):
-            return
-        if dry_run:
-            print(f"\n[dry-run] would snapshot materials to {m.MATERIALS_DIR}")
-            return
-        print(f"\n(no material backup at {m.MATERIALS_DIR} -- snapshotting first)")
-        m.cmd_backup(_pipe_args(dry_run=dry_run))
-
-    def _restore_if_possible(self, m, dry_run):
-        if not (m.MATERIALS_DIR.is_dir() and any(
-                p.is_file() for p in m.MATERIALS_DIR.rglob("*"))):
-            add_warning("\nWARNING: no material backup found; materials were not restored.")
-            return
-        m.cmd_restore(_pipe_args(dry_run=dry_run))
-
-
-class ColorSetsPipeline(Pipeline):
-    subdir = "colorsets"
-
-    def install_fingerprint(self, csp):
-        return fingerprint_files(colorset_install_files(csp))
-
-    def is_state(self, csp, state):
-        try:
-            c = _colorsets_module()
-            ref_root = COLORSETS_BACKUP if state == ORIGINAL else self.community_ref(state)
-            if not ref_root.is_dir():
-                return None
-            exact = _compare_discovered_files(csp, ref_root, c.discover, c.roots)
-            if exact is True:
-                return True
-            if exact is None:
-                return None
-            if state == ORIGINAL:
-                seed = _compare_discovered_files(
-                    csp, ref_root, c.discover, c.roots, tags=(c.SEED,))
-                if seed is True and _colorsets_live_cyrillic(csp) is False:
-                    return True
-                return False
-            if _colorsets_live_cyrillic(csp) is True:
-                return True
-            return False
-        except SystemExit:
-            return None
-
-    def switch_to(self, choice, csp, dry_run):
-        c = _colorsets_module()
-        if choice.kind == "community" and self.has_community_ref(choice.id):
-            self._ensure_backup(dry_run, csp)
-            _set_build_dir(self.name, choice.id)
-            c.cmd_install(_pipe_args(csp=csp, dry_run=dry_run))
-        else:
-            self._restore_if_possible(c, csp, dry_run)
-
-    def _ensure_backup(self, dry_run, csp):
-        c = _colorsets_module()
-        if c.COLORSETS_DIR.is_dir() and any(
-                p.is_file() for p in c.COLORSETS_DIR.rglob("*")):
-            return
-        if dry_run:
-            print(f"\n[dry-run] would snapshot color sets to {c.COLORSETS_DIR}")
-            return
-        print(f"\n(no color-set backup at {c.COLORSETS_DIR} -- snapshotting first)")
-        c.cmd_backup(_pipe_args(csp=csp, dry_run=dry_run))
-
-    def _restore_if_possible(self, c, csp, dry_run):
-        if not (c.COLORSETS_DIR.is_dir() and any(
-                p.is_file() for p in c.COLORSETS_DIR.rglob("*"))):
-            add_warning("\nWARNING: no color-set backup found; color sets were not restored.")
-            return
-        # Restoring patches the live .pcs names back to English. Without a
-        # bundled worksheet, that map is derived from a community build, so
-        # point BUILD_DIR at an available pack first.
-        if not c.WORKSHEET.is_file():
-            for pack in discover_community_packs():
-                if self.has_community_ref(pack):
-                    _set_build_dir(self.name, pack)
-                    break
-        c.cmd_restore(_pipe_args(csp=csp, dry_run=dry_run))
-
-
 def all_pipelines() -> dict[str, Pipeline]:
     return {
         "main-ui": MainUIPipeline("main-ui"),
         "plugins": PluginsPipeline("plugins"),
-        "tools": ToolsPipeline("tools"),
-        "materials": MaterialsPipeline("materials"),
-        "colorsets": ColorSetsPipeline("colorsets"),
     }
 
 
@@ -1082,13 +771,7 @@ def summary_for_gui(statuses: dict[str, str], gui_lang: str) -> str:
 # ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
-_LABELS = {"main-ui": "main UI", "plugins": "plug-ins",
-           "tools": "tool palette", "materials": "materials",
-           "colorsets": "color sets"}
-
-_GUI_LABELS = {"main-ui": "Main UI", "plugins": "Plug-ins",
-               "tools": "Tool palette", "materials": "Materials",
-               "colorsets": "Color sets"}
+_LABELS = {"main-ui": "main UI", "plugins": "plug-ins"}
 
 
 def _print_status(args) -> dict[str, str]:

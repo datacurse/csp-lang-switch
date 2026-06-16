@@ -5,8 +5,8 @@ PyInstaller spec for the end-user csp-lang-switch.exe.
 Builds a single-file Windows executable that bundles:
 
   * `src/lang.py` as the entrypoint
-  * the five pipeline modules (install / plugins / tools / materials / colorsets)
-  * `versions/<active>/langs/english/` stock (ui + plugins + tools + materials + colorsets)
+  * the install + plugins pipeline modules
+  * `versions/<active>/langs/english/` stock (ui + plugins)
   * every community pack under the active version tree
 
 Bundled paths use the `langs/` prefix at runtime (sys._MEIPASS/langs/...).
@@ -49,9 +49,6 @@ a = Analysis(
     hiddenimports=[
         'install',
         'plugins',
-        'tools',
-        'materials',
-        'colorsets',
         'gui_i18n',
         'gui_picker',
         'version',
@@ -73,7 +70,7 @@ a = Analysis(
 
 if LANGS.is_dir():
     english = LANGS / "english"
-    for sub in ("ui", "plugins", "tools", "materials", "colorsets"):
+    for sub in ("ui", "plugins"):
         folder = english / sub
         if folder.is_dir() and any(folder.rglob("*")):
             a.datas += Tree(str(folder), prefix=f"langs/english/{sub}")
@@ -81,7 +78,7 @@ if LANGS.is_dir():
     for lang_dir in sorted(LANGS.iterdir()):
         if not lang_dir.is_dir() or lang_dir.name in OFFICIAL_LANGS:
             continue
-        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins", "tools", "materials", "colorsets")):
+        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins")):
             a.datas += Tree(str(lang_dir), prefix=f"langs/{lang_dir.name}")
 
 

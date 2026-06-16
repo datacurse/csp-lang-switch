@@ -195,7 +195,7 @@ own CSV scripts:
   language.** There `en == ja`, so a non-prose record gets no signal and is
   dropped — even though it is live UI text. Found so far: `7F9F9530` block 6
   (the Material-palette folder tree), fixed by
-  [`src/_patch_material_tree.py`](../src/_patch_material_tree.py). No heuristic
+  [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py). No heuristic
   catches these; find them by eyeballing the running UI. Full account:
   VERIFIED_METHOD.md → "The oracle's blind spot".
 * The patched binary is **per-version and disposable**. Tooling + manifest +
