@@ -1,0 +1,23 @@
+---
+description: Consistent vN commit message prefix for every commit
+alwaysApply: true
+---
+
+# Commit message version tags
+
+Every commit on `main` must start with a sequential version tag: `vN: short description`.
+
+Rules:
+- Use the next integer after the latest commit on `main` (check with `git log -1 --oneline`)
+- Format: `v41: what changed` — lowercase after the colon, no duplicate version numbers
+- Never reuse or skip numbers; never commit without a `vN:` prefix
+- Release-note-only commits follow the same rule (e.g. `v42: update release notes for …`)
+
+Examples:
+- `v42: default GUI to Russian and hide secondary subsystems`
+- `v43: updated readme`
+
+Bad:
+- `updated readme` (missing prefix)
+- `v0: update release notes` when latest is v35 (wrong number)
+- `v39: …` when v39 already exists (duplicate)
