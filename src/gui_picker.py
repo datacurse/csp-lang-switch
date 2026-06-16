@@ -24,6 +24,8 @@ _STATUS_OK = ("#2d6a4f", "#52b788")
 _STATUS_ERR = ("#9b2226", "#e5383b")
 # Official CSP languages the switcher can apply (others are shown but disabled).
 _OFFICIAL_SELECTABLE = frozenset({"english"})
+# Subsystems shown in the picker (tools/materials/colorsets hidden for now).
+_GUI_PIPELINES = ("main-ui", "plugins")
 
 
 def _canvas_bg() -> str:
@@ -84,7 +86,6 @@ def _fit_window(root: ctk.CTk, main: ctk.CTkFrame, footer: ctk.CTkFrame) -> None
 def run_picker(args: Namespace, settings_file: Path) -> None:
     import lang
     from lang import (
-        PIPELINES,
         UNKNOWN,
         WARNINGS,
         LanguageChoice,
@@ -175,7 +176,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     subsystems_grid.pack(fill="x", padx=8, pady=(0, 6))
     subsystems_grid.columnconfigure(1, weight=1)
 
-    for i, name in enumerate(PIPELINES):
+    for i, name in enumerate(_GUI_PIPELINES):
         pipeline_vars[name] = BooleanVar(value=True)
         ctk.CTkCheckBox(
             subsystems_grid, text="", variable=pipeline_vars[name], width=20,
@@ -223,7 +224,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         community_title.configure(text=i18n.t(gui_lang, "community_box"))
         official_title.configure(text=i18n.t(gui_lang, "official_box"))
         subsystems_title.configure(text=i18n.t(gui_lang, "subsystems_box"))
-        for name in PIPELINES:
+        for name in _GUI_PIPELINES:
             pipeline_name_labels[name].configure(
                 text=i18n.pipeline_label(gui_lang, name))
         apply_btn.configure(text=i18n.t(gui_lang, "btn_apply"))
@@ -328,7 +329,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         try:
             statuses = classify_all(args)
             prefix = i18n.t(gui_lang, "now_prefix")
-            for name in PIPELINES:
+            for name in _GUI_PIPELINES:
                 label = pipeline_status_labels[name]
                 if not label.winfo_exists():
                     continue
@@ -338,10 +339,11 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             if final_message is not None:
                 _set_status(final_message, kind=final_kind)
             else:
-                _set_status(summary_for_gui(statuses, gui_lang))
+                visible = {n: statuses[n] for n in _GUI_PIPELINES if n in statuses}
+                _set_status(summary_for_gui(visible, gui_lang))
         except SystemExit as e:
             _set_status(i18n.localize_error(gui_lang, str(e)), kind="err")
-            for name in PIPELINES:
+            for name in _GUI_PIPELINES:
                 label = pipeline_status_labels[name]
                 if label.winfo_exists():
                     label.configure(text=i18n.t(gui_lang, "now_unknown"))
@@ -371,7 +373,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         if not choice:
             _set_status(i18n.t(gui_lang, "err_no_language"), kind="err")
             return
-        enabled = {name for name in PIPELINES if pipeline_vars[name].get()}
+        enabled = {name for name in _GUI_PIPELINES if pipeline_vars[name].get()}
         if not enabled:
             _set_status(i18n.t(gui_lang, "err_nothing"), kind="err")
             return

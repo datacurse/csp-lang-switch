@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 SUPPORTED = ("en", "ru")
-DEFAULT = "en"
+DEFAULT = "ru"
 
 NATIVE_LABELS = {"en": "English", "ru": "Русский"}
 
