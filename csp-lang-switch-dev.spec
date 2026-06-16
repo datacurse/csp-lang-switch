@@ -1,0 +1,103 @@
+# -*- mode: python ; coding: utf-8 -*-
+"""
+PyInstaller spec for a local test build with all five subsystem checkboxes.
+
+Build:    pyinstaller csp-lang-switch-dev.spec
+Outputs:  dist/csp-lang-switch-dev.exe
+"""
+
+from pathlib import Path
+
+from PyInstaller.utils.hooks import collect_all
+
+block_cipher = None
+
+_ctk_datas, _ctk_binaries, _ctk_hidden = collect_all("customtkinter")
+
+ACTIVE_VERSION = "5.0.0"
+LANGS = Path("versions") / ACTIVE_VERSION / "langs"
+
+OFFICIAL_LANGS = {
+    "japanese",
+    "english",
+    "korean",
+    "chinese_t",
+    "french",
+    "spanish",
+    "german",
+    "thai",
+    "indonesian",
+    "portuguese_b",
+    "chinese_s",
+}
+
+
+a = Analysis(
+    ['src/lang.py'],
+    pathex=['src'],
+    binaries=_ctk_binaries,
+    datas=_ctk_datas + [('dev/full_gui.marker', '.')],
+    hiddenimports=[
+        'install',
+        'plugins',
+        'tools',
+        'materials',
+        'colorsets',
+        'gui_i18n',
+        'gui_picker',
+        'version',
+        'pefile',
+        'customtkinter',
+        'tkinter',
+        'tkinter.messagebox',
+        *_ctk_hidden,
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+if LANGS.is_dir():
+    english = LANGS / "english"
+    for sub in ("ui", "plugins", "tools", "materials", "colorsets"):
+        folder = english / sub
+        if folder.is_dir() and any(folder.rglob("*")):
+            a.datas += Tree(str(folder), prefix=f"langs/english/{sub}")
+
+    for lang_dir in sorted(LANGS.iterdir()):
+        if not lang_dir.is_dir() or lang_dir.name in OFFICIAL_LANGS:
+            continue
+        if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins", "tools", "materials", "colorsets")):
+            a.datas += Tree(str(lang_dir), prefix=f"langs/{lang_dir.name}")
+
+
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    [],
+    name='csp-lang-switch-dev',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=False,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    uac_admin=False,
+    icon=None,
+)
