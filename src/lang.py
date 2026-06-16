@@ -201,7 +201,7 @@ def choice_display(choice: LanguageChoice, gui_lang: str | None = None) -> str:
         return choice.display
     if choice.autonym.casefold() == loc.casefold():
         return choice.autonym
-    return f"{choice.autonym} ({loc})"
+    return loc
 
 
 def _has_files(folder: Path) -> bool:

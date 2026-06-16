@@ -124,8 +124,10 @@ _STRINGS: dict[str, dict[str, str]] = {
         "window_title": "Clip Studio Paint Language Switcher",
         "gui_language": "Interface language:",
         "choose_language": "Choose a language",
-        "choose_blurb": ("Community packs use CSP's English slot. Official languages "
-                         "are also copied into that slot, so no CSP reinstall is needed."),
+        "choose_blurb": (
+            "Community packs use CSP's English slot. Official languages "
+            "are also copied into that slot, so no CSP reinstall is needed."
+        ),
         "community_box": "Community translations",
         "official_box": "Official CSP languages",
         "subsystems_box": "What to switch",
@@ -136,6 +138,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "pipeline_colorsets": "Color sets",
         "now_prefix": "now:",
         "now_unknown": "now: ?",
+        "now_active": "active now",
         "checking_status": "Checking current state…",
         "switching": "Switching language…",
         "no_community": "No community packs bundled.",
@@ -149,30 +152,44 @@ _STRINGS: dict[str, dict[str, str]] = {
         "err_nothing_title": "Nothing selected",
         "err_nothing": "Check at least one subsystem to switch.",
         "failed_title": "Switch failed",
-        "switch_failed": ("Could not complete the switch. Close Clip Studio Paint, "
-                          "accept the administrator prompt if shown, and try again."),
-        "materials_missing_folder": ("Some material folders from the translation pack "
-                                     "are not in your CSP install; other parts still "
-                                     "switched. Try again or re-check status."),
-        "err_csp_not_found": ("Clip Studio Paint was not found on this computer. "
-                              "Install CSP or check that it is installed in the "
-                              "default location."),
+        "switch_failed": (
+            "Could not complete the switch. Close Clip Studio Paint, "
+            "accept the administrator prompt if shown, and try again."
+        ),
+        "materials_missing_folder": (
+            "Some material folders from the translation pack "
+            "are not in your CSP install; other parts still "
+            "switched. Try again or re-check status."
+        ),
+        "err_csp_not_found": (
+            "Clip Studio Paint was not found on this computer. "
+            "Install CSP or check that it is installed in the "
+            "default location."
+        ),
         "err_csp_running": "Close Clip Studio Paint before switching languages.",
-        "err_csp_userdata": ("Could not find CSP user data. Launch Clip Studio Paint "
-                             "at least once, then try again."),
+        "err_csp_userdata": (
+            "Could not find CSP user data. Launch Clip Studio Paint "
+            "at least once, then try again."
+        ),
         "err_csp_resource_path": "The selected folder is not a valid CSP resource directory.",
-        "err_admin_denied": ("Administrator permission was not granted. Accept the "
-                             "UAC prompt and try again."),
-        "err_version_mismatch": ("This language pack is for Clip Studio Paint {version}, "
-                                 "but your installed CSP version does not match."),
+        "err_admin_denied": (
+            "Administrator permission was not granted. Accept the "
+            "UAC prompt and try again."
+        ),
+        "err_version_mismatch": (
+            "This language pack is for Clip Studio Paint {version}, "
+            "but your installed CSP version does not match."
+        ),
         "err_unknown_language": "Unknown language selected.",
-        "err_permission_denied": ("Could not write to Program Files. Run as "
-                                  "administrator or accept the UAC prompt."),
+        "err_permission_denied": (
+            "Could not write to Program Files. Run as "
+            "administrator or accept the UAC prompt."
+        ),
         "err_materials_data": "Could not install material translations — CSP user data not found.",
         "err_generic": "Something went wrong. Close CSP, try again, or re-check status.",
         "warnings_title": "Finished with warnings",
         "done_title": "Done",
-        "restart_csp": "Restart CSP to see {display}.",
+        "restart_csp": "Restart Clip Studio Paint.",
         "state_stock": "English (stock)",
         "state_unknown": "Unknown",
         "state_official": "{label} (official)",
@@ -180,8 +197,10 @@ _STRINGS: dict[str, dict[str, str]] = {
         "summary_all_unknown": "Current install does not match a known pack.",
         "summary_official_ui": "Official UI active through the English slot: {display}.",
         "summary_community": "Community pack active: {display}.",
-        "summary_official_mixed": ("Official UI active through the English slot: {display}; "
-                                   "global data is stock."),
+        "summary_official_mixed": (
+            "Official UI active through the English slot: {display}; "
+            "global data is stock."
+        ),
         "summary_mixed": "Subsystems are mixed; switch again to make them consistent.",
         "summary_mixed_unknown": "Subsystems are in a mix of original and unknown states.",
     },
@@ -189,9 +208,11 @@ _STRINGS: dict[str, dict[str, str]] = {
         "window_title": "Переключатель языка Clip Studio Paint",
         "gui_language": "Язык интерфейса:",
         "choose_language": "Выберите язык",
-        "choose_blurb": ("Сообщественные переводы ставятся в английский слот CSP. "
-                         "Официальные языки тоже копируются в этот слот — "
-                         "переустанавливать CSP не нужно."),
+        "choose_blurb": (
+            "Сообщественные переводы ставятся в английский слот CSP. "
+            "Официальные языки тоже копируются в этот слот — "
+            "переустанавливать CSP не нужно."
+        ),
         "community_box": "Сообщественные переводы",
         "official_box": "Официальные языки CSP",
         "subsystems_box": "Что переключить",
@@ -202,6 +223,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         "pipeline_colorsets": "Наборы цветов",
         "now_prefix": "сейчас:",
         "now_unknown": "сейчас: ?",
+        "now_active": "сейчас активен",
         "checking_status": "Проверка текущего состояния…",
         "switching": "Переключение языка…",
         "no_community": "Сообщественные пакеты не найдены.",
@@ -215,41 +237,61 @@ _STRINGS: dict[str, dict[str, str]] = {
         "err_nothing_title": "Ничего не выбрано",
         "err_nothing": "Отметьте хотя бы одну подсистему для переключения.",
         "failed_title": "Ошибка переключения",
-        "switch_failed": ("Не удалось переключить язык. Закройте Clip Studio Paint, "
-                          "подтвердите запрос администратора и попробуйте снова."),
-        "materials_missing_folder": ("Часть папок материалов из пакета перевода "
-                                       "отсутствует в вашей установке CSP; остальное "
-                                       "переключено. Проверьте статус ещё раз."),
-        "err_csp_not_found": ("Clip Studio Paint не найден на этом компьютере. "
-                              "Установите CSP или проверьте, что программа "
-                              "установлена в стандартную папку."),
+        "switch_failed": (
+            "Не удалось переключить язык. Закройте Clip Studio Paint, "
+            "подтвердите запрос администратора и попробуйте снова."
+        ),
+        "materials_missing_folder": (
+            "Часть папок материалов из пакета перевода "
+            "отсутствует в вашей установке CSP; остальное "
+            "переключено. Проверьте статус ещё раз."
+        ),
+        "err_csp_not_found": (
+            "Clip Studio Paint не найден на этом компьютере. "
+            "Установите CSP или проверьте, что программа "
+            "установлена в стандартную папку."
+        ),
         "err_csp_running": "Закройте Clip Studio Paint перед переключением языка.",
-        "err_csp_userdata": ("Не найдены пользовательские данные CSP. Запустите "
-                             "Clip Studio Paint хотя бы один раз и попробуйте снова."),
+        "err_csp_userdata": (
+            "Не найдены пользовательские данные CSP. Запустите "
+            "Clip Studio Paint хотя бы один раз и попробуйте снова."
+        ),
         "err_csp_resource_path": "Выбранная папка не является каталогом resource CSP.",
-        "err_admin_denied": ("Не получены права администратора. Подтвердите запрос UAC "
-                             "и попробуйте снова."),
-        "err_version_mismatch": ("Этот пакет перевода рассчитан на Clip Studio Paint "
-                                 "{version}, но установленная версия CSP не совпадает."),
+        "err_admin_denied": (
+            "Не получены права администратора. Подтвердите запрос UAC "
+            "и попробуйте снова."
+        ),
+        "err_version_mismatch": (
+            "Этот пакет перевода рассчитан на Clip Studio Paint "
+            "{version}, но установленная версия CSP не совпадает."
+        ),
         "err_unknown_language": "Выбран неизвестный язык.",
-        "err_permission_denied": ("Не удалось записать файлы в Program Files. Запустите "
-                                  "от имени администратора или подтвердите запрос UAC."),
-        "err_materials_data": ("Не удалось установить перевод материалов — "
-                               "не найдены пользовательские данные CSP."),
-        "err_generic": ("Что-то пошло не так. Закройте CSP, попробуйте снова "
-                        "или нажмите «Проверить снова»."),
+        "err_permission_denied": (
+            "Не удалось записать файлы в Program Files. Запустите "
+            "от имени администратора или подтвердите запрос UAC."
+        ),
+        "err_materials_data": (
+            "Не удалось установить перевод материалов — "
+            "не найдены пользовательские данные CSP."
+        ),
+        "err_generic": (
+            "Что-то пошло не так. Закройте CSP, попробуйте снова "
+            "или нажмите «Проверить снова»."
+        ),
         "warnings_title": "Готово с предупреждениями",
         "done_title": "Готово",
-        "restart_csp": "Перезапустите CSP, чтобы увидеть {display}.",
+        "restart_csp": "Перезапустите Clip Studio Paint.",
         "state_stock": "Английский (оригинал)",
         "state_unknown": "Неизвестно",
         "state_official": "{label} (официальный)",
         "summary_all_stock": "В английском слоте CSP установлены оригинальные английские файлы.",
         "summary_all_unknown": "Текущая установка не соответствует известному пакету.",
         "summary_official_ui": "Официальный интерфейс через английский слот: {display}.",
-        "summary_community": "Активен сообщественный пакет: {display}.",
-        "summary_official_mixed": ("Официальный интерфейс через английский слот: {display}; "
-                                   "глобальные данные — оригинал."),
+        "summary_community": "Активен пакет сообщества: {display}.",
+        "summary_official_mixed": (
+            "Официальный интерфейс через английский слот: {display}; "
+            "глобальные данные — оригинал."
+        ),
         "summary_mixed": "Подсистемы в разном состоянии; переключите снова для согласованности.",
         "summary_mixed_unknown": "Подсистемы смешаны: оригинал и неизвестное состояние.",
     },
