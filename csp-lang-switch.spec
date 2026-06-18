@@ -6,10 +6,10 @@ Builds a single-file Windows executable that bundles:
 
   * `src/lang.py` as the entrypoint
   * the install + plugins pipeline modules
-  * `versions/<active>/langs/english/` stock (ui + plugins)
-  * every community pack under the active version tree
+  * `versions/<ver>/langs/english/` stock (ui + plugins) per supported version
+  * every community pack under each supported version tree
 
-Bundled paths use the `langs/` prefix at runtime (sys._MEIPASS/langs/...).
+Bundled paths use the `langs/<version>/` prefix at runtime.
 
 Build:    pyinstaller csp-lang-switch.spec
 Outputs:  dist/csp-lang-switch.exe
@@ -23,8 +23,7 @@ block_cipher = None
 
 _ctk_datas, _ctk_binaries, _ctk_hidden = collect_all("customtkinter")
 
-ACTIVE_VERSION = "5.0.0"
-LANGS = Path("versions") / ACTIVE_VERSION / "langs"
+SUPPORTED_VERSIONS = ("5.0.0", "5.0.4")
 
 OFFICIAL_LANGS = {
     "japanese",
@@ -68,18 +67,21 @@ a = Analysis(
     noarchive=False,
 )
 
-if LANGS.is_dir():
-    english = LANGS / "english"
+for ver in SUPPORTED_VERSIONS:
+    langs = Path("versions") / ver / "langs"
+    if not langs.is_dir():
+        continue
+    english = langs / "english"
     for sub in ("ui", "plugins"):
         folder = english / sub
         if folder.is_dir() and any(folder.rglob("*")):
-            a.datas += Tree(str(folder), prefix=f"langs/english/{sub}")
+            a.datas += Tree(str(folder), prefix=f"langs/{ver}/english/{sub}")
 
-    for lang_dir in sorted(LANGS.iterdir()):
+    for lang_dir in sorted(langs.iterdir()):
         if not lang_dir.is_dir() or lang_dir.name in OFFICIAL_LANGS:
             continue
         if any((lang_dir / sub).is_dir() for sub in ("ui", "plugins")):
-            a.datas += Tree(str(lang_dir), prefix=f"langs/{lang_dir.name}")
+            a.datas += Tree(str(lang_dir), prefix=f"langs/{ver}/{lang_dir.name}")
 
 
 pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)

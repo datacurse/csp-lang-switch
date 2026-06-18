@@ -56,8 +56,10 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         discover_official_languages,
         is_official_state,
         official_id_from_state,
+        set_active_version,
         summary_for_gui,
     )
+    from version import SUPPORTED_VERSIONS
     from common import is_admin, run_elevated_sync
 
     gui_lang = _GUI_LANG
@@ -72,10 +74,38 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     root.grid_columnconfigure(0, weight=0)
 
     selected = StringVar(value="")
+    selected_version = StringVar(value=getattr(args, "csp_version", SUPPORTED_VERSIONS[0]))
     choice_map: dict[str, LanguageChoice] = {}
+
+    detected_version = getattr(args, "detected_csp_version", None)
+    raw_product_version = getattr(args, "raw_csp_product_version", None)
+    version_blocked = False
+    version_warning: str | None = None
 
     main = ctk.CTkFrame(root, fg_color="transparent")
     main.grid(row=0, column=0, sticky="nw", padx=12, pady=8)
+
+    version_label = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "choose_csp_version"),
+        font=ctk.CTkFont(size=14, weight="bold"))
+    version_label.pack(anchor="w", pady=(0, 4))
+
+    version_row = ctk.CTkFrame(main, fg_color="transparent")
+    version_row.pack(fill="x", pady=(0, 8))
+
+    version_combo = ctk.CTkComboBox(
+        version_row,
+        values=list(SUPPORTED_VERSIONS),
+        variable=selected_version,
+        width=120,
+        state="readonly",
+    )
+    version_combo.pack(side="left")
+
+    version_hint = ctk.CTkLabel(
+        version_row, text="",
+        font=ctk.CTkFont(size=12), text_color="gray50")
+    version_hint.pack(side="left", padx=(10, 0))
 
     choose_label = ctk.CTkLabel(
         main, text=i18n.t(gui_lang, "choose_language"),
@@ -108,6 +138,44 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         buttons, text=i18n.t(gui_lang, "btn_close"), fg_color="transparent",
         border_width=1, command=root.destroy)
     close_btn.pack(side="right", padx=(0, 8))
+
+    def _supported_list() -> str:
+        return ", ".join(SUPPORTED_VERSIONS)
+
+    def _installed_label() -> str:
+        if raw_product_version:
+            return raw_product_version
+        if detected_version:
+            return detected_version
+        return "?"
+
+    def _refresh_version_state() -> None:
+        nonlocal version_blocked, version_warning
+        version_blocked = False
+        version_warning = None
+
+        if detected_version:
+            version_hint.configure(
+                text=i18n.t(gui_lang, "csp_version_auto", version=detected_version))
+        else:
+            version_hint.configure(text="")
+
+        if raw_product_version and detected_version is None:
+            version_blocked = True
+            version_warning = i18n.t(
+                gui_lang, "err_csp_version_unsupported",
+                installed=raw_product_version,
+                supported=_supported_list(),
+            )
+        elif detected_version and selected_version.get() != detected_version:
+            version_blocked = True
+            version_warning = i18n.t(
+                gui_lang, "err_csp_version_mismatch",
+                selected=selected_version.get(),
+                installed=_installed_label(),
+            )
+
+        apply_btn.configure(state="disabled" if version_blocked else "normal")
 
     def _ordered_choices() -> list[LanguageChoice]:
         """Russian (community) first, then English (official). Nothing else."""
@@ -169,7 +237,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         nonlocal busy
         busy = on
         state = "disabled" if on else "normal"
-        apply_btn.configure(state=state)
+        if not version_blocked:
+            apply_btn.configure(state=state)
         refresh_btn.configure(state=state)
         close_btn.configure(state=state)
         if on:
@@ -195,8 +264,16 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             _build_language_list(_active_key(statuses))
             if final_message is not None:
                 _set_status(final_message, kind=final_kind)
+            elif version_warning:
+                _set_status(version_warning, kind="err")
             elif error is not None:
-                _set_status(i18n.localize_error(gui_lang, error), kind="err")
+                _set_status(
+                    i18n.localize_error(
+                        gui_lang, error,
+                        version=selected_version.get(),
+                    ),
+                    kind="err",
+                )
             else:
                 visible = {n: statuses[n] for n in _SWITCH_PIPELINES if n in statuses}
                 if visible:
@@ -205,7 +282,9 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             pass
 
     def _localize_error(msg: str) -> str:
-        return i18n.localize_error(gui_lang, msg)
+        return i18n.localize_error(
+            gui_lang, msg, version=selected_version.get(),
+        )
 
     def _finish_apply(error: str | None) -> None:
         _set_busy(False)
@@ -220,7 +299,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             refresh(restart, final_kind="ok")
 
     def apply_selected() -> None:
-        if busy:
+        if busy or version_blocked:
             return
         key = selected.get()
         choice = choice_map.get(key)
@@ -231,6 +310,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         switch_args = Namespace(
             target=choice.id,
             csp=args.csp,
+            csp_version=selected_version.get(),
             dry_run=False,
             force=getattr(args, "force", False),
             keep_open=False,
@@ -257,6 +337,25 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
         threading.Thread(target=work, daemon=True).start()
 
+    def on_version_change(_value: str) -> None:
+        ver = selected_version.get()
+        set_active_version(ver)
+        args.csp_version = ver
+        i18n.save_csp_version(settings_file, ver)
+        _refresh_version_state()
+        refresh()
+
+    version_combo.configure(command=on_version_change)
+
+    if detected_version:
+        selected_version.set(detected_version)
+        set_active_version(detected_version)
+        args.csp_version = detected_version
+    else:
+        set_active_version(selected_version.get())
+        args.csp_version = selected_version.get()
+
+    _refresh_version_state()
     refresh()
     _fit_window(root, main, buttons)
     root.deiconify()

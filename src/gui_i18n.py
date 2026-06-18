@@ -119,11 +119,46 @@ def save_gui_language(settings_path: Path, language: str) -> None:
     settings_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
+def load_csp_version(settings_path: Path) -> str | None:
+    if settings_path.is_file():
+        try:
+            data = json.loads(settings_path.read_text(encoding="utf-8"))
+            if isinstance(data, dict) and data.get("csp_version"):
+                return str(data["csp_version"])
+        except (OSError, json.JSONDecodeError):
+            pass
+    return None
+
+
+def save_csp_version(settings_path: Path, version: str) -> None:
+    data: dict = {}
+    if settings_path.is_file():
+        try:
+            raw = json.loads(settings_path.read_text(encoding="utf-8"))
+            if isinstance(raw, dict):
+                data = raw
+        except (OSError, json.JSONDecodeError):
+            pass
+    data["csp_version"] = version
+    settings_path.parent.mkdir(parents=True, exist_ok=True)
+    settings_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
 _STRINGS: dict[str, dict[str, str]] = {
     "en": {
         "window_title": "Clip Studio Paint Language Switcher",
         "gui_language": "Interface language:",
         "choose_language": "Choose a language",
+        "choose_csp_version": "Clip Studio Paint version",
+        "csp_version_auto": "detected: {version}",
+        "err_csp_version_unsupported": (
+            "Installed Clip Studio Paint ({installed}) is not supported. "
+            "Supported versions: {supported}."
+        ),
+        "err_csp_version_mismatch": (
+            "Selected version {selected} does not match the installed CSP "
+            "({installed}). Pick the detected version to apply Russian."
+        ),
         "choose_blurb": (
             "Community packs use CSP's English slot. Official languages "
             "are also copied into that slot, so no CSP reinstall is needed."
@@ -196,6 +231,16 @@ _STRINGS: dict[str, dict[str, str]] = {
         "window_title": "Переключатель языка Clip Studio Paint",
         "gui_language": "Язык интерфейса:",
         "choose_language": "Выберите язык",
+        "choose_csp_version": "Версия Clip Studio Paint",
+        "csp_version_auto": "обнаружена: {version}",
+        "err_csp_version_unsupported": (
+            "Установленная версия Clip Studio Paint ({installed}) не поддерживается. "
+            "Поддерживаются: {supported}."
+        ),
+        "err_csp_version_mismatch": (
+            "Выбрана версия {selected}, но установлена {installed}. "
+            "Выберите обнаруженную версию, чтобы применить русский перевод."
+        ),
         "choose_blurb": (
             "Сообщественные переводы ставятся в английский слот CSP. "
             "Официальные языки тоже копируются в этот слот — "
@@ -281,10 +326,8 @@ def t(language: str, key: str, **kwargs: str) -> str:
     return text
 
 
-def localize_error(gui_lang: str, message: str) -> str:
+def localize_error(gui_lang: str, message: str, *, version: str | None = None) -> str:
     """Turn a technical sys.exit message into a user-facing GUI string."""
-    from version import ACTIVE_VERSION
-
     lang = normalize_language(gui_lang)
     text = message.strip().removeprefix("error:").strip()
     if "subsystem '" in text and " failed:" in text:
@@ -300,7 +343,8 @@ def localize_error(gui_lang: str, message: str) -> str:
     if "administrator rights" in low or "uac prompt" in low:
         return t(lang, "err_admin_denied")
     if "this build targets clip studio paint" in low:
-        return t(lang, "err_version_mismatch", version=ACTIVE_VERSION)
+        ver = version or "?"
+        return t(lang, "err_version_mismatch", version=ver)
     if "csp user data not found" in low or "%appdata% is not set" in low:
         return t(lang, "err_csp_userdata")
     if "english' subfolder" in low or "not a csp resource directory" in low:

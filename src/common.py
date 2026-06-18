@@ -121,6 +121,47 @@ def run_elevated_sync(argv: list[str]) -> tuple[int, str]:
 # ----------------------------------------------------------------------
 # Locating the CSP install
 # ----------------------------------------------------------------------
+def csp_exe_from_resource(resource: Path) -> Path:
+    """Return CLIPStudioPaint.exe next to a CSP `resource/` folder."""
+    return resource.parent / CSP_PROCESS
+
+
+def read_exe_product_version(exe: Path) -> str | None:
+    """Return ProductVersion from a Windows PE file, or None."""
+    if sys.platform != "win32" or not exe.is_file():
+        return None
+    try:
+        cp = subprocess.run(
+            [
+                "powershell", "-NoProfile", "-Command",
+                f"(Get-Item -LiteralPath '{exe}').VersionInfo.ProductVersion",
+            ],
+            capture_output=True, text=True, timeout=10,
+            creationflags=_CREATE_NO_WINDOW,
+        )
+        out = cp.stdout.strip()
+        return out or None
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+
+def find_csp_resource_optional(explicit: str | None) -> Path | None:
+    """Like find_csp_resource, but return None instead of exiting."""
+    if explicit:
+        p = Path(explicit)
+        if (p / "english").is_dir():
+            return p
+        return None
+    for base in (Path(r"C:\Program Files\CELSYS"),
+                 Path(r"C:\Program Files (x86)\CELSYS")):
+        if not base.is_dir():
+            continue
+        for cand in sorted(base.glob("*/CLIP STUDIO PAINT/resource")):
+            if (cand / "english").is_dir():
+                return cand
+    return None
+
+
 def find_csp_resource(explicit: str | None) -> Path:
     """Return CSP's `resource` folder, or exit with a clear message."""
     if explicit:
@@ -209,6 +250,31 @@ def confirm(prompt: str, assume_yes: bool) -> bool:
         return input(f"{prompt} [y/N] ").strip().lower() in ("y", "yes")
     except EOFError:
         return False
+
+
+def normalize_csp_version(product_version: str | None,
+                          supported: tuple[str, ...]) -> str | None:
+    """Map an exe ProductVersion string to a supported version id."""
+    if not product_version:
+        return None
+    pv = product_version.strip()
+    for ver in sorted(supported, reverse=True):
+        if pv == ver or pv.startswith(f"{ver}."):
+            return ver
+    return None
+
+
+def detect_installed_csp_version(
+    explicit_csp: str | None,
+    supported: tuple[str, ...],
+) -> tuple[str | None, Path | None]:
+    """Return (supported_version_or_None, resource_path_or_None)."""
+    resource = find_csp_resource_optional(explicit_csp)
+    if resource is None:
+        return None, None
+    exe = csp_exe_from_resource(resource)
+    product = read_exe_product_version(exe)
+    return normalize_csp_version(product, supported), resource
 
 
 def check_csp_closed(force: bool) -> None:

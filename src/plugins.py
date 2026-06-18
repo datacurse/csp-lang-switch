@@ -50,7 +50,7 @@ except ImportError:
              "       pip install pefile")
 
 from common import find_csp_resource, ensure_admin, check_csp_closed, confirm
-from version import LANGS_ROOT, ROOT
+from version import LANGS_ROOT, ROOT, SUPPORTED_VERSIONS, set_active_version
 
 # ----------------------------------------------------------------------
 # Project paths
@@ -64,10 +64,24 @@ RT_STRING = 6                              # resource type id
 RSRC = pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_RESOURCE"]
 
 
+def configure_version(version: str) -> None:
+    """Select which versions/<ver>/langs tree to read and write."""
+    global PLUGINS_DIR, BUILD_DIR
+    set_active_version(version)
+    import version as ver
+    PLUGINS_DIR = ver.LANGS_ROOT / "english" / "plugins"
+    BUILD_DIR = ver.LANGS_ROOT / _build_language / "plugins"
+
+
+_build_language = "russian"
+
+
 def configure_language(language: str) -> None:
     """Select which langs/<language>/plugins build directory to use."""
-    global BUILD_DIR
-    BUILD_DIR = LANGS_ROOT / language / "plugins"
+    global BUILD_DIR, _build_language
+    _build_language = language
+    import version as ver
+    BUILD_DIR = ver.LANGS_ROOT / language / "plugins"
 
 
 # ----------------------------------------------------------------------
@@ -169,14 +183,21 @@ def csp_plugin_dir(explicit: str | None) -> Path:
 
 
 def load_worksheet() -> dict[str, str]:
-    """{key: target} from plugins.csv -- blank targets dropped."""
+    """{key: target} and {source: target} from plugins.csv."""
     if not WORKSHEET.exists():
         sys.exit(f"error: {WORKSHEET} not found -- run 'extract' first")
-    out = {}
+    out: dict[str, str] = {}
     for r in csv.DictReader(open(WORKSHEET, encoding="utf-8-sig")):
-        if r["target"].strip():
-            out[r["key"]] = r["target"]
+        t = (r.get("target") or "").strip()
+        if not t:
+            continue
+        out[r["key"]] = t
+        out.setdefault(r["source"], t)
     return out
+
+
+def _translation_lookup(sheet: dict[str, str], key: str, source: str) -> str:
+    return sheet.get(key) or sheet.get(source) or ""
 
 
 def existing_targets() -> dict[str, str]:
@@ -256,6 +277,49 @@ def cmd_extract(args) -> None:
               f"{', '.join(no_english)})")
 
 
+def cmd_harvest(args) -> None:
+    """Copy targets from an existing patched build back into plugins.csv."""
+    patched_dir = BUILD_DIR
+    if not patched_dir.is_dir() or not any(patched_dir.glob("*.dll")):
+        sys.exit(f"error: no patched DLLs in {patched_dir}")
+
+    rows = list(csv.DictReader(open(WORKSHEET, encoding="utf-8-sig")))
+    if not rows:
+        sys.exit(f"error: {WORKSHEET} is empty -- run 'extract' first")
+
+    by_key = {r["key"]: r for r in rows}
+    filled = 0
+    for dll in sorted(PLUGINS_DIR.glob("*.dll")):
+        patched = patched_dir / dll.name
+        if not patched.is_file():
+            continue
+        en = english_strings(dll)
+        ru = english_strings(patched)
+        for bid in sorted(en):
+            if bid not in ru:
+                continue
+            for i, text in enumerate(en[bid]):
+                if not text.strip():
+                    continue
+                translated = ru[bid][i]
+                if not translated.strip() or translated == text:
+                    continue
+                key = f"{dll.name}:{bid}:{i}"
+                row = by_key.get(key)
+                if row is None:
+                    continue
+                if row.get("target", "").strip() != translated:
+                    row["target"] = translated
+                    filled += 1
+
+    with open(WORKSHEET, "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.DictWriter(f, fieldnames=["key", "source", "target"])
+        w.writeheader()
+        w.writerows(rows)
+    print(f"harvest -> {WORKSHEET}")
+    print(f"  filled {filled} target cell(s) from {patched_dir}")
+
+
 def cmd_apply(args) -> None:
     sheet = load_worksheet()
     dlls = sorted(PLUGINS_DIR.glob("*.dll"))
@@ -273,7 +337,7 @@ def cmd_apply(args) -> None:
             for i, text in enumerate(slots):
                 if not text.strip():
                     continue
-                tgt = sheet.get(f"{dll.name}:{bid}:{i}")
+                tgt = _translation_lookup(sheet, f"{dll.name}:{bid}:{i}", text)
                 if tgt:
                     out[i] = tgt
                     strings_n += 1
@@ -373,18 +437,25 @@ def main(argv: list[str] | None = None) -> None:
                         help="proceed even if CSP appears to be running")
     parser.add_argument("--language", default="russian",
                         help="community pack under langs/ (default: russian)")
+    parser.add_argument(
+        "--version", default=None, choices=SUPPORTED_VERSIONS,
+        help="CSP version under versions/<ver>/langs/ (default: 5.0.0)",
+    )
     # Set automatically on the elevated relaunch; keeps that console open.
     parser.add_argument("--keep-open", action="store_true",
                         help=argparse.SUPPRESS)
     parser.add_argument("command",
-                        choices=("backup", "extract", "apply",
+                        choices=("backup", "extract", "harvest", "apply",
                                  "install", "restore"),
                         help="pipeline step to run")
 
     args = parser.parse_args(argv)
+    from version import DEFAULT_VERSION
+    configure_version(args.version or DEFAULT_VERSION)
     configure_language(args.language)
     try:
-        {"backup": cmd_backup, "extract": cmd_extract, "apply": cmd_apply,
+        {"backup": cmd_backup, "extract": cmd_extract, "harvest": cmd_harvest,
+         "apply": cmd_apply,
          "install": cmd_install, "restore": cmd_restore}[args.command](args)
     finally:
         if args.keep_open:

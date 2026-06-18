@@ -3,15 +3,15 @@
 capture_stock.py
 ================
 Capture stock English + Japanese oracle snapshots from a live CSP install
-into versions/<ACTIVE_VERSION>/langs/.
+into versions/<version>/langs/.
 
 Prerequisites:
-  * CSP installed (Ver. 5.0.0 for the current active version)
+  * CSP installed (supported version: 5.0.0 or 5.0.4)
   * UI language set to English
   * CSP closed before running backup steps
 
 Usage (from repo root):
-  python scripts/capture_stock.py
+  python scripts/capture_stock.py --version 5.0.4
   python scripts/capture_stock.py --csp "C:\\Program Files\\...\\resource"
   python scripts/capture_stock.py --official-langs   # also copy all resource/<lang>/ui
 """
@@ -19,7 +19,6 @@ Usage (from repo root):
 from __future__ import annotations
 
 import argparse
-import hashlib
 import re
 import shutil
 import subprocess
@@ -31,13 +30,6 @@ SRC = ROOT / "src"
 sys.path.insert(0, str(SRC))
 
 import install  # noqa: E402
-from version import (  # noqa: E402
-    ACTIVE_VERSION,
-    GUARD_GUID,
-    LANGS_ROOT,
-    english_ui_dir,
-    japanese_ui_dir,
-)
 
 GUID_RE = re.compile(
     r"[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}\Z", re.I)
@@ -62,35 +54,8 @@ def copy_ui(src: Path, dst: Path, label: str) -> int:
     return len(files)
 
 
-def update_version_guard() -> None:
-    """Write GUARD_SIZE and GUARD_SHA256 into src/version.py after capture."""
-    path = english_ui_dir() / GUARD_GUID
-    if not path.is_file():
-        print("  warning: guard file missing; version guard not updated")
-        return
-    data = path.read_bytes()
-    size = len(data)
-    digest = hashlib.sha256(data).hexdigest()
-    version_py = SRC / "version.py"
-    text = version_py.read_text(encoding="utf-8")
-    text = re.sub(
-        r"^GUARD_SIZE: int \| None = .*$",
-        f"GUARD_SIZE: int | None = {size}",
-        text,
-        flags=re.M,
-    )
-    text = re.sub(
-        r"^GUARD_SHA256: str \| None = .*$",
-        f'GUARD_SHA256: str | None = "{digest}"',
-        text,
-        flags=re.M,
-    )
-    version_py.write_text(text, encoding="utf-8")
-    print(f"  version guard updated: {GUARD_GUID} size={size:,} sha256={digest[:16]}...")
-
-
-def run_pipeline_backup(script: str, csp: str | None) -> None:
-    cmd = [sys.executable, str(SRC / script), "backup"]
+def run_pipeline_backup(script: str, csp: str | None, version: str) -> None:
+    cmd = [sys.executable, str(SRC / script), "backup", "--version", version]
     if csp:
         cmd.extend(["--csp", csp])
     cmd.append("--yes")
@@ -99,7 +64,22 @@ def run_pipeline_backup(script: str, csp: str | None) -> None:
 
 
 def main() -> int:
+    from version import (  # noqa: E402
+        DEFAULT_VERSION,
+        GUARD_GUID,
+        SUPPORTED_VERSIONS,
+        english_ui_dir,
+        japanese_ui_dir,
+        langs_root,
+        set_active_version,
+        write_guard_profile,
+    )
+
     parser = argparse.ArgumentParser(description="Capture CSP stock snapshots")
+    parser.add_argument(
+        "--version", default=DEFAULT_VERSION, choices=SUPPORTED_VERSIONS,
+        help="CSP version to capture into versions/<ver>/langs/",
+    )
     parser.add_argument("--csp", help="CSP resource directory")
     parser.add_argument(
         "--official-langs",
@@ -108,16 +88,19 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    resource = install.find_csp_resource(args.csp)
-    print(f"Capturing stock for CSP {ACTIVE_VERSION}")
-    print(f"  resource: {resource}")
-    print(f"  output:   {LANGS_ROOT}")
+    set_active_version(args.version)
+    langs_root_path = langs_root(args.version)
 
-    LANGS_ROOT.mkdir(parents=True, exist_ok=True)
+    resource = install.find_csp_resource(args.csp)
+    print(f"Capturing stock for CSP {args.version}")
+    print(f"  resource: {resource}")
+    print(f"  output:   {langs_root_path}")
+
+    langs_root_path.mkdir(parents=True, exist_ok=True)
 
     print("\nMain UI:")
-    copy_ui(resource / "english", english_ui_dir(), "english")
-    copy_ui(resource / "japanese", japanese_ui_dir(), "japanese")
+    copy_ui(resource / "english", english_ui_dir(args.version), "english")
+    copy_ui(resource / "japanese", japanese_ui_dir(args.version), "japanese")
 
     if args.official_langs:
         print("\nOptional official language UI folders:")
@@ -126,16 +109,22 @@ def main() -> int:
                 continue
             if not _resource_files(d):
                 continue
-            copy_ui(d, LANGS_ROOT / d.name / "ui", d.name)
+            copy_ui(d, langs_root_path / d.name / "ui", d.name)
 
     print("\nPlug-ins:")
-    run_pipeline_backup("plugins.py", args.csp)
+    run_pipeline_backup("plugins.py", args.csp, args.version)
 
     print("\nVersion guard:")
-    update_version_guard()
+    guard_path = english_ui_dir(args.version) / GUARD_GUID
+    if not guard_path.is_file():
+        print("  warning: guard file missing; version guard not updated")
+    else:
+        data = guard_path.read_bytes()
+        write_guard_profile(args.version, len(data),
+                            __import__("hashlib").sha256(data).hexdigest())
 
     print("\nDone. Next: python src/roundtrip.py versions/"
-          f"{ACTIVE_VERSION}/langs/english/ui")
+          f"{args.version}/langs/english/ui")
     return 0
 
 

@@ -30,6 +30,7 @@ Subcommands  (run from the repo root: python src/batch.py <cmd> ...)
   export-all           export every not-yet-exported target file
   dedupe   <id>        build unique.csv + word_frequency.csv from strings.csv
   join     <id>        merge unique.csv translations back into strings.csv
+  join-all             join every target worksheet that has unique.csv
   pack     <id>...     apply translation -> langs/<language>/ui, then round-trip
   pack-all             pack every target file that has a worksheet
   audit    [<id>]      consistency audit of one worksheet, or all of them
@@ -44,15 +45,17 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import re
 import sys
+import tempfile
 from pathlib import Path
 
 import csp5            # noqa: F401  (kept for parity / future use)
 import repack
 import roundtrip
 import audit
-from version import LANGS_ROOT, ROOT
+from version import LANGS_ROOT, ROOT, DEFAULT_VERSION, SUPPORTED_VERSIONS, set_active_version
 
 
 # ----------------------------------------------------------------------
@@ -65,6 +68,16 @@ RESOURCE_DIR = LANGS_ROOT / "english" / "ui"
 # text: export emits a record only where English and Japanese differ.
 REFERENCE_DIR = LANGS_ROOT / "japanese" / "ui"
 DEFAULT_LANGUAGE = "russian"
+
+
+def configure_version(version: str) -> None:
+    """Point batch paths at versions/<version>/langs/."""
+    global LANGS_ROOT, RESOURCE_DIR, REFERENCE_DIR
+    set_active_version(version)
+    import version as ver
+    LANGS_ROOT = ver.LANGS_ROOT
+    RESOURCE_DIR = LANGS_ROOT / "english" / "ui"
+    REFERENCE_DIR = LANGS_ROOT / "japanese" / "ui"
 
 # Word tokenizer for the frequency aid: alpha runs only, lowercased. Digits are
 # dropped on purpose (so "3D" contributes "d", matching the original glossary
@@ -278,28 +291,110 @@ def cmd_join(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_join_all(args: argparse.Namespace) -> int:
+    manifest = load_manifest()
+    targets = [r for r in manifest
+               if r["target"] == "yes" and worksheet_for(r).exists()]
+    if not targets:
+        print("No exported target worksheets to join.")
+        return 0
+    ok = 0
+    for rec in targets:
+        try:
+            sub = argparse.Namespace(id=rec["short"])
+            cmd_join(sub)
+            ok += 1
+        except SystemExit:
+            print(f"  FAIL: join failed for {rec['short']}-{rec['slug']}")
+    print(f"\nJoined {ok}/{len(targets)} worksheet(s).")
+    return 0 if ok == len(targets) else 1
+
+
 # ----------------------------------------------------------------------
 # Subcommand: pack  (repack.py apply + roundtrip.py verification)
 # ----------------------------------------------------------------------
+def _translations_by_source(rec: dict) -> dict[str, str]:
+    """Return finished translations keyed by normalized English source text."""
+    trans: dict[str, str] = {}
+    uniq = unique_for(rec)
+    if uniq.exists():
+        for r in _read_rows(uniq):
+            t = (r.get("target") or "").strip()
+            if t:
+                trans[_lf(r["source"])] = t
+    if not trans:
+        ws = worksheet_for(rec)
+        if ws.exists():
+            for r in _read_rows(ws):
+                t = (r.get("target") or "").strip()
+                if t and t != r["source"]:
+                    trans[_lf(r["source"])] = t
+    return trans
+
+
+def _worksheet_for_version(rec: dict) -> Path | None:
+    """Build a pack worksheet with keys from the active version's stock.
+
+    Translation `key` columns are version-specific. Re-export from the
+    current RESOURCE_DIR and map targets by `source` so one shared
+    unique.csv can pack both 5.0.0 and 5.0.4 correctly.
+    """
+    src, ref = resource_for(rec), reference_for(rec)
+    if not src.exists() or not ref.exists():
+        return None
+    fd, tmp_name = tempfile.mkstemp(
+        suffix=".csv", prefix=f"{rec['short']}-pack-")
+    os.close(fd)
+    tmp = Path(tmp_name)
+    try:
+        if repack.main(["export", str(src), str(tmp), "--reference", str(ref)]) != 0:
+            return None
+        trans = _translations_by_source(rec)
+        rows = _read_rows(tmp)
+        for r in rows:
+            new = trans.get(_lf(r["source"]))
+            if new is None:
+                continue
+            if "\r\n" in r["source"]:
+                new = _lf(new).replace("\n", "\r\n")
+            elif "\n" in r["source"]:
+                new = _lf(new)
+            r["target"] = new
+        _write_rows(tmp, ["key", "source", "target"], rows)
+        return tmp
+    except Exception:
+        tmp.unlink(missing_ok=True)
+        raise
+
+
 def _pack_one(rec: dict, language: str) -> bool:
     """Apply a translation and round-trip-check the output. Return True on pass."""
-    ws, src, out = worksheet_for(rec), resource_for(rec), output_for(rec, language)
-    if not ws.exists():
-        print(f"SKIP   {rec['short']}-{rec['slug']}  (no worksheet)")
-        return False
+    src, out = resource_for(rec), output_for(rec, language)
     if not src.exists():
         print(f"SKIP   {rec['short']}-{rec['slug']}  (resource file not found)")
         return False
+    ws = _worksheet_for_version(rec)
+    cleanup = ws is not None
+    if ws is None:
+        ws = worksheet_for(rec)
+        cleanup = False
+        if not ws.exists():
+            print(f"SKIP   {rec['short']}-{rec['slug']}  (no worksheet)")
+            return False
     out.parent.mkdir(parents=True, exist_ok=True)
     print(f"pack   {rec['short']}-{rec['slug']}")
-    if repack.main(["apply", str(src), str(ws), str(out)]) != 0:
-        print(f"  FAIL: apply failed for {rec['short']}")
-        return False
-    ok, msg = roundtrip.check_file(out)
-    print(f"  round-trip: {msg}")
-    if not ok:
-        print(f"  FAIL: {out} does not round-trip")
-    return ok
+    try:
+        if repack.main(["apply", str(src), str(ws), str(out)]) != 0:
+            print(f"  FAIL: apply failed for {rec['short']}")
+            return False
+        ok, msg = roundtrip.check_file(out)
+        print(f"  round-trip: {msg}")
+        if not ok:
+            print(f"  FAIL: {out} does not round-trip")
+        return ok
+    finally:
+        if cleanup:
+            ws.unlink(missing_ok=True)
 
 
 def cmd_pack(args: argparse.Namespace) -> int:
@@ -313,7 +408,8 @@ def cmd_pack(args: argparse.Namespace) -> int:
 def cmd_pack_all(args: argparse.Namespace) -> int:
     manifest = load_manifest()
     targets = [r for r in manifest
-               if r["target"] == "yes" and worksheet_for(r).exists()]
+               if r["target"] == "yes"
+               and (worksheet_for(r).exists() or unique_for(r).exists())]
     if not targets:
         print("No exported target worksheets to pack.")
         return 0
@@ -405,6 +501,10 @@ def main(argv: list[str]) -> int:
     ap = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument(
+        "--version", default=DEFAULT_VERSION, choices=SUPPORTED_VERSIONS,
+        help="CSP version under versions/<ver>/langs/ (default: 5.0.0)",
+    )
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("status", help="progress table over every manifest file")
@@ -431,6 +531,10 @@ def main(argv: list[str]) -> int:
     p.add_argument("id", help="file id: short GUID or slug")
     p.set_defaults(func=cmd_join)
 
+    p = sub.add_parser("join-all",
+                       help="join every target worksheet that has unique.csv")
+    p.set_defaults(func=cmd_join_all)
+
     p = sub.add_parser("pack", help="apply translation -> langs/<language>/ui, then round-trip")
     p.add_argument("ids", nargs="+", help="file id(s): short GUID or slug")
     p.add_argument("--language", default=DEFAULT_LANGUAGE,
@@ -447,6 +551,7 @@ def main(argv: list[str]) -> int:
     p.set_defaults(func=cmd_audit)
 
     args = ap.parse_args(argv)
+    configure_version(args.version)
     try:
         return args.func(args)
     except csp5.CSPFormatError as e:

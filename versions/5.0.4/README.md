@@ -1,19 +1,29 @@
-# CSP 5.0.4 — archived stock and build data
+# CSP 5.0.4 — stock and Russian build data
 
-This folder holds the **5.0.4** language snapshots and Russian build that the
-project was originally developed against (forum source:
-[5.0.4 thread](https://bbs.itzmx.com/forum.php?mod=viewthread&tid=116680&highlight=clip%2Bstudio%2Bpaint)).
+This folder holds the **5.0.4** language snapshots and Russian community build.
 
-**Status:** read-only archive. The active development target is
-`versions/5.0.0/`. The exe bundles 5.0.0 packs only.
+**Status:** active. Bundled in `csp-lang-switch.exe` alongside `5.0.0`.
 
-Layout matches the old flat `langs/` tree:
+Layout:
 
 ```
 langs/
-  english/    stock English UI (+ plugins if captured)
+  english/    stock English UI + plugins
   japanese/   translation oracle (ui/)
-  russian/    patched Russian community build
+  russian/    patched Russian community build (ui + plugins)
 ```
+
+Capture from a live 5.0.4 install (CSP closed, UI language English):
+
+```
+python scripts/capture_stock.py --version 5.0.4
+python src/batch.py --version 5.0.4 pack-all
+python src/plugins.py --version 5.0.0 harvest   # if plugins.csv targets empty
+python src/plugins.py --version 5.0.4 apply --yes
+```
+
+`pack-all` re-exports keys from the captured stock and maps translations by
+English `source` text, so worksheets built for another CSP version (e.g. 5.0.0)
+still pack correctly for 5.0.4.
 
 Copyrighted Celsys data — gitignored, not redistributed.

@@ -30,15 +30,26 @@ from pathlib import Path
 from typing import Callable
 
 import install  # for ensure_admin, check_csp_closed, find_csp_resource, etc.
-from common import is_admin, pause_console, quiet_stdout, run_elevated_sync, attach_console
+from common import (
+    detect_installed_csp_version as _detect_installed_csp_version,
+    find_csp_resource_optional,
+    is_admin,
+    pause_console,
+    quiet_stdout,
+    read_exe_product_version,
+    run_elevated_sync,
+    attach_console,
+    csp_exe_from_resource,
+)
 from version import (
-    LANGS_ROOT,
-    ACTIVE_VERSION,
+    DEFAULT_VERSION,
+    SUPPORTED_VERSIONS,
     GUARD_GUID,
     GUARD_SLOT,
-    GUARD_SIZE,
-    GUARD_SHA256,
     fingerprint_guard_file,
+    guard_profile,
+    install_matches_version,
+    set_active_version as _set_version_langs_root,
 )
 
 
@@ -92,10 +103,52 @@ else:
     _migrate_file_if_missing(
         SETTINGS_FILE, DATA_ROOT / ".csp-lang-settings.json")
 
+    _migrate_file_if_missing(
+        SETTINGS_FILE, DATA_ROOT / ".csp-lang-settings.json")
+
+_selected_version: str = DEFAULT_VERSION
+_pipelines_configured = False
+
+
+def _frozen_langs_dir(version: str) -> Path:
+    """Bundled language trees: langs/<version>/ with legacy flat fallback."""
+    nested = DATA_ROOT / "langs" / version
+    if nested.is_dir() and (nested / "english").is_dir():
+        return nested
+    if version == DEFAULT_VERSION:
+        legacy = DATA_ROOT / "langs"
+        if legacy.is_dir() and (legacy / "english").is_dir():
+            return legacy
+    return nested
+
+
+def set_active_version(version: str) -> str:
+    """Select the bundled CSP version and refresh pipeline paths."""
+    global LANGS_DIR, ENGLISH_STOCK, BUNDLED_ENGLISH, PLUGINS_BACKUP
+    global _selected_version, _pipelines_configured
+    if version not in SUPPORTED_VERSIONS:
+        raise ValueError(f"unsupported CSP version: {version}")
+    _set_version_langs_root(version)
+    _selected_version = version
+    if FROZEN:
+        LANGS_DIR = _frozen_langs_dir(version)
+    else:
+        import version as ver
+        LANGS_DIR = ver.langs_root(version)
+    ENGLISH_STOCK = LANGS_DIR / "english" / "ui"
+    BUNDLED_ENGLISH = LANGS_DIR / "english"
+    if not FROZEN:
+        PLUGINS_BACKUP = LANGS_DIR / "english" / "plugins"
+    _pipelines_configured = False
+    _configure_pipelines()
+    return version
+
+
 if FROZEN:
-    LANGS_DIR = DATA_ROOT / "langs"
+    LANGS_DIR = _frozen_langs_dir(DEFAULT_VERSION)
 else:
-    LANGS_DIR = LANGS_ROOT
+    import version as ver
+    LANGS_DIR = ver.langs_root(DEFAULT_VERSION)
 ENGLISH_STOCK = LANGS_DIR / "english" / "ui"
 BUNDLED_ENGLISH = LANGS_DIR / "english"
 
@@ -115,7 +168,36 @@ PLUGINS_BACKUP = _backup_dir("plugins")
 
 if not FROZEN:
     # In source mode, stock snapshots live under the active version tree.
-    PLUGINS_BACKUP = LANGS_ROOT / "english" / "plugins"
+    PLUGINS_BACKUP = LANGS_DIR / "english" / "plugins"
+
+
+def detect_installed_csp_version(csp: str | None = None) -> str | None:
+    """Return a supported version id for the installed CSP, or None."""
+    ver, _resource = _detect_installed_csp_version(csp, SUPPORTED_VERSIONS)
+    return ver
+
+
+def detected_csp_product_version(csp: str | None = None) -> str | None:
+    """Return the raw ProductVersion from CLIPStudioPaint.exe."""
+    resource = find_csp_resource_optional(csp)
+    if resource is None:
+        return None
+    return read_exe_product_version(csp_exe_from_resource(resource))
+
+
+def resolve_csp_version(
+    explicit: str | None,
+    detected: str | None,
+    saved: str | None,
+) -> str:
+    """Pick the CSP version to use: explicit flag, detected install, then saved."""
+    if explicit and explicit in SUPPORTED_VERSIONS:
+        return explicit
+    if detected and detected in SUPPORTED_VERSIONS:
+        return detected
+    if saved and saved in SUPPORTED_VERSIONS:
+        return saved
+    return DEFAULT_VERSION
 
 PIPELINES = ("main-ui", "plugins")
 ORIGINAL = "original"
@@ -342,52 +424,39 @@ def _plugins_module():
 # ----------------------------------------------------------------------
 # Pipeline path overrides
 # ----------------------------------------------------------------------
-_pipelines_configured = False
 
 
 def _configure_pipelines() -> None:
     """Point helper modules at the data root and writable backups."""
     global _pipelines_configured
-    if _pipelines_configured:
-        return
     install.ROOT = DATA_ROOT
     install.LANGS_DIR = LANGS_DIR
     if FROZEN:
         p = _plugins_module()
         p.PLUGINS_DIR = PLUGINS_BACKUP
-        _seed_bundled_backups()
+        p.BUILD_DIR = LANGS_DIR / "russian" / "plugins"
+        if not _pipelines_configured:
+            _seed_bundled_backups()
     _pipelines_configured = True
 
 
-def _bundled_guard_profile() -> tuple[int, str] | None:
-    """Size + sha256 of the bundled English main-UI guard file."""
-    path = ENGLISH_STOCK / GUARD_GUID
-    if not path.is_file():
-        return None
-    data = path.read_bytes()
-    return len(data), hashlib.sha256(data).hexdigest()
-
-
-def _install_matches_active_version(csp: str | None) -> bool:
-    expected = _bundled_guard_profile()
-    if expected is None:
-        return True
-    if GUARD_SIZE is not None and GUARD_SHA256 is not None:
-        expected = (GUARD_SIZE, GUARD_SHA256)
+def _install_matches_version(csp: str | None, version: str | None = None) -> bool:
+    ver = version or _selected_version
     resource = install.find_csp_resource(csp)
-    actual = fingerprint_guard_file(resource / GUARD_SLOT / GUARD_GUID)
-    return actual == expected
+    guard_path = resource / GUARD_SLOT / GUARD_GUID
+    return install_matches_version(guard_path, ver)
 
 
 def _require_matching_csp_version(csp: str | None, choice: LanguageChoice) -> None:
     if choice.kind != "community":
         return
-    if _install_matches_active_version(csp):
+    if _install_matches_version(csp):
         return
     sys.exit(
-        f"error: this build targets Clip Studio Paint {ACTIVE_VERSION}, but the "
+        f"error: this build targets Clip Studio Paint {_selected_version}, but the "
         f"installed CSP resource files do not match.\n"
-        f"       Update CSP to {ACTIVE_VERSION} or use a matching csp-lang-switch build."
+        f"       Update CSP to {_selected_version} or pick the matching version "
+        f"in the switcher."
     )
 
 
@@ -831,6 +900,9 @@ def build_switch_argv(args) -> list[str]:
         argv.append("--keep-open")
     if args.csp:
         argv.extend(["--csp", args.csp])
+    csp_version = getattr(args, "csp_version", None)
+    if csp_version:
+        argv.extend(["--csp-version", csp_version])
     if args.force:
         argv.append("--force")
     if args.dry_run:
@@ -843,6 +915,8 @@ def build_switch_argv(args) -> list[str]:
 
 def cmd_switch(args) -> None:
     from_gui = getattr(args, "from_gui", False)
+    if getattr(args, "csp_version", None):
+        set_active_version(args.csp_version)
     clear_warnings()
     choice = _choice_or_exit(args.target, args.csp)
     _configure_pipelines()
@@ -1016,6 +1090,10 @@ def main(argv: list[str] | None = None) -> None:
                              "'menu', or 'gui' (default: gui)")
     parser.add_argument("--csp", metavar="DIR",
                         help="CSP 'resource' folder (auto-detected if omitted)")
+    parser.add_argument(
+        "--csp-version", metavar="VER", choices=SUPPORTED_VERSIONS,
+        help="CSP version to use (default: auto-detect from install)",
+    )
     parser.add_argument("--dry-run", action="store_true",
                         help="print what would happen, change nothing")
     parser.add_argument("--force", action="store_true",
@@ -1036,6 +1114,15 @@ def main(argv: list[str] | None = None) -> None:
         args.target = "gui"
     if args.keep_open:
         attach_console()
+
+    import gui_i18n as i18n
+    detected = detect_installed_csp_version(args.csp)
+    saved = i18n.load_csp_version(SETTINGS_FILE) if SETTINGS_FILE else None
+    version = resolve_csp_version(args.csp_version, detected, saved)
+    set_active_version(version)
+    args.csp_version = version
+    args.detected_csp_version = detected
+    args.raw_csp_product_version = detected_csp_product_version(args.csp)
 
     _configure_pipelines()
 
