@@ -23,7 +23,7 @@ block_cipher = None
 
 _ctk_datas, _ctk_binaries, _ctk_hidden = collect_all("customtkinter")
 
-SUPPORTED_VERSIONS = ("5.0.0", "5.0.2", "5.0.4")
+SUPPORTED_VERSIONS = ("4.2.0", "5.0.0", "5.0.2", "5.0.4")
 
 OFFICIAL_LANGS = {
     "japanese",

@@ -1,0 +1,667 @@
+﻿file,source,target
+0238E722-export-data,https://www.clipstudio.net/en/dl,https://www.clipstudio.net/en/dl
+0A24C606-3d-presets,U,U
+0A24C606-3d-presets,E,E
+0A24C606-3d-presets,O,O
+2D481AE5-opentoonz-export,OpenToonz 1.%d,OpenToonz 1.%d
+3CC82939-doodle-mode,https://us-lic.celsys.co.jp/gd/index.php?id=csp-func-en,https://us-lic.celsys.co.jp/gd/index.php?id=csp-func-en
+3CC82939-doodle-mode,https://support.clip-studio.com/en-us/app-receptions/authentication-release-limitations,https://support.clip-studio.com/en-us/app-receptions/authentication-release-limitations
+4CB47456-book-viewer,"CELSYS, Inc.","CELSYS, Inc."
+5634F3A9-animation-timeline, , 
+5634F3A9-animation-timeline,U,U
+5634F3A9-animation-timeline,E,E
+5634F3A9-animation-timeline,O,O
+5634F3A9-animation-timeline,"You cannot edit the selected 3D object.
+Please switch to the Object tool and select only one 3D Primitive or 3D drawing figure (Ver.2).","Вы не можете редактировать выбранный 3D-объект.
+Пожалуйста, переключитесь на инструмент «Объект» и выберите только один 3D-примитив или 3D-фигуру (Версия 2)."
+5634F3A9-animation-timeline,"You cannot edit the selected 3D primitive.
+Please switch to the Object tool, and in the Sub Tool Detail palette’s Texture Settings tab, set the position to 0 and the scale ratio to 100.","Вы не можете редактировать выбранный 3D-примитив.
+Переключитесь на инструмент «Объект» и на вкладке «Настройки текстуры» палитры «Детали вспомогательного инструмента» установите положение на 0 и коэффициент масштабирования на 100."
+5634F3A9-animation-timeline,"You cannot edit the selected 3D object.
+Please switch to the Object tool, and in the Sub Tool Detail palette’s Preferences tab, open the Rendering Settings and turn on “Use texture”.","Вы не можете редактировать выбранный 3D-объект.
+Переключитесь на инструмент «Объект» и на вкладке «Настройки» палитры «Детали вспомогательного инструмента» откройте «Настройки рендеринга» и включите «Использовать текстуру»."
+5634F3A9-animation-timeline,"You cannot edit the selected 3D object.
+Please switch to the Object tool and check the layer visibility and layer lock settings.","Вы не можете редактировать выбранный 3D-объект.
+Пожалуйста, переключитесь на инструмент «Объект» и проверьте настройки видимости слоя и блокировки слоя."
+5634F3A9-animation-timeline,○,○
+5634F3A9-animation-timeline,●,●
+61F04D2D-license-verify,https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=%s,https://us-lic.celsys.co.jp/productcontrol/ periodexpired?key=%s
+61F04D2D-license-verify,---,---
+61F04D2D-license-verify,https://support.clip-studio.com/en-us/app-receptions/trial-authentication-failures,https://support.clip-studio.com/en-us/app-receptions/trial-authentication-failures
+61F04D2D-license-verify,https://accounts.clip-studio.com/password-reset?ui_locales=en-us,https://accounts.clip-studio.com/password-reset?ui_locales=en-us
+61F04D2D-license-verify,https://accounts.clip-studio.com/register?ui_locales=en-us,https://accounts.clip-studio.com/register?ui_locales=en-us
+61F04D2D-license-verify,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en
+61F04D2D-license-verify,https://accounts.clip-studio.com/app/register?ui_locales=en-us,https://accounts.clip-studio.com/app/register?ui_locales=en-us
+61F04D2D-license-verify,See details here,Подробности смотрите здесь
+61F04D2D-license-verify,https://us-lic.celsys.co.jp/gd/index.php?id=csp-lost-en,https://us-lic.celsys.co.jp/gd/index.php?id=csp-lost-en
+61F04D2D-license-verify,https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en,https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en
+61F04D2D-license-verify,https://www2.celsys.co.jp/support/service_en/service.html,https://www2.celsys.co.jp/support/service_en/service.html
+6FFACA71-companion-mode,https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en,https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en
+6FFACA71-companion-mode,See details here,Подробности смотрите здесь
+6FFACA71-companion-mode,Privacy Settings,Настройки конфиденциальности
+6FFACA71-companion-mode,Please help us to improve Clip Studio.,"Пожалуйста, помогите нам улучшить Clip Studio."
+6FFACA71-companion-mode,See here for details about data we collect.,"Подробную информацию о данных, которые мы собираем, можно найти здесь."
+6FFACA71-companion-mode,Help fix errors,Помогите исправить ошибки
+6FFACA71-companion-mode,"If an error occurs, automatically send anonymous information about the incident.
+This helps us resolve bugs and errors.","В случае возникновения ошибки автоматически отправлять анонимную информацию об инциденте.
+Это помогает нам устранять ошибки и ошибки."
+6FFACA71-companion-mode,Improve services,Улучшение услуг
+6FFACA71-companion-mode,"Automatically sends information about features that you use.
+This helps us to improve user experience and develop new features.","Автоматически отправляет информацию о функциях, которые вы используете.
+Это помогает нам улучшать пользовательский опыт и разрабатывать новые функции."
+6FFACA71-companion-mode,Set up later,Настроить позже
+6FFACA71-companion-mode,https://www.clipstudio.net/gd?id=improvement-enus,https://www.clipstudio.net/gd?id=improvement-enus
+742DEA58-main-ui,CLIP STUDIO PAINT,CLIP STUDIO PAINT
+742DEA58-main-ui,"CELSYS, Inc.","CELSYS, Inc."
+742DEA58-main-ui,CLIP STUDIO PAINT %s,CLIP STUDIO PAINT %s
+742DEA58-main-ui,CLIP STUDIO,CLIP STUDIO
+742DEA58-main-ui,.lip (CLIP STUDIO PAINT),.lip (CLIP STUDIO PAINT)
+742DEA58-main-ui,.bmp (BMP),.bmp (BMP)
+742DEA58-main-ui,.jpg (JPEG),.jpg (JPEG)
+742DEA58-main-ui,.png (PNG),.png (PNG)
+742DEA58-main-ui,.psd (Photoshop),.psd (Photoshop)
+742DEA58-main-ui,.tif (TIFF),.tif (TIFF)
+742DEA58-main-ui,.webp (WebP),.webp (WebP)
+742DEA58-main-ui,OK,OK
+742DEA58-main-ui,Apply tool property to text,Применить свойство инструмента к тексту
+742DEA58-main-ui,Sub Tool,Дополнительный инструмент
+742DEA58-main-ui,Tool Property,Свойство инструмента
+742DEA58-main-ui,Sub Tool Detail,Детали вспомогательного инструмента
+742DEA58-main-ui,Layer Property,Свойство слоя
+742DEA58-main-ui,CLIP STUDIO.NET,CLIP STUDIO.NET
+742DEA58-main-ui,%s (%s,%s (%s
+742DEA58-main-ui,%ddpi %.1f%%,%ddpi %.1f%%
+742DEA58-main-ui,%s%d x %dpx,%s%d x %dpx
+742DEA58-main-ui,%s%.2f x %.2fin,%s%.2f x %.2fin
+742DEA58-main-ui,%s%.2f x %.2fpt,%s%.2f x %.2fpt
+742DEA58-main-ui,"Failed to import some 3D files. This may be due to the following:
+
+・The file was in an unsupported format.
+・The process was cancelled from the “Import 3D File” dialog.","Не удалось импортировать некоторые 3D-файлы. Это может быть связано со следующим:
+
+・Файл имел неподдерживаемый формат.
+・Процесс был отменен в диалоговом окне «Импорт 3D-файла»."
+742DEA58-main-ui,Delete all selected tool and its sub tools. Do you want to proceed?,Удалить все выбранные инструменты и их подинструменты. Хотите продолжить?
+742DEA58-main-ui,Are you sure you want to delete the following sub tool?,"Вы уверены, что хотите удалить следующий вспомогательный инструмент?"
+742DEA58-main-ui,Are you sure you want to delete %s and the following %d sub tools?,"Вы уверены, что хотите удалить %s и следующие дополнительные инструменты %d?"
+742DEA58-main-ui,Do you want to delete the selected sub tool group and its sub tools?,Вы хотите удалить выбранную вспомогательную группу инструментов и ее вспомогательные инструменты?
+742DEA58-main-ui,"Auto-save is disabled. 
+Please make sure you check the save status before closing any files, and save the file if necessary.
+If you want your file to automatically save at regular intervals, open Preferences > File 
+and turn on “Save at regular intervals”, and set the Save Method to “Overwrite.”","Автосохранение отключено. 
+Прежде чем закрывать файлы, обязательно проверьте статус сохранения и сохраните файл при необходимости.
+Если вы хотите, чтобы файл автоматически сохранялся через определенные промежутки времени, откройте «Настройки» > «Файл». 
+и включите «Сохранять через регулярные промежутки времени» и установите для метода сохранения значение «Перезаписать»."
+742DEA58-main-ui,There are no sub tools to repair.,Никаких вспомогательных инструментов для ремонта нет.
+742DEA58-main-ui,"You need to save the file in CLIP STUDIO FORMAT (extension: clip) in order to use this function.
+Save the file in CLIP STUDIO FORMAT, open the saved file and then try again.","Чтобы использовать эту функцию, вам необходимо сохранить файл в формате CLIP STUDIO FORMAT (расширение: clip).
+Сохраните файл в формате CLIP STUDIO FORMAT, откройте сохраненный файл и повторите попытку."
+742DEA58-main-ui, , 
+742DEA58-main-ui,"Copied %s to the app.
+You can access it from [File] > [Import] > [Movie].","Скопировал %s в приложение.
+Вы можете получить к нему доступ из [Файл] > [Импорт] > [Фильм]."
+742DEA58-main-ui,"Copied %s to the app.
+You can access it from [File] > [Import] > [Audio].","Скопировал %s в приложение.
+Вы можете получить к нему доступ из [Файл] > [Импорт] > [Аудио]."
+742DEA58-main-ui,"Copied %s to the app.
+You can access it from [File] > [Import] > [Vector].","Скопировал %s в приложение.
+Вы можете получить к нему доступ из [Файл] > [Импорт] > [Вектор]."
+742DEA58-main-ui,"Copied %s to the app.
+You can access it from [File] > [Import] > [Exposure sheet].","Скопировал %s в приложение.
+Вы можете получить к нему доступ из [Файл] > [Импорт] > [Лист экспозиции]."
+742DEA58-main-ui,"Copied %s to the app.
+You can access it from [File] > [Import] > [3D data].","Скопировал %s в приложение.
+Вы можете получить к нему доступ из [Файл] > [Импорт] > [3D-данные]."
+742DEA58-main-ui,.:CELSYS_EN:CLIPStudioPaint:1.0.0,.:CELSYS_EN:CLIPStudioPaint:1.0.0
+742DEA58-main-ui,1,1
+742DEA58-main-ui,http://www.clipstudio.net/en/?app=,http://www.clipstudio.net/en/?app=
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=csp-help-manual-en,https://www.clipstudio.net/gd?id=csp-help-manual-en
+742DEA58-main-ui,https://gd.clip-studio.com/gd?id=csp-help-support&app=,https://gd.clip-studio.com/gd?id=csp-help-support&app=
+742DEA58-main-ui,http://www.clipstudio.net/en/site/ads/csp/product_pro.html?app=,http://www.clipstudio.net/en/site/ads/csp/product_pro.html?app=
+742DEA58-main-ui,http://www.clipstudio.net/en/site/sync/csp/?app=,http://www.clipstudio.net/en/site/sync/csp/?app=
+742DEA58-main-ui,http://www.clipstudio.net/en/site/menu_csp/index.html,http://www.clipstudio.net/en/site/menu_csp/index.html
+742DEA58-main-ui,https://www.clipstudio.net/en/functions,https://www.clipstudio.net/en/functions
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=csp-eura-ai-en,https://www.clipstudio.net/gd?id=csp-eura-ai-en
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=csp-userguide-ai-en,https://www.clipstudio.net/gd?id=csp-userguide-ai-en
+742DEA58-main-ui,https://apps.apple.com/us/app/clip-studio-paint-ex-for-manga/id1262985592?ls=1&mt=8,https://apps.apple.com/us/app/clip-studio-paint-ex-for-manga/id1262985592?ls=1&mt=8
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=csp-samsungdex-info-enus,https://www.clipstudio.net/gd?id=csp-samsungdex-info-enus
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=improvement-enus,https://www.clipstudio.net/gd?id=improvement-enus
+742DEA58-main-ui,https://www.clipstudio.net/gd?id=csp-restarting-problem_en,https://www.clipstudio.net/gd?id=csp-restarting-problem_en
+742DEA58-main-ui,https://gd.clip-studio.com/gd?id=csp-info-corrupted-en-us,https://gd.clip-studio.com/gd?id=csp-info-corrupted-en-us
+742DEA58-main-ui,https://gd.clip-studio.com/gd?id=csp-tutorial-youtube-europe,https://gd.clip-studio.com/gd?id=csp-tutorial-youtube-europe
+742DEA58-main-ui,en,en
+742DEA58-main-ui,%s %d/%02d/%02d %02d: %02d %s: %s,%s %d/%02d/%02d %02d: %02d %s: %s
+742DEA58-main-ui,Press [Browse] and choose a folder for group work data.,Нажмите [Обзор] и выберите папку для данных групповой работы.
+742DEA58-main-ui,Press [Browse] and choose which folder to create the work folder in.,"Нажмите [Обзор] и выберите, в какой папке создать рабочую папку."
+742DEA58-main-ui,Press [Browse] and choose a save folder.,Нажмите [Обзор] и выберите папку для сохранения.
+742DEA58-main-ui,%s %d,%s %d
+742DEA58-main-ui,%s : %s,%s : %s
+742DEA58-main-ui,C:\Program Files\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe,C:\Program Files\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
+742DEA58-main-ui,C:\Program Files (x86)\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe,C:\Program Files (x86)\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
+742DEA58-main-ui,C:\Program Files\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe,C:\Program Files\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
+742DEA58-main-ui,C:\Program Files\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe,C:\Program Files\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
+742DEA58-main-ui,C:\Program Files\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe,C:\Program Files\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
+742DEA58-main-ui,C:\Program Files (x86)\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe,C:\Program Files (x86)\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
+742DEA58-main-ui,C:\Program Files (x86)\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe,C:\Program Files (x86)\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
+742DEA58-main-ui,C:\Program Files (x86)\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe,C:\Program Files (x86)\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
+742DEA58-main-ui,/Applications/ComicStudio4_EX/ComicStudio EX.app,/Applications/ComicStudio4_EX/ComicStudio EX.app
+742DEA58-main-ui,/Applications/ComicStudio4_Pro/ComicStudio Pro.app,/Applications/ComicStudio4_Pro/ComicStudio Pro.app
+742DEA58-main-ui,/Applications/ComicStudio4_Debut/ComicStudio Debut.app,/Applications/ComicStudio4_Debut/ComicStudio Debut.app
+742DEA58-main-ui,ComicStudio EX.app,ComicStudio EX.app
+742DEA58-main-ui,ComicStudio Pro.app,ComicStudio Pro.app
+742DEA58-main-ui,ComicStudio Debut.app,ComicStudio Дебют.приложение
+742DEA58-main-ui,Manga Studio EX.app,Приложение Manga Studio EX.app
+742DEA58-main-ui,Manga Studio Pro.app,Приложение Manga Studio Pro.app
+742DEA58-main-ui,Manga Studio Debut.app,Студия манги Debut.app
+742DEA58-main-ui,"Turn this check on for creating works with multiple pages and specify number of pages and layouts.
+Even if data is created with this check off, you can switch to multiple-page layout later by using [Add Page] and [Next Page] 
+ in [Story] menu.
+","Включите эту галочку для создания многостраничных работ и укажите количество страниц и макетов.
+Даже если данные создаются с отключенной этой галочкой, вы можете переключиться на многостраничный макет позже, используя [Добавить страницу] и [Следующая страница]. 
+ в меню [История]."
+742DEA58-main-ui,240,240
+742DEA58-main-ui,390,390
+742DEA58-main-ui,90,90
+742DEA58-main-ui,590,590
+742DEA58-main-ui,170,170
+742DEA58-main-ui,275,275
+742DEA58-main-ui,"If you delete the Downloads tool, all sub tools in the group will be deleted, and the auto-install setting will be turned off. Would you like to continue?","Если вы удалите инструмент «Загрузки», все дополнительные инструменты в группе будут удалены, а настройка автоматической установки будет отключена. Хотите продолжить?"
+742DEA58-main-ui,No. of sub tool icons,Количество значков дополнительных инструментов
+742DEA58-main-ui,Select sub tool,Выбрать вспомогательный инструмент
+742DEA58-main-ui,%s: %s (%.1f%%),%s: %s (%.1f%%)
+742DEA58-main-ui,Export sub tool,Дополнительный инструмент экспорта
+742DEA58-main-ui,Export sub tools as separate files,Экспортировать вспомогательные инструменты как отдельные файлы
+742DEA58-main-ui,(1–%d),(1–%d)
+742DEA58-main-ui,X,X
+742DEA58-main-ui,"All tools and sub tools registered in the Tool palette and Sub Tool palette will be reset to their original defaults.
+Any added tools or sub tools will be deleted.
+Shortcuts assigned to tools will be also reset to their original defaults.
+","Все инструменты и вспомогательные инструменты, зарегистрированные в палитре инструментов и палитре вспомогательных инструментов, будут сброшены до исходных значений по умолчанию.
+Любые добавленные инструменты или вспомогательные инструменты будут удалены.
+Ярлыки, назначенные инструментам, также будут сброшены до исходных значений по умолчанию."
+742DEA58-main-ui,"Brush shapes 
+registered to the Sub Tool Detail palette 
+will be reset to their original defaults.
+Any added brush shapes 
+will be deleted.","Формы кисти 
+зарегистрирован в палитре «Детализация вспомогательного инструмента» 
+будут сброшены к исходным настройкам по умолчанию.
+Любые добавленные формы кистей 
+будет удалено."
+742DEA58-main-ui,"All settings under [Tab-Mate Controller Settings] 
+and [Quick Menu Settings]
+ will be reset to their original defaults.","Все настройки в разделе [Настройки контроллера Tab-Mate] 
+и [Настройки быстрого меню]
+ будут сброшены к исходным настройкам по умолчанию."
+742DEA58-main-ui,"Settings for items in the Layer Property palette 
+will be reset to their original defaults.","Настройки для элементов на палитре свойств слоя 
+будут сброшены к исходным настройкам по умолчанию."
+742DEA58-main-ui,Do you want to revert [Tab-Mate Controller Settings] to their original defaults?,Хотите вернуть [Настройки контроллера Tab-Mate] к исходным значениям по умолчанию?
+742DEA58-main-ui,110,110
+742DEA58-main-ui,%d %%,%d %%
+742DEA58-main-ui,Show property bar,Показать панель свойств
+742DEA58-main-ui,Material property,Материальное свойство
+742DEA58-main-ui,・,・
+742DEA58-main-ui,Sub tools,Дополнительные инструменты
+742DEA58-main-ui,%,%
+742DEA58-main-ui,Use same sub tool as canvas,"Используйте тот же вспомогательный инструмент, что и холст."
+742DEA58-main-ui,Register current sub tool,Зарегистрировать текущий вспомогательный инструмент
+742DEA58-main-ui,%s (%s),%s (%s)
+742DEA58-main-ui,"You can set the assigned actions of modifier keys as well as mouse input such as the mouse wheel and right-click.
+How to set modifier keys:
+1. For each key entry or mouse input, select the action you want to assign from the list.
+2. To change the general settings, check [General settings].
+3. Click OK to apply your changes.
+3. When selecting a sub tool, you can change the input process and output process of that tool. Settings will be shared with other tools that have the same input and output processes. 
+4. Click OK to apply your changes.","Вы можете установить назначенные действия для клавиш-модификаторов, а также для ввода с помощью мыши, например колесика мыши и щелчка правой кнопкой мыши.
+Как установить клавиши-модификаторы:
+1. Для каждого ввода с помощью клавиши или ввода с помощью мыши выберите из списка действие, которое вы хотите назначить.
+2. Чтобы изменить общие настройки, отметьте [Общие настройки].
+3. Нажмите OK, чтобы применить изменения.
+3. При выборе вспомогательного инструмента вы можете изменить процесс ввода и вывода этого инструмента. Настройки будут доступны другим инструментам, имеющим те же процессы ввода и вывода. 
+4. Нажмите OK, чтобы применить изменения."
+742DEA58-main-ui,"You can set the assigned actions of modifier keys.
+
+ How to set modifier keys:
+ 1. For each key entry, select the action you want to assign from the list. 
+2. If [General settings] is selected in the list, general settings will be used. To change the general settings, check [General settings].
+3. When selecting a sub tool, you can change the input and output processing to be set. Settings will be shared with other tools that have the same input and output processes. 
+4. Click OK to apply your changes.","Вы можете установить назначенные действия клавиш-модификаторов.
+
+ Как установить клавиши-модификаторы:
+ 1. Для каждой ключевой записи выберите из списка действие, которое вы хотите назначить. 
+2. Если в списке выбрано [Общие настройки], будут использоваться общие настройки. Чтобы изменить общие настройки, отметьте [Общие настройки].
+3. При выборе вспомогательного инструмента вы можете изменить настраиваемую обработку ввода и вывода. Настройки будут доступны другим инструментам, имеющим те же процессы ввода и вывода. 
+4. Нажмите OK, чтобы применить изменения."
+742DEA58-main-ui,640,640
+742DEA58-main-ui,Types of available drawing figures,Виды доступных фигурок для рисования
+742DEA58-main-ui,Enable canvas recovery,Включить восстановление холста
+742DEA58-main-ui,"File may be saved automatically, even if the set Save interval is not reached.","Файл может быть сохранен автоматически, даже если установленный интервал сохранения не достигнут."
+742DEA58-main-ui,Save at regular intervals,Сохраняйте через регулярные промежутки времени
+742DEA58-main-ui,Save interval,Сохранить интервал
+742DEA58-main-ui,“Save recovery information” restores your progress based on the recovery information if the project is closed without being saved. You can choose whether to save over the original project or discard it.,"«Сохранить информацию для восстановления» восстанавливает ваш прогресс на основе информации для восстановления, если проект закрыт без сохранения. Вы можете выбрать, сохранить ли исходный проект или отказаться от него."
+742DEA58-main-ui,This restores your progress based on the recovery information if the project is closed without being saved. You can choose whether to save over the original project or discard it.,"Это восстановит ваш прогресс на основе информации для восстановления, если проект будет закрыт без сохранения. Вы можете выбрать, сохранить ли исходный проект или отказаться от него."
+742DEA58-main-ui,New text property,Новое свойство текста
+742DEA58-main-ui,Selected text tool property,Выбранное свойство текстового инструмента
+742DEA58-main-ui,Sub Tool Settings,Настройки вспомогательного инструмента
+742DEA58-main-ui,Add current sub tool,Добавить текущий вспомогательный инструмент
+742DEA58-main-ui,Do you want to revert [Quick Menu Settings] to their original defaults?,Вы хотите вернуть [Настройки быстрого меню] к исходным значениям по умолчанию?
+742DEA58-main-ui,Press [Browse] and choose a save folder to manage multiple pages.,Нажмите [Обзор] и выберите папку для сохранения для управления несколькими страницами.
+742DEA58-main-ui,"""%s"" is already used in 
+
+%s
+
+Every time you press key, it will switch between tool and sub tool using the same shortcut.","«%s» уже используется в 
+
+%s
+
+Каждый раз, когда вы нажимаете клавишу, происходит переключение между инструментом и вспомогательным инструментом с использованием одного и того же сочетания клавиш."
+742DEA58-main-ui,"How to set a shortcut:
+1. Select an item and tap [Edit shortcut], then assign the shortcut by pressing the key.
+2. Shortcuts can be assigned to tools, sub tool groups, or sub tools.
+3. Click [OK] to update the changes.","Как установить ярлык:
+1. Выберите элемент и нажмите [Изменить ярлык], затем назначьте ярлык, нажав клавишу.
+2. Ярлыки можно назначить инструментам, вспомогательным группам инструментов или вспомогательным инструментам.
+3. Нажмите [OK], чтобы обновить изменения."
+742DEA58-main-ui,Edit text property,Изменить свойство текста
+742DEA58-main-ui,New sub tool,Новый вспомогательный инструмент
+742DEA58-main-ui,Create copy of currently selected sub tool,Создать копию текущего выбранного вспомогательного инструмента
+742DEA58-main-ui,Delete selected sub tool,Удалить выбранный вспомогательный инструмент
+742DEA58-main-ui,Change settings of selected sub tool,Изменить настройки выбранного вспомогательного инструмента
+742DEA58-main-ui,Create new customized sub tool,Создать новый индивидуальный вспомогательный инструмент
+742DEA58-main-ui,Duplicate sub tool,Дублировать вспомогательный инструмент
+742DEA58-main-ui,Sub tool settings,Настройки вспомогательного инструмента
+742DEA58-main-ui,Delete sub tool,Удалить дополнительный инструмент
+742DEA58-main-ui,Create custom sub tool,Создать собственный вспомогательный инструмент
+742DEA58-main-ui,Sub tool group settings,Настройки вспомогательной группы инструментов
+742DEA58-main-ui,Delete sub tool group,Удалить подгруппу инструментов
+742DEA58-main-ui,Import sub tool group,Импортировать подгруппу инструментов
+742DEA58-main-ui,Export sub tool group,Экспорт подгруппы инструментов
+742DEA58-main-ui,Import sub tool,Импортировать дополнительный инструмент
+742DEA58-main-ui,Register sub tool as material,Зарегистрируйте вспомогательный инструмент как материал
+742DEA58-main-ui,Add sub tool,Добавить дополнительный инструмент
+742DEA58-main-ui,Show group name of sub tool,Показать имя группы вспомогательного инструмента
+742DEA58-main-ui,All supported formats|*.sut;*.abr;*.sutg|Sub tool file|*.sut|Sub tool group file|*.sutg|Photoshop brush file|*.abr,Все поддерживаемые форматы|*.sut;*.abr;*.sutg|Файл вспомогательного инструмента|*.sut|Файл вспомогательной группы инструментов|*.sutg|Photoshop файл кисти|*.abr
+742DEA58-main-ui,All supported formats|*.sut;*.abr|Sub tool file|*.sut|Photoshop brush file|*.abr,Все поддерживаемые форматы|*.sut;*.abr|Файл вспомогательного инструмента|*.sut|Photoshop файл кисти|*.abr
+742DEA58-main-ui,Sub tool file|*.sut,Файл вспомогательного инструмента|*.sut
+742DEA58-main-ui,Sub tool group file|*.sutg,Файл вспомогательной группы инструментов|*.sutg
+742DEA58-main-ui,Registering to Sub Tool palette (registering images to the Material palette)...,Регистрация в палитре дополнительных инструментов (регистрация изображений в палитре материалов)...
+742DEA58-main-ui,Registered to sub tool palette.,Зарегистрировано в дополнительной палитре инструментов.
+742DEA58-main-ui,"Registered to sub tool palette, but some file could not be imported.","Зарегистрировано в вспомогательной палитре инструментов, но не удалось импортировать некоторые файлы."
+742DEA58-main-ui,This file cannot be registered to sub tool palette.,Этот файл невозможно зарегистрировать в вспомогательной палитре инструментов.
+742DEA58-main-ui,You cannot import sub tool files in Clip Studio Paint Debut.,Вы не можете импортировать файлы вспомогательных инструментов в Clip Studio Paint Debut.
+742DEA58-main-ui,Exporting image materials included in sub tools...,"Экспорт графических материалов, включенных во вспомогательные инструменты..."
+742DEA58-main-ui,Importing image materials included in sub tools...,"Импорт графических материалов, включенных в дополнительные инструменты..."
+742DEA58-main-ui,The following sub tool files already exist. Do you want to replace it?,Следующие файлы вспомогательных инструментов уже существуют. Вы хотите заменить его?
+742DEA58-main-ui,%s and the following %d sub tool files already exist. Do you want to replace them?,%s и следующие вспомогательные файлы инструментов %d уже существуют. Вы хотите заменить их?
+742DEA58-main-ui,Failed to export sub tool.,Не удалось экспортировать вспомогательный инструмент.
+742DEA58-main-ui,Do you want to restore the following sub tools to their default settings?,Вы хотите восстановить настройки по умолчанию для следующих вспомогательных инструментов?
+742DEA58-main-ui,Do you want to restore %s and the following %d sub tools to the default settings?,Хотите восстановить настройки по умолчанию для %s и следующих вспомогательных инструментов %d?
+742DEA58-main-ui,Do you want to replace the existing default settings and save the current settings as default for the following sub tools?,Хотите заменить существующие настройки по умолчанию и сохранить текущие настройки по умолчанию для следующих вспомогательных инструментов?
+742DEA58-main-ui,Do you want to replace the existing default settings and save the current settings as default for %s and the following %d sub tools?,Хотите заменить существующие настройки по умолчанию и сохранить текущие настройки по умолчанию для %s и следующих вспомогательных инструментов %d?
+742DEA58-main-ui,Failed to load default sub tools.,Не удалось загрузить вспомогательные инструменты по умолчанию.
+742DEA58-main-ui,Search for sub tools on ASSETS,Поиск дополнительных инструментов на ASSETS
+742DEA58-main-ui,Background color of icon,Цвет фона значка
+742DEA58-main-ui,Sub tool with same name exists. Do you want to proceed?,Существует дополнительный инструмент с таким же именем. Хотите продолжить?
+742DEA58-main-ui,User Settings ...,Настройки пользователя...
+742DEA58-main-ui,%d:%d,%d:%d
+742DEA58-main-ui,C:\Program Files\CELSYS\ToeiAnimation\DigitalTimeSheet\ToeiAnimationDigitalTimeSheet.exe,C:\Program Files\CELSYS\ToeiAnimation\DigitalTimeSheet\ToeiAnimationDigitalTimeSheet.exe
+742DEA58-main-ui,Notify when auto-installing sub tools,Уведомлять при автоматической установке вспомогательных инструментов
+742DEA58-main-ui,Selected sub tool,Выбранный вспомогательный инструмент
+742DEA58-main-ui,First sub tool,Первый вспомогательный инструмент
+742DEA58-main-ui,"Set the brush size (line width). 
+To add variety to your line width, click the button to the right of the slider to open the [Dynamics] dialog box, where you can link brush size to pen pressure or other dynamics.
+","Установите размер кисти (ширину линии). 
+Чтобы разнообразить ширину линии, нажмите кнопку справа от ползунка, чтобы открыть диалоговое окно [Динамика], где вы можете связать размер кисти с давлением пера или другой динамикой."
+742DEA58-main-ui,"The Stabilization and Post-correction settings reduce jitters to create smoother lines. 
+ Stabilization smooths lines by delaying the input from the tablet, while Post-correction smooths the line after it is drawn. 
+ [Taper] gradually reduces the pen pressure as the pen is lifted from the tablet. When pen pressure is assigned to line width, the line tapers off at the end.","Настройки «Стабилизация» и «Пост-коррекция» уменьшают дрожание и создают более плавные линии. 
+ Стабилизация сглаживает линии за счет задержки ввода с планшета, а пост-коррекция сглаживает линию после ее рисования. 
+ [Конус] постепенно снижает давление пера по мере того, как перо отрывается от планшета. Когда давление пера соответствует ширине линии, линия сужается к концу."
+742DEA58-main-ui,Adjust settings related to the Tool Property palette.,"Отрегулируйте настройки, связанные с палитрой свойств инструмента."
+742DEA58-main-ui,Reset selected sub tool to default settings,Сбросить выбранный вспомогательный инструмент до настроек по умолчанию
+742DEA58-main-ui,Save current settings as default settings for this sub tool,Сохранить текущие настройки в качестве настроек по умолчанию для этого вспомогательного инструмента.
+742DEA58-main-ui,Show category name (label) on tool property palette,Показывать имя категории (метку) на палитре свойств инструмента.
+742DEA58-main-ui,Copy to all sub tools within same group,Копировать во все вспомогательные инструменты в одной группе
+742DEA58-main-ui,Copy to all sub tools within same tool,Копировать во все вспомогательные инструменты одного инструмента
+742DEA58-main-ui,Copy to all sub tools within all tools,Копировать во все вспомогательные инструменты во всех инструментах
+742DEA58-main-ui,405,405
+742DEA58-main-ui,135,135
+742DEA58-main-ui,180,180
+742DEA58-main-ui,210,210
+742DEA58-main-ui,350,350
+742DEA58-main-ui,340,340
+742DEA58-main-ui,Lock sub tool and do not save changes,Заблокировать вспомогательный инструмент и не сохранять изменения
+742DEA58-main-ui,Show [Sub Tool Detail palette] and edit hidden parameter value and displayed status,Показать [палитру вспомогательного инструмента] и отредактировать значение скрытого параметра и отображаемый статус.
+742DEA58-main-ui,Apply brush shape selected in list to sub tool,"Применить форму кисти, выбранную в списке, к вспомогательному инструменту"
+742DEA58-main-ui,Select brush shape from list and apply to sub tool,Выберите форму кисти из списка и примените к вспомогательному инструменту.
+742DEA58-main-ui,430,430
+742DEA58-main-ui,205,205
+742DEA58-main-ui,189,189
+742DEA58-main-ui,45,45
+742DEA58-main-ui,450,450
+742DEA58-main-ui,230,230
+742DEA58-main-ui,/allow/gd.html?page=assets-simple-brush:%s,/allow/gd.html?page=assets-simple-brush:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-colorpatterns:%s,/allow/gd.html?page=assets-colorpatterns:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-3dheadmodels:%s,/allow/gd.html?page=assets-3dheadmodels:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-3ddrawingfigures:%s,/allow/gd.html?page=assets-3ddrawingfigures:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-environment-light-material:%s,/allow/gd.html?page=assets-environment-light-material:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-3d-primitive-texture:%s,/allow/gd.html?page=assets-3d-primitive-texture:%s
+742DEA58-main-ui,/allow/gd.html?page=assets-gradation-set:%s,/allow/gd.html?page=assets-gradation-set:%s
+742DEA58-main-ui,/allow/gd.html?page=simple-material-palette:%s,/allow/gd.html?page=simple-material-palette:%s
+742DEA58-main-ui,https://s3-ice.clip-studio.com/celiceappprod/v410/en/pc/tutorial/tutorial.html,https://s3-ice.clip-studio.com/celiceappprod/v410/en/pc/tutorial/tutorial.html
+742DEA58-main-ui,https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_studio_phone/tutorial/tutorial.html,https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_studio_phone/tutorial/tutorial.html
+742DEA58-main-ui,https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_phone/tutorial/tutorial.html,https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_phone/tutorial/tutorial.html
+742DEA58-main-ui,https://s3-ice.clip-studio.com/celiceappprod/v310/en/introduction_studio_tab/tutorial/tutorial.html,https://s3-ice.clip-studio.com/celiceappprod/v310/en/introduction_studio_tab/tutorial/tutorial.html
+742DEA58-main-ui,https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_tab/tutorial/tutorial.html,https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_tab/tutorial/tutorial.html
+742DEA58-main-ui,https://www.clipstudio.net/app/gd?id=newfunctions-420-enus,https://www.clipstudio.net/app/gd?id=newfunctions-420-enus
+742DEA58-main-ui,CAM SHAKE S,CAM SHAKE S
+742DEA58-main-ui,"このキャンバスは保存不可のためタイムラプスの書き出しができません。
+記録されているタイムラプスのプレビューを確認するために書き出しダイアログを開くことは可能です。
+
+ダイアログを開きますか?","このキャンバスは保存不可のためタイムラプスの書き出しができません。
+記録されているタイムラプスのプレビューを確認するために書き出しダイアログを開くことは可能です。
+
+ダイアログを開きますか?"
+742DEA58-main-ui,BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|Targa|*.tga|WebP|*.webp,BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|Targa|*.tga|WebP|*.webp
+742DEA58-main-ui,BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|WebP|*.webp,BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|WebP|*.webp
+742DEA58-main-ui,%.1f LPI / %d%%,%.1f LPI / %d%%
+742DEA58-main-ui,Layer Property Palette,Палитра свойств слоя
+742DEA58-main-ui,Adjust shape of 3D head model,Отрегулируйте форму 3D-модели головы
+742DEA58-main-ui,｜,｜
+742DEA58-main-ui,<<% %s <<,<<% %s <<
+742DEA58-main-ui,"ネットワークでエラーが発生しました。
+通信環境を確認してください。","ネットワークでエラーが発生しました。
+通信環境を確認してください。"
+742DEA58-main-ui,"ファイル情報が取得できませんでした。
+CLIP STUDIO PAINTのアップデートがある場合は、最新バージョンにアップデートしてご確認ください。","ファイル情報が取得できませんでした。
+CLIP STUDIO PAINTのアップデートがある場合は、最新バージョンにアップデートしてご確認ください。"
+742DEA58-main-ui,"ファイル処理に失敗しました。
+再度ダウンロードをお試しいただくか、CLIP STUDIO PAINTのアップデートがある場合は最新バージョンにアップデートしてご確認ください。","ファイル処理に失敗しました。
+再度ダウンロードをお試しいただくか、CLIP STUDIO PAINTのアップデートがある場合は最新バージョンにアップデートしてご確認ください。"
+742DEA58-main-ui,"表紙が存在しない作品はCLIP STUDIO MONO用データを作成できません。
+[ページ管理]メニューの[作品基本設定を変更]から、表紙を追加できます。","表紙が存在しない作品はCLIP STUDIO MONO用データを作成できません。
+[ページ管理]メニューの[作品基本設定を変更]から、表紙を追加できます。"
+742DEA58-main-ui,"未保存のページがあります。
+すべてのページを保存後にコマンドを実行してください。","未保存のページがあります。
+すべてのページを保存後にコマンドを実行してください。"
+742DEA58-main-ui,"キャンバスが未保存のため、処理を実行できません。
+保存後に再度実行してください。","キャンバスが未保存のため、処理を実行できません。
+保存後に再度実行してください。"
+742DEA58-main-ui,"作品の基本設定とは異なるサイズのページが存在します。
+該当するページは作品の基本設定と同じサイズに拡大・縮小して出力されます。","作品の基本設定とは異なるサイズのページが存在します。
+該当するページは作品の基本設定と同じサイズに拡大・縮小して出力されます。"
+742DEA58-main-ui,"CLIP STUDIOのバージョンが低いため、登録処理を実行できません。
+CLIP STUDIOをアップデートしてから再度実行してください。","CLIP STUDIOのバージョンが低いため、登録処理を実行できません。
+CLIP STUDIOをアップデートしてから再度実行してください。"
+742DEA58-main-ui,"CLIP STUDIO MONO用データが%dMBを超えたため、データの登録ができません。
+出力後のサイズが%dMB以内になるように画像サイズなどを調整してください。","CLIP STUDIO MONO用データが%dMBを超えたため、データの登録ができません。
+出力後のサイズが%dMB以内になるように画像サイズなどを調整してください。"
+742DEA58-main-ui,"サンプルとして設定したタイムラプスが20MBを超えたため、データの登録ができません。
+画像でのサンプルを検討してください。","サンプルとして設定したタイムラプスが20MBを超えたため、データの登録ができません。
+画像でのサンプルを検討してください。"
+742DEA58-main-ui,"ムービーファイルがファイルオブジェクトとして含まれています。
+このムービーファイルのアニメーションは再生されません。","ムービーファイルがファイルオブジェクトとして含まれています。
+このムービーファイルのアニメーションは再生されません。"
+742DEA58-main-ui,こちらからDC3マスターコンテンツを CLIP STUDIO MONO にも登録しませんか？,こちらからDC3マスターコンテンツを CLIP STUDIO MONO にも登録しませんか？
+742DEA58-main-ui,CLIP STUDIO MONOとは何ですか？,CLIP STUDIO МОНОとは何ですか？
+742DEA58-main-ui,"「%s」
+をイラスト作品 (イメージ) としてデータ出力します。よろしいですか？","「%s」
+をイラスト作品 (イメージ) としてデータ出力します。よろしいですか？"
+742DEA58-main-ui,"「%s」
+を複数ページ作品 (ブック) としてデータ出力します。よろしいですか？","「%s」
+を複数ページ作品 (ブック) としてデータ出力します。よろしいですか？"
+742DEA58-main-ui,出力,出力
+742DEA58-main-ui,詳細を設定して出力,詳細を設定して出力
+742DEA58-main-ui,"%d/%d, %d/%d","%d/%d, %d/%d"
+742DEA58-main-ui,Register Layer as Template Material,Зарегистрируйте слой как материал шаблона
+742DEA58-main-ui,Show sub tool palette,Показать вспомогательную палитру инструментов
+742DEA58-main-ui,Show tool property palette,Показать палитру свойств инструмента
+742DEA58-main-ui,Show sub tool detail palette,Показать палитру сведений о вспомогательном инструменте
+742DEA58-main-ui,Show layer property palette,Показать палитру свойств слоя
+742DEA58-main-ui,Pop up Sub tool palette,Всплывающая палитра дополнительных инструментов
+742DEA58-main-ui,Pop up Tool property palette,Всплывающая палитра свойств инструмента
+742DEA58-main-ui,Pop up Sub Tool Detail palette,Всплывающая палитра детализации вспомогательного инструмента
+742DEA58-main-ui,Pop up Layer Property palette,Всплывающая палитра свойств слоя
+742DEA58-main-ui,"%s will be reset to their original defaults.
+- Registered buttons will be deleted.
+- Button positions will be reset to their original defaults. 
+- Image files and background colors set up for icons will be retained even after deletion.
+ Would you like to proceed?","%s будут сброшены до исходных значений по умолчанию.
+- Зарегистрированные кнопки будут удалены.
+- Положения кнопок будут сброшены до исходных значений по умолчанию. 
+- Файлы изображений и цвета фона, настроенные для значков, сохранятся даже после удаления.
+ Хотите продолжить?"
+742DEA58-main-ui,  ,  
+742DEA58-main-ui,    ,    
+742DEA58-main-ui,Failed to import sub tool.,Не удалось импортировать дополнительный инструмент.
+742DEA58-main-ui,Default sub tools cannot be deleted in Clip Studio Paint Debut.,Вспомогательные инструменты по умолчанию нельзя удалить в Clip Studio Paint Debut.
+742DEA58-main-ui,"Brush images or paper textures in the added sub tools may be damaged. 
+ Please delete the added sub tools.","Изображения кистей или текстуры бумаги в добавленных дополнительных инструментах могут быть повреждены. 
+ Пожалуйста, удалите добавленные дополнительные инструменты."
+742DEA58-main-ui,Brush images or paper textures in the added sub tool “%s” may be corrupted.,Изображения кистей или текстуры бумаги в добавленном вспомогательном инструменте «%s» могут быть повреждены.
+742DEA58-main-ui,"[%s] tool doesn't exist.
+Create custom sub tool.","Инструмент [%s] не существует.
+Создайте собственный вспомогательный инструмент."
+742DEA58-main-ui,You cannot add sub tool groups to the Downloads tool.,Вы не можете добавлять подгруппы инструментов в инструмент «Загрузки».
+742DEA58-main-ui,You cannot move the Downloads sub tool group.,Вы не можете переместить подгруппу инструментов «Загрузки».
+742DEA58-main-ui,012abcABC,012abcABC
+742DEA58-main-ui,(%d / %d),(%d / %d)
+742DEA58-main-ui,400,400
+742DEA58-main-ui,65,65
+742DEA58-main-ui,-10,-10
+742DEA58-main-ui,Common,Общий
+742DEA58-main-ui,clipstudio.module.plugin.paint.pdf.export,clipstudio.module.plugin.paint.pdf.export
+742DEA58-main-ui,clipstudio.module.plugin.paint.pdf.import,clipstudio.module.plugin.paint.pdf.import
+742DEA58-main-ui,Sub tool palette,Дополнительная палитра инструментов
+742DEA58-main-ui,Switch to previous sub tool,Переключиться на предыдущий вспомогательный инструмент
+742DEA58-main-ui,Switch to next sub tool,Переключиться на следующий вспомогательный инструмент
+742DEA58-main-ui,Switch to previous sub tool group,Переключиться на предыдущую подгруппу инструментов
+742DEA58-main-ui,Switch to next sub tool group,Переключиться на следующую подгруппу инструментов
+742DEA58-main-ui,Switch between current and previous sub tools,Переключение между текущим и предыдущим вспомогательными инструментами
+742DEA58-main-ui,Switch between current sub tool and eraser,Переключение между текущим вспомогательным инструментом и ластиком
+742DEA58-main-ui,Backspace,Backspace
+742DEA58-main-ui,50,50
+742DEA58-main-ui,120,120
+742DEA58-main-ui,Tool property palette,Палитра свойств инструмента
+742DEA58-main-ui,60,60
+742DEA58-main-ui,UTC 19:00,UTC 19:00
+742DEA58-main-ui,%d%,%d%
+742DEA58-main-ui,PNG (.png),PNG (.png)
+742DEA58-main-ui,JPEG (.jpg),JPEG (.jpg)
+742DEA58-main-ui,PSD (.psd),PSD (.psd)
+742DEA58-main-ui,Do you want to reset the selected sub tool to the default settings?,Вы хотите сбросить выбранный вспомогательный инструмент до настроек по умолчанию?
+742DEA58-main-ui,"Tools and sub-tools, including those created by the user, are included in the command bar settings.
+When loading this workspace material in another environment, some settings for tools and sub tools will not be applied.
+","Инструменты и подинструменты, в том числе созданные пользователем, включаются в настройки панели команд.
+При загрузке этого материала рабочей области в другую среду некоторые настройки инструментов и вспомогательных инструментов не будут применены."
+742DEA58-main-ui,"The command bar settings include tools or sub tools from the default settings.
+This workspace may not work correctly in environments where the tool configurations have been changed.
+","Настройки панели команд включают инструменты или вспомогательные инструменты из настроек по умолчанию.
+Это рабочее пространство может работать неправильно в средах, где конфигурации инструментов были изменены."
+742DEA58-main-ui,0,0
+742DEA58-main-ui,https://support.wacom.com/hc/en-us/sections/13393650144919-Wacom-Yuify,https://support.wacom.com/hc/en-us/sections/13393650144919-Wacom-Yuify
+7F9F9530-cloud-sync,F,F
+7F9F9530-cloud-sync,E,E
+7F9F9530-cloud-sync,Show property window of selected works,Показать окно свойств выбранных работ
+7F9F9530-cloud-sync,"The selected %d items will be removed from this list and the actual files will be moved to the Recycle Bin/Trash of your computer.
+(Please note that if there is not sufficient storage in your Recycle Bin, the files will be deleted entirely.)
+If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
+This operation cannot be undone. Remove anyway?","Выбранные элементы %d будут удалены из этого списка, а сами файлы будут перемещены в корзину вашего компьютера.
+(Обратите внимание, что если в вашей корзине недостаточно места, файлы будут полностью удалены.)
+Если файлы сохранены на внешнем хранилище, они будут удалены без перемещения в корзину.
+Эту операцию невозможно отменить. Все равно удалить?"
+7F9F9530-cloud-sync,"Delete selected %d files from this device.
+This operation cannot be undone. Delete anyway?","Удалите выбранные файлы %d с этого устройства.
+Эту операцию невозможно отменить. Все равно удалить?"
+7F9F9530-cloud-sync,"The selected %d items will be deleted from this list.
+ This operation does not affect the actual files.
+The work files will be displayed in this list again if they are edited later.
+This operation cannot be undone. Delete anyway?","Выбранные элементы %d будут удалены из этого списка.
+ Эта операция не влияет на реальные файлы.
+Рабочие файлы снова отобразятся в этом списке, если они будут отредактированы позже.
+Эту операцию невозможно отменить. Все равно удалить?"
+7F9F9530-cloud-sync,"The selected %d items will be removed from this list and the actual files will be moved to the Recycle Bin/Trash of your computer.
+(Please note that if there is not sufficient storage in your Recycle Bin, the files will be deleted entirely.)
+ If the files are saved to external storage, the files will be deleted without being moved to the Recycle Bin.
+Works indicated as ""Not Found"" are only removed from this list. The actual files are not affected.
+This operation cannot be undone. Remove anyway?","Выбранные элементы %d будут удалены из этого списка, а сами файлы будут перемещены в корзину вашего компьютера.
+(Обратите внимание, что если в вашей корзине недостаточно места, файлы будут полностью удалены.)
+ Если файлы сохранены на внешнем хранилище, они будут удалены без перемещения в корзину.
+Работы с пометкой «Не найдено» удаляются только из этого списка. Фактические файлы не затрагиваются.
+Эту операцию невозможно отменить. Все равно удалить?"
+7F9F9530-cloud-sync,"Delete selected %d items from this device.
+*Works indicated as ""Not Found"" are only deleted from this list. The actual files are not affected.
+This operation cannot be undone. Delete anyway?","Удалить выбранные элементы %d с этого устройства.
+*Работы со статусом «Не найдено» удаляются только из данного списка. Фактические файлы не затрагиваются.
+Эту операцию невозможно отменить. Все равно удалить?"
+7F9F9530-cloud-sync, , 
+7F9F9530-cloud-sync,Delete [%s],Удалить [%s]
+7F9F9530-cloud-sync,Show property window of selected materials,Показать окно свойств выбранных материалов
+7F9F9530-cloud-sync,"”%s” is used in the following sub tool brush shape preset. 
+Do you want to delete the material?","«%s» используется в следующей предустановке формы кисти вспомогательного инструмента. 
+Хотите удалить материал?"
+7F9F9530-cloud-sync,Searching sub tool to use this material...(Cancel to delete without searching),"Дополнительный инструмент поиска для использования этого материала... (Отмена, чтобы удалить без поиска)"
+8AF4B718-video-export,AVI (*.avi)|*.avi;,AVI (*.avi)|*.avi;
+8AF4B718-video-export,AVI (*.avi)|*.avi,AVI (*.avi)|*.avi
+8AF4B718-video-export,MP4 (*.mp4)|*.mp4,MP4 (*.mp4)|*.mp4
+97CDB75A-ebook-export,%4d x %4d,%4d x %4d
+97CDB75A-ebook-export,%s (%s),%s (%s)
+97CDB75A-ebook-export,https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top,https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top
+9D97267F-close-glyph,×,×
+B7DCE242-3d-figure-import,"%s
+This file can be imported with realistic rendering.
+Please select how to import the texture for this file.","%s
+Этот файл можно импортировать с реалистичной визуализацией.
+Пожалуйста, выберите способ импорта текстуры для этого файла."
+B8DA21EC-page-counter,%d / %d,%d / %d
+BFA867AE-quick-access, , 
+BFA867AE-quick-access,Backspace,Backspace
+BFA867AE-quick-access,OK,OK
+DD705E0D-cloud-menu,"There is no Cloud data for this item. 
+It may have been deleted in another environment. 
+A recovery process will be executed to keep this data. 
+
+Do you want to proceed?","Для этого элемента нет облачных данных. 
+Возможно, он был удален в другой среде. 
+Для сохранения этих данных будет выполнен процесс восстановления. 
+
+Хотите продолжить?"
+DD705E0D-cloud-menu,"This cloud data does not exist.
+It may have been deleted in another environment. 
+Open the data and carry out the recovery process.","Эти облачные данные не существуют.
+Возможно, он был удален в другой среде. 
+Откройте данные и проведите процесс восстановления."
+DD705E0D-cloud-menu,"Unable to find file. 
+
+It may have been moved, deleted, or the name may have been changed. 
+Click the [OK] button to browse for the file or click the [Cancel] button to delete the work.","Не удалось найти файл. 
+
+Возможно, он был перемещен, удален или имя могло быть изменено. 
+Нажмите кнопку [OK], чтобы найти файл, или нажмите кнопку [Отмена], чтобы удалить работу."
+DD705E0D-cloud-menu,"Unable to find file. 
+
+It may have been moved, deleted, or the name may have been changed. 
+Click the OK button to delete the work.","Не удалось найти файл. 
+
+Возможно, он был перемещен, удален или имя могло быть изменено. 
+Нажмите кнопку OK, чтобы удалить работу."
+DD705E0D-cloud-menu,https://license-account-us.celsys.co.jp/hb.php,https://license-account-us.celsys.co.jp/hb.php
+DD705E0D-cloud-menu,https://www.clipstudio.net/en/dl,https://www.clipstudio.net/en/dl
+DD705E0D-cloud-menu,https://gd.clip-studio.com/gd?id=servererror-en-us,https://gd.clip-studio.com/gd?id=servererror-en-us
+DD705E0D-cloud-menu,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en
+DD705E0D-cloud-menu,Register master content to Clip Studio Mono,Зарегистрируйте основной контент в Clip Studio Mono
+DD705E0D-cloud-menu,"マスターコンテンツ実データがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。","マスターコンテンツ実データがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。"
+DD705E0D-cloud-menu,"マスターコンテンツ設定プロパティデータがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。","マスターコンテンツ設定プロパティデータがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。"
+DD705E0D-cloud-menu,/allow/gd.html?page=csp-activation-codes:%s,/allow/gd.html?page=csp-activation-codes:%s
+DD705E0D-cloud-menu,%s : %s,%s : %s
+DD705E0D-cloud-menu,Failed to upload the file. Please check the connectivity of your device.,"Не удалось загрузить файл. Пожалуйста, проверьте подключение вашего устройства."
+DD705E0D-cloud-menu,100,100
+DD705E0D-cloud-menu,300,300
+E79C2AC5-material-catalog,△,△
+E79C2AC5-material-catalog,▽,▽
+E79C2AC5-material-catalog,"Make this sub tool snap to rulers, etc.",Сделайте привязку этого вспомогательного инструмента к линейкам и т. д.
+E79C2AC5-material-catalog,Saving recovery information. Recovery settings can be adjusted under [Preferences].,Сохранение информации для восстановления. Настройки восстановления можно настроить в разделе [Настройки].
+E79C2AC5-material-catalog,  ,  
+E79C2AC5-material-catalog,↑,↑
+E79C2AC5-material-catalog,→,→
+E79C2AC5-material-catalog,↓,↓
+E79C2AC5-material-catalog,←,←
+E79C2AC5-material-catalog,20,20
+E79C2AC5-material-catalog,80,80
+E79C2AC5-material-catalog,270,270
+E79C2AC5-material-catalog,60,60
+E79C2AC5-material-catalog,130,130
+E79C2AC5-material-catalog,220,220
+E79C2AC5-material-catalog,140,140
+E79C2AC5-material-catalog, , 
+E79C2AC5-material-catalog,Index when using sub tool unique cursor,Индекс при использовании уникального курсора вспомогательного инструмента
+E79C2AC5-material-catalog,"Set the size of the brush.
+You can also link the brush size to pen dynamics such as pen pressure by selecting the [Dynamics] button to the right.","Установите размер кисти.
+Вы также можете связать размер кисти с динамикой пера, например с давлением пера, выбрав кнопку [Динамика] справа."
+E79C2AC5-material-catalog,"Set the thickness of the brush tip.
+You can also link the thickness to pen dynamics such as pen pressure by selecting the [Dynamics] button to the right.","Установите толщину кончика кисти.
+Вы также можете связать толщину с динамикой пера, например с давлением пера, выбрав кнопку [Динамика] справа."
+E79C2AC5-material-catalog,"When this setting is on, you can snap to rulers, special rulers, and the canvas grid when drawing, according to the settings in the View menu > Snap. This does not apply to sub tools that have this setting turned off.","Если этот параметр включен, вы можете привязываться к линейкам, специальным линейкам и сетке холста при рисовании в соответствии с настройками в меню «Вид» > «Привязка». Это не относится к вспомогательным инструментам, у которых этот параметр отключен."
+E79C2AC5-material-catalog,"This setting changes how the [Velocity] is calculated when used as input for tool dynamics. When turned on, the change caused by the speed of the pen will be consistent across different devices. When turned off, velocity will be calculated as in previous versions.","Этот параметр изменяет способ расчета [Скорости] при использовании в качестве входных данных для динамики инструмента. При включении изменения, вызванные скоростью пера, будут одинаковыми на разных устройствах. При отключении скорость будет рассчитываться так же, как и в предыдущих версиях."
+E79C2AC5-material-catalog,Change [Brush shape] for current sub tool.,Измените [Форма кисти] для текущего вспомогательного инструмента.
+E79C2AC5-material-catalog,"Save the current brush shape as a preset. 
+Once saved as a preset, you can use it for other sub tools.","Сохраните текущую форму кисти в качестве предустановки. 
+После сохранения в качестве предустановки вы можете использовать ее для других вспомогательных инструментов."
+E79C2AC5-material-catalog,Moves the start points of the grid and ruler bar (shown using the [View] menu). This tool does not move layers.,Перемещает начальные точки сетки и линейки (отображаются с помощью меню [Вид]). Этот инструмент не перемещает слои.
+E79C2AC5-material-catalog,"When this setting is on, you can align and snap to objects when dragging objects or handles,  according to the settings in the View menu > Snap. When this setting is turned off, the sub tool will not snap to other objects.","Если этот параметр включен, вы можете выравнивать и привязывать объекты при перетаскивании объектов или маркеров в соответствии с настройками в меню «Вид» > «Привязка». Если этот параметр отключен, вспомогательный инструмент не будет привязываться к другим объектам."
+E79C2AC5-material-catalog,"When this option is turned on, the lines will be created with extra control points for adjusting the curve. After making the lines, click with the [Object] sub tool to adjust the curve.
+If you want straight lines, leave this box unchecked.","Когда эта опция включена, линии будут создаваться с дополнительными контрольными точками для настройки кривой. После создания линий щелкните вспомогательным инструментом [Объект], чтобы настроить кривую.
+Если вам нужны прямые линии, оставьте этот флажок снятым."
+E79C2AC5-material-catalog,"Select whether changes to the Tool Property palette apply to new text or selected text. When set to “New only”, changes in the Tool Property will not affect any selected text. When set to “Selected text”, the properties will apply to new and selected text.
+
+","Выберите, будут ли изменения в палитре свойств инструмента применяться к новому или выделенному тексту. Если установлено значение «Только новое», изменения в свойстве инструмента не повлияют на выделенный текст. Если установлено значение «Выбранный текст», свойства будут применяться к новому и выделенному тексту."
+E79C2AC5-material-catalog,"When this setting is turned off, the sub tool will not snap to symmetrical rulers even when snapping is enabled.","Если этот параметр отключен, вспомогательный инструмент не будет привязываться к симметричным линейкам, даже если привязка включена."
+E79C2AC5-material-catalog,"Set the fog type. 
+Depth fog becomes thicker evenly according to the distance from the screen. 
+Distance fog becomes thicker spherically according to the distance from the camera.","Установите тип тумана. 
+Глубина тумана становится гуще равномерно в зависимости от расстояния от экрана. 
+Туман на расстоянии сферически становится толще в зависимости от расстояния от камеры."
+E79C2AC5-material-catalog,Select whether the Tool Property palette applies to new text or selected text,"Выберите, будет ли палитра свойств инструмента применяться к новому или выделенному тексту."
+E79C2AC5-material-catalog,*,*
+E79C2AC5-material-catalog,Show or hide this setting in the Tool Property palette.,Отобразите или скройте этот параметр на палитре свойств инструмента.
+E79C2AC5-material-catalog,Make this sub tool snap to symmetrical rulers,Сделайте привязку этого вспомогательного инструмента к симметричным линейкам.
+E79C2AC5-material-catalog,%.1f LPI / %d%%,%.1f LPI / %d%%
+E79C2AC5-material-catalog,%d%% %d/%d,%d%% %d/%d
+F2AD839B-license-dialogs,https://www2.celsys.co.jp/support/service_en/service.html,https://www2.celsys.co.jp/support/service_en/service.html
+F2AD839B-license-dialogs,http://www.clipstudio.net/en/,http://www.clipstudio.net/en/
+F2AD839B-license-dialogs,http://www.clipstudio.net/en/support/,http://www.clipstudio.net/en/support/
+F2AD839B-license-dialogs,https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=,https://us-lic.celsys.co.jp/productcontrol/ periodexpired?key=
+F2AD839B-license-dialogs,https://us-lic.celsys.co.jp/activate/checkLicense?OnAction,https://us-lic.celsys.co.jp/activate/checkLicense?OnAction
+F2AD839B-license-dialogs,https://license-account-us.celsys.co.jp/%s/api/checkLicense,https://license-account-us.celsys.co.jp/%s/api/checkLicense
+F2AD839B-license-dialogs,https://license-account-us.celsys.co.jp/%s/api/refreshLicense,https://license-account-us.celsys.co.jp/%s/api/refreshLicense
+F2AD839B-license-dialogs,---,---
+F2AD839B-license-dialogs,https://trial-us-lic.celsys.co.jp/api/autoissue,https://trial-us-lic.celsys.co.jp/api/autoissue
+F2AD839B-license-dialogs,https://sub-us-lic.celsys.co.jp/license/checkLicense?OnAction,https://sub-us-lic.celsys.co.jp/license/checkLicense?OnAction
+F2AD839B-license-dialogs,https://sub2-us-lic.celsys.co.jp/license/checkLicense?OnAction,https://sub2-us-lic.celsys.co.jp/license/checkLicense?OnAction
+F2AD839B-license-dialogs,https://license-account-us.celsys.co.jp/en-us/manually/checkLicense,https://license-account-us.celsys.co.jp/en-us/manually/checkLicense
+F2AD839B-license-dialogs,https://us-lic.celsys.co.jp/ca,https://us-lic.celsys.co.jp/ca
+F2AD839B-license-dialogs,https://license-account-us.celsys.co.jp/hb.php,https://license-account-us.celsys.co.jp/hb.php
+F2AD839B-license-dialogs,https://license-account-us.celsys.co.jp/%s/api/listOwnedLicenses,https://license-account-us.celsys.co.jp/%s/api/listOwnedLicenses
+F2AD839B-license-dialogs,https://us-lic.celsys.co.jp/ch?n=3,https://us-lic.celsys.co.jp/ch?n=3
+F2AD839B-license-dialogs,https://www.clipstudio.net/gd?id=csp-dl-v1-en,https://www.clipstudio.net/gd?id=csp-dl-v1-en
+F2AD839B-license-dialogs,                                             ,                                             
+F2AD839B-license-dialogs, , 
+F2AD839B-license-dialogs,http://www.celsys.co.jp/en/,http://www.celsys.co.jp/en/
+F2AD839B-license-dialogs,http://www.clipstudio.net/en/site/menu_csp/index.html,http://www.clipstudio.net/en/site/menu_csp/index.html
+F2AD839B-license-dialogs,https://www.clip-studio.com/site/gd/index.php?id=cpaen,https://www.clip-studio.com/site/gd/index.php?id=cpaen
+F2AD839B-license-dialogs,http://sta.www.clipstudio.net/getinfo/getinfo.php,http://sta.www.clipstudio.net/getinfo/getinfo.php
+F2AD839B-license-dialogs,http://www.clipstudio.net/getinfo/getinfo.php?serialnumber=%s&version=%s&date=%s&execmode=%d&lang=en,http://www.clipstudio.net/getinfo/getinfo.php?serialnumber=%s&version=%s&date=%s&execmode=%d&lang=en
+FCBD92AE-opengl-checker,"CELSYS, Inc.","CELSYS, Inc."
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/nvidia.html,http://www.clipstudio.net/en/site/opengl/nvidia.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/amd.html,http://www.clipstudio.net/en/site/opengl/amd.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/intel.html,http://www.clipstudio.net/en/site/opengl/intel.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/etc.html,http://www.clipstudio.net/en/site/opengl/etc.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/mac.html,http://www.clipstudio.net/en/site/opengl/mac.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/unsupported.html,http://www.clipstudio.net/en/site/opengl/unsupported.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/site/opengl/list.html,http://www.clipstudio.net/en/site/opengl/list.html
+FCBD92AE-opengl-checker,http://www.clipstudio.net/en/support/,http://www.clipstudio.net/en/support/

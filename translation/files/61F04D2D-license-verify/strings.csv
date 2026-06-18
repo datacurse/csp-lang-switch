@@ -18,7 +18,7 @@ Certain features such as saving will be locked.","Ваш пробный пери
 4/1/9#0,"The valid period for this license has expired. 
 Certain features such as saving will be locked.","Срок действия данной лицензии истек. 
 Некоторые функции, такие как сохранение, будут заблокированы."
-4/1/10#0,https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=%s,https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=%s
+4/1/10#0,https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=%s,https://us-lic.celsys.co.jp/productcontrol/ periodexpired?key=%s
 5/1/1#0,license verification,проверка лицензии
 5/1/2#0,trial registration,регистрация пробной версии
 5/1/3#0,Go to the %s website and enter the above authentication key.,Перейдите на сайт %s и введите указанный выше ключ аутентификации.

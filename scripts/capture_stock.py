@@ -6,7 +6,7 @@ Capture stock English + Japanese oracle snapshots from a live CSP install
 into versions/<version>/langs/.
 
 Prerequisites:
-  * CSP installed (supported version: 5.0.0, 5.0.2, or 5.0.4)
+  * CSP installed (supported version: 4.2.0, 5.0.0, 5.0.2, or 5.0.4)
   * UI language set to English
   * CSP closed before running backup steps
 
@@ -40,6 +40,21 @@ def _resource_files(folder: Path) -> list[Path]:
         return []
     return sorted(p for p in folder.iterdir()
                   if p.is_file() and GUID_RE.match(p.name))
+
+
+def resource_lang_dir(resource: Path, lang: str) -> Path:
+    """Return the folder holding GUID resource files for *lang*.
+
+    CSP 5.x stores files under resource/<lang>/ui/; CSP 4.x uses a flat
+    resource/<lang>/ layout. Try ui/ first, then fall back to the lang root.
+    """
+    ui = resource / lang / "ui"
+    if _resource_files(ui):
+        return ui
+    flat = resource / lang
+    if _resource_files(flat):
+        return flat
+    return ui if ui.is_dir() else flat
 
 
 def copy_ui(src: Path, dst: Path, label: str) -> int:
@@ -99,17 +114,20 @@ def main() -> int:
     langs_root_path.mkdir(parents=True, exist_ok=True)
 
     print("\nMain UI:")
-    copy_ui(resource / "english", english_ui_dir(args.version), "english")
-    copy_ui(resource / "japanese", japanese_ui_dir(args.version), "japanese")
+    copy_ui(resource_lang_dir(resource, "english"),
+            english_ui_dir(args.version), "english")
+    copy_ui(resource_lang_dir(resource, "japanese"),
+            japanese_ui_dir(args.version), "japanese")
 
     if args.official_langs:
         print("\nOptional official language UI folders:")
         for d in sorted(resource.iterdir()):
             if d.name in ("english", "japanese", "other") or not d.is_dir():
                 continue
-            if not _resource_files(d):
+            src = resource_lang_dir(resource, d.name)
+            if not _resource_files(src):
                 continue
-            copy_ui(d, langs_root_path / d.name / "ui", d.name)
+            copy_ui(src, langs_root_path / d.name / "ui", d.name)
 
     print("\nPlug-ins:")
     run_pipeline_backup("plugins.py", args.csp, args.version)

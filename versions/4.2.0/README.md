@@ -1,27 +1,29 @@
-# CSP 4.2.0 — stock and build data (skeleton)
+# CSP 4.2.0 — stock and Russian build data
 
-Language snapshots and the Russian community build for **Clip Studio Paint
-Ver. 4.2.0** (forum source:
-[4.2.0 thread](https://vk.com/wall-200668271_44094)).
+This folder holds the **4.2.0** language snapshots and Russian community build.
 
-**Status:** infrastructure skeleton only — no data captured yet. The active
-build target is still `versions/5.0.0/` (`ACTIVE_VERSION` in `src/version.py`
-and both `.spec` files). Flip those to `4.2.0` once this tree is populated and
-verified.
+**Status:** active. Bundled in `csp-lang-switch.exe` alongside the 5.x versions.
 
-Populate with `scripts/capture_stock.py` from a local English CSP 4.2.0 install:
+Layout:
 
 ```
 langs/
-  english/    stock English (ui, plugins)
+  english/    stock English UI + plugins
   japanese/   translation oracle (ui/)
-  russian/    patched Russian community build (after pack)
+  russian/    patched Russian community build (ui + plugins)
 ```
 
-The translation worksheets stay shared at `translation/` — source text is
-stable across builds, so `batch.py dedupe` carries every existing translation
-over by `source`; only genuinely new/changed strings re-export with an empty
-`target`. See [`docs/TRANSLATION_WORKFLOW.md`](../../docs/TRANSLATION_WORKFLOW.md)
-→ "Another CSP version".
+Capture from a live 4.2.0 install (CSP closed, UI language English):
 
-Gitignored — copyrighted Celsys data (`versions/*/langs/`).
+```
+python scripts/capture_stock.py --version 4.2.0
+python src/batch.py --version 4.2.0 pack-all
+python src/plugins.py --version 4.2.0 backup --yes
+python src/plugins.py --version 4.2.0 apply --yes
+```
+
+`pack-all` re-exports keys from the captured stock and maps translations by
+English `source` text, so worksheets built for another CSP version (e.g. 5.0.0)
+still pack correctly for 4.2.0.
+
+Copyrighted Celsys data — gitignored, not redistributed.

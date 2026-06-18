@@ -30,10 +30,7 @@ It is possible to use these items by turning off syncing in the “Projects” t
 2/1/14#0,"Failed to import some files. This may be due to the following:
 
 ・The file was in an unsupported format.
-・The process was cancelled from the “Import 3D File” dialog.","Не удалось импортировать некоторые файлы. Возможные причины:
-
-・Файл был в неподдерживаемом формате.
-・Процесс был отменён в диалоге «Импорт 3D-файла»."
+・The process was cancelled from the “Import 3D File” dialog.",
 2/1/15#0,"Failed to import the file because there is no Documents folder in the Internal Storage of the device. 
 Please create a Documents folder directly under Internal Storage in the file manager app and try again.","Не удалось импортировать файл, так как во внутренней памяти устройства нет папки Documents. 
 Создайте папку Documents непосредственно во внутренней памяти в приложении файлового менеджера и повторите попытку."
