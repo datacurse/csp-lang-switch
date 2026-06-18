@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-SUPPORTED_VERSIONS: tuple[str, ...] = ("5.0.0", "5.0.4")
+SUPPORTED_VERSIONS: tuple[str, ...] = ("5.0.0", "5.0.2", "5.0.4")
 DEFAULT_VERSION = "5.0.0"
 ACTIVE_VERSION = DEFAULT_VERSION
 
@@ -31,6 +31,10 @@ VERSION_PROFILES: dict[str, dict[str, int | str | None]] = {
     "5.0.0": {
         "guard_size": 3467072,
         "guard_sha256": "383463d7b274bf55c764fe955fc39de96853fa71252654cbdd8f4420a4ade815",
+    },
+    "5.0.2": {
+        "guard_size": 3467072,
+        "guard_sha256": "c847ae740570c85816497b79dfcbb7e0f49c5cff0ca57cc4de85d5b4c7d9c66e",
     },
     "5.0.4": {
         "guard_size": 3489410,

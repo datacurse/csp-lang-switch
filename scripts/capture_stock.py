@@ -6,7 +6,7 @@ Capture stock English + Japanese oracle snapshots from a live CSP install
 into versions/<version>/langs/.
 
 Prerequisites:
-  * CSP installed (supported version: 5.0.0 or 5.0.4)
+  * CSP installed (supported version: 5.0.0, 5.0.2, or 5.0.4)
   * UI language set to English
   * CSP closed before running backup steps
 

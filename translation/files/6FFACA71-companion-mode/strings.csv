@@ -1,13 +1,16 @@
 ﻿key,source,target
 2/1/3#0,"If you activate your license on this device, your license will be deactivated from the previous device. 
- There is a limit to the number of times you can transfer licenses across devices.",
+ There is a limit to the number of times you can transfer licenses across devices.","Если вы активируете лицензию на этом устройстве, она будет деактивирована на предыдущем устройстве. 
+ Число переносов лицензии между устройствами ограничено."
 2/1/4#0,You can use Companion Mode for free.,Вы можете использовать режим компаньона бесплатно.
 2/1/5#0,How to use Companion Mode,Как использовать режим компаньона
 2/1/6#0,"If you wish to use Clip Studio Paint on multiple devices regularly, please apply for a plan with the appropriate number of devices.","Если вы хотите регулярно использовать Clip Studio Paint на нескольких устройствах, оформите план с подходящим количеством устройств."
 2/1/7#0,"Your license will be deactivated from the previous device. If you wish to use your license on more than one device at once, please check for a suitable option. 
-There is a limit to how often you can transfer your license across devices in one day.",
+There is a limit to how often you can transfer your license across devices in one day.","Лицензия будет деактивирована на предыдущем устройстве. Если вы хотите использовать лицензию более чем на одном устройстве одновременно, выберите подходящий вариант. 
+Число переносов лицензии между устройствами в течение одного дня ограничено."
 2/1/8#0,"Your license will be deactivated from the previous device. If you wish to use your license on more devices at once, please check for a suitable plan. 
-There is a limit to the number of times you can transfer your plan across devices.",
+There is a limit to the number of times you can transfer your plan across devices.","Лицензия будет деактивирована на предыдущем устройстве. Если вы хотите использовать лицензию на большем числе устройств одновременно, выберите подходящий план. 
+Число переносов плана между устройствами ограничено."
 2/1/9#0,How to change your plan,Как изменить план
 2/1/10#0,Would you like to switch your active device now?,Переключить активное устройство сейчас?
 2/1/11#0,Are you sure you want to activate on this device?,Вы действительно хотите активировать на этом устройстве?
@@ -26,22 +29,27 @@ There is a limit to the number of times you can transfer your plan across device
 9/1/1#0,Your plan is not connected to an account,Ваш план не привязан к учётной записи
 9/1/2#0,Your purchased plan is not connected to a Clip Studio account.,Приобретённый план не привязан к учётной записи Clip Studio.
 9/1/3#0,"You can connect your plan to a Clip Studio account. If you log in, you will be able to access this plan on other devices. 
-You can also continue to use your plan without logging into an account. ",
+You can also continue to use your plan without logging into an account. ","Вы можете привязать план к учётной записи Clip Studio. Если вы войдёте в систему, сможете использовать этот план на других устройствах. 
+Вы также можете продолжить использовать план без входа в учётную запись."
 9/1/4#0,Log in,Войти
 9/1/5#0,Skip login,Пропустить вход
 10/1/1#0,An internet connection is required.,Требуется подключение к интернету.
 10/1/2#0,"You need an internet connection to use the free trial.
-The app will be launched in doodle mode.",
+The app will be launched in doodle mode.","Для использования бесплатной пробной версии требуется подключение к интернету.
+Приложение будет запущено в режиме набросков."
 10/1/3#0,Your free 30 hours have ended.,Ваши бесплатные 30 часов закончились.
 10/1/4#0,The app will launch with limited features.,Приложение запустится с ограниченными функциями.
 10/1/5#0,A server error has occurred.,Произошла ошибка сервера.
 10/1/6#0,"Please wait and try again to use the app for free.
-The app will launch with limited features.",
+The app will launch with limited features.","Подождите и повторите попытку, чтобы использовать приложение бесплатно.
+Приложение запустится с ограниченными функциями."
 11/1/1#0,Launch,Запустить
 11/1/2#0,"Your license was deactivated successfully.
-You can now try all features of the software.",
+You can now try all features of the software.","Лицензия успешно деактивирована.
+Теперь вы можете попробовать все функции программы."
 11/1/3#0,"Your license was deactivated successfully.
-You can now use all features of the software.",
+You can now use all features of the software.","Лицензия успешно деактивирована.
+Теперь вы можете использовать все функции программы."
 11/1/4#0,"This license has reached the maximum number of deactivations, so it cannot be activated on this device.","Эта лицензия достигла максимального числа деактиваций, поэтому её нельзя активировать на этом устройстве."
 11/1/5#0,Failed to deactivate the license.,Не удалось деактивировать лицензию.
 12/1/1#0,Back,Назад
@@ -60,9 +68,11 @@ You can now use all features of the software.",
 13/1/5#0,From %s/year  ,От %s/год  
 13/1/6#0,Perpetual license from %s,Бессрочная лицензия от %s
 13/1/7#0,"From %s/month
-From %s/year    ",
+From %s/year    ","От %s/месяц
+От %s/год"
 13/1/8#0,"From %s/month
-Perpetual license from %s",
+Perpetual license from %s","От %s/месяц
+Бессрочная лицензия от %s"
 13/1/9#0,View plans,Просмотреть планы
 13/1/10#0,Try for free,Попробовать бесплатно
 13/1/11#0,Doodle mode,Режим набросков
@@ -75,10 +85,13 @@ Perpetual license from %s",
 13/1/18#0,Tap here for support,Нажмите здесь для обращения в поддержку
 13/1/19#0,Your plan has expired.,Срок действия вашего плана истёк.
 13/1/20#0,"Some features are limited in the current mode.
-In doodle mode, you cannot save or export your project.",
+In doodle mode, you cannot save or export your project.","Некоторые функции ограничены в текущем режиме.
+В режиме набросков нельзя сохранять или экспортировать проект."
 13/1/21#0,"Some features are limited in the current mode.
 In doodle mode, you cannot save or export your project.
-Tap “Try for free” to use up to 30 hours free per month without limited features.",
+Tap “Try for free” to use up to 30 hours free per month without limited features.","Некоторые функции ограничены в текущем режиме.
+В режиме набросков нельзя сохранять или экспортировать проект.
+Нажмите «Попробовать бесплатно», чтобы использовать до 30 часов в месяц бесплатно без ограничений."
 13/1/22#0,I understand,Понятно
 13/1/23#0,Close,Закрыть
 14/1/1#0,Back,Назад
@@ -91,7 +104,8 @@ Tap “Try for free” to use up to 30 hours free per month without limited feat
 16/1/3#0,Activation code,Код активации
 16/1/4#0,Serial number,Серийный номер
 16/1/5#0,"For smartphones, tablets, and PCs 
-(12 or 13 digits)",
+(12 or 13 digits)","Для смартфонов, планшетов и ПК 
+(12 или 13 цифр)"
 16/1/6#0,For Windows/macOS (30 digits),Для Windows/macOS (30 цифр)
 16/1/7#0,Enter,Ввести
 16/1/8#0,Back,Назад
@@ -101,18 +115,22 @@ Tap “Try for free” to use up to 30 hours free per month without limited feat
 16/1/12#0,Active,Активный
 16/1/13#0,Active,Активный
 16/1/14#0,"Install
-compatible version",
+compatible version","Установить
+совместимую версию"
 16/1/15#0,Serial number:,Серийный номер:
 16/1/16#0,Order number:,Номер заказа:
 16/1/17#0,License number:,Номер лицензии:
 16/1/18#0,Contact us,Связаться с нами
 16/1/19#0,No plans found.,Планы не найдены.
 16/1/20#0,"This license is already being used on another device. 
-You will need to switch the active device to use it on this device.",
+You will need to switch the active device to use it on this device.","Эта лицензия уже используется на другом устройстве. 
+Чтобы использовать её на этом устройстве, необходимо переключить активное устройство."
 16/1/21#0,"This license is being used on another device. 
-To use this license, you will need to switch the activation to this device.",
+To use this license, you will need to switch the activation to this device.","Эта лицензия используется на другом устройстве. 
+Чтобы использовать эту лицензию, необходимо переключить активацию на это устройство."
 16/1/22#0,"This license has reached the maximum number of deactivations,
-so it cannot be activated on this device.",
+so it cannot be activated on this device.","Эта лицензия достигла максимального числа деактиваций,
+поэтому её нельзя активировать на этом устройстве."
 16/1/23#0,You cannot use this on the current device.,Это нельзя использовать на текущем устройстве.
 16/1/24#0,You cannot use this license on the current device.,Эту лицензию нельзя использовать на текущем устройстве.
 16/1/25#0,This version cannot be activated with the current license.,Эту версию нельзя активировать с текущей лицензией.
@@ -147,13 +165,15 @@ so it cannot be activated on this device.",
 21/1/2#0,Enter serial number,Введите серийный номер
 21/1/3#0,Windows/macOS (30 characters),Windows/macOS (30 символов)
 21/1/4#0,"Failed to launch.
-Please check your serial number and try again.",
+Please check your serial number and try again.","Не удалось запустить.
+Проверьте серийный номер и повторите попытку."
 21/1/5#0,Having trouble with your serial number?,Проблемы с серийным номером?
 21/1/6#0,Launch,Запустить
 22/1/1#0,Back,Назад
 22/1/2#0,An internet connection is required.,Требуется подключение к интернету.
 22/1/3#0,"You need an internet connection to use the free trial.
-The app will be launched in doodle mode.",
+The app will be launched in doodle mode.","Для использования бесплатной пробной версии требуется подключение к интернету.
+Приложение будет запущено в режиме набросков."
 22/1/4#0,Launch,Запустить
 23/1/1#0,Back,Назад
 23/1/2#0,Continue offline,Продолжить офлайн
@@ -161,14 +181,17 @@ The app will be launched in doodle mode.",
 24/1/2#0,Enter 2-step verification code,Введите код двухэтапной проверки
 24/1/3#0,Enter the 6-digit code,Введите 6-значный код
 24/1/4#0,"A verification code has been sent to your registered email address.
-The verification code will expire in 10 minutes.",
+The verification code will expire in 10 minutes.","Код проверки отправлен на ваш зарегистрированный адрес электронной почты.
+Срок действия кода проверки истечёт через 10 минут."
 24/1/5#0,Resend verification code,Отправить код проверки повторно
 24/1/6#0,Skip verification for 90 days on this device,Пропускать проверку на этом устройстве в течение 90 дней
 24/1/7#0,Verify,Проверить
 24/1/8#0,"Verification failed.
-Please enter the verification code again or try reissuing it.",
+Please enter the verification code again or try reissuing it.","Не удалось выполнить проверку.
+Введите код проверки снова или попробуйте перевыпустить его."
 24/1/9#0,"Verification failed.
-Please check the connectivity of your device.",
+Please check the connectivity of your device.","Не удалось выполнить проверку.
+Проверьте подключение вашего устройства."
 25/1/1#0,Draw and create with Clip Studio Paint,Рисуйте и творите с Clip Studio Paint
 25/1/2#0,Purchase a license,Приобрести лицензию
 25/1/3#0,Purchase,Купить
@@ -178,12 +201,15 @@ Please check the connectivity of your device.",
 25/1/7#0,Download,Скачать
 25/1/8#0,Launch in doodle mode,Запустить в режиме набросков
 25/1/9#0,"Your current license (Ver.%s) is not compatible with this version. 
-To use all features, please use a license for Ver.%s.",
+To use all features, please use a license for Ver.%s.","Ваша текущая лицензия (вер. %s) несовместима с этой версией. 
+Чтобы использовать все функции, используйте лицензию для вер. %s."
 25/1/10#0,"Your Update Pass has expired.
-In order to continue using the app, you need a license or plan for Ver.%s.",
+In order to continue using the app, you need a license or plan for Ver.%s.","Срок действия вашего Update Pass истёк.
+Чтобы продолжить использовать приложение, вам нужна лицензия или план для вер. %s."
 26/1/1#0,Back,Назад
 26/1/2#0,You cannot use this version.,Эту версию нельзя использовать.
 26/1/3#0,"This version cannot be launched with your current license.
-Please install the appropriate version for your license.",
+Please install the appropriate version for your license.","Эту версию нельзя запустить с вашей текущей лицензией.
+Установите подходящую версию для вашей лицензии."
 26/1/4#0,Install,Установить
 27/1/1#0,https://www.clipstudio.net/gd?id=improvement-enus,https://www.clipstudio.net/gd?id=improvement-enus

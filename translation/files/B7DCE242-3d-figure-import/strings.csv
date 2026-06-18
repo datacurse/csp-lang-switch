@@ -3,7 +3,8 @@
 1/1/2#0,3D drawing figure (female),3D-фигура для рисования (женская)
 2/1/1#0,Import 3D file,Импортировать 3D-файл
 2/1/2#0,"This file can be imported with realistic rendering.
-Please select how to import the texture for this file.",
+Please select how to import the texture for this file.","Этот файл можно импортировать с реалистичным рендерингом.
+Выберите способ импорта текстуры для этого файла."
 2/1/4#0,Cancel,Отмена
 2/1/5#0,Do not show again,Больше не показывать
 2/1/6#0,About texture import settings,О настройках импорта текстур
@@ -12,5 +13,8 @@ Please select how to import the texture for this file.",
 2/1/9#0,"You cannot edit this 3D layer in Version 4.1.4 or earlier.
 
 To enable rendering, go to Advanced Tool Settings > Light Source 
-and turn on “Apply light source”.",
+and turn on “Apply light source”.","Этот 3D-слой нельзя редактировать в версии 4.1.4 или более ранней.
+
+Чтобы включить рендеринг, перейдите в «Дополнительные настройки инструмента» > «Источник света» 
+и включите «Применить источник света»."
 2/1/10#0,Basic,Базовый

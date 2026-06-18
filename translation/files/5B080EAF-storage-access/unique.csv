@@ -10,7 +10,8 @@ Confirm,Подтвердить
 Replace,Заменить
 Back,Назад
 "From “Select Folder”, select the folder you want to display, then grant access.
-If you do not want to grant access permissions, use “Open storage” and select the file.",
+If you do not want to grant access permissions, use “Open storage” and select the file.","В «Выбрать папку» выберите папку, которую нужно отобразить, затем предоставьте доступ.
+Если вы не хотите предоставлять разрешения на доступ, используйте «Открыть хранилище» и выберите файл."
 Select folder,Выбрать папку
 Search from other directories,Поиск в других каталогах
 Save to other directory,Сохранить в другой каталог
@@ -25,7 +26,8 @@ Size,Размер
 Create new folder,Создать папку
 Cancel,Отмена
 "You cannot use folder names that begin with a period (.) or any of the following characters.
-%s",
+%s","Нельзя использовать имена папок, начинающиеся с точки (.), или любые из следующих символов.
+%s"
 """%s"" already exists. Please enter a different folder name.","""%s"" уже существует. Введите другое имя папки."
 Could not add directory,Не удалось добавить каталог
 Cannot add folders beginning with a period (.) or inside a folder that begins with a period to the directory list. Please choose a different folder.,"Нельзя добавить в список каталогов папки, начинающиеся с точки (.) или находящиеся внутри папки, которая начинается с точки. Выберите другую папку."
@@ -37,5 +39,6 @@ Cannot select folders beginning with a period (.) or inside a folder that begins
 Could not save file,Не удалось сохранить файл
 You cannot choose a folder beginning with a period (.) or inside a folder that begins with a period as a save location. Please choose a different folder.,"Нельзя выбрать в качестве места сохранения папку, начинающуюся с точки (.) или находящуюся внутри папки, которая начинается с точки. Выберите другую папку."
 "You cannot use a file name starting with a period (.) or including any of the following characters.
-%s",
+%s","Нельзя использовать имя файла, начинающееся с точки (.), или содержащее любые из следующих символов.
+%s"
 Close,Закрыть

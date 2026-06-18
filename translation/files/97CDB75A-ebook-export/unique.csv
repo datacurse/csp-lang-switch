@@ -14,11 +14,13 @@ Custom,Пользовательский
 (recommended),(рекомендуется)
 "(small size, low quality)","(малый размер, низкое качество)"
 "This operation cannot be executed because the Kindle preview tool is not installed.
-Do you want to go to the installation guide?",
+Do you want to go to the installation guide?","Эту операцию нельзя выполнить, так как средство предпросмотра Kindle не установлено.
+Перейти к руководству по установке?"
 https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top,https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top
 Converting,Преобразование
 "The Kindle preview tool is required for the preview of exported data.
-Press the [About the Kindle preview tool] button for more information.",
+Press the [About the Kindle preview tool] button for more information.","Для предпросмотра экспортированных данных требуется средство предпросмотра Kindle.
+Нажмите кнопку [О средстве предпросмотра Kindle] для получения дополнительных сведений."
 About the Kindle preview tool,О средстве предпросмотра Kindle
 Install path settings for Kindle preview tool,Настройки пути установки средства предпросмотра Kindle
 Browse,Обзор

@@ -1,8 +1,9 @@
 ﻿source,target
-Program Files,Program Files
+Program Files,Программные файлы
 OpenToonz 1.%d,OpenToonz 1.%d
 "It is necessary to install OpenToonz to export OpenToonz scene files. 
- Please check the OpenToonz Official Website to learn more about OpenToonz.",
+ Please check the OpenToonz Official Website to learn more about OpenToonz.","Для экспорта файлов сцен OpenToonz необходимо установить OpenToonz. 
+ Ознакомьтесь с официальным сайтом OpenToonz, чтобы узнать больше об OpenToonz."
 OpenToonz Official Home Page,Официальная домашняя страница OpenToonz
 Install path settings for OpenToonz,Настройки пути установки OpenToonz
 Browse,Обзор

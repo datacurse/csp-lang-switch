@@ -1,8 +1,8 @@
 ﻿source,target
-BOOK VIEWER,BOOK VIEWER
+BOOK VIEWER,BOOK ПРОСМОТР
 "CELSYS, Inc.","CELSYS, Inc."
-.:CELSYS:BOOK VIEWER:1.0,.:CELSYS:BOOK VIEWER:1.0
-.:CELSYS:BOOK VIEWER Ver1 Settings,.:CELSYS:BOOK VIEWER Ver1 Settings
+.:CELSYS:BOOK VIEWER:1.0,.:CELSYS:BOOK ПРОСМОТР:1.0
+.:CELSYS:BOOK VIEWER Ver1 Settings,.:CELSYS:BOOK Настройки ПРОСМОТРА версии 1
 3D Preview for Binding,3D-просмотр переплёта
 About 3D Preview for Binding,О 3D-просмотре переплёта
 Version information,Сведения о версии
@@ -33,4 +33,6 @@ Output,Вывод
 / %d page,/ %d стр.
 "BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
 
-    Product Version: %s",
+    Product Version: %s","BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
+
+    Версия продукта: %s"

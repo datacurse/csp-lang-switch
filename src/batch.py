@@ -319,8 +319,8 @@ def _translations_by_source(rec: dict) -> dict[str, str]:
     uniq = unique_for(rec)
     if uniq.exists():
         for r in _read_rows(uniq):
-            t = (r.get("target") or "").strip()
-            if t:
+            t = r.get("target")
+            if t is not None and t != "":
                 trans[_lf(r["source"])] = t
     if not trans:
         ws = worksheet_for(rec)

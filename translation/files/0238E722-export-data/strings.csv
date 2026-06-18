@@ -1,12 +1,14 @@
 ﻿key,source,target
 1/1/1#0,Exporting data...,Экспорт данных...
 1/1/2#0,"This will export the work “%s”. 
- Do you want to continue?",
+ Do you want to continue?","Будет экспортировано произведение «%s». 
+ Продолжить?"
 1/1/3#0,Please download the latest version of Clip Studio Paint to export your work.,"Чтобы экспортировать произведение, скачайте последнюю версию Clip Studio Paint."
 1/1/4#0,Download latest version,Скачать последнюю версию
 1/1/5#0,Cancel,Отмена
 1/1/6#0,"This feature is not available on the version of Clip Studio that you have installed. 
-Please download the latest version and try again.",
+Please download the latest version and try again.","Эта функция недоступна в установленной версии Clip Studio. 
+Скачайте последнюю версию и повторите попытку."
 1/1/7#0,Failed to acquire rendering parameters.,Не удалось получить параметры рендеринга.
 1/1/8#0,"The server is currently under maintenance, so the rendering parameters could not be retrieved.","Сервер в настоящее время на техническом обслуживании, поэтому не удалось получить параметры рендеринга."
 1/1/9#0,Failed to retrieve draft ID.,Не удалось получить идентификатор черновика.

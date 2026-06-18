@@ -19,15 +19,18 @@
 1/1/20#0,Graphics performance check,Проверка производительности графики
 1/1/21#0,Graphics performance check,Проверка производительности графики
 1/1/22#0,"CELSYS, Inc.","CELSYS, Inc."
-1/1/27#0,.:CELSYS:Graphics performance check:0.6,.:CELSYS:Graphics performance check:0.6
-1/1/28#0,.:CELSYS:Settings of graphics performance check,.:CELSYS:Settings of graphics performance check
+1/1/27#0,.:CELSYS:Graphics performance check:0.6,.:CELSYS:Проверка производительности графики:0.6
+1/1/28#0,.:CELSYS:Settings of graphics performance check,.:CELSYS:Настройки проверки производительности графики
 1/1/29#0,"Graphics performance check 1.0.6
 
-(C) CELSYS, Inc. All Rights Reserved.",
+(C) CELSYS, Inc. All Rights Reserved.","Проверка производительности графики 1.0.6
+
+(C) CELSYS, Inc. Все права защищены."
 1/1/30#0,"Check the graphics performance in the using environment and whether 3D features of the software
-will work correctly. Proceed to graphics performance check?",
+will work correctly. Proceed to graphics performance check?","Проверьте производительность графики в используемой среде и то, будут ли 3D-функции программы работать корректно. Перейти к проверке производительности графики?"
 1/1/31#0,"The previous graphics performance check closed unexpectedly. 
- Do you want to run another graphics performance check?",
+ Do you want to run another graphics performance check?","Предыдущая проверка производительности графики неожиданно завершилась. 
+ Запустить ещё одну проверку производительности графики?"
 1/1/32#0,You can run a graphics performance check from the Help menu.,Проверку производительности графики можно запустить из меню «Справка».
 1/1/34#0,http://www.clipstudio.net/en/site/opengl/nvidia.html,http://www.clipstudio.net/en/site/opengl/nvidia.html
 1/1/35#0,http://www.clipstudio.net/en/site/opengl/amd.html,http://www.clipstudio.net/en/site/opengl/amd.html
@@ -59,21 +62,27 @@ will work correctly. Proceed to graphics performance check?",
 4/1/2#0,You may have problems for 3D functions with your computer.,При использовании 3D-функций на вашем компьютере возможны проблемы.
 4/1/3#0,You cannot use any 3D features with your computer.,Вы не можете использовать 3D-функции на своём компьютере.
 4/1/4#0,"If 3D function doesn't work correctly when using it, click 
- the below button and check the operation environment.",
+ the below button and check the operation environment.","Если 3D-функция работает некорректно при использовании, нажмите 
+ кнопку ниже и проверьте рабочую среду."
 4/1/5#0,"If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
 4/1/6#0,"If 3D function doesn't work correctly when using it, it may be fixed with 
- the update of graphic driver.",
+ the update of graphic driver.","Если 3D-функция работает некорректно при использовании, проблема может быть решена 
+ обновлением графического драйвера."
 4/1/7#0,Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
 4/1/8#0,"If you want to use 3D function, please check 
- the operation environment for 3D function from the below web page and use the appropriate computer.",
+ the operation environment for 3D function from the below web page and use the appropriate computer.","Если вы хотите использовать 3D-функцию, проверьте 
+ рабочую среду для 3D-функции на указанной ниже веб-странице и используйте подходящий компьютер."
 5/1/1#0,You can use this software without problems with your computer.,Вы можете без проблем использовать эту программу на своём компьютере.
 5/1/2#0,You may have problems for this software with your computer.,При использовании этой программы на вашем компьютере возможны проблемы.
 5/1/3#0,You cannot use this software with your computer.,Вы не можете использовать эту программу на своём компьютере.
 5/1/4#0,"If the software does not start correctly or works slowly, click 
- the below button and check the operation environment.",
+ the below button and check the operation environment.","Если программа не запускается корректно или работает медленно, нажмите 
+ кнопку ниже и проверьте рабочую среду."
 5/1/5#0,"If this does not resolve the issue, please contact us from the following page.","Если это не решит проблему, свяжитесь с нами через следующую страницу."
 5/1/6#0,"If the software does not start correctly or works slowly, it may be fixed with 
- the update of graphic driver.",
+ the update of graphic driver.","Если программа не запускается корректно или работает медленно, проблема может быть решена 
+ обновлением графического драйвера."
 5/1/7#0,Refer to how to update by clicking the below button.,"Ознакомьтесь со способом обновления, нажав кнопку ниже."
 5/1/8#0,"Please check the operation environment for this software from the below web page
- and use the appropriate computer.",
+ and use the appropriate computer.","Проверьте рабочую среду для этой программы на указанной ниже веб-странице
+ и используйте подходящий компьютер."

@@ -10,7 +10,8 @@
 1/1/9#0,Replace,Заменить
 1/1/10#0,Back,Назад
 1/1/11#0,"From “Select Folder”, select the folder you want to display, then grant access.
-If you do not want to grant access permissions, use “Open storage” and select the file.",
+If you do not want to grant access permissions, use “Open storage” and select the file.","В «Выбрать папку» выберите папку, которую нужно отобразить, затем предоставьте доступ.
+Если вы не хотите предоставлять разрешения на доступ, используйте «Открыть хранилище» и выберите файл."
 1/1/12#0,Select folder,Выбрать папку
 1/1/13#0,Search from other directories,Поиск в других каталогах
 1/1/14#0,Save to other directory,Сохранить в другой каталог
@@ -25,7 +26,8 @@ If you do not want to grant access permissions, use “Open storage” and selec
 1/1/23#0,Create new folder,Создать папку
 1/1/25#0,Cancel,Отмена
 1/1/26#0,"You cannot use folder names that begin with a period (.) or any of the following characters.
-%s",
+%s","Нельзя использовать имена папок, начинающиеся с точки (.), или любые из следующих символов.
+%s"
 1/1/27#0,"""%s"" already exists. Please enter a different folder name.","""%s"" уже существует. Введите другое имя папки."
 1/1/28#0,Could not add directory,Не удалось добавить каталог
 1/1/29#0,Cannot add folders beginning with a period (.) or inside a folder that begins with a period to the directory list. Please choose a different folder.,"Нельзя добавить в список каталогов папки, начинающиеся с точки (.) или находящиеся внутри папки, которая начинается с точки. Выберите другую папку."
@@ -37,5 +39,6 @@ If you do not want to grant access permissions, use “Open storage” and selec
 1/1/35#0,Could not save file,Не удалось сохранить файл
 1/1/36#0,You cannot choose a folder beginning with a period (.) or inside a folder that begins with a period as a save location. Please choose a different folder.,"Нельзя выбрать в качестве места сохранения папку, начинающуюся с точки (.) или находящуюся внутри папки, которая начинается с точки. Выберите другую папку."
 1/1/37#0,"You cannot use a file name starting with a period (.) or including any of the following characters.
-%s",
+%s","Нельзя использовать имя файла, начинающееся с точки (.), или содержащее любые из следующих символов.
+%s"
 1/1/38#0,Close,Закрыть

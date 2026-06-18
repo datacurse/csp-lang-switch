@@ -99,7 +99,8 @@
 4/1/84#0,Please enter file name.,Введите имя файла.
 4/1/85#0,A file with the same name as the folder already exists.,"Файл с таким же именем, как у папки, уже существует."
 4/1/86#0,"Files with the same name as the export files already exist in the export folder.
-These files will be overwritten. Do you want to proceed?",
+These files will be overwritten. Do you want to proceed?","В папке экспорта уже есть файлы с такими же именами, как у экспортируемых.
+Эти файлы будут перезаписаны. Продолжить?"
 4/1/87#0,A folder with the same name already exists. Would you like to save the file to the existing folder?,Папка с таким же именем уже существует. Сохранить файл в существующую папку?
 4/1/88#0,You cannot save images with a height or width of more than %d px in this format.,В этом формате нельзя сохранять изображения с высотой или шириной более %d пикс.
 4/1/89#0,"Due to the file name settings, some file names may exceed %d characters: 
@@ -109,11 +110,19 @@ These files will be overwritten. Do you want to proceed?",
 
 If you continue, the file may not be exported due to system restrictions. 
 We recommend you rename with a shorter name.
-Do you want to continue exporting anyway?",
+Do you want to continue exporting anyway?","Из-за настроек имени файла некоторые имена могут превысить %d символов: 
+
+%s
+(%d символов)
+
+Если продолжить, файл может не экспортироваться из-за системных ограничений. 
+Рекомендуем переименовать с более коротким именем.
+Всё равно продолжить экспорт?"
 4/1/90#0,Preset,Набор настроек
 4/1/91#0,Custom,Пользовательский
 4/1/92#0,"The output size of  %d by %d  px registered for this preset cannot be applied due to the aspect ratio of the current canvas.
-The output size will be set to %d by%dpx.",
+The output size will be set to %d by%dpx.","Размер вывода %d на %d пикс., зарегистрированный для этого набора настроек, нельзя применить из-за соотношения сторон текущего холста.
+Размер вывода будет установлен на %d на %d пикс."
 5/1/31#0,BMP settings,Настройки BMP
 5/1/32#0,JPEG settings,Настройки JPEG
 5/1/33#0,PNG settings,Настройки PNG
@@ -141,9 +150,11 @@ The output size will be set to %d by%dpx.",
 6/1/13#0,Custom,Пользовательский
 6/1/14#0,Confirm edit?,Подтвердить изменение?
 6/1/15#0,"Preset with the same name already exist.
-Overwrite?",
+Overwrite?","Набор настроек с таким именем уже существует.
+Перезаписать?"
 6/1/16#0,"“%s“ cannot be registered.
-Please enter a different preset name.",
+Please enter a different preset name.","«%s» нельзя зарегистрировать.
+Введите другое имя набора настроек."
 6/1/17#0,Save,Сохранить
 6/1/18#0,Change name,Изменить имя
 7/1/3#0,Cancel,Отмена
@@ -213,7 +224,7 @@ Please enter a different preset name.",
 8/1/77#0,Toon shading,Мультяшное затенение
 8/1/78#0,Summer sunlight,Летний солнечный свет
 8/1/79#0,Linear,Линейный
-8/1/80#0,Mipmap,Mipmap
+8/1/80#0,Mipmap,MIP-карта
 8/1/81#0,Alpha test,Альфа-тест
 8/1/82#0,Alpha threshold,Порог альфа-канала
 8/1/83#0,Cast shadows down,Отбрасывать тени вниз
@@ -301,7 +312,9 @@ Please enter a different preset name.",
 15/1/89#0,%d (%ds),%d (%dс)
 16/1/3#0,"The animation folder composition for this canvas does not match the Digital Exposure Sheet file.
  Please choose from the following options to manage the animation folders in this document. 
-The Digital Exposure Sheet information will not be affected.",
+The Digital Exposure Sheet information will not be affected.","Состав папок анимации для этого холста не соответствует файлу Digital Exposure Sheet.
+ Выберите один из следующих вариантов для управления папками анимации в этом документе. 
+Сведения Digital Exposure Sheet не будут затронуты."
 16/1/5#0,Cancel,Отмена
 16/1/13#0,Import Toei Digital Exposure Sheet,Импортировать цифровой экспозиционный лист Toei
 16/1/9#0,Deletes the selected animation folder,Удаляет выбранную папку анимации
@@ -320,9 +333,11 @@ The Digital Exposure Sheet information will not be affected.",
 18/1/17#0,Custom,Пользовательский
 18/1/18#0,Please enter preset name.,Введите имя набора настроек.
 18/1/19#0,"Preset with the same name already exist.
-Overwrite?",
+Overwrite?","Набор настроек с таким именем уже существует.
+Перезаписать?"
 18/1/20#0,"“%s“ cannot be registered.
-Please enter a different preset name.",
+Please enter a different preset name.","«%s» нельзя зарегистрировать.
+Введите другое имя набора настроек."
 19/1/13#0,Create timeline label,Создать метку шкалы времени
 19/1/14#0,Create track label,Создать метку дорожки
 19/1/3#0,Cancel,Отмена
@@ -477,24 +492,38 @@ Please enter a different preset name.",
 -Raster layers
 -Selection layers
 -Layer masks 
-To convert to a raster layer, select [Layer] menu > [Rasterize].",
+To convert to a raster layer, select [Layer] menu > [Rasterize].","Этот инструмент можно использовать только для следующего: 
+- растровые слои
+- слои выделения
+- маски слоя 
+Чтобы преобразовать в растровый слой, выберите меню [Слой] > [Растрировать]."
 27/1/2#0,You cannot use this tool on the current layer.,Этот инструмент нельзя использовать на текущем слое.
 27/1/3#0,"Some layers were not processed.
 This tool can only be used for the following: 
 - Raster layers
 - Selection layers
 - Layer masks 
-To change to a raster layer, select [Layer] menu > [Rasterize].",
+To change to a raster layer, select [Layer] menu > [Rasterize].","Некоторые слои не были обработаны.
+Этот инструмент можно использовать только для следующего: 
+- растровые слои
+- слои выделения
+- маски слоя 
+Чтобы преобразовать в растровый слой, выберите меню [Слой] > [Растрировать]."
 27/1/4#0,"You cannot draw on the selected 3D object.
-Please switch to the Object tool and select only one 3D primitive or 3D drawing figure (Ver.2), or 3D object.",
+Please switch to the Object tool and select only one 3D primitive or 3D drawing figure (Ver.2), or 3D object.","На выбранном 3D-объекте нельзя рисовать.
+Переключитесь на инструмент «Объект» и выберите только один 3D-примитив, 3D-фигуру для рисования (вер. 2) или 3D-объект."
 27/1/5#0,"You cannot draw on the selected 3D primitive.
-Please switch to the Object tool, and in the Advanced Tool Settings palette’s Texture Settings tab, set the position to 0 and the scale ratio to 100.",
+Please switch to the Object tool, and in the Advanced Tool Settings palette’s Texture Settings tab, set the position to 0 and the scale ratio to 100.","На выбранном 3D-примитиве нельзя рисовать.
+Переключитесь на инструмент «Объект» и на вкладке «Настройки текстуры» палитры «Дополнительные настройки инструмента» задайте положение 0 и масштаб 100."
 27/1/6#0,"You cannot draw on the selected 3D object.
-Please switch to the Object tool, and in the Advanced Tool Settings palette’s Preferences tab, open the Rendering Settings and turn on “Use texture”.",
+Please switch to the Object tool, and in the Advanced Tool Settings palette’s Preferences tab, open the Rendering Settings and turn on “Use texture”.","На выбранном 3D-объекте нельзя рисовать.
+Переключитесь на инструмент «Объект» и на вкладке «Настройки» палитры «Дополнительные настройки инструмента» откройте «Настройки рендеринга» и включите «Использовать текстуру»."
 27/1/7#0,"You cannot draw on the selected 3D object.
-Please switch to the Object tool and check the layer visibility and layer lock settings.",
+Please switch to the Object tool and check the layer visibility and layer lock settings.","На выбранном 3D-объекте нельзя рисовать.
+Переключитесь на инструмент «Объект» и проверьте видимость слоя и настройки блокировки слоя."
 27/1/8#0,"You cannot draw on the selected 3D object.
-The UV map of this object is not set up correctly.",
+The UV map of this object is not set up correctly.","На выбранном 3D-объекте нельзя рисовать.
+UV-карта этого объекта настроена неправильно."
 27/1/9#0,You cannot draw on the selected 3D object as it does not have an editable texture.,"На выбранном 3D-объекте нельзя рисовать, так как у него нет редактируемой текстуры."
 28/1/1#0,The texture thumbnail will be shown,Будет показан эскиз текстуры
 29/1/1#0,Exporting cel %d of %d.,Экспорт фазы %d из %d.
@@ -511,7 +540,11 @@ The UV map of this object is not set up correctly.",
 A: Hi (subtitle: Hi) (simultaneous)
 A: (bows)
 (wait 1 second)
-A: Enter the script here (subtitle: Enter the script here)",
+A: Enter the script here (subtitle: Enter the script here)","Название: Пример
+A: Привет (субтитры: Привет) (одновременно)
+A: (кланяется)
+(ожидание 1 секунда)
+A: Введите сценарий здесь (субтитры: Введите сценарий здесь)"
 33/1/2#0,Enter script,Ввести сценарий
 33/1/3#0,Delete script,Удалить сценарий
 33/1/4#0,Change script settings,Изменить настройки сценария
@@ -538,11 +571,14 @@ A: Enter the script here (subtitle: Enter the script here)",
 35/1/18#0,Move keyframe and label,Переместить ключевой кадр и метку
 35/1/19#0,Duplicate keyframe and label,Дублировать ключевой кадр и метку
 35/1/20#0,"The existing keyframe and assigned cel will be overwritten.
-Do you want to continue?",
+Do you want to continue?","Существующий ключевой кадр и назначенная фаза будут перезаписаны.
+Продолжить?"
 35/1/21#0,"The existing track label will be overwritten.
-Do you want to continue?",
+Do you want to continue?","Существующая метка дорожки будет перезаписана.
+Продолжить?"
 35/1/22#0,"The existing keyframe, assigned cel, and track label will be overwritten.
-Do you want to continue?",
+Do you want to continue?","Существующий ключевой кадр, назначенная фаза и метка дорожки будут перезаписаны.
+Продолжить?"
 36/1/5#0,C- + Scenes + Shots,C- + сцены + кадры
 36/1/6#0,Scenes + Shots,Сцены + кадры
 36/1/7#0,Number of stories + Scenes + Shots,Число историй + сцены + кадры

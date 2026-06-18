@@ -53,97 +53,145 @@
 6/1/35#0,Licensed Materials,Лицензированные материалы
 6/1/36#0,Plug-in Store,Магазин подключаемых модулей
 6/1/37#0,ASK,Вопросы и ответы
-6/1/38#0,TIPS,TIPS
+6/1/38#0,TIPS,СОВЕТЫ
 6/1/39#0,Search CLIP STUDIO,Поиск в CLIP STUDIO
 6/1/40#0,"Are you sure you want to organize these materials database? 
-*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.",
+*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.","Вы уверены, что хотите организовать базу данных этих материалов? 
+*Примечание. Не запускайте другие приложения серии CLIP STUDIO во время выполнения этой операции."
 6/1/41#0,"Organization of materials database failed. 
-Please try again.",
+Please try again.","Не удалось организовать базу данных материалов. 
+Пожалуйста, попробуйте еще раз."
 6/1/42#0,Organizing materials database...,Упорядочивание базы данных материалов...
 6/1/43#0,Organization of materials database was completed.,Упорядочивание базы данных материалов завершено.
 6/1/44#0,"Organization of materials database was completed, but registration of some materials may have failed due to causes such as corruption of the files.","Упорядочивание базы данных материалов завершено, но регистрация некоторых материалов могла не выполниться из-за таких причин, как повреждение файлов."
 6/1/45#0,"Are you sure you want to organize the material folders? 
-Important: Do not start other Clip Studio applications while this operation is in progress.",
+Important: Do not start other Clip Studio applications while this operation is in progress.","Вы уверены, что хотите упорядочить папки с материалами? 
+Важно! Не запускайте другие приложения Clip Studio во время выполнения этой операции."
 6/1/46#0,"Your materials will be reorganized.
 Please note:
 ・Folder orders will be reset.
 ・Empty folders without any materials will be deleted.
 ・You may not start other applications in the Clip Studio series while this operation is in progress.
 
-Do you want to continue?",
+Do you want to continue?","Ваши материалы будут реорганизованы.
+Обратите внимание:
+・Порядок папок будет сброшен.
+・Пустые папки без материалов будут удалены.
+・Во время выполнения этой операции нельзя запускать другие приложения серии Clip Studio.
+
+Хотите продолжить?"
 6/1/47#0,"Failed to organize material folders. 
-Please try again.",
+Please try again.","Не удалось организовать папки с материалами. 
+Пожалуйста, попробуйте еще раз."
 6/1/48#0,Organizing material folders...,Упорядочивание папок материалов...
 6/1/49#0,Finished organizing material folders.,Упорядочивание папок материалов завершено.
 6/1/50#0,"Are you sure you want to organize the works? 
-*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.",
+*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.","Вы уверены, что хотите организовать работы? 
+*Примечание. Не запускайте другие приложения серии CLIP STUDIO во время выполнения этой операции."
 6/1/51#0,"Organization of works database failed. 
-Please try again.",
+Please try again.","Организация работ по базе данных не удалась. 
+Пожалуйста, попробуйте еще раз."
 6/1/52#0,Organizing work database...,Упорядочивание базы данных произведений...
 6/1/53#0,Organization of works database was completed.,Упорядочивание базы данных произведений завершено.
 6/1/54#0,"The works database has been reconstructed, but some materials may not have been registered due to corruption of the files.","База данных произведений перестроена, но некоторые материалы могли не зарегистрироваться из-за повреждения файлов."
 6/1/55#0,"Are you sure you want to organize the work labels? 
-*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.",
+*Note: Do not start other applications in the CLIP STUDIO series while this operation is in progress.","Вы уверены, что хотите упорядочить рабочие ярлыки? 
+*Примечание. Не запускайте другие приложения серии CLIP STUDIO во время выполнения этой операции."
 6/1/56#0,"Organization of work labels failed. 
-Please try again.",
+Please try again.","Организация работы над этикетками не удалась. 
+Пожалуйста, попробуйте еще раз."
 6/1/57#0,Organizing work labels...,Упорядочивание меток произведений...
 6/1/58#0,Organization of work labels was completed.,Упорядочивание меток произведений завершено.
 6/1/59#0,Confirmation dialogs have been reset.,Диалоги подтверждения сброшены.
 6/1/60#0,"The selected work has not been completely downloaded.
- Download from the cloud?",
+ Download from the cloud?","Выбранное произведение не было полностью загружено.
+ Скачать из облака?"
 6/1/61#0,"The file name is too long to specify as a target for syncing. 
-Enter a file name up to 100 characters.",
+Enter a file name up to 100 characters.","Имя файла слишком длинное, чтобы его можно было указать в качестве цели для синхронизации. 
+Введите имя файла длиной до 100 символов."
 6/1/62#0,"This work data cannot be synced as it is invalid. 
-Please contact our support service for help.",
+Please contact our support service for help.","Эти рабочие данные невозможно синхронизировать, поскольку они недействительны. 
+Пожалуйста, обратитесь в нашу службу поддержки за помощью."
 6/1/63#0,Cloud syncing cannot be turned off while the Teamwork setting is on.,"Синхронизацию с облаком нельзя отключить, пока включена настройка совместной работы."
 6/1/64#0,"The file name is different from the previous data. 
-Do you want to reconfigure the data with this file?",
+Do you want to reconfigure the data with this file?","Имя файла отличается от предыдущих данных. 
+Вы хотите переконфигурировать данные с помощью этого файла?"
 6/1/65#0,The specified file cannot be specified as it is already registered as a work.,"Указанный файл нельзя указать, так как он уже зарегистрирован как произведение."
 6/1/66#0,"There is no cloud data for this item. 
 It may have been deleted on another device. 
 
 
-Do you want to run a recovery process to keep this data? ",
+Do you want to run a recovery process to keep this data? ","Для этого элемента нет облачных данных. 
+Возможно, оно было удалено на другом устройстве. 
+
+
+Хотите запустить процесс восстановления, чтобы сохранить эти данные?"
 6/1/67#0,"This cloud data does not exist.
 It may have been deleted on another device. 
-Open the data and carry out the recovery process.",
+Open the data and carry out the recovery process.","Эти облачные данные не существуют.
+Возможно, оно было удалено на другом устройстве. 
+Откройте данные и проведите процесс восстановления."
 6/1/68#0,"This file could not be synced. 
 The file has already been updated from a different device.
 In order to resume syncing, the file “%s” will be overwritten with the cloud data. 
 
-Do you want to save a backup of the edits made on this device before overwriting the file?",
+Do you want to save a backup of the edits made on this device before overwriting the file?","Этот файл не удалось синхронизировать. 
+Файл уже был обновлен с другого устройства.
+Чтобы возобновить синхронизацию, файл «%s» будет перезаписан облачными данными. 
+
+Хотите сохранить резервную копию изменений, внесенных на этом устройстве, прежде чем перезаписывать файл?"
 6/1/69#0,"The data edited on this device was saved separately as “%s (backup)”.
  “%s” has been added to the Data Transfers list to update the file with the cloud data.
 
 To update the original file with edits made on this device, please copy them manually from the “%s (backup)” file.
 
-Do you want to open the backup file?",
+Do you want to open the backup file?","Данные, отредактированные на этом устройстве, были сохранены отдельно как «%s (резервная копия)».
+ «%s» был добавлен в список передачи данных для обновления файла облачными данными.
+
+Чтобы обновить исходный файл изменениями, внесенными на этом устройстве, скопируйте их вручную из файла «%s (резервная копия)».
+
+Хотите открыть файл резервной копии?"
 6/1/70#0,"The following files could not be synced. 
 The file(s) has already been updated from a different device. 
-The project will be opened from File Management and saved on this device as a new project called “[file name] (backup).” The Clip Studio cloud data will be downloaded again.",
+The project will be opened from File Management and saved on this device as a new project called “[file name] (backup).” The Clip Studio cloud data will be downloaded again.","Следующие файлы не удалось синхронизировать. 
+Файл(ы) уже был обновлен с другого устройства. 
+Проект будет открыт из «Управления файлами» и сохранен на этом устройстве как новый проект под названием «[имя файла] (резервная копия)». Облачные данные Clip Studio будут загружены снова."
 6/1/71#0,"Could not sync this material. 
 The file has already been updated from a different device. 
 
 The material will be saved on this device as a new material called “%s Copy” 
 and the Clip Studio cloud data will be downloaded again. 
 
-Continue?",
+Continue?","Не удалось синхронизировать этот материал. 
+Файл уже был обновлен с другого устройства. 
+
+Материал будет сохранен на этом устройстве как новый материал под названием «%s Copy». 
+и данные облака Clip Studio будут загружены снова. 
+
+Продолжать?"
 6/1/72#0,"The following materials could not be synced. 
 The material(s) has already been updated from a different device. 
-The material will be opened from Material Management and saved on this device as a new project called “(material name) Copy.” The Clip Studio cloud data will be downloaded again.",
+The material will be opened from Material Management and saved on this device as a new project called “(material name) Copy.” The Clip Studio cloud data will be downloaded again.","Следующие материалы не удалось синхронизировать. 
+Материал(ы) уже обновлен с другого устройства. 
+Материал будет открыт из «Управления материалами» и сохранен на этом устройстве как новый проект под названием «(имя материала) Копия». Облачные данные Clip Studio будут загружены снова."
 6/1/73#0,"Unable to open file. It may have been moved, deleted, or renamed. 
-Use “Browse files” to search for the original file.",
+Use “Browse files” to search for the original file.","Невозможно открыть файл. Возможно, он был перемещен, удален или переименован. 
+Используйте «Обзор файлов» для поиска исходного файла."
 6/1/74#0,"Unable to open file. It may have been moved, deleted, or renamed. 
-Would you like to delete it from the list of projects?",
+Would you like to delete it from the list of projects?","Невозможно открыть файл. Возможно, он был перемещен, удален или переименован. 
+Хотите удалить его из списка проектов?"
 6/1/75#0,Browse files,Обзор файлов
 6/1/76#0,Cancel,Отмена
 6/1/77#0,More information,Подробнее
 6/1/78#0,Delete file,Удалить файл
 6/1/79#0,"Unable to find file. 
 
-It may have been moved, deleted, or the name may have been changed. ",
+It may have been moved, deleted, or the name may have been changed. ","Не удалось найти файл. 
+
+Возможно, он был перемещен, удален или имя могло быть изменено."
 6/1/80#0,"The document could not be recovered as another recovered work is already open. 
-Close the file in any other applications and try again.",
+Close the file in any other applications and try again.","Документ не удалось восстановить, так как уже открыта другая восстановленная работа. 
+Закройте файл в любом другом приложении и повторите попытку."
 6/1/81#0,"Be aware of the following points when using the Cloud.
 
 -If you synchronize materials in an environment where many materials are registered,
@@ -154,25 +202,40 @@ Close the file in any other applications and try again.",
  please wait until it is finished, if you are concerned about this.
 - For further information, please also read the “User's Guide to the Cloud” in advance from the [Help] menu ([?] Button on the upper right of the screen).
 
- Proceed?",
+ Proceed?","При использовании облака помните о следующих моментах.
+
+-Если вы синхронизируете материалы в среде, где зарегистрировано много материалов,
+ первая синхронизация может занять много времени из-за большого объема передаваемых данных.
+- Пожалуйста, не используйте эту функцию на мобильной линии.
+- Если целевые данные используются или редактируются, они будут пропущены.
+- Передача начнется одновременно после изменения настроек для [Использовать]. Поскольку передача может влиять на процесс рисования пером,
+ пожалуйста, подождите, пока он не закончится, если вас это беспокоит.
+- Для получения дополнительной информации также заранее прочтите «Руководство пользователя по облаку» в меню [Справка] (кнопка [?] в правом верхнем углу экрана).
+
+ Продолжить?"
 6/1/82#0,Start downloading now?,Начать загрузку сейчас?
 6/1/83#0,Start synchronizing now?,Начать синхронизацию сейчас?
 6/1/84#0,Start backup process now?,Начать процесс резервного копирования сейчас?
 6/1/85#0,Settings saved.,Настройки сохранены.
 6/1/86#0,"The material cannot be downloaded as it is currently being downloaded or uploaded. 
-Try again later.",
+Try again later.","Материал не может быть загружен, так как он в данный момент загружается или загружается. 
+Повторите попытку позже."
 6/1/87#0,Unable to download material as it has been deleted.,"Не удалось загрузить материал, так как он был удалён."
 6/1/88#0,Unable to download material as it does not exist locally.,"Не удалось загрузить материал, так как он не существует локально."
 6/1/89#0,Failed to download materials.,Не удалось загрузить материалы.
 6/1/90#0,Failed to acquire download information. Try downloading again.,Не удалось получить сведения о загрузке. Попробуйте загрузить снова.
 6/1/91#0,"The material already exists. Do you want to download again and overwrite? 
-Any changes to the material title and tags that have been made in the Material palette will not be overwritten.",
+Any changes to the material title and tags that have been made in the Material palette will not be overwritten.","Материал уже существует. Хотите загрузить еще раз и перезаписать? 
+Любые изменения в названии и тегах материала, внесенные в палитре «Материал», не будут перезаписаны."
 6/1/92#0,"This material has been deleted and re-uploaded on Clip Studio Assets. 
-Delete the material from the local location and try downloading again.",
+Delete the material from the local location and try downloading again.","Этот материал был удален и повторно загружен в Clip Studio Assets. 
+Удалите материал из локального местоположения и повторите попытку загрузки."
 6/1/93#0,"This material catalog has been deleted and re-uploaded on Clip Studio Assets. 
-Would you like to delete the local file and download the latest version?",
+Would you like to delete the local file and download the latest version?","Этот каталог материалов был удален и повторно загружен в Clip Studio Assets. 
+Хотите удалить локальный файл и загрузить последнюю версию?"
 6/1/94#0,"This file cannot be downloaded as it is currently being downloaded or uploaded. 
-Please try again later.",
+Please try again later.","Этот файл невозможно загрузить, поскольку он в настоящее время загружается или загружается. 
+Пожалуйста, повторите попытку позже."
 6/1/95#0,This file has already been downloaded.,Этот файл уже загружен.
 6/1/96#0,Failed to download the file.,Не удалось загрузить файл.
 6/1/97#0,The page cannot be displayed as your device is not connected to the Internet.,"Страницу нельзя отобразить, так как ваше устройство не подключено к Интернету."
@@ -182,7 +245,8 @@ Please try again later.",
 6/1/101#0,Preparing to sync materials...,Подготовка к синхронизации материалов...
 6/1/102#0,Recovering...,Восстановление…
 6/1/103#0,"The settings have been changed. 
-Any edits will be lost if you leave this page. Do you want to proceed?",
+Any edits will be lost if you leave this page. Do you want to proceed?","Настройки были изменены. 
+Любые изменения будут потеряны, если вы покинете эту страницу. Хотите продолжить?"
 6/1/104#0,This device,Это устройство
 6/1/105#0,In this app,В этом приложении
 6/1/106#0,Cloud,Облако
@@ -191,59 +255,87 @@ Any edits will be lost if you leave this page. Do you want to proceed?",
 6/1/109#0,Processing after deleting materials...,Обработка после удаления материалов...
 6/1/110#0,Setting up material...,Настройка материала...
 6/1/111#0,"The following works have been changed on this device. 
-Do you want to discard your changes and download these works from the cloud?",
+Do you want to discard your changes and download these works from the cloud?","На этом устройстве были изменены следующие работы. 
+Хотите отказаться от изменений и загрузить эти работы из облака?"
 6/1/112#0,"%d works have been changed on this device. 
-Do you want to discard your changes and download these works from the cloud?",
+Do you want to discard your changes and download these works from the cloud?","На этом устройстве изменены работы %d. 
+Хотите отказаться от изменений и загрузить эти работы из облака?"
 6/1/113#0,"The following materials have been changed on this device. 
-Do you want to discard your changes and download them from the cloud?",
+Do you want to discard your changes and download them from the cloud?","На этом устройстве были изменены следующие материалы. 
+Хотите отменить изменения и загрузить их из облака?"
 6/1/114#0,"Download%d materials have been changed on this device. 
-Do you want to discard your changes and download these materials from the cloud?",
+Do you want to discard your changes and download these materials from the cloud?","Материалы для загрузки%d были изменены на этом устройстве. 
+Хотите отменить изменения и загрузить эти материалы из облака?"
 6/1/115#0,"The following works have been changed in this app. 
-Do you want to discard your changes and download these works from the cloud?",
+Do you want to discard your changes and download these works from the cloud?","В этом приложении были изменены следующие работы. 
+Хотите отказаться от изменений и загрузить эти работы из облака?"
 6/1/116#0,"%d works have been changed in this app. 
-Do you want to discard your changes and download these works from the cloud?",
+Do you want to discard your changes and download these works from the cloud?","В этом приложении изменено %d работ. 
+Хотите отказаться от изменений и загрузить эти работы из облака?"
 6/1/117#0,"The following materials have been changed in this app. 
-Do you want to discard your changes and download these materials from the cloud?",
+Do you want to discard your changes and download these materials from the cloud?","В этом приложении были изменены следующие материалы. 
+Хотите отменить изменения и загрузить эти материалы из облака?"
 6/1/118#0,"%d materials have been changed in this app. 
-Do you want to discard your changes and download these materials from the cloud?",
+Do you want to discard your changes and download these materials from the cloud?","В этом приложении изменены материалы %d. 
+Хотите отменить изменения и загрузить эти материалы из облака?"
 6/1/119#0,"Adding selected files to items to be synchronized.
- Would you like to proceed?",
+ Would you like to proceed?","Добавление выбранных файлов к элементам для синхронизации.
+ Хотите продолжить?"
 6/1/120#0,"Removing selected files from items to be synchronized.
- Would you like to proceed?",
+ Would you like to proceed?","Удаление выбранных файлов из элементов для синхронизации.
+ Хотите продолжить?"
 6/1/121#0,The selected work can not be synchronized because it is set up for collaborative work.,"Выбранное произведение нельзя синхронизировать, так как оно настроено для совместной работы."
 6/1/122#0,"The selected work contains file objects. 
 The location of the file object(s) will not be synchronized.
-Sync anyway?",
+Sync anyway?","Выбранная работа содержит файловые объекты. 
+Расположение файловых объектов не будет синхронизировано.
+Все равно синхронизировать?"
 6/1/123#0,"The selected work cannot be synchronized because it refers to an external file.
-Please set up synchronization for this file separately.",
+Please set up synchronization for this file separately.","Выбранную работу невозможно синхронизировать, поскольку она ссылается на внешний файл.
+Пожалуйста, настройте синхронизацию для этого файла отдельно."
 6/1/124#0,%s (backup),%s (резервная копия)
 6/1/125#0,Open backup data,Открыть резервную копию данных
 6/1/126#0,"A data transfer is in progress, so you cannot log out. 
-Please cancel the transfer from the Data Transfers screen.",
+Please cancel the transfer from the Data Transfers screen.","Идет передача данных, поэтому вы не можете выйти. 
+Отмените передачу на экране «Передача данных»."
 6/1/127#0,Resetting additional materials...,Сброс дополнительных материалов...
 6/1/128#0,"The cloud settings are being edited. 
-The edits will be lost if you leave this page. Do you want to proceed?",
+The edits will be lost if you leave this page. Do you want to proceed?","Настройки облака редактируются. 
+Изменения будут потеряны, если вы покинете эту страницу. Хотите продолжить?"
 6/1/129#0,"This process cannot run while transmitting data.
-Please wait and try again later.",
+Please wait and try again later.","Этот процесс не может выполняться во время передачи данных.
+Пожалуйста, подождите и повторите попытку позже."
 6/1/130#0,"This process cannot run while transmitting data.
-Please wait and try again later.",
+Please wait and try again later.","Этот процесс не может выполняться во время передачи данных.
+Пожалуйста, подождите и повторите попытку позже."
 6/1/131#0,"This material has not been fully downloaded. 
-Would you like to download it from the cloud?",
+Would you like to download it from the cloud?","Этот материал не был полностью загружен. 
+Хотите загрузить его из облака?"
 6/1/132#0,"This material has not been fully downloaded. 
-Would you like to download it from the cloud?",
+Would you like to download it from the cloud?","Этот материал не был полностью загружен. 
+Хотите загрузить его из облака?"
 6/1/133#0,"This material catalog has not been fully downloaded. 
-Would you like to download it from the cloud?",
+Would you like to download it from the cloud?","Этот каталог материалов не был полностью загружен. 
+Хотите загрузить его из облака?"
 6/1/134#0,"There is no Cloud data. 
 It may have been deleted on another device. 
-Please execute the recovery process for this data.",
+Please execute the recovery process for this data.","Облачных данных нет. 
+Возможно, оно было удалено на другом устройстве. 
+Пожалуйста, выполните процесс восстановления этих данных."
 6/1/135#0,"This file name cannot be used as it contains one or more of the following characters or character strings:
 / > < ? : "" \ * | ; ^ ` { } [ ] # % ~
 Change the file name using one of the following methods, then sync the work.
 [Return to PAINT] > [Save as]
-[Return to PAINT] > [File operation/Share] > [Change name]",
+[Return to PAINT] > [File operation/Share] > [Change name]","Это имя файла нельзя использовать, поскольку оно содержит один или несколько следующих символов или строк символов:
+/ > < ? : "" \ * | ; ^ ` { } [ ] # % ~
+Измените имя файла одним из следующих способов, затем синхронизируйте работу.
+[Вернуться в PAINT] > [Сохранить как]
+[Вернуться к PAINT] > [Операция с файлом/Общий доступ] > [Изменить имя]"
 6/1/136#0,"The Cloud data and update information did not match. 
 The data may have been edited on multiple devices before synchronization was completed.
-Please execute the recovery process to preserve this data and the cloud data.",
+Please execute the recovery process to preserve this data and the cloud data.","Данные облака и информация об обновлении не совпадают. 
+Данные могли быть отредактированы на нескольких устройствах до завершения синхронизации.
+Пожалуйста, выполните процесс восстановления, чтобы сохранить эти данные и данные облака."
 6/1/137#0,Material catalog,Каталог материалов
 6/1/138#0,Category 1,Категория 1
 6/1/139#0,Failed to create material catalog.,Не удалось создать каталог материалов.
@@ -254,19 +346,23 @@ Please execute the recovery process to preserve this data and the cloud data.",
 6/1/144#0,The size is over 2GB.,Размер превышает 2 ГБ.
 6/1/145#0,This material cannot be registered to the material catalog.,Этот материал нельзя зарегистрировать в каталоге материалов.
 6/1/146#0,"This material cannot be used as it has not been fully downloaded. 
-Please download it and try again.",
+Please download it and try again.","Этот материал не может быть использован, так как он не был полностью загружен. 
+Пожалуйста, загрузите его и попробуйте еще раз."
 6/1/147#0,This material is currently being downloaded or uploaded. Please wait until this process is complete.,Этот материал сейчас загружается или выгружается. Дождитесь завершения этого процесса.
 6/1/148#0,This operation is not supported. Please update Clip Studio to the latest version.,Эта операция не поддерживается. Обновите Clip Studio до последней версии.
 6/1/149#0,This operation is not supported. Please update Clip Studio to the latest version.,Эта операция не поддерживается. Обновите Clip Studio до последней версии.
 6/1/150#0,Materials from this version cannot be added to this material catalog.,Материалы из этой версии нельзя добавить в этот каталог материалов.
 6/1/151#0,"You cannot create a material catalog that contains both 3D materials and materials created in CLIP STUDIO series Ver. 1.5.0 or later, as the 3D materials will no longer be able to be edited. 
-This is expected to be supported from the next version update.",
+This is expected to be supported from the next version update.","Вы не можете создать каталог материалов, содержащий как 3D-материалы, так и материалы, созданные в серии CLIP STUDIO Ver. 1.5.0 или более поздней версии, поскольку 3D-материалы больше нельзя будет редактировать. 
+Ожидается, что это будет поддерживаться в следующем обновлении версии."
 6/1/152#0,"You cannot create a material catalog that contains both 3D materials and materials created in CLIP STUDIO series Ver. 1.5.0 or later, as the 3D materials will no longer be able to be edited. 
-This is expected to be supported from the next version update.",
+This is expected to be supported from the next version update.","Вы не можете создать каталог материалов, содержащий как 3D-материалы, так и материалы, созданные в серии CLIP STUDIO Ver. 1.5.0 или более поздней версии, поскольку 3D-материалы больше нельзя будет редактировать. 
+Ожидается, что это будет поддерживаться в следующем обновлении версии."
 6/1/153#0,Adding the materials to the material catalog...,Добавление материалов в каталог материалов...
 6/1/154#0,Failed to create material details window.,Не удалось создать окно сведений о материале.
 6/1/155#0,"Materials from this version are not supported. 
-Please update your software to the latest version.",
+Please update your software to the latest version.","Материалы этой версии не поддерживаются. 
+Пожалуйста, обновите программное обеспечение до последней версии."
 6/1/156#0,All |*.jpg,Все |*.jpg
 6/1/157#0,Thumbnail images must be 240 x 240 px.,Эскизы должны быть размером 240 x 240 пикс.
 6/1/158#0,This image format is not supported.,Этот формат изображения не поддерживается.
@@ -275,24 +371,35 @@ Please update your software to the latest version.",
 6/1/161#0,All supported formats |*.lip;*.clip;*.cmc|CLIP STUDIO FORMAT|*.clip|CLIP STUDIO PAINT|*.lip|CLIP STUDIO PAINT page management file|*.cmc,Все поддерживаемые форматы |*.lip;*.clip;*.cmc|ФОРМАТ CLIP STUDIO|*.clip|CLIP STUDIO PAINT|*.lip|Файл управления страницами CLIP STUDIO PAINT|*.cmc
 6/1/162#0,"Could not find cloud data for this item. 
 It may have been deleted on another device. 
-Open the material catalog information of this data and execute the recovery process.",
+Open the material catalog information of this data and execute the recovery process.","Не удалось найти облачные данные для этого элемента. 
+Возможно, оно было удалено на другом устройстве. 
+Откройте информацию каталога материалов этих данных и выполните процесс восстановления."
 6/1/163#0,"The material catalog containing this data conflicts with the cloud data, so it could not be opened.
-Please open this material catalog in the material management screen and carry out the recovery process.",
+Please open this material catalog in the material management screen and carry out the recovery process.","Каталог материалов, содержащий эти данные, конфликтует с облачными данными, поэтому его невозможно открыть.
+Откройте этот каталог материалов на экране управления материалами и выполните процесс восстановления."
 6/1/164#0,"This material is currently open in another Clip Studio application. 
-Close the material in the application or quit the application.",
+Close the material in the application or quit the application.","Этот материал в настоящее время открыт в другом приложении Clip Studio. 
+Закройте материал в приложении или выйдите из приложения."
 6/1/165#0,"This material is currently being edited in another application. 
-Finish editing and try again.",
+Finish editing and try again.","Этот материал в настоящее время редактируется в другом приложении. 
+Завершите редактирование и повторите попытку."
 6/1/166#0,"This will sync the data. 
 You can check the sync status in the  \”Data Transfers"" dialog (double arrow button at the top right of the window). 
 
-Do you want to proceed?",
+Do you want to proceed?","Это синхронизирует данные. 
+Вы можете проверить статус синхронизации в диалоговом окне «Передача данных» (кнопка с двойной стрелкой в ​​правом верхнем углу окна). 
+
+Хотите продолжить?"
 6/1/167#0,"The information is being edited. 
-Any edits will be lost if you leave this page. Do you want to proceed?",
+Any edits will be lost if you leave this page. Do you want to proceed?","Информация редактируется. 
+Любые изменения будут потеряны, если вы покинете эту страницу. Хотите продолжить?"
 6/1/168#0,"The information is being edited. 
-Any edits will be lost if you leave this page. Do you want to proceed?",
+Any edits will be lost if you leave this page. Do you want to proceed?","Информация редактируется. 
+Любые изменения будут потеряны, если вы покинете эту страницу. Хотите продолжить?"
 6/1/169#0,You cannot log out while editing public information.,Вы не можете выйти во время редактирования общедоступных сведений.
 6/1/170#0,"The Teamwork settings are being edited. 
-The edits will be lost if you leave this page. Do you want to proceed?",
+The edits will be lost if you leave this page. Do you want to proceed?","Настройки Teamwork редактируются. 
+Изменения будут потеряны, если вы покинете эту страницу. Хотите продолжить?"
 6/1/171#0,You cannot log out while editing Teamwork settings.,Вы не можете выйти во время редактирования настроек совместной работы.
 6/1/172#0,No tags on the server.,На сервере нет тегов.
 6/1/173#0,Failed to save materials.,Не удалось сохранить материалы.
@@ -303,30 +410,47 @@ The edits will be lost if you leave this page. Do you want to proceed?",
 
 If the above changes exist, they will be updated in this window and the additional content can be downloaded. 
 
-Do you want to proceed?",
+Do you want to proceed?","Это позволяет получить самую свежую информацию о следующем. 
+ 1) Материалы добавлены в каталог материалов.
+ 2) В 3D материалы добавлены детали.
+
+
+Если вышеуказанные изменения существуют, они будут обновлены в этом окне и можно будет загрузить дополнительный контент. 
+
+Хотите продолжить?"
 6/1/175#0,Failed to acquire latest information.,Не удалось получить последние сведения.
 6/1/176#0,"This material could not be found in the local location. 
-This material has not been downloaded, or it may have been deleted.",
+This material has not been downloaded, or it may have been deleted.","Этот материал не удалось найти в локальной локации. 
+Этот материал не был загружен или, возможно, был удален."
 6/1/177#0,Failed to create material publishing settings window.,Не удалось создать окно настроек публикации материала.
 6/1/178#0,No materials to be uploaded in the material catalog.,В каталоге материалов нет материалов для выгрузки.
 6/1/179#0,The maximum upload size is 2GB.,Максимальный размер выгрузки — 2 ГБ.
 6/1/180#0,"The material cannot be uploaded as it is currently being downloaded or uploaded. 
-Please try again later.",
+Please try again later.","Материал не может быть загружен, поскольку он в данный момент загружается или загружается. 
+Пожалуйста, повторите попытку позже."
 6/1/181#0,"This material cannot be uploaded as it has not been fully downloaded from the cloud. 
-Download it by selecting “Sync Now” in ""Manage Materials"" and try again.",
+Download it by selecting “Sync Now” in ""Manage Materials"" and try again.","Этот материал невозможно загрузить, так как он не был полностью загружен из облака. 
+Загрузите его, выбрав «Синхронизировать сейчас» в «Управлении материалами», и повторите попытку."
 6/1/182#0,This material cannot be updated as it is being screened.,"Этот материал нельзя обновить, так как он проходит проверку."
 6/1/183#0,"The update information does not match the cloud data. 
 The item may have been edited on multiple devices before syncing was completed. 
-Search for the referenced material and execute the recovery process.",
+Search for the referenced material and execute the recovery process.","Информация об обновлении не соответствует облачным данным. 
+Возможно, элемент был отредактирован на нескольких устройствах до завершения синхронизации. 
+Найдите указанный материал и выполните процесс восстановления."
 6/1/184#0,"Could not find the cloud data. 
 It may have been deleted on another device. 
-Search for the referenced material and execute the recovery process.",
+Search for the referenced material and execute the recovery process.","Не удалось найти облачные данные. 
+Возможно, оно было удалено на другом устройстве. 
+Найдите указанный материал и выполните процесс восстановления."
 6/1/185#0,"Cloud data has been updated from a different device. 
- Please select “Sync now” from the current material’s management screen.",
+ Please select “Sync now” from the current material’s management screen.","Облачные данные были обновлены с другого устройства. 
+ Пожалуйста, выберите «Синхронизировать сейчас» на экране управления текущим материалом."
 6/1/186#0,"This material cannot be updated as it has been updated to a new version. 
-Do you want to upload it as a new material?",
+Do you want to upload it as a new material?","Этот материал не может быть обновлен, так как он обновлен до новой версии. 
+Хотите загрузить его как новый материал?"
 6/1/187#0,"You cannot update this material as it has been deleted from Clip Studio Assets. 
-Do you want to upload it as a new material?",
+Do you want to upload it as a new material?","Вы не можете обновить этот материал, поскольку он был удален из ресурсов Clip Studio. 
+Хотите загрузить его как новый материал?"
 6/1/188#0,"This file is shared for collaboration, so you cannot use this feature.","Этот файл предоставлен для совместной работы, поэтому вы не можете использовать эту функцию."
 6/1/189#0,Leave,Покинуть
 6/1/190#0,Cancel,Отмена
@@ -337,29 +461,41 @@ Do you want to upload it as a new material?",
 6/1/195#0,Logging in,Выполняется вход
 6/1/196#0,Processing...,Обработка...
 6/1/197#0,"Download information has already been sent from the cloud.
-Please finish the download and try again.",
+Please finish the download and try again.","Информация о загрузке уже отправлена ​​из облака.
+Пожалуйста, завершите загрузку и повторите попытку."
 6/1/198#0,"This will sync cloud settings for materials. 
 This may take a while if there are a lot of materials.
 
 If you do so, sync settings for synced materials will be shared on the cloud. 
 If you do not, sync settings will not be carried over to the cloud, so please make sure you turn on syncing for each material.
  In either case, no materials will be deleted from the cloud.
- Would you like to align the settings?",
+ Would you like to align the settings?","Это позволит синхронизировать облачные настройки материалов. 
+Если материалов много, это может занять некоторое время.
+
+Если вы это сделаете, настройки синхронизации для синхронизированных материалов будут опубликованы в облаке. 
+Если вы этого не сделаете, настройки синхронизации не будут перенесены в облако, поэтому обязательно включите синхронизацию для каждого материала.
+ В любом случае никакие материалы не будут удалены из облака.
+ Хотите выровнять настройки?"
 6/1/199#0,Moving file...,Перемещение файла...
 6/1/200#0,“%s” already exists. The file was moved to a new folder called “%s”.,“%s” уже существует. Файл был перемещён в новую папку с именем “%s”.
 6/1/201#0,"A folder called “%s” already exists, so the file was moved to a new folder called “%s”.","Папка с именем “%s” уже существует, поэтому файл был перемещён в новую папку с именем “%s”."
 6/1/202#0,“%s” already exists. The file was downloaded to a new folder called “%s”.,“%s” уже существует. Файл был загружен в новую папку с именем “%s”.
 6/1/203#0,"A folder called “%s” already exists, so the file was downloaded to a new folder called “%s”.","Папка с именем “%s” уже существует, поэтому файл был загружен в новую папку с именем “%s”."
 6/1/204#0,"The files downloaded from the Clip Studio cloud have been moved to the Clip Studio app.
-",
+","Файлы, загруженные из облака Clip Studio, были перемещены в приложение Clip Studio."
 6/1/205#0,"A problem occurred with the following file. A file or folder with the same name already exists in Clip Studio, 
-so the file has been stored in a new folder.",
+so the file has been stored in a new folder.","Возникла проблема со следующим файлом. Файл или папка с таким именем уже существует в Clip Studio. 
+поэтому файл был сохранен в новой папке."
 6/1/206#0,Results,Результаты
 6/1/207#0,"Works downloaded to the Clip Studio cloud will be moved to Clip Studio.
 This may take some time if there are a lot of files to move.
 If you do not move the files, files downloaded from the Clip Studio cloud will not appear in the Open dialog.
 
-Would you like to move the files now?",
+Would you like to move the files now?","Работы, загруженные в облако Clip Studio, будут перенесены в Clip Studio.
+Это может занять некоторое время, если нужно переместить много файлов.
+Если вы не переместите файлы, файлы, загруженные из облака Clip Studio, не появятся в диалоговом окне «Открыть».
+
+Хотите переместить файлы сейчас?"
 6/1/208#0,Preparing to start editing,Подготовка к началу редактирования
 6/1/209#0,Preparing to update,Подготовка к обновлению
 6/1/210#0,Granting edit permissions,Предоставление разрешений на редактирование
@@ -368,7 +504,9 @@ Would you like to move the files now?",
 6/1/213#0,Preparing,Подготовка
 6/1/214#0,"Sending cancelled. Changes have not been sent to the cloud. 
 Select [Sync all pages now] in the Page Manager 
-to send changes to the cloud and grant edit permissions.",
+to send changes to the cloud and grant edit permissions.","Отправка отменена. Изменения не были отправлены в облако. 
+Выберите [Синхронизировать все страницы сейчас] в диспетчере страниц. 
+для отправки изменений в облако и предоставления разрешений на редактирование."
 6/1/215#0,Send later,Отправить позже
 6/1/216#0,Failed to load file information.,Не удалось загрузить сведения о файле.
 6/1/217#0,Failed to overwrite file information.,Не удалось перезаписать сведения о файле.
@@ -377,49 +515,65 @@ to send changes to the cloud and grant edit permissions.",
 6/1/220#0,Failed to save edit permissions.,Не удалось сохранить разрешения на редактирование.
 6/1/221#0,Failed to secure edit permissions.,Не удалось закрепить разрешения на редактирование.
 6/1/222#0,"Some edit permissions are set to other users. 
-Please get edit permissions for all pages and try again.",
+Please get edit permissions for all pages and try again.","Некоторые разрешения на редактирование предоставляются другим пользователям. 
+Получите разрешения на редактирование всех страниц и повторите попытку."
 6/1/223#0,"Failed to grant edit permissions. 
-Please try again by selecting [Sync all pages now] in the Page Manager.",
+Please try again by selecting [Sync all pages now] in the Page Manager.","Не удалось предоставить разрешения на редактирование. 
+Повторите попытку, выбрав [Синхронизировать все страницы сейчас] в диспетчере страниц."
 6/1/224#0,Failed to obtain change information.,Не удалось получить сведения об изменениях.
 6/1/225#0,Failed to obtain file data from the Clip Studio cloud.,Не удалось получить данные файла из облака Clip Studio.
 6/1/226#0,You are not a member for this Teamwork project.,Вы не являетесь участником этого проекта совместной работы.
 6/1/227#0,"Failed to load changes. 
-Please try again by selecting [Sync all pages now] in the Page Manager.",
+Please try again by selecting [Sync all pages now] in the Page Manager.","Не удалось загрузить изменения. 
+Повторите попытку, выбрав [Синхронизировать все страницы сейчас] в диспетчере страниц."
 6/1/228#0,"Failed to load changes to “%s”. 
-Please try again by selecting “Sync all pages now” in the Page Manager.",
+Please try again by selecting “Sync all pages now” in the Page Manager.","Не удалось загрузить изменения в «%s». 
+Повторите попытку, выбрав «Синхронизировать все страницы сейчас» в диспетчере страниц."
 6/1/229#0,This project does not exist on the Clip Studio cloud or is not available as a Teamwork project.,Этот проект не существует в облаке Clip Studio или недоступен как проект совместной работы.
 6/1/230#0,"Unknown data. 
-Please update the application and try again.",
+Please update the application and try again.","Неизвестные данные. 
+Пожалуйста, обновите приложение и повторите попытку."
 6/1/231#0,"There is a conflict in the file. 
-Please close any open projects and use file recovery in Clip Studio to resolve the conflicts.",
+Please close any open projects and use file recovery in Clip Studio to resolve the conflicts.","В файле конфликт. 
+Пожалуйста, закройте все открытые проекты и используйте восстановление файлов в Clip Studio, чтобы разрешить конфликты."
 6/1/232#0,"File information is being edited in Clip Studio. 
-Please wait and try again later.",
+Please wait and try again later.","Информация о файле редактируется в Clip Studio. 
+Пожалуйста, подождите и повторите попытку позже."
 6/1/233#0,"Edit permissions for this file are set to another user. 
-Please wait and try again.",
+Please wait and try again.","Разрешения на редактирование этого файла предоставлены другому пользователю. 
+Пожалуйста, подождите и повторите попытку."
 6/1/234#0,The selected page could not be found on the Clip Studio cloud.,Выбранную страницу не удалось найти в облаке Clip Studio.
 6/1/235#0,"The necessary data has been updated in the cloud. 
-Please try again by selecting [Sync all pages now] in the Page Manager.",
+Please try again by selecting [Sync all pages now] in the Page Manager.","Необходимые данные обновлены в облаке. 
+Повторите попытку, выбрав [Синхронизировать все страницы сейчас] в диспетчере страниц."
 6/1/236#0,"This setting could not be changed because a page in the project is open. 
-Please close all the pages and try again.",
+Please close all the pages and try again.","Эту настройку невозможно изменить, поскольку страница проекта открыта. 
+Пожалуйста, закройте все страницы и повторите попытку."
 6/1/237#0,Failed to send edit history.,Не удалось отправить историю редактирования.
 6/1/238#0,"This setting could not be changed because syncing for the specified file is turned off.
-Please turn on syncing and try again.",
+Please turn on syncing and try again.","Этот параметр невозможно изменить, поскольку синхронизация указанного файла отключена.
+Пожалуйста, включите синхронизацию и повторите попытку."
 6/1/239#0,"The document could not be recovered as another recovered work is already open. 
-Please close the other work and try again. (For multi-page files, close all pages and the Page Manager. For single-page files, close the entire file.)",
+Please close the other work and try again. (For multi-page files, close all pages and the Page Manager. For single-page files, close the entire file.)","Документ не удалось восстановить, так как уже открыта другая восстановленная работа. 
+Пожалуйста, закройте другую работу и повторите попытку. (Для многостраничных файлов закройте все страницы и диспетчер страниц. Для одностраничных файлов закройте весь файл.)"
 6/1/240#0,"Failed to process the file because there is no Documents folder in the Internal Storage of the device. 
-Please create a Documents folder directly under Internal Storage in the file manager app and try again.",
+Please create a Documents folder directly under Internal Storage in the file manager app and try again.","Не удалось обработать файл, поскольку во внутренней памяти устройства нет папки «Документы». 
+Создайте папку «Документы» непосредственно в разделе «Внутреннее хранилище» приложения файлового менеджера и повторите попытку."
 6/1/241#0,Return to Clip Studio Paint,Вернуться в Clip Studio Paint
 6/1/242#0,Back,Назад
 6/1/243#0,Return to Clip Studio Modeler,Вернуться в Clip Studio Modeler
 6/1/244#0,"The Teamwork setting has been turned off for this project, so available operations are limited.","Настройка совместной работы отключена для этого проекта, поэтому доступные операции ограничены."
 6/1/245#0,Please update the application to the latest version.,Обновите приложение до последней версии.
 6/1/246#0,"This will repair corrupted data related to the Clip Studio cloud.
-Continue?",
+Continue?","Это восстановит поврежденные данные, связанные с облаком Clip Studio.
+Продолжать?"
 6/1/247#0,Please update the app to the latest version to use this feature.,"Обновите приложение до последней версии, чтобы использовать эту функцию."
 6/1/248#0,"Cloud syncing has been temporarily paused.
- Please log in to resume.",
+ Please log in to resume.","Облачная синхронизация временно приостановлена.
+ Пожалуйста, войдите, чтобы возобновить работу."
 6/1/249#0,"Teamwork project syncing has been temporarily paused.
-Please log in to resume syncing.",
+Please log in to resume syncing.","Синхронизация командных проектов временно приостановлена.
+Пожалуйста, войдите в систему, чтобы возобновить синхронизацию."
 6/1/250#0,Close,Закрыть
 6/1/251#0,Open FAQ,Открыть часто задаваемые вопросы
 6/1/254#0,https://license-account-us.celsys.co.jp/hb.php,https://license-account-us.celsys.co.jp/hb.php
@@ -437,7 +591,8 @@ Please log in to resume syncing.",
 8/1/76#0,Error processing multiple works,Ошибка при обработке нескольких произведений
 8/1/77#0,Affected works,Затронутые произведения
 8/1/78#0,"Failed to start processing some works.
- Please check the following error information.",
+ Please check the following error information.","Не удалось начать обработку некоторых работ.
+ Пожалуйста, проверьте следующую информацию об ошибке."
 8/1/3#0,Open in Clip Studio Paint,Открыть в Clip Studio Paint
 8/1/5#0,Open in ACTION,Открыть в ACTION
 8/1/7#0,Open in Clip Studio Modeler,Открыть в Clip Studio Modeler
@@ -477,7 +632,8 @@ Please log in to resume syncing.",
 9/1/96#0,Error processing multiple materials,Ошибка при обработке нескольких материалов
 9/1/97#0,Affected materials,Затронутые материалы
 9/1/98#0,"Failed to start processing some materials.
- Please check the following error information.",
+ Please check the following error information.","Не удалось начать обработку некоторых материалов.
+ Пожалуйста, проверьте следующую информацию об ошибке."
 9/1/99#0,Created material catalogs,Созданные каталоги материалов
 9/1/100#0,Downloaded material catalogs,Загруженные каталоги материалов
 9/1/3#0,Open in Clip Studio Modeler,Открыть в Clip Studio Modeler
@@ -543,36 +699,51 @@ Please log in to resume syncing.",
 10/1/2#0,Please wait a moment.,Подождите немного.
 10/1/6#0,Cancel,Отмена
 11/1/1#0,"マスターコンテンツ実データがアップロードできませんでした。
-通信状況を確認し、時間を置いて再度お試しください。",
+通信状況を確認し、時間を置いて再度お試しください。","マスターコンテンツ実データがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。"
 11/1/2#0,"マスターコンテンツ設定プロパティデータがアップロードできませんでした。
-通信状況を確認し、時間を置いて再度お試しください。",
+通信状況を確認し、時間を置いて再度お試しください。","マスターコンテンツ設定プロパティデータがアップロードできませんでした。
+通信状況を確認し、時間を置いて再度お試しください。"
 11/1/3#0,Registering master content,Регистрация мастер-контента
 11/1/4#0,Creating master content data,Создание данных мастер-контента
 11/1/5#0,"Do you want to start exporting data for “%s“?
-",
+",Хотите начать экспорт данных для «%s»?
 11/1/6#0,Failed to create master content data.,Не удалось создать данные мастер-контента.
 11/1/7#0,"Failed to create draft ID.
 %d
-%s",
+%s","Не удалось создать идентификатор черновика.
+%d
+%s"
 11/1/8#0,"Failed to retrieve URL for upload.
 %d
 %s
-%s",
+%s","Не удалось получить URL-адрес для загрузки.
+%d
+%s
+%s"
 11/1/9#0,Failed to upload master content data.,Не удалось выгрузить данные мастер-контента.
 11/1/10#0,Failed to upload master content actual data.%d,Не удалось выгрузить фактические данные мастер-контента.%d
 11/1/11#0,Failed to upload master content settings properties data.%d,Не удалось выгрузить данные свойств настроек мастер-контента.%d
 11/1/12#0,"Failed to register master content data.
 %d
-%s",
+%s","Не удалось зарегистрировать основные данные контента.
+%d
+%s"
 11/1/13#0,"Failed to register master content actual data.
 %d
-%s",
+%s","Не удалось зарегистрировать фактические данные основного контента.
+%d
+%s"
 11/1/14#0,"Failed to register master content settings properties data.
 %d
-%s",
+%s","Не удалось зарегистрировать данные свойств основных настроек контента.
+%d
+%s"
 11/1/15#0,"Failed to register master content.
 %d
-%s",
+%s","Не удалось зарегистрировать основной контент.
+%d
+%s"
 11/1/16#0,Unknown server error,Неизвестная ошибка сервера
 11/1/17#0,Output,Вывод
 11/1/18#0,Check details and export,Проверить сведения и экспортировать
@@ -580,22 +751,36 @@ Please log in to resume syncing.",
 13/1/1#0,"You have almost reached the maximum cloud storage.
 You can apply for additional cloud storage to share more of your projects and materials.
 
-Would you like to apply for extra cloud storage?",
+Would you like to apply for extra cloud storage?","Вы почти достигли максимального объема облачного хранилища.
+Вы можете подать заявку на дополнительное облачное хранилище, чтобы делиться большим количеством своих проектов и материалов.
+
+Хотите подать заявку на дополнительное облачное хранилище?"
 13/1/2#0,"You have almost reached the maximum cloud storage.
 You can apply for additional cloud storage to share more of your projects and materials.
 
-Would you like to learn how to apply for extra cloud storage?",
+Would you like to learn how to apply for extra cloud storage?","Вы почти достигли максимального объема облачного хранилища.
+Вы можете подать заявку на дополнительное облачное хранилище, чтобы делиться большим количеством своих проектов и материалов.
+
+Хотите узнать, как подать заявку на дополнительное облачное хранилище?"
 13/1/3#0,"You have reached the maximum cloud storage.
 You can still download your uploaded data, but you can apply for additional cloud storage to sync more files or back up your app settings.
-Would you like to apply for extra cloud storage?",
+Would you like to apply for extra cloud storage?","Вы достигли максимального объема облачного хранилища.
+Вы по-прежнему можете загружать загруженные данные, но можете подать заявку на дополнительное облачное хранилище для синхронизации большего количества файлов или резервного копирования настроек приложения.
+Хотите подать заявку на дополнительное облачное хранилище?"
 13/1/4#0,"You have reached the maximum cloud storage.
 You can still download your uploaded data, but you can apply for additional cloud storage to continue syncing files or back up your app settings.
 
-Would you like to learn how to apply for extra cloud storage?",
+Would you like to learn how to apply for extra cloud storage?","Вы достигли максимального объема облачного хранилища.
+Вы по-прежнему можете загружать загруженные данные, но можете подать заявку на дополнительное облачное хранилище, чтобы продолжить синхронизацию файлов или создать резервную копию настроек приложения.
+
+Хотите узнать, как подать заявку на дополнительное облачное хранилище?"
 13/1/5#0,"You have reached the maximum cloud storage.
 To continue syncing files or back up your app settings, please see how to reduce the storage used.
 
-Would you like to learn how to reduce cloud storage being used?",
+Would you like to learn how to reduce cloud storage being used?","Вы достигли максимального объема облачного хранилища.
+Чтобы продолжить синхронизацию файлов или создать резервную копию настроек приложения, узнайте, как уменьшить объем используемого хранилища.
+
+Хотите узнать, как сократить использование облачного хранилища?"
 13/1/6#0,Learn more,Подробнее
 13/1/7#0,Not now,Не сейчас
 13/1/8#0,Apply,Применить
@@ -605,9 +790,11 @@ Would you like to learn how to reduce cloud storage being used?",
 16/1/1#0,View Information,Просмотреть сведения
 16/1/2#0,Close,Закрыть
 16/1/3#0,"Connecting to online services not possible.
-Clip Studio Paint and offline functions can still be used.",
+Clip Studio Paint and offline functions can still be used.","Подключение к онлайн-сервисам невозможно.
+Clip Studio Paint и автономные функции по-прежнему можно использовать."
 16/1/4#0,"We apologize for any inconvenience caused.
-Please check below for status updates.",
+Please check below for status updates.","Приносим извинения за причиненные неудобства.
+Пожалуйста, проверьте ниже обновления статуса."
 17/1/1#0,Organize Material Database,Упорядочить базу данных материалов
 17/1/2#0,Organize Material Folders,Упорядочить папки материалов
 17/1/3#0,Reset additional materials,Сбросить дополнительные материалы
@@ -703,7 +890,8 @@ Please check below for status updates.",
 20/1/56#0,"Unable to completed all of synchronization, because the Cloud capacity is insufficient.","Не удалось завершить всю синхронизацию, так как недостаточно объёма облака."
 20/1/57#0,Could not complete sync because there is not enough cloud storage space. Please contact the Teamwork project owner.,"Не удалось завершить синхронизацию, так как недостаточно места в облачном хранилище. Обратитесь к владельцу проекта совместной работы."
 20/1/58#0,"Could not complete sync because there is not enough cloud storage space. 
-Please contact the Teamwork project owner.",
+Please contact the Teamwork project owner.","Не удалось завершить синхронизацию, поскольку недостаточно места в облачном хранилище. 
+Пожалуйста, свяжитесь с владельцем проекта Teamwork."
 20/1/59#0,Cloud syncing has been temporarily paused. Please log in to resume syncing.,"Синхронизация с облаком временно приостановлена. Войдите, чтобы возобновить синхронизацию."
 20/1/60#0,Failed to upload materials for app settings.,Не удалось выгрузить материалы для настроек приложения.
 20/1/61#0,The Cloud side has been updated. Please run the synchronization now and update to the latest version..,Сторона облака была обновлена. Запустите синхронизацию сейчас и обновитесь до последней версии..
@@ -714,12 +902,15 @@ Please contact the Teamwork project owner.",
 20/1/66#0,"Unable to upload file as it is currently open. Please close all related works and pages, and then try again.","Не удалось выгрузить файл, так как он сейчас открыт. Закройте все связанные произведения и страницы, затем повторите попытку."
 20/1/67#0,The cloud is waiting for updates. Please wait a moment and try again.,Облако ожидает обновлений. Подождите немного и повторите попытку.
 20/1/68#0,"This operation cannot be run as the software is out of date. 
-Update the software to the latest version and try again.",
+Update the software to the latest version and try again.","Эту операцию невозможно выполнить, поскольку программное обеспечение устарело. 
+Обновите программное обеспечение до последней версии и повторите попытку."
 20/1/69#0,"Can not apply old backup data. 
-Please select backup data from the latest software version.",
+Please select backup data from the latest software version.","Невозможно применить старые данные резервной копии. 
+Пожалуйста, выберите данные резервного копирования из последней версии программного обеспечения."
 20/1/70#0,Clear Completed Transfers,Очистить завершённые передачи
 20/1/71#0,"There is an ongoing transmission.
-Please try again in a few moments.",
+Please try again in a few moments.","Идет постоянная передача.
+Пожалуйста, повторите попытку через несколько минут."
 20/1/72#0,An application backup cannot be created if CLIP STUDIO Series applications are not installed or have never been launched on the computer.,"Резервную копию приложения нельзя создать, если приложения серии CLIP STUDIO не установлены или никогда не запускались на компьютере."
 20/1/73#0,Failed to obtain settings file. The software may currently be in use.,"Не удалось получить файл настроек. Программа, возможно, сейчас используется."
 20/1/74#0,"There is not enough cloud storage space, so the settings file could not be uploaded.","Недостаточно места в облачном хранилище, поэтому файл настроек не удалось выгрузить."
@@ -755,7 +946,8 @@ Please try again in a few moments.",
 20/1/104#0,"Failed to retrieve data from cloud. Sharing permissions may have been revoked, or the data may have been deleted.","Не удалось получить данные из облака. Возможно, разрешения на доступ были отозваны или данные были удалены."
 20/1/105#0,The file may be being synced in another application.,"Возможно, файл синхронизируется в другом приложении."
 20/1/106#0,"Failed to process the file because there is no Documents folder in the Internal Storage of the device. 
-Please create a Documents folder directly under Internal Storage in the file manager app and try again.",
+Please create a Documents folder directly under Internal Storage in the file manager app and try again.","Не удалось обработать файл, поскольку во внутренней памяти устройства нет папки «Документы». 
+Создайте папку «Документы» непосредственно в разделе «Внутреннее хранилище» приложения файлового менеджера и повторите попытку."
 20/1/107#0,Failed to retrieve data from cloud. The Teamwork setting has been turned off. ,Не удалось получить данные из облака. Настройка совместной работы была отключена. 
 21/1/1#0,E-mail Address,Адрес электронной почты
 21/1/2#0,Password,Пароль
@@ -773,7 +965,9 @@ Please create a Documents folder directly under Internal Storage in the file man
 22/1/2#0,Enter the 6-digit code,Введите 6-значный код
 22/1/3#0,"A verification code has been sent to your registered email address.
 Please enter the 6-digit verification code included in the email to log in.
-The verification code will expire in 10 minutes.",
+The verification code will expire in 10 minutes.","Код подтверждения был отправлен на ваш зарегистрированный адрес электронной почты.
+Пожалуйста, введите 6-значный код подтверждения, указанный в электронном письме, чтобы войти.
+Срок действия кода подтверждения истекает через 10 минут."
 22/1/4#0,Send verification code again,Отправить код проверки снова
 22/1/5#0,Mark this device as trusted and skip 2-step verification for 90 days,Отметить это устройство как доверенное и пропускать двухэтапную проверку в течение 90 дней
 22/1/6#0,Log in,Войти
@@ -792,10 +986,12 @@ The verification code will expire in 10 minutes.",
 24/1/4#0,You can change this at any time from the application menu > Privacy Settings.,Вы можете изменить это в любое время в меню приложения > Настройки конфиденциальности.
 24/1/5#0,Help fix errors,Помочь в исправлении ошибок
 24/1/6#0,"If an error occurs, automatically send anonymous information about the incident.
-This helps us resolve bugs and errors.",
+This helps us resolve bugs and errors.","В случае возникновения ошибки автоматически отправлять анонимную информацию об инциденте.
+Это помогает нам устранять ошибки и ошибки."
 24/1/7#0,Improve services,Улучшать службы
 24/1/8#0,"Automatically sends information about features that you use.
-This helps us to improve user experience and develop new features.",
+This helps us to improve user experience and develop new features.","Автоматически отправляет информацию о функциях, которые вы используете.
+Это помогает нам улучшать пользовательский опыт и разрабатывать новые функции."
 24/1/10#0,Set up later,Настроить позже
 25/1/1#0,Using the service,Использование службы
 25/1/2#0,Clip Studio service manual,Руководство по службе Clip Studio
@@ -804,10 +1000,12 @@ This helps us to improve user experience and develop new features.",
 25/1/5#0,User's Guide to Plug-ins,Руководство пользователя по подключаемым модулям
 25/1/6#0,User's Guide to Corner Store Printing,Руководство пользователя по печати в магазине у дома
 26/1/1#0,"Trying to log in as a different user to last time. 
-Please note that this may affect updating materials for ASSETS or syncing to the cloud.",
+Please note that this may affect updating materials for ASSETS or syncing to the cloud.","Пытаюсь войти в систему под другим пользователем, чем в прошлый раз. 
+Обратите внимание, что это может повлиять на обновление материалов для АКТИВОВ или синхронизацию с облаком."
 26/1/2#0,Cannot log in. ,Не удалось выполнить вход. 
 26/1/3#0,"Cannot log in.
-%s",
+%s","Не могу войти.
+%s"
 26/1/4#0,Data transfer timed out,Время передачи данных истекло
 26/1/5#0,Please check your network connection.,Проверьте подключение к сети.
 26/1/6#0,Select image,Выберите изображение
@@ -816,19 +1014,24 @@ Please note that this may affect updating materials for ASSETS or syncing to the
 26/1/9#0,All |*.tar,Все |*.tar
 27/1/1#0,Exporting data...,Экспорт данных...
 27/1/2#0,"This will export the work “%s”. 
- Do you want to continue?",
+ Do you want to continue?","Это позволит экспортировать работу «%s». 
+ Хотите продолжить?"
 27/1/3#0,Please download the latest version of Clip Studio Paint to export your work.,"Загрузите последнюю версию Clip Studio Paint, чтобы экспортировать ваше произведение."
 27/1/4#0,Download latest version,Загрузить последнюю версию
 27/1/5#0,Cancel,Отмена
 27/1/6#0,"This feature is not available on the version of Clip Studio that you have installed. 
-Please download the latest version and try again.",
+Please download the latest version and try again.","Эта функция недоступна в установленной вами версии Clip Studio. 
+Пожалуйста, загрузите последнюю версию и повторите попытку."
 27/1/7#0,Failed to retrieve URL for upload.,Не удалось получить URL для выгрузки.
 27/1/8#0,Failed to upload the file.,Не удалось выгрузить файл.
 27/1/9#0,"Failed to upload the file.
-Status code =%d",
+Status code =%d","Не удалось загрузить файл.
+Код состояния =%d"
 27/1/10#0,"Failed to upload the file.
 Server error code = %d
-Server error =%s",
+Server error =%s","Не удалось загрузить файл.
+Код ошибки сервера = %d
+Ошибка сервера =%s"
 27/1/11#0,You cannot upload works from your device.,Вы не можете выгружать произведения с вашего устройства.
 27/1/12#0,Process for Webtoon file upload,Процесс выгрузки файла вебтуна
 28/1/1#0,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en,https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en

@@ -1,7 +1,8 @@
 ﻿source,target
 Unsupported file format.,Неподдерживаемый формат файла.
 "A problem has been found in the audio device settings.
-Playback may not work correctly.",
+Playback may not work correctly.","Обнаружена проблема в настройках аудиоустройства.
+Воспроизведение может работать некорректно."
 Loading audio data,Загрузка аудиоданных
 Mono,Моно
 Stereo,Стерео

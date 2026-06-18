@@ -1,8 +1,8 @@
 ﻿key,source,target
-1/1/1#0,BOOK VIEWER,BOOK VIEWER
+1/1/1#0,BOOK VIEWER,BOOK ПРОСМОТР
 1/1/3#0,"CELSYS, Inc.","CELSYS, Inc."
-1/1/8#0,.:CELSYS:BOOK VIEWER:1.0,.:CELSYS:BOOK VIEWER:1.0
-1/1/9#0,.:CELSYS:BOOK VIEWER Ver1 Settings,.:CELSYS:BOOK VIEWER Ver1 Settings
+1/1/8#0,.:CELSYS:BOOK VIEWER:1.0,.:CELSYS:BOOK ПРОСМОТР:1.0
+1/1/9#0,.:CELSYS:BOOK VIEWER Ver1 Settings,.:CELSYS:BOOK Настройки ПРОСМОТРА версии 1
 1/1/10#0,3D Preview for Binding,3D-просмотр переплёта
 1/1/11#0,3D Preview for Binding,3D-просмотр переплёта
 1/1/12#0,About 3D Preview for Binding,О 3D-просмотре переплёта
@@ -37,4 +37,6 @@
 1/1/41#0,/ %d page,/ %d стр.
 1/1/42#0,"BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
 
-    Product Version: %s",
+    Product Version: %s","BOOK VIEWER (C) CELSYS, Inc. All Rights Reserved.
+
+    Версия продукта: %s"
