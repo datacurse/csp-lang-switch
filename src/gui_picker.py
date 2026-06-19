@@ -216,7 +216,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             choice_map[key] = choice
             label = choice_display(choice, gui_lang)
             if key == active:
-                label = f"{label}  — {i18n.t(gui_lang, 'now_active')}"
+                label = f"{label} ({i18n.t(gui_lang, 'now_active')})"
                 preselect = key
             ctk.CTkRadioButton(
                 lang_inner, text=label, variable=selected, value=key,

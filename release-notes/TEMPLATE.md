@@ -3,7 +3,7 @@
 
 Short summary of what changed in this release.
 
-**Download:** `csp-lang-switch.exe` — standalone Windows executable (no Python required).
+**Download:** `csp-lang-switch.exe`. Standalone Windows executable, no Python required.
 
 **Requirements:**
 - Windows
@@ -19,7 +19,7 @@ Short summary of what changed in this release.
 
 Краткое описание изменений в этом выпуске.
 
-**Скачать:** `csp-lang-switch.exe` — автономный исполняемый файл для Windows (Python не нужен).
+**Скачать:** `csp-lang-switch.exe`. Автономный файл для Windows, Python не нужен.
 
 **Требования:**
 - Windows
