@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Update GitHub release v0 body and optionally replace csp-lang-switch.exe."""
+"""Update GitHub release v0 notes and replace csp-lang-switch.exe.
+
+Only the exe is uploaded as a release asset. GitHub also shows automatic
+"Source code (zip/tar.gz)" links on the release page; those cannot be removed
+on public repos. Point users at the direct exe URL instead of the release page.
+"""
 
 from __future__ import annotations
 

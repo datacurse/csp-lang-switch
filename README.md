@@ -20,7 +20,7 @@ Clip Studio Paint не поддерживает русский язык. В пр
 
 ## Как скачать и запустить
 
-1. Скачайте файл `csp-lang-switch.exe` со [страницы релизов](https://github.com/datacurse/csp-lang-switch/releases/latest).
+1. Скачайте [csp-lang-switch.exe](https://github.com/datacurse/csp-lang-switch/releases/download/v0/csp-lang-switch.exe).
 2. **Закройте Clip Studio Paint**, если она открыта.
 3. Запустите скачанный файл двойным щелчком.
 4. В открывшемся окне выберите **версию CSP** (программа определит установленную автоматически), затем **русский** или **английский** и нажмите «Применить». Windows один раз спросит разрешение на изменения. Согласитесь.
