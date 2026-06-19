@@ -80,7 +80,14 @@ def main() -> int:
         "--notes-only", action="store_true",
         help="Update release notes only; do not replace the exe asset",
     )
+    parser.add_argument(
+        "--asset-only", action="store_true",
+        help="Replace the exe asset only; do not change release notes",
+    )
     args = parser.parse_args()
+
+    if args.notes_only and args.asset_only:
+        sys.exit("error: --notes-only and --asset-only are mutually exclusive")
 
     if not BODY.is_file():
         sys.exit(f"error: missing {BODY}")
@@ -88,14 +95,15 @@ def main() -> int:
         sys.exit(f"error: missing {EXE} — run pyinstaller first")
 
     token = get_token()
-    body = BODY.read_text(encoding="utf-8")
     release = get_release(token)
     release_id = release["id"]
 
-    api(token, "PATCH",
-        f"https://api.github.com/repos/{OWNER}/{REPO}/releases/{release_id}",
-        json.dumps({"body": body}).encode())
-    print("updated release body")
+    if not args.asset_only:
+        body = BODY.read_text(encoding="utf-8")
+        api(token, "PATCH",
+            f"https://api.github.com/repos/{OWNER}/{REPO}/releases/{release_id}",
+            json.dumps({"body": body}).encode())
+        print("updated release body")
 
     if args.notes_only:
         return 0
