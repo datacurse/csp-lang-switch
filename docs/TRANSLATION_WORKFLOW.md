@@ -193,11 +193,13 @@ own CSV scripts:
   stay English. This bug cost one whole translation pass.
 * **The oracle has one blind spot: blocks CSP left English in *every*
   language.** There `en == ja`, so a non-prose record gets no signal and is
-  dropped — even though it is live UI text. Found so far: `7F9F9530` block 6
-  (the Material-palette folder tree), fixed by
-  [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py). No heuristic
-  catches these; find them by eyeballing the running UI. Full account:
-  VERIFIED_METHOD.md → "The oracle's blind spot".
+  dropped — even though it is live UI text. No heuristic catches these; find
+  them by eyeballing the running UI.
+* **`7F9F9530` block 6 (the Material-palette folder tree) is deliberately left
+  English.** CSP matches materials to their built-in folder by name, so
+  translating these names makes the folder open empty. The `NEVER_TRANSLATE`
+  guard in `src/batch.py` strips block 6 on export and pack. Full account:
+  VERIFIED_METHOD.md → "Never translate the material folder tree".
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 

@@ -199,7 +199,7 @@ Please enter a different preset name.","«%s» нельзя зарегистри
 8/1/24#0,Apply light source,Применить источник света
 8/1/26#0,Method,Метод
 8/1/29#0,Cast shadows,Отбрасывать тени
-8/1/30#0,Texture,Текстура
+8/1/30#0,Texture,Texture
 8/1/32#0,Use texture,Использовать текстуру
 8/1/34#0,Method,Метод
 8/1/37#0,Alpha test,Альфа-тест
@@ -220,7 +220,7 @@ Please enter a different preset name.","«%s» нельзя зарегистри
 8/1/73#0,Phong,Фонг
 8/1/74#0,Realistic,Реалистичный
 8/1/75#0,Toon,Мультяшный
-8/1/76#0,Character,Персонаж
+8/1/76#0,Character,Character
 8/1/77#0,Toon shading,Мультяшное затенение
 8/1/78#0,Summer sunlight,Летний солнечный свет
 8/1/79#0,Linear,Линейный
@@ -445,7 +445,7 @@ Please enter a different preset name.","«%s» нельзя зарегистри
 25/1/22#0,Mouth,Рот
 25/1/23#0,Ears,Уши
 25/1/24#0,Neck,Шея
-25/1/25#0,Head,Голова
+25/1/25#0,Head,Head
 25/1/26#0,Direction,Направление
 25/1/27#0,Size (W),Размер (Ш)
 25/1/28#0,Size (H),Размер (В)

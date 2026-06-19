@@ -1,14 +1,14 @@
 ﻿source,target
-Body,Тело
-Face,Лицо
-Hair,Волосы
+Body,Body
+Face,Face
+Hair,Hair
 Accessories,Аксессуары
-Pose,Поза
+Pose,Pose
 Character Motion,Движение персонажа
 Unique point,Уникальная точка
 Facial expression,Выражение лица
 Facial expression parts,Элементы выражения лица
-Material,Материал
+Material,Material
 Allocate,Разместить
 Movable parts,Подвижные элементы
 Angle,Угол

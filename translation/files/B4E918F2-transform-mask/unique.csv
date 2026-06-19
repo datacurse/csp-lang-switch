@@ -32,7 +32,7 @@ Enable,Включить
 Color components of highlight,Цветовые компоненты блика
 Highlight intensity,Интенсивность блика
 Status,Состояние
-Material,Материал
+Material,Material
 Layout,Макет
 Parts,Части
 Movable parts,Подвижные части
@@ -40,8 +40,8 @@ Movable parts,Подвижные части
  :Select, :Выбрать
 Audio,Аудио
 Volume,Громкость
-Pose,Поза
-Head,Голова
+Pose,Pose
+Head,Head
 Eyeline,Линия взгляда
 Direction of neck,Направление шеи
 Left arm,Левая рука
@@ -72,7 +72,7 @@ Other bones,Другие кости
 Allocate,Разместить
 Whole position,Положение целиком
 Whole rotation,Вращение целиком
-Face,Лицо
+Face,Face
 Facial expression,Выражение лица
 Eyes,Глаза
 Mouth,Рот

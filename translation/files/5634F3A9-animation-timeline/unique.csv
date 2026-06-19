@@ -170,7 +170,7 @@ Rendering Method,Метод рендеринга
  , 
 Apply light source,Применить источник света
 Cast shadows,Отбрасывать тени
-Texture,Текстура
+Texture,Texture
 Use texture,Использовать текстуру
 Alpha test,Альфа-тест
 Backface culling,Отсечение задних граней
@@ -188,7 +188,7 @@ Gouraud,Гуро
 Phong,Фонг
 Realistic,Реалистичный
 Toon,Мультяшный
-Character,Персонаж
+Character,Character
 Toon shading,Мультяшное затенение
 Summer sunlight,Летний солнечный свет
 Linear,Линейный
@@ -376,7 +376,7 @@ Nose,Нос
 Mouth,Рот
 Ears,Уши
 Neck,Шея
-Head,Голова
+Head,Head
 Direction,Направление
 Size (W),Размер (Ш)
 Size (H),Размер (В)

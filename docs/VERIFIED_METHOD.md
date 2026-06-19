@@ -144,38 +144,37 @@ registry paths). Measured on `742DEA58`: the translatable set went 9,368 →
 `classify()` is still fine for the `stats` breakdown — just never let it gate
 what gets translated.
 
-### The oracle's blind spot — strings CSP never localized either
+### Never translate the material folder tree — block 6 of `7F9F9530`
 
-The oracle assumes CSP's Japanese resource is *complete*. It nearly always is —
-but a few blocks ship **identical English in every language** (Japanese,
-Korean, French … all the same English bytes). There `en == ja`, so the oracle
-sees no signal, and a non-prose record in such a block is dropped.
+Block 6 of `7F9F9530` is the **Material-palette folder tree** (`All materials →
+Color pattern → … → Texture`). These are **not** ordinary display labels:
+CSP matches stock and downloaded materials to their built-in folder **by name**,
+comparing the (localized) tree node against the folder tag stored in the local
+material database (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`) — there is
+no stable id behind the name. So if the folder name is translated, the match
+fails and **the folder opens empty**. (The 3D folders are the exception: they
+bind to language-neutral `SystemTag` codes such as `3DPrimitive` /
+`3DDessindollHead`, which is why 3D kept working when every other category broke.)
 
-This surfaced as the **Material-palette folder tree** (`Все материалы → Цветной
-узор → …` in the Material palette). Its names live in **block 6 of `7F9F9530`**
-— a material-category table shared by the palette and the cloud-sync UI — and
-CSP ships that block English in *all 12 languages*. Its multi-word names
-(`Color pattern`) are `classify() == "text"`, so the rule's first half kept
-them; its single-word names (`Pattern`, `Background`, `Nature`, `Texture`,
-`Favorite`, …) are `classify() == "key"` **and** `en == ja`, so **both** halves
-missed them — 90 records. Symptom: in the palette tree, multi-word folders were
-Russian, single-word folders stayed English.
+**Policy: these strings stay English in every resource file, every CSP version.**
+Enforced in `src/batch.py`:
 
-This is *not* the `--kind text` bug above — the oracle was used correctly. It is
-the oracle's one structural limit: it cannot flag what CSP's own localizers
-never flagged. No automatic fix exists (there is no third, "more complete"
-reference); such a block is found by **eyeballing the running UI**, then patched
-by hand.
+* **`_material_folder_sources()`** — the ~214 English strings from block 6 of
+  `7F9F9530` (folder names and colon-paths like `Monochromatic pattern:Texture`).
+* **`export` / `pack` / `join`** skip any row whose key *or source* is in that set.
+  This matters because `pack` maps translations by **source text**: the same
+  `"All materials"` in `742DEA58` main UI would otherwise pick up Russian from
+  `unique.csv` even when block 6 keys in `7F9F9530` were already protected.
 
-**The fix, when you find such a block.** Translate the missing records straight
-from CSP's own neighbouring translations — block 6 also holds full colon-path
-rows (`Color pattern:Background:Nature`) whose `text` halves *were* translated,
-so every path segment's Russian is already pinned: it is propagation, not fresh
-translation. [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py)
-does exactly this for block 6 — it appends the 90 rows to the `7F9F9530`
-worksheet and is **idempotent**. Re-run it after any `batch.py export --force`
-of `7F9F9530`: a re-export regenerates the worksheet from the oracle and drops
-those rows again.
+The cost is cosmetic — the palette tree shows English category names inside an
+otherwise-Russian UI — and it is strictly better than folders that resolve to
+zero materials.
+
+> Historical note: an earlier approach went the other way — a
+> `scripts/patch_material_tree.py` helper *added* Russian folder names (block 6
+> ships English in all 12 languages, so the Japanese oracle could not see them as
+> translatable). That script has been removed: translating these names is exactly
+> what breaks material selection.
 
 ---
 

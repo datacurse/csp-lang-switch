@@ -76,16 +76,19 @@ excluded by human judgement — see below — regardless of the oracle).
 | `3DC534C9` | 150 | 0 | Empty stub container | ❌ |
 | `F549CE76` | 150 | 0 | Empty stub container | ❌ |
 
-## `7F9F9530` block 6 — the Material-palette folder tree
+## `7F9F9530` block 6 — the Material-palette folder tree (never translated)
 
 `7F9F9530`'s block 6 is a material-category table that drives the Material
-palette's folder tree (`Все материалы → Цветной узор → …`), not just cloud
-sync. CSP ships block 6 English in **every** language, so the Japanese oracle
-could not see its single-word `key` records as translatable — 90 folder names
-stayed English while the multi-word ones translated. They were patched in by
-hand from CSP's own colon-path translations; see VERIFIED_METHOD.md → "The
-oracle's blind spot" and [`scripts/patch_material_tree.py`](../scripts/patch_material_tree.py).
-The `907` oracle count above therefore excludes those 90 rows (worksheet: 997).
+palette's folder tree (`All materials → Color pattern → …`), not just cloud
+sync. **These names are never translated.** CSP matches materials to their
+built-in folder by name against the local material DB
+(`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`), so a translated folder name
+no longer matches and the folder opens empty (3D survives because it binds to
+neutral `SystemTag` codes). The policy is enforced by the `NEVER_TRANSLATE`
+guard in `src/batch.py` (`7F9F9530` → `6/1/`), which strips block 6 on both
+export and pack; see VERIFIED_METHOD.md → "Never translate the material folder
+tree". The `907` oracle count above counts these block-6 records, but the
+worksheet and every packed build exclude them.
 
 ## Non-targets — do not translate
 

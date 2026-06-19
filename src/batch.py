@@ -86,6 +86,77 @@ _WORD = re.compile(r"[a-z']+")
 
 
 # ----------------------------------------------------------------------
+# Never-translate guard -- material-palette folder-tree names
+# ----------------------------------------------------------------------
+# Block 6 of 7F9F9530 supplies the Material palette's built-in folder tree
+# ("All materials -> Color pattern -> ... -> Texture"). CSP matches stock and
+# downloaded materials to these folders BY NAME against the local material DB
+# (CatalogMaterial.cmdb / MaterialFolderTag.mfta), not by a stable id -- so a
+# translated folder name no longer matches and the folder opens EMPTY. (3D
+# folders are exempt: they bind to language-neutral SystemTag codes such as
+# "3DPrimitive", which is why 3D kept working when everything else broke.)
+# These names must therefore stay English in every build and every CSP version.
+#
+# Keys are entry-id paths ("6/1/40#0"); block 6 is the `6/1/` subtree.
+NEVER_TRANSLATE: dict[str, tuple[str, ...]] = {
+    "7F9F9530": ("6/1/",),
+}
+
+MATERIAL_FOLDER_GUID = "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
+_material_folder_source_cache: frozenset[str] | None = None
+
+
+def _material_folder_sources() -> frozenset[str]:
+    """English folder/category names from 7F9F9530 block 6 -- never translate.
+
+    The same source text can appear under different keys in other resource
+    files (e.g. 742DEA58 main UI). `pack` maps translations by source, so
+    protecting keys in 7F9F9530 alone is not enough: every occurrence of these
+    strings must stay English in every file.
+    """
+    global _material_folder_source_cache
+    if _material_folder_source_cache is not None:
+        return _material_folder_source_cache
+    import csp5 as _csp5
+    from repack import iter_records as _iter_records
+
+    for ver in SUPPORTED_VERSIONS:
+        stock = ROOT / "versions" / ver / "langs" / "english" / "ui" / MATERIAL_FOLDER_GUID
+        if not stock.is_file():
+            continue
+        sources = {
+            _lf(t)
+            for k, _, t in _iter_records(_csp5.parse(stock.read_bytes()))
+            if k.startswith("6/1/")
+        }
+        _material_folder_source_cache = frozenset(sources)
+        return _material_folder_source_cache
+    sys.exit("ERROR: cannot load material folder sources -- no stock 7F9F9530 found")
+
+
+def _protected_prefixes(rec: dict) -> tuple[str, ...]:
+    """Key prefixes that must never be translated for this resource file."""
+    return NEVER_TRANSLATE.get(rec["short"], ())
+
+
+def _is_protected(rec: dict, row: dict) -> bool:
+    """True when this worksheet row must keep its English source."""
+    if any(row["key"].startswith(p) for p in _protected_prefixes(rec)):
+        return True
+    return _lf(row.get("source", "")) in _material_folder_sources()
+
+
+def _drop_protected(rec: dict, rows: list[dict]) -> list[dict]:
+    """Drop rows that must never be translated (by key prefix or source text).
+
+    Removing the row entirely (rather than blanking its target) means `apply`
+    never touches that string, so it keeps the English source from the stock
+    resource it was exported from.
+    """
+    return [r for r in rows if not _is_protected(rec, r)]
+
+
+# ----------------------------------------------------------------------
 # Manifest
 # ----------------------------------------------------------------------
 def load_manifest() -> list[dict]:
@@ -183,6 +254,12 @@ def _export_one(rec: dict, force: bool) -> bool:
     ws.parent.mkdir(parents=True, exist_ok=True)
     print(f"export {rec['short']}-{rec['slug']}")
     rc = repack.main(["export", str(src), str(ws), "--reference", str(ref)])
+    if rc == 0:
+        rows = _read_rows(ws)
+        kept = _drop_protected(rec, rows)
+        if len(kept) != len(rows):
+            _write_rows(ws, ["key", "source", "target"], kept)
+            print(f"  dropped {len(rows) - len(kept)} material-folder row(s)")
     return rc == 0
 
 
@@ -268,9 +345,15 @@ def cmd_join(args: argparse.Namespace) -> int:
     # match would then silently miss every multi-line string.
     trans = {_lf(r["source"]): r["target"] for r in _read_rows(uniq)}
     rows = _read_rows(ws)
+    protected = _material_folder_sources()
 
     changed = 0
     for r in rows:
+        if _is_protected(rec, r):
+            if r["target"] != r["source"]:
+                r["target"] = r["source"]
+                changed += 1
+            continue
         new = trans.get(_lf(r["source"]))
         if new is None:
             continue
@@ -315,20 +398,27 @@ def cmd_join_all(args: argparse.Namespace) -> int:
 # ----------------------------------------------------------------------
 def _translations_by_source(rec: dict) -> dict[str, str]:
     """Return finished translations keyed by normalized English source text."""
+    protected = _material_folder_sources()
     trans: dict[str, str] = {}
     uniq = unique_for(rec)
     if uniq.exists():
         for r in _read_rows(uniq):
+            src = _lf(r["source"])
+            if src in protected:
+                continue
             t = r.get("target")
             if t is not None and t != "":
-                trans[_lf(r["source"])] = t
+                trans[src] = t
     if not trans:
         ws = worksheet_for(rec)
         if ws.exists():
             for r in _read_rows(ws):
+                src = _lf(r["source"])
+                if src in protected:
+                    continue
                 t = (r.get("target") or "").strip()
                 if t and t != r["source"]:
-                    trans[_lf(r["source"])] = t
+                    trans[src] = t
     return trans
 
 
@@ -350,7 +440,9 @@ def _worksheet_for_version(rec: dict) -> Path | None:
         if repack.main(["export", str(src), str(tmp), "--reference", str(ref)]) != 0:
             return None
         trans = _translations_by_source(rec)
-        rows = _read_rows(tmp)
+        # Block-6 (material folder-tree) keys are dropped so `apply` leaves them
+        # at the English source -- see NEVER_TRANSLATE.
+        rows = _drop_protected(rec, _read_rows(tmp))
         for r in rows:
             new = trans.get(_lf(r["source"]))
             if new is None:

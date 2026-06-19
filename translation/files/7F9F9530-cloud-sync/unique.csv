@@ -84,7 +84,7 @@ Clip Studio Modeler shape,Фигура Clip Studio Modeler
 Clip Studio Modeler background,Фон Clip Studio Modeler
 Clip Studio Modeler object,Объект Clip Studio Modeler
 File,Файл
-All,Все
+All,All
 Updated,Обновлено
 すべての作品,Все произведения
 すべて,Все
@@ -92,18 +92,18 @@ Updated,Обновлено
 お気に入り,Избранное
 チーム制作,Командная работа
 All works,Все произведения
-Material,Материал
+Material,Material
 Layer,Слой
 Tool setting,Настройка инструмента
-Other,Другое
+Other,Other
 Not specified,Не указано
 Page template,Шаблон страницы
-Frame,Кадр
-Balloon,Облачко
-Sign,Знак
-Sound effect,Звуковой эффект
-Effect line,Линия эффекта
-Background,Фон
+Frame,Frame
+Balloon,Balloon
+Sign,Sign
+Sound effect,Sound effect
+Effect line,Effect line
+Background,Background
 Foreground,Передний план
 3D pose,3D-поза
 3D drawing figure,3D-фигура рисования
@@ -217,7 +217,7 @@ Please wait for a while and try it again.","База данных материа
 Подождите немного и повторите попытку."
 You cannot delete unnamed folders. Please name the folder and try again.,
 You cannot delete materials from unnamed folders. Please name the folder and try again.,
-Framing template,Шаблон кадрирования
+Framing template,Framing template
 Layer template,Шаблон слоя
 3D image,3D-изображение
 3D character,3D-персонаж
@@ -227,17 +227,17 @@ Old format 3D object,3D-объект старого формата
 3D shape,3D-фигура
 3D background,3D-фон
 Old format 3D background,3D-фон старого формата
-Pose,Поза
+Pose,Pose
 Body shape,Форма тела
 3D head,3D-голова
 3D hand model,
-Panorama,Панорама
-Paper texture,Текстура бумаги
+Panorama,Panorama
+Paper texture,Paper texture
 Brush tip shape,Форма кончика кисти
-Image material,Материал изображения
+Image material,Image material
 Animation,Анимация
-Brush,Кисть
-Gradient,Градиент
+Brush,Brush
+Gradient,Gradient
 Tool settings (others),Настройки инструмента (прочее)
 Color Set,Набор цветов
 Character Motion,Движение персонажа
@@ -250,7 +250,7 @@ Body parts,Части тела
 Hair parts,Части волос
 Material catalog,Каталог материалов
 Vector,Векторный
-Tone,Тон
+Tone,Tone
 Fill,Заливка
 Ruler,Линейка
 Special ruler,Специальная линейка
@@ -485,152 +485,152 @@ ComicStudio3.0素材,Материалы ComicStudio3.0
 3D:天球,
 3D:ポーズ:連番ポーズ,
 最近使用した素材,
-Background (Scenery),Фон (Пейзаж)
-Background (Feeling),Фон (Настроение)
-Foreground (Feeling),Передний план (Настроение)
-Sound effects lettering,Надпись звуковых эффектов
-Sound effects lettering (Font),Надпись звуковых эффектов (Шрифт)
-All materials,Все материалы
-Paper template,Шаблон бумаги
-CLIP material,Материал CLIP
-Color pattern,Цветной узор
-Clothes pattern,Узор одежды
-Japanese pattern,Японский узор
-Flower and plant pattern,Цветочный и растительный узор
-Effect and feeling,Эффект и настроение
-"Bright, Quiet, Soft and Delight","Свет, покой, мягкость и радость"
-"Dark, Loud, Tense and Anger","Тьма, напор, напряжение и гнев"
-Monochromatic pattern,Одноцветный узор
-Parallel line,Параллельные линии
-Sand pattern,Песчаный узор
-Manga material,Материал манги
-Saturated line,Линии фокусировки
-Speed line,Линии скорости
-Sea urchin flash,Вспышка “морского ежа”
-Beta flash,Чёрная вспышка
-Movement and feeling,Движение и ощущение
-Voice and breath,Голос и дыхание
-Noise and machine sound,Шум и звук механизмов
-Notice and impact,Внимание и удар
-Sweat and tear,Пот и слёзы
-Smoke and breath,Дым и дыхание
-Code and figure,Знаки и фигуры
-Flower and plant,Цветы и растения
-Effect and stage direction,Эффект и постановка
-Body type,Тип телосложения
+Background (Scenery),Background (Scenery)
+Background (Feeling),Background (Feeling)
+Foreground (Feeling),Foreground (Feeling)
+Sound effects lettering,Sound effects lettering
+Sound effects lettering (Font),Sound effects lettering (Font)
+All materials,All materials
+Paper template,Paper template
+CLIP material,CLIP material
+Color pattern,Color pattern
+Clothes pattern,Clothes pattern
+Japanese pattern,Japanese pattern
+Flower and plant pattern,Flower and plant pattern
+Effect and feeling,Effect and feeling
+"Bright, Quiet, Soft and Delight","Bright, Quiet, Soft and Delight"
+"Dark, Loud, Tense and Anger","Dark, Loud, Tense and Anger"
+Monochromatic pattern,Monochromatic pattern
+Parallel line,Parallel line
+Sand pattern,Sand pattern
+Manga material,Manga material
+Saturated line,Saturated line
+Speed line,Speed line
+Sea urchin flash,Sea urchin flash
+Beta flash,Beta flash
+Movement and feeling,Movement and feeling
+Voice and breath,Voice and breath
+Noise and machine sound,Noise and machine sound
+Notice and impact,Notice and impact
+Sweat and tear,Sweat and tear
+Smoke and breath,Smoke and breath
+Code and figure,Code and figure
+Flower and plant,Flower and plant
+Effect and stage direction,Effect and stage direction
+Body type,Body type
 Hand model,
-Entire body,Всё тело
-Pose sequence,Последовательность поз
-Small object,Мелкий предмет
-Stationery and book,Канцелярия и книги
-Food and beverage,Еда и напитки
-School supply,Школьное оборудование
-Furniture and interior,Мебель и интерьер
-Home electronics,Бытовая техника
-School facility,Школьные сооружения
-Community facility and road,Общественные сооружения и дороги
-Commercial facility,Коммерческие сооружения
-Other building,Прочие постройки
-Character parts,Части персонажа
-Character Texture,Текстура персонажа
-IllustStudio material,Материалы IllustStudio
-ComicStudio4.0 material,Материалы ComicStudio4.0
-ComicStudio3.0 material,Материалы ComicStudio3.0
-Tone material collection,Коллекция тоновых материалов
-3D data collection,Коллекция 3D-данных
-Trash box,Корзина
-Color pattern:Pattern:Clothes pattern,Цветной узор:Узор:Узор одежды
-Color pattern:Pattern:Japanese pattern,Цветной узор:Узор:Японский узор
-Color pattern:Pattern:Flower and plant pattern,Цветной узор:Узор:Цветочный и растительный узор
-Color pattern:Pattern:Other,Цветной узор:Узор:Прочее
-Color pattern:Pattern,Цветной узор:Узор
-"Color pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Цветной узор:Эффект и настроение:Свет, покой, мягкость и радость"
-"Color pattern:Effect and feeling:Dark, Loud, Tense and Anger","Цветной узор:Эффект и настроение:Тьма, напор, напряжение и гнев"
-Color pattern:Effect and feeling,Цветной узор:Эффект и настроение
-Color pattern:Background:Nature,Цветной узор:Фон:Природа
-Color pattern:Background:Artificial,Цветной узор:Фон:Искусственное
-Color pattern:Background,Цветной узор:Фон
-Color pattern:Texture,Цветной узор:Текстура
-Monochromatic pattern:Basic:Dot,Одноцветный узор:Основное:Точки
-Monochromatic pattern:Basic:Parallel line,Одноцветный узор:Основное:Параллельные линии
-Monochromatic pattern:Basic:Sand pattern,Одноцветный узор:Основное:Песчаный узор
-Monochromatic pattern:Basic,Одноцветный узор:Основное
-Monochromatic pattern:Gradient:Dot,Одноцветный узор:Градиент:Точки
-Monochromatic pattern:Gradient:Parallel line,Одноцветный узор:Градиент:Параллельные линии
-Monochromatic pattern:Gradient:Sand pattern,Одноцветный узор:Градиент:Песчаный узор
-Monochromatic pattern:Gradient,Одноцветный узор:Градиент
-Monochromatic pattern:Pattern:Clothes pattern,Одноцветный узор:Узор:Узор одежды
-Monochromatic pattern:Pattern:Japanese pattern,Одноцветный узор:Узор:Японский узор
-Monochromatic pattern:Pattern:Flower and plant pattern,Одноцветный узор:Узор:Цветочный и растительный узор
-Monochromatic pattern:Pattern:Other,Одноцветный узор:Узор:Прочее
-Monochromatic pattern:Pattern,Одноцветный узор:Узор
-"Monochromatic pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Одноцветный узор:Эффект и настроение:Свет, покой, мягкость и радость"
-"Monochromatic pattern:Effect and feeling:Dark, Loud, Tense and Anger","Одноцветный узор:Эффект и настроение:Тьма, напор, напряжение и гнев"
-Monochromatic pattern:Effect and feeling,Одноцветный узор:Эффект и настроение
-Monochromatic pattern:Background:Nature,Одноцветный узор:Фон:Природа
-Monochromatic pattern:Background:Artificial,Одноцветный узор:Фон:Искусственное
-Monochromatic pattern:Background,Одноцветный узор:Фон
-Monochromatic pattern:Cross-hatching,Одноцветный узор:Перекрёстная штриховка
-Monochromatic pattern:Texture,Одноцветный узор:Текстура
-Manga material:Balloon:Dialog,Материал манги:Выноска:Реплика
-Manga material:Balloon:Feeling,Материал манги:Выноска:Настроение
-Manga material:Balloon:Narration,Материал манги:Выноска:Повествование
-Manga material:Balloon,Материал манги:Выноска
-Manga material:Effect line:Saturated line,Материал манги:Линии эффекта:Линии фокусировки
-Manga material:Effect line:Speed line,Материал манги:Линии эффекта:Линии скорости
-Manga material:Effect line:Sea urchin flash,Материал манги:Линии эффекта:Вспышка “морского ежа”
-Manga material:Effect line:Beta flash,Материал манги:Линии эффекта:Чёрная вспышка
-Manga material:Effect line,Материал манги:Линии эффекта
-Manga material:Sound effect:Movement and feeling,Материал манги:Звуковой эффект:Движение и ощущение
-Manga material:Sound effect:Impact,Материал манги:Звуковой эффект:Удар
-Manga material:Sound effect:Voice and breath,Материал манги:Звуковой эффект:Голос и дыхание
-Manga material:Sound effect:Sentiment,Материал манги:Звуковой эффект:Настроение
-Manga material:Sound effect:Noise and machine sound,Материал манги:Звуковой эффект:Шум и звук механизмов
-Manga material:Sound effect,Материал манги:Звуковой эффект
-Manga material:Sign:Notice and impact,Материал манги:Знак:Внимание и удар
-Manga material:Sign:Movement and feeling,Материал манги:Знак:Движение и ощущение
-Manga material:Sign:Sweat and tear,Материал манги:Знак:Пот и слёзы
-Manga material:Sign:Smoke and breath,Материал манги:Знак:Дым и дыхание
-Manga material:Sign:Wound,Материал манги:Знак:Рана
-Manga material:Sign:Light,Материал манги:Знак:Свет
-Manga material:Sign:Code and figure,Материал манги:Знак:Знаки и фигуры
-Manga material:Sign:Icon,Материал манги:Знак:Значок
-Manga material:Sign:Other,Материал манги:Знак:Прочее
-Manga material:Sign,Материал манги:Знак
-Manga material:Framing template,Материал манги:Шаблон кадрирования
-Image material:Illustration:Building,Материал изображения:Иллюстрация:Здание
-Image material:Illustration:Tool,Материал изображения:Иллюстрация:Инструмент
-Image material:Illustration:Flower and plant,Материал изображения:Иллюстрация:Цветы и растения
-Image material:Illustration:Nature,Материал изображения:Иллюстрация:Природа
-Image material:Illustration:Effect and stage direction,Материал изображения:Иллюстрация:Эффект и постановка
-Image material:Illustration:Decoration,Материал изображения:Иллюстрация:Украшение
-Image material:Illustration,Материал изображения:Иллюстрация
-Image material:Picture,Материал изображения:Фотография
-Image material:Brush,Материал изображения:Кисть
-3D:Pose:Entire body,3D:Поза:Всё тело
-3D:Small object:Commodity,3D:Мелкий предмет:Предметы быта
-3D:Small object:Stationery and book,3D:Мелкий предмет:Канцелярия и книги
-3D:Small object:Food and beverage,3D:Мелкий предмет:Еда и напитки
-3D:Small object:School supply,3D:Мелкий предмет:Школьное оборудование
-3D:Small object:Sport,3D:Мелкий предмет:Спорт
-3D:Small object:Furniture and interior,3D:Мелкий предмет:Мебель и интерьер
-3D:Small object:Home electronics,3D:Мелкий предмет:Бытовая техника
-3D:Small object:Fashion,3D:Мелкий предмет:Мода
-3D:Small object:Tool,3D:Мелкий предмет:Инструмент
-3D:Small object:Weapon,3D:Мелкий предмет:Оружие
-3D:Small object:Vehicle,3D:Мелкий предмет:Транспорт
-3D:Small object,3D:Мелкий предмет
-3D:Background:School facility,3D:Фон:Школьные сооружения
-3D:Background:Community facility and road,3D:Фон:Общественные сооружения и дороги
-3D:Background:Commercial facility,3D:Фон:Коммерческие сооружения
-3D:Background:Other building,3D:Фон:Прочие постройки
-3D:Character parts:Face,3D:Части персонажа:Лицо
-3D:Character parts:Body,3D:Части персонажа:Тело
-3D:Character parts:Hair,3D:Части персонажа:Волосы
-3D:Character parts,3D:Части персонажа
-3D:Character Texture:Face,3D:Текстура персонажа:Лицо
-3D:Character Texture,3D:Текстура персонажа
-3D:Body type,3D:Тип телосложения
+Entire body,Entire body
+Pose sequence,Pose sequence
+Small object,Small object
+Stationery and book,Stationery and book
+Food and beverage,Food and beverage
+School supply,School supply
+Furniture and interior,Furniture and interior
+Home electronics,Home electronics
+School facility,School facility
+Community facility and road,Community facility and road
+Commercial facility,Commercial facility
+Other building,Other building
+Character parts,Character parts
+Character Texture,Character Texture
+IllustStudio material,IllustStudio material
+ComicStudio4.0 material,ComicStudio4.0 material
+ComicStudio3.0 material,ComicStudio3.0 material
+Tone material collection,Tone material collection
+3D data collection,3D data collection
+Trash box,Trash box
+Color pattern:Pattern:Clothes pattern,Color pattern:Pattern:Clothes pattern
+Color pattern:Pattern:Japanese pattern,Color pattern:Pattern:Japanese pattern
+Color pattern:Pattern:Flower and plant pattern,Color pattern:Pattern:Flower and plant pattern
+Color pattern:Pattern:Other,Color pattern:Pattern:Other
+Color pattern:Pattern,Color pattern:Pattern
+"Color pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Color pattern:Effect and feeling:Bright, Quiet, Soft and Delight"
+"Color pattern:Effect and feeling:Dark, Loud, Tense and Anger","Color pattern:Effect and feeling:Dark, Loud, Tense and Anger"
+Color pattern:Effect and feeling,Color pattern:Effect and feeling
+Color pattern:Background:Nature,Color pattern:Background:Nature
+Color pattern:Background:Artificial,Color pattern:Background:Artificial
+Color pattern:Background,Color pattern:Background
+Color pattern:Texture,Color pattern:Texture
+Monochromatic pattern:Basic:Dot,Monochromatic pattern:Basic:Dot
+Monochromatic pattern:Basic:Parallel line,Monochromatic pattern:Basic:Parallel line
+Monochromatic pattern:Basic:Sand pattern,Monochromatic pattern:Basic:Sand pattern
+Monochromatic pattern:Basic,Monochromatic pattern:Basic
+Monochromatic pattern:Gradient:Dot,Monochromatic pattern:Gradient:Dot
+Monochromatic pattern:Gradient:Parallel line,Monochromatic pattern:Gradient:Parallel line
+Monochromatic pattern:Gradient:Sand pattern,Monochromatic pattern:Gradient:Sand pattern
+Monochromatic pattern:Gradient,Monochromatic pattern:Gradient
+Monochromatic pattern:Pattern:Clothes pattern,Monochromatic pattern:Pattern:Clothes pattern
+Monochromatic pattern:Pattern:Japanese pattern,Monochromatic pattern:Pattern:Japanese pattern
+Monochromatic pattern:Pattern:Flower and plant pattern,Monochromatic pattern:Pattern:Flower and plant pattern
+Monochromatic pattern:Pattern:Other,Monochromatic pattern:Pattern:Other
+Monochromatic pattern:Pattern,Monochromatic pattern:Pattern
+"Monochromatic pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Monochromatic pattern:Effect and feeling:Bright, Quiet, Soft and Delight"
+"Monochromatic pattern:Effect and feeling:Dark, Loud, Tense and Anger","Monochromatic pattern:Effect and feeling:Dark, Loud, Tense and Anger"
+Monochromatic pattern:Effect and feeling,Monochromatic pattern:Effect and feeling
+Monochromatic pattern:Background:Nature,Monochromatic pattern:Background:Nature
+Monochromatic pattern:Background:Artificial,Monochromatic pattern:Background:Artificial
+Monochromatic pattern:Background,Monochromatic pattern:Background
+Monochromatic pattern:Cross-hatching,Monochromatic pattern:Cross-hatching
+Monochromatic pattern:Texture,Monochromatic pattern:Texture
+Manga material:Balloon:Dialog,Manga material:Balloon:Dialog
+Manga material:Balloon:Feeling,Manga material:Balloon:Feeling
+Manga material:Balloon:Narration,Manga material:Balloon:Narration
+Manga material:Balloon,Manga material:Balloon
+Manga material:Effect line:Saturated line,Manga material:Effect line:Saturated line
+Manga material:Effect line:Speed line,Manga material:Effect line:Speed line
+Manga material:Effect line:Sea urchin flash,Manga material:Effect line:Sea urchin flash
+Manga material:Effect line:Beta flash,Manga material:Effect line:Beta flash
+Manga material:Effect line,Manga material:Effect line
+Manga material:Sound effect:Movement and feeling,Manga material:Sound effect:Movement and feeling
+Manga material:Sound effect:Impact,Manga material:Sound effect:Impact
+Manga material:Sound effect:Voice and breath,Manga material:Sound effect:Voice and breath
+Manga material:Sound effect:Sentiment,Manga material:Sound effect:Sentiment
+Manga material:Sound effect:Noise and machine sound,Manga material:Sound effect:Noise and machine sound
+Manga material:Sound effect,Manga material:Sound effect
+Manga material:Sign:Notice and impact,Manga material:Sign:Notice and impact
+Manga material:Sign:Movement and feeling,Manga material:Sign:Movement and feeling
+Manga material:Sign:Sweat and tear,Manga material:Sign:Sweat and tear
+Manga material:Sign:Smoke and breath,Manga material:Sign:Smoke and breath
+Manga material:Sign:Wound,Manga material:Sign:Wound
+Manga material:Sign:Light,Manga material:Sign:Light
+Manga material:Sign:Code and figure,Manga material:Sign:Code and figure
+Manga material:Sign:Icon,Manga material:Sign:Icon
+Manga material:Sign:Other,Manga material:Sign:Other
+Manga material:Sign,Manga material:Sign
+Manga material:Framing template,Manga material:Framing template
+Image material:Illustration:Building,Image material:Illustration:Building
+Image material:Illustration:Tool,Image material:Illustration:Tool
+Image material:Illustration:Flower and plant,Image material:Illustration:Flower and plant
+Image material:Illustration:Nature,Image material:Illustration:Nature
+Image material:Illustration:Effect and stage direction,Image material:Illustration:Effect and stage direction
+Image material:Illustration:Decoration,Image material:Illustration:Decoration
+Image material:Illustration,Image material:Illustration
+Image material:Picture,Image material:Picture
+Image material:Brush,Image material:Brush
+3D:Pose:Entire body,3D:Pose:Entire body
+3D:Small object:Commodity,3D:Small object:Commodity
+3D:Small object:Stationery and book,3D:Small object:Stationery and book
+3D:Small object:Food and beverage,3D:Small object:Food and beverage
+3D:Small object:School supply,3D:Small object:School supply
+3D:Small object:Sport,3D:Small object:Sport
+3D:Small object:Furniture and interior,3D:Small object:Furniture and interior
+3D:Small object:Home electronics,3D:Small object:Home electronics
+3D:Small object:Fashion,3D:Small object:Fashion
+3D:Small object:Tool,3D:Small object:Tool
+3D:Small object:Weapon,3D:Small object:Weapon
+3D:Small object:Vehicle,3D:Small object:Vehicle
+3D:Small object,3D:Small object
+3D:Background:School facility,3D:Background:School facility
+3D:Background:Community facility and road,3D:Background:Community facility and road
+3D:Background:Commercial facility,3D:Background:Commercial facility
+3D:Background:Other building,3D:Background:Other building
+3D:Character parts:Face,3D:Character parts:Face
+3D:Character parts:Body,3D:Character parts:Body
+3D:Character parts:Hair,3D:Character parts:Hair
+3D:Character parts,3D:Character parts
+3D:Character Texture:Face,3D:Character Texture:Face
+3D:Character Texture,3D:Character Texture
+3D:Body type,3D:Body type
 3D:Hand model,
 3D:Pose:Pose sequence,
 Recently used materials,

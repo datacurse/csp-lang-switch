@@ -98,7 +98,7 @@ Please wait for a while and try it again.","База данных произве
 1/1/110#0,Clip Studio Modeler background,Фон Clip Studio Modeler
 1/1/111#0,Clip Studio Modeler object,Объект Clip Studio Modeler
 1/1/112#0,File,Файл
-1/1/113#0,All,Все
+1/1/113#0,All,All
 1/1/114#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/115#0,Clip Studio Paint page,Страница Clip Studio Paint
 1/1/116#0,Clip Studio Paint project,Проект Clip Studio Paint
@@ -124,19 +124,19 @@ Please wait for a while and try it again.","База данных произве
 2/1/4#0,お気に入り,Избранное
 2/1/5#0,チーム制作,Командная работа
 3/1/1#0,All works,Все произведения
-4/1/31#0,Material,Материал
+4/1/31#0,Material,Material
 4/1/32#0,Layer,Слой
 4/1/33#0,File,Файл
 4/1/34#0,Tool setting,Настройка инструмента
-4/1/35#0,Other,Другое
+4/1/35#0,Other,Other
 4/1/36#0,Not specified,Не указано
 4/1/37#0,Page template,Шаблон страницы
-4/1/38#0,Frame,Кадр
-4/1/39#0,Balloon,Облачко
-4/1/40#0,Sign,Знак
-4/1/41#0,Sound effect,Звуковой эффект
-4/1/42#0,Effect line,Линия эффекта
-4/1/43#0,Background,Фон
+4/1/38#0,Frame,Frame
+4/1/39#0,Balloon,Balloon
+4/1/40#0,Sign,Sign
+4/1/41#0,Sound effect,Sound effect
+4/1/42#0,Effect line,Effect line
+4/1/43#0,Background,Background
 4/1/44#0,Foreground,Передний план
 4/1/46#0,3D pose,3D-поза
 4/1/47#0,3D drawing figure,3D-фигура рисования
@@ -177,7 +177,7 @@ sound effects.","Вставить на передний план рамки хо
 4/1/64#0,Fit to text,Подогнать по тексту
 4/1/65#0,Convert to raster layer,Преобразовать в растровый слой
 4/1/66#0,Do not scale,Не масштабировать
-4/1/67#0,Other,Другое
+4/1/67#0,Other,Other
 4/1/68#0,Type,Тип
 4/1/69#0,(not recommended),(не рекомендуется)
 4/1/70#0,Content,Содержимое
@@ -273,7 +273,7 @@ Please wait for a while and try it again.","База данных материа
 4/1/137#0,Large,Большой
 4/1/138#0,Small,Маленький
 4/1/139#0,Details,Подробнее
-4/1/140#0,Framing template,Шаблон кадрирования
+4/1/140#0,Framing template,Framing template
 4/1/141#0,Layer template,Шаблон слоя
 4/1/142#0,3D image,3D-изображение
 4/1/143#0,3D character,3D-персонаж
@@ -283,20 +283,20 @@ Please wait for a while and try it again.","База данных материа
 4/1/147#0,3D shape,3D-фигура
 4/1/148#0,3D background,3D-фон
 4/1/149#0,Old format 3D background,3D-фон старого формата
-4/1/150#0,Pose,Поза
+4/1/150#0,Pose,Pose
 4/1/151#0,Body shape,Форма тела
 4/1/152#0,3D head,3D-голова
 4/1/153#0,3D hand model,
 4/1/154#0,3D primitive,3D-примитив
-4/1/155#0,Panorama,Панорама
-4/1/156#0,Paper texture,Текстура бумаги
+4/1/155#0,Panorama,Panorama
+4/1/156#0,Paper texture,Paper texture
 4/1/157#0,Brush tip shape,Форма кончика кисти
-4/1/158#0,Balloon,Облачко
-4/1/159#0,Image material,Материал изображения
+4/1/158#0,Balloon,Balloon
+4/1/159#0,Image material,Image material
 4/1/160#0,Layer,Слой
 4/1/161#0,Animation,Анимация
-4/1/162#0,Brush,Кисть
-4/1/163#0,Gradient,Градиент
+4/1/162#0,Brush,Brush
+4/1/163#0,Gradient,Gradient
 4/1/164#0,Tool settings (others),Настройки инструмента (прочее)
 4/1/165#0,Color Set,Набор цветов
 4/1/166#0,Character Motion,Движение персонажа
@@ -308,28 +308,28 @@ Please wait for a while and try it again.","База данных материа
 4/1/172#0,Body parts,Части тела
 4/1/173#0,Hair parts,Части волос
 4/1/174#0,Material catalog,Каталог материалов
-4/1/175#0,All,Все
-4/1/176#0,Other,Другое
-4/1/177#0,Framing template,Шаблон кадрирования
+4/1/175#0,All,All
+4/1/176#0,Other,Other
+4/1/177#0,Framing template,Framing template
 4/1/178#0,Layer template,Шаблон слоя
-4/1/179#0,Frame,Кадр
+4/1/179#0,Frame,Frame
 4/1/180#0,3D image,3D-изображение
 4/1/181#0,3D character,3D-персонаж
 4/1/182#0,3D Object,3D-объект
 4/1/183#0,3D shape,3D-фигура
 4/1/184#0,3D background,3D-фон
-4/1/185#0,Pose,Поза
+4/1/185#0,Pose,Pose
 4/1/186#0,Body shape,Форма тела
 4/1/187#0,3D head,3D-голова
 4/1/188#0,3D hand model,
 4/1/189#0,3D primitive,3D-примитив
-4/1/190#0,Panorama,Панорама
-4/1/191#0,Balloon,Облачко
+4/1/190#0,Panorama,Panorama
+4/1/191#0,Balloon,Balloon
 4/1/192#0,Vector,Векторный
-4/1/193#0,Tone,Тон
-4/1/194#0,Gradient,Градиент
+4/1/193#0,Tone,Tone
+4/1/194#0,Gradient,Gradient
 4/1/195#0,Fill,Заливка
-4/1/196#0,Image material,Материал изображения
+4/1/196#0,Image material,Image material
 4/1/197#0,Ruler,Линейка
 4/1/198#0,Special ruler,Специальная линейка
 4/1/199#0,Perspective ruler,Линейка перспективы
@@ -339,11 +339,11 @@ Please wait for a while and try it again.","База данных материа
 4/1/203#0,2D background (Feeling),2D-фон (Настроение)
 4/1/204#0,2D foreground (Item),2D-передний план (Предмет)
 4/1/205#0,2D foreground (Feeling),2D-передний план (Настроение)
-4/1/206#0,Sound effect,Звуковой эффект
+4/1/206#0,Sound effect,Sound effect
 4/1/207#0,Sound effect (Font),Звуковой эффект (Шрифт)
-4/1/208#0,Sign,Знак
-4/1/209#0,Effect line,Линия эффекта
-4/1/210#0,Paper texture,Текстура бумаги
+4/1/208#0,Sign,Sign
+4/1/209#0,Effect line,Effect line
+4/1/210#0,Paper texture,Paper texture
 4/1/211#0,Brush shape,Форма кисти
 4/1/212#0,Animation,Анимация
 4/1/213#0,Brush tool,Инструмент кисти
@@ -619,174 +619,6 @@ Please wait for a while and try it again.","База данных материа
 5/1/259#0,3D:ポーズ:連番ポーズ,
 5/1/260#0,お気に入り,Избранное
 5/1/261#0,最近使用した素材,
-6/1/3#0,Framing template,Шаблон кадрирования
-6/1/12#0,Background (Scenery),Фон (Пейзаж)
-6/1/13#0,Background (Feeling),Фон (Настроение)
-6/1/14#0,Foreground (Feeling),Передний план (Настроение)
-6/1/17#0,Sound effects lettering,Надпись звуковых эффектов
-6/1/18#0,Sound effects lettering (Font),Надпись звуковых эффектов (Шрифт)
-6/1/22#0,Paper texture,Текстура бумаги
-6/1/24#0,All materials,Все материалы
-6/1/25#0,Paper template,Шаблон бумаги
-6/1/26#0,CLIP material,Материал CLIP
-6/1/27#0,Color pattern,Цветной узор
-6/1/29#0,Clothes pattern,Узор одежды
-6/1/30#0,Japanese pattern,Японский узор
-6/1/31#0,Flower and plant pattern,Цветочный и растительный узор
-6/1/33#0,Effect and feeling,Эффект и настроение
-6/1/34#0,"Bright, Quiet, Soft and Delight","Свет, покой, мягкость и радость"
-6/1/35#0,"Dark, Loud, Tense and Anger","Тьма, напор, напряжение и гнев"
-6/1/40#0,Monochromatic pattern,Одноцветный узор
-6/1/43#0,Parallel line,Параллельные линии
-6/1/44#0,Sand pattern,Песчаный узор
-6/1/47#0,Parallel line,Параллельные линии
-6/1/48#0,Sand pattern,Песчаный узор
-6/1/51#0,Clothes pattern,Узор одежды
-6/1/52#0,Japanese pattern,Японский узор
-6/1/53#0,Flower and plant pattern,Цветочный и растительный узор
-6/1/55#0,Effect and feeling,Эффект и настроение
-6/1/56#0,"Bright, Quiet, Soft and Delight","Свет, покой, мягкость и радость"
-6/1/57#0,"Dark, Loud, Tense and Anger","Тьма, напор, напряжение и гнев"
-6/1/62#0,Manga material,Материал манги
-6/1/63#0,Framing template,Шаблон кадрирования
-6/1/68#0,Effect line,Линия эффекта
-6/1/69#0,Saturated line,Линии фокусировки
-6/1/70#0,Speed line,Линии скорости
-6/1/71#0,Sea urchin flash,Вспышка “морского ежа”
-6/1/72#0,Beta flash,Чёрная вспышка
-6/1/73#0,Sound effect,Звуковой эффект
-6/1/74#0,Movement and feeling,Движение и ощущение
-6/1/76#0,Voice and breath,Голос и дыхание
-6/1/78#0,Noise and machine sound,Шум и звук механизмов
-6/1/80#0,Notice and impact,Внимание и удар
-6/1/81#0,Movement and feeling,Движение и ощущение
-6/1/82#0,Sweat and tear,Пот и слёзы
-6/1/83#0,Smoke and breath,Дым и дыхание
-6/1/86#0,Code and figure,Знаки и фигуры
-6/1/89#0,Image material,Материал изображения
-6/1/93#0,Flower and plant,Цветы и растения
-6/1/95#0,Effect and stage direction,Эффект и постановка
-6/1/100#0,Body type,Тип телосложения
-6/1/102#0,Hand model,
-6/1/106#0,Entire body,Всё тело
-6/1/108#0,Pose sequence,Последовательность поз
-6/1/110#0,Small object,Мелкий предмет
-6/1/112#0,Stationery and book,Канцелярия и книги
-6/1/113#0,Food and beverage,Еда и напитки
-6/1/114#0,School supply,Школьное оборудование
-6/1/116#0,Furniture and interior,Мебель и интерьер
-6/1/117#0,Home electronics,Бытовая техника
-6/1/123#0,School facility,Школьные сооружения
-6/1/126#0,Community facility and road,Общественные сооружения и дороги
-6/1/127#0,Commercial facility,Коммерческие сооружения
-6/1/128#0,Other building,Прочие постройки
-6/1/132#0,Character parts,Части персонажа
-6/1/136#0,Character Texture,Текстура персонажа
-6/1/139#0,IllustStudio material,Материалы IllustStudio
-6/1/140#0,ComicStudio4.0 material,Материалы ComicStudio4.0
-6/1/141#0,ComicStudio3.0 material,Материалы ComicStudio3.0
-6/1/142#0,Tone material collection,Коллекция тоновых материалов
-6/1/143#0,3D data collection,Коллекция 3D-данных
-6/1/146#0,Trash box,Корзина
-6/1/147#0,Color pattern:Pattern:Clothes pattern,Цветной узор:Узор:Узор одежды
-6/1/148#0,Color pattern:Pattern:Japanese pattern,Цветной узор:Узор:Японский узор
-6/1/149#0,Color pattern:Pattern:Flower and plant pattern,Цветной узор:Узор:Цветочный и растительный узор
-6/1/150#0,Color pattern:Pattern:Other,Цветной узор:Узор:Прочее
-6/1/151#0,Color pattern:Pattern,Цветной узор:Узор
-6/1/152#0,"Color pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Цветной узор:Эффект и настроение:Свет, покой, мягкость и радость"
-6/1/153#0,"Color pattern:Effect and feeling:Dark, Loud, Tense and Anger","Цветной узор:Эффект и настроение:Тьма, напор, напряжение и гнев"
-6/1/154#0,Color pattern:Effect and feeling,Цветной узор:Эффект и настроение
-6/1/155#0,Color pattern:Background:Nature,Цветной узор:Фон:Природа
-6/1/156#0,Color pattern:Background:Artificial,Цветной узор:Фон:Искусственное
-6/1/157#0,Color pattern:Background,Цветной узор:Фон
-6/1/158#0,Color pattern:Texture,Цветной узор:Текстура
-6/1/159#0,Color pattern,Цветной узор
-6/1/160#0,Monochromatic pattern:Basic:Dot,Одноцветный узор:Основное:Точки
-6/1/161#0,Monochromatic pattern:Basic:Parallel line,Одноцветный узор:Основное:Параллельные линии
-6/1/162#0,Monochromatic pattern:Basic:Sand pattern,Одноцветный узор:Основное:Песчаный узор
-6/1/163#0,Monochromatic pattern:Basic,Одноцветный узор:Основное
-6/1/164#0,Monochromatic pattern:Gradient:Dot,Одноцветный узор:Градиент:Точки
-6/1/165#0,Monochromatic pattern:Gradient:Parallel line,Одноцветный узор:Градиент:Параллельные линии
-6/1/166#0,Monochromatic pattern:Gradient:Sand pattern,Одноцветный узор:Градиент:Песчаный узор
-6/1/167#0,Monochromatic pattern:Gradient,Одноцветный узор:Градиент
-6/1/168#0,Monochromatic pattern:Pattern:Clothes pattern,Одноцветный узор:Узор:Узор одежды
-6/1/169#0,Monochromatic pattern:Pattern:Japanese pattern,Одноцветный узор:Узор:Японский узор
-6/1/170#0,Monochromatic pattern:Pattern:Flower and plant pattern,Одноцветный узор:Узор:Цветочный и растительный узор
-6/1/171#0,Monochromatic pattern:Pattern:Other,Одноцветный узор:Узор:Прочее
-6/1/172#0,Monochromatic pattern:Pattern,Одноцветный узор:Узор
-6/1/173#0,"Monochromatic pattern:Effect and feeling:Bright, Quiet, Soft and Delight","Одноцветный узор:Эффект и настроение:Свет, покой, мягкость и радость"
-6/1/174#0,"Monochromatic pattern:Effect and feeling:Dark, Loud, Tense and Anger","Одноцветный узор:Эффект и настроение:Тьма, напор, напряжение и гнев"
-6/1/175#0,Monochromatic pattern:Effect and feeling,Одноцветный узор:Эффект и настроение
-6/1/176#0,Monochromatic pattern:Background:Nature,Одноцветный узор:Фон:Природа
-6/1/177#0,Monochromatic pattern:Background:Artificial,Одноцветный узор:Фон:Искусственное
-6/1/178#0,Monochromatic pattern:Background,Одноцветный узор:Фон
-6/1/179#0,Monochromatic pattern:Cross-hatching,Одноцветный узор:Перекрёстная штриховка
-6/1/180#0,Monochromatic pattern:Texture,Одноцветный узор:Текстура
-6/1/181#0,Monochromatic pattern,Одноцветный узор
-6/1/182#0,Manga material:Balloon:Dialog,Материал манги:Выноска:Реплика
-6/1/183#0,Manga material:Balloon:Feeling,Материал манги:Выноска:Настроение
-6/1/184#0,Manga material:Balloon:Narration,Материал манги:Выноска:Повествование
-6/1/185#0,Manga material:Balloon,Материал манги:Выноска
-6/1/186#0,Manga material:Effect line:Saturated line,Материал манги:Линии эффекта:Линии фокусировки
-6/1/187#0,Manga material:Effect line:Speed line,Материал манги:Линии эффекта:Линии скорости
-6/1/188#0,Manga material:Effect line:Sea urchin flash,Материал манги:Линии эффекта:Вспышка “морского ежа”
-6/1/189#0,Manga material:Effect line:Beta flash,Материал манги:Линии эффекта:Чёрная вспышка
-6/1/190#0,Manga material:Effect line,Материал манги:Линии эффекта
-6/1/191#0,Manga material:Sound effect:Movement and feeling,Материал манги:Звуковой эффект:Движение и ощущение
-6/1/192#0,Manga material:Sound effect:Impact,Материал манги:Звуковой эффект:Удар
-6/1/193#0,Manga material:Sound effect:Voice and breath,Материал манги:Звуковой эффект:Голос и дыхание
-6/1/194#0,Manga material:Sound effect:Sentiment,Материал манги:Звуковой эффект:Настроение
-6/1/195#0,Manga material:Sound effect:Noise and machine sound,Материал манги:Звуковой эффект:Шум и звук механизмов
-6/1/196#0,Manga material:Sound effect,Материал манги:Звуковой эффект
-6/1/197#0,Manga material:Sign:Notice and impact,Материал манги:Знак:Внимание и удар
-6/1/198#0,Manga material:Sign:Movement and feeling,Материал манги:Знак:Движение и ощущение
-6/1/199#0,Manga material:Sign:Sweat and tear,Материал манги:Знак:Пот и слёзы
-6/1/200#0,Manga material:Sign:Smoke and breath,Материал манги:Знак:Дым и дыхание
-6/1/201#0,Manga material:Sign:Wound,Материал манги:Знак:Рана
-6/1/202#0,Manga material:Sign:Light,Материал манги:Знак:Свет
-6/1/203#0,Manga material:Sign:Code and figure,Материал манги:Знак:Знаки и фигуры
-6/1/204#0,Manga material:Sign:Icon,Материал манги:Знак:Значок
-6/1/205#0,Manga material:Sign:Other,Материал манги:Знак:Прочее
-6/1/206#0,Manga material:Sign,Материал манги:Знак
-6/1/207#0,Manga material:Framing template,Материал манги:Шаблон кадрирования
-6/1/208#0,Manga material,Материал манги
-6/1/209#0,Image material:Illustration:Building,Материал изображения:Иллюстрация:Здание
-6/1/210#0,Image material:Illustration:Tool,Материал изображения:Иллюстрация:Инструмент
-6/1/211#0,Image material:Illustration:Flower and plant,Материал изображения:Иллюстрация:Цветы и растения
-6/1/212#0,Image material:Illustration:Nature,Материал изображения:Иллюстрация:Природа
-6/1/213#0,Image material:Illustration:Effect and stage direction,Материал изображения:Иллюстрация:Эффект и постановка
-6/1/214#0,Image material:Illustration:Decoration,Материал изображения:Иллюстрация:Украшение
-6/1/215#0,Image material:Illustration,Материал изображения:Иллюстрация
-6/1/216#0,Image material:Picture,Материал изображения:Фотография
-6/1/217#0,Image material:Brush,Материал изображения:Кисть
-6/1/218#0,Image material,Материал изображения
-6/1/219#0,3D:Pose:Entire body,3D:Поза:Всё тело
-6/1/222#0,3D:Small object:Commodity,3D:Мелкий предмет:Предметы быта
-6/1/223#0,3D:Small object:Stationery and book,3D:Мелкий предмет:Канцелярия и книги
-6/1/224#0,3D:Small object:Food and beverage,3D:Мелкий предмет:Еда и напитки
-6/1/225#0,3D:Small object:School supply,3D:Мелкий предмет:Школьное оборудование
-6/1/226#0,3D:Small object:Sport,3D:Мелкий предмет:Спорт
-6/1/227#0,3D:Small object:Furniture and interior,3D:Мелкий предмет:Мебель и интерьер
-6/1/228#0,3D:Small object:Home electronics,3D:Мелкий предмет:Бытовая техника
-6/1/229#0,3D:Small object:Fashion,3D:Мелкий предмет:Мода
-6/1/230#0,3D:Small object:Tool,3D:Мелкий предмет:Инструмент
-6/1/231#0,3D:Small object:Weapon,3D:Мелкий предмет:Оружие
-6/1/232#0,3D:Small object:Vehicle,3D:Мелкий предмет:Транспорт
-6/1/233#0,3D:Small object,3D:Мелкий предмет
-6/1/234#0,3D:Background:School facility,3D:Фон:Школьные сооружения
-6/1/237#0,3D:Background:Community facility and road,3D:Фон:Общественные сооружения и дороги
-6/1/238#0,3D:Background:Commercial facility,3D:Фон:Коммерческие сооружения
-6/1/239#0,3D:Background:Other building,3D:Фон:Прочие постройки
-6/1/244#0,3D:Character parts:Face,3D:Части персонажа:Лицо
-6/1/245#0,3D:Character parts:Body,3D:Части персонажа:Тело
-6/1/246#0,3D:Character parts:Hair,3D:Части персонажа:Волосы
-6/1/247#0,3D:Character parts,3D:Части персонажа
-6/1/248#0,3D:Character Texture:Face,3D:Текстура персонажа:Лицо
-6/1/249#0,3D:Character Texture,3D:Текстура персонажа
-6/1/251#0,3D:Body type,3D:Тип телосложения
-6/1/256#0,3D:Hand model,
-6/1/259#0,3D:Pose:Pose sequence,
-6/1/261#0,Recently used materials,
 7/1/1#0,所有,Все
 7/1/2#0,範本,Шаблон
 7/1/3#0,分格範本,Шаблон кадрирования

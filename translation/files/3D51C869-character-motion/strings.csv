@@ -1,14 +1,14 @@
 ﻿key,source,target
-1/1/1#0,Body,Тело
-1/1/2#0,Face,Лицо
-1/1/3#0,Hair,Волосы
+1/1/1#0,Body,Body
+1/1/2#0,Face,Face
+1/1/3#0,Hair,Hair
 1/1/4#0,Accessories,Аксессуары
-1/1/5#0,Pose,Поза
+1/1/5#0,Pose,Pose
 1/1/6#0,Character Motion,Движение персонажа
 1/1/7#0,Unique point,Уникальная точка
 1/1/8#0,Facial expression,Выражение лица
 1/1/9#0,Facial expression parts,Элементы выражения лица
-1/1/10#0,Material,Материал
+1/1/10#0,Material,Material
 1/1/11#0,Allocate,Разместить
 1/1/12#0,Movable parts,Подвижные элементы
 1/1/13#0,Angle,Угол

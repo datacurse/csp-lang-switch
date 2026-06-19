@@ -9,23 +9,23 @@ Feature point,Характерная точка
 Base,Основа
 Hair style,Причёска
 Facial expression,Выражение лица
-Body,Тело
+Body,Body
 Accessories,Аксессуары
-Background,Фон
-Hair,Волосы
-Face,Лицо
-Motion,Движение
-Pose,Поза
+Background,Background
+Hair,Hair
+Face,Face
+Motion,Motion
+Pose,Pose
 Shape,Фигура
 Background parts,Части фона
 Material preset,Набор настроек материала
 Moveable preset,Набор настроек подвижности
-Material,Материал
+Material,Material
 Angle,Угол
 Layout,Макет
 Movable parts,Подвижные части
 Scene,Сцена
-Small object,Небольшой объект
+Small object,Small object
 Rotate,Повернуть
 Character Motion,Движение персонажа
 Unique point,Уникальная точка
