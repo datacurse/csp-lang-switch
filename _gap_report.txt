@@ -1,122 +1,551 @@
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline,742DEA58-main-ui,7F9F9530-cloud-sync,BFA867AE-quick-access,E79C2AC5-material-catalog,F2AD839B-license-dialogs
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline,742DEA58-main-ui,7F9F9530-cloud-sync,BFA867AE-quick-access,E79C2AC5-material-catalog,F2AD839B-license-dialogs
  
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
   
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
     
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+%.1f LPI / %d%%
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=97CDB75A-ebook-export
+%4d x %4d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%d %%
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=B8DA21EC-page-counter
+%d / %d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%d%
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+%d%% %d/%d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%d/%d, %d/%d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%d:%d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%ddpi %.1f%%
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s %d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s %d/%02d/%02d %02d: %02d %s: %s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s (%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,97CDB75A-ebook-export
+%s (%s)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,DD705E0D-cloud-menu
+%s : %s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s%.2f x %.2fin
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s%.2f x %.2fpt
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s%d x %dpx
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s: %s (%.1f%%)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+(%d / %d)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+(1–%d)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+*
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,F2AD839B-license-dialogs
+---
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+-10
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.:CELSYS_EN:CLIPStudioPaint:1.0.0
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.bmp (BMP)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.jpg (JPEG)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.lip (CLIP STUDIO PAINT)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.png (PNG)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.psd (Photoshop)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.tif (TIFF)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+.webp (WebP)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/Applications/ComicStudio4_Debut/ComicStudio Debut.app
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/Applications/ComicStudio4_EX/ComicStudio EX.app
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/Applications/ComicStudio4_Pro/ComicStudio Pro.app
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/allow/gd.html?page=assets-3d-primitive-texture:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/allow/gd.html?page=assets-environment-light-material:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/allow/gd.html?page=assets-gradation-set:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/allow/gd.html?page=assets-simple-brush:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+/allow/gd.html?page=csp-activation-codes:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+/allow/gd.html?page=simple-material-palette:%s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+0
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+012abcABC
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+1
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+100
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+110
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+120
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+130
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+135
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+140
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+170
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+180
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+189
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+20
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+205
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+210
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+220
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+230
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+240
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+270
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+275
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+300
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+340
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+350
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+390
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+400
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+405
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+430
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+45
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+450
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+50
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+590
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+60
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+640
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+65
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+80
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+90
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+<<% %s <<
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
+AVI (*.avi)|*.avi
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
+AVI (*.avi)|*.avi;
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|Targa|*.tga|WebP|*.webp
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|WebP|*.webp
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,BFA867AE-quick-access
+Backspace
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files (x86)\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files (x86)\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files (x86)\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files (x86)\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+C:\Program Files\CELSYS\ToeiAnimation\DigitalTimeSheet\ToeiAnimationDigitalTimeSheet.exe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+CAM SHAKE S
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=4CB47456-book-viewer,742DEA58-main-ui,FCBD92AE-opengl-checker
+CELSYS, Inc.
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+CLIP STUDIO
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+CLIP STUDIO PAINT
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+CLIP STUDIO PAINT %s
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+CLIP STUDIO.NET
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+ComicStudio EX.app
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+ComicStudio Pro.app
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline,7F9F9530-cloud-sync
+E
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+F
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+JPEG (.jpg)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
+MP4 (*.mp4)|*.mp4
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline
+O
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,BFA867AE-quick-access
+OK
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=2D481AE5-opentoonz-export
+OpenToonz 1.%d
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+PNG (.png)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+PSD (.psd)
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline
+U
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+UTC 19:00
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+X
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+clipstudio.module.plugin.paint.pdf.export
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+clipstudio.module.plugin.paint.pdf.import
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+http://sta.www.clipstudio.net/getinfo/getinfo.php
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+http://www.celsys.co.jp/en/
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+http://www.clipstudio.net/en/
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+http://www.clipstudio.net/en/?app=
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+http://www.clipstudio.net/en/site/ads/csp/product_pro.html?app=
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,F2AD839B-license-dialogs
+http://www.clipstudio.net/en/site/menu_csp/index.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/amd.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/etc.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/intel.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/list.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/mac.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/nvidia.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/site/opengl/unsupported.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+http://www.clipstudio.net/en/site/sync/csp/?app=
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs,FCBD92AE-opengl-checker
+http://www.clipstudio.net/en/support/
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+http://www.clipstudio.net/getinfo/getinfo.php?serialnumber=%s&version=%s&date=%s&execmode=%d&lang=en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
+https://accounts.clip-studio.com/app/register?ui_locales=en-us
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
+https://accounts.clip-studio.com/password-reset?ui_locales=en-us
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
+https://accounts.clip-studio.com/register?ui_locales=en-us
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=97CDB75A-ebook-export
+https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://gd.clip-studio.com/gd?id=csp-help-support&app=
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://gd.clip-studio.com/gd?id=csp-info-corrupted-en-us
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://gd.clip-studio.com/gd?id=csp-tutorial-youtube-europe
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+https://gd.clip-studio.com/gd?id=servererror-en-us
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://license-account-us.celsys.co.jp/%s/api/checkLicense
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://license-account-us.celsys.co.jp/%s/api/listOwnedLicenses
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://license-account-us.celsys.co.jp/%s/api/refreshLicense
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://license-account-us.celsys.co.jp/en-us/manually/checkLicense
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu,F2AD839B-license-dialogs
+https://license-account-us.celsys.co.jp/hb.php
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_studio_phone/tutorial/tutorial.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://sub-us-lic.celsys.co.jp/license/checkLicense?OnAction
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://sub2-us-lic.celsys.co.jp/license/checkLicense?OnAction
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=3CC82939-doodle-mode
+https://support.clip-studio.com/en-us/app-receptions/authentication-release-limitations
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
+https://support.clip-studio.com/en-us/app-receptions/trial-authentication-failures
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://trial-us-lic.celsys.co.jp/api/autoissue
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://us-lic.celsys.co.jp/activate/checkLicense?OnAction
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://us-lic.celsys.co.jp/ca
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://us-lic.celsys.co.jp/ch?n=3
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,DD705E0D-cloud-menu
+https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=3CC82939-doodle-mode
+https://us-lic.celsys.co.jp/gd/index.php?id=csp-func-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
+https://us-lic.celsys.co.jp/gd/index.php?id=csp-lost-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,6FFACA71-companion-mode
+https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://www.clip-studio.com/site/gd/index.php?id=cpaen
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=0238E722-export-data,DD705E0D-cloud-menu
+https://www.clipstudio.net/en/dl
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/en/functions
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
+https://www.clipstudio.net/gd?id=csp-dl-v1-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp-eura-ai-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp-help-manual-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp-restarting-problem_en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp-samsungdex-info-enus
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp-userguide-ai-en
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode,742DEA58-main-ui
+https://www.clipstudio.net/gd?id=improvement-enus
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,F2AD839B-license-dialogs
+https://www2.celsys.co.jp/support/service_en/service.html
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=9D97267F-close-glyph
+×
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+←
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+↑
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+→
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+↓
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+△
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+▽
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+○
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+●
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+・
+
+VER=4.0.0,4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+｜
 
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
                                              
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
-%.1f LPI / %d%%
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=97CDB75A-ebook-export
-%4d x %4d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%d %%
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=B8DA21EC-page-counter
-%d / %d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%d%
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-%d%% %d/%d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%d/%d, %d/%d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%d:%d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%ddpi %.1f%%
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s %d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s %d/%02d/%02d %02d: %02d %s: %s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s (%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,97CDB75A-ebook-export
-%s (%s)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,DD705E0D-cloud-menu
-%s : %s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s%.2f x %.2fin
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s%.2f x %.2fpt
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s%d x %dpx
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-%s: %s (%.1f%%)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-(%d / %d)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-(1–%d)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-*
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,F2AD839B-license-dialogs
----
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
--10
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.:CELSYS_EN:CLIPStudioPaint:1.0.0
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.bmp (BMP)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.jpg (JPEG)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.lip (CLIP STUDIO PAINT)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.png (PNG)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.psd (Photoshop)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.tif (TIFF)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-.webp (WebP)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/Applications/ComicStudio4_Debut/ComicStudio Debut.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/Applications/ComicStudio4_EX/ComicStudio EX.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/Applications/ComicStudio4_Pro/ComicStudio Pro.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/allow/gd.html?page=assets-3d-primitive-texture:%s
 
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 /allow/gd.html?page=assets-3ddrawingfigures:%s
@@ -128,352 +557,7 @@ VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 /allow/gd.html?page=assets-colorpatterns:%s
 
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/allow/gd.html?page=assets-environment-light-material:%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/allow/gd.html?page=assets-gradation-set:%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/allow/gd.html?page=assets-simple-brush:%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-/allow/gd.html?page=csp-activation-codes:%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-/allow/gd.html?page=simple-material-palette:%s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-0
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-012abcABC
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-1
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-100
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-110
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-120
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-130
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-135
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-140
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-170
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-180
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-189
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-20
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-205
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-210
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-220
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-230
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-240
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-270
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-275
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-300
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-340
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-350
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-390
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-400
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-405
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-430
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-45
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-450
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-50
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-590
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
-60
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-640
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-65
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-80
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-90
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-<<% %s <<
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
-AVI (*.avi)|*.avi
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
-AVI (*.avi)|*.avi;
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|Targa|*.tga|WebP|*.webp
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-BMP|*.bmp|JPEG|*.jpg;*.jpeg|PNG|*.png|TIFF|*.tif;*tiff|WebP|*.webp
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,BFA867AE-quick-access
-Backspace
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files (x86)\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files (x86)\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files (x86)\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files (x86)\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files\CELSYS\ComicStudio4 Debut\Tool\CS_Debut.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files\CELSYS\ComicStudio4 EX\Tool\CS_EX.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files\CELSYS\ComicStudio4 Pro\Tool\CS_Pro.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files\CELSYS\IllustStudio 1.0\Tool\IllustStudio.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-C:\Program Files\CELSYS\ToeiAnimation\DigitalTimeSheet\ToeiAnimationDigitalTimeSheet.exe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CAM SHAKE S
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=4CB47456-book-viewer,742DEA58-main-ui,FCBD92AE-opengl-checker
-CELSYS, Inc.
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIO
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIO MONO用データが%dMBを超えたため、データの登録ができません。 / 出力後のサイズが%dMB以内になるように画像サイズなどを調整してください。
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIO PAINT
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIO PAINT %s
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIO.NET
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-CLIP STUDIOのバージョンが低いため、登録処理を実行できません。 / CLIP STUDIOをアップデートしてから再度実行してください。
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ComicStudio Debut.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ComicStudio EX.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ComicStudio Pro.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline,7F9F9530-cloud-sync
-E
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
-F
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-JPEG (.jpg)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=8AF4B718-video-export
-MP4 (*.mp4)|*.mp4
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-Manga Studio Debut.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-Manga Studio EX.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-Manga Studio Pro.app
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline
-O
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,BFA867AE-quick-access
-OK
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=2D481AE5-opentoonz-export
-OpenToonz 1.%d
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-PNG (.png)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-PSD (.psd)
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=0A24C606-3d-presets,5634F3A9-animation-timeline
-U
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-UTC 19:00
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-X
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-clipstudio.module.plugin.paint.pdf.export
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-clipstudio.module.plugin.paint.pdf.import
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-en
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-http://sta.www.clipstudio.net/getinfo/getinfo.php
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-http://www.celsys.co.jp/en/
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-http://www.clipstudio.net/en/
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-http://www.clipstudio.net/en/?app=
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-http://www.clipstudio.net/en/site/ads/csp/product_pro.html?app=
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,F2AD839B-license-dialogs
-http://www.clipstudio.net/en/site/menu_csp/index.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/amd.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/etc.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/intel.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/list.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/mac.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/nvidia.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/site/opengl/unsupported.html
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-http://www.clipstudio.net/en/site/sync/csp/?app=
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs,FCBD92AE-opengl-checker
-http://www.clipstudio.net/en/support/
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-http://www.clipstudio.net/getinfo/getinfo.php?serialnumber=%s&version=%s&date=%s&execmode=%d&lang=en
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://accounts.clip-studio.com/app/register?ui_locales=en-us
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://accounts.clip-studio.com/password-reset?ui_locales=en-us
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://accounts.clip-studio.com/register?ui_locales=en-us
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://apps.apple.com/us/app/clip-studio-paint-ex-for-manga/id1262985592?ls=1&mt=8
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=97CDB75A-ebook-export
-https://celiceappprod.s3-ap-northeast-1.amazonaws.com/en-us/gd.html?app=paint&page=kdp-top
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://gd.clip-studio.com/gd?id=csp-help-support&app=
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://gd.clip-studio.com/gd?id=csp-info-corrupted-en-us
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://gd.clip-studio.com/gd?id=csp-tutorial-youtube-europe
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-https://gd.clip-studio.com/gd?id=servererror-en-us
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://license-account-us.celsys.co.jp/%s/api/checkLicense
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://license-account-us.celsys.co.jp/%s/api/listOwnedLicenses
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://license-account-us.celsys.co.jp/%s/api/refreshLicense
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://license-account-us.celsys.co.jp/en-us/manually/checkLicense
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu,F2AD839B-license-dialogs
-https://license-account-us.celsys.co.jp/hb.php
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_studio_phone/tutorial/tutorial.html
 
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_phone/tutorial/tutorial.html
@@ -481,152 +565,929 @@ https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_phone/t
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://s3-ice.clip-studio.com/celiceappprod/v410/en/introduction_simple_tab/tutorial/tutorial.html
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://sub-us-lic.celsys.co.jp/license/checkLicense?OnAction
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://sub2-us-lic.celsys.co.jp/license/checkLicense?OnAction
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=3CC82939-doodle-mode
-https://support.clip-studio.com/en-us/app-receptions/authentication-release-limitations
-
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://support.clip-studio.com/en-us/app-receptions/trial-authentication-failures
-
 VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://support.wacom.com/hc/en-us/sections/13393650144919-Wacom-Yuify
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://trial-us-lic.celsys.co.jp/api/autoissue
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+"%s" is already used in  /  / %s /  / Every time you press the key, it will switch between tools using the same shortcut.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://us-lic.celsys.co.jp/activate/checkLicense?OnAction
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+%d items could not be found and will be deleted from this list. /  This operation does not affect the actual files.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://us-lic.celsys.co.jp/ca
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s and the following %d tool files already exist. Do you want to replace them?
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://us-lic.celsys.co.jp/ch?n=3
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s cannot be used on the following layers.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,DD705E0D-cloud-menu
-https://us-lic.celsys.co.jp/gd/index.php?id=csp-contact-en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+%s will reset to their original defaults. / - Registered buttons will be deleted. / - Button positions will reset to their original defaults.  / - Image file
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=3CC82939-doodle-mode
-https://us-lic.celsys.co.jp/gd/index.php?id=csp-func-en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+3D data|*.cs3c;*.cs3o;*.cs3s;*.lwo;*.lws;*.obj;*.c2fr;*.c2fc;*.pep
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://us-lic.celsys.co.jp/gd/index.php?id=csp-lost-en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,7F9F9530-cloud-sync,D6B9C91F-3d-lighting
+3D hand model
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,6FFACA71-companion-mode
-https://us-lic.celsys.co.jp/gd/index.php?id=serial-err-en
+VER=5.0.0,5.0.2,5.0.4 FILES=D6B9C91F-3d-lighting
+3D hand model (left)
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=
+VER=5.0.0,5.0.2,5.0.4 FILES=D6B9C91F-3d-lighting
+3D hand model (right)
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify
-https://us-lic.celsys.co.jp/productcontrol/periodexpired?key=%s
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:Hand model
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://www.clip-studio.com/site/gd/index.php?id=cpaen
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:Pose:Pose sequence
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=0238E722-export-data,DD705E0D-cloud-menu
-https://www.clipstudio.net/en/dl
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:ハンドモデル
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/en/functions
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:プリミティブ
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=F2AD839B-license-dialogs
-https://www.clipstudio.net/gd?id=csp-dl-v1-en
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:ポーズ:連番ポーズ
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/gd?id=csp-eura-ai-en
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+3D:天球
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/gd?id=csp-help-manual-en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+A tool with this name already exists. Do you want to use the same name?
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/gd?id=csp-restarting-problem_en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Add group from default
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/gd?id=csp-samsungdex-info-enus
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Add selected tool
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-https://www.clipstudio.net/gd?id=csp-userguide-ai-en
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Add tool
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode,742DEA58-main-ui
-https://www.clipstudio.net/gd?id=improvement-enus
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Adjust Smart Shape
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=61F04D2D-license-verify,F2AD839B-license-dialogs
-https://www2.celsys.co.jp/support/service_en/service.html
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Adjust parts
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=9D97267F-close-glyph
-×
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Adjust settings for the 3D hand pose.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-←
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Adjust settings related to the Tool Settings palette.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-↑
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Adjust the features of the 3D hand model.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-→
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Adjust the hand features
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-↓
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Adjust the shape of the 3D hand model.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-△
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Advanced Tool Settings
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
-▽
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+After drawing a shape, hold the stylus in place for a moment to automatically convert your freehand shape to straight lines or clean shapes.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
-○
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+After selected a hand base, use the sliders to adjust the appearance.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
-●
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+All fingers
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-このキャンバスは保存不可のためタイムラプスの書き出しができません。 / 記録されているタイムラプスのプレビューを確認するために書き出しダイアログを開くことは可能です。 /  / ダイアログを開きますか?
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+All settings under Tab-Mate Controller Settings  / and Quick Menu Settings /  will be reset to their original defaults.
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-キャンバスが未保存のため、処理を実行できません。 / 保存後に再度実行してください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+All supported formats|*.sut;*.abr;*.sutg|Tool file|*.sut|Tool group file|*.sutg|Photoshop brush file|*.abr
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-サンプルとして設定したタイムラプスが20MBを超えたため、データの登録ができません。 / 画像でのサンプルを検討してください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+All supported formats|*.sut;*.abr|Tool file|*.sut|Photoshop brush file|*.abr
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ネットワークでエラーが発生しました。 / 通信環境を確認してください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+All tools in the Tool palette and Tool Group palette will be reset to their original defaults. / Any added tools will be deleted. / Shortcuts assigned to tool
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ファイル処理に失敗しました。 / 再度ダウンロードをお試しいただくか、CLIP STUDIO PAINTのアップデートがある場合は最新バージョンにアップデートしてご確認ください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Apply Tool Settings to text
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ファイル情報が取得できませんでした。 / CLIP STUDIO PAINTのアップデートがある場合は、最新バージョンにアップデートしてご確認ください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Apply selected brush shape to tool
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-マスターコンテンツ実データがアップロードできませんでした。 / 通信状況を確認し、時間を置いて再度お試しください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Are you sure you want to delete %s and the following %d tools?
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
-マスターコンテンツ設定プロパティデータがアップロードできませんでした。 / 通信状況を確認し、時間を置いて再度お試しください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Are you sure you want to delete the following tool?
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-ムービーファイルがファイルオブジェクトとして含まれています。 / このムービーファイルのアニメーションは再生されません。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Auto-save is disabled.  / Please make sure you check the save status before closing any files, and save the file if necessary. / If you want your file to auto
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-・
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Batch export textures
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-作品の基本設定とは異なるサイズのページが存在します。 / 該当するページは作品の基本設定と同じサイズに拡大・縮小して出力されます。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Blending brushes
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-未保存のページがあります。 / すべてのページを保存後にコマンドを実行してください。
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Blending brushes: Mix colors together
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-表紙が存在しない作品はCLIP STUDIO MONO用データを作成できません。 / [ページ管理]メニューの[作品基本設定を変更]から、表紙を追加できます。
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Boney
 
-VER=4.2.0,5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
-｜
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Browse files
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Brush images or paper textures in the added tool “%s” may be corrupted.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Brush images or paper textures in the added tools may be damaged.  /  Please delete the added tools.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Brush shapes  / registered to the Advanced Tool Settings palette  / will be reset to their original defaults. / Any added brush shapes  / will be deleted.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Cancel
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Cannot use %s as the layer blending modes are different.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Cartoon
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change 3D hand parts
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change 3D hand visibility
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change 3D model’s hand appearance
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Change brush shape of current tool.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change the 3D hand model base
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change the base mix of the 3D head model
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Change whether the fog comes from above or below
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Choose whether to save over the original project with recovery information or discard it.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode
+Continue offline
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copied %s to the app. / You can access it from File > Import > 3D data.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copied %s to the app. / You can access it from File > Import > Audio.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copied %s to the app. / You can access it from File > Import > Exposure sheet.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copied %s to the app. / You can access it from File > Import > Movie.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copied %s to the app. / You can access it from File > Import > Vector.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copy to all tools
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copy to all tools within this group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Copy to all tools within this tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Could not apply ^2%s to ^0%s and ^1%d other layers.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Could not export as the export folder contains files with the same name as the files to be exported.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Could not find a tool named “%s”. / Create a new custom tool.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Could not find the specified folder.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Create copy of selected tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Create custom tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Custom image
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Default tools cannot be deleted in Clip Studio Paint Debut.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Delete all selected tool and its tool groups. Do you want to proceed?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync,DD705E0D-cloud-menu
+Delete file
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Delete selected %d files from this device. / This operation cannot be undone. 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Delete selected tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Delete tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Delicate
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to delete the selected tool group and its tools?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to replace the existing default settings and save the current settings as default for %s and the following %d tools?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to replace the existing default settings and save the current settings as default for the following tools?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to reset the selected tool to the default settings?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to restore %s and the following %d tools to the default settings?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to restore the following tools to their default settings?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to revert Quick Menu Settings to their original defaults?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Do you want to revert Tab-Mate Controller Settings to their original defaults?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Duplicate tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Edit 3D hand model
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Edit Smart Shape
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Edit text properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Equilateral triangle
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Export all textures of the 3D object
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Export all textures of the 3D object to separate files.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Export tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Export tool(s)
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Export tools as separate files
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Exporting image materials included in tools...
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Failed to export tools.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,DE958EF5-material-settings
+Failed to import some files. This may be due to the following: /  / ・The file was in an unsupported format. / ・The process was cancelled from the “Import 3D 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Failed to import tool.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Failed to load changes to “%s”.  / Please try again by selecting “Sync all pages now” in the Page Manager.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Failed to retrieve data for “%s” from the cloud. Please check the connectivity of your device.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Failed to save canvas, so the “Save recovery data for every operation” setting could not be changed. / Please save any unsaved canvases and try again.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Failed to upload the file “%s”. Please check the connectivity of your device.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Finger length
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Finger thickness
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Fingertip taper
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+First tool in group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Flip 3D hand model
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Flip left/right
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Flip the 3D hand model from left to right or vice versa.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Flip the hand model from left to right or vice versa
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Fog height
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Frequency
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+From above
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+From below
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Hand mixer
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,7F9F9530-cloud-sync
+Hand model
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Hand model for pose materials
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Hand veins
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Hide all visible draft layers
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Hold to create figures
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+How to set a shortcut: / 1. Select an item and tap “Edit shortcut”, then assign the shortcut by pressing the key. / 2. Shortcuts can be assigned to tools and 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Icon color
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+If you delete the Downloads tool, all tools in the group will be deleted, and the auto-install setting will be turned off. Would you like to continue?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+If you edit the timeline or layer structure in Studio Mode, you will not be able to switch back to editing it as an animation in Simple Mode.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Import from clipboard
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Import from in-app clipboard 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Import tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Import tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Importing image materials included in tools...
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Index finger
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Index when using unique tool cursor
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Initial pose / Register material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Layer Properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Layer Properties Palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Length of long-press
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Limit hand mixer
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Limit the hand mixer so the model does not distort
+
+VER=5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode
+Loading plan details
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Lock tool and do not save changes
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Make this tool snap to rulers
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Make this tool snap to symmetrical rulers
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Material Folder
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Material properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Middle finger
+
+VER=5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode,DD705E0D-cloud-menu
+More information
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Moves the start points of the grid and ruler bar (shown using the View menu). This tool does not move layers.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Nail length
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Nail shape
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Nail width
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+New 3D hand model
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+New text properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+No. of tool icons
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Notify when auto-installing tools
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Open Advanced Tool Settings to access more settings or add them to the Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Palm
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Palm height
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Palm thickness
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Palm width
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Pinky finger
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Plump
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Pop up Advanced Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Pop up Layer Properties palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Pop up Tool Group palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Pop up Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Pop-up related palettes for each tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Press Browse and choose a folder for group work data.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Press Browse and choose a save folder to manage multiple pages.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Press Browse and choose a save folder.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Press Browse and choose which folder to create the work folder in.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Puppet warp: Adjust poses or elements of your drawing
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Quadrilateral
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Recently used materials
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Recently used materials will appear here
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register current tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register hand shape as material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register layer as template material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register pose
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register pose as material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Register shape as material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Register tool as material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Registered to Tool Group palette, but some files could not be imported.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Registered to Tool Group palette.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Registering to Tool Group palette (registering images to the Material palette)...
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Regular polygon
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Rename tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Rename tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Reset 3D hand parts
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Reset selected parameters
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Reset selected tool to default settings
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Reset the 3D hand model to basic
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Reset the hand mixer to the basic hand
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Restoring canvas...
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Ring finger
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Rugged
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Save current settings as default for this tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Save interval: 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Save recovery data for every operation
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Save the current 3D hand shape as a material
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Save the current brush shape as a preset.  / Once saved as a preset, you can use it for other tools.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Saving recovery information ...
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Saving recovery information. Recovery settings can be adjusted in Preferences.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Search for tools on ASSETS
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Searching for tools that use this material...(Cancel to delete without searching)
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Select the type of hand
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Select whether changes to the Tool Settings palette apply to new text or selected text. When set to “New only”, changes in the Tool Settings will not affect any
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Select whether the Tool Settings palette applies to new text or selected text
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Selected text tool properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Selected tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Set the brush size (line width).  / To add variety to your line width, click the button to the right of the slider to open the Dynamics dialog box, where you c
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Set the fog type.  / Depth fog becomes thicker evenly according to the distance from the screen.  / Distance fog becomes thicker spherically according to the 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Set the size of the brush. / You can also link the brush size to pen dynamics such as pen pressure by selecting the Dynamics button to the right.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Set the thickness of the brush tip. / You can also link the thickness to pen dynamics such as pen pressure by selecting the Dynamics button to the right.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Set whether the fog appears from above or below
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Settings for items in the Layer Properties palette  / will be reset to their original defaults.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Show 3D model hand
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show 3D model hand 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show Advanced Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show Layer Properties palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show Smart Shape launcher
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show Tool Group palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show category name (label) on Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui,E79C2AC5-material-catalog
+Show hand details
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Show or hide this setting in the Tool Settings palette.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show properties bar
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Show properties window of selected materials
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Show properties window of selected works
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show the detail of the hand features
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Show tool group name
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Show wristbone
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Shows recently used materials
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Slender
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Smart Shape
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Smart Shape: Auto-adjust shapes while drawing freehand
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Some brushes and gradient tools use both the main and sub colors.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode
+Some features are limited in the current mode. / In doodle mode, you cannot save or export your project. / Tap “Try for free” to use up to 30 hours free per m
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+Some materials could not be deleted. / They may be open in another application.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Sub color: Use two colors at once
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch between current and previous tools
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch between current tool and eraser
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch to next tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch to next tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch to previous tool
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Switch to previous tool group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+The Stabilization and Post-correction settings reduce jitters to create smoother lines.  /  Stabilization smooths lines by delaying the input from the tablet, 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+The appearance of the perspective ruler grid has changed. / The appearance may look different in Ver. 4.2 and earlier even if the Grid Size value is the same.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+The export folder contains files with the same name as the files to be exported. / Do you want to overwrite the existing files?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+The following materials could not be deleted. / They may be open in another application.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+The following tool files already exist. Do you want to replace them?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+The selected %d items will be moved to the Recycle Bin/Trash of your computer. / If the files are saved to external storage, the files will be deleted without 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+There are no tools to restore.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+There is no cloud data for this item.  / It may have been deleted on another device.  /  /  / Do you want to run a recovery process to keep this data? 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+These Command Bar Settings include a user-made tool. / When loading this workspace material in another environment, some tool settings may not be applied. / 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+These command bar settings include tools with default settings. / This workspace may not work correctly in environments where the tool configurations have been
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+This cloud data does not exist. / It may have been deleted on another device.  / Open the data and carry out the recovery process.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=B7DCE242-3d-figure-import
+This file can be imported with realistic rendering. / Please select how to import the texture for this file.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+This file cannot be registered to the Tool Group palette.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=6FFACA71-companion-mode
+This license has reached the maximum number of deactivations, so it cannot be activated on this device.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+This object does not have a texture to export.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+This setting changes how the Velocity is calculated when used as an input for tool dynamics. When turned on, the change caused by the speed of the pen will be c
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Thumb
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Toggle hand mixer limits
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool Group
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool Group palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool Properties
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool Settings
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool Settings palette
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool file|*.sut
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Tool group file|*.sutg
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Transform Smart Shape
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Turn this check on to create a project with multiple pages and specify the number of pages and layout. / Even you create the files with this check off, you can
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Turn this on to display the 3D figure’s hand.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Turn this on to display the texture of the 3D hand model.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Unable to open file. It may have been moved, deleted, or renamed.  / Use “Browse files” to search for the original file.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=DD705E0D-cloud-menu
+Unable to open file. It may have been moved, deleted, or renamed.  / Would you like to delete it from the list of projects?
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Use same tool as canvas
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+Use “Initial pose” to reset to the basic pose. Use “Register material” to save the current hand pose to the Material palette.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Vein prominence
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+Ver. 4.2 layout
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+When this option is turned on, the lines will be created with extra control points for adjusting the curve. After making the lines, tap with the Object tool to 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+When this setting is on, you can align and snap to objects when dragging objects or handles, according to the settings in the View menu > Snap. When this settin
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+When this setting is on, you can snap to rulers, special rulers, and the canvas grid when drawing, according to the settings in the View menu > Snap. This does 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+When this setting is turned off, the tool will not snap to symmetrical rulers even when snapping is enabled.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Wrist
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+Wrist width
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You can adjust poses or shapes without having to redraw. / Tap to place pins on joints and extremities, then drag pins or rotate around handles to adjust the p
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You can blend on the canvas with the existing colors, drag the color out, or blur colors together. / Find the best effect for your painting style.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=E79C2AC5-material-catalog
+You can change the base appearance of the hand model.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You can set the assigned actions of modifier keys as well as mouse input such as the mouse wheel and right-click. / How to set modifier keys: / 1. For each ke
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You can set the assigned actions of modifier keys. /  /  How to set modifier keys: /  1. For each key entry, select the action you want to assign from the li
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You cannot add tool groups to the Downloads tool.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D object as it does not have an editable texture.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D object. / Please switch to the Object tool and check the layer visibility and layer lock settings.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D object. / Please switch to the Object tool and select only one 3D primitive or 3D drawing figure (Ver.2), or 3D object.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D object. / Please switch to the Object tool, and in the Advanced Tool Settings palette’s Preferences tab, open the Rendering 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D object. / The UV map of this object is not set up correctly.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=5634F3A9-animation-timeline
+You cannot draw on the selected 3D primitive. / Please switch to the Object tool, and in the Advanced Tool Settings palette’s Texture Settings tab, set the pos
+
+VER=5.0.0,5.0.2,5.0.4 FILES=B7DCE242-3d-figure-import
+You cannot edit this 3D layer in Version 4.1.4 or earlier. /  / To enable rendering, go to Advanced Tool Settings > Light Source  / and turn on “Apply light 
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You cannot import tool files in Clip Studio Paint Debut.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You cannot move the Downloads tool group.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You cannot use %s on a selection layer or Quick Mask while another layer is selected.
+
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+You need to save the file in Clip Studio format (extension: clip) in order to use this function. / Save the file in Clip Studio format, open the saved file and
 
 VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://s3-ice.clip-studio.com/celiceappprod/v500/en/introduction_studio_tab/tutorial/tutorial.html
@@ -637,599 +1498,587 @@ https://s3-ice.clip-studio.com/celiceappprod/v500/en/pc/tutorial/tutorial.html
 VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
 https://www.clipstudio.net/app/gd?id=newfunctions-500-enus
 
-VER=4.2.0 FILES=742DEA58-main-ui
-"%s" is already used in  /  / %s /  / Every time you press key, it will switch between tool and sub tool using the same shortcut.
+VER=5.0.0,5.0.2,5.0.4 FILES=742DEA58-main-ui
+seconds
 
-VER=4.2.0 FILES=B7DCE242-3d-figure-import
-%s / This file can be imported with realistic rendering. / Please select how to import the texture for this file.
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+”%s” is used in the following brush shape preset.  / Do you want to delete the material?
 
-VER=4.2.0 FILES=742DEA58-main-ui
-%s and the following %d sub tool files already exist. Do you want to replace them?
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+ハンドモデル
 
-VER=4.2.0 FILES=742DEA58-main-ui
-%s will be reset to their original defaults. / - Registered buttons will be deleted. / - Button positions will be reset to their original defaults.  / - Imag
+VER=5.0.0,5.0.2,5.0.4 FILES=7F9F9530-cloud-sync
+最近使用した素材
 
-VER=4.2.0 FILES=742DEA58-main-ui
-Add current sub tool
+VER=5.0.0,5.0.2 FILES=742DEA58-main-ui
+Restoring multiple canvases. It may take some time for the process to finish.
 
-VER=4.2.0 FILES=742DEA58-main-ui
-Add sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Adjust settings related to the Tool Property palette.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Adjust shape of 3D head model
-
-VER=4.2.0 FILES=742DEA58-main-ui
-All settings under [Tab-Mate Controller Settings]  / and [Quick Menu Settings] /  will be reset to their original defaults.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-All supported formats|*.sut;*.abr;*.sutg|Sub tool file|*.sut|Sub tool group file|*.sutg|Photoshop brush file|*.abr
-
-VER=4.2.0 FILES=742DEA58-main-ui
-All supported formats|*.sut;*.abr|Sub tool file|*.sut|Photoshop brush file|*.abr
-
-VER=4.2.0 FILES=742DEA58-main-ui
-All tools and sub tools registered in the Tool palette and Sub Tool palette will be reset to their original defaults. / Any added tools or sub tools will be de
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Apply brush shape selected in list to sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Apply tool property to text
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Are you sure you want to delete %s and the following %d sub tools?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Are you sure you want to delete the following sub tool?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Auto-save is disabled.  / Please make sure you check the save status before closing any files, and save the file if necessary. / If you want your file to auto
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Automatically sends information about features that you use. / This helps us to improve user experience and develop new features.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Background color of icon
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Brush images or paper textures in the added sub tool “%s” may be corrupted.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Brush images or paper textures in the added sub tools may be damaged.  /  Please delete the added sub tools.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Brush shapes  / registered to the Sub Tool Detail palette  / will be reset to their original defaults. / Any added brush shapes  / will be deleted.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-CLIP STUDIO MONOとは何ですか？
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Change [Brush shape] for current sub tool.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Change settings of selected sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Common
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copied %s to the app. / You can access it from [File] > [Import] > [3D data].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copied %s to the app. / You can access it from [File] > [Import] > [Audio].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copied %s to the app. / You can access it from [File] > [Import] > [Exposure sheet].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copied %s to the app. / You can access it from [File] > [Import] > [Movie].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copied %s to the app. / You can access it from [File] > [Import] > [Vector].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copy to all sub tools within all tools
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copy to all sub tools within same group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Copy to all sub tools within same tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Create copy of currently selected sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Create custom sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Create new customized sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Default sub tools cannot be deleted in Clip Studio Paint Debut.
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Delete [%s]
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Delete all selected tool and its sub tools. Do you want to proceed?
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Delete selected %d files from this device. / This operation cannot be undone. Delete anyway?
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Delete selected %d items from this device. / *Works indicated as "Not Found" are only deleted from this list. The actual files are not affected. / This operat
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Delete selected sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Delete sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Delete sub tool group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to delete the selected sub tool group and its sub tools?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to replace the existing default settings and save the current settings as default for %s and the following %d sub tools?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to replace the existing default settings and save the current settings as default for the following sub tools?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to reset the selected sub tool to the default settings?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to restore %s and the following %d sub tools to the default settings?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to restore the following sub tools to their default settings?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to revert [Quick Menu Settings] to their original defaults?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Do you want to revert [Tab-Mate Controller Settings] to their original defaults?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Duplicate sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Edit text property
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Enable canvas recovery
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Export sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Export sub tool group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Export sub tools as separate files
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Exporting image materials included in sub tools...
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Failed to export sub tool.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Failed to import some 3D files. This may be due to the following: /  / ・The file was in an unsupported format. / ・The process was cancelled from the “Import 
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Failed to import sub tool.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Failed to load default sub tools.
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-Failed to upload the file. Please check the connectivity of your device.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-File may be saved automatically, even if the set Save interval is not reached.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-First sub tool
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Help fix errors
-
-VER=4.2.0 FILES=742DEA58-main-ui
-How to set a shortcut: / 1. Select an item and tap [Edit shortcut], then assign the shortcut by pressing the key. / 2. Shortcuts can be assigned to tools, sub
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-If an error occurs, automatically send anonymous information about the incident. / This helps us resolve bugs and errors.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-If you delete the Downloads tool, all sub tools in the group will be deleted, and the auto-install setting will be turned off. Would you like to continue?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Import sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Import sub tool group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Importing image materials included in sub tools...
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Improve services
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Index when using sub tool unique cursor
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Layer Property
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Layer Property Palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Lock sub tool and do not save changes
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Make this sub tool snap to rulers, etc.
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Make this sub tool snap to symmetrical rulers
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Material property
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Moves the start points of the grid and ruler bar (shown using the [View] menu). This tool does not move layers.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-New sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-New text property
-
-VER=4.2.0 FILES=742DEA58-main-ui
-No. of sub tool icons
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Notify when auto-installing sub tools
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Please help us to improve Clip Studio.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Pop up Layer Property palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Pop up Sub Tool Detail palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Pop up Sub tool palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Pop up Tool property palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Press [Browse] and choose a folder for group work data.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Press [Browse] and choose a save folder to manage multiple pages.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Press [Browse] and choose a save folder.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Press [Browse] and choose which folder to create the work folder in.
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Privacy Settings
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Register Layer as Template Material
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Register current sub tool
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-Register master content to Clip Studio Mono
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Register sub tool as material
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Registered to sub tool palette, but some file could not be imported.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Registered to sub tool palette.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Registering to Sub Tool palette (registering images to the Material palette)...
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Reset selected sub tool to default settings
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Save at regular intervals
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Save current settings as default settings for this sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Save interval
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Save the current brush shape as a preset.  / Once saved as a preset, you can use it for other sub tools.
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Saving recovery information. Recovery settings can be adjusted under [Preferences].
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Search for sub tools on ASSETS
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Searching sub tool to use this material...(Cancel to delete without searching)
-
-VER=4.2.0 FILES=61F04D2D-license-verify,6FFACA71-companion-mode
-See details here
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-See here for details about data we collect.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Select brush shape from list and apply to sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Select sub tool
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Select whether changes to the Tool Property palette apply to new text or selected text. When set to “New only”, changes in the Tool Property will not affect any
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Select whether the Tool Property palette applies to new text or selected text
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Selected sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Selected text tool property
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Set the brush size (line width).  / To add variety to your line width, click the button to the right of the slider to open the [Dynamics] dialog box, where you
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Set the fog type.  / Depth fog becomes thicker evenly according to the distance from the screen.  / Distance fog becomes thicker spherically according to the 
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Set the size of the brush. / You can also link the brush size to pen dynamics such as pen pressure by selecting the [Dynamics] button to the right.
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Set the thickness of the brush tip. / You can also link the thickness to pen dynamics such as pen pressure by selecting the [Dynamics] button to the right.
-
-VER=4.2.0 FILES=6FFACA71-companion-mode
-Set up later
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Settings for items in the Layer Property palette  / will be reset to their original defaults.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show [Sub Tool Detail palette] and edit hidden parameter value and displayed status
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show category name (label) on tool property palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show group name of sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show layer property palette
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-Show or hide this setting in the Tool Property palette.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show property bar
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Show property window of selected materials
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-Show property window of selected works
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show sub tool detail palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show sub tool palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Show tool property palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub Tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub Tool Detail
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub Tool Settings
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool file|*.sut
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool group file|*.sutg
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool group settings
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool settings
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tool with same name exists. Do you want to proceed?
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Sub tools
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch between current and previous sub tools
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch between current sub tool and eraser
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch to next sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch to next sub tool group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch to previous sub tool
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Switch to previous sub tool group
-
-VER=4.2.0 FILES=742DEA58-main-ui
-The Stabilization and Post-correction settings reduce jitters to create smoother lines.  /  Stabilization smooths lines by delaying the input from the tablet, 
-
-VER=4.2.0 FILES=742DEA58-main-ui
-The command bar settings include tools or sub tools from the default settings. / This workspace may not work correctly in environments where the tool configura
-
-VER=4.2.0 FILES=742DEA58-main-ui
-The following sub tool files already exist. Do you want to replace it?
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-The selected %d items will be deleted from this list. /  This operation does not affect the actual files. / The work files will be displayed in this list agai
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-The selected %d items will be removed from this list and the actual files will be moved to the Recycle Bin/Trash of your computer. / (Please note that if there
-
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-The selected %d items will be removed from this list and the actual files will be moved to the Recycle Bin/Trash of your computer. / (Please note that if there
-
-VER=4.2.0 FILES=742DEA58-main-ui
-There are no sub tools to repair.
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-There is no Cloud data for this item.  / It may have been deleted in another environment.  / A recovery process will be executed to keep this data.  /  / Do
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-This cloud data does not exist. / It may have been deleted in another environment.  / Open the data and carry out the recovery process.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-This file cannot be registered to sub tool palette.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-This restores your progress based on the recovery information if the project is closed without being saved. You can choose whether to save over the original pro
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-This setting changes how the [Velocity] is calculated when used as input for tool dynamics. When turned on, the change caused by the speed of the pen will be co
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Tool Property
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Tool property palette
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Tools and sub-tools, including those created by the user, are included in the command bar settings. / When loading this workspace material in another environme
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Turn this check on for creating works with multiple pages and specify number of pages and layouts. / Even if data is created with this check off, you can switc
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Types of available drawing figures
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-Unable to find file.  /  / It may have been moved, deleted, or the name may have been changed.  / Click the OK button to delete the work.
-
-VER=4.2.0 FILES=DD705E0D-cloud-menu
-Unable to find file.  /  / It may have been moved, deleted, or the name may have been changed.  / Click the [OK] button to browse for the file or click the [
-
-VER=4.2.0 FILES=742DEA58-main-ui
-Use same sub tool as canvas
-
-VER=4.2.0 FILES=742DEA58-main-ui
-User Settings ...
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-When this option is turned on, the lines will be created with extra control points for adjusting the curve. After making the lines, click with the [Object] sub 
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-When this setting is on, you can align and snap to objects when dragging objects or handles,  according to the settings in the View menu > Snap. When this setti
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-When this setting is on, you can snap to rulers, special rulers, and the canvas grid when drawing, according to the settings in the View menu > Snap. This does 
-
-VER=4.2.0 FILES=E79C2AC5-material-catalog
-When this setting is turned off, the sub tool will not snap to symmetrical rulers even when snapping is enabled.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You can set the assigned actions of modifier keys as well as mouse input such as the mouse wheel and right-click. / How to set modifier keys: / 1. For each ke
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You can set the assigned actions of modifier keys. /  /  How to set modifier keys: /  1. For each key entry, select the action you want to assign from the li
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You cannot add sub tool groups to the Downloads tool.
-
-VER=4.2.0 FILES=5634F3A9-animation-timeline
-You cannot edit the selected 3D object. / Please switch to the Object tool and check the layer visibility and layer lock settings.
-
-VER=4.2.0 FILES=5634F3A9-animation-timeline
-You cannot edit the selected 3D object. / Please switch to the Object tool and select only one 3D Primitive or 3D drawing figure (Ver.2).
-
-VER=4.2.0 FILES=5634F3A9-animation-timeline
-You cannot edit the selected 3D object. / Please switch to the Object tool, and in the Sub Tool Detail palette’s Preferences tab, open the Rendering Settings a
-
-VER=4.2.0 FILES=5634F3A9-animation-timeline
-You cannot edit the selected 3D primitive. / Please switch to the Object tool, and in the Sub Tool Detail palette’s Texture Settings tab, set the position to 0
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You cannot import sub tool files in Clip Studio Paint Debut.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You cannot move the Downloads sub tool group.
-
-VER=4.2.0 FILES=742DEA58-main-ui
-You need to save the file in CLIP STUDIO FORMAT (extension: clip) in order to use this function. / Save the file in CLIP STUDIO FORMAT, open the saved file and
-
-VER=4.2.0 FILES=742DEA58-main-ui
-[%s] tool doesn't exist. / Create custom sub tool.
-
-VER=4.2.0 FILES=742DEA58-main-ui
+VER=4.0.0,4.2.0 FILES=742DEA58-main-ui
 https://s3-ice.clip-studio.com/celiceappprod/v310/en/introduction_studio_tab/tutorial/tutorial.html
+
+VER=4.0.0,4.2.0 FILES=742DEA58-main-ui
+こちらからDC3マスターコンテンツを CLIP STUDIO MONO にも登録しませんか？
+
+VER=4.0.0,4.2.0 FILES=742DEA58-main-ui
+出力
+
+VER=4.0.0,4.2.0 FILES=742DEA58-main-ui
+詳細を設定して出力
+
+VER=4.0.0 FILES=F2AD839B-license-dialogs
+                                       
+
+VER=4.0.0 FILES=742DEA58-main-ui
+* We have used "QUMALib" for connecting process of QUMARION included in this product for Windows and macOS versions only. / Copyright (C) 2004-2012 SoftEther C
+
+VER=4.0.0 FILES=742DEA58-main-ui
+3D Category
+
+VER=4.0.0 FILES=742DEA58-main-ui
+3D drawing figures are stored in the Material palette. Tap the icon in the top right to open the Material palette.
+
+VER=4.0.0 FILES=D6B9C91F-3d-lighting
+3D folder 
+
+VER=4.0.0 FILES=742DEA58-main-ui
+A warning appears if the system may cause the app to close suddenly due to increasing memory usage.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Add Layer menu
+
+VER=4.0.0 FILES=742DEA58-main-ui
+All data on images imported  / to the [Sub View] palette will be deleted. The actual image files will not be deleted. / 
+
+VER=4.0.0 FILES=742DEA58-main-ui
+All settings under [CLIP STUDIO TABMATE Settings]  / and [Tool Rotation Settings] /  will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+All supported formats|*.clip|CLIP STUDIO FORMAT|*.clip
+
+VER=4.0.0 FILES=742DEA58-main-ui
+All tools and sub tools registered in the [Tool] palette and [Sub Tool] palette will be reset to their original defaults. / Any added tools or sub tools will b
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Animated sticker x1 / %s
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Animated sticker x2 / %s
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Apply pose material
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Auto action sets in the [Auto Action] palette  / will be reset to their original defaults.  / All newly added auto action sets will be deleted.
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Body pages %d
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Body shape materials & Pose materials
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Body shape materials are settings for the height and body shape of a 3D drawing figure. Pose material are settings for a 3D drawing figure’s pose. / Let's tap 
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Brush shapes  / registered to the [Sub Tool Detail] palette  / will be reset to their original defaults. / Any added brush shapes  / will be deleted.
+
+VER=4.0.0 FILES=DE958EF5-material-settings
+Cannot register the item since there are types of items which cannot be used when syncing to the Clip Studio cloud.  / It is possible to use these items by can
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change scale (%) when pen pressure is minimum
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change scale (%) when tilt is maximum
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change scale (%) when tilt is minimum
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change scale (%) when velocity is maximum
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change the palette height
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change the pose
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change to canvas navigation
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Change to light source operation
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Check the following setting for the printing data for fanzine printing vendor.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Choose a pose you like. Tap the pose material to apply it to the 3D drawing figure on the canvas.
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Choose what to move. You can move screentones by selecting "Tone." You can adjust the start points of the grid and ruler bar (shown using the [View] menu) by se
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Clear Memory
+
+VER=4.0.0 FILES=F2AD839B-license-dialogs
+Click here to restart
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Color sets registered to the [Color Set] palette  / will be reset to their original defaults. / Any added color sets will be deleted.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Confirm the 3D drawing figure
+
+VER=4.0.0 FILES=61F04D2D-license-verify
+Connecting to the server
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Cover page and back cover page (inside)
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Currently [%s] cannot be executed. Do you want to proceed?
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Do you want to use [3D Preview for Binding] to verify the result before exporting?
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Edit a 3D layer
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Enable Wacom stylus settings
+
+VER=4.0.0 FILES=5634F3A9-animation-timeline,742DEA58-main-ui
+Export alpha channel
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Export settings for Kindle format
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Export settings such as [Export (Single Layer)]  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Failed to load some 3D files. This may be due to the following: /  / ・The file was in an unsupported format. / ・A mix of Ver 1.5 compatible layer files and n
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Folio is generally necessary. Turn on the setting of folio.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+From Ver. 1.10.10, the default brush tools have been updated. /  / ・11 new default sub tools have been added. / ・ We have updated the optional sub tools that
+
+VER=4.0.0 FILES=3CC82939-doodle-mode
+Function differences between PRO, EX, and app versions
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Get License
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Gradient sets used for  / the [Gradient map] and [Gradient] tools  / will be reset to their original defaults. / These gradient sets will not be deleted from
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Help with quality improvement
+
+VER=4.0.0 FILES=742DEA58-main-ui
+How to operate the camera
+
+VER=4.0.0 FILES=742DEA58-main-ui
+If using Wacom Stylus Pen
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Import 3D files in format from ver.1.10.13 and earlier
+
+VER=4.0.0 FILES=742DEA58-main-ui
+It is scaled up and down when exported, so moire or something may occur in tone.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+It was not exported due to over-capacity. / By changing [Paper size] to export, changing [Resolution] in case of color, / and making [Expression color] monoch
+
+VER=4.0.0 FILES=3CC82939-doodle-mode
+Launch
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Left-handed
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Left-handed (Downward)
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Left-handed (Upward)
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Let us know what you want to improve
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Link to stroke speed (faster movement creates a smaller value)
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Long-press and move the image you added so that it is on the layer below "Window".
+
+VER=4.0.0 FILES=5634F3A9-animation-timeline
+Make background transparent
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Material categories
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Material placement
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Materials are organized into categories in the Material palette. / Tap the "Color Pattern" category to find a material you want to use for the background.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Next page was not exported due to over-capacity. / By changing [Paper size] to export, changing [Resolution] in case of color, / and making [Expression color]
+
+VER=5.0.4 FILES=742DEA58-main-ui
+Not all edits may have been restored.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Not now
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Now it's time for color. To avoid filling over the lines, tap to select the layer below the lines.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Once you have decided on the composition you want to draw, tap OK to confirm. Try out various compositions using the 3D drawing figure.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Open Material palette
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Open export destination of Kindle format
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Operation cannot be guaranteed on your current operating system. Please check the support information.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Please help us improve Clip Studio by sending usage information.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Please let us know what we can improve. We will continue to develop the app to meet your expectations.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Please let us know what you like about the app. Your feedback helps us.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Please rate our app.
+
+VER=4.0.0 FILES=61F04D2D-license-verify
+Please see here for your plan information  / such as the time period and current plan.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Please tap the stars to give us a rating.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Preferences and Help
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Preset brush sizes  / registered to the [Brush size] palette  / will be reset to their original defaults. / Any added brush size presets  / will be deleted.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Preview of exported Kindle data
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Profile for preview
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Rearrange folders
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Rearrange palettes
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Rearranging layers
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Register the current palette settings as default settings for the above selected effects. / Only the layer color will be registered by layer type. / If the ex
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Resolution may be set to the value that fanzine printing vendor doesn't accept.
+
+VER=5.0.4 FILES=742DEA58-main-ui
+Restoring canvas. It may take some time for the process to finish. Please do not minimize the app until the process is complete.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Right-handed
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Right-handed (Downward)
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Right-handed (Upward)
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Running on unsupported OS.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Running on unsupported OS. OS is not Windows 7 or later.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Running on unsupported OS. OS version is not 10.10 or later.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Running on unsupported OS. OS version is not 10.3.3 or later.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+S-Pen button
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Save in Kindle format
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Save settings on canvas. The settings are applied to other windows in which  / the canvas is displayed. To apply the preview results and export the image,  / 
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Search tags saved in the [Material] palette  / will be reset to their original defaults. /  Any added search tags will be deleted. / Materials you have added
+
+VER=4.0.0 FILES=742DEA58-main-ui
+See here for details about data we collect
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Select a 3D object from list and toggle view and lock settings. / You can also drag and drop objects onto other objects in the list in order to create a hierar
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select a brush
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select a color
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select a layer
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select a material
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select a pose material
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Select “3D” from the material categories. It is at the bottom of the category list, so if you can't find it, scroll down in the palette.
+
+VER=4.0.0 FILES=DD705E0D-cloud-menu
+Set Kindle preview tool
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Set how to specify control point when selecting [Cubic bezier] for [Curve].
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Set later
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Set the basic expression color of the comic settings as %s or %s.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Set the basic expression color of the comic settings as %s.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Set the basic expression color of the cover page as %s or %s.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Set the basic expression color of the cover page as %s.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Settings for [Mixing font] and the [Font list]  / will be reset to their original defaults.  / Any added mixing fonts will be deleted.  / Any added font list
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Settings for items in the [Layer property] palette  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Settings in [Preferences]  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Settings such as [Print Settings]  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Shortcut settings /  set up in [Shortcut Settings] (excluding tool shortcuts) and  / modifier key settings  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Show detailed settings
+
+VER=4.0.0 FILES=61F04D2D-license-verify,742DEA58-main-ui
+Sign up to get  / your first 3 months free
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Stylus Settings
+
+VER=4.0.0 FILES=3CC82939-doodle-mode
+Support
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Support bug fixes
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tabmate 2 settings are different for Studio Mode and Simple Mode. You can open the settings from the menu button at the top right of the canvas, then go to Pref
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tabmate settings are different for Studio Mode and Simple Mode. You can open the settings from the menu button at the top right of the canvas, then go to Prefer
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tap the sun icon to change the direction of the light source with a one-finger swipe. The blue arrow below the slider indicates the direction of the light sourc
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tap the thumbnail again to open the menu. Even when the palette is minimized, you can perform various actions from the menu.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tap to open the brush list and see what brushes are available.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Tap to open the color palette and choose a color you want to draw with.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Thank you!
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Thank you.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The [Quick Access] palette, [Command Bar] and [Selection Launcher]  / will be reset to their original defaults.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The body pages include a page with color export settings.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The canvas has a timeline enabled, so you cannot combine the pages into a two-page spread.
+
+VER=5.0.4 FILES=742DEA58-main-ui
+The most recently edited canvas has been opened.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The settings are only used when displaying this window. / These settings and preview results are not saved when saving this canvas.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The system requirements for this software will change soon.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+The trim size has not been set in the project settings.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+There is no page to combine as a two-page spread for the inner cover and inner back cover.
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+This is unknown processing. Do you want to proceed?
+
+VER=4.0.0 FILES=742DEA58-main-ui
+This material is an old format, so layers with this material cannot be used on mobile devices. / You can rasterize this layer to use it on mobile devices.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+To change the height of a palette, tap the arrow at the bottom of the palette. You can also change it by long pressing the arrow. / This is useful when you wan
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Try brushes with realistic color mixing. / We’ve created new default brushes with the Perceptual color mixing mode that you can download. Tap the below link to
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Try brushes with realistic color mixing. / ・You can use this color mode by changing the Color mixing mode to Perceptual in the Sub Tool Detail palette > Ink ca
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Use body shape material
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Verify with [3D Preview for Binding]
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+Vermilion-pale
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Wacom Stylus Settings
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Wacom stylus
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Wacom stylus Settings
+
+VER=5.0.4 FILES=742DEA58-main-ui
+We have recovered a canvas with unsaved edits. /  / Please save this canvas to keep the edits.
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+When this setting is turned on, you can delete control points from the line or add control points to the line by clicking while drawing the curve. / However, i
+
+VER=4.0.0 FILES=742DEA58-main-ui
+When you select a 3D layer in the Layer palette, an Edit button will appear at the top center of the screen. Tap the button to edit the 3D drawing figure.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+When you want to move or zoom the canvas, you can tap the square icon to operate the canvas.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+Write a review
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can access the Material palette from the photo icon at the top right. / Tap the icon.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can change the 3D drawing figure pose from the properties in the bottom right. Try tapping “Apply pose material”.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can change this setting at any time from File > Privacy Settings.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can change this setting at any time from Menu > Settings > Privacy Settings.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can change this setting at any time from the application menu > Privacy Settings.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can edit these settings from the [File] menu > [Pen Pressure Settings].
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can flip the position of the Layer palette and the toolbar by tapping “Flip interface layout” from Preferences and Help.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can insert a material onto the canvas by tapping the thumbnail. / Select the image material you want to use as the background and tap it.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can move all the layers in a folder at once. Long press the "Background" folder and drag it below the "Character" layer.
+
+VER=5.0.4 FILES=742DEA58-main-ui
+You can open other past canvases from the File menu > Open.
+
+VER=4.0.0 FILES=742DEA58-main-ui
+You can open the menu by pressing and holding the + button. Let's add a background image as a layer.
+
+VER=5.0.4 FILES=7F9F9530-cloud-sync
+You cannot delete materials from unnamed folders. Please name the folder and try again.
+
+VER=5.0.4 FILES=7F9F9530-cloud-sync
+You cannot delete unnamed folders. Please name the folder and try again.
+
+VER=4.0.0 FILES=61F04D2D-license-verify
+You have a license or  / activation code for this application (Ver. %s)
+
+VER=4.0.0 FILES=E79C2AC5-material-catalog
+[%s] cannot be executed due to invalid parameter. Do you want to proceed?
+
+VER=4.0.0 FILES=742DEA58-main-ui
+https://itunes.apple.com/us/app/clip-studio-paint-ex-for-manga/id1262985592?ls=1&mt=8
+
+VER=4.0.0 FILES=742DEA58-main-ui
+https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_simple_phone/tutorial/tutorial.html
+
+VER=4.0.0 FILES=742DEA58-main-ui
+https://s3-ice.clip-studio.com/celiceappprod/v300/en/introduction_simple_tab/tutorial/tutorial.html
+
+VER=4.0.0 FILES=742DEA58-main-ui
+https://s3-ice.clip-studio.com/celiceappprod/v300/en/pc/tutorial/tutorial.html
 
 VER=4.2.0 FILES=742DEA58-main-ui
 https://s3-ice.clip-studio.com/celiceappprod/v410/en/pc/tutorial/tutorial.html
 
+VER=4.0.0 FILES=742DEA58-main-ui
+https://www.clipstudio.net/app/gd?id=newfunctions-400-enus
+
 VER=4.2.0 FILES=742DEA58-main-ui
 https://www.clipstudio.net/app/gd?id=newfunctions-420-enus
 
-VER=4.2.0 FILES=742DEA58-main-ui
-“Save recovery information” restores your progress based on the recovery information if the project is closed without being saved. You can choose whether to sav
+VER=4.0.0 FILES=742DEA58-main-ui
+https://www.clipstudio.net/gd?id=csp_appreview_en
 
-VER=4.2.0 FILES=7F9F9530-cloud-sync
-”%s” is used in the following sub tool brush shape preset.  / Do you want to delete the material?
+VER=4.0.0 FILES=742DEA58-main-ui
+・Automatically send information about usage, including which buttons were pressed and which features were used
 
-VER=4.2.0 FILES=742DEA58-main-ui
-「%s」 / をイラスト作品 (イメージ) としてデータ出力します。よろしいですか？
+VER=4.0.0 FILES=742DEA58-main-ui
+・May automatically send anonymized device information and crash reports including details of the error
 
-VER=4.2.0 FILES=742DEA58-main-ui
-「%s」 / を複数ページ作品 (ブック) としてデータ出力します。よろしいですか？
+VER=4.0.0 FILES=742DEA58-main-ui
+・The information will be used to develop new features and improve the user experience
 
-VER=4.2.0 FILES=742DEA58-main-ui
-こちらからDC3マスターコンテンツを CLIP STUDIO MONO にも登録しませんか？
-
-VER=4.2.0 FILES=742DEA58-main-ui
-出力
-
-VER=4.2.0 FILES=742DEA58-main-ui
-詳細を設定して出力
+VER=4.0.0 FILES=742DEA58-main-ui
+・The information will be used to fix bugs in the app and services

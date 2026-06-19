@@ -5136,3 +5136,16 @@ Distance fog becomes thicker spherically according to the distance from the came
 Select whether the Tool Property palette applies to new text or selected text,"Выберите, будет ли палитра свойств инструмента применяться к новому или выделенному тексту."
 Show or hide this setting in the Tool Property palette.,Отобразите или скройте этот параметр на палитре свойств инструмента.
 Make this sub tool snap to symmetrical rulers,Сделайте привязку этого вспомогательного инструмента к симметричным линейкам.
+Body pages %d,Основных страниц %d
+Currently [%s] cannot be executed. Do you want to proceed?,В настоящее время [%s] невозможно выполнить. Хотите продолжить?
+This is unknown processing. Do you want to proceed?,Это неизвестная обработка. Хотите продолжить?
+[%s] cannot be executed due to invalid parameter. Do you want to proceed?,[%s] невозможно выполнить из-за недопустимого параметра. Хотите продолжить?
+Vermilion-pale,Кино-бледный
+Set how to specify control point when selecting [Cubic bezier] for [Curve].,Задайте способ указания контрольной точки при выборе [Кубическая кривая Безье] для [Кривая].
+"When this setting is turned on, you can delete control points from the line or add control points to the line by clicking while drawing the curve.
+However, if control points are not shown with the [Figure tool guidelines] setting in [Preferences], you will not be able to add or delete control points while drawing.","Когда этот параметр включен, вы можете удалять контрольные точки из линии или добавлять контрольные точки к линии, щелкая мышью во время рисования кривой.
+Однако если контрольные точки не отображаются с помощью настройки [Инструкции по рисунку] в [Настройки], вы не сможете добавлять или удалять контрольные точки во время рисования."
+"Choose what to move. You can move screentones by selecting ""Tone."" You can adjust the start points of the grid and ruler bar (shown using the [View] menu) by selecting ""Grid/Ruler Bar.""","Выберите, что переместить. Вы можете перемещать экранные мелодии, выбрав «Тон». Вы можете настроить начальные точки сетки и линейки (показаны с помощью меню [Вид]), выбрав «Сетка/Панель линейки»."
+"Select a 3D object from list and toggle view and lock settings.
+You can also drag and drop objects onto other objects in the list in order to create a hierarchy with sub-objects.","Выберите 3D-объект из списка и переключите настройки просмотра и блокировки.
+Вы также можете перетаскивать объекты на другие объекты в списке, чтобы создать иерархию с подобъектами."

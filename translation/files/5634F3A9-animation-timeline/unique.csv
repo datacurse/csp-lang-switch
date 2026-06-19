@@ -513,3 +513,5 @@ Please switch to the Object tool, and in the Sub Tool Detail palette’s Prefere
 "You cannot edit the selected 3D object.
 Please switch to the Object tool and check the layer visibility and layer lock settings.","Вы не можете редактировать выбранный 3D-объект.
 Пожалуйста, переключитесь на инструмент «Объект» и проверьте настройки видимости слоя и блокировки слоя."
+Make background transparent,Сделать фон прозрачным
+Export alpha channel,Экспортировать альфа-канал

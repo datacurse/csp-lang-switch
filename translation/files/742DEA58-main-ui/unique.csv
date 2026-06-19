@@ -14928,3 +14928,2081 @@ https://www.apache.org/licenses/LICENSE-2.0
 * We have used Display P3 profile.
 This profile is made available by Apple Inc. and may be copied, distributed, embedded, made, used, and sold without restriction. Altered versions of this profile shall have the original identification and copyright information removed and shall not be misrepresented as the original profile.
 "
+Export settings for Kindle format,Настройки экспорта в формат Kindle
+Not now,Не сейчас
+"* We have used ""QUMALib"" for connecting process of QUMARION included in this product for Windows and macOS versions only.
+Copyright (C) 2004-2012 SoftEther Corporation. All Rights Reserved.
+
+* About ncurses( Only used in the Windows and macOS version of this product. )
+Copyright (c) 1998-2005,2006 Free Software Foundation, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ""Software""), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, distribute with modifications, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name(s) of the above copyright holders shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization.
+
+* About OpenSSL
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. All advertising materials mentioning features or use of this software must display the following acknowledgment: ""This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit. (http://www.openssl.org/)""
+
+4. The names ""OpenSSL Toolkit"" and ""OpenSSL Project"" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact openssl-core@openssl.org.
+
+5. Products derived from this software may not be called ""OpenSSL"" nor may ""OpenSSL"" appear in their names without prior written permission of the OpenSSL Project.
+
+6. Redistributions of any form whatsoever must retain the following acknowledgment:
+""This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/)""
+
+THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE OpenSSL PROJECT OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+====================================================================
+
+This product includes cryptographic software written by Eric Young(eay@cryptsoft.com).
+This product includes software written by Tim Hudson (tjh@cryptsoft.com).
+
+Original SSLeay License
+-----------------------
+
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com) All rights reserved.
+
+This package is an SSL implementation written by Eric Young (eay@cryptsoft.com).
+The implementation was written so as to conform with Netscapes SSL.
+
+This library is free for commercial and non-commercial use as long as the following conditions are aheared to.  The following conditions apply to all code found in this distribution, be it the RC4, RSA, lhash, DES, etc., code; not just the SSL code.
+The SSL documentation included with this distribution is covered by the same copyright terms except that the holder is Tim Hudson (tjh@cryptsoft.com).
+
+Copyright remains Eric Young's, and as such any Copyright notices in the code are not to be removed.
+If this package is used in a product, Eric Young should be given attribution as the author of the parts of the library used.
+This can be in the form of a textual message at program startup or in documentation (online or textual) provided with the package.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software must display the following acknowledgement:
+""This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)"" The word 'cryptographic' can be left out if the rouines from the library being used are not cryptographic related :-).
+4. If you include any Windows specific code (or a derivative thereof) from the apps directory (application code) you must include an acknowledgement: 
+""This product includes software written by Tim Hudson (tjh@cryptsoft.com)""
+
+THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The licence and distribution terms for any publically available version or derivative of this code cannot be changed.
+i.e. this code cannot simply be copied and put under another distribution licence [including the GNU Public Licence.]
+
+* About libedit( Only used in the Windows and macOS version of this product. )
+Copyright (c) 1992, 1993
+ The Regents of the University of California.  All rights reserved.
+
+This code is derived from software contributed to Berkeley by Christos Zoulas of Cornell University.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* About libogg
+Copyright (c) 2002, Xiph.org Foundation
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+- Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+- Neither the name of the Xiph.org Foundation nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* About libvorbis
+Copyright (c) 2002-2018 Xiph.org Foundation
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+- Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+
+- Neither the name of the Xiph.org Foundation nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION
+OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* About OpenAL Soft ( Only used in the Windows and Android version of this product. )
+OpenAL Soft is an LGPL-licensed, cross-platform, software implementation of the OpenAL 3D audio API. It's forked from the open-sourced Windows version available originally from openal.org's SVN repository (now defunct).
+OpenAL provides capabilities for playing audio in a virtual 3D environment. Distance attenuation, doppler shift, and directional sound emitters are among the features handled by the API. More advanced effects, including air absorption, occlusion, and environmental reverb, are available through the EFX extension. It also facilitates streaming audio, multi-channel buffers, and audio capture.
+
+More information is available on the [official website](http://openal-soft.org/)
+
+GNU LIBRARY GENERAL PUBLIC LICENSE
+Version 2, June 1991
+
+Copyright (C) 1991 Free Software Foundation, Inc.
+51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+[This is the first released version of the library GPL.  It is
+numbered 2 because it goes with version 2 of the ordinary GPL.]
+
+Preamble
+
+The licenses for most software are designed to take away your
+freedom to share and change it.  By contrast, the GNU General Public
+Licenses are intended to guarantee your freedom to share and change
+free software--to make sure the software is free for all its users.
+
+This license, the Library General Public License, applies to some
+specially designated Free Software Foundation software, and to any
+other libraries whose authors decide to use it.  You can use it for
+your libraries, too.
+
+When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+this service if you wish), that you receive source code or can get it
+if you want it, that you can change the software or use pieces of it
+in new free programs; and that you know you can do these things.
+
+To protect your rights, we need to make restrictions that forbid
+anyone to deny you these rights or to ask you to surrender the rights.
+These restrictions translate to certain responsibilities for you if
+you distribute copies of the library, or if you modify it.
+
+For example, if you distribute copies of the library, whether gratis
+or for a fee, you must give the recipients all the rights that we gave
+you.  You must make sure that they, too, receive or can get the source
+code.  If you link a program with the library, you must provide
+complete object files to the recipients so that they can relink them
+with the library, after making changes to the library and recompiling
+it.  And you must show them these terms so they know their rights.
+
+Our method of protecting your rights has two steps: (1) copyright
+the library, and (2) offer you this license which gives you legal
+permission to copy, distribute and/or modify the library.
+
+Also, for each distributor's protection, we want to make certain
+that everyone understands that there is no warranty for this free
+library.  If the library is modified by someone else and passed on, we
+want its recipients to know that what they have is not the original
+version, so that any problems introduced by others will not reflect on
+the original authors' reputations.
+
+Finally, any free program is threatened constantly by software
+patents.  We wish to avoid the danger that companies distributing free
+software will individually obtain patent licenses, thus in effect
+transforming the program into proprietary software.  To prevent this,
+we have made it clear that any patent must be licensed for everyone's
+free use or not licensed at all.
+
+Most GNU software, including some libraries, is covered by the ordinary
+GNU General Public License, which was designed for utility programs.  This
+license, the GNU Library General Public License, applies to certain
+designated libraries.  This license is quite different from the ordinary
+one; be sure to read it in full, and don't assume that anything in it is
+the same as in the ordinary license.
+
+The reason we have a separate public license for some libraries is that
+they blur the distinction we usually make between modifying or adding to a
+program and simply using it.  Linking a program with a library, without
+changing the library, is in some sense simply using the library, and is
+analogous to running a utility program or application program.  However, in
+a textual and legal sense, the linked executable is a combined work, a
+derivative of the original library, and the ordinary General Public License
+treats it as such.
+
+Because of this blurred distinction, using the ordinary General
+Public License for libraries did not effectively promote software
+sharing, because most developers did not use the libraries.  We
+concluded that weaker conditions might promote sharing better.
+
+However, unrestricted linking of non-free programs would deprive the
+users of those programs of all benefit from the free status of the
+libraries themselves.  This Library General Public License is intended to
+permit developers of non-free programs to use free libraries, while
+preserving your freedom as a user of such programs to change the free
+libraries that are incorporated in them.  (We have not seen how to achieve
+this as regards changes in header files, but we have achieved it as regards
+changes in the actual functions of the Library.)  The hope is that this
+will lead to faster development of free libraries.
+
+The precise terms and conditions for copying, distribution and
+modification follow.  Pay close attention to the difference between a
+""work based on the library"" and a ""work that uses the library"".  The
+former contains code derived from the library, while the latter only
+works together with the library.
+
+Note that it is possible for a library to be covered by the ordinary
+General Public License rather than by this special one.
+
+GNU LIBRARY GENERAL PUBLIC LICENSE
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. This License Agreement applies to any software library which
+contains a notice placed by the copyright holder or other authorized
+party saying it may be distributed under the terms of this Library
+General Public License (also called ""this License"").  Each licensee is
+addressed as ""you"".
+
+A ""library"" means a collection of software functions and/or data
+prepared so as to be conveniently linked with application programs
+(which use some of those functions and data) to form executables.
+
+The ""Library"", below, refers to any such software library or work
+which has been distributed under these terms.  A ""work based on the
+Library"" means either the Library or any derivative work under
+copyright law: that is to say, a work containing the Library or a
+portion of it, either verbatim or with modifications and/or translated
+straightforwardly into another language.  (Hereinafter, translation is
+included without limitation in the term ""modification"".)
+
+""Source code"" for a work means the preferred form of the work for
+making modifications to it.  For a library, complete source code means
+all the source code for all modules it contains, plus any associated
+interface definition files, plus the scripts used to control compilation
+and installation of the library.
+
+Activities other than copying, distribution and modification are not
+covered by this License; they are outside its scope.  The act of
+running a program using the Library is not restricted, and output from
+such a program is covered only if its contents constitute a work based
+on the Library (independent of the use of the Library in a tool for
+writing it).  Whether that is true depends on what the Library does
+and what the program that uses the Library does.
+  
+1. You may copy and distribute verbatim copies of the Library's
+complete source code as you receive it, in any medium, provided that
+you conspicuously and appropriately publish on each copy an
+appropriate copyright notice and disclaimer of warranty; keep intact
+all the notices that refer to this License and to the absence of any
+warranty; and distribute a copy of this License along with the
+Library.
+
+You may charge a fee for the physical act of transferring a copy,
+and you may at your option offer warranty protection in exchange for a
+fee.
+
+2. You may modify your copy or copies of the Library or any portion
+of it, thus forming a work based on the Library, and copy and
+distribute such modifications or work under the terms of Section 1
+above, provided that you also meet all of these conditions:
+
+a) The modified work must itself be a software library.
+
+b) You must cause the files modified to carry prominent notices
+stating that you changed the files and the date of any change.
+
+c) You must cause the whole of the work to be licensed at no
+charge to all third parties under the terms of this License.
+
+d) If a facility in the modified Library refers to a function or a
+table of data to be supplied by an application program that uses
+the facility, other than as an argument passed when the facility
+is invoked, then you must make a good faith effort to ensure that,
+in the event an application does not supply such function or
+table, the facility still operates, and performs whatever part of
+its purpose remains meaningful.
+
+(For example, a function in a library to compute square roots has
+a purpose that is entirely well-defined independent of the
+application.  Therefore, Subsection 2d requires that any
+application-supplied function or table used by this function must
+be optional: if the application does not supply it, the square
+root function must still compute square roots.)
+
+These requirements apply to the modified work as a whole.  If
+identifiable sections of that work are not derived from the Library,
+and can be reasonably considered independent and separate works in
+themselves, then this License, and its terms, do not apply to those
+sections when you distribute them as separate works.  But when you
+distribute the same sections as part of a whole which is a work based
+on the Library, the distribution of the whole must be on the terms of
+this License, whose permissions for other licensees extend to the
+entire whole, and thus to each and every part regardless of who wrote
+it.
+
+Thus, it is not the intent of this section to claim rights or contest
+your rights to work written entirely by you; rather, the intent is to
+exercise the right to control the distribution of derivative or
+collective works based on the Library.
+
+In addition, mere aggregation of another work not based on the Library
+with the Library (or with a work based on the Library) on a volume of
+a storage or distribution medium does not bring the other work under
+the scope of this License.
+
+3. You may opt to apply the terms of the ordinary GNU General Public
+License instead of this License to a given copy of the Library.  To do
+this, you must alter all the notices that refer to this License, so
+that they refer to the ordinary GNU General Public License, version 2,
+instead of to this License.  (If a newer version than version 2 of the
+ordinary GNU General Public License has appeared, then you can specify
+that version instead if you wish.)  Do not make any other change in
+these notices.
+
+Once this change is made in a given copy, it is irreversible for
+that copy, so the ordinary GNU General Public License applies to all
+subsequent copies and derivative works made from that copy.
+
+This option is useful when you wish to copy part of the code of
+the Library into a program that is not a library.
+
+4. You may copy and distribute the Library (or a portion or
+derivative of it, under Section 2) in object code or executable form
+under the terms of Sections 1 and 2 above provided that you accompany
+it with the complete corresponding machine-readable source code, which
+must be distributed under the terms of Sections 1 and 2 above on a
+medium customarily used for software interchange.
+
+If distribution of object code is made by offering access to copy
+from a designated place, then offering equivalent access to copy the
+source code from the same place satisfies the requirement to
+distribute the source code, even though third parties are not
+compelled to copy the source along with the object code.
+
+5. A program that contains no derivative of any portion of the
+Library, but is designed to work with the Library by being compiled or
+linked with it, is called a ""work that uses the Library"".  Such a
+work, in isolation, is not a derivative work of the Library, and
+therefore falls outside the scope of this License.
+
+However, linking a ""work that uses the Library"" with the Library
+creates an executable that is a derivative of the Library (because it
+contains portions of the Library), rather than a ""work that uses the
+library"".  The executable is therefore covered by this License.
+Section 6 states terms for distribution of such executables.
+
+When a ""work that uses the Library"" uses material from a header file
+that is part of the Library, the object code for the work may be a
+derivative work of the Library even though the source code is not.
+Whether this is true is especially significant if the work can be
+linked without the Library, or if the work is itself a library.  The
+threshold for this to be true is not precisely defined by law.
+
+If such an object file uses only numerical parameters, data
+structure layouts and accessors, and small macros and small inline
+functions (ten lines or less in length), then the use of the object
+file is unrestricted, regardless of whether it is legally a derivative
+work.  (Executables containing this object code plus portions of the
+Library will still fall under Section 6.)
+
+Otherwise, if the work is a derivative of the Library, you may
+distribute the object code for the work under the terms of Section 6.
+Any executables containing that work also fall under Section 6,
+whether or not they are linked directly with the Library itself.
+
+6. As an exception to the Sections above, you may also compile or
+link a ""work that uses the Library"" with the Library to produce a
+work containing portions of the Library, and distribute that work
+under terms of your choice, provided that the terms permit
+modification of the work for the customer's own use and reverse
+engineering for debugging such modifications.
+
+You must give prominent notice with each copy of the work that the
+Library is used in it and that the Library and its use are covered by
+this License.  You must supply a copy of this License.  If the work
+during execution displays copyright notices, you must include the
+copyright notice for the Library among them, as well as a reference
+directing the user to the copy of this License.  Also, you must do one
+of these things:
+
+a) Accompany the work with the complete corresponding
+machine-readable source code for the Library including whatever
+changes were used in the work (which must be distributed under
+Sections 1 and 2 above); and, if the work is an executable linked
+with the Library, with the complete machine-readable ""work that
+uses the Library"", as object code and/or source code, so that the
+user can modify the Library and then relink to produce a modified
+executable containing the modified Library.  (It is understood
+that the user who changes the contents of definitions files in the
+Library will not necessarily be able to recompile the application
+to use the modified definitions.)
+
+b) Accompany the work with a written offer, valid for at
+least three years, to give the same user the materials
+specified in Subsection 6a, above, for a charge no more
+than the cost of performing this distribution.
+
+c) If distribution of the work is made by offering access to copy
+from a designated place, offer equivalent access to copy the above
+specified materials from the same place.
+
+d) Verify that the user has already received a copy of these
+materials or that you have already sent this user a copy.
+
+For an executable, the required form of the ""work that uses the
+Library"" must include any data and utility programs needed for
+reproducing the executable from it.  However, as a special exception,
+the source code distributed need not include anything that is normally
+distributed (in either source or binary form) with the major
+components (compiler, kernel, and so on) of the operating system on
+which the executable runs, unless that component itself accompanies
+the executable.
+
+It may happen that this requirement contradicts the license
+restrictions of other proprietary libraries that do not normally
+accompany the operating system.  Such a contradiction means you cannot
+use both them and the Library together in an executable that you
+distribute.
+
+7. You may place library facilities that are a work based on the
+Library side-by-side in a single library together with other library
+facilities not covered by this License, and distribute such a combined
+library, provided that the separate distribution of the work based on
+the Library and of the other library facilities is otherwise
+permitted, and provided that you do these two things:
+
+a) Accompany the combined library with a copy of the same work
+based on the Library, uncombined with any other library
+facilities.  This must be distributed under the terms of the
+Sections above.
+
+b) Give prominent notice with the combined library of the fact
+that part of it is a work based on the Library, and explaining
+where to find the accompanying uncombined form of the same work.
+
+8. You may not copy, modify, sublicense, link with, or distribute
+the Library except as expressly provided under this License.  Any
+attempt otherwise to copy, modify, sublicense, link with, or
+distribute the Library is void, and will automatically terminate your
+rights under this License.  However, parties who have received copies,
+or rights, from you under this License will not have their licenses
+terminated so long as such parties remain in full compliance.
+
+9. You are not required to accept this License, since you have not
+signed it.  However, nothing else grants you permission to modify or
+distribute the Library or its derivative works.  These actions are
+prohibited by law if you do not accept this License.  Therefore, by
+modifying or distributing the Library (or any work based on the
+Library), you indicate your acceptance of this License to do so, and
+all its terms and conditions for copying, distributing or modifying
+the Library or works based on it.
+
+10. Each time you redistribute the Library (or any work based on the
+Library), the recipient automatically receives a license from the
+original licensor to copy, distribute, link with or modify the Library
+subject to these terms and conditions.  You may not impose any further
+restrictions on the recipients' exercise of the rights granted herein.
+You are not responsible for enforcing compliance by third parties to
+this License.
+
+11. If, as a consequence of a court judgment or allegation of patent
+infringement or for any other reason (not limited to patent issues),
+conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot
+distribute so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you
+may not distribute the Library at all.  For example, if a patent
+license would not permit royalty-free redistribution of the Library by
+all those who receive copies directly or indirectly through you, then
+the only way you could satisfy both it and this License would be to
+refrain entirely from distribution of the Library.
+
+If any portion of this section is held invalid or unenforceable under any
+particular circumstance, the balance of the section is intended to apply,
+and the section as a whole is intended to apply in other circumstances.
+
+It is not the purpose of this section to induce you to infringe any
+patents or other property right claims or to contest validity of any
+such claims; this section has the sole purpose of protecting the
+integrity of the free software distribution system which is
+implemented by public license practices.  Many people have made
+generous contributions to the wide range of software distributed
+through that system in reliance on consistent application of that
+system; it is up to the author/donor to decide if he or she is willing
+to distribute software through any other system and a licensee cannot
+impose that choice.
+
+This section is intended to make thoroughly clear what is believed to
+be a consequence of the rest of this License.
+
+12. If the distribution and/or use of the Library is restricted in
+certain countries either by patents or by copyrighted interfaces, the
+original copyright holder who places the Library under this License may add
+an explicit geographical distribution limitation excluding those countries,
+so that distribution is permitted only in or among countries not thus
+excluded.  In such case, this License incorporates the limitation as if
+written in the body of this License.
+
+13. The Free Software Foundation may publish revised and/or new
+versions of the Library General Public License from time to time.
+Such new versions will be similar in spirit to the present version,
+but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number.  If the Library
+specifies a version number of this License which applies to it and
+""any later version"", you have the option of following the terms and
+conditions either of that version or of any later version published by
+the Free Software Foundation.  If the Library does not specify a
+license version number, you may choose any version ever published by
+the Free Software Foundation.
+
+14. If you wish to incorporate parts of the Library into other free
+programs whose distribution conditions are incompatible with these,
+write to the author to ask for permission.  For software which is
+copyrighted by the Free Software Foundation, write to the Free
+Software Foundation; we sometimes make exceptions for this.  Our
+decision will be guided by the two goals of preserving the free status
+of all derivatives of our free software and of promoting the sharing
+and reuse of software generally.
+
+NO WARRANTY
+
+15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO
+WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
+EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR
+OTHER PARTIES PROVIDE THE LIBRARY ""AS IS"" WITHOUT WARRANTY OF ANY
+KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+LIBRARY IS WITH YOU.  SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME
+THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN
+WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY
+AND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE TO YOU
+FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
+LIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
+RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
+FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+END OF TERMS AND CONDITIONS
+
+* About OpenCL-ICD-Loader( Only used in the Windows version of this product. )
+
+Copyright (c) 2016 The Khronos Group Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software source and associated documentation files (the ""Materials""),
+to deal in the Materials without restriction, including without limitation
+the rights to use, copy, modify, compile, merge, publish, distribute,
+sublicense, and/or sell copies of the Materials, and to permit persons to
+whom the Materials are furnished to do so, subject the following terms and
+conditions:
+
+All modifications to the Materials used to create a binary that is
+distributed to third parties shall be provided to Khronos with an
+unrestricted license to use for the purposes of implementing bug fixes and
+enhancements to the Materials;
+
+If the binary is used as part of an OpenCL(TM) implementation, whether binary
+is distributed together with or separately to that implementation, then
+recipient must become an OpenCL Adopter and follow the published OpenCL
+conformance process for that implementation, details at:
+http://www.khronos.org/conformance/;
+
+The above copyright notice, the OpenCL trademark license, and this permission
+notice shall be included in all copies or substantial portions of the
+Materials.
+
+THE MATERIALS ARE PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE MATERIALS OR THE USE OR OTHER DEALINGS IN
+THE MATERIALS.
+
+OpenCL is a trademark of Apple Inc. used under license by Khronos.
+
+* About Intel MKL( Only used in the Windows version of this product. )
+
+Copyright (c) 2018 Intel Corporation.
+
+Use and Redistribution.  You may use and redistribute the software (the “Software”), without modification, provided the following conditions are met:
+
+* Redistributions must reproduce the above copyright notice and the following terms of use in the Software and in the documentation and/or other materials provided with the distribution.
+
+* Neither the name of Intel nor the names of its suppliers may be used to endorse or promote products derived from this Software without specific prior written permission.
+
+* No reverse engineering, decompilation, or disassembly of this Software is permitted.
+
+Limited patent license.  Intel grants you a world-wide, royalty-free, non-exclusive license under patents it now or hereafter owns or controls to make, have made, use, import, offer to sell and sell (“Utilize”) this Software, but solely to the extent that any such patent is necessary to Utilize the Software alone. The patent license shall not apply to any combinations which include this software.  No hardware per se is licensed hereunder.
+
+Third party and other Intel programs.  “Third Party Programs” are the files listed in the “third-party-programs.txt” text file that is included with the Software and may include Intel programs under separate license terms. Third Party Programs, even if included with the distribution of the Materials, are governed by separate license terms and those license terms solely govern your use of those programs. 
+
+DISCLAIMER.  THIS SOFTWARE IS PROVIDED ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT ARE DISCLAIMED. THIS SOFTWARE IS NOT INTENDED FOR USE IN SYSTEMS OR APPLICATIONS WHERE FAILURE OF THE SOFTWARE MAY CAUSE PERSONAL INJURY OR DEATH AND YOU AGREE THAT YOU ARE FULLY RESPONSIBLE FOR ANY CLAIMS, COSTS, DAMAGES, EXPENSES, AND ATTORNEYS’ FEES ARISING OUT OF ANY SUCH USE, EVEN IF ANY CLAIM ALLEGES THAT INTEL WAS NEGLIGENT REGARDING THE DESIGN OR MANUFACTURE OF THE MATERIALS.
+
+LIMITATION OF LIABILITY. IN NO EVENT WILL INTEL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. YOU AGREE TO INDEMNIFY AND HOLD INTEL HARMLESS AGAINST ANY CLAIMS AND EXPENSES RESULTING FROM YOUR USE OR UNAUTHORIZED USE OF THE SOFTWARE.
+
+No support.  Intel may make changes to the Software, at any time without notice, and is not obligated to support, update or provide training for the Software.
+
+Termination. Intel may terminate your right to use the Software in the event of your breach of this Agreement and you fail to cure the breach within a reasonable period of time.
+
+Feedback.  Should you provide Intel with comments, modifications, corrections, enhancements or other input (“Feedback”) related to the Software Intel will be free to use, disclose, reproduce, license or otherwise distribute or exploit the Feedback in its sole discretion without any obligations or restrictions of any kind, including without limitation, intellectual property rights or licensing obligations.
+
+Compliance with laws.  You agree to comply with all relevant laws and regulations governing your use, transfer, import or export (or prohibition thereof) of the Software.
+
+Governing law.  All disputes will be governed by the laws of the United States of America and the State of Delaware without reference to conflict of law principles and subject to the exclusive jurisdiction of the state or federal courts sitting in the State of Delaware, and each party agrees that it submits to the personal jurisdiction and venue of those courts and waives any objections. The United Nations Convention on Contracts for the International Sale of Goods (1980) is specifically excluded and will not apply to the Software.
+
+*Other names and brands may be claimed as the property of others.
+
+* About ICU
+Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Unicode data files and any associated documentation
+(the ""Data Files"") or Unicode software and any associated documentation
+(the ""Software"") to deal in the Data Files or Software
+without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files
+or Software are furnished to do so, provided that either
+(a) this copyright and permission notice appear with all copies
+of the Data Files or Software, or
+(b) this copyright and permission notice appear in associated
+Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED ""AS IS"", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale,
+use or other dealings in these Data Files or Software without prior
+written authorization of the copyright holder.
+
+* About OpenEXR
+Copyright Contributors to the OpenEXR Project. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* We have used Wacom Low-Level SDK in the iOS version of this product.
+© 2013 Wacom Co., Ltd. All rights reserved.
+
+* About OpenBLAS( Only used in the Android version of this product. )
+Copyright (c) 2011-2014, The OpenBLAS Project
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the OpenBLAS project nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS IS""
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* About Vulkan ( Only used in the Windows and Android version of this product. )
+Copyright (c) 2015-2020 The Khronos Group Inc.
+
+Licensed under the Apache License, Version 2.0 (the ""License"");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an ""AS IS"" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+* About Glslang ( Only used in the Windows and Android version of this product. )
+//
+// Copyright (C) 2015-2018 Google, Inc.
+// Copyright (C) <various other dates and companies>
+//
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions
+// are met:
+//
+//    Redistributions of source code must retain the above copyright
+//    notice, this list of conditions and the following disclaimer.
+//
+//    Redistributions in binary form must reproduce the above
+//    copyright notice, this list of conditions and the following
+//    disclaimer in the documentation and/or other materials provided
+//    with the distribution.
+//
+//    Neither the name of 3Dlabs Inc. Ltd. nor the names of its
+//    contributors may be used to endorse or promote products derived
+//    from this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+// FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+// COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+// BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+// ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
+//
+Copyright (c) 2002, NVIDIA Corporation.
+
+NVIDIA Corporation(""NVIDIA"") supplies this software to you in
+consideration of your agreement to the following terms, and your use,
+installation, modification or redistribution of this NVIDIA software
+constitutes acceptance of these terms.  If you do not agree with these
+terms, please do not use, install, modify or redistribute this NVIDIA
+software.
+
+In consideration of your agreement to abide by the following terms, and
+subject to these terms, NVIDIA grants you a personal, non-exclusive
+license, under NVIDIA's copyrights in this original NVIDIA software (the
+""NVIDIA Software""), to use, reproduce, modify and redistribute the
+NVIDIA Software, with or without modifications, in source and/or binary
+forms; provided that if you redistribute the NVIDIA Software, you must
+retain the copyright notice of NVIDIA, this notice and the following
+text and disclaimers in all such redistributions of the NVIDIA Software.
+Neither the name, trademarks, service marks nor logos of NVIDIA
+Corporation may be used to endorse or promote products derived from the
+NVIDIA Software without specific prior written permission from NVIDIA.
+Except as expressly stated in this notice, no other rights or licenses
+express or implied, are granted by NVIDIA herein, including but not
+limited to any patent rights that may be infringed by your derivative
+works or by other works in which the NVIDIA Software may be
+incorporated. No hardware is licensed hereunder.
+
+THE NVIDIA SOFTWARE IS BEING PROVIDED ON AN ""AS IS"" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+INCLUDING WITHOUT LIMITATION, WARRANTIES OR CONDITIONS OF TITLE,
+NON-INFRINGEMENT, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
+ITS USE AND OPERATION EITHER ALONE OR IN COMBINATION WITH OTHER
+PRODUCTS.
+
+IN NO EVENT SHALL NVIDIA BE LIABLE FOR ANY SPECIAL, INDIRECT,
+INCIDENTAL, EXEMPLARY, CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, LOST PROFITS; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
+USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) OR ARISING IN ANY WAY
+OUT OF THE USE, REPRODUCTION, MODIFICATION AND/OR DISTRIBUTION OF THE
+NVIDIA SOFTWARE, HOWEVER CAUSED AND WHETHER UNDER THEORY OF CONTRACT,
+TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF
+NVIDIA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* About isAppEncrypted function ( Only used in the iOS version of this product. )
+Copyright (c) 2017 Landon J. Fuller <landon@landonf.org>
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the ""Software""), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ""AS IS"", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Comment from
+<a href=""http://iphonedevwiki.net/index.php/Crack_prevention"">iPhone Dev Wiki
+Crack Prevention</a>: App Store binaries are signed by both their developer
+and Apple. This encrypts the binary so that decryption keys are needed in order
+to make the binary readable. When iOS executes the binary, the decryption keys
+are used to decrypt the binary into a readable state where it is then loaded
+into memory and executed. iOS can tell the encryption status of a binary via the
+cryptid structure member of LC_ENCRYPTION_INFO MachO load command. If cryptid is
+a non-zero value then the binary is encrypted.
+
+'Cracking' works by letting the kernel decrypt the binary then siphoning the
+decrypted data into a new binary file, resigning, and repackaging. This will
+only work on jailbroken devices as codesignature validation has been removed.
+Resigning takes place because while the codesignature doesn't have to be valid
+thanks to the jailbreak, it does have to be in place unless you have AppSync or
+similar to disable codesignature checks.
+
+More information at <a href=""http://landonf.org/2009/02/index.html"">Landon
+Fuller's blog</a>
+
+* About Promises ( Only used in the iOS version of this product. )
+Copyright 2018 Google Inc. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the ""License"");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an ""AS IS"" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+* About PDFium
+// Copyright 2014 PDFium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// ""AS IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+* Processing of hand images in ""This product"" uses ""MediaPipe"" solutions.
+Part of ""MediaPipe"" source code in ""This product"" was changed. 
+
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+You may obtain a copy of the License at
+https://www.apache.org/licenses/LICENSE-2.0
+","* Мы использовали «QUMALib» для подключения процесса QUMARION, включенного в этот продукт, только для версий Windows и macOS.
+Авторские права (C) 2004-2012 Корпорация SoftEther. Все права защищены.
+
+* О ncurses(Используется только в версии этого продукта Windows и macOS.)
+Авторские права (c) 1998–2005, 2006 Free Software Foundation, Inc.
+
+Настоящим бесплатно любому лицу, получившему копию этого программного обеспечения и связанных с ним файлов документации («Программное обеспечение»), предоставляется разрешение на работу с Программным обеспечением без ограничений, включая, помимо прочего, права на использование, копирование, изменение, объединение, публикацию, распространение, распространение с модификациями, сублицензирование и/или продажу копий Программного обеспечения, а также разрешение лицам, которым предоставляется Программное обеспечение, делать это при соблюдении следующих условий:
+
+Вышеупомянутое уведомление об авторских правах и настоящее уведомление о разрешении должны быть включены во все копии или существенные части Программного обеспечения.
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ГАРАНТИЯМИ ТОВАРНОЙ ЦЕННОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ВЫШЕУКАЗАННЫЕ ОБЛАДАТЕЛИ АВТОРСКИХ ПРАВ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ДРУГУЮ ОТВЕТСТВЕННОСТЬ, БУДЬ В ДЕЙСТВИИ ПО КОНТРАКТУ, ПРАВОНАРУШЕНИЮ ИЛИ ДРУГИМ ОБРАЗОМ, ВОЗНИКАЮЩИЕ ИЗ ИЛИ В СВЯЗИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ ИЛИ ИСПОЛЬЗОВАНИЕМ ИЛИ ДРУГИМИ ДЕЛАМИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.
+
+За исключением случаев, указанных в настоящем уведомлении, имена вышеуказанных правообладателей не могут использоваться в рекламе или иным образом для содействия продаже, использованию или другим сделкам с данным Программным обеспечением без предварительного письменного разрешения.
+
+* О OpenSSL
+Авторские права (c) 1998–2019. Проект OpenSSL.  Все права защищены.
+
+Распространение и использование в исходной и бинарной форме, с модификациями или без них, разрешено при соблюдении следующих условий:
+
+1. При повторном распространении исходного кода должно сохраняться вышеуказанное уведомление об авторских правах, этот список условий и следующий отказ от ответственности. 
+
+2. При повторном распространении в двоичной форме должно воспроизводиться вышеуказанное уведомление об авторских правах, настоящий список условий и следующий отказ от ответственности в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+
+3. Все рекламные материалы, в которых упоминаются функции или использование этого программного обеспечения, должны содержать следующее подтверждение: «Этот продукт включает программное обеспечение, разработанное проектом OpenSSL для использования в наборе инструментов OpenSSL. (http://www.openssl.org/)».
+
+4. Названия «OpenSSL Toolkit» и «OpenSSL Project» не должны использоваться для поддержки или продвижения продуктов, созданных на основе этого программного обеспечения, без предварительного письменного разрешения. Для получения письменного разрешения свяжитесь с нами по адресу openssl-core@openssl.org.
+
+5. Продукты, созданные на основе этого программного обеспечения, не могут называться «OpenSSL», а также не могут появляться «OpenSSL» в их названиях без предварительного письменного разрешения проекта OpenSSL.
+
+6. Распространение в любой форме должно сохранять следующее подтверждение:
+«Этот продукт включает программное обеспечение, разработанное проектом OpenSSL для использования в наборе инструментов OpenSSL (http://www.openssl.org/)»
+
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ ПРОЕКТОМ OpenSSL «КАК ЕСТЬ», И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ПРОЕКТ OpenSSL ИЛИ ЕГО УЧАСТНИКИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, СПЕЦИАЛЬНЫЕ, ПРИМЕРНЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ЗАКУПКУ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ, ИЛИ ПРИБЫЛЬ ИЛИ ПЕРЕРЫВ БИЗНЕСА), КАКОЙ-ЛИБО ВЫЗВАННОЙ И НА ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОР, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВИЛЬНОЕ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЙ ОБРАЗ), ВОЗНИКАЮЩИЙ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ УВЕДОМЛЕНО ОБ ЭТОМ ПРОГРАММНОМ ОБЕСПЕЧЕНИИ. ВОЗМОЖНОСТЬ ТАКОГО ПОВРЕЖДЕНИЯ.
+=================================================================
+
+Этот продукт включает в себя криптографическое программное обеспечение, написанное Эриком Янгом (eay@cryptsoft.com).
+Этот продукт включает программное обеспечение, написанное Тимом Хадсоном (tjh@cryptsoft.com).
+
+Оригинальная лицензия SSLeay
+-----------------------
+
+Авторские права (C) 1995–1998 гг. Эрик Янг (eay@cryptsoft.com). Все права защищены.
+
+Этот пакет представляет собой реализацию SSL, написанную Эриком Янгом (eay@cryptsoft.com).
+Реализация была написана так, чтобы соответствовать SSL Netscapes.Эта библиотека бесплатна для коммерческого и некоммерческого использования при условии соблюдения следующих условий.  Следующие условия применяются ко всему коду, найденному в этом дистрибутиве, будь то код RC4, RSA, lhash, DES и т. д.; не только код SSL.
+На документацию SSL, включенную в этот дистрибутив, распространяются те же условия авторских прав, за исключением того, что ее владельцем является Тим Хадсон (tjh@cryptsoft.com).
+
+Авторские права остаются за Эриком Янгом, и поэтому любые уведомления об авторских правах в коде не подлежат удалению.
+Если этот пакет используется в продукте, Эрику Янгу следует указать автора используемых частей библиотеки.
+Это может быть в виде текстового сообщения при запуске программы или в документации (онлайн или текстовой), поставляемой вместе с пакетом.
+
+Распространение и использование в исходной и бинарной форме, с модификациями или без них, разрешено при соблюдении следующих условий:
+1. При повторном распространении исходного кода должно сохраняться уведомление об авторских правах, этот список условий и следующий отказ от ответственности.
+2. При повторном распространении в двоичной форме должно воспроизводиться вышеуказанное уведомление об авторских правах, настоящий список условий и следующий отказ от ответственности в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+3. Все рекламные материалы, в которых упоминаются функции или использование этого программного обеспечения, должны содержать следующее подтверждение:
+«Этот продукт включает в себя криптографическое программное обеспечение, написанное Эриком Янгом (eay@cryptsoft.com)». Слово «криптографический» можно опустить, если подпрограммы из используемой библиотеки не связаны с криптографией :-).
+4. Если вы включаете какой-либо конкретный код Windows (или его производную) из каталога приложений (код приложения), вы должны включить подтверждение: 
+«Этот продукт включает программное обеспечение, написанное Тимом Хадсоном (tjh@cryptsoft.com)»
+
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ ЭРИКОМ ЯНГОМ «КАК ЕСТЬ», И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ, ОТКАЗЫВАЮТСЯ.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОР ИЛИ УЧАСТНИКИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, ОСОБЫЕ, ПРИМЕРНЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПРИОБРЕТЕНИЕ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ ИЛИ ПРИБЫЛЬ ИЛИ ПЕРЕРЫВ БИЗНЕСА), КАКАЯ-ЛИБО ВЫЗВАННАЯ И ОТВЕТСТВЕННОСТЬ ПО ДОГОВОРУ, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГИЕ ОБРАЗЫ), ВОЗНИКАЮЩИЕ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНЫ О ВОЗМОЖНОСТИ ТАКОЙ ПОВРЕЖДЕНИЕ.
+
+Условия лицензии и распространения любой общедоступной версии или производной этого кода не могут быть изменены.
+то есть этот код нельзя просто скопировать и разместить под другой лицензией на распространение [включая публичную лицензию GNU].
+
+* О libedit(Используется только в версии этого продукта Windows и macOS.)
+Авторское право (с) 1992, 1993 г.
+ Регенты Калифорнийского университета.  Все права защищены.
+
+Этот код получен из программного обеспечения, предоставленного Беркли Кристосом Зуласом из Корнельского университета.
+
+Распространение и использование в исходной и бинарной форме, с модификациями или без них, разрешено при соблюдении следующих условий:
+1. При повторном распространении исходного кода должно сохраняться вышеуказанное уведомление об авторских правах, этот список условий и следующий отказ от ответственности.
+2. При повторном распространении в двоичной форме должно воспроизводиться вышеуказанное уведомление об авторских правах, настоящий список условий и следующий отказ от ответственности в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+3. Ни название Университета, ни имена его участников не могут использоваться для поддержки или продвижения продуктов, созданных на основе этого программного обеспечения, без специального предварительного письменного разрешения.
+
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ РЕГЕНТАМИ И УЧАСТНИКАМИ «КАК ЕСТЬ», И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ ТОВАРНОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ РЕГЕНТЫ ИЛИ УЧАСТНИКИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, ОСОБЫЕ, ПРИМЕРНЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ЗАКУПКУ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ ИЛИ ПРИБЫЛИ; ИЛИ ПРЕРЫВАНИЕ ДЕЯТЕЛЬНОСТИ), КАКОЙ-ЛИБО ВЫЗВАННОЙ И НА ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, БУДЬ БЫ ДОГОВОРА, СТРОГО ОТВЕТСТВЕННОСТИ ИЛИ ПРАВОНАРУШЕНИЯ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЕ), ВОЗНИКАЮЩИХ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ УВЕДОМЛЕНО О ВОЗМОЖНОСТИ ТАКОГО ПОВРЕЖДЕНИЕ.
+
+* О liboggАвторские права (c) 2002, Фонд Xiph.org
+
+Распространение и использование в исходной и двоичной форме, с или без
+модификация допускаются при соблюдении следующих условий
+встречаются:
+
+- При повторном распространении исходного кода необходимо сохранять вышеуказанные авторские права.
+уведомление, этот список условий и следующий отказ от ответственности.
+
+- При распространении в двоичной форме необходимо воспроизводить вышеуказанные авторские права.
+уведомление, этот список условий и следующий отказ от ответственности в
+документация и/или другие материалы, поставляемые вместе с дистрибутивом.
+
+- Ни название Фонда Xiph.org, ни имена его
+участники могут быть использованы для одобрения или продвижения продуктов, полученных на основе
+это программное обеспечение без специального предварительного письменного разрешения.
+
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЕНО ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ.
+«КАК ЕСТЬ» И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ
+ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ
+КОНКРЕТНАЯ ЦЕЛЬ ОТКАЗЫВАЕТСЯ.  НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ФОНДА НЕ ДОЛЖНО
+ИЛИ УЧАСТНИКИ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ,
+ОСОБЫЙ, ПРИМЕРНЫЙ ИЛИ КОСВЕННЫЙ УЩЕРБ (ВКЛЮЧАЯ, НО НЕ
+ОГРАНИЧИВАЕТСЯ ЗАКУПКАМИ ТОВАРОВ-ЗАМЕНИТЕЛЕЙ ИЛИ УСЛУГ; ПОТЕРЯ ИСПОЛЬЗОВАНИЯ,
+ДАННЫЕ ИЛИ ПРИБЫЛЬ; ИЛИ ПРЕРЫВАНИЕ ДЕЛОВОЙ ДЕЯТЕЛЬНОСТИ), КАКИЕ бы причины ни были вызваны, И НА ЛЮБОМ
+ТЕОРИЯ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОРНАЯ, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВИЛЬНАЯ ОТВЕТСТВЕННОСТЬ
+(В ТОМ ЧИСЛЕ НЕБРЕЖНОСТИ ИЛИ ДРУГИМ ОБРАЗОМ), ВОЗНИКАЮЩИХ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ
+ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНО О ВОЗМОЖНОСТИ ТАКОГО ПОВРЕЖДЕНИЯ.
+
+* О libvorbis
+Авторские права (c) 2002–2018 Фонд Xiph.org
+
+Распространение и использование в исходной и двоичной форме, с или без
+модификация допускаются при соблюдении следующих условий
+встречаются:
+
+- При повторном распространении исходного кода необходимо сохранять вышеуказанные авторские права.
+уведомление, этот список условий и следующий отказ от ответственности.
+
+- При распространении в двоичной форме необходимо воспроизводить вышеуказанные авторские права.
+уведомление, этот список условий и следующий отказ от ответственности в
+документация и/или другие материалы, поставляемые вместе с дистрибутивом.
+
+- Ни название Фонда Xiph.org, ни имена его
+участники могут быть использованы для одобрения или продвижения продуктов, полученных на основе
+это программное обеспечение без специального предварительного письменного разрешения.
+
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЕНО ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ.
+«КАК ЕСТЬ» И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ
+ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ
+КОНКРЕТНАЯ ЦЕЛЬ ОТКАЗЫВАЕТСЯ.  НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ФОНДА НЕ ДОЛЖНО
+ИЛИ УЧАСТНИКИ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ,
+ОСОБЫЙ, ПРИМЕРНЫЙ ИЛИ КОСВЕННЫЙ УЩЕРБ (ВКЛЮЧАЯ, НО НЕ
+ОГРАНИЧИВАЕТСЯ ЗАКУПКАМИ ТОВАРОВ-ЗАМЕНИТЕЛЕЙ ИЛИ УСЛУГ; ПОТЕРЯ ИСПОЛЬЗОВАНИЯ,
+ДАННЫЕ ИЛИ ПРИБЫЛЬ; ИЛИ ПРЕРЫВАНИЕ ДЕЛОВОЙ ДЕЯТЕЛЬНОСТИ), КАКИЕ бы причины ни были вызваны, И НА ЛЮБОМ
+ТЕОРИЯ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОР, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВИК
+(В ТОМ ЧИСЛЕ НЕБРЕЖНОСТИ ИЛИ ДРУГИМ ОБРАЗОМ), ВОЗНИКАЮЩИХ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ
+ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНО О ВОЗМОЖНОСТИ ТАКОГО ПОВРЕЖДЕНИЯ.
+
+* Об OpenAL Soft (Используется только в версиях Windows и Android этого продукта.)
+OpenAL Soft — это кроссплатформенная программная реализация API 3D-аудио OpenAL под лицензией LGPL. Он является ответвлением версии Windows с открытым исходным кодом, первоначально доступной из репозитория SVN openal.org (ныне несуществующего).
+OpenAL предоставляет возможности воспроизведения звука в виртуальной трехмерной среде. Затухание расстояния, доплеровский сдвиг и направленные излучатели звука входят в число функций, обрабатываемых API. Более продвинутые эффекты, включая поглощение воздуха, окклюзию и реверберацию окружающей среды, доступны через расширение EFX. Он также обеспечивает потоковую передачу звука, многоканальные буферы и захват звука.
+
+Более подробную информацию можно найти на [официальном сайте](http://openal-soft.org/)
+
+ОБЩАЯ ПУБЛИЧНАЯ ЛИЦЕНЗИЯ БИБЛИОТЕКИ GNU
+Версия 2, июнь 1991 г.
+
+Авторское право (C) 1991 Free Software Foundation, Inc.
+Франклин-стрит, 51, пятый этаж, Бостон, Массачусетс 02110-1301 США
+Каждому разрешено копировать и распространять дословные копии.
+настоящего лицензионного документа, но его изменение не допускается.
+
+[Это первая выпущенная версия библиотеки GPL.  Это
+номер 2, потому что он соответствует версии 2 обычной GPL.]
+
+Преамбула
+
+Лицензии на большинство программ предназначены для того, чтобы лишить вас
+свобода делиться и изменять его.  Напротив, широкая общественность GNU
+Лицензии призваны гарантировать вам свободу делиться и изменятьсвободное программное обеспечение — чтобы гарантировать, что программное обеспечение бесплатно для всех его пользователей.
+
+Эта лицензия, Стандартная общественная лицензия библиотеки, распространяется на некоторые
+специально выделенному программному обеспечению Фонда свободного программного обеспечения и любому
+другие библиотеки, авторы которых решили ее использовать.  Вы можете использовать его для
+ваши библиотеки тоже.
+
+Когда мы говорим о свободном программном обеспечении, мы имеем в виду свободу, а не
+цена.  Наши универсальные общественные лицензии созданы для того, чтобы вы
+иметь свободу распространять копии свободного программного обеспечения (и взимать плату за
+эту услугу, если хотите), что вы получаете исходный код или можете его получить
+если вы этого хотите, вы можете изменить программное обеспечение или использовать его части
+в новых бесплатных программах; и что вы знаете, что можете это сделать.
+
+Чтобы защитить ваши права, нам необходимо ввести ограничения, запрещающие
+кого-либо, кто откажет вам в этих правах или попросит вас отказаться от этих прав.
+Эти ограничения влекут за собой определенные обязанности для вас, если
+вы распространяете копии библиотеки или изменяете ее.
+
+Например, если вы распространяете экземпляры библиотеки бесплатно.
+или за определенную плату вы должны предоставить получателям все права, которые мы дали
+ты.  Вы должны убедиться, что они тоже получили или смогут получить исходник.
+код.  Если вы связываете программу с библиотекой, вы должны предоставить
+полные объектные файлы получателям, чтобы они могли повторно связать их
+с библиотекой, после внесения изменений в библиотеку и перекомпиляции
+это.  И вы должны показать им эти условия, чтобы они знали свои права.
+
+Наш метод защиты ваших прав состоит из двух этапов: (1) авторское право.
+библиотеку и (2) предложить вам эту лицензию, которая дает вам законное право
+разрешение копировать, распространять и/или изменять библиотеку.
+
+Кроме того, для защиты каждого дистрибьютора мы хотим обеспечить определенные
+что все понимают, что на это бесплатно нет никаких гарантий
+библиотека.  Если библиотека изменена кем-то другим и передана дальше, мы
+хотят, чтобы получатели знали, что то, что у них есть, не является оригиналом
+версию, чтобы любые проблемы, созданные другими, не отразились на
+репутация оригинальных авторов.
+
+Наконец, любая свободная программа постоянно находится под угрозой со стороны программного обеспечения.
+патенты.  Мы хотим избежать опасности того, что компании, распространяющие бесплатно
+программное обеспечение будет индивидуально получать патентные лицензии, таким образом, по сути
+преобразование программы в проприетарное программное обеспечение.  Чтобы предотвратить это,
+мы ясно дали понять, что любой патент должен быть лицензирован для всех
+бесплатное использование или отсутствие лицензии вообще.
+
+На большую часть программного обеспечения GNU, включая некоторые библиотеки, распространяется обычная лицензия.
+Стандартная общественная лицензия GNU, разработанная для служебных программ.  Это
+Лицензия GNU Library General Public License применяется к определенным
+назначенные библиотеки.  Эта лицензия сильно отличается от обычной
+один; обязательно прочтите его полностью и не думайте, что в нем что-то есть
+то же, что и в обычной лицензии.
+
+Причина, по которой у нас есть отдельная публичная лицензия для некоторых библиотек, заключается в том, что
+они стирают различие, которое мы обычно проводим между изменением или добавлением
+программу и просто использовать ее.  Связывание программы с библиотекой без
+изменение библиотеки — это в каком-то смысле просто использование библиотеки, и это
+аналогично запуску служебной программы или прикладной программы.  Однако в
+В текстовом и юридическом смысле связанный исполняемый файл представляет собой объединенную работу,
+производная от оригинальной библиотеки и обычной Стандартной общественной лицензии.
+относится к этому так.
+
+Из-за этого размытого различия использование обычного общего
+Публичная лицензия для библиотек не способствовала эффективному продвижению программного обеспечения.
+совместное использование, поскольку большинство разработчиков не использовали библиотеки.  Мы
+пришел к выводу, что более слабые условия могут лучше способствовать совместному использованию ресурсов.
+
+Однако неограниченное связывание несвободных программ лишило бы
+все пользователи этих программ получают выгоду от бесплатного статуса
+сами библиотеки.  Данная Стандартная общественная лицензия библиотеки предназначена для
+разрешить разработчикам несвободных программ использовать свободные библиотеки, при этом
+сохраняя вашу свободу как пользователя таких программ изменять бесплатные
+библиотеки, которые в них включены.  (Мы не видели, как достичь
+это что касается изменений в заголовочных файлах, но мы этого добились в отношении
+изменения в фактических функциях Библиотеки.) Есть надежда, что это
+приведет к более быстрому развитию свободных библиотек.
+
+Точные условия копирования, распространения и
+модификация следующая.  Обратите пристальное внимание на разницу между
+«работа на основе библиотеки» и «работа, использующая библиотеку».первый содержит код, полученный из библиотеки, а второй только
+работает совместно с библиотекой.
+
+Обратите внимание, что библиотека может быть охвачена обычным
+Стандартная общественная лицензия, а не эта специальная.
+
+ОБЩАЯ ПУБЛИЧНАЯ ЛИЦЕНЗИЯ БИБЛИОТЕКИ GNU
+УСЛОВИЯ КОПИРОВАНИЯ, РАСПРОСТРАНЕНИЯ И МОДИФИКАЦИИ
+
+0. Настоящее Лицензионное соглашение распространяется на любую библиотеку программного обеспечения,
+содержит уведомление, размещенное правообладателем или иным уполномоченным
+сторона, заявившая, что она может распространяться в соответствии с условиями настоящей Библиотеки
+Генеральная общественная лицензия (также называемая «настоящая лицензия»).  Каждый лицензиат является
+обращается на «вы».
+
+«Библиотека» означает совокупность программных функций и/или данных.
+подготовлен для удобной связи с прикладными программами
+(которые используют некоторые из этих функций и данных) для формирования исполняемых файлов.
+
+«Библиотека» ниже относится к любой такой библиотеке программного обеспечения или работе.
+который был распространен на этих условиях.  «Работа, основанная на
+«Библиотека» означает либо Библиотеку, либо любую производную работу под
+закон об авторском праве: то есть произведение, содержащее Библиотеку, или
+его часть, дословно или с изменениями и/или переведенная
+прямо на другой язык.  (Здесь и далее перевод
+включено, помимо прочего, в термин «модификация».)
+
+«Исходный код» произведения означает предпочтительную форму произведения для
+внося в него изменения.  Для библиотеки полный исходный код означает
+весь исходный код для всех содержащихся в нем модулей, а также все связанные с ним
+файлы определения интерфейса, а также сценарии, используемые для управления компиляцией.
+и установка библиотеки.
+
+Деятельность, отличная от копирования, распространения и модификации, не
+на которые распространяется настоящая Лицензия; они находятся вне его сферы действия.  Акт
+запуск программы с использованием библиотеки не ограничен, и вывод из
+такая программа распространяется только в том случае, если ее содержание представляет собой произведение, основанное
+в Библиотеке (независимо от использования Библиотеки в инструменте для
+написав это).  Так ли это, зависит от того, чем занимается Библиотека.
+и что делает программа, использующая библиотеку.
+  
+1. Вы можете копировать и распространять дословные копии Библиотеки.
+полный исходный код в том виде, в котором вы его получите, на любом носителе, при условии, что
+вы наглядно и надлежащим образом публикуете на каждой копии
+соответствующее уведомление об авторских правах и отказ от гарантии; сохранить нетронутым
+все уведомления, относящиеся к настоящей Лицензии и к отсутствию каких-либо
+гарантия; и распространять копию настоящей Лицензии вместе с
+Библиотека.
+
+Вы можете взимать плату за физический акт передачи копии,
+и вы можете по вашему выбору предложить гарантийную защиту в обмен на
+плата.
+
+2. Вы можете изменять свою копию или копии Библиотеки или любую ее часть.
+из него, образуя, таким образом, произведение, основанное на Библиотеке, а также копируя и
+распространять такие модификации или работы на условиях Раздела 1.
+выше, при условии, что вы также соответствуете всем этим условиям:
+
+а) Модифицированная работа сама должна быть библиотекой программного обеспечения.
+
+б) Вы должны сделать так, чтобы измененные файлы содержали заметные уведомления.
+с указанием того, что вы изменили файлы, и даты любых изменений.
+
+в) Вы должны добиться лицензирования всей работы без каких-либо ограничений.
+взимать плату со всех третьих лиц в соответствии с условиями настоящей Лицензии.
+
+г) Если объект в модифицированной Библиотеке относится к функции или
+таблица данных, предоставляемая прикладной программой, использующей
+средство, за исключением аргумента, передаваемого, когда средство
+вызывается, то вы должны добросовестно приложить усилия, чтобы гарантировать, что
+в случае, если приложение не предоставляет такую функцию или
+таблице, объект все еще работает и выполняет любую часть
+его цель остается значимой.
+
+(Например, функция в библиотеке для вычисления квадратных корней имеет
+цель, которая совершенно четко определена, независима от
+приложение.  Таким образом, подраздел 2d требует, чтобы любые
+функция, предоставляемая приложением, или таблица, используемая этой функцией, должны
+быть необязательным: если приложение не предоставляет его, квадрат
+root-функция все равно должна вычислять квадратные корни.)
+
+Данные требования распространяются на измененное произведение в целом.  Если
+идентифицируемые разделы этой работы не взяты из Библиотеки,
+и могут обоснованно считаться самостоятельными и отдельными произведениями в
+сами по себе, то настоящая Лицензия и ее условия не распространяются на тех,
+разделы при распространении их как отдельных произведений.  Но когда ты
+распределять одни и те же разделы как часть целого, основанного на работев Библиотеке распределение всего должно происходить на условиях
+настоящей Лицензии, разрешения которой для других лицензиатов распространяются на
+всему целому, а значит, и каждой части, независимо от того, кто написал
+это.
+
+Таким образом, целью данного раздела не является требование прав или оспаривание
+ваши права на произведение, написанное полностью вами; скорее, цель состоит в том, чтобы
+осуществлять право контролировать распределение производных или
+коллективные произведения на базе библиотеки.
+
+Кроме того, простое объединение других работ, не основанных на Библиотеке.
+с Библиотекой (или с произведением на основе Библиотеки) на томе
+носитель хранения или распространения не ставит под угрозу другую работу.
+область действия настоящей Лицензии.
+
+3. Вы можете применить условия обычной общедоступной версии GNU.
+Лицензия вместо настоящей Лицензии на данный экземпляр Библиотеки.  Делать
+этого, вы должны изменить все уведомления, относящиеся к настоящей Лицензии, поэтому
+что они относятся к обычной Стандартной общественной лицензии GNU версии 2,
+вместо этой Лицензии.  (Если установлена более новая версия, чем версия 2
+появилась обычная GNU General Public License, то можно указать
+вместо этой версии, если хотите.) Не вносите никаких других изменений в
+эти уведомления.
+
+Как только это изменение внесено в данную копию, оно становится необратимым для
+эту копию, поэтому обычная Универсальная общественная лицензия GNU применяется ко всем
+последующие копии и производные работы, созданные на основе этой копии.
+
+Эта опция полезна, когда вы хотите скопировать часть кода
+Библиотеку в программу, которая не является библиотекой.
+
+4. Вы можете копировать и распространять Библиотеку (или ее часть, или
+производная от него, согласно Разделу 2) в объектном коде или исполняемой форме
+в соответствии с условиями разделов 1 и 2 выше, при условии, что вы сопровождаете
+его с полным соответствующим машиночитаемым исходным кодом, который
+должны распространяться в соответствии с условиями разделов 1 и 2 выше на
+среда, обычно используемая для обмена программным обеспечением.
+
+Если распространение объектного кода осуществляется путем предоставления доступа к копированию
+из назначенного места, а затем предлагая эквивалентный доступ для копирования
+исходный код из того же места удовлетворяет требованию
+распространять исходный код, даже если третьи стороны не имеют права
+вынужден скопировать исходный код вместе с объектным кодом.
+
+5. Программа, не содержащая производных от какой-либо части
+Library, но предназначен для работы с Библиотекой путем компиляции или
+связанное с ним, называется «произведением, использующим Библиотеку».  Такой
+работа изолированно не является производной работой Библиотеки, и
+поэтому выходит за рамки настоящей Лицензии.
+
+Однако связывание «произведения, в котором используется Библиотека» с Библиотекой
+создает исполняемый файл, который является производным от библиотеки (поскольку он
+содержит части библиотеки), а не «произведение, в котором используется
+библиотека».  Таким образом, на исполняемый файл распространяется данная Лицензия.
+В разделе 6 указаны условия распространения таких исполняемых файлов.
+
+Когда в «работе, использующей библиотеку», используются материалы из заголовочного файла.
+которая является частью библиотеки, объектный код для работы может быть
+производная работа Библиотеки, даже если исходного кода нет.
+Верно ли это, особенно важно, если работа может быть
+связаны без библиотеки, или если произведение само по себе является библиотекой.  
+Порог, позволяющий это считать правдой, точно не определен законом.
+
+Если такой объектный файл использует только числовые параметры, данные
+макеты структур и средства доступа, а также небольшие макросы и небольшие встроенные
+функции (десять строк или меньше), то использование объекта
+файл не имеет ограничений, независимо от того, является ли он по закону производным
+работа.  (Исполняемые файлы, содержащие этот объектный код плюс части
+Библиотека по-прежнему подпадает под Раздел 6.)
+
+В противном случае, если произведение является производным от Библиотеки, вы можете
+распространять объектный код для работы на условиях Раздела 6.
+Любые исполняемые файлы, содержащие эту работу, также подпадают под Раздел 6:
+независимо от того, связаны ли они напрямую с самой Библиотекой.
+
+6. В качестве исключения из вышеуказанных разделов вы также можете собирать или
+связать «произведение, в котором используется Библиотека» с Библиотекой, чтобы создать
+работу, содержащую части Библиотеки, и распространять эту работу
+на условиях по вашему выбору, при условии, что условия позволяют
+модификация произведения для собственного использования заказчика и обратное
+техники для отладки таких модификаций.
+
+Вы должны дать заметное уведомление с каждой копией произведения, что
+В нем используется Библиотека, и что Библиотека и ее использование подпадают под действиеданную Лицензию.  Вы должны предоставить копию настоящей Лицензии.  Если работа
+во время выполнения отображаются уведомления об авторских правах, необходимо включить
+уведомление об авторских правах на Библиотеку среди них, а также ссылку
+направление пользователю к копии настоящей Лицензии.  Кроме того, вы должны сделать один
+из этих вещей:
+
+а) Сопровождать работу полным соответствующим
+машиночитаемый исходный код библиотеки, включая все, что
+в работе были использованы изменения (которые необходимо распространить под
+разделы 1 и 2 выше); и, если работа представляет собой исполняемый файл, связанный
+с Библиотекой, с полной машиночитаемой «работой, которая
+использует «Библиотеку» в качестве объектного кода и/или исходного кода, так что
+пользователь может изменить библиотеку, а затем повторно связать ее для создания измененной версии.
+исполняемый файл, содержащий измененную библиотеку.  (это понятно
+что пользователь, изменяющий содержимое файлов определений в
+Библиотека не обязательно сможет перекомпилировать приложение.
+использовать измененные определения.)
+
+б) Сопровождать работу письменным предложением, действительным в течение
+не менее трех лет, чтобы передать материалы одному и тому же пользователю
+указанный в пункте 6а выше, за плату не более
+чем стоимость выполнения этого распределения.
+
+в) Если распространение произведения осуществляется путем предоставления доступа к копии
+из назначенного места предложите эквивалентный доступ для копирования вышеуказанного
+указанные материалы оттуда же.
+
+г) Убедитесь, что пользователь уже получил копию этих
+материалы или что вы уже отправили копию этому пользователю.
+
+Для исполняемого файла необходимая форма «работы, использующей
+Библиотека» должна включать в себя любые данные и служебные программы, необходимые для
+воспроизведение исполняемого файла из него.  Однако в качестве особого исключения
+распространяемый исходный код не обязательно должен включать в себя что-либо, что обычно
+распространяется (в исходной или двоичной форме) с основным
+компоненты (компилятор, ядро и т. д.) операционной системы на
+который запускается исполняемым файлом, если только этот компонент сам не сопровождает
+исполняемый файл.
+
+Может случиться так, что данное требование противоречит лицензии.
+ограничения других проприетарных библиотек, которые обычно не
+сопровождать операционную систему.  Такое противоречие означает, что вы не можете
+используйте их и библиотеку вместе в исполняемом файле, который вы
+распространять.
+
+7. Вы можете размещать библиотечные объекты, являющиеся произведением по мотивам
+Библиотека бок о бок в одной библиотеке вместе с другой библиотекой
+объектов, не подпадающих под действие настоящей Лицензии, и распространять такие объединенные
+библиотеке, при условии раздельного распространения произведения на основе
+Библиотека и другие библиотечные помещения в противном случае
+разрешено и при условии, что вы выполните следующие две вещи:
+
+а) Сопровождать объединенную библиотеку экземпляром того же произведения
+на основе библиотеки, не объединенной с какой-либо другой библиотекой
+удобства.  Это должно быть распределено в соответствии с условиями
+Разделы выше.
+
+б) Дать заметное уведомление вместе с объединенной библиотекой о факте
+эта часть работы основана на Библиотеке и объясняет
+где найти сопроводительную некомбинированную форму того же произведения.
+
+8. Вы не можете копировать, изменять, сублицензировать, ссылаться или распространять
+Библиотеку, за исключением случаев, прямо предусмотренных настоящей Лицензией.  Любой
+пытаться иным образом скопировать, изменить, сублицензировать, связать с или
+распространение Библиотеки является недействительным и автоматически прекращает действие вашего
+права по настоящей Лицензии.  Однако стороны, получившие копии,
+или права, у вас по настоящей Лицензии не будет своих лицензий
+прекращено до тех пор, пока такие стороны полностью соблюдают его.
+
+9. Вы не обязаны принимать настоящую Лицензию, поскольку вы еще не
+подписал это.  Однако ничто иное не дает вам права изменять или
+распространять Библиотеку или производные от нее произведения.  Эти действия
+запрещено законом, если вы не принимаете настоящую Лицензию.  Таким образом, по
+изменение или распространение Библиотеки (или любой работы, основанной на
+Библиотека), вы выражаете свое согласие с настоящей Лицензией на это, и
+все его условия копирования, распространения или изменения
+Библиотека или произведения на ее основе.
+
+10. Каждый раз, когда вы распространяете Библиотеку (или любое произведение, основанное на
+Библиотека), получатель автоматически получает лицензию от
+первоначальный лицензиар копирует, распространяет, связывает или изменяет Библиотеку
+в соответствии с настоящими условиями.  Вы не имеете права навязывать какие-либо дополнительные
+ограничения на реализацию получателями прав, предоставленных настоящим Соглашением.
+Вы не несете ответственности за обеспечение соблюдения третьими лицамиданную Лицензию.
+
+11. Если вследствие решения суда или заявления о патенте
+нарушение прав или по любой другой причине (не ограничиваясь вопросами патентов),
+Вам навязываются условия (по решению суда, соглашению или
+иное), противоречащие условиям настоящей Лицензии, не
+освобождает вас от условий настоящей Лицензии.  Если вы не можете
+распространять таким образом, чтобы одновременно удовлетворить ваши обязательства по настоящему
+Лицензия и любые другие соответствующие обязательства, то, как следствие, вы
+не имеет права распространять Библиотеку вообще.  Например, если патент
+лицензия не позволит безвозмездно распространять Библиотеку
+все те, кто получает копии прямо или косвенно через вас, то
+единственный способ удовлетворить и это, и настоящую Лицензию — это
+полностью воздерживаться от распространения Библиотеки.
+
+Если какая-либо часть настоящего раздела будет признана недействительной или не имеющей исковой силы по каким-либо
+конкретное обстоятельство, к которому предназначена остальная часть раздела,
+и этот раздел в целом предназначен для применения в других обстоятельствах.
+
+Целью данного раздела не является побуждение вас к нарушению каких-либо прав.
+патенты или другие претензии на права собственности или оспаривать действительность каких-либо
+такие претензии; этот раздел имеет единственную цель – защитить
+целостность системы распространения свободного программного обеспечения, которая
+осуществляется с помощью практики публичного лицензирования.  Многие люди сделали
+щедрый вклад в широкий спектр распространяемого программного обеспечения
+через эту систему, полагаясь на последовательное применение этой системы
+система; автор/донор должен решить, готов ли он или она
+распространять программное обеспечение через любую другую систему, и лицензиат не может
+навязать этот выбор.
+
+Этот раздел предназначен для того, чтобы полностью прояснить, что считается
+быть следствием остальной части настоящей Лицензии.
+
+12. Если распространение и/или использование Библиотеки ограничено в
+определенных странах либо патентами, либо интерфейсами, защищенными авторским правом,
+первоначальный владелец авторских прав, размещающий Библиотеку под настоящей Лицензией, может добавить
+явное ограничение географического распространения, исключающее эти страны,
+так что распространение разрешено только в странах или между странами, не являющимися такими
+исключено.  В таком случае настоящая Лицензия включает ограничение, как если бы
+написано в тексте настоящей Лицензии.
+
+13. Фонд свободного программного обеспечения может публиковать исправленные и/или новые
+версии Стандартной общественной лицензии библиотеки время от времени.
+Такие новые версии будут по духу аналогичны нынешней версии.
+но могут отличаться в деталях для решения новых проблем или проблем.
+
+Каждой версии присвоен отличительный номер версии.  Если библиотека
+указывает номер версии настоящей Лицензии, которая к ней применяется, и
+«любая более поздняя версия», вы можете следовать условиям и
+условия либо этой версии, либо любой более поздней версии, опубликованной
+Фонд свободного программного обеспечения.  Если в библиотеке не указан
+номер версии лицензии, вы можете выбрать любую версию, когда-либо опубликованную
+Фонд свободного программного обеспечения.
+
+14. Если вы хотите включить части библиотеки в другие бесплатные
+программы, условия распространения которых несовместимы с указанными,
+напишите автору и спросите разрешения.  Для программного обеспечения, которое
+авторские права принадлежат Фонду свободного программного обеспечения, напишите в Free Software Foundation.
+Фонд программного обеспечения; иногда мы делаем для этого исключения.  Наш
+решение будет руководствоваться двумя целями: сохранением свободного статуса
+всех производных нашего бесплатного программного обеспечения и содействия распространению
+и повторное использование программного обеспечения в целом.
+
+БЕЗ ГАРАНТИИ
+
+15. ПОСКОЛЬКУ БИБЛИОТЕКА ЛИЦЕНЗИРОВАНА БЕСПЛАТНО, НЕТ
+ГАРАНТИЯ НА БИБЛИОТЕКУ В ПРЕДЕЛАХ, РАЗРЕШЕННЫХ ДЕЙСТВУЮЩИМ ЗАКОНОДАТЕЛЬСТВОМ.
+ЕСЛИ ИНОЕ НЕ УКАЗАНО В ПИСЬМЕ ОБЛАДАТЕЛЕЙ АВТОРСКИХ ПРАВ И/ИЛИ
+ДРУГИЕ СТОРОНЫ ПРЕДОСТАВЛЯЮТ БИБЛИОТЕКУ «КАК ЕСТЬ» БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ.
+ВИД, ВЫРАЖЕННЫЙ ИЛИ ПОДРАЗУМЕВАЕМЫЙ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ,
+ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОГО ИЗДЕЛИЯ
+ЦЕЛЬ.  ВЕСЬ РИСК, КАСАЮЩИЙСЯ КАЧЕСТВА И ПРОИЗВОДИТЕЛЬНОСТИ
+БИБЛИОТЕКА С ВАМИ.  ЕСЛИ БИБЛИОТЕКА ОКАЖЕТСЯ ДЕФЕКТНОЙ, ВЫ ДУМАЕТЕ
+СТОИМОСТЬ ВСЕХ НЕОБХОДИМЫХ ОБСЛУЖИВАНИЙ, РЕМОНТ ИЛИ КОРРЕКЦИЯ.
+
+16. НИ ПРИ КАКИХ СЛУЧАЯХ, ЕСЛИ ТРЕБУЕТСЯ ДЕЙСТВУЮЩИМ ЗАКОНОДАТЕЛЬСТВОМ ИЛИ СОГЛАСОВАННО В
+НАПИСАТЬ БУДЕТ ЛЮБОЙ ОБЛАДАТЕЛЬ АВТОРСКИХ ПРАВ ИЛИ ЛЮБАЯ ДРУГАЯ СТОРОНА, МОЖЕТ ИЗМЕНЯТЬ
+И/ИЛИ РАСПРОСТРАНЯТЬ БИБЛИОТЕКУ, КАК РАЗРЕШЕНО ВЫШЕ, НЕСЕТЕ ПЕРЕД ВАМИ ОТВЕТСТВЕННОСТЬ
+ЗА УБЫТКИ, ВКЛЮЧАЯ ОБЩИЕ, СПЕЦИАЛЬНЫЕ, СЛУЧАЙНЫЕ ИЛИ
+КОСВЕННЫЕ УБЫТКИ, ВОЗНИКШИЕ ИЗ ИСПОЛЬЗОВАНИЯ ИЛИ НЕВОЗМОЖНОСТИ ИСПОЛЬЗОВАНИЯБИБЛИОТЕКА (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОТЕРЮ ДАННЫХ ИЛИ ДАННЫЕ,
+ОКАЗАНО НЕТОЧНЫМ ИЛИ ПОТЕРИ, ПОНЕСЕННЫЕ ВАМИ ИЛИ ТРЕТЬИМ ЛИЦАМ ИЛИ
+ОТСУТСТВИЕ РАБОТЫ БИБЛИОТЕКИ С ЛЮБЫМ ДРУГИМ ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ), ДАЖЕ ЕСЛИ
+ТАКОЙ ДЕРЖАТЕЛЬ ИЛИ ДРУГАЯ СТОРОНА БЫЛА ИЗВЕСТНА О ВОЗМОЖНОСТИ ТАКОГО
+УЩЕРБ.
+
+КОНЕЦ УСЛОВИЙ И ПОЛОЖЕНИЙ
+
+* О OpenCL-ICD-Loader (используется только в версии Windows этого продукта.)
+
+Авторские права (c) 2016 г. The Khronos Group Inc.
+
+Разрешение настоящим предоставляется бесплатно любому лицу, получившему копию.
+данного исходного программного обеспечения и связанных с ним файлов документации («Материалы»),
+иметь дело с Материалами без ограничений, в том числе без ограничений
+права на использование, копирование, изменение, компиляцию, объединение, публикацию, распространение,
+сублицензировать и/или продавать копии Материалов, а также разрешать лицам
+кому Материалы предоставлены для этого, при условии соблюдения следующих условий и
+условия:
+
+Все изменения Материалов, использованных для создания двоичного файла,
+распространяемый третьим лицам, будет предоставлен Хроносу вместе с
+неограниченная лицензия на использование в целях исправления ошибок и
+улучшения Материалов;
+
+Если двоичный файл используется как часть реализации OpenCL™, независимо от того, используется ли двоичный файл
+распространяется вместе с этой реализацией или отдельно от нее, тогда
+получатель должен стать пользователем OpenCL и следовать опубликованным инструкциям OpenCL.
+процесс соответствия для этой реализации, подробности по адресу:
+http://www.khronos.org/conformance/;
+
+Приведенное выше уведомление об авторских правах, лицензия на товарный знак OpenCL и данное разрешение
+уведомление должно быть включено во все копии или существенные части
+Материалы.
+
+МАТЕРИАЛЫ ПРЕДОСТАВЛЯЮТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ
+ПОДРАЗУМЕВАЕМЫЕ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ,
+ПРИГОДНОСТЬ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И НЕНАРУШЕНИЕ ПРАВ. НИ В КОЕМ СЛУЧАЕ НЕ ДОЛЖНО
+АВТОРЫ ИЛИ ОБЛАДАТЕЛИ АВТОРСКИХ ПРАВ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ДРУГИЕ
+ОТВЕТСТВЕННОСТЬ ПО ДОГОВОРУ, ПРАВИЛАМ ИЛИ ДРУГИМ ОБРАЗУ, ВЫТЕКАЮЩАЯ ИЗ:
+ВНЕ ИЛИ В СВЯЗИ С МАТЕРИАЛАМИ ИЛИ ИСПОЛЬЗОВАНИЕМ ИЛИ ДРУГИМИ ДЕЛАМИ В
+МАТЕРИАЛЫ.
+
+OpenCL — торговая марка Apple Inc., используемая Khronos по лицензии.
+
+* О Intel MKL (используется только в версии Windows этого продукта.)
+
+Авторские права (c) принадлежат корпорации Intel, 2018 г.
+
+Использование и перераспределение.  Вы можете использовать и распространять программное обеспечение («Программное обеспечение») без изменений при условии соблюдения следующих условий:
+
+* При повторном распространении должно воспроизводиться вышеуказанное уведомление об авторских правах и следующие условия использования в Программном обеспечении, а также в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+
+* Ни название Intel, ни имена ее поставщиков не могут использоваться для рекламы или продвижения продуктов, созданных на основе данного Программного обеспечения, без специального предварительного письменного разрешения.
+
+* Никакое обратное проектирование, декомпиляция или дизассемблирование данного Программного обеспечения не разрешены.
+
+Ограниченная патентная лицензия.  Корпорация Intel предоставляет вам глобальную, безвозмездную, неисключительную лицензию на основании патентов, которыми она владеет или будет управлять в настоящее время или в будущем, на создание, изготовление, использование, импорт, предложение о продаже и («Использование») данного Программного обеспечения, но исключительно в той степени, в которой любой такой патент необходим для Использования только Программного обеспечения. Патентная лицензия не распространяется на любые комбинации, включающие это программное обеспечение.  Никакое оборудование как таковое не лицензируется по настоящему Соглашению.
+
+Сторонние и другие программы Intel.  «Сторонние программы» — это файлы, перечисленные в текстовом файле « Third-party-programs.txt», который включен в состав Программного обеспечения и может включать программы Intel по отдельным условиям лицензии. Сторонние программы, даже если они включены в состав Материалов, регулируются отдельными условиями лицензии, и эти условия лицензии регулируют исключительно использование вами этих программ. 
+
+ОТКАЗ ОТ ОТВЕТСТВЕННОСТИ.  ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ ТОВАРНОЙ ЦЕННОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ НЕ ПРЕДНАЗНАЧЕНО ДЛЯ ИСПОЛЬЗОВАНИЯ В СИСТЕМАХ ИЛИ ПРИЛОЖЕНИЯХ, ГДЕ ОТКАЗ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ МОЖЕТ ПРИВЕСТИ К ТРАВМЕ ИЛИ СМЕРТИ, И ВЫ СОГЛАШАЕТЕСЬ, ЧТО НЕСЕТЕ ПОЛНУЮ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, ЗАТРАТЫ, УБЫТКИ, РАСХОДЫ И ГОНОРАРЫ АДВОКАТОВ, ВОЗНИКАЮЩИЕ В СВЯЗИ С ЛЮБЫМИ ТАКОЕ ИСПОЛЬЗОВАНИЕ, ДАЖЕ ЕСЛИ В КАКИХ-ЛИБО ПРЕТЕНЗИЯХ УТВЕРЖДАЕТСЯ, ЧТО INTEL БЫЛА НЕБРЕЖНЫМ ОТНОСИТЕЛЬНО РАЗРАБОТКИ ИЛИ ПРОИЗВОДСТВА МАТЕРИАЛОВ.ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ. INTEL НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ НЕСЕТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, ОСОБЫЕ, ТИПОВЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ЗАКУПКУ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ ИЛИ ПРИБЫЛИ; ИЛИ БИЗНЕСА). ПРЕРЫВАНИЕ), ОДНАКО ВЫЗВАННОЕ И НА ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОР, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГИЕ ОБРАЗЫ), ВОЗНИКАЮЩИЕ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНО О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА. ВЫ СОГЛАШАЕТЕСЬ ОГРАНИТЬ INTEL ОТ ВРЕДА ОТ ЛЮБЫХ ПРЕТЕНЗИЙ И РАСХОДОВ, ЯВЛЯЮЩИХСЯ РЕЗУЛЬТАТОМ ВАШЕГО ИСПОЛЬЗОВАНИЯ ИЛИ НЕСАНКЦИОНИРОВАННОГО ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ.
+
+Никакой поддержки.  Intel может вносить изменения в Программное обеспечение в любое время без предварительного уведомления и не обязана поддерживать, обновлять или проводить обучение работе с Программным обеспечением.
+
+Прекращение действия. Intel может прекратить ваше право на использование Программного обеспечения в случае нарушения вами настоящего Соглашения, и вы не сможете устранить нарушение в течение разумного периода времени.
+
+Обратная связь.  Если вы предоставите Intel комментарии, изменения, исправления, улучшения или другие материалы («Отзывы»), связанные с Программным обеспечением, Intel будет иметь право свободно использовать, раскрывать, воспроизводить, лицензировать или иным образом распространять или эксплуатировать Отзыв по своему усмотрению без каких-либо обязательств или ограничений любого рода, включая, помимо прочего, права интеллектуальной собственности или лицензионные обязательства.
+
+Соблюдение законов.  Вы соглашаетесь соблюдать все соответствующие законы и правила, регулирующие использование, передачу, импорт или экспорт (или запрет на это) Программного обеспечения.
+
+Регулирующее право.  Все споры будут регулироваться законами Соединенных Штатов Америки и штата Делавэр без ссылки на принципы коллизионного права и подлежат исключительной юрисдикции судов штата или федеральных судов, заседающих в штате Делавэр, и каждая сторона соглашается с тем, что она подчиняется личной юрисдикции и месту проведения этих судов, и отказывается от любых возражений. Конвенция Организации Объединенных Наций о договорах международной купли-продажи товаров (1980 г.) специально исключена и не применяется к Программному обеспечению.
+
+*Другие названия и бренды могут быть заявлены как собственность других лиц.
+
+* Об отделении интенсивной терапии
+© Unicode, Inc., 1991–2019. Все права защищены.
+Распространяется в соответствии с Условиями использования по адресу https://www.unicode.org/copyright.html.
+
+Разрешение настоящим предоставляется бесплатно любому лицу, получившему
+копия файлов данных Unicode и любой связанной документации.
+(«Файлы данных») или программное обеспечение Unicode и любая связанная с ним документация.
+(«Программное обеспечение») для работы с Файлами данных или Программным обеспечением.
+без ограничений, включая, помимо прочего, права на использование,
+копировать, изменять, объединять, публиковать, распространять и/или продавать копии
+Файлы данных или Программное обеспечение, а также разрешить лицам, которым Файлы данных
+или Программное обеспечение предоставляются для этого при условии, что либо
+(a) настоящее уведомление об авторских правах и разрешениях присутствует во всех копиях
+файлов данных или программного обеспечения, или
+(б) настоящее уведомление об авторских правах и разрешениях появляется в связанных
+Документация.
+
+ФАЙЛЫ ДАННЫХ И ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЮТСЯ «КАК ЕСТЬ», БЕЗ ГАРАНТИЙ
+ЛЮБОГО ВИДА, ЯВНОГО ИЛИ ПОДРАЗУМЕВАЕМОГО, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ,
+ГАРАНТИИ ТОВАРНОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И
+НЕНАРУШЕНИЕ ПРАВ ТРЕТЬИХ ЛИЦ.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ОБЛАДАТЕЛЬ ИЛИ ОБЛАДАТЕЛИ АВТОРСКИХ ПРАВ, ВКЛЮЧЕННЫЕ В НАСТОЯЩЕЕ ПРАВО, НЕ ДОЛЖНЫ
+УВЕДОМЛЕНИЕ НЕСЕТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ ИЛИ ЛЮБЫЕ ОСОБЫЕ КОСВЕННЫЕ ИЛИ ПОСЛЕДНИЕ ПРЕТЕНЗИИ
+УБЫТКИ ИЛИ ЛЮБЫЕ УБЫТКИ, ЯВЛЕННЫЕ В РЕЗУЛЬТАТЕ ПОТЕРИ ИСПОЛЬЗОВАНИЯ,
+ДАННЫЕ ИЛИ ПРИБЫЛЬ В ДЕЙСТВИЯХ ПО КОНТРАКТУ, НЕБРЕЖНОСТИ ИЛИ ДРУГОМ
+ВРЕДИТЕЛЬНЫЕ ДЕЙСТВИЯ, ВОЗНИКАЮЩИЕ В РЕЗУЛЬТАТЕ ИЛИ В СВЯЗИ С ИСПОЛЬЗОВАНИЕМ ИЛИ
+ПРОИЗВОДИТЕЛЬНОСТЬ ФАЙЛОВ ДАННЫХ ИЛИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ.
+
+За исключением случаев, указанных в настоящем уведомлении, имя правообладателя
+не должен использоваться в рекламе или иным образом для содействия продаже,
+использование или другие операции с этими Файлами данных или Программным обеспечением без предварительного
+письменное разрешение правообладателя.
+
+* О OpenEXR
+Авторские права участников проекта OpenEXR. Все права защищены.
+
+Распространение и использование в исходной и бинарной форме, с модификациями или без них, разрешено при соблюдении следующих условий:
+
+1. При повторном распространении исходного кода должно сохраняться вышеуказанное уведомление об авторских правах, этот список условий и следующий отказ от ответственности.2. При повторном распространении в двоичной форме должно воспроизводиться вышеуказанное уведомление об авторских правах, настоящий список условий и следующий отказ от ответственности в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+
+3. Ни имя владельца авторских прав, ни имена его участников не могут использоваться для поддержки или продвижения продуктов, созданных на основе этого программного обеспечения, без специального предварительного письменного разрешения.
+
+ЭТО ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ «КАК ЕСТЬ», И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ, ОТКАЗЫВАЮТСЯ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ОБЛАДАТЕЛЬ АВТОРСКИХ ПРАВ ИЛИ УЧАСТНИКИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, СПЕЦИАЛЬНЫЕ, ПРИМЕРНЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ПРИОБРЕТЕНИЕ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ, ИЛИ ПРИБЫЛЬ ИЛИ ПЕРЕРЫВ БИЗНЕСА), КАКОЙ-ЛИБО ВЫЗВАННОЙ И НА ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОР, СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВИЛЬНОЕ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЙ ОБРАЗ), ВОЗНИКАЮЩИЙ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ УВЕДОМЛЕНО ОБ ЭТОМ ПРОГРАММНОМ ОБЕСПЕЧЕНИИ. ВОЗМОЖНОСТЬ ТАКОГО ПОВРЕЖДЕНИЯ.
+
+* В версии этого продукта для iOS мы использовали низкоуровневый SDK Wacom.
+© Wacom Co., Ltd., 2013. Все права защищены.
+
+* О OpenBLAS (Используется только в версии Android этого продукта.)
+Авторские права (c) 2011–2014, Проект OpenBLAS.
+Все права защищены.
+
+Распространение и использование в исходной и бинарной форме, с модификациями или без них, разрешено при соблюдении следующих условий:
+1. При повторном распространении исходного кода должно сохраняться вышеуказанное уведомление об авторских правах, этот список условий и следующий отказ от ответственности.
+2. При повторном распространении в двоичной форме должно воспроизводиться вышеуказанное уведомление об авторских правах, настоящий список условий и следующий отказ от ответственности в документации и/или других материалах, поставляемых вместе с дистрибутивом.
+3. Ни название проекта OpenBLAS, ни имена его участников не могут использоваться для поддержки или продвижения продуктов, созданных на основе этого программного обеспечения, без специального предварительного письменного разрешения.
+ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЕНО ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ «КАК ЕСТЬ»
+И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, ПОМИМО ПРОЧЕГО, ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ.
+ОТКАЗЫВАЮТСЯ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ ВЛАДЕЛЕЦ АВТОРСКИХ ПРАВ ИЛИ УЧАСТНИКИ НЕ ДОЛЖНЫ БЫТЬ
+НЕСЕТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ, ОСОБЫЕ, ТИПОВЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ЗАКУПКУ ЗАМЕНЯЮЩИХ ТОВАРОВ ИЛИ УСЛУГ; ПОТЕРЮ ИСПОЛЬЗОВАНИЯ, ДАННЫХ ИЛИ ПРИБЫЛИ; ИЛИ ПЕРЕРЫВ ДЕЛОВОЙ ДЕЯТЕЛЬНОСТИ), КАКИЕ БЫ ВЫЗЫВАЛИ И ПО ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОРА, СТРОГО ОТВЕТСТВЕННОСТИ,
+ИЛИ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЕ), ВОЗНИКАЮЩЕЕ ЛЮБЫМ СПОСОБОМ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНО О ВОЗМОЖНОСТИ ТАКОГО УЩЕРБА.
+
+* О Vulkan (Используется только в версиях Windows и Android этого продукта.)
+Copyright (c) 2015-2020 The Khronos Group Inc.
+
+Лицензия Apache версии 2.0 («Лицензия»);
+вы не можете использовать этот файл, кроме как в соответствии с Лицензией.
+Вы можете получить копию Лицензии по адресу
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Если это не требуется действующим законодательством или не согласовано в письменной форме, программное обеспечение
+распространяется по Лицензии, распространяется на условиях «КАК ЕСТЬ»,
+БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ ИЛИ УСЛОВИЙ, явных или подразумеваемых.
+См. Лицензию для конкретного языка, регулирующего разрешения и
+ограничения по Лицензии.
+
+* О Glslang (используется только в версиях Windows и Android этого продукта.)
+//
+// Авторские права (C) 2015–2018 Google, Inc.
+// Авторское право (C) <различные другие даты и компании>
+//
+// Все права защищены.
+//
+// Распространение и использование в исходном и двоичном виде, с или без
+// модификация разрешена при соблюдении следующих условий
+// встречаются:
+//
+// При повторном распространении исходного кода необходимо сохранять вышеуказанные авторские права.
+// обратите внимание на этот список условий и следующий отказ от ответственности.
+//
+// Распространения в двоичной форме должны воспроизводить вышеизложенное
+// уведомление об авторских правах, этот список условий и следующее
+// отказ от ответственности в документации и/или других предоставленных материалах
+// с распределением.
+//
+// Ни название компании 3Dlabs Inc. Ltd., ни имена ее
+// участников можно использовать для поддержки или продвижения продуктов, созданных// из этого программного обеспечения без предварительного письменного разрешения.
+//
+// ЭТО ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЕНО ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ.
+// «КАК ЕСТЬ» И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ
+// ОГРАНИЧИВАЕТСЯ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ
+// ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ ОТКАЗЫВАЮТСЯ. НИ В КОЕМ СЛУЧАЕ НЕ ДОЛЖНО
+// ОБЛАДАТЕЛИ АВТОРСКИХ ПРАВ ИЛИ УЧАСТНИКИ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ,
+// СЛУЧАЙНЫЕ, ОСОБЫЕ, ПРИМЕРНЫЕ ИЛИ КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ,
+// ЗАКУПКА ТОВАРОВ-ЗАМЕНИТЕЛЕЙ ИЛИ УСЛУГ, НО НЕ ОГРАНИЧИВАЯСЬ этим;
+// ПОТЕРЯ ИСПОЛЬЗОВАНИЯ, ДАННЫХ ИЛИ ПРИБЫЛИ; ИЛИ ПЕРЕРЫВ БИЗНЕСА) ОДНАКО
+// ПРИЧИНЕННАЯ И ПО ЛЮБОЙ ТЕОРИИ ОТВЕТСТВЕННОСТИ, БЫ В ДОГОВОРЕ, СТРОГО
+// ОТВЕТСТВЕННОСТЬ ИЛИ ПРАВОНАРУШЕНИЕ (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЕ), ВОЗНИКАЮЩИЕ В
+// ЛЮБОЙ ПУТЬ ОТ ИСПОЛЬЗОВАНИЯ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ УВЕДОМЛЕН
+// ВОЗМОЖНОСТЬ ТАКОГО ПОВРЕЖДЕНИЯ.
+//
+Авторские права (c) 2002, корпорация NVIDIA.
+
+Корпорация NVIDIA («NVIDIA») поставляет вам это программное обеспечение в
+рассмотрение вашего согласия со следующими условиями и использования вами,
+установка, изменение или распространение этого программного обеспечения NVIDIA
+означает принятие этих условий.  Если вы не согласны с этими
+условиях, пожалуйста, не используйте, не устанавливайте, не изменяйте и не распространяйте эту NVIDIA
+программное обеспечение.
+
+Принимая во внимание ваше согласие соблюдать следующие условия, и
+В соответствии с этими условиями NVIDIA предоставляет вам персональную неисключительную
+лицензии, в соответствии с авторскими правами NVIDIA на это оригинальное программное обеспечение NVIDIA (
+«Программное обеспечение NVIDIA»), чтобы использовать, воспроизводить, изменять и распространять
+Программное обеспечение NVIDIA, с модификациями или без них, в исходном и/или двоичном виде.
+формы; при условии, что если вы распространяете Программное обеспечение NVIDIA, вы обязаны
+сохраните уведомление об авторских правах NVIDIA, данное уведомление и последующие
+текст и заявления об отказе от ответственности во всех таких распространениях Программного обеспечения NVIDIA.
+Ни название, ни товарные знаки, знаки обслуживания, ни логотипы NVIDIA
+Корпорация может использоваться для одобрения или продвижения продуктов, полученных на основе
+Программное обеспечение NVIDIA без специального предварительного письменного разрешения NVIDIA.
+За исключением случаев, прямо указанных в настоящем уведомлении, никакие другие права или лицензии не предоставляются.
+явные или подразумеваемые, предоставляются NVIDIA в настоящем документе, включая, но не
+ограничено любыми патентными правами, которые могут быть нарушены вашим производным продуктом
+произведениями или другими произведениями, в которых может быть использовано Программное обеспечение NVIDIA.
+включено. Никакое оборудование не лицензируется по настоящему Соглашению.
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ NVIDIA ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ
+ГАРАНТИИ ИЛИ УСЛОВИЯ ЛЮБОГО РОДА, ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ,
+ВКЛЮЧАЯ, БЕЗ ОГРАНИЧЕНИЙ, ГАРАНТИИ ИЛИ УСЛОВИЯ ПРАВА,
+НЕНАРУШЕНИЕ ПРАВ, ТОВАРНАЯ ПРИГОДНОСТЬ, ПРИГОДНОСТЬ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ ИЛИ
+ЕГО ИСПОЛЬЗОВАНИЕ И ЭКСПЛУАТАЦИЯ ОТДЕЛЬНО ИЛИ В КОМБИНАЦИИ С ДРУГИМИ
+ПРОДУКЦИЯ.
+
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ NVIDIA НЕ НЕСЕТ ОТВЕТСТВЕННОСТИ ЗА ЛЮБЫЕ СПЕЦИАЛЬНЫЕ, КОСВЕННЫЕ,
+СЛУЧАЙНЫЕ, ПРИМЕРНЫЕ, КОСВЕННЫЕ УБЫТКИ (ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ
+ТО, УПУЩЕННАЯ ПРИБЫЛЬ; ЗАКУПКА ТОВАРОВ-ЗАМЕНИТЕЛЕЙ ИЛИ УСЛУГ; ПОТЕРЯ
+ИСПОЛЬЗОВАНИЕ, ДАННЫЕ ИЛИ ПРИБЫЛЬ; ИЛИ ПРЕРЫВАНИЕ ДЕЯТЕЛЬНОСТИ) ИЛИ ВОЗНИКАЮЩЕЕ ЛЮБЫМ СПОСОБОМ
+ПРЕКРАЩЕНИЕ ИСПОЛЬЗОВАНИЯ, ВОСПРОИЗВЕДЕНИЯ, МОДИФИКАЦИИ И/ИЛИ РАСПРОСТРАНЕНИЯ
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ NVIDIA, КАКОЕ-ЛИБО ВЫЗВАНО И ПОД ТЕОРИЕЙ КОНТРАКТА,
+Правонарушения (ВКЛЮЧАЯ ХАЛАТНОСТЬ), СТРОГО ОТВЕТСТВЕННОСТЬ ИЛИ ДРУГОЕ, ДАЖЕ ЕСЛИ
+NVIDIA БЫЛА ПРЕДУПРЕЖДЕНА О ВОЗМОЖНОСТИ ТАКОГО ПОВРЕЖДЕНИЯ.
+
+* О функции isAppEncrypted (используется только в версии этого продукта для iOS.)
+Авторские права (c) Лэндон Дж. Фуллер, 2017 г. <landon@landonf.org>
+Все права защищены.
+
+Разрешение настоящим предоставляется бесплатно любому лицу, получившему копию
+данное программное обеспечение и связанные с ним файлы документации («Программное обеспечение») для решения
+Программное обеспечение без ограничений, включая, помимо прочего, права на
+использовать, копировать, изменять, объединять, публиковать, распространять, сублицензировать и/или продавать копии
+Программное обеспечение и разрешать лицам, которым предоставлено Программное обеспечение, делать это,
+при соблюдении следующих условий:
+
+Вышеупомянутое уведомление об авторских правах и настоящее уведомление о разрешении должны быть включены во все
+копии или существенные части Программного обеспечения.
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ
+ПОДРАЗУМЕВАЕМЫЕ, ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ, ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ И ПРИГОДНОСТИ
+ДЛЯ КОНКРЕТНОЙ ЦЕЛИ И НЕ НАРУШЕНИЯ ПРАВ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ
+ОБЛАДАТЕЛИ АВТОРСКИХ ПРАВ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЕТЕНЗИИ, УБЫТКИ ИЛИ ДРУГУЮ ОТВЕТСТВЕННОСТЬ, БЫЛО
+В ДЕЙСТВИИ КОНТРАКТА, ДИРЕКТА ИЛИ ДРУГИХ ОБРАЗНЫХ УСЛОВИЯХ, ВЫТЕКАЮЩИХ ИЗ, ИЗ ИЛИ ВПОДКЛЮЧЕНИЕ К ПРОГРАММНОМУ ОБЕСПЕЧЕНИЮ ИЛИ ИСПОЛЬЗОВАНИЕ ИЛИ ДРУГИЕ ДЕЛА С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.
+
+Комментарий от
+<a href=""http://iphonedevwiki.net/index.php/Crack_prevention"">iPhone Вики для разработчиков
+Предотвращение взлома</a>: двоичные файлы App Store подписываются разработчиками
+и Apple. Это шифрует двоичный файл, поэтому для его выполнения необходимы ключи дешифрования.
+чтобы сделать двоичный файл читабельным. Когда iOS выполняет двоичный файл, ключи дешифрования
+используются для расшифровки двоичного файла в читаемое состояние, где он затем загружается
+в память и выполняется. iOS может узнать статус шифрования двоичного файла через
+член структуры cryptid команды загрузки LC_ENCRYPTION_INFO MachO. Если криптид
+ненулевое значение, то двоичный файл шифруется.
+
+«Взлом» предполагает, что ядро расшифровывает двоичный файл, а затем перекачивает его.
+расшифровывает данные в новый двоичный файл, отправляет в отставку и переупаковывает. Это будет
+работать только на взломанных устройствах, поскольку проверка подписи кода была удалена.
+Отставка происходит потому, что кодовая подпись не обязательно должна быть действительной.
+благодаря джейлбрейку он должен быть установлен, если у вас нет AppSync или
+аналогично отключению проверки подписи кода.
+
+Дополнительную информацию можно найти на сайте <a href=""http://landonf.org/2009/02/index.html"">Лэндоне.
+Блог Фуллера</a>
+
+* О обещаниях (используется только в версии этого продукта для iOS.)
+Авторские права принадлежат Google Inc., 2018 г. Все права защищены.
+
+Лицензия Apache версии 2.0 («Лицензия»);
+вы не можете использовать этот файл, кроме как в соответствии с Лицензией.
+Вы можете получить копию Лицензии по адресу
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Если это не требуется действующим законодательством или не согласовано в письменной форме, программное обеспечение
+распространяется по Лицензии, распространяется на условиях «КАК ЕСТЬ»,
+БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ ИЛИ УСЛОВИЙ, явных или подразумеваемых.
+См. Лицензию для конкретного языка, регулирующего разрешения и
+ограничения по Лицензии.
+
+* О PDFium
+// Авторские права PDFium, 2014 г. Авторы. Все права защищены.
+//
+// Распространение и использование в исходном и двоичном виде, с или без
+// модификация разрешена при соблюдении следующих условий
+// встретил:
+//
+// * При повторном распространении исходного кода необходимо сохранять вышеуказанные авторские права.
+// обратите внимание на этот список условий и следующий отказ от ответственности.
+// * Распространения в двоичной форме должны воспроизводить вышеизложенное
+// уведомление об авторских правах, этот список условий и следующий отказ от ответственности
+// в документации и/или других материалах, прилагаемых к
+// распространение.
+// * Ни название Google Inc., ни имена ее
+// участников можно использовать для поддержки или продвижения продуктов, созданных на основе
+// это программное обеспечение без специального предварительного письменного разрешения.
+//
+// ЭТО ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЕНО ОБЛАДАТЕЛЯМИ АВТОРСКИХ ПРАВ И УЧАСТНИКАМИ.
+// «КАК ЕСТЬ» И ЛЮБЫЕ ЯВНЫЕ ИЛИ ПОДРАЗУМЕВАЕМЫЕ ГАРАНТИИ, ВКЛЮЧАЯ, НО НЕ
+// ОГРАНИЧИВАЯСЬ ПОДРАЗУМЕВАЕМЫМИ ГАРАНТИЯМИ ТОВАРНОЙ ГОДНОСТИ И ПРИГОДНОСТИ ДЛЯ
+// КОНКРЕТНАЯ ЦЕЛЬ ОТКАЗЫВАЕТСЯ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРСКИЕ ПРАВА
+// ВЛАДЕЛЕЦ ИЛИ УЧАСТНИКИ НЕСУТ ОТВЕТСТВЕННОСТЬ ЗА ЛЮБЫЕ ПРЯМЫЕ, КОСВЕННЫЕ, СЛУЧАЙНЫЕ,
+// ОСОБЫЙ, ПРИМЕРНЫЙ ИЛИ КОСВЕННЫЙ УЩЕРБ (ВКЛЮЧАЯ, НО НЕ
+// ОГРАНИЧИВАЕТСЯ ЗАКУПКАМИ ТОВАРОВ-ЗАМЕНИТЕЛЕЙ ИЛИ УСЛУГ; ПОТЕРЯ ИСПОЛЬЗОВАНИЯ,
+// ДАННЫЕ ИЛИ ПРИБЫЛЬ; ИЛИ ПРЕРЫВАНИЕ ДЕЛОВОЙ ДЕЯТЕЛЬНОСТИ), КАКИЕ бы причины ни были вызваны, И НА ЛЮБОМ
+// ТЕОРИЯ ОТВЕТСТВЕННОСТИ, КАК ДОГОВОРА, СТРОГО ОТВЕТСТВЕННОСТИ ИЛИ ДЕЛИКА
+// (ВКЛЮЧАЯ НЕБРЕЖНОСТЬ ИЛИ ДРУГОЕ), ВОЗНИКАЮЩИЕ ЛЮБЫМ СПОСОБОМ ИЗ ИСПОЛЬЗОВАНИЯ
+// ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ДАЖЕ ЕСЛИ ПРЕДУПРЕЖДЕНО О ВОЗМОЖНОСТИ ТАКОГО ПОВРЕЖДЕНИЯ.
+
+* Обработка изображений рук в «Этом продукте» осуществляется с помощью решений «MediaPipe».
+Часть исходного кода MediaPipe в разделе «Этот продукт» была изменена. 
+
+Лицензия Апач
+Версия 2.0, январь 2004 г.
+http://www.apache.org/licenses/
+
+Вы можете получить копию Лицензии по адресу
+https://www.apache.org/licenses/LICENSE-2.0"
+Wacom stylus,Wacom стилус
+Enable Wacom stylus settings,Включить настройки стилуса Wacom
+Wacom stylus Settings,Wacom Настройки стилуса
+Get License,Получить лицензию
+Clear Memory,Очистить память
+Save in Kindle format,Сохранить в формате Kindle.
+Preview of exported Kindle data,Предварительный просмотр экспортированных данных Kindle
+Open export destination of Kindle format,Открыть место назначения экспорта формата Kindle.
+"Failed to load some 3D files. This may be due to the following:
+
+・The file was in an unsupported format.
+・A mix of Ver 1.5 compatible layer files and non-compatible files.","Не удалось загрузить некоторые 3D-файлы. Это может быть связано со следующим:
+
+・Файл имел неподдерживаемый формат.
+・Сочетание файлов слоев, совместимых с версией 1.5, и несовместимых файлов."
+Running on unsupported OS. OS is not Windows 7 or later.,Работает на неподдерживаемой ОС. ОС не Windows 7 или новее.
+Running on unsupported OS. OS version is not 10.10 or later.,Работает на неподдерживаемой ОС. Версия ОС не 10.10 или новее.
+Running on unsupported OS. OS version is not 10.3.3 or later.,Работает на неподдерживаемой ОС. Версия ОС не 10.3.3 или новее.
+Running on unsupported OS.,Работает на неподдерживаемой ОС.
+The system requirements for this software will change soon.,Системные требования для этого программного обеспечения скоро изменятся.
+Operation cannot be guaranteed on your current operating system. Please check the support information.,"Работа не может быть гарантирована в вашей текущей операционной системе. Пожалуйста, проверьте информацию о поддержке."
+"From Ver. 1.10.10, the default brush tools have been updated.
+
+・11 new default sub tools have been added.
+・ We have updated the optional sub tools that can be added.
+
+See below for more information.","Из Вер. В версии 1.10.10 обновлены инструменты кисти по умолчанию.
+
+・Добавлено 11 новых дополнительных инструментов по умолчанию.
+・ Мы обновили дополнительные дополнительные инструменты, которые можно добавить.
+
+Дополнительную информацию см. ниже."
+"Try brushes with realistic color mixing.
+・You can use this color mode by changing the Color mixing mode to Perceptual in the Sub Tool Detail palette > Ink category.
+・We’ve also created new default brushes with the Perceptual color mixing mode that you can download. Tap the below link to learn more.","Попробуйте кисти с реалистичным смешиванием цветов.
+・Вы можете использовать этот цветовой режим, изменив режим смешивания цветов на «Перцептивный» в палитре «Детали вспомогательного инструмента» > «Чернила».
+・Мы также создали новые кисти по умолчанию с режимом смешивания цветов Perceptual, которые вы можете скачать. Нажмите на ссылку ниже, чтобы узнать больше."
+"Try brushes with realistic color mixing.
+We’ve created new default brushes with the Perceptual color mixing mode that you can download. Tap the below link to learn more.","Попробуйте кисти с реалистичным смешиванием цветов.
+Мы создали новые кисти по умолчанию с режимом смешивания цветов Perceptual, который вы можете скачать. Нажмите на ссылку ниже, чтобы узнать больше."
+"The canvas has a timeline enabled, so you cannot combine the pages into a two-page spread.","На холсте включена временная шкала, поэтому вы не можете объединить страницы в двухстраничный разворот."
+There is no page to combine as a two-page spread for the inner cover and inner back cover.,"Нет страницы, которую можно было бы объединить в двухстраничный разворот для внутренней и задней обложки."
+"Tabmate settings are different for Studio Mode and Simple Mode. You can open the settings from the menu button at the top right of the canvas, then go to Preferences and Help > Clip Studio Tabmate.","Настройки Tabmate различаются для режима Studio и простого режима. Вы можете открыть настройки с помощью кнопки меню в правом верхнем углу холста, затем перейти в «Настройки и справка» > «Clip Studio Tabmate»."
+"Tabmate 2 settings are different for Studio Mode and Simple Mode. You can open the settings from the menu button at the top right of the canvas, then go to Preferences and Help > Clip Studio Tabmate.","Настройки Tabmate 2 различаются для режима Studio и простого режима. Вы можете открыть настройки с помощью кнопки меню в правом верхнем углу холста, затем перейти в «Настройки и справка» > «Clip Studio Tabmate»."
+If using Wacom Stylus Pen,При использовании стилуса Wacom
+Stylus Settings,Настройки стилуса
+You can edit these settings from the [File] menu > [Pen Pressure Settings].,Эти настройки можно редактировать в меню [Файл] > [Настройки давления пера].
+Wacom Stylus Settings,Wacom Настройки стилуса
+Left-handed (Upward),Левша (вверх)
+Left-handed,Левша
+Left-handed (Downward),Левша (вниз)
+Right-handed (Upward),Правша (вверх)
+Right-handed,Правша
+Right-handed (Downward),Правша (вниз)
+Cover page and back cover page (inside),Титульный лист и задняя обложка (внутри)
+Export alpha channel,Экспортировать альфа-канал
+"All tools and sub tools registered in the [Tool] palette and [Sub Tool] palette will be reset to their original defaults.
+Any added tools or sub tools will be deleted.
+Shortcuts assigned to tools will be also reset to their original defaults.
+","Все инструменты и вспомогательные инструменты, зарегистрированные в палитрах [Инструмент] и палитре [Вспомогательный инструмент], будут сброшены до исходных значений по умолчанию.
+Любые добавленные инструменты или вспомогательные инструменты будут удалены.
+Ярлыки, назначенные инструментам, также будут сброшены до исходных значений по умолчанию."
+"Brush shapes 
+registered to the [Sub Tool Detail] palette 
+will be reset to their original defaults.
+Any added brush shapes 
+will be deleted.","Формы кисти 
+зарегистрирован в палитре [Детали вспомогательного инструмента] 
+будут сброшены к исходным настройкам по умолчанию.
+Любые добавленные формы кистей 
+будет удалено."
+"Color sets registered to the [Color Set] palette 
+will be reset to their original defaults.
+Any added color sets will be deleted.","Наборы цветов, зарегистрированные в палитре [Набор цветов] 
+будут сброшены к исходным настройкам по умолчанию.
+Любые добавленные наборы цветов будут удалены."
+"Gradient sets used for 
+the [Gradient map] and [Gradient] tools 
+will be reset to their original defaults.
+These gradient sets will not be deleted from the [Gradient] tool.
+Any added gradient sets will be deleted.","Наборы градиентов, используемые для 
+инструменты [Карта градиента] и [Градиент] 
+будут сброшены к исходным настройкам по умолчанию.
+Эти наборы градиентов не будут удалены из инструмента [Градиент].
+Любые добавленные наборы градиентов будут удалены."
+"Preset brush sizes 
+registered to the [Brush size] palette 
+will be reset to their original defaults.
+Any added brush size presets 
+will be deleted.","Предустановленные размеры кисти 
+зарегистрирован в палитре [Размер кисти] 
+будут сброшены к исходным настройкам по умолчанию.
+Любые добавленные настройки размера кисти. 
+будет удалено."
+"Shortcut settings
+ set up in [Shortcut Settings] (excluding tool shortcuts) and 
+modifier key settings 
+will be reset to their original defaults.","Настройки ярлыка
+ настроить в [Настройки ярлыков] (за исключением ярлыков инструментов) и 
+настройки клавиши-модификатора 
+будут сброшены к исходным настройкам по умолчанию."
+"Search tags saved in the [Material] palette 
+will be reset to their original defaults.
+ Any added search tags will be deleted.
+Materials you have added will not be deleted.","Поисковые теги, сохраненные в палитре [Материал] 
+будут сброшены к исходным настройкам по умолчанию.
+ Любые добавленные теги поиска будут удалены.
+Добавленные вами материалы не будут удалены."
+"Settings in [Preferences] 
+will be reset to their original defaults.","Настройки в [Настройки] 
+будут сброшены к исходным настройкам по умолчанию."
+"All data on images imported 
+to the [Sub View] palette will be deleted. The actual image files will not be deleted.
+","Все данные об изображениях импортированы 
+в палитру [Подвид] будут удалены. Фактические файлы изображений не будут удалены."
+"All settings under [CLIP STUDIO TABMATE Settings] 
+and [Tool Rotation Settings]
+ will be reset to their original defaults.","Все настройки в разделе [CLIP STUDIO TABMATE Settings] 
+и [Настройки вращения инструмента]
+ будут сброшены к исходным настройкам по умолчанию."
+"The [Quick Access] palette, [Command Bar] and [Selection Launcher] 
+will be reset to their original defaults.","Палитра [Быстрый доступ], [Панель команд] и [Панель запуска выбора] 
+будут сброшены к исходным настройкам по умолчанию."
+"Auto action sets in the [Auto Action] palette 
+will be reset to their original defaults. 
+All newly added auto action sets will be deleted.","Наборы автодействий в палитре [Автодействие] 
+будут сброшены к исходным настройкам по умолчанию. 
+Все вновь добавленные наборы автоматических действий будут удалены."
+"Settings for [Mixing font] and the [Font list] 
+will be reset to their original defaults. 
+Any added mixing fonts will be deleted. 
+Any added font lists will be deleted.","Настройки для [Смешивание шрифтов] и [Список шрифтов] 
+будут сброшены к исходным настройкам по умолчанию. 
+Любые добавленные смешанные шрифты будут удалены. 
+Любые добавленные списки шрифтов будут удалены."
+"Settings for items in the [Layer property] palette 
+will be reset to their original defaults.","Settings for items in the [Layer property] palette 
+будут сброшены к исходным настройкам по умолчанию."
+"Export settings such as [Export (Single Layer)] 
+will be reset to their original defaults.","Export settings such as [Export (Single Layer)] 
+будут сброшены к исходным настройкам по умолчанию."
+"Settings such as [Print Settings] 
+will be reset to their original defaults.","Settings such as [Print Settings] 
+будут сброшены к исходным настройкам по умолчанию."
+"Register the current palette settings as default settings for the above selected effects.
+Only the layer color will be registered by layer type.
+If the expression color of the canvas is set to [Gray] or [Monochrome], 
+the frequency will be the default frequency of the canvas instead, and will not use these settings.","Зарегистрируйте текущие настройки палитры в качестве настроек по умолчанию для выбранных выше эффектов.
+По типу слоя будет зарегистрирован только цвет слоя.
+Если цвет выражения холста установлен на [Серый] или [Монохромный], 
+Вместо этого частота будет частотой холста по умолчанию и не будет использовать эти настройки."
+Import 3D files in format from ver.1.10.13 and earlier,Импортируйте 3D-файлы в формате версии 1.10.13 и более ранних.
+A warning appears if the system may cause the app to close suddenly due to increasing memory usage.,"Предупреждение появляется, если система может привести к внезапному закрытию приложения из-за увеличения использования памяти."
+Please help us improve Clip Studio by sending usage information.,"Пожалуйста, помогите нам улучшить Clip Studio, отправив информацию об использовании."
+Support bug fixes,Поддержка исправлений ошибок
+・The information will be used to fix bugs in the app and services,・Информация будет использоваться для исправления ошибок в приложении и сервисах.
+・May automatically send anonymized device information and crash reports including details of the error,"・Может автоматически отправлять анонимную информацию об устройстве и отчеты о сбоях, включая подробную информацию об ошибке."
+Help with quality improvement,Помощь в улучшении качества
+・The information will be used to develop new features and improve the user experience,・Эта информация будет использоваться для разработки новых функций и улучшения пользовательского опыта.
+"・Automatically send information about usage, including which buttons were pressed and which features were used","・Автоматически отправлять информацию об использовании, в том числе, какие кнопки были нажаты и какие функции использовались."
+You can change this setting at any time from the application menu > Privacy Settings.,Вы можете изменить этот параметр в любое время в меню приложения > Настройки конфиденциальности.
+You can change this setting at any time from File > Privacy Settings.,Вы можете изменить этот параметр в любое время в меню «Файл» > «Настройки конфиденциальности».
+You can change this setting at any time from Menu > Settings > Privacy Settings.,Вы можете изменить этот параметр в любое время в Меню > Настройки > Настройки конфиденциальности.
+See here for details about data we collect,"Здесь вы найдете подробную информацию о данных, которые мы собираем."
+Set later,Установить позже
+"Sign up to get 
+your first 3 months free","Зарегистрируйтесь, чтобы получить 
+ваши первые 3 месяца бесплатно"
+Profile for preview,Профиль для предварительного просмотра
+"Save settings on canvas. The settings are applied to other windows in which 
+the canvas is displayed. To apply the preview results and export the image, 
+click [Export (Single Layer)] and save in TIFF, JPEG, PSD, or PSB format.","Сохраните настройки на холсте. Настройки применяются к другим окнам, в которых 
+холст отображается. Чтобы применить результаты предварительного просмотра и экспортировать изображение, 
+нажмите [Экспорт (один слой)] и сохраните в формате TIFF, JPEG, PSD или PSB."
+"The settings are only used when displaying this window.
+These settings and preview results are not saved when saving this canvas.","Настройки используются только при отображении этого окна.
+Эти настройки и результаты предварительного просмотра не сохраняются при сохранении этого холста."
+Change scale (%) when pen pressure is minimum,"Измените масштаб (%), когда давление пера минимальное"
+Change scale (%) when tilt is minimum,Изменение масштаба (%) при минимальном наклоне
+Change scale (%) when tilt is maximum,Изменение масштаба (%) при максимальном наклоне
+Link to stroke speed (faster movement creates a smaller value),Связь со скоростью хода (более быстрое движение создает меньшую ценность)
+Change scale (%) when velocity is maximum,"Изменить масштаб (%), когда скорость максимальна"
+All supported formats|*.clip|CLIP STUDIO FORMAT|*.clip,Все поддерживаемые форматы|*.clip|CLIP STUDIO FORMAT|*.clip
+Resolution may be set to the value that fanzine printing vendor doesn't accept.,"Разрешение может быть установлено на значение, которое не принимает поставщик печати журналов для фанатов."
+"It is scaled up and down when exported, so moire or something may occur in tone.","При экспорте он масштабируется вверх и вниз, поэтому в тоне может присутствовать муар или что-то в этом роде."
+Check the following setting for the printing data for fanzine printing vendor.,Проверьте следующие настройки данных печати для поставщика печати журналов для фанатов.
+Set the basic expression color of the cover page as %s.,Установите основной цвет выражения титульной страницы как %s.
+Set the basic expression color of the comic settings as %s.,Установите основной цвет выражения в настройках комикса как %s.
+Set the basic expression color of the cover page as %s or %s.,Установите основной цвет выражения титульной страницы как %s или %s.
+Set the basic expression color of the comic settings as %s or %s.,Установите основной цвет выражения в настройках комикса как %s или %s.
+Folio is generally necessary. Turn on the setting of folio.,Фолио вообще необходим. Включите настройку фолио.
+The trim size has not been set in the project settings.,Размер обрезки не задан в настройках проекта.
+The body pages include a page with color export settings.,Страницы тела включают страницу с настройками экспорта цвета.
+"It was not exported due to over-capacity.
+By changing [Paper size] to export, changing [Resolution] in case of color,
+and making [Expression color] monochrome, you can make the capacity small.","Его не экспортировали из-за избыточных мощностей.
+Изменив [Размер бумаги] для экспорта, изменив [Разрешение] в случае цвета,
+и сделав [Цвет выражения] монохромным, вы можете уменьшить емкость."
+"Next page was not exported due to over-capacity.
+By changing [Paper size] to export, changing [Resolution] in case of color,
+and making [Expression color] monochrome, you can make the capacity small.","Следующая страница не была экспортирована из-за переполнения.
+Изменив [Размер бумаги] для экспорта, изменив [Разрешение] в случае цвета,
+и сделав [Цвет выражения] монохромным, вы можете уменьшить емкость."
+Do you want to use [3D Preview for Binding] to verify the result before exporting?,Хотите ли вы использовать [3D-просмотр для привязки] для проверки результата перед экспортом?
+Verify with [3D Preview for Binding],Подтвердите с помощью [3D-просмотр для привязки]
+"This material is an old format, so layers with this material cannot be used on mobile devices.
+You can rasterize this layer to use it on mobile devices.","Этот материал имеет старый формат, поэтому слои с этим материалом нельзя использовать на мобильных устройствах.
+Вы можете растрировать этот слой, чтобы использовать его на мобильных устройствах."
+S-Pen button,Кнопка S-Pen
+"Animated sticker x1
+%s","Анимированная наклейка x1
+%s"
+"Animated sticker x2
+%s","Анимированная наклейка x2
+%s"
+Please rate our app.,"Пожалуйста, оцените наше приложение."
+Please tap the stars to give us a rating.,"Пожалуйста, нажмите на звезды, чтобы дать нам оценку."
+Thank you.,Спасибо.
+Please let us know what we can improve. We will continue to develop the app to meet your expectations.,"Пожалуйста, дайте нам знать, что мы можем улучшить. Мы продолжим развивать приложение, чтобы оправдать ваши ожидания."
+Let us know what you want to improve,"Дайте нам знать, что вы хотите улучшить"
+Thank you!,Спасибо!
+Please let us know what you like about the app. Your feedback helps us.,"Пожалуйста, дайте нам знать, что вам нравится в приложении. Ваш отзыв помогает нам."
+Write a review,Написать отзыв
+Apply pose material,Применить материал позы
+Use body shape material,Используйте материал формы тела
+Open Material palette,Открыть палитру материалов
+3D drawing figures are stored in the Material palette. Tap the icon in the top right to open the Material palette.,"Фигуры 3D-чертежей хранятся в палитре «Материалы». Нажмите значок в правом верхнем углу, чтобы открыть палитру материалов."
+3D Category,Категория 3D
+"Select “3D” from the material categories. It is at the bottom of the category list, so if you can't find it, scroll down in the palette.","Выберите «3D» из категорий материалов. Она находится внизу списка категорий, поэтому, если вы не можете ее найти, прокрутите палитру вниз."
+Body shape materials & Pose materials,Материалы для формы тела и материалы для поз
+"Body shape materials are settings for the height and body shape of a 3D drawing figure. Pose material are settings for a 3D drawing figure’s pose.
+Let's tap “3D drawing figure-Ver.2”.","Материалы формы тела — это настройки высоты и формы тела фигуры трехмерного рисунка. Материал позы — это настройки позы фигуры трехмерного рисунка.
+Давайте нажмем «3D-рисунок-Версия 2»."
+How to operate the camera,Как управлять камерой
+Change to canvas navigation,Перейти к навигации по холсту
+"When you want to move or zoom the canvas, you can tap the square icon to operate the canvas.","Если вы хотите переместить или увеличить холст, вы можете нажать квадратный значок, чтобы управлять холстом."
+Change to light source operation,Переход к работе с источником света
+Tap the sun icon to change the direction of the light source with a one-finger swipe. The blue arrow below the slider indicates the direction of the light source. The slider adjusts the light source's intensity.,"Коснитесь значка солнца, чтобы изменить направление источника света одним пальцем. Синяя стрелка под ползунком указывает направление источника света. Ползунок регулирует интенсивность источника света."
+Confirm the 3D drawing figure,Подтвердите фигуру 3D-чертежа
+"Once you have decided on the composition you want to draw, tap OK to confirm. Try out various compositions using the 3D drawing figure.","Определившись с композицией, которую хотите нарисовать, нажмите OK для подтверждения. Попробуйте различные композиции, используя фигурку 3D-рисования."
+Edit a 3D layer,Редактировать 3D-слой
+"When you select a 3D layer in the Layer palette, an Edit button will appear at the top center of the screen. Tap the button to edit the 3D drawing figure.","Когда вы выберете 3D-слой в палитре слоев, в верхней центральной части экрана появится кнопка «Редактировать». Нажмите кнопку, чтобы отредактировать фигуру 3D-рисунка."
+Change the pose,Изменить позу
+You can change the 3D drawing figure pose from the properties in the bottom right. Try tapping “Apply pose material”.,Вы можете изменить позу фигуры 3D-рисунка в свойствах в правом нижнем углу. Попробуйте нажать «Применить материал позы».
+Select a pose material,Выберите материал позы
+Choose a pose you like. Tap the pose material to apply it to the 3D drawing figure on the canvas.,"Выберите позу, которая вам нравится. Коснитесь материала позы, чтобы применить его к трехмерной фигуре на холсте."
+Select a brush,Выберите кисть
+Tap to open the brush list and see what brushes are available.,"Нажмите, чтобы открыть список кистей и посмотреть, какие кисти доступны."
+Select a layer,Выберите слой
+"Now it's time for color. To avoid filling over the lines, tap to select the layer below the lines.","Теперь пришло время цвета. Чтобы избежать заполнения линий, коснитесь, чтобы выбрать слой под линиями."
+Select a color,Выберите цвет
+Tap to open the color palette and choose a color you want to draw with.,"Нажмите, чтобы открыть цветовую палитру и выбрать цвет, которым хотите рисовать."
+Preferences and Help,Настройки и помощь
+Add Layer menu,Меню «Добавить слой»
+You can open the menu by pressing and holding the + button. Let's add a background image as a layer.,"Вы можете открыть меню, нажав и удерживая кнопку +. Давайте добавим фоновое изображение в качестве слоя."
+Rearranging layers,Перестановка слоев
+"Long-press and move the image you added so that it is on the layer below ""Window"".","Нажмите и удерживайте и переместите добавленное изображение так, чтобы оно оказалось на слое ниже «Окна»."
+Rearrange folders,Переупорядочить папки
+"You can move all the layers in a folder at once. Long press the ""Background"" folder and drag it below the ""Character"" layer.",Вы можете переместить все слои в папке одновременно. Нажмите и удерживайте папку «Фон» и перетащите ее под слой «Персонаж».
+Show detailed settings,Показать подробные настройки
+Change the palette height,Изменить высоту палитры
+"To change the height of a palette, tap the arrow at the bottom of the palette. You can also change it by long pressing the arrow.
+This is useful when you want to see more of your canvas.","Чтобы изменить высоту палитры, коснитесь стрелки внизу палитры. Вы также можете изменить его, нажав и удерживая стрелку.
+Это полезно, если вы хотите увидеть большую часть холста."
+"Tap the thumbnail again to open the menu. Even when the palette is minimized, you can perform various actions from the menu.","Коснитесь миниатюры еще раз, чтобы открыть меню. Даже когда палитра свернута, из меню можно выполнять различные действия."
+Rearrange palettes,Перестановка палитр
+You can flip the position of the Layer palette and the toolbar by tapping “Flip interface layout” from Preferences and Help.,"Вы можете изменить положение палитры слоев и панели инструментов, нажав «Перевернуть макет интерфейса» в разделе «Настройки» и «Справка»."
+Material placement,Размещение материала
+"You can access the Material palette from the photo icon at the top right.
+Tap the icon.","Вы можете получить доступ к палитре материалов, нажав значок фотографии в правом верхнем углу.
+Нажмите значок."
+Material categories,Категории материалов
+"Materials are organized into categories in the Material palette.
+Tap the ""Color Pattern"" category to find a material you want to use for the background.","Материалы организованы по категориям в палитре «Материалы».
+Коснитесь категории «Цветовой узор», чтобы найти материал, который вы хотите использовать в качестве фона."
+Select a material,Выберите материал
+"You can insert a material onto the canvas by tapping the thumbnail.
+Select the image material you want to use as the background and tap it.","Вы можете вставить материал на холст, коснувшись миниатюры.
+Выберите материал изображения, который хотите использовать в качестве фона, и коснитесь его."

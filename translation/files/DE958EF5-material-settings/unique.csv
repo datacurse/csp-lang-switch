@@ -44,3 +44,6 @@ Delete item,Удалить элемент
 Do you want to delete it?","%s используется в сценарии. 
 Удалить?"
 Importing %s... (%d/%d),Импорт %s... (%d/%d)
+"Cannot register the item since there are types of items which cannot be used when syncing to the Clip Studio cloud. 
+It is possible to use these items by canceling the syncing in the [List of works] menu in Clip Studio.","Невозможно зарегистрировать элемент, поскольку существуют типы элементов, которые нельзя использовать при синхронизации с облаком Clip Studio. 
+Воспользоваться этими элементами можно, отменив синхронизацию в меню [Список работ] в Clip Studio."
