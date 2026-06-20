@@ -76,19 +76,31 @@ excluded by human judgement — see below — regardless of the oracle).
 | `3DC534C9` | 150 | 0 | Empty stub container | ❌ |
 | `F549CE76` | 150 | 0 | Empty stub container | ❌ |
 
-## `7F9F9530` block 6 — the Material-palette folder tree (never translated)
+## `7F9F9530` — material palette folder tree (three locale slots)
 
-`7F9F9530`'s block 6 is a material-category table that drives the Material
-palette's folder tree (`All materials → Color pattern → …`), not just cloud
-sync. **These names are never translated.** CSP matches materials to their
-built-in folder by name against the local material DB
-(`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`), so a translated folder name
-no longer matches and the folder opens empty (3D survives because it binds to
-neutral `SystemTag` codes). The policy is enforced by the `NEVER_TRANSLATE`
-guard in `src/batch.py` (`7F9F9530` → `6/1/`), which strips block 6 on both
-export and pack; see VERIFIED_METHOD.md → "Never translate the material folder
-tree". The `907` oracle count above counts these block-6 records, but the
-worksheet and every packed build exclude them.
+`7F9F9530` is not only cloud-sync UI: it also carries **three parallel copies**
+of the Material-palette category tree (same taxonomy, different language slots
+inside one binary file):
+
+| Block | Keys | Stock language | Role |
+|-------|------|----------------|------|
+| **6** | `6/1/…` (261) | English | **The tree shown in the English UI slot — translate this.** |
+| **5** | `5/1/…` (261) | Japanese | Locale shadow copy — **never translate.** |
+| **7** | `7/1/…` (141) | Traditional Chinese | Locale shadow copy — **never translate.** |
+
+**Verified policy (2026-06).** Translating block **5** (Japanese copy) causes CSP
+to rebuild `MaterialFolderTag.mfta` on launch and **delete all custom user
+material folders**. Translating block **6** (English tree) works when blocks 5
+and 7 stay at stock Japanese/Chinese. Block 7 did not trigger the wipe in
+isolated GUI tests, but it is the same class of internal locale data — treat it
+as forbidden too.
+
+Enforced in `src/batch.py`: `NEVER_TRANSLATE["7F9F9530"] = ("5/1/", "7/1/")`.
+Rows under those prefixes are stripped on `export`, `join`, and `pack`. Block 6
+is translated normally; `_material_folder_sources()` still prevents the same
+English category names from picking up Russian in **other** resource files via
+source-text mapping. Full account: [`VERIFIED_METHOD.md`](VERIFIED_METHOD.md) →
+“Material palette folder tree in `7F9F9530`”.
 
 ## Non-targets — do not translate
 

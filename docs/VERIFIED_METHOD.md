@@ -144,37 +144,51 @@ registry paths). Measured on `742DEA58`: the translatable set went 9,368 →
 `classify()` is still fine for the `stats` breakdown — just never let it gate
 what gets translated.
 
-### Never translate the material folder tree — block 6 of `7F9F9530`
+### Material palette folder tree in `7F9F9530` — never touch blocks 5 or 7
 
-Block 6 of `7F9F9530` is the **Material-palette folder tree** (`All materials →
-Color pattern → … → Texture`). These are **not** ordinary display labels:
-CSP matches stock and downloaded materials to their built-in folder **by name**,
-comparing the (localized) tree node against the folder tag stored in the local
-material database (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`) — there is
-no stable id behind the name. So if the folder name is translated, the match
-fails and **the folder opens empty**. (The 3D folders are the exception: they
-bind to language-neutral `SystemTag` codes such as `3DPrimitive` /
-`3DDessindollHead`, which is why 3D kept working when every other category broke.)
+`7F9F9530` bundles cloud-sync UI with **three parallel copies** of the
+Material-palette category taxonomy (`All → Color pattern → …`) in different
+locale slots of the same binary file:
 
-**Policy: these strings stay English in every resource file, every CSP version.**
+| Block | Prefix | Count | Stock text | Policy |
+|-------|--------|-------|------------|--------|
+| **6** | `6/1/` | 261 | English | **Translate** — this is the tree the English UI slot displays. |
+| **5** | `5/1/` | 261 | Japanese | **Never translate** — locale shadow copy. |
+| **7** | `7/1/` | 141 | Traditional Chinese | **Never translate** — locale shadow copy. |
+
+You do **not** see blocks 5 or 7 in the English UI; they exist so CSP can load
+the same tree shape under other internal locale paths. **Translating them is
+very dangerous:** verified on 2026-06, applying Russian to block **5** alone
+(~252 string changes) makes CSP rebuild `MaterialFolderTag.mfta` on launch and
+**wipe every custom user material folder**. Translating block **6** (English)
+with blocks 5 and 7 left at stock Japanese/Chinese works correctly and keeps
+custom folders. Block 7 alone did not reproduce the wipe in bisect tests, but
+must stay untranslated — same data class, no user-visible benefit, maintainer
+rule for this repo.
+
+**Do not add `5/1/` or `7/1/` rows to `strings.csv` / `unique.csv`. Do not
+remove or weaken the guard.** If a future CSP version adds more locale-copy
+blocks, extend `NEVER_TRANSLATE` rather than translating them.
+
 Enforced in `src/batch.py`:
 
-* **`_material_folder_sources()`** — the ~214 English strings from block 6 of
-  `7F9F9530` (folder names and colon-paths like `Monochromatic pattern:Texture`).
-* **`export` / `pack` / `join`** skip any row whose key *or source* is in that set.
-  This matters because `pack` maps translations by **source text**: the same
-  `"All materials"` in `742DEA58` main UI would otherwise pick up Russian from
-  `unique.csv` even when block 6 keys in `7F9F9530` were already protected.
+* **`NEVER_TRANSLATE["7F9F9530"] = ("5/1/", "7/1/")`** — `export`, `join`, and
+  `pack` drop these keys; `apply` never writes Russian into the JP/CN slots.
+* **`_append_block6_tree_rows()`** — ensures every `6/1/` key is packable even
+  when the Japanese oracle skips short English labels (`All`, `Template`, …).
+* **`_material_folder_sources()`** — ~214 English category strings from block 6;
+  still blocks translating those **sources** in other files (e.g. `742DEA58`)
+  via source-text mapping, while allowing block 6 itself to pick up Russian
+  from `unique.csv`.
 
-The cost is cosmetic — the palette tree shows English category names inside an
-otherwise-Russian UI — and it is strictly better than folders that resolve to
-zero materials.
+CSP still matches stock materials to built-in folders **by name** in the local
+DB (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`). Keep custom folders via
+the GUI backup → switch → replace-database workflow documented in the README.
 
-> Historical note: an earlier approach went the other way — a
-> `scripts/patch_material_tree.py` helper *added* Russian folder names (block 6
-> ships English in all 12 languages, so the Japanese oracle could not see them as
-> translatable). That script has been removed: translating these names is exactly
-> what breaks material selection.
+> Historical note: an earlier policy kept block **6** English and accidentally
+> translated block **5** (Japanese sources mapped to Russian tree names). That
+> caused the custom-folder wipe. The old `scripts/patch_material_tree.py`
+> helper has been removed.
 
 ---
 

@@ -195,11 +195,12 @@ own CSV scripts:
   language.** There `en == ja`, so a non-prose record gets no signal and is
   dropped — even though it is live UI text. No heuristic catches these; find
   them by eyeballing the running UI.
-* **`7F9F9530` block 6 (the Material-palette folder tree) is deliberately left
-  English.** CSP matches materials to their built-in folder by name, so
-  translating these names makes the folder open empty. The `NEVER_TRANSLATE`
-  guard in `src/batch.py` strips block 6 on export and pack. Full account:
-  VERIFIED_METHOD.md → "Never translate the material folder tree".
+* **`7F9F9530` folder tree — translate block 6 only; never blocks 5 or 7.**
+  Block `6/1/` is the English category tree (safe to Russian). Blocks `5/1/`
+  (Japanese copy) and `7/1/` (Chinese copy) are internal locale shadows —
+  translating block 5 wipes custom material folders on CSP launch. The
+  `NEVER_TRANSLATE` guard in `src/batch.py` strips `5/1/` and `7/1/` on export
+  and pack. Full account: VERIFIED_METHOD.md → "Material palette folder tree".
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 

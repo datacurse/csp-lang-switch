@@ -51,6 +51,7 @@ a = Analysis(
         'gui_i18n',
         'gui_picker',
         'version',
+        'material_folders',
         'pefile',
         'customtkinter',
         'tkinter',

@@ -21,25 +21,40 @@ _STATUS_OK = ("#2d6a4f", "#52b788")
 _STATUS_ERR = ("#9b2226", "#e5383b")
 # The interface is always Russian; English UI is no longer offered.
 _GUI_LANG = "ru"
-# Both subsystems are always switched together as a single choice.
+# Default pipelines shown in status summary.
 _SWITCH_PIPELINES = ("main-ui", "plugins")
 
 
-def _fit_window(root: ctk.CTk, main: ctk.CTkFrame, footer: ctk.CTkFrame) -> None:
-    """Size the window to its content, accounting for CustomTkinter DPI scaling."""
+def _fit_window(
+    root: ctk.CTk,
+    scroll: ctk.CTkScrollableFrame,
+    footer: ctk.CTkFrame,
+) -> None:
+    """Size the window; cap height to the screen and scroll overflow."""
     root.update_idletasks()
     root.update()
     root.update_idletasks()
-    width = max(root.winfo_reqwidth(), main.winfo_reqwidth() + 24)
-    height = max(root.winfo_reqheight(), main.winfo_reqheight() + 16)
+
+    screen_w = root.winfo_screenwidth()
+    screen_h = root.winfo_screenheight()
+    margin = 24
+    max_h = max(480, screen_h - margin * 2)
+
+    width = max(460, min(scroll.winfo_reqwidth() + 48, screen_w - margin * 2))
+    footer_h = footer.winfo_reqheight()
+    content_h = scroll.winfo_reqheight() + footer_h + margin
+    height = min(content_h, max_h)
+
     w = root._reverse_window_scaling(width)
     h = root._reverse_window_scaling(height)
-    root.geometry(f"{w}x{h}")
-    root.update_idletasks()
-    x = max(0, (root.winfo_screenwidth() - width) // 2)
-    y = max(0, (root.winfo_screenheight() - height) // 2)
+    x = max(0, (screen_w - width) // 2)
+    y = max(margin, (screen_h - height) // 2)
     root.geometry(f"{w}x{h}+{x}+{y}")
-    root.resizable(False, False)
+    root.minsize(
+        root._reverse_window_scaling(min(460, width)),
+        root._reverse_window_scaling(min(400, height)),
+    )
+    root.resizable(width < screen_w - margin * 2, height < content_h)
 
 
 def run_picker(args: Namespace, settings_file: Path) -> None:
@@ -55,12 +70,16 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         discover_community_packs,
         discover_official_languages,
         is_official_state,
+        material_folder_status,
         official_id_from_state,
+        run_material_folder_backup,
+        run_material_folder_restore,
         set_active_version,
         summary_for_gui,
     )
     from version import SUPPORTED_VERSIONS
     from common import is_admin, run_elevated_sync
+    import ui_groups as ui_groups_mod
 
     gui_lang = _GUI_LANG
 
@@ -70,8 +89,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     root = ctk.CTk()
     root.withdraw()
     root.title(i18n.t(gui_lang, "window_title"))
-    root.grid_rowconfigure(0, weight=0)
-    root.grid_columnconfigure(0, weight=0)
+    root.grid_rowconfigure(0, weight=1)
+    root.grid_columnconfigure(0, weight=1)
 
     selected = StringVar(value="")
     selected_version = StringVar(value=getattr(args, "csp_version", SUPPORTED_VERSIONS[0]))
@@ -82,8 +101,13 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     version_blocked = False
     version_warning: str | None = None
 
-    main = ctk.CTkFrame(root, fg_color="transparent")
-    main.grid(row=0, column=0, sticky="nw", padx=12, pady=8)
+    scroll = ctk.CTkScrollableFrame(root, fg_color="transparent")
+    scroll.grid(row=0, column=0, sticky="nsew", padx=12, pady=(8, 4))
+    scroll.grid_columnconfigure(0, weight=1)
+    main = scroll
+
+    footer = ctk.CTkFrame(root, fg_color="transparent")
+    footer.grid(row=1, column=0, sticky="ew", padx=12, pady=(4, 8))
 
     version_label = ctk.CTkLabel(
         main, text=i18n.t(gui_lang, "choose_csp_version"),
@@ -117,16 +141,92 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     lang_inner = ctk.CTkFrame(lang_box, fg_color="transparent")
     lang_inner.pack(fill="x", padx=10, pady=8)
 
+    parts_label = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "translate_parts"),
+        font=ctk.CTkFont(size=14, weight="bold"))
+    parts_label.pack(anchor="w", pady=(10, 4))
+
+    parts_hint = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "translate_parts_hint"),
+        wraplength=420, justify="left",
+        font=ctk.CTkFont(size=11), text_color="gray50")
+    parts_hint.pack(anchor="w", pady=(0, 4))
+
+    parts_box = ctk.CTkFrame(main, corner_radius=8)
+    parts_box.pack(fill="x")
+    parts_inner = ctk.CTkFrame(parts_box, fg_color="transparent")
+    parts_inner.pack(fill="x", padx=10, pady=8)
+
+    ui_group_vars: dict[str, tk.BooleanVar] = {}
+
+    def _add_ui_group_checkbox(group_id: str, *, padx: int = 2) -> None:
+        var = tk.BooleanVar(value=True)
+        ui_group_vars[group_id] = var
+        key = f"ui_group_{group_id.replace('-', '_')}"
+        ctk.CTkCheckBox(
+            parts_inner, text=i18n.t(gui_lang, key), variable=var,
+            font=ctk.CTkFont(size=12),
+        ).pack(anchor="w", pady=2, padx=padx)
+
+    for group_id in ("core-ui", "material-catalog"):
+        _add_ui_group_checkbox(group_id)
+
+    ctk.CTkLabel(
+        parts_inner, text=i18n.t(gui_lang, "translate_parts_mft"),
+        font=ctk.CTkFont(size=12, weight="bold"),
+    ).pack(anchor="w", pady=(6, 2), padx=2)
+    ctk.CTkLabel(
+        parts_inner, text=i18n.t(gui_lang, "translate_parts_mft_hint"),
+        wraplength=400, justify="left",
+        font=ctk.CTkFont(size=11), text_color="gray50",
+    ).pack(anchor="w", pady=(0, 4), padx=2)
+    for group_id in ui_groups_mod.MFT_BLOCK_IDS:
+        _add_ui_group_checkbox(group_id, padx=14)
+
+    _add_ui_group_checkbox("folder-tree")
+    _add_ui_group_checkbox("other-ui")
+
+    plugins_var = tk.BooleanVar(value=True)
+    ctk.CTkCheckBox(
+        parts_inner, text=i18n.t(gui_lang, "ui_group_plugins"), variable=plugins_var,
+        font=ctk.CTkFont(size=12),
+    ).pack(anchor="w", pady=2, padx=2)
+
     status_label = ctk.CTkLabel(
         main, text=i18n.t(gui_lang, "checking_status"),
         wraplength=420, justify="left", font=ctk.CTkFont(size=12))
     status_label.pack(anchor="w", pady=(8, 0))
 
-    progress = ctk.CTkProgressBar(main, mode="indeterminate")
+    material_label = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "material_section"),
+        font=ctk.CTkFont(size=14, weight="bold"))
+    material_label.pack(anchor="w", pady=(12, 4))
+
+    material_hint = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "material_hint"),
+        wraplength=420, justify="left",
+        font=ctk.CTkFont(size=11), text_color="gray50")
+    material_hint.pack(anchor="w", pady=(0, 4))
+
+    folders_why = ctk.CTkLabel(
+        main, text=i18n.t(gui_lang, "folders_why"),
+        wraplength=420, justify="left",
+        font=ctk.CTkFont(size=11), text_color="gray50")
+    folders_why.pack(anchor="w", pady=(0, 4))
+
+    material_status = ctk.CTkLabel(
+        main, text="",
+        wraplength=420, justify="left", font=ctk.CTkFont(size=11))
+    material_status.pack(anchor="w", pady=(0, 6))
+
+    progress = ctk.CTkProgressBar(footer, mode="indeterminate")
     busy = False
 
-    buttons = ctk.CTkFrame(main, fg_color="transparent")
-    buttons.pack(fill="x", pady=(8, 0))
+    material_btns = ctk.CTkFrame(footer, fg_color="transparent")
+    material_btns.pack(fill="x", pady=(0, 4))
+
+    buttons = ctk.CTkFrame(footer, fg_color="transparent")
+    buttons.pack(fill="x")
     apply_btn = ctk.CTkButton(buttons, text=i18n.t(gui_lang, "btn_apply"),
                               command=lambda: apply_selected())
     apply_btn.pack(side="right")
@@ -138,6 +238,16 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         buttons, text=i18n.t(gui_lang, "btn_close"), fg_color="transparent",
         border_width=1, command=root.destroy)
     close_btn.pack(side="right", padx=(0, 8))
+
+    backup_folders_btn = ctk.CTkButton(
+        material_btns, text=i18n.t(gui_lang, "btn_backup_folders"),
+        command=lambda: run_folder_action("backup"))
+    backup_folders_btn.pack(side="left")
+    restore_folders_btn = ctk.CTkButton(
+        material_btns, text=i18n.t(gui_lang, "btn_restore_folders"),
+        fg_color="transparent", border_width=1,
+        command=lambda: run_folder_action("restore"))
+    restore_folders_btn.pack(side="left", padx=(8, 0))
 
     def _supported_list() -> str:
         return ", ".join(SUPPORTED_VERSIONS)
@@ -233,7 +343,18 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         }
         status_label.configure(text=text, text_color=colors.get(kind, colors["normal"]))
 
-    def _set_busy(on: bool) -> None:
+    def _update_material_status() -> None:
+        try:
+            material_status.configure(
+                text=i18n.material_status_text(gui_lang, material_folder_status()))
+        except tk.TclError:
+            pass
+
+    def _material_buttons_state(state: str) -> None:
+        backup_folders_btn.configure(state=state)
+        restore_folders_btn.configure(state=state)
+
+    def _set_busy(on: bool, *, folder_action: str | None = None) -> None:
         nonlocal busy
         busy = on
         state = "disabled" if on else "normal"
@@ -241,10 +362,16 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             apply_btn.configure(state=state)
         refresh_btn.configure(state=state)
         close_btn.configure(state=state)
+        _material_buttons_state(state)
         if on:
-            progress.pack(fill="x", pady=(6, 0))
+            progress.pack(fill="x", pady=(0, 6), before=material_btns)
             progress.start()
-            _set_status(i18n.t(gui_lang, "switching"))
+            if folder_action == "backup":
+                _set_status(i18n.t(gui_lang, "material_working_backup"))
+            elif folder_action == "restore":
+                _set_status(i18n.t(gui_lang, "material_working_restore"))
+            else:
+                _set_status(i18n.t(gui_lang, "switching"))
         else:
             progress.stop()
             progress.pack_forget()
@@ -278,8 +405,47 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 visible = {n: statuses[n] for n in _SWITCH_PIPELINES if n in statuses}
                 if visible:
                     _set_status(summary_for_gui(visible, gui_lang))
+            _update_material_status()
         except tk.TclError:
             pass
+
+    def _finish_folder_action(result: dict) -> None:
+        _set_busy(False)
+        code = str(result.get("code") or "err_generic")
+        count = int(result.get("count") or 0)
+        kind = str(result.get("kind") or "ok")
+        notes = result.get("notes") or []
+        msg = i18n.t(gui_lang, code, count=str(count))
+        if notes:
+            msg = f"{msg}\n" + "\n".join(str(n) for n in notes)
+        status_kind = "err" if kind == "err" else ("ok" if kind == "ok" else "normal")
+        _set_status(msg, kind=status_kind)
+        _update_material_status()
+        _fit_window(root, scroll, footer)
+
+    def run_folder_action(action: str) -> None:
+        if busy:
+            return
+        _set_busy(True, folder_action=action)
+        root.update()
+
+        def work() -> None:
+            result: dict
+            try:
+                if action == "backup":
+                    result = run_material_folder_backup()
+                else:
+                    result = run_material_folder_restore()
+            except SystemExit as e:
+                err = str(e.args[0]) if e.args else ""
+                result = {
+                    "kind": "err",
+                    "code": "err_csp_running" if "csp is running" in err.lower()
+                    else "err_generic",
+                }
+            root.after(0, lambda: _finish_folder_action(result))
+
+        threading.Thread(target=work, daemon=True).start()
 
     def _localize_error(msg: str) -> str:
         return i18n.localize_error(
@@ -297,6 +463,19 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             refresh(f"{notes}\n\n{restart}", final_kind="ok")
         else:
             refresh(restart, final_kind="ok")
+        _update_material_status()
+        _fit_window(root, scroll, footer)
+
+    def _selected_switch_targets() -> tuple[set[str], set[str] | None]:
+        pipelines: set[str] = set()
+        ui_groups: set[str] = set()
+        if plugins_var.get():
+            pipelines.add(ui_groups_mod.PIPELINE_PLUGINS)
+        for group_id in ui_groups_mod.UI_GROUP_IDS:
+            if ui_group_vars[group_id].get():
+                pipelines.add(ui_groups_mod.PIPELINE_MAIN_UI)
+                ui_groups.add(group_id)
+        return pipelines, ui_groups if ui_groups else None
 
     def apply_selected() -> None:
         if busy or version_blocked:
@@ -307,6 +486,14 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             _set_status(i18n.t(gui_lang, "err_no_language"), kind="err")
             return
 
+        pipelines, ui_groups = _selected_switch_targets()
+        if not pipelines:
+            _set_status(i18n.t(gui_lang, "err_nothing"), kind="err")
+            return
+        if ui_groups_mod.PIPELINE_MAIN_UI in pipelines and not ui_groups:
+            _set_status(i18n.t(gui_lang, "err_no_ui_parts"), kind="err")
+            return
+
         switch_args = Namespace(
             target=choice.id,
             csp=args.csp,
@@ -315,7 +502,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             force=getattr(args, "force", False),
             keep_open=False,
             from_gui=True,
-            pipelines=set(_SWITCH_PIPELINES),
+            pipelines=pipelines,
+            ui_groups=ui_groups,
         )
         _set_busy(True)
         root.update()
@@ -357,6 +545,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
     _refresh_version_state()
     refresh()
-    _fit_window(root, main, buttons)
+    _update_material_status()
+    _fit_window(root, scroll, footer)
     root.deiconify()
     root.mainloop()

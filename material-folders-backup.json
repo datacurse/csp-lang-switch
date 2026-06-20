@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "saved_at": "2026-06-20T10:29:56.809981+00:00",
+  "folders": [
+    {
+      "parent_path": [
+        "Image"
+      ],
+      "title": "New folder",
+      "uuid": "efc9abb4b947444cb2e9ef92ba908d23"
+    },
+    {
+      "parent_path": [
+        "Image",
+        [
+          "user",
+          "New folder"
+        ]
+      ],
+      "title": "asdf",
+      "uuid": "956039cb386647df83e26b62ab6e7a86"
+    },
+    {
+      "parent_path": [
+        "3D"
+      ],
+      "title": "New folder",
+      "uuid": "ae51ab630cbe4e7c9082f4cfc07d2ae0"
+    },
+    {
+      "parent_path": [
+        "3D"
+      ],
+      "title": "Новая папка",
+      "uuid": "9a20d235c7c44c5184153b6806ea396d"
+    },
+    {
+      "parent_path": [
+        "3D",
+        "3DDessindollHand"
+      ],
+      "title": "New folder",
+      "uuid": "3fac889f296f46e6a288c17c7c5d6978"
+    },
+    {
+      "parent_path": [
+        "3D",
+        "3DDessindollHand"
+      ],
+      "title": "Новая папка",
+      "uuid": "3fac889f296f46e6a288c17c7c5d6978"
+    },
+    {
+      "parent_path": [
+        "Download"
+      ],
+      "title": "Новая папка",
+      "uuid": "8f47eb359cc646ad939e35a4fb95bed2"
+    },
+    {
+      "parent_path": [
+        "Download",
+        [
+          "user",
+          "Новая папка"
+        ]
+      ],
+      "title": "Новая папка",
+      "uuid": "fc2f35497e5645c4b20be825795f0506"
+    }
+  ]
+}

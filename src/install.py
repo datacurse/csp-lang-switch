@@ -137,6 +137,59 @@ def copy_over(src_files: list[Path], dst: Path, dry_run: bool) -> None:
                      f"file open -- close it and run the command again.")
 
 
+def install_files(
+    src_files: list[Path],
+    source: Path,
+    slot: Path,
+    *,
+    stock: Path | None = None,
+    partial_merges: dict | None = None,
+    dry_run: bool = False,
+) -> None:
+    """Copy or partially merge resource files into the CSP language slot."""
+    from resource_merge import merge_resource_file
+
+    merges = partial_merges or {}
+    for src_path in src_files:
+        name = src_path.name
+        dst_path = slot / name
+        spec = merges.get(name)
+        if spec is not None and stock is not None:
+            base_path = stock / name
+            if not base_path.is_file():
+                sys.exit(f"error: English stock file missing: {base_path}")
+            include = getattr(spec, "include_prefixes", None)
+            exclude = getattr(spec, "exclude_prefixes", None)
+            if dry_run:
+                changed, considered = merge_resource_file(
+                    base_path, src_path, dst_path,
+                    include_prefixes=include,
+                    exclude_prefixes=exclude,
+                    dry_run=True,
+                )
+                print(
+                    f"  [dry-run] merge {name}: "
+                    f"{changed} string(s) in {considered} slot(s)")
+                continue
+            changed, considered = merge_resource_file(
+                base_path, src_path, dst_path,
+                include_prefixes=include,
+                exclude_prefixes=exclude,
+            )
+            print(f"  merged {name}: {changed} string(s) in {considered} slot(s)")
+            continue
+        if dry_run:
+            print(f"  [dry-run] {name}")
+        else:
+            try:
+                shutil.copy2(src_path, dst_path)
+            except PermissionError:
+                sys.exit(
+                    f"\nerror: permission denied writing to {dst_path}\n"
+                    f"       CSP is most likely still running -- close it and "
+                    f"try again.")
+
+
 # ----------------------------------------------------------------------
 # Commands
 # ----------------------------------------------------------------------
@@ -174,7 +227,14 @@ def cmd_install(args) -> None:
         sys.exit(f"error: unknown language '{args.target}'.\n"
                  f"       available: {', '.join(sources)}")
     src_files = resource_files(source)
+    only = getattr(args, "only_files", None)
+    if only:
+        src_files = [f for f in src_files if f.name in only]
+        if not src_files:
+            sys.exit("error: no UI resource files selected for install")
     label = args.target.capitalize()
+    partial_merges = getattr(args, "partial_merges", None) or {}
+    stock = sources.get("english")
 
     check_csp_closed(args.force)
     if not args.dry_run:
@@ -184,18 +244,25 @@ def cmd_install(args) -> None:
     print(f"will install {label} ({len(src_files)} files) "
           f"onto the {args.slot} slot")
     print(f"  {source}  ->  {slot}")
+    if partial_merges:
+        print(f"  partial merge on {len(partial_merges)} file(s) "
+              f"(English stock + translated overlay)")
     if kept > 0:
         print(f"  ({kept} file(s) not in this build keep their current contents)")
 
     if args.dry_run:
-        copy_over(src_files, slot, dry_run=True)
+        install_files(
+            src_files, source, slot,
+            stock=stock, partial_merges=partial_merges, dry_run=True)
         print("[dry-run] nothing was changed")
         return
     if not confirm("proceed?", args.yes):
         print("aborted")
         return
 
-    copy_over(src_files, slot, dry_run=False)
+    install_files(
+        src_files, source, slot,
+        stock=stock, partial_merges=partial_merges, dry_run=False)
     print(f"\ndone -- {label} installed onto the {args.slot} slot.")
     print(f"in CSP, set the UI language to '{args.slot.capitalize()}' and restart.")
 

@@ -86,20 +86,22 @@ _WORD = re.compile(r"[a-z']+")
 
 
 # ----------------------------------------------------------------------
-# Never-translate guard -- material-palette folder-tree names
+# Never-translate guard -- material-palette folder-tree LOCALE COPIES ONLY
 # ----------------------------------------------------------------------
-# Block 6 of 7F9F9530 supplies the Material palette's built-in folder tree
-# ("All materials -> Color pattern -> ... -> Texture"). CSP matches stock and
-# downloaded materials to these folders BY NAME against the local material DB
-# (CatalogMaterial.cmdb / MaterialFolderTag.mfta), not by a stable id -- so a
-# translated folder name no longer matches and the folder opens EMPTY. (3D
-# folders are exempt: they bind to language-neutral SystemTag codes such as
-# "3DPrimitive", which is why 3D kept working when everything else broke.)
-# These names must therefore stay English in every build and every CSP version.
+# 7F9F9530 stores the same category taxonomy three times:
+#   block 6 (`6/1/`) -- English -- TRANSLATE (shown in the English UI slot)
+#   block 5 (`5/1/`) -- Japanese parallel (261 nodes) -- NEVER TRANSLATE
+#   block 7 (`7/1/`) -- Chinese parallel (141 nodes) -- NEVER TRANSLATE
 #
-# Keys are entry-id paths ("6/1/40#0"); block 6 is the `6/1/` subtree.
+# VERIFIED DANGER: writing Russian into block 5 makes CSP rebuild
+# MaterialFolderTag.mfta on launch and delete all custom user material folders.
+# Block 6 can be translated safely when 5/ and 7/ stay at stock JP/CN.
+# See docs/VERIFIED_METHOD.md -> "Material palette folder tree in 7F9F9530".
+#
+# `_material_folder_sources()` still blocks the same English category names
+# from being translated in OTHER resource files via source-text mapping.
 NEVER_TRANSLATE: dict[str, tuple[str, ...]] = {
-    "7F9F9530": ("6/1/",),
+    "7F9F9530": ("5/1/", "7/1/"),
 }
 
 MATERIAL_FOLDER_GUID = "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
@@ -107,12 +109,11 @@ _material_folder_source_cache: frozenset[str] | None = None
 
 
 def _material_folder_sources() -> frozenset[str]:
-    """English folder/category names from 7F9F9530 block 6 -- never translate.
+    """English category names from 7F9F9530 block 6.
 
-    The same source text can appear under different keys in other resource
-    files (e.g. 742DEA58 main UI). `pack` maps translations by source, so
-    protecting keys in 7F9F9530 alone is not enough: every occurrence of these
-    strings must stay English in every file.
+    Used to stop `pack` from applying Russian folder-name translations to the
+    same English source text in other resource files (e.g. 742DEA58). Block 6
+    keys in 7F9F9530 itself are exempt via `_is_protected`.
     """
     global _material_folder_source_cache
     if _material_folder_source_cache is not None:
@@ -143,6 +144,8 @@ def _is_protected(rec: dict, row: dict) -> bool:
     """True when this worksheet row must keep its English source."""
     if any(row["key"].startswith(p) for p in _protected_prefixes(rec)):
         return True
+    if rec.get("short") == "7F9F9530" and row["key"].startswith("6/1/"):
+        return False
     return _lf(row.get("source", "")) in _material_folder_sources()
 
 
@@ -154,6 +157,51 @@ def _drop_protected(rec: dict, rows: list[dict]) -> list[dict]:
     resource it was exported from.
     """
     return [r for r in rows if not _is_protected(rec, r)]
+
+
+def _target_for_source(source: str, trans: dict[str, str]) -> str:
+    new = trans.get(_lf(source))
+    if new is None:
+        return source
+    if "\r\n" in source:
+        new = _lf(new).replace("\n", "\r\n")
+    elif "\n" in source:
+        new = _lf(new)
+    return new
+
+
+def _append_block6_tree_rows(
+    rec: dict,
+    rows: list[dict],
+    trans: dict[str, str] | None = None,
+) -> list[dict]:
+    """Ensure every block-6 folder-tree key is present in the worksheet.
+
+    repack export with --reference skips 6/1/ rows whose English text equals
+    the Japanese resource at the same slot (short labels like "All").
+    """
+    if rec.get("short") != "7F9F9530":
+        return rows
+    src = resource_for(rec)
+    if not src.is_file():
+        return rows
+    import csp5 as _csp5
+    from repack import iter_records as _iter_records
+
+    present = {r["key"] for r in rows}
+    extra: list[dict] = []
+    mapping = trans or {}
+    for key, _, source in _iter_records(_csp5.parse(src.read_bytes())):
+        if not key.startswith("6/1/") or key in present:
+            continue
+        extra.append({
+            "key": key,
+            "source": source,
+            "target": _target_for_source(source, mapping) if mapping else source,
+        })
+    if not extra:
+        return rows
+    return rows + extra
 
 
 # ----------------------------------------------------------------------
@@ -256,10 +304,14 @@ def _export_one(rec: dict, force: bool) -> bool:
     rc = repack.main(["export", str(src), str(ws), "--reference", str(ref)])
     if rc == 0:
         rows = _read_rows(ws)
-        kept = _drop_protected(rec, rows)
+        pruned = _drop_protected(rec, rows)
+        kept = _append_block6_tree_rows(rec, pruned)
         if len(kept) != len(rows):
             _write_rows(ws, ["key", "source", "target"], kept)
-            print(f"  dropped {len(rows) - len(kept)} material-folder row(s)")
+            dropped = len(rows) - len(pruned)
+            added = len(kept) - len(pruned)
+            print(f"  worksheet: {len(rows)} export row(s) -> {len(kept)} "
+                  f"({dropped} locale-copy dropped, {added} block-6 added)")
     return rc == 0
 
 
@@ -366,6 +418,7 @@ def cmd_join(args: argparse.Namespace) -> int:
         if new != r["target"]:
             r["target"] = new
             changed += 1
+    rows = _append_block6_tree_rows(rec, rows, trans)
     _write_rows(ws, ["key", "source", "target"], rows)
 
     print(f"{rec['short']}-{rec['slug']}: mapped {len(trans)} unique "
@@ -399,12 +452,13 @@ def cmd_join_all(args: argparse.Namespace) -> int:
 def _translations_by_source(rec: dict) -> dict[str, str]:
     """Return finished translations keyed by normalized English source text."""
     protected = _material_folder_sources()
+    allow_folder_names = rec.get("short") == "7F9F9530"
     trans: dict[str, str] = {}
     uniq = unique_for(rec)
     if uniq.exists():
         for r in _read_rows(uniq):
             src = _lf(r["source"])
-            if src in protected:
+            if src in protected and not allow_folder_names:
                 continue
             t = r.get("target")
             if t is not None and t != "":
@@ -414,7 +468,7 @@ def _translations_by_source(rec: dict) -> dict[str, str]:
         if ws.exists():
             for r in _read_rows(ws):
                 src = _lf(r["source"])
-                if src in protected:
+                if src in protected and not allow_folder_names:
                     continue
                 t = (r.get("target") or "").strip()
                 if t and t != r["source"]:
@@ -440,18 +494,15 @@ def _worksheet_for_version(rec: dict) -> Path | None:
         if repack.main(["export", str(src), str(tmp), "--reference", str(ref)]) != 0:
             return None
         trans = _translations_by_source(rec)
-        # Block-6 (material folder-tree) keys are dropped so `apply` leaves them
-        # at the English source -- see NEVER_TRANSLATE.
+        # Locale-copy keys (JP/CN blocks) are dropped so `apply` leaves them
+        # at stock text -- see NEVER_TRANSLATE.
         rows = _drop_protected(rec, _read_rows(tmp))
         for r in rows:
             new = trans.get(_lf(r["source"]))
             if new is None:
                 continue
-            if "\r\n" in r["source"]:
-                new = _lf(new).replace("\n", "\r\n")
-            elif "\n" in r["source"]:
-                new = _lf(new)
-            r["target"] = new
+            r["target"] = _target_for_source(r["source"], trans)
+        rows = _append_block6_tree_rows(rec, rows, trans)
         _write_rows(tmp, ["key", "source", "target"], rows)
         return tmp
     except Exception:

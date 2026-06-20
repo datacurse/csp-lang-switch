@@ -31,6 +31,7 @@ from typing import Callable
 
 import install  # for ensure_admin, check_csp_closed, find_csp_resource, etc.
 from common import (
+    csp_is_running,
     detect_installed_csp_version as _detect_installed_csp_version,
     find_csp_resource_optional,
     is_admin,
@@ -51,6 +52,9 @@ from version import (
     install_matches_version,
     set_active_version as _set_version_langs_root,
 )
+
+import material_folders as _material_folders
+import ui_groups as _ui_groups
 
 
 for _stream in (sys.stdout, sys.stderr):
@@ -586,8 +590,10 @@ def plugin_install_dir(csp: str | None) -> Path:
 # Pipeline plumbing
 # ----------------------------------------------------------------------
 def _pipe_args(**kwargs) -> argparse.Namespace:
-    defaults = dict(csp=None, dry_run=False, yes=True, force=False,
-                    keep_open=False)
+    defaults = dict(
+        csp=None, dry_run=False, yes=True, force=False, keep_open=False,
+        only_files=None, partial_merges=None,
+    )
     defaults.update(kwargs)
     return argparse.Namespace(**defaults)
 
@@ -662,25 +668,37 @@ class MainUIPipeline(Pipeline):
         ref_names = {p.name for p in main_ui_resource_files(ref)}
         return _files_equal(slot, ref, ref_names)
 
-    def switch_to(self, choice, csp, dry_run):
+    def switch_to(
+        self,
+        choice,
+        csp,
+        dry_run,
+        *,
+        only_files: set[str] | None = None,
+        partial_merges: dict | None = None,
+    ):
         if choice.kind == "community" and self.has_community_ref(choice.id):
             install.cmd_install(_pipe_args(
                 target=choice.id, slot=COMMUNITY_SLOT, csp=csp,
-                dry_run=dry_run))
+                dry_run=dry_run, only_files=only_files,
+                partial_merges=partial_merges))
             return
         if choice.kind == "official" and choice.id != COMMUNITY_SLOT:
-            self._copy_official_to_slot(choice, csp, dry_run)
+            self._copy_official_to_slot(choice, csp, dry_run, only_files=only_files)
             return
         install.cmd_install(_pipe_args(
-            target="english", slot=COMMUNITY_SLOT, csp=csp, dry_run=dry_run))
+            target="english", slot=COMMUNITY_SLOT, csp=csp, dry_run=dry_run,
+            only_files=only_files, partial_merges=partial_merges))
 
-    def _copy_official_to_slot(self, choice, csp, dry_run):
+    def _copy_official_to_slot(self, choice, csp, dry_run, *, only_files=None):
         resource_dir = install.find_csp_resource(csp)
         src = resource_dir / choice.id
         slot = resource_dir / COMMUNITY_SLOT
         src_files = install.resource_files(src)
+        if only_files:
+            src_files = [f for f in src_files if f.name in only_files]
         if not src_files:
-            sys.exit(f"error: no resource files in official language folder: {src}")
+            sys.exit("error: no UI resource files selected for install")
         print(f"will install {choice.display} ({len(src_files)} files) "
               f"onto the {COMMUNITY_SLOT} slot")
         print(f"  {src}  ->  {slot}")
@@ -910,7 +928,116 @@ def build_switch_argv(args) -> list[str]:
     enabled = getattr(args, "pipelines", None)
     if enabled is not None and enabled != set(PIPELINES):
         argv.extend(["--pipelines", ",".join(sorted(enabled))])
+    ui_groups = getattr(args, "ui_groups", None)
+    if ui_groups is not None:
+        argv.extend(["--ui-groups", ",".join(sorted(ui_groups))])
     return argv
+
+
+def _resolve_partial_merges(ui_groups: set[str] | None) -> dict:
+    if ui_groups is None:
+        return {}
+    return _ui_groups.partial_merges_for_groups(DATA_ROOT, ui_groups)
+
+
+def _resolve_only_files(ui_groups: set[str] | None) -> set[str] | None:
+    if ui_groups is None:
+        return None
+    files = _ui_groups.ui_files_for_groups(DATA_ROOT, ui_groups)
+    if not files:
+        sys.exit("error: no UI resource files match the selected translation parts")
+    return files
+
+
+def _material_folder_note(message: str, *, from_gui: bool) -> None:
+    if from_gui:
+        WARNINGS.append(message)
+    else:
+        print(f"  {message}")
+
+
+def _material_folder_backup(*, dry_run: bool, from_gui: bool) -> None:
+    """Copy MaterialFolderTag.mfta before changing language files."""
+    if dry_run:
+        return
+    if _material_folders.backup_mfta(USER_DATA):
+        count = _material_folders.count_user_folders()
+        _material_folder_note(
+            f"Saved MaterialFolderTag.mfta ({count} custom folder row(s)).",
+            from_gui=from_gui,
+        )
+
+
+def material_folder_status() -> dict:
+    """Snapshot for the GUI."""
+    info = _material_folders.backup_info(USER_DATA)
+    info["csp_running"] = csp_is_running()
+    return info
+
+
+def run_material_folder_backup(*, force: bool = False, dry_run: bool = False) -> dict:
+    """Copy MaterialFolderTag.mfta. No admin required."""
+    if not dry_run:
+        install.check_csp_closed(force)
+    if _material_folders.mfta_path() is None:
+        return {"kind": "err", "code": "err_csp_userdata"}
+    count = _material_folders.count_user_folders()
+    if dry_run:
+        return {"kind": "ok", "code": "material_backup_saved", "count": count}
+    if _material_folders.backup_mfta(USER_DATA):
+        return {"kind": "ok", "code": "material_backup_saved", "count": count}
+    return {"kind": "err", "code": "err_csp_userdata"}
+
+
+def run_material_folder_restore(*, force: bool = False, dry_run: bool = False) -> dict:
+    """Replace MaterialFolderTag.mfta with the saved copy. No admin required."""
+    if not dry_run:
+        install.check_csp_closed(force)
+    if not _material_folders.has_backup(USER_DATA):
+        return {"kind": "warn", "code": "material_restore_no_backup"}
+    count = _material_folders.count_user_folders(_material_folders.backup_file(USER_DATA))
+    if dry_run:
+        return {"kind": "ok", "code": "material_restore_replaced", "count": count}
+    if _material_folders.restore_mfta(USER_DATA):
+        return {"kind": "ok", "code": "material_restore_replaced", "count": count}
+    return {"kind": "warn", "code": "material_restore_no_backup"}
+
+
+def _print_material_folder_action(result: dict) -> None:
+    import gui_i18n as i18n
+
+    code = result.get("code", "")
+    count = result.get("count", 0)
+    notes = result.get("notes") or []
+    msg = i18n.t("en", code, count=count) if code else ""
+    kind = result.get("kind", "ok")
+    if kind == "err":
+        print(f"error: {msg}")
+    elif kind == "warn":
+        print(msg)
+    else:
+        print(msg)
+    for note in notes:
+        print(f"  {note}")
+
+
+def cmd_backup_folders(args) -> None:
+    result = run_material_folder_backup(force=args.force, dry_run=args.dry_run)
+    if args.dry_run and result.get("code") == "material_backup_saved":
+        print(f"Would save MaterialFolderTag.mfta ({result.get('count', 0)} custom folder row(s)).")
+        return
+    _print_material_folder_action(result)
+
+
+def cmd_restore_folders(args) -> None:
+    result = run_material_folder_restore(force=args.force, dry_run=args.dry_run)
+    if args.dry_run and result.get("code") == "material_restore_replaced":
+        print(
+            f"Would replace MaterialFolderTag.mfta "
+            f"({result.get('count', 0)} custom folder row(s))."
+        )
+        return
+    _print_material_folder_action(result)
 
 
 def cmd_switch(args) -> None:
@@ -940,6 +1067,9 @@ def cmd_switch(args) -> None:
 
     if enabled is not None and not enabled:
         sys.exit("error: no subsystems selected")
+    ui_groups = getattr(args, "ui_groups", None)
+    if enabled is not None and "main-ui" in enabled and ui_groups is not None and not ui_groups:
+        sys.exit("error: no UI translation parts selected")
 
     if not plan:
         if not from_gui:
@@ -950,10 +1080,13 @@ def cmd_switch(args) -> None:
                 print(f"\nAll subsystems already match '{choice.display}'. "
                       f"Nothing to do.")
             print(_final_instruction(choice))
+        if not args.dry_run:
+            _material_folder_backup(dry_run=False, from_gui=from_gui)
         return
 
     if not args.dry_run:
         install.check_csp_closed(args.force)
+        _material_folder_backup(dry_run=False, from_gui=from_gui)
         if not is_admin():
             if from_gui:
                 rc, err = run_elevated_sync(build_switch_argv(args))
@@ -971,7 +1104,21 @@ def cmd_switch(args) -> None:
 
         for name, pipe, _current, _desired in plan:
             try:
-                pipe.switch_to(choice, args.csp, args.dry_run)
+                only_files = (
+                    _resolve_only_files(getattr(args, "ui_groups", None))
+                    if isinstance(pipe, MainUIPipeline)
+                    else None
+                )
+                partial_merges = (
+                    _resolve_partial_merges(getattr(args, "ui_groups", None))
+                    if isinstance(pipe, MainUIPipeline)
+                    else None
+                )
+                pipe.switch_to(
+                    choice, args.csp, args.dry_run,
+                    only_files=only_files,
+                    partial_merges=partial_merges,
+                )
             except SystemExit as e:
                 sys.exit(f"\nerror: subsystem '{_LABELS[name]}' failed: {e}")
 
@@ -981,6 +1128,10 @@ def cmd_switch(args) -> None:
                 if fp is not None:
                     set_pipeline_state(state, name, current, fp)
             save_state(state)
+            _material_folder_note(
+                "After opening CSP, close it and click Replace database to restore folders.",
+                from_gui=from_gui,
+            )
 
         if WARNINGS:
             print(f"\nFinished with {len(WARNINGS)} warning(s) for '{choice.display}'.")
@@ -1081,6 +1232,8 @@ def main(argv: list[str] | None = None) -> None:
                "  csp-lang-switch russian      install the Russian community pack\n"
                "  csp-lang-switch english      restore stock files for English\n"
                "  csp-lang-switch japanese     restore stock files for Japanese\n"
+               "  csp-lang-switch restore-folders  restore custom material folders\n"
+               "  csp-lang-switch backup-folders   save custom material folders\n"
                "  csp-lang-switch status       show what is installed\n"
                "  csp-lang-switch              open the language picker",
     )
@@ -1104,12 +1257,16 @@ def main(argv: list[str] | None = None) -> None:
                         help=argparse.SUPPRESS)
     parser.add_argument("--pipelines", default=None,
                         help=argparse.SUPPRESS)
+    parser.add_argument("--ui-groups", default=None,
+                        help=argparse.SUPPRESS)
     parser.add_argument("--gui-error-file", default=None,
                         help=argparse.SUPPRESS)
 
     args = parser.parse_args(raw)
     if args.pipelines:
         args.pipelines = {p.strip() for p in args.pipelines.split(",") if p.strip()}
+    if args.ui_groups:
+        args.ui_groups = {g.strip() for g in args.ui_groups.split(",") if g.strip()}
     if no_args:
         args.target = "gui"
     if args.keep_open:
@@ -1133,6 +1290,10 @@ def main(argv: list[str] | None = None) -> None:
             cmd_menu(args)
         elif args.target == "status":
             cmd_status(args)
+        elif args.target in ("restore-folders", "restore_folders"):
+            cmd_restore_folders(args)
+        elif args.target in ("backup-folders", "backup_folders"):
+            cmd_backup_folders(args)
         else:
             cmd_switch(args)
     except SystemExit as e:
