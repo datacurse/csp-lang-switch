@@ -70,10 +70,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         discover_community_packs,
         discover_official_languages,
         is_official_state,
-        material_folder_status,
         official_id_from_state,
-        run_material_folder_backup,
-        run_material_folder_restore,
         set_active_version,
         summary_for_gui,
     )
@@ -197,33 +194,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         wraplength=420, justify="left", font=ctk.CTkFont(size=12))
     status_label.pack(anchor="w", pady=(8, 0))
 
-    material_label = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "material_section"),
-        font=ctk.CTkFont(size=14, weight="bold"))
-    material_label.pack(anchor="w", pady=(12, 4))
-
-    material_hint = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "material_hint"),
-        wraplength=420, justify="left",
-        font=ctk.CTkFont(size=11), text_color="gray50")
-    material_hint.pack(anchor="w", pady=(0, 4))
-
-    folders_why = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "folders_why"),
-        wraplength=420, justify="left",
-        font=ctk.CTkFont(size=11), text_color="gray50")
-    folders_why.pack(anchor="w", pady=(0, 4))
-
-    material_status = ctk.CTkLabel(
-        main, text="",
-        wraplength=420, justify="left", font=ctk.CTkFont(size=11))
-    material_status.pack(anchor="w", pady=(0, 6))
-
     progress = ctk.CTkProgressBar(footer, mode="indeterminate")
     busy = False
-
-    material_btns = ctk.CTkFrame(footer, fg_color="transparent")
-    material_btns.pack(fill="x", pady=(0, 4))
 
     buttons = ctk.CTkFrame(footer, fg_color="transparent")
     buttons.pack(fill="x")
@@ -238,16 +210,6 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         buttons, text=i18n.t(gui_lang, "btn_close"), fg_color="transparent",
         border_width=1, command=root.destroy)
     close_btn.pack(side="right", padx=(0, 8))
-
-    backup_folders_btn = ctk.CTkButton(
-        material_btns, text=i18n.t(gui_lang, "btn_backup_folders"),
-        command=lambda: run_folder_action("backup"))
-    backup_folders_btn.pack(side="left")
-    restore_folders_btn = ctk.CTkButton(
-        material_btns, text=i18n.t(gui_lang, "btn_restore_folders"),
-        fg_color="transparent", border_width=1,
-        command=lambda: run_folder_action("restore"))
-    restore_folders_btn.pack(side="left", padx=(8, 0))
 
     def _supported_list() -> str:
         return ", ".join(SUPPORTED_VERSIONS)
@@ -343,18 +305,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         }
         status_label.configure(text=text, text_color=colors.get(kind, colors["normal"]))
 
-    def _update_material_status() -> None:
-        try:
-            material_status.configure(
-                text=i18n.material_status_text(gui_lang, material_folder_status()))
-        except tk.TclError:
-            pass
-
-    def _material_buttons_state(state: str) -> None:
-        backup_folders_btn.configure(state=state)
-        restore_folders_btn.configure(state=state)
-
-    def _set_busy(on: bool, *, folder_action: str | None = None) -> None:
+    def _set_busy(on: bool) -> None:
         nonlocal busy
         busy = on
         state = "disabled" if on else "normal"
@@ -362,16 +313,10 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             apply_btn.configure(state=state)
         refresh_btn.configure(state=state)
         close_btn.configure(state=state)
-        _material_buttons_state(state)
         if on:
-            progress.pack(fill="x", pady=(0, 6), before=material_btns)
+            progress.pack(fill="x", pady=(0, 6), before=buttons)
             progress.start()
-            if folder_action == "backup":
-                _set_status(i18n.t(gui_lang, "material_working_backup"))
-            elif folder_action == "restore":
-                _set_status(i18n.t(gui_lang, "material_working_restore"))
-            else:
-                _set_status(i18n.t(gui_lang, "switching"))
+            _set_status(i18n.t(gui_lang, "switching"))
         else:
             progress.stop()
             progress.pack_forget()
@@ -405,47 +350,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 visible = {n: statuses[n] for n in _SWITCH_PIPELINES if n in statuses}
                 if visible:
                     _set_status(summary_for_gui(visible, gui_lang))
-            _update_material_status()
         except tk.TclError:
             pass
-
-    def _finish_folder_action(result: dict) -> None:
-        _set_busy(False)
-        code = str(result.get("code") or "err_generic")
-        count = int(result.get("count") or 0)
-        kind = str(result.get("kind") or "ok")
-        notes = result.get("notes") or []
-        msg = i18n.t(gui_lang, code, count=str(count))
-        if notes:
-            msg = f"{msg}\n" + "\n".join(str(n) for n in notes)
-        status_kind = "err" if kind == "err" else ("ok" if kind == "ok" else "normal")
-        _set_status(msg, kind=status_kind)
-        _update_material_status()
-        _fit_window(root, scroll, footer)
-
-    def run_folder_action(action: str) -> None:
-        if busy:
-            return
-        _set_busy(True, folder_action=action)
-        root.update()
-
-        def work() -> None:
-            result: dict
-            try:
-                if action == "backup":
-                    result = run_material_folder_backup()
-                else:
-                    result = run_material_folder_restore()
-            except SystemExit as e:
-                err = str(e.args[0]) if e.args else ""
-                result = {
-                    "kind": "err",
-                    "code": "err_csp_running" if "csp is running" in err.lower()
-                    else "err_generic",
-                }
-            root.after(0, lambda: _finish_folder_action(result))
-
-        threading.Thread(target=work, daemon=True).start()
 
     def _localize_error(msg: str) -> str:
         return i18n.localize_error(
@@ -463,7 +369,6 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             refresh(f"{notes}\n\n{restart}", final_kind="ok")
         else:
             refresh(restart, final_kind="ok")
-        _update_material_status()
         _fit_window(root, scroll, footer)
 
     def _selected_switch_targets() -> tuple[set[str], set[str] | None]:
@@ -545,7 +450,6 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
     _refresh_version_state()
     refresh()
-    _update_material_status()
     _fit_window(root, scroll, footer)
     root.deiconify()
     root.mainloop()

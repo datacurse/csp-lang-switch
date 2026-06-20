@@ -226,35 +226,9 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "summary_mixed": "Subsystems are mixed; switch again to make them consistent.",
         "summary_mixed_unknown": "Subsystems are in a mix of original and unknown states.",
-        "material_section": "Material folder database",
-        "material_hint": (
-            "Before Apply, a copy of MaterialFolderTag.mfta is saved automatically. "
-            "After switching language and opening CSP once, close CSP and click "
-            "Replace database to put the saved file back."
-        ),
-        "material_status": (
-            "Live file: {live} custom folder row(s). Saved copy: {backup} row(s), {when}."
-        ),
-        "material_status_no_backup": (
-            "Live file: {live} custom folder row(s). No saved copy yet — click Save database."
-        ),
-        "btn_backup_folders": "Save database",
-        "btn_restore_folders": "Replace database",
-        "material_working_backup": "Saving MaterialFolderTag.mfta…",
-        "material_working_restore": "Replacing MaterialFolderTag.mfta…",
-        "material_backup_saved": "Saved MaterialFolderTag.mfta ({count} custom folder row(s)).",
-        "material_restore_replaced": (
-            "Replaced MaterialFolderTag.mfta ({count} custom folder row(s)). "
-            "Restart Clip Studio Paint."
-        ),
-        "material_restore_no_backup": (
-            "No saved copy found. Switch language or click Save database first."
-        ),
-        "material_csp_running": "Clip Studio Paint is running — close it first.",
         "translate_parts": "What to translate (for testing)",
         "translate_parts_hint": (
-            "Uncheck parts one at a time to see which change wipes custom "
-            "material folders."
+            "Uncheck parts one at a time to isolate which bundle causes issues."
         ),
         "translate_parts_mft": "7F9F9530 — material palette / cloud (by block)",
         "translate_parts_mft_hint": (
@@ -273,11 +247,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ui_group_folder_tree": "Material folder tree — English block 6 / 6/1/",
         "ui_group_other_ui": "Other UI bundles (~28 files)",
         "ui_group_plugins": "Filter plug-ins (DLL strings)",
-        "folders_why": (
-            "Custom folders: back up MaterialFolderTag.mfta before Apply. "
-            "After switching language, open CSP once, close it, then Replace "
-            "database and restart CSP."
-        ),
         "err_no_ui_parts": "Check at least one UI bundle to translate.",
     },
     "ru": {
@@ -365,35 +334,9 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "summary_mixed": "Подсистемы в разном состоянии; переключите снова для согласованности.",
         "summary_mixed_unknown": "Подсистемы смешаны: оригинал и неизвестное состояние.",
-        "material_section": "База папок материалов",
-        "material_hint": (
-            "Перед «Применить» автоматически сохраняется файл MaterialFolderTag.mfta. "
-            "После смены языка откройте CSP один раз, закройте её и нажмите "
-            "«Заменить базу», чтобы вернуть сохранённый файл."
-        ),
-        "material_status": (
-            "Сейчас в файле: {live} своих папок. Сохранённая копия: {backup}, {when}."
-        ),
-        "material_status_no_backup": (
-            "Сейчас в файле: {live} своих папок. Копии ещё нет — нажмите «Сохранить базу»."
-        ),
-        "btn_backup_folders": "Сохранить базу",
-        "btn_restore_folders": "Заменить базу",
-        "material_working_backup": "Сохранение MaterialFolderTag.mfta…",
-        "material_working_restore": "Замена MaterialFolderTag.mfta…",
-        "material_backup_saved": "Сохранён MaterialFolderTag.mfta ({count} своих папок).",
-        "material_restore_replaced": (
-            "MaterialFolderTag.mfta заменён ({count} своих папок). "
-            "Перезапустите Clip Studio Paint."
-        ),
-        "material_restore_no_backup": (
-            "Сохранённая копия не найдена. Смените язык или нажмите «Сохранить базу»."
-        ),
-        "material_csp_running": "Clip Studio Paint запущена — сначала закройте её.",
         "translate_parts": "Что переводить (для проверки)",
         "translate_parts_hint": (
-            "Снимайте галочки по одной части, чтобы найти, что удаляет "
-            "свои папки материалов."
+            "Снимайте галочки по одной части, чтобы проверить отдельные блоки."
         ),
         "translate_parts_mft": "7F9F9530 — палитра материалов / облако (по блокам)",
         "translate_parts_mft_hint": (
@@ -412,11 +355,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         "ui_group_folder_tree": "Дерево папок материалов — блок 6 / 6/1/",
         "ui_group_other_ui": "Остальные UI-файлы (~28 шт.)",
         "ui_group_plugins": "Фильтры — plug-in DLL",
-        "folders_why": (
-            "Свои папки: сохраните MaterialFolderTag.mfta до «Применить». "
-            "После смены языка откройте CSP один раз, закройте, нажмите "
-            "«Заменить базу» и перезапустите CSP."
-        ),
         "err_no_ui_parts": "Отметьте хотя бы один UI-файл для перевода.",
     },
 }
@@ -430,40 +368,6 @@ def t(language: str, key: str, **kwargs: str) -> str:
     if kwargs:
         return text.format(**kwargs)
     return text
-
-
-def format_backup_time(iso: str | None, gui_lang: str) -> str:
-    if not iso:
-        return "—" if normalize_language(gui_lang) == "ru" else "never"
-    try:
-        from datetime import datetime
-
-        dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
-        local = dt.astimezone()
-        if normalize_language(gui_lang) == "ru":
-            return local.strftime("%d.%m.%Y %H:%M")
-        return local.strftime("%Y-%m-%d %H:%M")
-    except (TypeError, ValueError):
-        return iso[:16] if iso else "—"
-
-
-def material_status_text(gui_lang: str, info: dict) -> str:
-    live = int(info.get("live_count") or 0)
-    backup = int(info.get("backup_count") or 0)
-    when = format_backup_time(info.get("saved_at"), gui_lang)
-    lines: list[str] = []
-
-    if info.get("csp_running"):
-        lines.append(t(gui_lang, "material_csp_running"))
-
-    if info.get("has_backup"):
-        lines.append(
-            t(gui_lang, "material_status", live=str(live), backup=str(backup), when=when)
-        )
-    else:
-        lines.append(t(gui_lang, "material_status_no_backup", live=str(live)))
-
-    return "\n".join(lines)
 
 
 def localize_error(gui_lang: str, message: str, *, version: str | None = None) -> str:

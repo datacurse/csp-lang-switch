@@ -53,7 +53,6 @@ from version import (
     set_active_version as _set_version_langs_root,
 )
 
-import material_folders as _material_folders
 import ui_groups as _ui_groups
 
 
@@ -949,97 +948,6 @@ def _resolve_only_files(ui_groups: set[str] | None) -> set[str] | None:
     return files
 
 
-def _material_folder_note(message: str, *, from_gui: bool) -> None:
-    if from_gui:
-        WARNINGS.append(message)
-    else:
-        print(f"  {message}")
-
-
-def _material_folder_backup(*, dry_run: bool, from_gui: bool) -> None:
-    """Copy MaterialFolderTag.mfta before changing language files."""
-    if dry_run:
-        return
-    if _material_folders.backup_mfta(USER_DATA):
-        count = _material_folders.count_user_folders()
-        _material_folder_note(
-            f"Saved MaterialFolderTag.mfta ({count} custom folder row(s)).",
-            from_gui=from_gui,
-        )
-
-
-def material_folder_status() -> dict:
-    """Snapshot for the GUI."""
-    info = _material_folders.backup_info(USER_DATA)
-    info["csp_running"] = csp_is_running()
-    return info
-
-
-def run_material_folder_backup(*, force: bool = False, dry_run: bool = False) -> dict:
-    """Copy MaterialFolderTag.mfta. No admin required."""
-    if not dry_run:
-        install.check_csp_closed(force)
-    if _material_folders.mfta_path() is None:
-        return {"kind": "err", "code": "err_csp_userdata"}
-    count = _material_folders.count_user_folders()
-    if dry_run:
-        return {"kind": "ok", "code": "material_backup_saved", "count": count}
-    if _material_folders.backup_mfta(USER_DATA):
-        return {"kind": "ok", "code": "material_backup_saved", "count": count}
-    return {"kind": "err", "code": "err_csp_userdata"}
-
-
-def run_material_folder_restore(*, force: bool = False, dry_run: bool = False) -> dict:
-    """Replace MaterialFolderTag.mfta with the saved copy. No admin required."""
-    if not dry_run:
-        install.check_csp_closed(force)
-    if not _material_folders.has_backup(USER_DATA):
-        return {"kind": "warn", "code": "material_restore_no_backup"}
-    count = _material_folders.count_user_folders(_material_folders.backup_file(USER_DATA))
-    if dry_run:
-        return {"kind": "ok", "code": "material_restore_replaced", "count": count}
-    if _material_folders.restore_mfta(USER_DATA):
-        return {"kind": "ok", "code": "material_restore_replaced", "count": count}
-    return {"kind": "warn", "code": "material_restore_no_backup"}
-
-
-def _print_material_folder_action(result: dict) -> None:
-    import gui_i18n as i18n
-
-    code = result.get("code", "")
-    count = result.get("count", 0)
-    notes = result.get("notes") or []
-    msg = i18n.t("en", code, count=count) if code else ""
-    kind = result.get("kind", "ok")
-    if kind == "err":
-        print(f"error: {msg}")
-    elif kind == "warn":
-        print(msg)
-    else:
-        print(msg)
-    for note in notes:
-        print(f"  {note}")
-
-
-def cmd_backup_folders(args) -> None:
-    result = run_material_folder_backup(force=args.force, dry_run=args.dry_run)
-    if args.dry_run and result.get("code") == "material_backup_saved":
-        print(f"Would save MaterialFolderTag.mfta ({result.get('count', 0)} custom folder row(s)).")
-        return
-    _print_material_folder_action(result)
-
-
-def cmd_restore_folders(args) -> None:
-    result = run_material_folder_restore(force=args.force, dry_run=args.dry_run)
-    if args.dry_run and result.get("code") == "material_restore_replaced":
-        print(
-            f"Would replace MaterialFolderTag.mfta "
-            f"({result.get('count', 0)} custom folder row(s))."
-        )
-        return
-    _print_material_folder_action(result)
-
-
 def cmd_switch(args) -> None:
     from_gui = getattr(args, "from_gui", False)
     if getattr(args, "csp_version", None):
@@ -1080,13 +988,10 @@ def cmd_switch(args) -> None:
                 print(f"\nAll subsystems already match '{choice.display}'. "
                       f"Nothing to do.")
             print(_final_instruction(choice))
-        if not args.dry_run:
-            _material_folder_backup(dry_run=False, from_gui=from_gui)
         return
 
     if not args.dry_run:
         install.check_csp_closed(args.force)
-        _material_folder_backup(dry_run=False, from_gui=from_gui)
         if not is_admin():
             if from_gui:
                 rc, err = run_elevated_sync(build_switch_argv(args))
@@ -1128,10 +1033,6 @@ def cmd_switch(args) -> None:
                 if fp is not None:
                     set_pipeline_state(state, name, current, fp)
             save_state(state)
-            _material_folder_note(
-                "After opening CSP, close it and click Replace database to restore folders.",
-                from_gui=from_gui,
-            )
 
         if WARNINGS:
             print(f"\nFinished with {len(WARNINGS)} warning(s) for '{choice.display}'.")
@@ -1232,8 +1133,6 @@ def main(argv: list[str] | None = None) -> None:
                "  csp-lang-switch russian      install the Russian community pack\n"
                "  csp-lang-switch english      restore stock files for English\n"
                "  csp-lang-switch japanese     restore stock files for Japanese\n"
-               "  csp-lang-switch restore-folders  restore custom material folders\n"
-               "  csp-lang-switch backup-folders   save custom material folders\n"
                "  csp-lang-switch status       show what is installed\n"
                "  csp-lang-switch              open the language picker",
     )
@@ -1290,10 +1189,6 @@ def main(argv: list[str] | None = None) -> None:
             cmd_menu(args)
         elif args.target == "status":
             cmd_status(args)
-        elif args.target in ("restore-folders", "restore_folders"):
-            cmd_restore_folders(args)
-        elif args.target in ("backup-folders", "backup_folders"):
-            cmd_backup_folders(args)
         else:
             cmd_switch(args)
     except SystemExit as e:

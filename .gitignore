@@ -30,6 +30,7 @@ versions/*/langs/
 .lang-state.json
 .csp-lang-switch-settings.json
 .csp-lang-settings.json
+MaterialFolderTag.mfta.backup
 
 # Editor / IDE
 .idea/

@@ -182,8 +182,9 @@ Enforced in `src/batch.py`:
   from `unique.csv`.
 
 CSP still matches stock materials to built-in folders **by name** in the local
-DB (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`). Keep custom folders via
-the GUI backup → switch → replace-database workflow documented in the README.
+DB (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`). Custom palette folders
+are preserved when block **6** is translated and blocks **5** / **7** stay at
+stock — see above.
 
 > Historical note: an earlier policy kept block **6** English and accidentally
 > translated block **5** (Japanese sources mapped to Russian tree names). That

@@ -375,7 +375,7 @@ Please wait for a while and try it again.","База данных материа
 6/1/93#0,Flower and plant,Цветы и растения
 6/1/95#0,Effect and stage direction,Эффект и постановка
 6/1/100#0,Body type,Тип телосложения
-6/1/102#0,Hand model,
+6/1/102#0,Hand model,Модель руки
 6/1/106#0,Entire body,Всё тело
 6/1/108#0,Pose sequence,Последовательность поз
 6/1/110#0,Small object,Мелкий предмет
@@ -492,9 +492,9 @@ Please wait for a while and try it again.","База данных материа
 6/1/248#0,3D:Character Texture:Face,3D:Текстура персонажа:Лицо
 6/1/249#0,3D:Character Texture,3D:Текстура персонажа
 6/1/251#0,3D:Body type,3D:Тип телосложения
-6/1/256#0,3D:Hand model,
-6/1/259#0,3D:Pose:Pose sequence,
-6/1/261#0,Recently used materials,
+6/1/256#0,3D:Hand model,3D:Модель руки
+6/1/259#0,3D:Pose:Pose sequence,3D:Поза:Последовательность поз
+6/1/261#0,Recently used materials,Недавно использованные материалы
 8/1/2#0,New folder,Новая папка
 8/1/3#0,Delete,Удалить
 8/1/4#0,Change name,Изменить имя
@@ -524,95 +524,95 @@ Please wait for a while and try it again.","База данных материа
 10/1/12#0,Syncing off,Синхронизация выключена
 10/1/13#0,Materials not added,Материалы не добавлены
 6/1/1#0,All,Все
-6/1/2#0,Template,Template
+6/1/2#0,Template,Шаблон
 6/1/4#0,Frame,Кадр
-6/1/5#0,Character,Character
+6/1/5#0,Character,Персонаж
 6/1/6#0,Pose,Поза
 6/1/7#0,Background,Фон
-6/1/8#0,Motion,Motion
-6/1/9#0,Character,Character
-6/1/10#0,Camera,Camera
+6/1/8#0,Motion,Движение
+6/1/9#0,Character,Персонаж
+6/1/10#0,Camera,Камера
 6/1/11#0,2D,2D
-6/1/15#0,Item,Item
+6/1/15#0,Item,Предмет
 6/1/16#0,Balloon,Выноска
 6/1/19#0,Sign,Манга-символы
-6/1/20#0,Effect,Effect
+6/1/20#0,Effect,Эффект
 6/1/21#0,Other,Прочее
 6/1/23#0,Material,Материал
-6/1/28#0,Pattern,Pattern
+6/1/28#0,Pattern,Узор
 6/1/32#0,Other,Прочее
 6/1/36#0,Background,Фон
-6/1/37#0,Nature,Nature
-6/1/38#0,Artificial,Artificial
-6/1/39#0,Texture,Texture
-6/1/41#0,Basic,Basic
-6/1/42#0,Dot,Dot
+6/1/37#0,Nature,Природа
+6/1/38#0,Artificial,Искусственное
+6/1/39#0,Texture,Текстура
+6/1/41#0,Basic,Основное
+6/1/42#0,Dot,Точки
 6/1/45#0,Gradient,Градиент
-6/1/46#0,Dot,Dot
-6/1/49#0,Cross-hatching,Cross-hatching
-6/1/50#0,Pattern,Pattern
+6/1/46#0,Dot,Точки
+6/1/49#0,Cross-hatching,Перекрёстная штриховка
+6/1/50#0,Pattern,Узор
 6/1/54#0,Other,Прочее
 6/1/58#0,Background,Фон
-6/1/59#0,Nature,Nature
-6/1/60#0,Artificial,Artificial
-6/1/61#0,Texture,Texture
+6/1/59#0,Nature,Природа
+6/1/60#0,Artificial,Искусственное
+6/1/61#0,Texture,Текстура
 6/1/64#0,Balloon,Выноска
-6/1/65#0,Dialog,Dialog
-6/1/66#0,Feeling,Feeling
-6/1/67#0,Narration,Narration
-6/1/75#0,Impact,Impact
-6/1/77#0,Sentiment,Sentiment
+6/1/65#0,Dialog,Реплика
+6/1/66#0,Feeling,Настроение
+6/1/67#0,Narration,Повествование
+6/1/75#0,Impact,Удар
+6/1/77#0,Sentiment,Настроение
 6/1/79#0,Sign,Манга-символы
-6/1/84#0,Wound,Wound
-6/1/85#0,Light,Light
-6/1/87#0,Icon,Icon
+6/1/84#0,Wound,Рана
+6/1/85#0,Light,Свет
+6/1/87#0,Icon,Значок
 6/1/88#0,Other,Прочее
-6/1/90#0,Illustration,Illustration
-6/1/91#0,Building,Building
-6/1/92#0,Tool,Tool
-6/1/94#0,Nature,Nature
-6/1/96#0,Decoration,Decoration
-6/1/97#0,Picture,Picture
+6/1/90#0,Illustration,Иллюстрация
+6/1/91#0,Building,Здание
+6/1/92#0,Tool,Инструмент
+6/1/94#0,Nature,Природа
+6/1/96#0,Decoration,Украшение
+6/1/97#0,Picture,Фотография
 6/1/98#0,Brush,Кисть
 6/1/99#0,3D,3D
-6/1/101#0,Head,Head
-6/1/103#0,Primitive,Primitive
+6/1/101#0,Head,Голова
+6/1/103#0,Primitive,Примитив
 6/1/104#0,Panorama,Небесная сфера
 6/1/105#0,Pose,Поза
-6/1/107#0,Hand,Hand
-6/1/109#0,Character,Character
-6/1/111#0,Commodity,Commodity
-6/1/115#0,Sport,Sport
-6/1/118#0,Fashion,Fashion
-6/1/119#0,Tool,Tool
-6/1/120#0,Weapon,Weapon
-6/1/121#0,Vehicle,Vehicle
+6/1/107#0,Hand,Рука
+6/1/109#0,Character,Персонаж
+6/1/111#0,Commodity,Предметы быта
+6/1/115#0,Sport,Спорт
+6/1/118#0,Fashion,Мода
+6/1/119#0,Tool,Инструмент
+6/1/120#0,Weapon,Оружие
+6/1/121#0,Vehicle,Транспорт
 6/1/122#0,Background,Фон
-6/1/124#0,Housing,Housing
-6/1/125#0,Vehicle,Vehicle
-6/1/129#0,Motion,Motion
-6/1/130#0,Character,Character
-6/1/131#0,Camera,Camera
-6/1/133#0,Face,Face
-6/1/134#0,Body,Body
-6/1/135#0,Hair,Hair
-6/1/137#0,Face,Face
-6/1/138#0,Download,Download
+6/1/124#0,Housing,Жильё
+6/1/125#0,Vehicle,Транспорт
+6/1/129#0,Motion,Движение
+6/1/130#0,Character,Персонаж
+6/1/131#0,Camera,Камера
+6/1/133#0,Face,Лицо
+6/1/134#0,Body,Тело
+6/1/135#0,Hair,Волосы
+6/1/137#0,Face,Лицо
+6/1/138#0,Download,Загрузки
 6/1/144#0,Tone,Тон
 6/1/145#0,Material,Материал
-6/1/220#0,3D:Pose:Hand,3D:Pose:Hand
-6/1/221#0,3D:Pose,3D:Pose
-6/1/235#0,3D:Background:Housing,3D:Background:Housing
-6/1/236#0,3D:Background:Vehicle,3D:Background:Vehicle
-6/1/240#0,3D:Background,3D:Background
-6/1/241#0,3D:Motion:Character,3D:Motion:Character
-6/1/242#0,3D:Motion:Camera,3D:Motion:Camera
-6/1/243#0,3D:Motion,3D:Motion
-6/1/250#0,3D:Character,3D:Character
+6/1/220#0,3D:Pose:Hand,3D:Поза:Рука
+6/1/221#0,3D:Pose,3D:Поза
+6/1/235#0,3D:Background:Housing,3D:Фон:Жильё
+6/1/236#0,3D:Background:Vehicle,3D:Фон:Транспорт
+6/1/240#0,3D:Background,3D:Фон
+6/1/241#0,3D:Motion:Character,3D:Движение:Персонаж
+6/1/242#0,3D:Motion:Camera,3D:Движение:Камера
+6/1/243#0,3D:Motion,3D:Движение
+6/1/250#0,3D:Character,3D:Персонаж
 6/1/252#0,3D,3D
-6/1/253#0,Download:Material,Download:Material
-6/1/254#0,Download,Download
-6/1/255#0,3D:Head,3D:Head
-6/1/257#0,3D:Primitive,3D:Primitive
-6/1/258#0,3D:Panorama,3D:Panorama
-6/1/260#0,Favorite,Favorite
+6/1/253#0,Download:Material,Загрузки:Материал
+6/1/254#0,Download,Загрузки
+6/1/255#0,3D:Head,3D:Голова
+6/1/257#0,3D:Primitive,3D:Примитив
+6/1/258#0,3D:Panorama,3D:Небесная сфера
+6/1/260#0,Favorite,Избранное
