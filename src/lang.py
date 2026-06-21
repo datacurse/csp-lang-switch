@@ -461,6 +461,39 @@ def _require_matching_csp_version(csp: str | None, choice: LanguageChoice) -> No
     )
 
 
+def _repack_stale_community_translations() -> None:
+    """When running from source, rebuild langs/ files whose worksheets changed."""
+    if FROZEN:
+        return
+    import batch
+
+    batch.configure_version(_selected_version)
+    manifest = batch.load_manifest()
+    stale: list[str] = []
+    for rec in manifest:
+        if rec.get("target") != "yes":
+            continue
+        ws = batch.worksheet_for(rec)
+        uniq = batch.unique_for(rec)
+        out = batch.output_for(rec, "russian")
+        if not ws.is_file():
+            continue
+        sources = [ws]
+        if uniq.is_file():
+            sources.append(uniq)
+        newest = max(p.stat().st_mtime for p in sources)
+        if not out.is_file() or newest > out.stat().st_mtime:
+            stale.append(rec["short"])
+    if not stale:
+        return
+    print(f"\nRepacking {len(stale)} stale translation file(s) before install...")
+    for short in stale:
+        rec = batch.resolve(manifest, short)
+        print(f"  pack {rec['short']}-{rec['slug']}")
+        if not batch._pack_one(rec, "russian"):
+            sys.exit(f"error: repack failed for {rec['short']}-{rec['slug']}")
+
+
 def _seed_bundled_backups() -> None:
     """Copy bundled English stock into LOCALAPPDATA when backup dirs are empty."""
     if not FROZEN or not BUNDLED_ENGLISH.is_dir():
@@ -959,6 +992,8 @@ def cmd_switch(args) -> None:
     choice = _choice_or_exit(args.target, args.csp)
     _configure_pipelines()
     _require_matching_csp_version(args.csp, choice)
+    if choice.kind == "community" and not args.dry_run:
+        _repack_stale_community_translations()
     state = load_state()
     pipes = all_pipelines()
     cached_all = state.get("pipelines", {})
@@ -970,7 +1005,13 @@ def cmd_switch(args) -> None:
             continue
         current, _fp = classify(pipe, args.csp, cached_all.get(name))
         desired = pipe.desired_state(choice)
-        if current == desired:
+        needs_refresh = (
+            choice.kind == "community"
+            and desired == choice.id
+            and pipe.has_community_ref(choice.id)
+            and pipe.is_state(args.csp, choice.id) is not True
+        )
+        if current == desired and not needs_refresh:
             if not from_gui:
                 print(f"  {_LABELS[name]}: already {state_label(desired)} -- skipping")
         else:

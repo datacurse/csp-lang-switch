@@ -109,10 +109,17 @@ MATERIAL_FOLDER_GUID = "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
 # palette chrome or preferences, not a material folder node.
 MATERIAL_NAME_UI_KEYS: frozenset[str] = frozenset({
     "13/1/1197#0",   # Tool palette title
+    "13/1/1396#0",   # Filter menu category
     "123/1/19#0",
+    "137/1/118#0",  # Timeline effect tool
     "146/1/28#0",
     "152/1/9#0",
+    "258/1/132#0",  # Effect layer type
+    "259/1/57#0",   # Decoration brush subtool
+    "359/1/114#0",  # Brush effect setting
     "387/1/1#0",    # Tools preferences category
+    "415/1/528#0",  # Window menu
+    "451/1/53#0",   # Filter dialog parameter group
     "58/1/352#0",   # material-catalog tool setting label
 })
 _material_folder_source_cache: frozenset[str] | None = None

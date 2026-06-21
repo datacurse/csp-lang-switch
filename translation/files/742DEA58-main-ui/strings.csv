@@ -3436,7 +3436,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 13/1/644#0,Binarization,Бинаризация
 13/1/646#0,Gradient map,Карта градиента
 13/1/648#0,Color Match,Сопоставление цветов
-13/1/1396#0,Effect,Effect
+13/1/1396#0,Effect,Эффект
 13/1/1397#0,Crystallize,Кристаллизация
 13/1/1398#0,Blur,Размытие
 13/1/1399#0,Lens Blur,Размытие линзы
@@ -6850,7 +6850,7 @@ the frequency will be the default frequency of the canvas instead, and will not 
 137/1/115#0,[Light table] tool,Инструмент [Лайтбокс]
 137/1/116#0,Move images on light table,Перемещать изображения на лайтбоксе
 137/1/117#0,[Edit timeline] tool,Инструмент [Редактировать шкалу времени]
-137/1/118#0,Effect,Effect
+137/1/118#0,Effect,Эффект
 137/1/119#0,Add effect to layer,Добавить эффект к слою
 137/1/120#0,Border effect,Эффект границы
 137/1/121#0,Extract line,Извлечь линию
@@ -9338,7 +9338,7 @@ If you do not save, any unsaved changes apart from the current canvas will lost.
 258/1/129#0,Operation,Операция
 258/1/130#0,Move layer,Переместить слой
 258/1/131#0,Eyedropper,Пипетка
-258/1/132#0,Effect,Effect
+258/1/132#0,Effect,Эффект
 258/1/133#0,Text,Текст
 258/1/134#0,Create frame,Создать рамку
 258/1/135#0,Create ruler,Создать линейку
@@ -9406,7 +9406,7 @@ If you do not save, any unsaved changes apart from the current canvas will lost.
 259/1/54#0,India ink,Тушь
 259/1/55#0,Airbrush,Аэрограф
 259/1/56#0,Decoration,Decoration
-259/1/57#0,Effect,Effect
+259/1/57#0,Effect,Эффект
 259/1/58#0,Ribbon,Лента
 259/1/59#0,Decoration,Decoration
 259/1/60#0,Natural scene,Природная сцена
@@ -13746,7 +13746,7 @@ Please see the support information for details.","Если папка Clip Studi
 359/1/111#0,Node,Узел
 359/1/112#0,Density,Плотность
 359/1/113#0,Position,Положение
-359/1/114#0,Effect,Effect
+359/1/114#0,Effect,Эффект
 359/1/115#0,Edge,Край
 359/1/116#0,Watercolor edge,Акварельный край
 359/1/117#0,Change use of line extraction,Изменить использование извлечения линий
@@ -14959,7 +14959,7 @@ You cannot open this project.","Параметр «Командная работ
 415/1/525#0,Show canvas on external monitor,Показать холст на внешнем мониторе
 415/1/526#0,Show playback fps,Показать частоту кадров воспроизведения
 415/1/527#0,Draw,Рисование
-415/1/528#0,Effect,Effect
+415/1/528#0,Effect,Эффект
 415/1/529#0,Canvas,Холст
 415/1/530#0,New Window,Новое окно
 415/1/531#0,Cascade,Каскадом
@@ -15825,7 +15825,7 @@ Gray","Шум
 451/1/50#0,Color blur,Размытие цвета
 451/1/51#0,Color blending,Смешивание цвета
 451/1/52#0,Number of colors,Количество цветов
-451/1/53#0,Effect,Effect
+451/1/53#0,Effect,Эффект
 451/1/54#0,Effect strength,Сила эффекта
 451/1/55#0,Intensity,Интенсивность
 451/1/56#0,Noise strength,Сила шума
