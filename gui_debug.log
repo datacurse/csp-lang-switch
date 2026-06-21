@@ -1,0 +1,27 @@
+start
+ctk ok
+gui_picker ok
+version=5.0.4 detected=5.0.4
+calling cmd_gui
+mainloop entered
+still alive at 500ms
+destroying after test
+destroy called
+  File "<string>", line 47, in <module>
+  File "C:\Users\loki\code\csp-translation\src\lang.py", line 1083, in cmd_gui
+    run_picker(args, SETTINGS_FILE)
+  File "C:\Users\loki\code\csp-translation\src\gui_picker.py", line 402, in run_picker
+    root.mainloop()
+  File "<string>", line 34, in ml
+  File "C:\Users\loki\AppData\Roaming\Python\Python312\site-packages\customtkinter\windows\ctk_tk.py", line 165, in mainloop
+    super().mainloop(*args, **kwargs)
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1505, in mainloop
+    self.tk.mainloop(n)
+  File "C:\Python312\Lib\tkinter\__init__.py", line 1968, in __call__
+    return self.func(*args)
+  File "C:\Python312\Lib\tkinter\__init__.py", line 862, in callit
+    func(*args)
+  File "<string>", line 33, in <lambda>
+  File "<string>", line 41, in destroy
+mainloop exited
+cmd_gui returned normally

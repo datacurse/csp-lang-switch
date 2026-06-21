@@ -53,9 +53,6 @@ from version import (
     set_active_version as _set_version_langs_root,
 )
 
-import ui_groups as _ui_groups
-
-
 for _stream in (sys.stdout, sys.stderr):
     if hasattr(_stream, "reconfigure"):
         _stream.reconfigure(encoding="utf-8", errors="replace")
@@ -927,25 +924,7 @@ def build_switch_argv(args) -> list[str]:
     enabled = getattr(args, "pipelines", None)
     if enabled is not None and enabled != set(PIPELINES):
         argv.extend(["--pipelines", ",".join(sorted(enabled))])
-    ui_groups = getattr(args, "ui_groups", None)
-    if ui_groups is not None:
-        argv.extend(["--ui-groups", ",".join(sorted(ui_groups))])
     return argv
-
-
-def _resolve_partial_merges(ui_groups: set[str] | None) -> dict:
-    if ui_groups is None:
-        return {}
-    return _ui_groups.partial_merges_for_groups(DATA_ROOT, ui_groups)
-
-
-def _resolve_only_files(ui_groups: set[str] | None) -> set[str] | None:
-    if ui_groups is None:
-        return None
-    files = _ui_groups.ui_files_for_groups(DATA_ROOT, ui_groups)
-    if not files:
-        sys.exit("error: no UI resource files match the selected translation parts")
-    return files
 
 
 def cmd_switch(args) -> None:
@@ -975,9 +954,6 @@ def cmd_switch(args) -> None:
 
     if enabled is not None and not enabled:
         sys.exit("error: no subsystems selected")
-    ui_groups = getattr(args, "ui_groups", None)
-    if enabled is not None and "main-ui" in enabled and ui_groups is not None and not ui_groups:
-        sys.exit("error: no UI translation parts selected")
 
     if not plan:
         if not from_gui:
@@ -1009,21 +985,7 @@ def cmd_switch(args) -> None:
 
         for name, pipe, _current, _desired in plan:
             try:
-                only_files = (
-                    _resolve_only_files(getattr(args, "ui_groups", None))
-                    if isinstance(pipe, MainUIPipeline)
-                    else None
-                )
-                partial_merges = (
-                    _resolve_partial_merges(getattr(args, "ui_groups", None))
-                    if isinstance(pipe, MainUIPipeline)
-                    else None
-                )
-                pipe.switch_to(
-                    choice, args.csp, args.dry_run,
-                    only_files=only_files,
-                    partial_merges=partial_merges,
-                )
+                pipe.switch_to(choice, args.csp, args.dry_run)
             except SystemExit as e:
                 sys.exit(f"\nerror: subsystem '{_LABELS[name]}' failed: {e}")
 
@@ -1101,7 +1063,30 @@ def _pause() -> None:
 # ----------------------------------------------------------------------
 # Simple GUI
 # ----------------------------------------------------------------------
+def _ensure_lang_module_alias() -> None:
+    """Make `python src/lang.py` share one module with `from lang import ...`."""
+    import sys
+
+    main_mod = sys.modules.get("__main__")
+    if main_mod is None:
+        return
+    main_file = Path(getattr(main_mod, "__file__", "") or "").name
+    if main_file == "lang.py":
+        sys.modules["lang"] = main_mod
+
+
+def _show_gui_error(message: str) -> None:
+    print(f"GUI error: {message}", file=sys.stderr)
+    try:
+        from tkinter import messagebox
+
+        messagebox.showerror("csp-lang-switch", message)
+    except Exception:
+        pass
+
+
 def cmd_gui(args) -> None:
+    _ensure_lang_module_alias()
     try:
         from gui_picker import run_picker
         run_picker(args, SETTINGS_FILE)
@@ -1113,14 +1098,17 @@ def cmd_gui(args) -> None:
             'falling back to console menu.')
         cmd_menu(args)
     except Exception as e:  # pragma: no cover
-        print(f'GUI unavailable ({e}); falling back to console menu.')
-        cmd_menu(args)
+        import traceback
+
+        traceback.print_exc()
+        _show_gui_error(str(e))
 
 
 # ----------------------------------------------------------------------
 # CLI
 # ----------------------------------------------------------------------
 def main(argv: list[str] | None = None) -> None:
+    _ensure_lang_module_alias()
     raw = sys.argv[1:] if argv is None else argv
     no_args = len(raw) == 0
 
@@ -1156,16 +1144,12 @@ def main(argv: list[str] | None = None) -> None:
                         help=argparse.SUPPRESS)
     parser.add_argument("--pipelines", default=None,
                         help=argparse.SUPPRESS)
-    parser.add_argument("--ui-groups", default=None,
-                        help=argparse.SUPPRESS)
     parser.add_argument("--gui-error-file", default=None,
                         help=argparse.SUPPRESS)
 
     args = parser.parse_args(raw)
     if args.pipelines:
         args.pipelines = {p.strip() for p in args.pipelines.split(",") if p.strip()}
-    if args.ui_groups:
-        args.ui_groups = {g.strip() for g in args.ui_groups.split(",") if g.strip()}
     if no_args:
         args.target = "gui"
     if args.keep_open:

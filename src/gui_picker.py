@@ -25,36 +25,33 @@ _GUI_LANG = "ru"
 _SWITCH_PIPELINES = ("main-ui", "plugins")
 
 
-def _fit_window(
-    root: ctk.CTk,
-    scroll: ctk.CTkScrollableFrame,
-    footer: ctk.CTkFrame,
-) -> None:
-    """Size the window; cap height to the screen and scroll overflow."""
-    root.update_idletasks()
-    root.update()
-    root.update_idletasks()
+# ---------------------------------------------------------------------------
+# Window size — edit these (logical pixels; CTk applies DPI scaling)
+# ---------------------------------------------------------------------------
+WINDOW_WIDTH = 400
+WINDOW_HEIGHT = 270
+# Status text wrap; None = WINDOW_WIDTH minus horizontal padding
+STATUS_WRAP_WIDTH: int | None = None
 
-    screen_w = root.winfo_screenwidth()
-    screen_h = root.winfo_screenheight()
-    margin = 24
-    max_h = max(480, screen_h - margin * 2)
 
-    width = max(460, min(scroll.winfo_reqwidth() + 48, screen_w - margin * 2))
-    footer_h = footer.winfo_reqheight()
-    content_h = scroll.winfo_reqheight() + footer_h + margin
-    height = min(content_h, max_h)
+def _status_wrap_width() -> int:
+    if STATUS_WRAP_WIDTH is not None:
+        return STATUS_WRAP_WIDTH
+    return max(200, WINDOW_WIDTH - 32)
 
-    w = root._reverse_window_scaling(width)
-    h = root._reverse_window_scaling(height)
-    x = max(0, (screen_w - width) // 2)
-    y = max(margin, (screen_h - height) // 2)
-    root.geometry(f"{w}x{h}+{x}+{y}")
-    root.minsize(
-        root._reverse_window_scaling(min(460, width)),
-        root._reverse_window_scaling(min(400, height)),
-    )
-    root.resizable(width < screen_w - margin * 2, height < content_h)
+
+def _apply_window_size(root: ctk.CTk) -> None:
+    width, height = WINDOW_WIDTH, WINDOW_HEIGHT
+    try:
+        root.update_idletasks()
+        sw = root.winfo_screenwidth()
+        sh = root.winfo_screenheight()
+        x = max(0, (sw - width) // 2)
+        y = max(24, (sh - height) // 2)
+        root.geometry(f"{width}x{height}+{x}+{y}")
+        root.minsize(width, height)
+    except Exception:
+        root.geometry(f"{width}x{height}")
 
 
 def run_picker(args: Namespace, settings_file: Path) -> None:
@@ -76,7 +73,6 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     )
     from version import SUPPORTED_VERSIONS
     from common import is_admin, run_elevated_sync
-    import ui_groups as ui_groups_mod
 
     gui_lang = _GUI_LANG
 
@@ -84,13 +80,14 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     ctk.set_default_color_theme("blue")
 
     root = ctk.CTk()
-    root.withdraw()
     root.title(i18n.t(gui_lang, "window_title"))
-    root.grid_rowconfigure(0, weight=1)
     root.grid_columnconfigure(0, weight=1)
+    _apply_window_size(root)
 
-    selected = StringVar(value="")
-    selected_version = StringVar(value=getattr(args, "csp_version", SUPPORTED_VERSIONS[0]))
+    selected = StringVar(master=root, value="")
+    selected_version = StringVar(
+        master=root, value=getattr(args, "csp_version", SUPPORTED_VERSIONS[0])
+    )
     choice_map: dict[str, LanguageChoice] = {}
 
     detected_version = getattr(args, "detected_csp_version", None)
@@ -98,17 +95,20 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     version_blocked = False
     version_warning: str | None = None
 
-    scroll = ctk.CTkScrollableFrame(root, fg_color="transparent")
-    scroll.grid(row=0, column=0, sticky="nsew", padx=12, pady=(8, 4))
-    scroll.grid_columnconfigure(0, weight=1)
-    main = scroll
+    content = ctk.CTkFrame(root, fg_color="transparent")
+    content.grid(row=0, column=0, sticky="ew", padx=12, pady=(12, 4))
+    content.grid_columnconfigure(0, weight=1)
+    main = content
 
     footer = ctk.CTkFrame(root, fg_color="transparent")
-    footer.grid(row=1, column=0, sticky="ew", padx=12, pady=(4, 8))
+    footer.grid(row=1, column=0, sticky="ew", padx=12, pady=(0, 10))
+    footer.grid_columnconfigure(0, weight=1)
 
     version_label = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "choose_csp_version"),
-        font=ctk.CTkFont(size=14, weight="bold"))
+        main,
+        text=i18n.t(gui_lang, "choose_csp_version"),
+        font=ctk.CTkFont(size=14, weight="bold"),
+    )
     version_label.pack(anchor="w", pady=(0, 4))
 
     version_row = ctk.CTkFrame(main, fg_color="transparent")
@@ -124,92 +124,41 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     version_combo.pack(side="left")
 
     version_hint = ctk.CTkLabel(
-        version_row, text="",
-        font=ctk.CTkFont(size=12), text_color="gray50")
+        version_row, text="", anchor="w",
+        font=ctk.CTkFont(size=12), text_color="gray50",
+    )
     version_hint.pack(side="left", padx=(10, 0))
 
     choose_label = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "choose_language"),
-        font=ctk.CTkFont(size=14, weight="bold"))
+        main,
+        text=i18n.t(gui_lang, "choose_language"),
+        font=ctk.CTkFont(size=14, weight="bold"),
+    )
     choose_label.pack(anchor="w", pady=(0, 6))
 
     lang_box = ctk.CTkFrame(main, corner_radius=8)
     lang_box.pack(fill="x")
     lang_inner = ctk.CTkFrame(lang_box, fg_color="transparent")
-    lang_inner.pack(fill="x", padx=10, pady=8)
-
-    parts_label = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "translate_parts"),
-        font=ctk.CTkFont(size=14, weight="bold"))
-    parts_label.pack(anchor="w", pady=(10, 4))
-
-    parts_hint = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "translate_parts_hint"),
-        wraplength=420, justify="left",
-        font=ctk.CTkFont(size=11), text_color="gray50")
-    parts_hint.pack(anchor="w", pady=(0, 4))
-
-    parts_box = ctk.CTkFrame(main, corner_radius=8)
-    parts_box.pack(fill="x")
-    parts_inner = ctk.CTkFrame(parts_box, fg_color="transparent")
-    parts_inner.pack(fill="x", padx=10, pady=8)
-
-    ui_group_vars: dict[str, tk.BooleanVar] = {}
-
-    def _add_ui_group_checkbox(group_id: str, *, padx: int = 2) -> None:
-        var = tk.BooleanVar(value=True)
-        ui_group_vars[group_id] = var
-        key = f"ui_group_{group_id.replace('-', '_')}"
-        ctk.CTkCheckBox(
-            parts_inner, text=i18n.t(gui_lang, key), variable=var,
-            font=ctk.CTkFont(size=12),
-        ).pack(anchor="w", pady=2, padx=padx)
-
-    for group_id in ("core-ui", "material-catalog"):
-        _add_ui_group_checkbox(group_id)
-
-    ctk.CTkLabel(
-        parts_inner, text=i18n.t(gui_lang, "translate_parts_mft"),
-        font=ctk.CTkFont(size=12, weight="bold"),
-    ).pack(anchor="w", pady=(6, 2), padx=2)
-    ctk.CTkLabel(
-        parts_inner, text=i18n.t(gui_lang, "translate_parts_mft_hint"),
-        wraplength=400, justify="left",
-        font=ctk.CTkFont(size=11), text_color="gray50",
-    ).pack(anchor="w", pady=(0, 4), padx=2)
-    for group_id in ui_groups_mod.MFT_BLOCK_IDS:
-        _add_ui_group_checkbox(group_id, padx=14)
-
-    _add_ui_group_checkbox("folder-tree")
-    _add_ui_group_checkbox("other-ui")
-
-    plugins_var = tk.BooleanVar(value=True)
-    ctk.CTkCheckBox(
-        parts_inner, text=i18n.t(gui_lang, "ui_group_plugins"), variable=plugins_var,
-        font=ctk.CTkFont(size=12),
-    ).pack(anchor="w", pady=2, padx=2)
+    lang_inner.pack(fill="x", padx=8, pady=6)
 
     status_label = ctk.CTkLabel(
-        main, text=i18n.t(gui_lang, "checking_status"),
-        wraplength=420, justify="left", font=ctk.CTkFont(size=12))
-    status_label.pack(anchor="w", pady=(8, 0))
+        footer,
+        text=i18n.t(gui_lang, "checking_status"),
+        wraplength=_status_wrap_width(),
+        justify="left",
+        anchor="w",
+        font=ctk.CTkFont(size=12),
+    )
+    status_label.grid(row=0, column=0, sticky="w", pady=(0, 8))
 
-    progress = ctk.CTkProgressBar(footer, mode="indeterminate")
     busy = False
 
     buttons = ctk.CTkFrame(footer, fg_color="transparent")
-    buttons.pack(fill="x")
-    apply_btn = ctk.CTkButton(buttons, text=i18n.t(gui_lang, "btn_apply"),
-                              command=lambda: apply_selected())
-    apply_btn.pack(side="right")
-    refresh_btn = ctk.CTkButton(
-        buttons, text=i18n.t(gui_lang, "btn_refresh"), fg_color="transparent",
-        border_width=1, command=lambda: refresh())
-    refresh_btn.pack(side="right", padx=(0, 8))
-    close_btn = ctk.CTkButton(
-        buttons, text=i18n.t(gui_lang, "btn_close"), fg_color="transparent",
-        border_width=1, command=root.destroy)
-    close_btn.pack(side="right", padx=(0, 8))
+    buttons.grid(row=1, column=0, sticky="w")
+    apply_btn = ctk.CTkButton(
+        buttons, text=i18n.t(gui_lang, "btn_apply"), command=lambda: apply_selected()
+    )
+    apply_btn.pack(side="left")
 
     def _supported_list() -> str:
         return ", ".join(SUPPORTED_VERSIONS)
@@ -228,21 +177,24 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
         if detected_version:
             version_hint.configure(
-                text=i18n.t(gui_lang, "csp_version_auto", version=detected_version))
+                text=i18n.t(gui_lang, "csp_version_auto", version=detected_version)
+            )
         else:
             version_hint.configure(text="")
 
         if raw_product_version and detected_version is None:
             version_blocked = True
             version_warning = i18n.t(
-                gui_lang, "err_csp_version_unsupported",
+                gui_lang,
+                "err_csp_version_unsupported",
                 installed=raw_product_version,
                 supported=_supported_list(),
             )
         elif detected_version and selected_version.get() != detected_version:
             version_blocked = True
             version_warning = i18n.t(
-                gui_lang, "err_csp_version_mismatch",
+                gui_lang,
+                "err_csp_version_mismatch",
                 selected=selected_version.get(),
                 installed=_installed_label(),
             )
@@ -278,8 +230,10 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         ordered = _ordered_choices()
         if not ordered:
             ctk.CTkLabel(
-                lang_inner, text=i18n.t(gui_lang, "no_official"),
-                font=ctk.CTkFont(size=12)).pack(anchor="w")
+                lang_inner,
+                text=i18n.t(gui_lang, "no_official"),
+                font=ctk.CTkFont(size=12),
+            ).pack(anchor="w")
             selected.set("")
             return
         preselect: str | None = None
@@ -291,8 +245,12 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                 label = f"{label} ({i18n.t(gui_lang, 'now_active')})"
                 preselect = key
             ctk.CTkRadioButton(
-                lang_inner, text=label, variable=selected, value=key,
-                radiobutton_width=18, radiobutton_height=18,
+                lang_inner,
+                text=label,
+                variable=selected,
+                value=key,
+                radiobutton_width=18,
+                radiobutton_height=18,
                 font=ctk.CTkFont(size=13),
             ).pack(anchor="w", pady=3, padx=2)
         selected.set(preselect or f"{ordered[0].kind}:{ordered[0].id}")
@@ -311,18 +269,12 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         state = "disabled" if on else "normal"
         if not version_blocked:
             apply_btn.configure(state=state)
-        refresh_btn.configure(state=state)
-        close_btn.configure(state=state)
         if on:
-            progress.pack(fill="x", pady=(0, 6), before=buttons)
-            progress.start()
             _set_status(i18n.t(gui_lang, "switching"))
-        else:
-            progress.stop()
-            progress.pack_forget()
 
     def refresh(
-        final_message: str | None = None, final_kind: str = "normal",
+        final_message: str | None = None,
+        final_kind: str = "normal",
     ) -> None:
         if not root.winfo_exists():
             return
@@ -330,8 +282,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         error: str | None = None
         try:
             statuses = classify_all(args)
-        except SystemExit as e:
-            error = str(e)
+        except (SystemExit, Exception) as e:
+            error = str(e) if e.args else e.__class__.__name__
         try:
             _build_language_list(_active_key(statuses))
             if final_message is not None:
@@ -341,7 +293,8 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             elif error is not None:
                 _set_status(
                     i18n.localize_error(
-                        gui_lang, error,
+                        gui_lang,
+                        error,
                         version=selected_version.get(),
                     ),
                     kind="err",
@@ -352,10 +305,18 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
                     _set_status(summary_for_gui(visible, gui_lang))
         except tk.TclError:
             pass
+        except Exception as exc:
+            _set_status(str(exc), kind="err")
+
+    def _resize_for_status() -> None:
+        if root.winfo_exists() and root.winfo_viewable():
+            _apply_window_size(root)
 
     def _localize_error(msg: str) -> str:
         return i18n.localize_error(
-            gui_lang, msg, version=selected_version.get(),
+            gui_lang,
+            msg,
+            version=selected_version.get(),
         )
 
     def _finish_apply(error: str | None) -> None:
@@ -369,18 +330,10 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             refresh(f"{notes}\n\n{restart}", final_kind="ok")
         else:
             refresh(restart, final_kind="ok")
-        _fit_window(root, scroll, footer)
+        _resize_for_status()
 
-    def _selected_switch_targets() -> tuple[set[str], set[str] | None]:
-        pipelines: set[str] = set()
-        ui_groups: set[str] = set()
-        if plugins_var.get():
-            pipelines.add(ui_groups_mod.PIPELINE_PLUGINS)
-        for group_id in ui_groups_mod.UI_GROUP_IDS:
-            if ui_group_vars[group_id].get():
-                pipelines.add(ui_groups_mod.PIPELINE_MAIN_UI)
-                ui_groups.add(group_id)
-        return pipelines, ui_groups if ui_groups else None
+    def _selected_pipelines() -> set[str]:
+        return {"main-ui", "plugins"}
 
     def apply_selected() -> None:
         if busy or version_blocked:
@@ -391,14 +344,6 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             _set_status(i18n.t(gui_lang, "err_no_language"), kind="err")
             return
 
-        pipelines, ui_groups = _selected_switch_targets()
-        if not pipelines:
-            _set_status(i18n.t(gui_lang, "err_nothing"), kind="err")
-            return
-        if ui_groups_mod.PIPELINE_MAIN_UI in pipelines and not ui_groups:
-            _set_status(i18n.t(gui_lang, "err_no_ui_parts"), kind="err")
-            return
-
         switch_args = Namespace(
             target=choice.id,
             csp=args.csp,
@@ -407,8 +352,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
             force=getattr(args, "force", False),
             keep_open=False,
             from_gui=True,
-            pipelines=pipelines,
-            ui_groups=ui_groups,
+            pipelines=_selected_pipelines(),
         )
         _set_busy(True)
         root.update()
@@ -440,16 +384,20 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
 
     version_combo.configure(command=on_version_change)
 
-    if detected_version:
-        selected_version.set(detected_version)
-        set_active_version(detected_version)
-        args.csp_version = detected_version
-    else:
-        set_active_version(selected_version.get())
-        args.csp_version = selected_version.get()
+    def initial_load() -> None:
+        if detected_version:
+            selected_version.set(detected_version)
+            set_active_version(detected_version)
+            args.csp_version = detected_version
+        else:
+            set_active_version(selected_version.get())
+            args.csp_version = selected_version.get()
+        try:
+            _refresh_version_state()
+            refresh()
+            _apply_window_size(root)
+        except Exception as exc:
+            _set_status(str(exc), kind="err")
 
-    _refresh_version_state()
-    refresh()
-    _fit_window(root, scroll, footer)
-    root.deiconify()
+    root.after(1, initial_load)
     root.mainloop()

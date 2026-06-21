@@ -226,28 +226,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "summary_mixed": "Subsystems are mixed; switch again to make them consistent.",
         "summary_mixed_unknown": "Subsystems are in a mix of original and unknown states.",
-        "translate_parts": "What to translate (for testing)",
-        "translate_parts_hint": (
-            "Uncheck parts one at a time to isolate which bundle causes issues."
-        ),
-        "translate_parts_mft": "7F9F9530 — material palette / cloud (by block)",
-        "translate_parts_mft_hint": (
-            "Optional blocks from file 7F9F9530 for testing. Folder tree "
-            "(block 6) is listed separately below."
-        ),
-        "ui_group_core_ui": "Main UI (742DEA58) — menus, tools, palettes",
-        "ui_group_material_catalog": "Material catalog (E79C2AC5)",
-        "ui_group_mft_1": "Block 1 — cloud sync UI (~93 strings)",
-        "ui_group_mft_2": "Block 2 — cloud labels, Japanese (~5)",
-        "ui_group_mft_3": "Block 3 — cloud labels, English (~5)",
-        "ui_group_mft_4": "Block 4 — material palette UI (~161 strings)",
-        "ui_group_mft_8": "Block 8 — folder actions (New folder, etc.)",
-        "ui_group_mft_9": "Block 9 — progress toasts (~12)",
-        "ui_group_mft_10": "Block 10 — progress toasts (~13)",
-        "ui_group_folder_tree": "Material folder tree — English block 6 / 6/1/",
-        "ui_group_other_ui": "Other UI bundles (~28 files)",
-        "ui_group_plugins": "Filter plug-ins (DLL strings)",
-        "err_no_ui_parts": "Check at least one UI bundle to translate.",
     },
     "ru": {
         "window_title": "Переключатель языка Clip Studio Paint",
@@ -334,28 +312,6 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "summary_mixed": "Подсистемы в разном состоянии; переключите снова для согласованности.",
         "summary_mixed_unknown": "Подсистемы смешаны: оригинал и неизвестное состояние.",
-        "translate_parts": "Что переводить (для проверки)",
-        "translate_parts_hint": (
-            "Снимайте галочки по одной части, чтобы проверить отдельные блоки."
-        ),
-        "translate_parts_mft": "7F9F9530 — палитра материалов / облако (по блокам)",
-        "translate_parts_mft_hint": (
-            "Необязательные блоки файла 7F9F9530 для проверки. «Дерево папок» "
-            "(блок 6) — отдельно ниже."
-        ),
-        "ui_group_core_ui": "Основной UI (742DEA58) — меню, инструменты",
-        "ui_group_material_catalog": "Каталог материалов (E79C2AC5)",
-        "ui_group_mft_1": "Блок 1 — UI облака (~93 строки)",
-        "ui_group_mft_2": "Блок 2 — метки облака, японский (~5)",
-        "ui_group_mft_3": "Блок 3 — метки облака, английский (~5)",
-        "ui_group_mft_4": "Блок 4 — UI палитры материалов (~161)",
-        "ui_group_mft_8": "Блок 8 — действия с папками (New folder и т.д.)",
-        "ui_group_mft_9": "Блок 9 — статусные сообщения (~12)",
-        "ui_group_mft_10": "Блок 10 — статусные сообщения (~13)",
-        "ui_group_folder_tree": "Дерево папок материалов — блок 6 / 6/1/",
-        "ui_group_other_ui": "Остальные UI-файлы (~28 шт.)",
-        "ui_group_plugins": "Фильтры — plug-in DLL",
-        "err_no_ui_parts": "Отметьте хотя бы один UI-файл для перевода.",
     },
 }
 
