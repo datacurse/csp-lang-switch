@@ -190,13 +190,27 @@ def _target_for_source(source: str, trans: dict[str, str]) -> str:
 
 
 def _apply_worksheet_key_overrides(rec: dict, rows: list[dict]) -> None:
-    """Overlay key-specific targets from strings.csv (for protected source text)."""
+    """Overlay key-specific targets from strings.csv (for protected source text).
+
+    Match on key *and* source text. Worksheets are exported from one CSP build;
+    applying a row when this version's stock English differs (e.g. 5.0.2 vs
+    5.0.4 license blobs) corrupts the resource file and can crash CSP.
+    """
     ws = worksheet_for(rec)
     if not ws.is_file():
         return
-    by_key = {r["key"]: r["target"] for r in _read_rows(ws) if r.get("target")}
+    by_key = {
+        r["key"]: (r["source"], r["target"])
+        for r in _read_rows(ws)
+        if r.get("target")
+    }
     for r in rows:
-        kt = by_key.get(r["key"])
+        entry = by_key.get(r["key"])
+        if not entry:
+            continue
+        ws_src, kt = entry
+        if _lf(ws_src) != _lf(r["source"]):
+            continue
         if not kt or _lf(kt) == _lf(r["source"]):
             continue
         if "\r\n" in r["source"]:

@@ -209,6 +209,11 @@ own CSV scripts:
   translating block 5 wipes custom material folders on CSP launch. The
   `NEVER_TRANSLATE` guard in `src/batch.py` strips `5/1/` and `7/1/` on export
   and pack. Full account: VERIFIED_METHOD.md → "Material palette folder tree".
+* **Cross-version `pack-all`: match `strings.csv` on source, not key alone.**
+  Worksheets are exported from one CSP build. A row whose `source` differs from
+  the version being packed must not overwrite that slot — especially large
+  license blobs in `742DEA58` block `13/1/`. `batch.py` enforces this; do not
+  remove the check.
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 
@@ -220,12 +225,22 @@ own CSV scripts:
 and locked terms, and re-decide the autonym question (Step 6). Everything else
 is identical.
 
-**Another CSP version.** Re-export with `batch.py export <id> --force` — string
-IDs, `key`s and counts may all have changed. (Export needs `langs/japanese/ui/`
-present: it is the oracle.) The translation is **seeded for free**:
-`batch.py dedupe` carries every existing translation over by `source` text, so
-only genuinely new/changed strings land with an empty `target`. Then run Steps
-4–8 on the remainder.
+**Another CSP version.** Capture stock from a live install
+(`scripts/capture_stock.py --version <ver>`), then `batch.py --version <ver>
+pack-all`. Export for translation work uses `batch.py export <id> --force` —
+string IDs, `key`s and counts may all have changed. (Export needs
+`langs/japanese/ui/` present: it is the oracle.) The translation is **seeded for
+free**: `batch.py dedupe` carries every existing translation over by `source`
+text, so only genuinely new/changed strings land with an empty `target`. Then
+run Steps 4–8 on the remainder.
+
+`pack-all` maps `unique.csv` by **source** and overlays `strings.csv` by **key
++ source** (`_apply_worksheet_key_overrides`). If a worksheet row's `source`
+does not match the target version's stock English at that key, the row is
+skipped — applying a 5.0.4 worksheet blindly to 5.0.2 stock corrupted the main
+UI file and crashed CSP on launch (2026-06, verified fixed). ~102 license/about
+strings on 5.0.2 may stay English until exported and translated from 5.0.2
+stock; everything else packs from the shared worksheets.
 
 **Another resource file.** Same pipeline, one file at a time. `manifest.csv`
 lists every file and `batch.py status` tracks which are done.
