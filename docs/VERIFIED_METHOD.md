@@ -182,6 +182,12 @@ Enforced in `src/batch.py`:
   still blocks translating those **sources** in other files (e.g. `742DEA58`)
   via source-text mapping, while allowing block 6 itself to pick up Russian
   from `unique.csv`.
+* **`MATERIAL_UI_SOURCES`** — exact main-UI menu labels `Tool`, `Material`,
+  `Effect` that share names with block-6 categories but must still translate.
+  Resource **keys drift across CSP versions** (e.g. Window → Tool is
+  `13/1/1196#0` on 4.2.0 vs `13/1/1197#0` on 5.0.0), so whitelisting 5.x
+  keys alone left those menus English on 4.2.0. `pack` exempts these three
+  sources in `742DEA58` only; folder-tree safety elsewhere is unchanged.
 
 CSP still matches stock materials to built-in folders **by name** in the local
 DB (`CatalogMaterial.cmdb` / `MaterialFolderTag.mfta`). Custom palette folders

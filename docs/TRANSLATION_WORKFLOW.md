@@ -214,6 +214,12 @@ own CSV scripts:
   the version being packed must not overwrite that slot — especially large
   license blobs in `742DEA58` block `13/1/`. `batch.py` enforces this; do not
   remove the check.
+* **Main-UI `Tool` / `Material` / `Effect` vs the material-folder guard.**
+  Those English words label both Window/Filter menus and `7F9F9530` category
+  nodes. Keys for the menu items change between 4.x and 5.x builds, so
+  `MATERIAL_NAME_UI_KEYS` (5.x key list) is not enough on its own. `batch.py`
+  also allows exact `Tool`, `Material`, and `Effect` in `742DEA58` during
+  `pack`; translations come from `unique.csv`. See VERIFIED_METHOD.md.
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 

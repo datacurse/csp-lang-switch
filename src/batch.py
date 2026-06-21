@@ -105,8 +105,14 @@ NEVER_TRANSLATE: dict[str, tuple[str, ...]] = {
 }
 
 MATERIAL_FOLDER_GUID = "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
+MAIN_UI_SHORT = "742DEA58"
+# Exact English menu labels that share names with 7F9F9530 folder categories but
+# must translate in the main UI on every CSP version. Keys drift (e.g. Window
+# "Tool" is 13/1/1196#0 on 4.2.0 vs 13/1/1197#0 on 5.0.0), so allow by
+# source text in the main-ui pack rather than maintaining per-version key lists.
+MATERIAL_UI_SOURCES: frozenset[str] = frozenset({"Tool", "Material", "Effect"})
 # Keys whose English source matches a material-tree category name but labels
-# palette chrome or preferences, not a material folder node.
+# palette chrome or preferences, not a material folder node (5.x builds).
 MATERIAL_NAME_UI_KEYS: frozenset[str] = frozenset({
     "13/1/1197#0",   # Tool palette title
     "13/1/1254#0",   # Window menu: Material
@@ -159,6 +165,11 @@ def _protected_prefixes(rec: dict) -> tuple[str, ...]:
     return NEVER_TRANSLATE.get(rec["short"], ())
 
 
+def _main_ui_menu_source(rec: dict, src: str) -> bool:
+    """True when *src* is a main-UI menu label exempt from the material-tree guard."""
+    return rec.get("short") == MAIN_UI_SHORT and src in MATERIAL_UI_SOURCES
+
+
 def _is_protected(rec: dict, row: dict) -> bool:
     """True when this worksheet row must keep its English source."""
     if any(row["key"].startswith(p) for p in _protected_prefixes(rec)):
@@ -167,7 +178,10 @@ def _is_protected(rec: dict, row: dict) -> bool:
         return False
     if rec.get("short") == "7F9F9530" and row["key"].startswith("6/1/"):
         return False
-    return _lf(row.get("source", "")) in _material_folder_sources()
+    src = _lf(row.get("source", ""))
+    if src in _material_folder_sources():
+        return not _main_ui_menu_source(rec, src)
+    return False
 
 
 def _drop_protected(rec: dict, rows: list[dict]) -> list[dict]:
@@ -511,7 +525,8 @@ def _translations_by_source(rec: dict) -> dict[str, str]:
         for r in _read_rows(uniq):
             src = _lf(r["source"])
             if src in protected and not allow_folder_names:
-                continue
+                if not _main_ui_menu_source(rec, src):
+                    continue
             t = r.get("target")
             if t is not None and t != "":
                 trans[src] = t
@@ -521,7 +536,8 @@ def _translations_by_source(rec: dict) -> dict[str, str]:
             for r in _read_rows(ws):
                 src = _lf(r["source"])
                 if src in protected and not allow_folder_names:
-                    continue
+                    if not _main_ui_menu_source(rec, src):
+                        continue
                 t = (r.get("target") or "").strip()
                 if t and t != r["source"]:
                     trans[src] = t
