@@ -41,6 +41,7 @@ from common import (
     run_elevated_sync,
     attach_console,
     csp_exe_from_resource,
+    set_celsys_base,
 )
 from version import (
     DEFAULT_VERSION,
@@ -934,6 +935,9 @@ def build_switch_argv(args) -> list[str]:
         argv.append("--keep-open")
     if args.csp:
         argv.extend(["--csp", args.csp])
+    celsys_base = getattr(args, "celsys_base", None)
+    if celsys_base:
+        argv.extend(["--cel-sys", celsys_base])
     csp_version = getattr(args, "csp_version", None)
     if csp_version:
         argv.extend(["--csp-version", csp_version])
@@ -1154,6 +1158,10 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--csp", metavar="DIR",
                         help="CSP 'resource' folder (auto-detected if omitted)")
     parser.add_argument(
+        "--cel-sys", metavar="DIR",
+        help="CELSYS install folder (default: C:\\Program Files\\CELSYS)",
+    )
+    parser.add_argument(
         "--csp-version", metavar="VER", choices=SUPPORTED_VERSIONS,
         help="CSP version to use (default: auto-detect from install)",
     )
@@ -1179,6 +1187,12 @@ def main(argv: list[str] | None = None) -> None:
         attach_console()
 
     import gui_i18n as i18n
+    celsys_base = args.cel_sys
+    if not celsys_base and SETTINGS_FILE:
+        celsys_base = i18n.load_celsys_base(SETTINGS_FILE)
+    set_celsys_base(celsys_base)
+    args.celsys_base = celsys_base
+
     detected = detect_installed_csp_version(args.csp)
     saved = i18n.load_csp_version(SETTINGS_FILE) if SETTINGS_FILE else None
     version = resolve_csp_version(args.csp_version, detected, saved)

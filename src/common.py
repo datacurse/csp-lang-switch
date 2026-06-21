@@ -121,6 +121,42 @@ def run_elevated_sync(argv: list[str]) -> tuple[int, str]:
 # ----------------------------------------------------------------------
 # Locating the CSP install
 # ----------------------------------------------------------------------
+DEFAULT_CELSYS_BASE = Path(r"C:\Program Files\CELSYS")
+_FALLBACK_CELSYS_BASE = Path(r"C:\Program Files (x86)\CELSYS")
+
+_celsys_base_override: Path | None = None
+
+
+def set_celsys_base(path: str | Path | None) -> None:
+    """Use a custom CELSYS install root for auto-detection (GUI / settings)."""
+    global _celsys_base_override
+    if path is None:
+        _celsys_base_override = None
+        return
+    p = Path(path)
+    if p == DEFAULT_CELSYS_BASE:
+        _celsys_base_override = None
+    else:
+        _celsys_base_override = p
+
+
+def celsys_search_bases() -> tuple[Path, ...]:
+    """CELSYS roots to scan when --csp is not passed."""
+    if _celsys_base_override is not None:
+        return (_celsys_base_override,)
+    return (DEFAULT_CELSYS_BASE, _FALLBACK_CELSYS_BASE)
+
+
+def celsys_base_has_csp(base: Path) -> bool:
+    """True when *base* contains a CLIP STUDIO PAINT resource tree."""
+    if not base.is_dir():
+        return False
+    for cand in base.glob("*/CLIP STUDIO PAINT/resource"):
+        if (cand / "english").is_dir():
+            return True
+    return False
+
+
 def csp_exe_from_resource(resource: Path) -> Path:
     """Return CLIPStudioPaint.exe next to a CSP `resource/` folder."""
     return resource.parent / CSP_PROCESS
@@ -152,8 +188,7 @@ def find_csp_resource_optional(explicit: str | None) -> Path | None:
         if (p / "english").is_dir():
             return p
         return None
-    for base in (Path(r"C:\Program Files\CELSYS"),
-                 Path(r"C:\Program Files (x86)\CELSYS")):
+    for base in celsys_search_bases():
         if not base.is_dir():
             continue
         for cand in sorted(base.glob("*/CLIP STUDIO PAINT/resource")):
@@ -172,15 +207,16 @@ def find_csp_resource(explicit: str | None) -> Path:
         return p
 
     # Glob the version directory so a CSP update (1.5 -> 1.6 ...) still resolves.
-    for base in (Path(r"C:\Program Files\CELSYS"),
-                 Path(r"C:\Program Files (x86)\CELSYS")):
+    for base in celsys_search_bases():
         if not base.is_dir():
             continue
         for cand in sorted(base.glob("*/CLIP STUDIO PAINT/resource")):
             if (cand / "english").is_dir():
                 return cand
 
-    sys.exit("error: could not find a CSP install. Pass --csp <resource dir>, "
+    bases = ", ".join(str(b) for b in celsys_search_bases())
+    sys.exit("error: could not find a CSP install under "
+             f"{bases}. Pass --csp <resource dir> or --cel-sys <CELSYS folder>, "
              r"e.g. --csp \"C:\Program Files\CELSYS\CLIP STUDIO 1.5\CLIP "
              r"STUDIO PAINT\resource\"")
 

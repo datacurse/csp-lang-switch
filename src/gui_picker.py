@@ -11,11 +11,12 @@ import threading
 import tkinter as tk
 from argparse import Namespace
 from pathlib import Path
-from tkinter import StringVar
+from tkinter import StringVar, filedialog
 
 import customtkinter as ctk
 
 import gui_i18n as i18n
+from common import celsys_base_has_csp, set_celsys_base
 
 _STATUS_OK = ("#2d6a4f", "#52b788")
 _STATUS_ERR = ("#9b2226", "#e5383b")
@@ -29,7 +30,7 @@ _SWITCH_PIPELINES = ("main-ui", "plugins")
 # Window size — edit these (logical pixels; CTk applies DPI scaling)
 # ---------------------------------------------------------------------------
 WINDOW_WIDTH = 400
-WINDOW_HEIGHT = 270
+WINDOW_HEIGHT = 340
 # Status text wrap; None = WINDOW_WIDTH minus horizontal padding
 STATUS_WRAP_WIDTH: int | None = None
 
@@ -64,8 +65,10 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         choice_display,
         classify_all,
         cmd_switch,
+        detect_installed_csp_version,
         discover_community_packs,
         discover_official_languages,
+        detected_csp_product_version,
         is_official_state,
         official_id_from_state,
         set_active_version,
@@ -103,6 +106,76 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     footer = ctk.CTkFrame(root, fg_color="transparent")
     footer.grid(row=1, column=0, sticky="ew", padx=12, pady=(0, 10))
     footer.grid_columnconfigure(0, weight=1)
+
+    def _display_celsys_base() -> str:
+        saved = getattr(args, "celsys_base", None)
+        return saved or i18n.default_celsys_base_display()
+
+    celsys_label = ctk.CTkLabel(
+        main,
+        text=i18n.t(gui_lang, "choose_celsys_folder"),
+        font=ctk.CTkFont(size=14, weight="bold"),
+    )
+    celsys_label.pack(anchor="w", pady=(0, 4))
+
+    celsys_row = ctk.CTkFrame(main, fg_color="transparent")
+    celsys_row.pack(fill="x", pady=(0, 8))
+    celsys_row.grid_columnconfigure(0, weight=1)
+
+    celsys_path = ctk.CTkEntry(
+        celsys_row,
+        state="readonly",
+        font=ctk.CTkFont(size=12),
+    )
+    celsys_path.grid(row=0, column=0, sticky="ew", padx=(0, 8))
+
+    def _set_celsys_display() -> None:
+        celsys_path.configure(state="normal")
+        celsys_path.delete(0, "end")
+        celsys_path.insert(0, _display_celsys_base())
+        celsys_path.configure(state="readonly")
+
+    def _apply_celsys_base(path: str | None) -> None:
+        args.celsys_base = path
+        set_celsys_base(path)
+        i18n.save_celsys_base(settings_file, path)
+        _set_celsys_display()
+        args.detected_csp_version = detect_installed_csp_version(args.csp)
+        args.raw_csp_product_version = detected_csp_product_version(args.csp)
+        nonlocal detected_version, raw_product_version, version_blocked, version_warning
+        detected_version = args.detected_csp_version
+        raw_product_version = args.raw_csp_product_version
+        if detected_version:
+            selected_version.set(detected_version)
+            set_active_version(detected_version)
+            args.csp_version = detected_version
+        _refresh_version_state()
+        refresh()
+
+    def browse_celsys_folder() -> None:
+        if busy:
+            return
+        picked = filedialog.askdirectory(
+            parent=root,
+            title=i18n.t(gui_lang, "choose_celsys_folder_title"),
+            initialdir=_display_celsys_base(),
+        )
+        if not picked:
+            return
+        base = Path(picked)
+        if not celsys_base_has_csp(base):
+            _set_status(i18n.t(gui_lang, "err_celsys_invalid"), kind="err")
+            return
+        custom = None if base == Path(i18n.default_celsys_base_display()) else str(base)
+        _apply_celsys_base(custom)
+
+    browse_btn = ctk.CTkButton(
+        celsys_row,
+        text=i18n.t(gui_lang, "btn_browse"),
+        width=90,
+        command=browse_celsys_folder,
+    )
+    browse_btn.grid(row=0, column=1, sticky="e")
 
     version_label = ctk.CTkLabel(
         main,
@@ -272,6 +345,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
         state = "disabled" if on else "normal"
         if not version_blocked:
             apply_btn.configure(state=state)
+        browse_btn.configure(state=state)
         if on:
             _set_status(i18n.t(gui_lang, "switching"))
 
@@ -388,6 +462,7 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     version_combo.configure(command=on_version_change)
 
     def initial_load() -> None:
+        _set_celsys_display()
         if detected_version:
             selected_version.set(detected_version)
             set_active_version(detected_version)

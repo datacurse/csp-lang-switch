@@ -144,11 +144,50 @@ def save_csp_version(settings_path: Path, version: str) -> None:
     settings_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
+def default_celsys_base_display() -> str:
+    return r"C:\Program Files\CELSYS"
+
+
+def load_celsys_base(settings_path: Path) -> str | None:
+    """Return a saved custom CELSYS root, or None for the default search."""
+    if settings_path.is_file():
+        try:
+            data = json.loads(settings_path.read_text(encoding="utf-8"))
+            if isinstance(data, dict) and data.get("celsys_base"):
+                return str(data["celsys_base"])
+        except (OSError, json.JSONDecodeError):
+            pass
+    return None
+
+
+def save_celsys_base(settings_path: Path, base: str | None) -> None:
+    data: dict = {}
+    if settings_path.is_file():
+        try:
+            raw = json.loads(settings_path.read_text(encoding="utf-8"))
+            if isinstance(raw, dict):
+                data = raw
+        except (OSError, json.JSONDecodeError):
+            pass
+    if base and base != default_celsys_base_display():
+        data["celsys_base"] = base
+    else:
+        data.pop("celsys_base", None)
+    settings_path.parent.mkdir(parents=True, exist_ok=True)
+    settings_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+
+
 _STRINGS: dict[str, dict[str, str]] = {
     "en": {
         "window_title": "Clip Studio Paint Language Switcher",
         "gui_language": "Interface language:",
         "choose_language": "Choose a language",
+        "choose_celsys_folder": "CELSYS folder",
+        "choose_celsys_folder_title": "Select CELSYS install folder",
+        "btn_browse": "Browse…",
+        "err_celsys_invalid": (
+            "The selected folder does not contain a Clip Studio Paint install."
+        ),
         "choose_csp_version": "Clip Studio Paint version",
         "csp_version_auto": "detected: {version}",
         "err_csp_version_unsupported": (
@@ -187,8 +226,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "err_csp_not_found": (
             "Clip Studio Paint was not found on this computer. "
-            "Install CSP or check that it is installed in the "
-            "default location."
+            "Install CSP or use Browse to point at your CELSYS folder."
         ),
         "err_csp_running": "Close Clip Studio Paint before switching languages.",
         "err_csp_userdata": (
@@ -231,6 +269,12 @@ _STRINGS: dict[str, dict[str, str]] = {
         "window_title": "Переключатель языка Clip Studio Paint",
         "gui_language": "Язык интерфейса:",
         "choose_language": "Выберите язык",
+        "choose_celsys_folder": "Папка CELSYS",
+        "choose_celsys_folder_title": "Выберите папку установки CELSYS",
+        "btn_browse": "выбрать",
+        "err_celsys_invalid": (
+            "В выбранной папке нет установки Clip Studio Paint."
+        ),
         "choose_csp_version": "Версия Clip Studio Paint",
         "csp_version_auto": "обнаружена: {version}",
         "err_csp_version_unsupported": (
@@ -270,8 +314,7 @@ _STRINGS: dict[str, dict[str, str]] = {
         ),
         "err_csp_not_found": (
             "Clip Studio Paint не найден на этом компьютере. "
-            "Установите CSP или проверьте, что программа "
-            "установлена в стандартную папку."
+            "Установите CSP или укажите папку CELSYS через «выбрать»."
         ),
         "err_csp_running": "Закройте Clip Studio Paint перед переключением языка.",
         "err_csp_userdata": (
