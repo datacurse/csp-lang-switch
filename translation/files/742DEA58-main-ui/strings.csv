@@ -3362,7 +3362,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 13/1/158#0,Hidden layers,Скрытые слои
 13/1/1388#0,Delete all empty layers,Удалить все пустые слои
 13/1/1389#0,Delete all hidden layers,Удалить все скрытые слои
-13/1/159#0,Hide all visible draft layers,
+13/1/159#0,Hide all visible draft layers,Скрыть все видимые черновые слои
 13/1/340#0,View,Вид
 13/1/167#0,Rotate/Flip,Поворот/отражение
 13/1/1046#0,Reset Rotation/Inversion,Сбросить поворот/отражение
@@ -3481,12 +3481,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 13/1/1225#0,Layer,Слой
 13/1/1227#0,Search Layer,Поиск слоя
 13/1/1233#0,Animation cels,Ячейки анимации
-13/1/1229#0,Layer Properties,
+13/1/1229#0,Layer Properties,Свойства слоя
 13/1/1231#0,Layer Comps,Композиции слоёв
 13/1/1235#0,Timeline,Временная шкала
 13/1/1240#0,Navigator,Навигатор
 13/1/1248#0,Information,Сведения
-13/1/1254#0,Material,Material
+13/1/1254#0,Material,Материал
 13/1/1237#0,All sides view,Вид со всех сторон
 13/1/1244#0,History,История
 13/1/1246#0,Auto Action,Автооперация
@@ -6374,7 +6374,7 @@ Any added font lists will be deleted.","Настройки списков шри
 будут сброшены к исходным настройкам по умолчанию. 
 Любые добавленные смешанные шрифты будут удалены. 
 Любые добавленные списки шрифтов будут удалены."
-123/1/63#0,Layer Properties,
+123/1/63#0,Layer Properties,Свойства слоя
 123/1/64#0,"Settings for items in the Layer Properties palette 
 will be reset to their original defaults.",
 123/1/65#0,Export,Экспортировать
@@ -10577,7 +10577,7 @@ If you try to export immediately after enabling timelapse recording, the Yuify e
 289/1/33#0,Folder for image,Папка для изображения
 289/1/34#0,Storyboard Folder,Папка раскадровки
 289/1/35#0, Copy, Копировать
-289/1/36#0,Layer Properties Palette,
+289/1/36#0,Layer Properties Palette,Палитра «Свойства слоя»
 289/1/37#0,Timeline %d,Шкала времени %d
 289/1/38#0,Animation folder,Папка анимации
 289/1/39#0,Photo %d,Фото %d
@@ -11975,7 +11975,7 @@ Please wait a moment and try again.","Эту операцию невозможн
 298/1/742#0,Batch export textures,
 298/1/743#0,Export all textures of the 3D object,
 298/1/744#0,Layout,Макет
-298/1/745#0,Material,Material
+298/1/745#0,Material,Материал
 298/1/746#0,Select material preset,Выбрать набор настроек материала
 298/1/747#0,Layout,Макет
 298/1/748#0,Select layout preset,Выбрать набор настроек компоновки
@@ -14819,7 +14819,7 @@ You cannot open this project.","Параметр «Командная работ
 415/1/383#0,Delete Layer,Удалить слой
 415/1/384#0,Delete all empty layers,Удалить все пустые слои
 415/1/385#0,Delete all hidden layers,Удалить все скрытые слои
-415/1/386#0,Hide all visible draft layers,
+415/1/386#0,Hide all visible draft layers,Скрыть все видимые черновые слои
 415/1/387#0,Ungroup Layer Folder,Разгруппировать папку слоёв
 415/1/388#0,Mask Outside Selection,Маскировать вне выделения
 415/1/389#0,Mask Selection,Маскировать выделение
@@ -14989,7 +14989,7 @@ You cannot open this project.","Параметр «Командная работ
 415/1/555#0,Show layer palette,Показывать палитру слоёв
 415/1/556#0,Show layer search palette,Показывать палитру поиска слоёв
 415/1/557#0,Show animation cel palette,Показывать палитру ячеек анимации
-415/1/558#0,Show Layer Properties palette,
+415/1/558#0,Show Layer Properties palette,Показывать палитру «Свойства слоя»
 415/1/559#0,Show Layer Comps Palette,Показывать палитру «Композиции слоёв»
 415/1/560#0,Show timeline palette,Показывать палитру шкалы времени
 415/1/561#0,Show all-side view palette,Показывать палитру вида со всех сторон
@@ -15027,7 +15027,7 @@ You cannot open this project.","Параметр «Командная работ
 415/1/593#0,Pop up Layer palette,Всплывающая палитра слоёв
 415/1/594#0,Pop up Search Layer palette,Всплывающая палитра поиска слоёв
 415/1/595#0,Pop up Animation cels palette,Всплывающая палитра ячеек анимации
-415/1/596#0,Pop up Layer Properties palette,
+415/1/596#0,Pop up Layer Properties palette,Всплывающая палитра «Свойства слоя»
 415/1/597#0,Pop up Layer Comps palette,Всплывающая палитра «Композиции слоёв»
 415/1/598#0,Pop up Timeline palette,Всплывающая палитра шкалы времени
 415/1/599#0,Pop up All sides view palette,Всплывающая палитра вида со всех сторон

@@ -3304,7 +3304,7 @@ Empty layers,Пустые слои
 Hidden layers,Скрытые слои
 Delete all empty layers,Удалить все пустые слои
 Delete all hidden layers,Удалить все скрытые слои
-Hide all visible draft layers,
+Hide all visible draft layers,Скрыть все видимые черновые слои
 Rotate/Flip,Поворот/отражение
 Reset Rotation/Inversion,Сбросить поворот/отражение
 Reset Rotation,Сбросить поворот
@@ -3404,11 +3404,11 @@ Color Set,Цветовой набор
 Color Mixing,Смешивание цветов
 Search Layer,Поиск слоя
 Animation cels,Ячейки анимации
-Layer Properties,
+Layer Properties,Свойства слоя
 Layer Comps,Композиции слоёв
 Navigator,Навигатор
 Information,Сведения
-Material,Material
+Material,Материал
 All sides view,Вид со всех сторон
 Sub View,Дополнительный вид
 Intermediate Color,Промежуточный цвет
@@ -8616,7 +8616,7 @@ Folder of ruler,Папка линейки
 Folder for paper,Папка для бумаги
 Folder for image,Папка для изображения
 Storyboard Folder,Папка раскадровки
-Layer Properties Palette,
+Layer Properties Palette,Палитра «Свойства слоя»
 Timeline %d,Шкала времени %d
 Photo %d,Фото %d
 Layer Comp %d,Композиция слоёв %d
@@ -11692,7 +11692,7 @@ Show color set palette,Показывать палитру набора цвет
 Show layer palette,Показывать палитру слоёв
 Show layer search palette,Показывать палитру поиска слоёв
 Show animation cel palette,Показывать палитру ячеек анимации
-Show Layer Properties palette,
+Show Layer Properties palette,Показывать палитру «Свойства слоя»
 Show Layer Comps Palette,Показывать палитру «Композиции слоёв»
 Show timeline palette,Показывать палитру шкалы времени
 Show all-side view palette,Показывать палитру вида со всех сторон
@@ -11726,7 +11726,7 @@ Pop up Color Set palette,Всплывающая палитра набора цв
 Pop up Layer palette,Всплывающая палитра слоёв
 Pop up Search Layer palette,Всплывающая палитра поиска слоёв
 Pop up Animation cels palette,Всплывающая палитра ячеек анимации
-Pop up Layer Properties palette,
+Pop up Layer Properties palette,Всплывающая палитра «Свойства слоя»
 Pop up Layer Comps palette,Всплывающая палитра «Композиции слоёв»
 Pop up Timeline palette,Всплывающая палитра шкалы времени
 Pop up All sides view palette,Всплывающая палитра вида со всех сторон
