@@ -473,6 +473,9 @@ def _repack_stale_community_translations() -> None:
     for rec in manifest:
         if rec.get("target") != "yes":
             continue
+        if not batch.resource_for(rec).is_file():
+            # e.g. companion-mode (6FFACA71) — not shipped in CSP 4.0.0 stock
+            continue
         ws = batch.worksheet_for(rec)
         uniq = batch.unique_for(rec)
         out = batch.output_for(rec, "russian")

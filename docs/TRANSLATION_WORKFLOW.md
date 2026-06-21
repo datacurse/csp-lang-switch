@@ -220,6 +220,11 @@ own CSV scripts:
   `MATERIAL_NAME_UI_KEYS` (5.x key list) is not enough on its own. `batch.py`
   also allows exact `Tool`, `Material`, and `Effect` in `742DEA58` during
   `pack`; translations come from `unique.csv`. See VERIFIED_METHOD.md.
+* **Version-specific missing UI files (e.g. CSP 4.0.0 vs `6FFACA71`).**
+  The manifest is shared across supported versions; older stock trees omit
+  resources that appear in later builds. `lang.py` skips stale repack when
+  `versions/<ver>/langs/english/ui/` has no stock file for that manifest row.
+  Do not treat a missing English capture as a pack failure for that version.
 * The patched binary is **per-version and disposable**. Tooling + manifest +
   glossary + this doc are the assets to keep.
 
