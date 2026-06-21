@@ -639,6 +639,18 @@ class Pipeline:
         raise NotImplementedError
 
 
+def _sync_community_tool_dbs(
+    csp: str | None, choice: LanguageChoice, *, dry_run: bool
+) -> None:
+    if choice.kind != "community":
+        return
+    import tool_db
+    if not dry_run and not is_admin():
+        install.ensure_admin()
+    resource = install.find_csp_resource(csp)
+    tool_db.sync_tool_dbs(resource, language=choice.id, dry_run=dry_run)
+
+
 class MainUIPipeline(Pipeline):
     subdir = "ui"
 
@@ -678,6 +690,10 @@ class MainUIPipeline(Pipeline):
                 target=choice.id, slot=COMMUNITY_SLOT, csp=csp,
                 dry_run=dry_run, only_files=only_files,
                 partial_merges=partial_merges))
+            if not dry_run:
+                import tool_db
+                tool_db.sync_tool_dbs(
+                    install.find_csp_resource(csp), language=choice.id)
             return
         if choice.kind == "official" and choice.id != COMMUNITY_SLOT:
             self._copy_official_to_slot(choice, csp, dry_run, only_files=only_files)
@@ -685,6 +701,10 @@ class MainUIPipeline(Pipeline):
         install.cmd_install(_pipe_args(
             target="english", slot=COMMUNITY_SLOT, csp=csp, dry_run=dry_run,
             only_files=only_files, partial_merges=partial_merges))
+        if not dry_run:
+            import tool_db
+            tool_db.sync_tool_dbs(
+                install.find_csp_resource(csp), language="english")
 
     def _copy_official_to_slot(self, choice, csp, dry_run, *, only_files=None):
         resource_dir = install.find_csp_resource(csp)
@@ -956,6 +976,9 @@ def cmd_switch(args) -> None:
         sys.exit("error: no subsystems selected")
 
     if not plan:
+        if choice.kind == "community" and not args.dry_run:
+            install.check_csp_closed(args.force)
+            _sync_community_tool_dbs(args.csp, choice, dry_run=args.dry_run)
         if not from_gui:
             if enabled is not None and len(enabled) < len(PIPELINES):
                 print(f"\nSelected subsystems already match '{choice.display}'. "

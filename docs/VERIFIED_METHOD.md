@@ -8,7 +8,9 @@
 >
 > Scope: this file covers the **resource bundles**. The Filter menu's
 > **plug-in DLLs** are a separate subsystem with their own method and tool —
-> see [`PLUGIN_TRANSLATION.md`](PLUGIN_TRANSLATION.md).
+> see [`PLUGIN_TRANSLATION.md`](PLUGIN_TRANSLATION.md). The left-hand **Tool
+> palette** names live in SQLite `.todb` files in install seed **and** user
+> data — see [`TOOL_TRANSLATION.md`](TOOL_TRANSLATION.md).
 
 ---
 

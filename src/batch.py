@@ -105,6 +105,16 @@ NEVER_TRANSLATE: dict[str, tuple[str, ...]] = {
 }
 
 MATERIAL_FOLDER_GUID = "7F9F9530-3EF0-4be4-8E6B-1C3BF59C3754"
+# Keys whose English source matches a material-tree category name but labels
+# palette chrome or preferences, not a material folder node.
+MATERIAL_NAME_UI_KEYS: frozenset[str] = frozenset({
+    "13/1/1197#0",   # Tool palette title
+    "123/1/19#0",
+    "146/1/28#0",
+    "152/1/9#0",
+    "387/1/1#0",    # Tools preferences category
+    "58/1/352#0",   # material-catalog tool setting label
+})
 _material_folder_source_cache: frozenset[str] | None = None
 
 
@@ -144,6 +154,8 @@ def _is_protected(rec: dict, row: dict) -> bool:
     """True when this worksheet row must keep its English source."""
     if any(row["key"].startswith(p) for p in _protected_prefixes(rec)):
         return True
+    if row["key"] in MATERIAL_NAME_UI_KEYS:
+        return False
     if rec.get("short") == "7F9F9530" and row["key"].startswith("6/1/"):
         return False
     return _lf(row.get("source", "")) in _material_folder_sources()
@@ -168,6 +180,23 @@ def _target_for_source(source: str, trans: dict[str, str]) -> str:
     elif "\n" in source:
         new = _lf(new)
     return new
+
+
+def _apply_worksheet_key_overrides(rec: dict, rows: list[dict]) -> None:
+    """Overlay key-specific targets from strings.csv (for protected source text)."""
+    ws = worksheet_for(rec)
+    if not ws.is_file():
+        return
+    by_key = {r["key"]: r["target"] for r in _read_rows(ws) if r.get("target")}
+    for r in rows:
+        kt = by_key.get(r["key"])
+        if not kt or _lf(kt) == _lf(r["source"]):
+            continue
+        if "\r\n" in r["source"]:
+            kt = _lf(kt).replace("\n", "\r\n")
+        elif "\n" in r["source"]:
+            kt = _lf(kt)
+        r["target"] = kt
 
 
 def _append_block6_tree_rows(
@@ -503,6 +532,7 @@ def _worksheet_for_version(rec: dict) -> Path | None:
                 continue
             r["target"] = _target_for_source(r["source"], trans)
         rows = _append_block6_tree_rows(rec, rows, trans)
+        _apply_worksheet_key_overrides(rec, rows)
         _write_rows(tmp, ["key", "source", "target"], rows)
         return tmp
     except Exception:

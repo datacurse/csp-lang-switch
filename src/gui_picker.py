@@ -124,8 +124,11 @@ def run_picker(args: Namespace, settings_file: Path) -> None:
     version_combo.pack(side="left")
 
     version_hint = ctk.CTkLabel(
-        version_row, text="", anchor="w",
-        font=ctk.CTkFont(size=12), text_color="gray50",
+        version_row,
+        text="",
+        anchor="w",
+        font=ctk.CTkFont(size=12),
+        text_color="gray50",
     )
     version_hint.pack(side="left", padx=(10, 0))
 

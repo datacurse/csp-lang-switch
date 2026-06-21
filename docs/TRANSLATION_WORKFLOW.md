@@ -25,6 +25,14 @@ The durable assets are the **tooling** (`src/`), the **manifest**, the
 **glossary**, the **worksheets** (`translation/files/`), and this doc. The
 patched binary itself is disposable — regenerable and version-specific.
 
+**Tool palette names** (Pen, G-pen, tool groups, …) are **not** in these
+resource files. They live in SQLite `.todb` databases under CSP Settings and
+user data. The language switcher patches them via [`src/tool_db.py`](../src/tool_db.py)
+using [`translation/tools.csv`](../translation/tools.csv). See
+[`TOOL_TRANSLATION.md`](TOOL_TRANSLATION.md) for seed vs. user data, the
+in-place patch rule (never replace live user data with a stock file), and
+English restore behavior.
+
 ---
 
 ## Step 0 — Pick the target file(s)
