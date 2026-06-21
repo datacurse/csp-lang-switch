@@ -2996,9 +2996,9 @@ Downloads,Загрузки
 Pen pressure,Нажим пера
 Output,Вывод
 [Adjusting pen pressure level],[Настройка уровня нажима пера]
-Edit Smart Shape,
-Transform Smart Shape,
-Adjust Smart Shape,
+Edit Smart Shape,Редактировать умную фигуру
+Transform Smart Shape,Трансформировать умную фигуру
+Adjust Smart Shape,Настроить умную фигуру
 "Sufficient memory cannot be allocated for blur.
 Size of brush and blurring width may be too large or sufficient memory may not be available.","Для размытия не может быть выделено достаточно памяти.
 Размер кисти и ширина размытия могут быть слишком большими или недостаточно памяти."

@@ -8304,11 +8304,11 @@ the operation is also performed on the track labels in the clip range.","При 
 205/1/28#0,Confirm shape with double-click or double-tap,Подтверждать фигуру двойным щелчком или двойным касанием
 205/1/31#0,Color,Цвет
 205/1/33#0,Disable drawing with transparency on transparency locked layers,Отключить рисование с прозрачностью на слоях с заблокированной прозрачностью
-205/1/36#0,Smart Shape,
-205/1/38#0,Hold to create figures,
-205/1/40#0,Length of long-press,
-205/1/44#0,seconds,
-205/1/46#0,Show Smart Shape launcher,
+205/1/36#0,Smart Shape,Умная фигура
+205/1/38#0,Hold to create figures,Удерживать для создания фигур
+205/1/40#0,Length of long-press,Длительность долгого нажатия
+205/1/44#0,seconds,секунд
+205/1/46#0,Show Smart Shape launcher,Показывать панель запуска умной фигуры
 206/1/2#0,Switch tool temporarily,Временно переключить инструмент
 206/1/4#0,Switch tool temporarily by pressing and holding shortcut key,Временно переключать инструмент нажатием и удержанием сочетания клавиш
 206/1/6#0,Length of keypress to switch tools,Длительность нажатия клавиши для переключения инструментов
@@ -15953,7 +15953,7 @@ Gray","Шум
 456/1/16#0,Puppet warp: Adjust poses or elements of your drawing,
 456/1/17#0,Sub color: Use two colors at once,
 456/1/18#0,Blending brushes: Mix colors together,
-456/1/19#0,Smart Shape: Auto-adjust shapes while drawing freehand,
+456/1/19#0,Smart Shape: Auto-adjust shapes while drawing freehand,Умная фигура: автоматическая подстройка фигур при рисовании от руки
 456/1/20#0,Switch to Studio Mode with button,Переключение в режим студии с помощью кнопки
 456/1/21#0,Switch to Studio Mode from the menu,Переключение в режим студии из меню
 456/1/22#0,Move / Transform,Переместить / Трансформировать
@@ -16002,7 +16002,7 @@ Tap to place pins on joints and extremities, then drag pins or rotate around han
 456/1/56#0,Blending brushes,
 456/1/57#0,"You can blend on the canvas with the existing colors, drag the color out, or blur colors together.
 Find the best effect for your painting style.",
-456/1/58#0,Smart Shape,
+456/1/58#0,Smart Shape,Умная фигура
 456/1/59#0,"After drawing a shape, hold the stylus in place for a moment to automatically convert your freehand shape to straight lines or clean shapes.",
 456/1/60#0,Switch to Studio Mode,Переключиться в режим студии
 456/1/61#0,"Tap to switch to Studio Mode, and tap again to return to Simple Mode. You can drag the button to place it wherever you like.

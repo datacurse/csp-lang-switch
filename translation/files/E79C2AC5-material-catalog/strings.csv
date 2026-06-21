@@ -3065,9 +3065,9 @@ You can set this vertically or horizontally with the Direction setting.","Изм
 23/1/276#0,Pen pressure,Нажим пера
 23/1/277#0,Output,Вывод
 23/1/280#0,[Adjusting pen pressure level],[Настройка уровня нажима пера]
-23/1/281#0,Edit Smart Shape,
-23/1/282#0,Transform Smart Shape,
-23/1/283#0,Adjust Smart Shape,
+23/1/281#0,Edit Smart Shape,Редактировать умную фигуру
+23/1/282#0,Transform Smart Shape,Трансформировать умную фигуру
+23/1/283#0,Adjust Smart Shape,Настроить умную фигуру
 23/1/284#0,"Sufficient memory cannot be allocated for blur.
 Size of brush and blurring width may be too large or sufficient memory may not be available.","Для размытия не может быть выделено достаточно памяти.
 Размер кисти и ширина размытия могут быть слишком большими или недостаточно памяти."
